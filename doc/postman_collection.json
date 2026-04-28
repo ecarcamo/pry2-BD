@@ -1,0 +1,648 @@
+{
+  "info": {
+    "name": "NeoLab · API Neo4j",
+    "description": "Colección completa de endpoints del backend NeoLab (Express + Neo4j Aura).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base", "value": "http://localhost:4000", "type": "string" }
+  ],
+  "item": [
+
+    {
+      "name": "Salud",
+      "item": [
+        {
+          "name": "GET /ping",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/ping"
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "Usuarios",
+      "item": [
+        {
+          "name": "POST /usuarios — 1 label",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/usuarios",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Sofía Méndez\",\n  \"email\": \"smendez@correo.com\",\n  \"titular\": \"QA Engineer\",\n  \"habilidades\": [\"Cypress\", \"Selenium\"],\n  \"abierto_a_trabajo\": true,\n  \"fecha_registro\": \"2026-04-26\",\n  \"conexiones_count\": 0\n}"
+            }
+          }
+        },
+        {
+          "name": "POST /usuarios/admin — 2 labels",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/usuarios/admin",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Carla Ruano\",\n  \"email\": \"cruano@correo.com\",\n  \"titular\": \"Moderadora de Contenido\",\n  \"habilidades\": [\"Moderación\", \"Políticas\"],\n  \"abierto_a_trabajo\": false,\n  \"fecha_registro\": \"2026-04-26\",\n  \"conexiones_count\": 5,\n  \"nivel_acceso\": \"moderador\",\n  \"puede_moderar\": true,\n  \"fecha_asignacion\": \"2026-04-26\",\n  \"asignado_por\": \"Esteban Cárcamo\",\n  \"activo\": true\n}"
+            }
+          }
+        },
+        {
+          "name": "GET /usuarios — todos",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/usuarios"
+          }
+        },
+        {
+          "name": "GET /usuarios — filtros",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/usuarios?abierto_a_trabajo=true&limit=10&orderBy=conexiones_count&dir=DESC",
+              "host": ["{{base}}"],
+              "path": ["usuarios"],
+              "query": [
+                { "key": "abierto_a_trabajo", "value": "true" },
+                { "key": "limit", "value": "10" },
+                { "key": "orderBy", "value": "conexiones_count" },
+                { "key": "dir", "value": "DESC" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /usuarios/:userId",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/usuarios/n1"
+          }
+        },
+        {
+          "name": "PATCH /usuarios/:userId/propiedades — 1 nodo",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base}}/usuarios/n1/propiedades",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"set\": {\n    \"telefono\": \"+502 5555-1234\",\n    \"pais\": \"Guatemala\"\n  },\n  \"remove\": []\n}"
+            }
+          }
+        },
+        {
+          "name": "PATCH /usuarios/propiedades/bulk — múltiples nodos",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base}}/usuarios/propiedades/bulk",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filter\": { \"abierto_a_trabajo\": true },\n  \"set\": { \"disponible_inmediatamente\": true },\n  \"remove\": []\n}"
+            }
+          }
+        },
+        {
+          "name": "DELETE /usuarios/:userId",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base}}/usuarios/n1"
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "Empresas",
+      "item": [
+        {
+          "name": "POST /empresas — ≥5 props",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/empresas",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"NeoVentures\",\n  \"industria\": \"Fintech\",\n  \"pais\": \"Costa Rica\",\n  \"verificada\": true,\n  \"empleados_count\": 80,\n  \"fecha_fundacion\": \"2021-03-12\"\n}"
+            }
+          }
+        },
+        {
+          "name": "GET /empresas — todas",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/empresas"
+          }
+        },
+        {
+          "name": "GET /empresas — filtros",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/empresas?verificada=true&pais=Guatemala&limit=10",
+              "host": ["{{base}}"],
+              "path": ["empresas"],
+              "query": [
+                { "key": "verificada", "value": "true" },
+                { "key": "pais", "value": "Guatemala" },
+                { "key": "limit", "value": "10" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /empresas/:empresaId",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/empresas/n7"
+          }
+        },
+        {
+          "name": "PATCH /empresas/:empresaId/propiedades — 1 nodo",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base}}/empresas/n7/propiedades",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"set\": { \"sitio_web\": \"https://datatec.gt\" },\n  \"remove\": []\n}"
+            }
+          }
+        },
+        {
+          "name": "PATCH /empresas/propiedades/bulk — múltiples nodos",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base}}/empresas/propiedades/bulk",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filter\": { \"verificada\": true },\n  \"set\": { \"badge\": \"verified_2026\" },\n  \"remove\": []\n}"
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "Publicaciones",
+      "item": [
+        {
+          "name": "POST /publicaciones",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/publicaciones",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"n1\",\n  \"contenido\": \"Acabamos de migrar nuestro grafo a Neo4j. 4x en queries de recomendación.\",\n  \"tags\": [\"neo4j\", \"grafos\", \"backend\"],\n  \"es_oferta\": false,\n  \"relProps\": {\n    \"anonimo\": false,\n    \"desde_empresa\": false\n  }\n}"
+            }
+          }
+        },
+        {
+          "name": "GET /publicaciones — todas",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/publicaciones"
+          }
+        },
+        {
+          "name": "GET /publicaciones — filtros",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/publicaciones?tag=neo4j&minLikes=10&desde=2026-01-01&limit=10",
+              "host": ["{{base}}"],
+              "path": ["publicaciones"],
+              "query": [
+                { "key": "tag", "value": "neo4j" },
+                { "key": "minLikes", "value": "10" },
+                { "key": "desde", "value": "2026-01-01" },
+                { "key": "limit", "value": "10" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /publicaciones/:postId",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/publicaciones/n10"
+          }
+        },
+        {
+          "name": "PATCH /publicaciones/:postId/propiedades — 1 nodo",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base}}/publicaciones/n10/propiedades",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"set\": { \"likes_count\": 50 },\n  \"remove\": []\n}"
+            }
+          }
+        },
+        {
+          "name": "PATCH /publicaciones/propiedades/bulk — múltiples nodos",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base}}/publicaciones/propiedades/bulk",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filter\": { \"es_oferta\": false },\n  \"set\": { \"revisada\": true },\n  \"remove\": []\n}"
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "Empleos",
+      "item": [
+        {
+          "name": "POST /empleos",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/empleos",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"empresaId\": \"n7\",\n  \"titulo\": \"Backend Developer Sr.\",\n  \"salario_min\": 1800,\n  \"salario_max\": 2600,\n  \"modalidad\": \"híbrido\",\n  \"activo\": true,\n  \"relProps\": {\n    \"urgente\": true,\n    \"remunerado\": true\n  }\n}"
+            }
+          }
+        },
+        {
+          "name": "GET /empleos — todos",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/empleos"
+          }
+        },
+        {
+          "name": "GET /empleos — filtros",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/empleos?activo=true&modalidad=remoto&salarioMin=2000&limit=10",
+              "host": ["{{base}}"],
+              "path": ["empleos"],
+              "query": [
+                { "key": "activo", "value": "true" },
+                { "key": "modalidad", "value": "remoto" },
+                { "key": "salarioMin", "value": "2000" },
+                { "key": "limit", "value": "10" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /empleos/:empleoId",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/empleos/n13"
+          }
+        },
+        {
+          "name": "PATCH /empleos/:empleoId/propiedades — 1 nodo",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base}}/empleos/n13/propiedades",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"set\": { \"activo\": false },\n  \"remove\": []\n}"
+            }
+          }
+        },
+        {
+          "name": "PATCH /empleos/propiedades/bulk — múltiples nodos",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base}}/empleos/propiedades/bulk",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filter\": { \"activo\": true },\n  \"set\": { \"disponible\": true },\n  \"remove\": []\n}"
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "Educación",
+      "item": [
+        {
+          "name": "POST /educacion",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/educacion",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"institucion\": \"Universidad de San Carlos\",\n  \"carrera\": \"Ingeniería en Sistemas\",\n  \"grado\": \"Licenciatura\",\n  \"pais\": \"Guatemala\",\n  \"acreditada\": true\n}"
+            }
+          }
+        },
+        {
+          "name": "GET /educacion — todas",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/educacion"
+          }
+        },
+        {
+          "name": "GET /educacion — filtros",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/educacion?pais=Guatemala&acreditada=true&limit=10",
+              "host": ["{{base}}"],
+              "path": ["educacion"],
+              "query": [
+                { "key": "pais", "value": "Guatemala" },
+                { "key": "acreditada", "value": "true" },
+                { "key": "limit", "value": "10" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET /educacion/:educacionId",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/educacion/n16"
+          }
+        },
+        {
+          "name": "PATCH /educacion/:educacionId/propiedades — 1 nodo",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base}}/educacion/n16/propiedades",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"set\": { \"sitio_web\": \"https://uvg.edu.gt\" },\n  \"remove\": []\n}"
+            }
+          }
+        },
+        {
+          "name": "PATCH /educacion/propiedades/bulk — múltiples nodos",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base}}/educacion/propiedades/bulk",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filter\": { \"acreditada\": true },\n  \"set\": { \"verificada_2026\": true },\n  \"remove\": []\n}"
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "Relaciones",
+      "item": [
+        {
+          "name": "POST /conexiones — CONECTADO_CON",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/conexiones",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userIdA\": \"n1\",\n  \"userIdB\": \"n4\",\n  \"fecha_conexion\": \"2026-04-27\",\n  \"nivel\": \"1er\",\n  \"aceptada\": true\n}"
+            }
+          }
+        },
+        {
+          "name": "POST /likes — DIO_LIKE",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/likes",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"n2\",\n  \"postId\": \"n10\",\n  \"tipo_reaccion\": \"celebro\",\n  \"notificado\": true\n}"
+            }
+          }
+        },
+        {
+          "name": "POST /comentarios — COMENTO",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/comentarios",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"n3\",\n  \"postId\": \"n10\",\n  \"contenido\": \"¡Qué buen caso de uso! ¿Probaron APOC?\",\n  \"editado\": false\n}"
+            }
+          }
+        },
+        {
+          "name": "POST /compartidos — COMPARTIO",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/compartidos",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"n2\",\n  \"postId\": \"n10\",\n  \"con_comentario\": true,\n  \"visibilidad\": \"pública\"\n}"
+            }
+          }
+        },
+        {
+          "name": "POST /postulaciones — POSTULO_A",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/postulaciones",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"n1\",\n  \"empleoId\": \"n13\",\n  \"estado\": \"pendiente\",\n  \"carta_presentacion\": true\n}"
+            }
+          }
+        },
+        {
+          "name": "POST /seguimientos — SIGUE_A",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/seguimientos",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"n1\",\n  \"empresaId\": \"n8\",\n  \"notificaciones\": true,\n  \"motivo\": \"posible empleador\"\n}"
+            }
+          }
+        },
+        {
+          "name": "POST /empleos-historial — ESTAR_EN",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/empleos-historial",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"n1\",\n  \"empresaId\": \"n7\",\n  \"cargo\": \"Backend Developer\",\n  \"fecha_inicio\": \"2024-01-15\",\n  \"actual\": true\n}"
+            }
+          }
+        },
+        {
+          "name": "POST /estudios — ESTUDIO_EN",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/estudios",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"n1\",\n  \"educacionId\": \"n16\",\n  \"fecha_inicio\": \"2020-01-15\",\n  \"fecha_graduacion\": \"2024-12-10\",\n  \"graduado\": true\n}"
+            }
+          }
+        },
+        {
+          "name": "POST /menciones — MENCIONA",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/menciones",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"postId\": \"n10\",\n  \"userId\": \"n2\",\n  \"tipo\": \"colaborador\",\n  \"confirmada\": true\n}"
+            }
+          }
+        },
+        {
+          "name": "POST /relaciones — genérico",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/relaciones",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"from\":  { \"label\": \"Usuario\", \"idField\": \"userId\",   \"idValue\": \"n1\" },\n  \"to\":    { \"label\": \"Empleo\",  \"idField\": \"empleoId\", \"idValue\": \"n14\" },\n  \"type\":  \"POSTULO_A\",\n  \"properties\": {\n    \"fecha_postulacion\": \"2026-04-27\",\n    \"estado\": \"pendiente\",\n    \"carta_presentacion\": false\n  }\n}"
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "Consultas",
+      "item": [
+        {
+          "name": "GET Q1 · Top usuarios por conexiones",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/consultas/usuarios-top-conexiones?limit=5",
+              "host": ["{{base}}"],
+              "path": ["consultas", "usuarios-top-conexiones"],
+              "query": [{ "key": "limit", "value": "5" }]
+            }
+          }
+        },
+        {
+          "name": "GET Q2 · Empresas seguidas",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/consultas/empresas-seguidas"
+          }
+        },
+        {
+          "name": "GET Q3 · Empleos activos con rango salarial",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/consultas/empleos-activos"
+          }
+        },
+        {
+          "name": "GET Q4 · Estadísticas de likes",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/consultas/publicaciones-stats"
+          }
+        },
+        {
+          "name": "GET Q5 · Postulaciones por estado",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/consultas/postulaciones-por-estado"
+          }
+        },
+        {
+          "name": "GET Q6 · Autoría de publicaciones",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/consultas/autoria-publicaciones"
+          }
+        },
+        {
+          "name": "GET Conteo por label",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/consultas/conteo-por-label"
+          }
+        },
+        {
+          "name": "POST Agregación ad-hoc",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/consultas/agregacion",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"label\": \"Empleo\",\n  \"where\": [{ \"prop\": \"activo\", \"value\": true }],\n  \"groupBy\": \"modalidad\",\n  \"agg\": \"avg\",\n  \"field\": \"salario_max\"\n}"
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "Consola Cypher",
+      "item": [
+        {
+          "name": "POST /cypher — read",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/cypher",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"MATCH (u:Usuario) RETURN u.nombre AS nombre, u.conexiones_count AS conexiones ORDER BY conexiones DESC LIMIT 5\",\n  \"params\": {},\n  \"mode\": \"read\"\n}"
+            }
+          }
+        },
+        {
+          "name": "POST /cypher — write",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/cypher",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"MATCH (u:Usuario {userId: $id}) SET u.activo = true RETURN u\",\n  \"params\": { \"id\": \"n1\" },\n  \"mode\": \"write\"\n}"
+            }
+          }
+        },
+        {
+          "name": "POST /cypher — conteo total de nodos",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/cypher",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"query\": \"MATCH (n) RETURN labels(n) AS etiquetas, count(*) AS total ORDER BY total DESC\",\n  \"params\": {},\n  \"mode\": \"read\"\n}"
+            }
+          }
+        }
+      ]
+    }
+
+  ]
+}
