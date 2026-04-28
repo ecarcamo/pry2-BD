@@ -1,5 +1,6 @@
 /* ============================================================
    shell.jsx — App raíz: estado del grafo, panel izq, log y consola
+   v3: integración con backend Express + Neo4j vía window.API
    ============================================================ */
 
 const { useState: useS, useEffect: useE, useMemo: useM, useRef: useR, useCallback: useCb } = React;
@@ -22,6 +23,7 @@ function classifyQuery(q) {
 }
 
 function shortStats(s) {
+  if (!s) return '';
   const parts = [];
   if (s.nodesCreated)  parts.push(`+${s.nodesCreated} nodo(s)`);
   if (s.nodesDeleted)  parts.push(`-${s.nodesDeleted} nodo(s)`);
@@ -94,59 +96,134 @@ function renderCell(v) {
 }
 
 function App() {
-  const [graph, setGraph] = useS(freshGraphFromSeed());
-  const [version, setVersion] = useS(0);
-  const [selected, setSelected] = useS(null);
-  const [log, setLog] = useS([]);
-  const [editor, setEditor] = useS(window.PRESET_QUERIES[0].query);
+  const [graph, setGraph]         = useS(freshGraphFromSeed());
+  const [version, setVersion]     = useS(0);
+  const [selected, setSelected]   = useS(null);
+  const [log, setLog]             = useS([]);
+  const [editor, setEditor]       = useS(window.PRESET_QUERIES[0].query);
   const [openSection, setOpenSection] = useS('1. Creación de nodos');
-  const [toast, setToast] = useS(null);
+  const [toast, setToast]         = useS(null);
+  const [neo4jStatus, setNeo4jStatus] = useS('checking'); // 'ok' | 'offline' | 'checking'
+  const [instanceInfo, setInstanceInfo] = useS(null);
 
   const showToast = (msg, kind='ok') => {
     setToast({ msg, kind });
-    setTimeout(() => setToast(null), 1800);
+    setTimeout(() => setToast(null), 2200);
   };
 
-  const runQuery = (q) => {
+  // Chequea /ping al montar
+  useE(() => {
+    async function checkPing() {
+      try {
+        const data = await window.API.ping();
+        setNeo4jStatus('ok');
+        setInstanceInfo(data);
+      } catch {
+        setNeo4jStatus('offline');
+      }
+    }
+    checkPing();
+    const interval = setInterval(checkPing, 30000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // runQuery: intenta API.rawCypher; si falla (offline) cae al motor local
+  const runQuery = async (q) => {
     const trimmed = q.trim();
     if (!trimmed) return;
     const ts = new Date().toLocaleTimeString('es-GT', { hour12: false });
     let entry;
-    try {
-      // mutate a clone, then commit
-      const next = deepCloneGraph(graph);
-      const res = window.CypherEngine.execute(trimmed, next);
-      setGraph(next);
-      setVersion(v => v + 1);
-      entry = {
-        ts, query: trimmed,
-        kind: classifyQuery(trimmed),
-        ok: true,
-        result: res,
-        summary: shortStats(res.stats) || (res.matched ? `${res.matched} fila(s) recorrida(s)` : ''),
-      };
-      showToast('Query ejecutada', 'ok');
-    } catch (err) {
-      entry = { ts, query: trimmed, kind: classifyQuery(trimmed), ok: false, error: err.message };
-      showToast('Error: ' + err.message, 'err');
+
+    if (neo4jStatus === 'ok') {
+      try {
+        const mode = classifyQuery(trimmed);
+        const data = await window.API.rawCypher(trimmed, {}, mode);
+        entry = {
+          ts, query: trimmed, kind: mode, ok: true,
+          result: { columns: data.columns || [], rows: data.rows || [], stats: data.stats || {} },
+          summary: shortStats(data.stats) || (data.rows ? `${data.rows.length} fila(s)` : ''),
+          source: 'neo4j',
+        };
+        showToast('Query ejecutada en Neo4j Aura', 'ok');
+      } catch (err) {
+        entry = { ts, query: trimmed, kind: classifyQuery(trimmed), ok: false, error: err.message, source: 'neo4j' };
+        showToast('Error: ' + err.message, 'err');
+      }
+    } else {
+      // modo offline — motor local en memoria
+      try {
+        const next = deepCloneGraph(graph);
+        const res = window.CypherEngine.execute(trimmed, next);
+        setGraph(next);
+        setVersion(v => v + 1);
+        entry = {
+          ts, query: trimmed, kind: classifyQuery(trimmed), ok: true,
+          result: res, summary: shortStats(res.stats) || (res.matched ? `${res.matched} fila(s) recorrida(s)` : ''),
+          source: 'local',
+        };
+        showToast('Query ejecutada (modo offline)', 'ok');
+      } catch (err) {
+        entry = { ts, query: trimmed, kind: classifyQuery(trimmed), ok: false, error: err.message, source: 'local' };
+        showToast('Error: ' + err.message, 'err');
+      }
     }
     setLog(prev => [entry, ...prev].slice(0, 80));
   };
 
-  const handleOp = (op) => {
+  // handleOp: prefiere endpoint si existe y hay conexión, sino rawCypher/local
+  const handleOp = async (op) => {
     if (op.special === 'reset') {
+      if (neo4jStatus === 'ok') {
+        try {
+          await window.API.rawCypher('MATCH (n) DETACH DELETE n', {}, 'write');
+          showToast('Base limpiada en Aura, recargando seed...', 'ok');
+          // ejecutar seed via backend no está disponible directamente desde el browser;
+          // mostramos un aviso y restauramos el grafo visual al estado seed
+        } catch (err) {
+          showToast('Error al limpiar: ' + err.message, 'err');
+        }
+      }
       setGraph(freshGraphFromSeed());
       setVersion(v => v + 1);
       setSelected(null);
+      const ts = new Date().toLocaleTimeString('es-GT', { hour12: false });
       setLog(prev => [{
-        ts: new Date().toLocaleTimeString('es-GT', { hour12: false }),
-        query: '// Reset de la base al estado inicial del seed',
+        ts, query: '// Reset — MATCH (n) DETACH DELETE n + seed restaurado',
         kind: 'write', ok: true, result: { columns: [], rows: [], stats: {} },
-        summary: 'Estado restaurado',
+        summary: 'Estado restaurado', source: neo4jStatus === 'ok' ? 'neo4j' : 'local',
       }, ...prev].slice(0, 80));
       showToast('Base restablecida', 'ok');
       return;
     }
+
+    // Si el item tiene endpoint y hay conexión, llamar al backend tipado
+    if (op.endpoint && neo4jStatus === 'ok') {
+      const ts = new Date().toLocaleTimeString('es-GT', { hour12: false });
+      try {
+        const fn = window.API._resolve(op.endpoint.call);
+        if (!fn) throw new Error(`API method not found: ${op.endpoint.call}`);
+        const data = await fn(op.endpoint.body);
+        const entry = {
+          ts, query: op.query || `// ${op.endpoint.call}(...)`,
+          kind: 'write', ok: true,
+          result: { columns: data.columns || [], rows: data.rows || [], stats: data.stats || {} },
+          summary: shortStats(data.stats) || (data.rows ? `${data.rows.length} fila(s)` : ''),
+          source: 'neo4j',
+          cypherUsed: data.meta?.cypher,
+        };
+        setLog(prev => [entry, ...prev].slice(0, 80));
+        if (op.query) setEditor(op.query);
+        showToast('Operación ejecutada en Neo4j Aura', 'ok');
+        return;
+      } catch (err) {
+        const entry = { ts, query: op.query || `// ${op.endpoint.call}(...)`, kind: 'write', ok: false, error: err.message, source: 'neo4j' };
+        setLog(prev => [entry, ...prev].slice(0, 80));
+        showToast('Error: ' + err.message, 'err');
+        return;
+      }
+    }
+
+    // Fallback: ejecutar el query Cypher (local o remoto)
     setEditor(op.query);
     runQuery(op.query);
   };
@@ -160,7 +237,6 @@ function App() {
     return { nodes: graph.nodes.length, rels: graph.rels.length, labelCt, relTypeCt };
   }, [graph, version]);
 
-  // keyboard shortcut: Ctrl/Cmd+Enter to run
   const editorRef = useR(null);
   useE(() => {
     const f = (e) => {
@@ -172,15 +248,20 @@ function App() {
     };
     window.addEventListener('keydown', f);
     return () => window.removeEventListener('keydown', f);
-  }, [editor, graph]);
+  }, [editor, graph, neo4jStatus]);
+
+  const statusDot = neo4jStatus === 'ok' ? '#22c55e' : neo4jStatus === 'checking' ? '#f59e0b' : '#6b7280';
+  const statusLabel = neo4jStatus === 'ok'
+    ? `Aura · ${instanceInfo?.instance || ''} · ${instanceInfo?.database || ''}`
+    : neo4jStatus === 'checking' ? 'Conectando…' : 'Offline (motor local)';
 
   return (
     <>
       <div className="topbar">
         <div className="brand">
-          <div className="brand-dot"></div>
+          <div className="brand-dot" style={{background: statusDot}}></div>
           <div className="brand-name">NeoLab</div>
-          <div className="brand-sub">· Consola Neo4j · Proyecto BD2</div>
+          <div className="brand-sub">· {statusLabel}</div>
         </div>
         <div className="meta">
           <span className="stat-pill">nodos <b>{stats.nodes}</b></span>
@@ -241,6 +322,11 @@ function App() {
           <div className="panel-head">
             <span className="dot" style={{background:'var(--c-empleo)'}}></span>
             Consola Cypher
+            {neo4jStatus !== 'ok' && (
+              <span style={{marginLeft:8, fontFamily:'var(--mono)', fontSize:9, color:'#f59e0b'}}>
+                (motor local)
+              </span>
+            )}
           </div>
           <div className="editor-wrap">
             <div className="editor">
@@ -289,9 +375,19 @@ function App() {
                     {e.ok ? e.kind : 'error'}
                   </span>
                   <span className="ts">{e.ts}</span>
+                  {e.source && (
+                    <span style={{fontFamily:'var(--mono)', fontSize:9, color: e.source === 'neo4j' ? '#22c55e' : '#9ca3af', marginLeft:4}}>
+                      {e.source === 'neo4j' ? '⬡ Aura' : '⬡ local'}
+                    </span>
+                  )}
                 </div>
                 <div className="query"
                   dangerouslySetInnerHTML={{ __html: window.highlightCypher(e.query) }} />
+                {e.cypherUsed && (
+                  <div style={{fontFamily:'var(--mono)', fontSize:9, color:'var(--text-dim)', marginTop:2, wordBreak:'break-all'}}>
+                    ↳ {e.cypherUsed}
+                  </div>
+                )}
                 {e.ok ? (
                   <>
                     <div className="summary">{e.summary}</div>

@@ -11,6 +11,12 @@ window.OPERATIONS = [
       {
         title: 'Nodo con 1 label',
         subtitle: 'CREATE de un Usuario simple',
+        endpoint: {
+          call: 'usuarios.create',
+          body: { nombre: 'Sofía Méndez', email: 'smendez@correo.com', titular: 'QA Engineer',
+                  habilidades: ['Cypress','Selenium'], abierto_a_trabajo: true,
+                  fecha_registro: '2026-04-26', conexiones_count: 0 },
+        },
         query:
 `CREATE (u:Usuario {
   nombre: 'Sofía Méndez',
@@ -26,6 +32,14 @@ RETURN u`
       {
         title: 'Nodo con 2+ labels (MERGE)',
         subtitle: 'Usuario que también es :Admin (doble etiqueta)',
+        endpoint: {
+          call: 'usuarios.createAdmin',
+          body: { nombre: 'Carla Ruano', email: 'cruano@correo.com', titular: 'Moderadora de Contenido',
+                  habilidades: ['Moderación','Políticas'], abierto_a_trabajo: false,
+                  fecha_registro: '2026-04-26', conexiones_count: 5,
+                  nivel_acceso: 'moderador', puede_moderar: true,
+                  fecha_asignacion: '2026-04-26', asignado_por: 'Esteban Cárcamo', activo: true },
+        },
         query:
 `MERGE (u:Usuario:Admin {
   nombre: 'Carla Ruano',
@@ -46,6 +60,11 @@ RETURN u`
       {
         title: 'Nodo con ≥5 propiedades',
         subtitle: 'Empresa con todas sus propiedades',
+        endpoint: {
+          call: 'empresas.create',
+          body: { nombre: 'NeoVentures', industria: 'Fintech', pais: 'Costa Rica',
+                  verificada: true, empleados_count: 80, fecha_fundacion: '2021-03-12' },
+        },
         query:
 `CREATE (e:Empresa {
   nombre: 'NeoVentures',
@@ -161,6 +180,11 @@ RETURN e.titulo, keys(e) AS propiedades`
       {
         title: 'CREATE relación entre 2 nodos existentes',
         subtitle: 'CONECTADO_CON con 3 propiedades',
+        endpoint: {
+          call: 'conectar',
+          body: { userIdA: 'n1', userIdB: 'n4',
+                  fecha_conexion: '2026-04-26', nivel: '1er', aceptada: true },
+        },
         query:
 `MATCH (a:Usuario {email: 'nconcua@uvg.edu.gt'}),
       (b:Usuario {email: 'mlopez@correo.com'})
