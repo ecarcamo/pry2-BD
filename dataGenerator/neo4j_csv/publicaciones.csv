@@ -1,0 +1,1501 @@
+publicacion_id,contenido,fecha_publicacion,likes_count,tags,es_oferta
+p0,¿Alguien más está trabajando con Gobierno? Me encantaría conectar.,2022-04-24,1767,data;aprendizaje;innovacion;tech,false
+p1,Debate: ¿cuál es el mayor reto de Kotlin en Latinoamérica?,2021-05-10,3922,edtech;startups,true
+p2,Debate: ¿cuál es el mayor reto de Agroindustria en Latinoamérica?,2022-01-08,2503,diseño;empleo,true
+p3,Debate: ¿cuál es el mayor reto de Consultoría en Latinoamérica?,2023-01-12,770,python;aprendizaje,true
+p4,Reflexión del día: la clave del éxito en Finanzas es la constancia.,2022-08-19,3554,startups;tech;trabajo,true
+p5,Compartiendo recursos gratuitos para aprender Manufactura.,2023-06-23,2377,empleo;startups;ciberseguridad,false
+p6,Reflexión del día: la clave del éxito en Microservices es la constancia.,2020-05-06,1288,cloud;latam;tech,false
+p7,Pro tip sobre PostgreSQL: siempre documenta tu proceso.,2023-12-08,5747,trabajo,false
+p8,Compartiendo recursos gratuitos para aprender Go.,2023-10-09,3412,tech;producto;liderazgo,false
+p9,¿Alguien más está trabajando con Kubernetes? Me encantaría conectar.,2025-07-20,2879,producto;ciberseguridad,true
+p10,Buscando profesionales en Redis para un proyecto increíble.,2020-06-08,2620,diseño;networking;startups,false
+p11,¿Alguien más está trabajando con Kafka? Me encantaría conectar.,2026-12-29,457,carrera;ia,true
+p12,Emocionado de compartir que acabo de completar mi certificación en GraphQL.,2022-03-28,2607,Guatemala;producto;devops;empleo,true
+p13,Emocionado de compartir que acabo de completar mi certificación en REST APIs.,2021-12-15,1981,carrera;edtech;aprendizaje;liderazgo,false
+p14,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Vue.js.,2021-11-18,4668,cloud;ciberseguridad;carrera,true
+p15,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Spring Boot.,2021-01-15,6838,diseño,true
+p16,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Kafka.,2020-03-07,6846,startups;networking,false
+p17,Compartiendo recursos gratuitos para aprender REST APIs.,2021-09-01,2408,carrera,false
+p18,Compartiendo recursos gratuitos para aprender Vue.js.,2025-09-29,6100,devops;aprendizaje,true
+p19,Buscando profesionales en Telecomunicaciones para un proyecto increíble.,2023-05-13,5525,cloud;devops,true
+p20,Pro tip sobre Terraform: siempre documenta tu proceso.,2021-02-23,7692,aprendizaje;producto;devops;python,false
+p21,Nuevo reto personal: aprender Telecomunicaciones en 30 días. ¿Quién se une?,2023-03-25,1439,cloud;ciberseguridad;empleo,false
+p22,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Logística.,2021-07-01,4542,Guatemala;tech;innovacion,false
+p23,Buscando profesionales en GCP para un proyecto increíble.,2020-03-29,4731,empleo;ciberseguridad;diseño,false
+p24,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Laravel.,2025-05-18,6910,cloud,false
+p25,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Medios.,2024-09-24,2321,data;Guatemala;producto,true
+p26,Pro tip sobre Linux: siempre documenta tu proceso.,2023-09-06,367,innovacion;trabajo;ciberseguridad,true
+p27,Emocionado de compartir que acabo de completar mi certificación en JavaScript.,2026-08-21,6538,devops;networking;ciberseguridad,false
+p28,Buscando profesionales en Turismo para un proyecto increíble.,2023-01-30,2333,fintech;carrera;desarrollo;aprendizaje,false
+p29,Pro tip sobre Git: siempre documenta tu proceso.,2026-01-16,5007,innovacion;tech;aprendizaje,true
+p30,Pro tip sobre RabbitMQ: siempre documenta tu proceso.,2020-04-01,7144,liderazgo;python;ia;devops,false
+p31,¿Alguien más está trabajando con Rust? Me encantaría conectar.,2020-04-17,7891,desarrollo;devops,false
+p32,¿Alguien más está trabajando con GCP? Me encantaría conectar.,2024-05-25,3935,aprendizaje;Guatemala;tech,false
+p33,¿Alguien más está trabajando con NLP? Me encantaría conectar.,2025-08-31,3460,fintech,true
+p34,Gran evento de networking hoy. Aprendí mucho sobre Cassandra.,2023-04-13,2136,data;startups,true
+p35,Nuevo reto personal: aprender Scrum en 30 días. ¿Quién se une?,2024-11-16,4714,tech;devops;Guatemala,true
+p36,Compartiendo recursos gratuitos para aprender GCP.,2024-08-02,3346,noticias;Guatemala,false
+p37,Emocionado de compartir que acabo de completar mi certificación en Kotlin.,2022-12-18,7382,ciberseguridad;aprendizaje,true
+p38,Pro tip sobre Transporte: siempre documenta tu proceso.,2026-01-08,4815,Guatemala;innovacion,true
+p39,Acabo de publicar un artículo sobre las tendencias en Seguros. ¿Qué opinan?,2020-05-16,6918,Guatemala;python,true
+p40,El mercado laboral en AWS está creciendo increíblemente.,2025-07-02,3504,carrera;startups,true
+p41,Compartiendo recursos gratuitos para aprender PostgreSQL.,2022-10-18,4237,liderazgo;cloud;aprendizaje,true
+p42,Compartiendo recursos gratuitos para aprender CI/CD.,2022-03-13,2646,cloud;tech;ia,true
+p43,¿Alguien más está trabajando con Consultoría? Me encantaría conectar.,2021-08-01,3598,producto;Guatemala;ia;diseño,true
+p44,Emocionado de compartir que acabo de completar mi certificación en Educación.,2023-04-19,5265,networking;edtech;noticias,false
+p45,Nuevo reto personal: aprender Deep Learning en 30 días. ¿Quién se une?,2024-03-20,6217,python;data;carrera;Guatemala,false
+p46,Reflexión del día: la clave del éxito en TypeScript es la constancia.,2022-03-06,6122,data;devops;startups;fintech,false
+p47,Buscando profesionales en REST APIs para un proyecto increíble.,2026-09-03,2114,desarrollo;producto;carrera;edtech,true
+p48,Buscando profesionales en C++ para un proyecto increíble.,2026-01-09,589,data;cloud,false
+p49,Pro tip sobre Kafka: siempre documenta tu proceso.,2024-09-23,727,edtech;python;innovacion;cloud,true
+p50,Pro tip sobre Kubernetes: siempre documenta tu proceso.,2023-02-20,7097,innovacion;aprendizaje;empleo,false
+p51,Reflexión del día: la clave del éxito en CI/CD es la constancia.,2022-09-30,7726,innovacion;ciberseguridad;Guatemala;edtech,true
+p52,El mercado laboral en Scrum está creciendo increíblemente.,2026-03-20,7494,noticias;devops;latam;producto,false
+p53,Compartiendo recursos gratuitos para aprender Docker.,2022-09-07,7708,desarrollo;edtech;Guatemala,true
+p54,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Azure.,2022-02-18,3654,devops;tech;cloud;noticias,false
+p55,Pro tip sobre PostgreSQL: siempre documenta tu proceso.,2026-04-02,3893,tech;devops;networking,true
+p56,Pro tip sobre PostgreSQL: siempre documenta tu proceso.,2025-03-28,2905,startups,false
+p57,Nuevo reto personal: aprender Angular en 30 días. ¿Quién se une?,2023-05-05,723,Guatemala,false
+p58,Buscando profesionales en GraphQL para un proyecto increíble.,2022-05-01,486,python,true
+p59,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Consultoría.,2023-02-11,6049,aprendizaje,false
+p60,Gran evento de networking hoy. Aprendí mucho sobre Azure.,2025-09-04,1228,startups;devops,false
+p61,Buscando profesionales en Deep Learning para un proyecto increíble.,2023-09-28,5363,latam;cloud;Guatemala;empleo,true
+p62,Compartiendo recursos gratuitos para aprender Kotlin.,2024-08-12,3521,diseño,true
+p63,Emocionado de compartir que acabo de completar mi certificación en Spring Boot.,2025-03-25,236,ia,true
+p64,Debate: ¿cuál es el mayor reto de FastAPI en Latinoamérica?,2023-06-14,4791,aprendizaje;ia;producto,false
+p65,Nuevo reto personal: aprender Rust en 30 días. ¿Quién se une?,2020-12-21,4486,fintech,false
+p66,El mercado laboral en Node.js está creciendo increíblemente.,2025-01-08,6451,carrera;aprendizaje;ia,false
+p67,Debate: ¿cuál es el mayor reto de Kubernetes en Latinoamérica?,2025-04-10,3675,ia;desarrollo;diseño;aprendizaje,false
+p68,Compartiendo recursos gratuitos para aprender Python.,2023-02-23,5902,liderazgo;aprendizaje;carrera;fintech,false
+p69,El mercado laboral en Gobierno está creciendo increíblemente.,2021-08-26,5801,latam,true
+p70,Nuevo reto personal: aprender Linux en 30 días. ¿Quién se une?,2023-11-06,4918,tech;desarrollo;diseño,true
+p71,Acabo de publicar un artículo sobre las tendencias en Tecnología. ¿Qué opinan?,2021-11-03,5745,edtech;cloud,true
+p72,Debate: ¿cuál es el mayor reto de Vue.js en Latinoamérica?,2026-06-10,5770,noticias;aprendizaje,false
+p73,Emocionado de compartir que acabo de completar mi certificación en AWS.,2023-02-13,6866,fintech;cloud;producto;ciberseguridad,false
+p74,Reflexión del día: la clave del éxito en Agroindustria es la constancia.,2021-09-29,549,python;latam;ia,true
+p75,¿Alguien más está trabajando con NLP? Me encantaría conectar.,2024-05-10,3080,startups,false
+p76,Acabo de publicar un artículo sobre las tendencias en Neo4j. ¿Qué opinan?,2022-09-24,1746,devops,false
+p77,Debate: ¿cuál es el mayor reto de Salud en Latinoamérica?,2025-08-11,2781,devops;innovacion,false
+p78,Acabo de publicar un artículo sobre las tendencias en Energía. ¿Qué opinan?,2021-06-09,21,Guatemala;producto,false
+p79,Acabo de publicar un artículo sobre las tendencias en C++. ¿Qué opinan?,2020-03-09,7618,cloud;desarrollo,false
+p80,Compartiendo recursos gratuitos para aprender Django.,2024-01-03,672,aprendizaje;startups;noticias;trabajo,true
+p81,¿Alguien más está trabajando con Node.js? Me encantaría conectar.,2024-02-10,625,tech;networking,false
+p82,El mercado laboral en Terraform está creciendo increíblemente.,2022-03-12,2191,Guatemala;ciberseguridad;ia;latam,true
+p83,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Turismo.,2025-11-29,6355,diseño;empleo;edtech,true
+p84,Pro tip sobre Computer Vision: siempre documenta tu proceso.,2026-10-03,2685,producto;python;liderazgo,false
+p85,Debate: ¿cuál es el mayor reto de Gobierno en Latinoamérica?,2020-11-07,7509,ciberseguridad;carrera,false
+p86,Nuevo reto personal: aprender Telecomunicaciones en 30 días. ¿Quién se une?,2025-10-26,6877,carrera,false
+p87,Nuevo reto personal: aprender Educación en 30 días. ¿Quién se une?,2026-12-17,1456,ciberseguridad;data,true
+p88,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Django.,2023-06-28,4362,ciberseguridad,true
+p89,Debate: ¿cuál es el mayor reto de TypeScript en Latinoamérica?,2022-03-14,7868,devops,false
+p90,Buscando profesionales en Spring Boot para un proyecto increíble.,2021-06-04,5763,startups;empleo,true
+p91,Debate: ¿cuál es el mayor reto de Agile en Latinoamérica?,2024-02-24,4704,cloud;python;liderazgo;trabajo,true
+p92,¿Alguien más está trabajando con Machine Learning? Me encantaría conectar.,2023-07-11,1267,data;startups;ia;carrera,true
+p93,Buscando profesionales en FastAPI para un proyecto increíble.,2020-12-09,2722,latam;data;python,true
+p94,Nuevo reto personal: aprender Django en 30 días. ¿Quién se une?,2020-06-08,1554,startups,false
+p95,Emocionado de compartir que acabo de completar mi certificación en Neo4j.,2024-12-11,4364,fintech,true
+p96,Emocionado de compartir que acabo de completar mi certificación en Scrum.,2024-07-26,2953,fintech;Guatemala;innovacion,false
+p97,Debate: ¿cuál es el mayor reto de Transporte en Latinoamérica?,2024-11-05,1944,Guatemala;startups;trabajo,true
+p98,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Git.,2021-02-06,1158,producto;devops;Guatemala;networking,true
+p99,Gran evento de networking hoy. Aprendí mucho sobre Kubernetes.,2020-12-02,7658,tech,false
+p100,¿Alguien más está trabajando con Agroindustria? Me encantaría conectar.,2024-04-15,5248,edtech;producto;ia;tech,true
+p101,Debate: ¿cuál es el mayor reto de Finanzas en Latinoamérica?,2025-11-26,5213,empleo;fintech,false
+p102,Reflexión del día: la clave del éxito en Telecomunicaciones es la constancia.,2021-05-20,3313,aprendizaje;desarrollo,true
+p103,Reflexión del día: la clave del éxito en Kafka es la constancia.,2020-12-08,5184,latam;diseño;carrera;empleo,false
+p104,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de SQL.,2024-04-11,7820,tech;desarrollo,true
+p105,Compartiendo recursos gratuitos para aprender Laravel.,2025-07-26,4693,tech,true
+p106,Nuevo reto personal: aprender SQL en 30 días. ¿Quién se une?,2022-08-01,1139,noticias;networking;ciberseguridad,false
+p107,Emocionado de compartir que acabo de completar mi certificación en Tecnología.,2022-04-04,1293,tech;python,false
+p108,Acabo de publicar un artículo sobre las tendencias en Computer Vision. ¿Qué opinan?,2023-10-23,5043,networking;devops;data;ciberseguridad,false
+p109,¿Alguien más está trabajando con Swift? Me encantaría conectar.,2026-11-03,2864,startups,false
+p110,Reflexión del día: la clave del éxito en ONG es la constancia.,2020-07-02,2713,edtech,true
+p111,Compartiendo recursos gratuitos para aprender Logística.,2025-10-14,3272,carrera,true
+p112,Acabo de publicar un artículo sobre las tendencias en Computer Vision. ¿Qué opinan?,2020-04-27,1421,devops;tech,false
+p113,Nuevo reto personal: aprender Consultoría en 30 días. ¿Quién se une?,2023-05-15,7261,devops;innovacion;carrera;edtech,false
+p114,Emocionado de compartir que acabo de completar mi certificación en Tecnología.,2026-07-01,190,ia;diseño;desarrollo,false
+p115,Gran evento de networking hoy. Aprendí mucho sobre Linux.,2022-11-29,1673,trabajo,false
+p116,Nuevo reto personal: aprender REST APIs en 30 días. ¿Quién se une?,2023-12-22,3534,cloud;desarrollo,false
+p117,El mercado laboral en Machine Learning está creciendo increíblemente.,2025-09-21,3627,latam;aprendizaje;edtech;producto,true
+p118,¿Alguien más está trabajando con Node.js? Me encantaría conectar.,2024-05-13,5398,aprendizaje,true
+p119,Reflexión del día: la clave del éxito en Transporte es la constancia.,2026-08-20,188,trabajo,true
+p120,El mercado laboral en CI/CD está creciendo increíblemente.,2020-02-07,7553,noticias;liderazgo;devops,false
+p121,¿Alguien más está trabajando con Educación? Me encantaría conectar.,2026-06-23,5041,data,true
+p122,Buscando profesionales en GCP para un proyecto increíble.,2021-05-11,6225,desarrollo;liderazgo;Guatemala,true
+p123,El mercado laboral en React está creciendo increíblemente.,2026-05-21,2374,ia;liderazgo;edtech,true
+p124,Acabo de publicar un artículo sobre las tendencias en Redis. ¿Qué opinan?,2026-04-26,5988,latam,true
+p125,Acabo de publicar un artículo sobre las tendencias en Neo4j. ¿Qué opinan?,2021-06-08,4594,liderazgo;latam,true
+p126,Debate: ¿cuál es el mayor reto de PostgreSQL en Latinoamérica?,2025-04-26,1761,liderazgo,false
+p127,Debate: ¿cuál es el mayor reto de Django en Latinoamérica?,2021-05-31,5386,noticias;tech;ciberseguridad;devops,false
+p128,Compartiendo recursos gratuitos para aprender Deep Learning.,2024-08-22,6837,carrera;edtech;fintech,true
+p129,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de ONG.,2021-11-14,3011,empleo;desarrollo,true
+p130,Debate: ¿cuál es el mayor reto de NLP en Latinoamérica?,2020-01-07,6227,desarrollo,true
+p131,Reflexión del día: la clave del éxito en FastAPI es la constancia.,2024-03-09,1717,aprendizaje,false
+p132,Gran evento de networking hoy. Aprendí mucho sobre NLP.,2023-05-05,5582,noticias;aprendizaje;diseño;desarrollo,true
+p133,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Logística.,2024-06-23,2281,ciberseguridad;cloud;noticias,false
+p134,Debate: ¿cuál es el mayor reto de Laravel en Latinoamérica?,2026-06-11,2666,Guatemala;networking;ia;cloud,false
+p135,Compartiendo recursos gratuitos para aprender Angular.,2020-11-28,7681,Guatemala;latam;fintech;edtech,false
+p136,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de REST APIs.,2021-10-11,7567,devops;ciberseguridad;edtech;innovacion,false
+p137,¿Alguien más está trabajando con Seguros? Me encantaría conectar.,2020-09-20,5781,desarrollo;carrera;fintech,true
+p138,Gran evento de networking hoy. Aprendí mucho sobre Neo4j.,2023-08-16,6230,diseño,true
+p139,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Scrum.,2025-07-12,3476,Guatemala;cloud;devops,false
+p140,Nuevo reto personal: aprender Manufactura en 30 días. ¿Quién se une?,2023-07-27,589,diseño;aprendizaje;startups,true
+p141,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Linux.,2024-12-09,4336,cloud;tech;python;liderazgo,true
+p142,Nuevo reto personal: aprender Salud en 30 días. ¿Quién se une?,2025-08-27,6702,python;trabajo,false
+p143,Buscando profesionales en Transporte para un proyecto increíble.,2020-06-03,703,liderazgo;noticias;diseño,true
+p144,Reflexión del día: la clave del éxito en Turismo es la constancia.,2023-02-24,1184,desarrollo;devops,true
+p145,Acabo de publicar un artículo sobre las tendencias en Retail. ¿Qué opinan?,2026-09-24,1371,carrera;aprendizaje;ciberseguridad;python,false
+p146,Gran evento de networking hoy. Aprendí mucho sobre GraphQL.,2020-07-20,7822,diseño,true
+p147,Acabo de publicar un artículo sobre las tendencias en Python. ¿Qué opinan?,2022-04-15,1610,ciberseguridad;tech;ia,false
+p148,Buscando profesionales en Neo4j para un proyecto increíble.,2022-09-18,3069,carrera;noticias;trabajo;latam,false
+p149,Acabo de publicar un artículo sobre las tendencias en Laravel. ¿Qué opinan?,2024-09-03,7215,latam,true
+p150,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Swift.,2024-05-28,335,noticias;devops;carrera;diseño,true
+p151,Pro tip sobre Kotlin: siempre documenta tu proceso.,2020-07-15,5153,data;carrera;edtech,false
+p152,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de SQL.,2020-09-14,877,edtech;desarrollo,false
+p153,Gran evento de networking hoy. Aprendí mucho sobre Neo4j.,2021-09-20,6578,python;empleo;ia,false
+p154,Nuevo reto personal: aprender Finanzas en 30 días. ¿Quién se une?,2022-06-09,4563,tech;fintech,false
+p155,Pro tip sobre GCP: siempre documenta tu proceso.,2023-08-03,4497,ia;empleo,false
+p156,Reflexión del día: la clave del éxito en PostgreSQL es la constancia.,2022-11-30,1782,carrera;noticias;diseño,false
+p157,Acabo de publicar un artículo sobre las tendencias en Salud. ¿Qué opinan?,2024-06-07,20,ciberseguridad;producto;tech;noticias,false
+p158,¿Alguien más está trabajando con Microservices? Me encantaría conectar.,2026-04-23,5709,producto,true
+p159,Pro tip sobre Elasticsearch: siempre documenta tu proceso.,2024-03-14,3033,networking,false
+p160,Acabo de publicar un artículo sobre las tendencias en C++. ¿Qué opinan?,2023-06-10,4948,Guatemala;data,true
+p161,Gran evento de networking hoy. Aprendí mucho sobre Agroindustria.,2023-02-02,5078,desarrollo;fintech,true
+p162,El mercado laboral en Retail está creciendo increíblemente.,2023-10-09,5430,devops;innovacion;aprendizaje;latam,false
+p163,Nuevo reto personal: aprender Git en 30 días. ¿Quién se une?,2020-05-30,3943,latam,false
+p164,Acabo de publicar un artículo sobre las tendencias en Finanzas. ¿Qué opinan?,2026-11-14,2157,diseño;startups,true
+p165,Gran evento de networking hoy. Aprendí mucho sobre NLP.,2025-04-12,5384,trabajo;Guatemala;aprendizaje;liderazgo,true
+p166,Reflexión del día: la clave del éxito en Finanzas es la constancia.,2020-01-11,6799,producto;python;noticias,false
+p167,Debate: ¿cuál es el mayor reto de FastAPI en Latinoamérica?,2023-05-07,7087,latam,true
+p168,Nuevo reto personal: aprender Git en 30 días. ¿Quién se une?,2025-03-14,3822,python,true
+p169,¿Alguien más está trabajando con C#? Me encantaría conectar.,2023-09-26,5271,innovacion;cloud;startups,false
+p170,Buscando profesionales en Microservices para un proyecto increíble.,2020-10-20,6706,edtech;ciberseguridad;noticias,true
+p171,Reflexión del día: la clave del éxito en Azure es la constancia.,2024-02-05,3836,carrera;devops;trabajo,true
+p172,Nuevo reto personal: aprender Laravel en 30 días. ¿Quién se une?,2025-06-21,2531,carrera,false
+p173,Compartiendo recursos gratuitos para aprender Terraform.,2025-03-30,1753,networking;cloud;ciberseguridad,false
+p174,Nuevo reto personal: aprender Azure en 30 días. ¿Quién se une?,2026-03-13,144,noticias;producto;startups,false
+p175,Nuevo reto personal: aprender Turismo en 30 días. ¿Quién se une?,2025-08-16,800,carrera;python;networking;desarrollo,false
+p176,Compartiendo recursos gratuitos para aprender REST APIs.,2021-04-26,6362,aprendizaje;empleo,true
+p177,Buscando profesionales en Salud para un proyecto increíble.,2023-05-21,3637,startups,true
+p178,Pro tip sobre C++: siempre documenta tu proceso.,2022-10-27,3280,diseño;edtech;trabajo;devops,false
+p179,Compartiendo recursos gratuitos para aprender Git.,2025-06-26,5901,startups;trabajo,false
+p180,Debate: ¿cuál es el mayor reto de AWS en Latinoamérica?,2026-05-31,2785,desarrollo,true
+p181,Pro tip sobre Logística: siempre documenta tu proceso.,2023-03-06,3054,python;trabajo;innovacion;tech,true
+p182,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Energía.,2024-05-09,825,ia,false
+p183,Nuevo reto personal: aprender Scrum en 30 días. ¿Quién se une?,2020-05-07,5398,trabajo,false
+p184,Debate: ¿cuál es el mayor reto de JavaScript en Latinoamérica?,2024-04-18,3768,liderazgo;python;noticias,false
+p185,Debate: ¿cuál es el mayor reto de Agile en Latinoamérica?,2021-12-30,7734,Guatemala;fintech;trabajo,false
+p186,Debate: ¿cuál es el mayor reto de Swift en Latinoamérica?,2021-03-25,6137,liderazgo;cloud;fintech,false
+p187,Pro tip sobre Linux: siempre documenta tu proceso.,2022-10-20,2891,aprendizaje;noticias,true
+p188,Nuevo reto personal: aprender Gobierno en 30 días. ¿Quién se une?,2023-12-29,5760,python;noticias;innovacion;networking,true
+p189,El mercado laboral en NLP está creciendo increíblemente.,2022-05-28,2212,data,true
+p190,Nuevo reto personal: aprender Energía en 30 días. ¿Quién se une?,2021-03-12,6170,producto;tech,true
+p191,Acabo de publicar un artículo sobre las tendencias en Angular. ¿Qué opinan?,2020-07-12,4944,startups;empleo;noticias;diseño,false
+p192,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Django.,2024-11-05,3319,Guatemala;noticias,false
+p193,Pro tip sobre Retail: siempre documenta tu proceso.,2020-09-13,7788,desarrollo;tech;data,true
+p194,Compartiendo recursos gratuitos para aprender TypeScript.,2025-02-11,5517,latam;diseño,false
+p195,Nuevo reto personal: aprender Computer Vision en 30 días. ¿Quién se une?,2021-09-20,3193,desarrollo,true
+p196,Nuevo reto personal: aprender Vue.js en 30 días. ¿Quién se une?,2024-08-27,1943,liderazgo;devops;edtech;ia,true
+p197,El mercado laboral en Medios está creciendo increíblemente.,2025-11-12,3197,liderazgo;trabajo;ia;networking,true
+p198,Buscando profesionales en Manufactura para un proyecto increíble.,2021-11-11,618,diseño;fintech;empleo,false
+p199,Reflexión del día: la clave del éxito en Telecomunicaciones es la constancia.,2024-03-26,676,liderazgo,false
+p200,Compartiendo recursos gratuitos para aprender NLP.,2026-05-13,6602,Guatemala;producto,false
+p201,Gran evento de networking hoy. Aprendí mucho sobre Educación.,2023-07-28,3698,diseño;devops;carrera,false
+p202,Debate: ¿cuál es el mayor reto de Node.js en Latinoamérica?,2022-01-10,3070,devops;startups;ia,true
+p203,El mercado laboral en C++ está creciendo increíblemente.,2025-12-20,5453,ia;data;carrera,false
+p204,Buscando profesionales en Machine Learning para un proyecto increíble.,2020-03-15,5629,networking;python;data,true
+p205,Debate: ¿cuál es el mayor reto de Git en Latinoamérica?,2022-06-05,3641,desarrollo;startups;trabajo;ciberseguridad,false
+p206,Pro tip sobre Logística: siempre documenta tu proceso.,2020-11-24,2131,fintech;networking;empleo;tech,true
+p207,Acabo de publicar un artículo sobre las tendencias en Microservices. ¿Qué opinan?,2025-11-09,1997,cloud;Guatemala,false
+p208,Emocionado de compartir que acabo de completar mi certificación en ONG.,2021-02-03,911,innovacion;empleo,true
+p209,Gran evento de networking hoy. Aprendí mucho sobre Python.,2022-03-12,13,carrera;startups;innovacion;noticias,true
+p210,Debate: ¿cuál es el mayor reto de SQL en Latinoamérica?,2020-02-13,3455,aprendizaje;trabajo;ciberseguridad;cloud,false
+p211,Gran evento de networking hoy. Aprendí mucho sobre Swift.,2026-10-08,3057,noticias,false
+p212,Compartiendo recursos gratuitos para aprender Elasticsearch.,2020-09-26,5214,empleo;trabajo;noticias;networking,true
+p213,Acabo de publicar un artículo sobre las tendencias en NLP. ¿Qué opinan?,2025-11-14,6926,ciberseguridad;python;fintech;startups,true
+p214,El mercado laboral en CI/CD está creciendo increíblemente.,2026-06-10,1821,cloud,true
+p215,Gran evento de networking hoy. Aprendí mucho sobre Consultoría.,2023-05-03,5360,carrera;devops;producto,false
+p216,Pro tip sobre Kubernetes: siempre documenta tu proceso.,2021-03-23,4823,carrera,true
+p217,Nuevo reto personal: aprender Tecnología en 30 días. ¿Quién se une?,2022-08-02,4990,carrera,false
+p218,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de JavaScript.,2026-05-01,5892,diseño;tech;cloud;startups,true
+p219,Nuevo reto personal: aprender Energía en 30 días. ¿Quién se une?,2021-04-13,5776,fintech;python;trabajo;ciberseguridad,true
+p220,Debate: ¿cuál es el mayor reto de Medios en Latinoamérica?,2024-03-10,4576,data,false
+p221,El mercado laboral en Swift está creciendo increíblemente.,2026-07-01,3205,tech;innovacion;devops;empleo,true
+p222,Nuevo reto personal: aprender Turismo en 30 días. ¿Quién se une?,2022-10-07,548,diseño;carrera,true
+p223,Nuevo reto personal: aprender Logística en 30 días. ¿Quién se une?,2021-12-04,3289,networking,true
+p224,¿Alguien más está trabajando con MongoDB? Me encantaría conectar.,2026-05-29,6020,ciberseguridad,false
+p225,Nuevo reto personal: aprender Manufactura en 30 días. ¿Quién se une?,2023-02-05,4213,networking,true
+p226,Buscando profesionales en Retail para un proyecto increíble.,2024-02-16,4466,desarrollo;startups,true
+p227,Compartiendo recursos gratuitos para aprender Transporte.,2026-12-20,5232,tech,false
+p228,Nuevo reto personal: aprender Neo4j en 30 días. ¿Quién se une?,2022-09-07,7253,ia;noticias;startups,false
+p229,Acabo de publicar un artículo sobre las tendencias en CI/CD. ¿Qué opinan?,2026-06-08,1783,trabajo;tech;empleo,true
+p230,Acabo de publicar un artículo sobre las tendencias en TypeScript. ¿Qué opinan?,2020-12-28,1233,data;ia,false
+p231,Nuevo reto personal: aprender Machine Learning en 30 días. ¿Quién se une?,2026-07-15,5787,liderazgo;tech;cloud;Guatemala,false
+p232,¿Alguien más está trabajando con Cassandra? Me encantaría conectar.,2025-07-12,667,edtech;tech;data;python,false
+p233,Gran evento de networking hoy. Aprendí mucho sobre Machine Learning.,2025-01-24,7434,liderazgo,false
+p234,¿Alguien más está trabajando con Kotlin? Me encantaría conectar.,2022-11-04,7455,tech;Guatemala;ia;carrera,false
+p235,El mercado laboral en Telecomunicaciones está creciendo increíblemente.,2022-08-07,6232,data;cloud;innovacion,false
+p236,El mercado laboral en Spring Boot está creciendo increíblemente.,2021-04-17,6193,carrera;innovacion;fintech;aprendizaje,true
+p237,Emocionado de compartir que acabo de completar mi certificación en CI/CD.,2023-02-20,1838,Guatemala;diseño;edtech,false
+p238,Compartiendo recursos gratuitos para aprender REST APIs.,2022-08-13,6903,diseño,false
+p239,Buscando profesionales en JavaScript para un proyecto increíble.,2022-07-21,1849,devops;liderazgo,false
+p240,Debate: ¿cuál es el mayor reto de Transporte en Latinoamérica?,2025-01-22,2730,devops;Guatemala;trabajo;tech,false
+p241,El mercado laboral en Laravel está creciendo increíblemente.,2025-12-24,7035,liderazgo,false
+p242,Debate: ¿cuál es el mayor reto de Medios en Latinoamérica?,2024-12-02,5942,trabajo;ciberseguridad,true
+p243,Nuevo reto personal: aprender CI/CD en 30 días. ¿Quién se une?,2020-03-21,7016,startups;empleo;noticias,true
+p244,Pro tip sobre Agile: siempre documenta tu proceso.,2026-07-18,7299,liderazgo;edtech;startups,false
+p245,Gran evento de networking hoy. Aprendí mucho sobre Transporte.,2021-04-25,861,python,false
+p246,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Elasticsearch.,2024-05-25,2512,latam;startups;fintech;aprendizaje,false
+p247,Pro tip sobre Swift: siempre documenta tu proceso.,2025-09-27,4630,networking;empleo;carrera;fintech,true
+p248,Acabo de publicar un artículo sobre las tendencias en Machine Learning. ¿Qué opinan?,2023-10-15,2198,data,true
+p249,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Machine Learning.,2022-11-22,7836,desarrollo;latam;aprendizaje;tech,false
+p250,Gran evento de networking hoy. Aprendí mucho sobre Finanzas.,2026-08-14,5971,diseño;edtech,false
+p251,¿Alguien más está trabajando con Node.js? Me encantaría conectar.,2025-10-28,1083,ciberseguridad;noticias;python;producto,false
+p252,Pro tip sobre Gobierno: siempre documenta tu proceso.,2025-02-11,3596,innovacion;python;diseño,true
+p253,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de SQL.,2024-07-22,1182,cloud;noticias;innovacion;liderazgo,true
+p254,Debate: ¿cuál es el mayor reto de Telecomunicaciones en Latinoamérica?,2024-12-23,571,python,false
+p255,Buscando profesionales en Azure para un proyecto increíble.,2021-05-19,1065,empleo;fintech;python;aprendizaje,true
+p256,Acabo de publicar un artículo sobre las tendencias en Angular. ¿Qué opinan?,2021-11-02,1899,fintech;cloud,true
+p257,Reflexión del día: la clave del éxito en Node.js es la constancia.,2026-12-01,4828,devops;carrera,true
+p258,Gran evento de networking hoy. Aprendí mucho sobre Energía.,2020-04-22,6836,liderazgo;devops;edtech;cloud,true
+p259,Gran evento de networking hoy. Aprendí mucho sobre Scrum.,2023-11-09,5360,data;Guatemala,false
+p260,El mercado laboral en Gobierno está creciendo increíblemente.,2024-05-23,2646,producto;startups,true
+p261,Reflexión del día: la clave del éxito en Machine Learning es la constancia.,2023-11-08,1986,edtech;python;carrera;devops,false
+p262,El mercado laboral en Gobierno está creciendo increíblemente.,2026-03-26,2755,ciberseguridad;noticias;Guatemala,true
+p263,¿Alguien más está trabajando con C#? Me encantaría conectar.,2026-06-28,5175,devops,true
+p264,Nuevo reto personal: aprender Azure en 30 días. ¿Quién se une?,2023-06-27,7409,desarrollo;tech,false
+p265,Buscando profesionales en Neo4j para un proyecto increíble.,2024-08-07,6227,networking;latam;Guatemala,true
+p266,Pro tip sobre Computer Vision: siempre documenta tu proceso.,2024-10-03,4510,ciberseguridad;carrera;tech;fintech,true
+p267,Emocionado de compartir que acabo de completar mi certificación en Django.,2026-08-14,7790,empleo;trabajo,true
+p268,¿Alguien más está trabajando con Agroindustria? Me encantaría conectar.,2025-05-22,280,producto,false
+p269,El mercado laboral en Linux está creciendo increíblemente.,2024-08-25,7557,liderazgo;fintech,true
+p270,El mercado laboral en Telecomunicaciones está creciendo increíblemente.,2025-04-17,4635,empleo;desarrollo;noticias;data,true
+p271,Acabo de publicar un artículo sobre las tendencias en Telecomunicaciones. ¿Qué opinan?,2021-10-07,6599,liderazgo;latam;aprendizaje,true
+p272,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Energía.,2021-04-08,3882,startups;trabajo;aprendizaje;tech,true
+p273,Buscando profesionales en Educación para un proyecto increíble.,2022-01-18,4439,noticias,true
+p274,Emocionado de compartir que acabo de completar mi certificación en AWS.,2020-11-17,5747,empleo,false
+p275,Acabo de publicar un artículo sobre las tendencias en GCP. ¿Qué opinan?,2020-11-20,1229,networking,true
+p276,Debate: ¿cuál es el mayor reto de Tecnología en Latinoamérica?,2020-01-15,673,latam;startups;devops;ia,false
+p277,Acabo de publicar un artículo sobre las tendencias en Deep Learning. ¿Qué opinan?,2025-08-02,5075,fintech;edtech,true
+p278,Emocionado de compartir que acabo de completar mi certificación en Medios.,2023-01-07,3324,networking;innovacion;Guatemala;diseño,true
+p279,¿Alguien más está trabajando con Azure? Me encantaría conectar.,2021-12-01,3323,devops;empleo;python;cloud,false
+p280,Emocionado de compartir que acabo de completar mi certificación en Elasticsearch.,2025-12-29,7442,startups;ciberseguridad;data,true
+p281,Emocionado de compartir que acabo de completar mi certificación en SQL.,2024-03-05,4158,networking;cloud;edtech;ciberseguridad,true
+p282,Gran evento de networking hoy. Aprendí mucho sobre NLP.,2020-02-12,3491,ia,false
+p283,Nuevo reto personal: aprender Neo4j en 30 días. ¿Quién se une?,2026-08-31,1257,networking;carrera,false
+p284,¿Alguien más está trabajando con Laravel? Me encantaría conectar.,2025-12-17,2803,producto,false
+p285,Emocionado de compartir que acabo de completar mi certificación en C++.,2024-02-03,362,liderazgo,false
+p286,Pro tip sobre Agile: siempre documenta tu proceso.,2025-06-02,5482,tech;producto,true
+p287,Nuevo reto personal: aprender Go en 30 días. ¿Quién se une?,2026-05-29,1070,trabajo,true
+p288,El mercado laboral en Finanzas está creciendo increíblemente.,2023-12-16,1034,cloud;edtech,true
+p289,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Neo4j.,2020-01-16,6810,liderazgo;diseño;data,false
+p290,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de GCP.,2025-09-01,1323,Guatemala,false
+p291,Nuevo reto personal: aprender Telecomunicaciones en 30 días. ¿Quién se une?,2021-05-26,633,data;producto;diseño;innovacion,true
+p292,Acabo de publicar un artículo sobre las tendencias en Agile. ¿Qué opinan?,2021-11-06,7975,innovacion,false
+p293,Pro tip sobre Kubernetes: siempre documenta tu proceso.,2021-03-29,6485,empleo;startups;ciberseguridad,false
+p294,Buscando profesionales en Git para un proyecto increíble.,2024-08-14,1298,networking;latam;producto;ia,true
+p295,Debate: ¿cuál es el mayor reto de Go en Latinoamérica?,2021-12-29,2460,innovacion;cloud;diseño;aprendizaje,false
+p296,Pro tip sobre React: siempre documenta tu proceso.,2022-11-22,2433,diseño;startups,true
+p297,Compartiendo recursos gratuitos para aprender Gobierno.,2023-11-04,7044,producto;innovacion;desarrollo,false
+p298,Reflexión del día: la clave del éxito en Agile es la constancia.,2024-03-21,2964,trabajo;Guatemala;carrera;edtech,false
+p299,Buscando profesionales en ONG para un proyecto increíble.,2025-10-24,7098,empleo,true
+p300,Buscando profesionales en Laravel para un proyecto increíble.,2025-12-27,5302,diseño,false
+p301,Reflexión del día: la clave del éxito en Docker es la constancia.,2025-04-12,4761,python;diseño;tech;liderazgo,false
+p302,Emocionado de compartir que acabo de completar mi certificación en Agile.,2020-09-26,3432,noticias;cloud;aprendizaje,true
+p303,Acabo de publicar un artículo sobre las tendencias en Gobierno. ¿Qué opinan?,2021-11-18,3321,edtech;networking;latam;devops,true
+p304,Emocionado de compartir que acabo de completar mi certificación en Django.,2024-08-16,6405,python;producto,true
+p305,Debate: ¿cuál es el mayor reto de Seguros en Latinoamérica?,2023-01-04,7560,trabajo,false
+p306,Reflexión del día: la clave del éxito en Redis es la constancia.,2022-09-17,890,innovacion,true
+p307,Reflexión del día: la clave del éxito en Linux es la constancia.,2023-06-26,7466,devops,false
+p308,Nuevo reto personal: aprender PostgreSQL en 30 días. ¿Quién se une?,2026-05-30,7943,tech,true
+p309,El mercado laboral en Laravel está creciendo increíblemente.,2021-05-30,7523,data;Guatemala,false
+p310,Pro tip sobre Telecomunicaciones: siempre documenta tu proceso.,2023-06-08,1340,liderazgo;ciberseguridad,true
+p311,Compartiendo recursos gratuitos para aprender Educación.,2023-08-16,5050,fintech;aprendizaje;edtech;noticias,false
+p312,¿Alguien más está trabajando con Azure? Me encantaría conectar.,2022-10-17,7070,empleo,true
+p313,Gran evento de networking hoy. Aprendí mucho sobre Retail.,2021-10-31,6076,innovacion;cloud;carrera,false
+p314,Emocionado de compartir que acabo de completar mi certificación en JavaScript.,2022-04-10,1173,liderazgo,true
+p315,Debate: ¿cuál es el mayor reto de REST APIs en Latinoamérica?,2020-08-15,3541,innovacion;aprendizaje;ia,false
+p316,Acabo de publicar un artículo sobre las tendencias en Swift. ¿Qué opinan?,2025-01-23,4122,cloud;edtech;Guatemala;devops,true
+p317,Debate: ¿cuál es el mayor reto de Agroindustria en Latinoamérica?,2023-03-09,1442,trabajo;carrera,false
+p318,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Swift.,2020-09-07,6018,innovacion;latam;devops;liderazgo,true
+p319,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Angular.,2023-06-06,7831,fintech;liderazgo,false
+p320,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Java.,2023-02-09,2617,fintech;liderazgo,true
+p321,Debate: ¿cuál es el mayor reto de Azure en Latinoamérica?,2021-12-15,4205,ciberseguridad;edtech;cloud;Guatemala,false
+p322,Buscando profesionales en FastAPI para un proyecto increíble.,2025-09-23,807,cloud;tech,false
+p323,Buscando profesionales en Laravel para un proyecto increíble.,2023-10-26,2036,python;empleo,true
+p324,Gran evento de networking hoy. Aprendí mucho sobre Kubernetes.,2021-02-19,6923,networking;startups,false
+p325,Acabo de publicar un artículo sobre las tendencias en Java. ¿Qué opinan?,2026-05-23,4413,data;edtech;innovacion,true
+p326,Emocionado de compartir que acabo de completar mi certificación en FastAPI.,2022-07-31,2841,Guatemala,true
+p327,Gran evento de networking hoy. Aprendí mucho sobre TypeScript.,2021-05-29,2036,Guatemala;trabajo,true
+p328,Pro tip sobre Tecnología: siempre documenta tu proceso.,2021-01-02,2995,Guatemala;ciberseguridad;noticias,true
+p329,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Seguros.,2022-12-28,5194,devops,true
+p330,Reflexión del día: la clave del éxito en ONG es la constancia.,2023-05-10,7752,carrera;startups;ia,true
+p331,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Scrum.,2021-10-02,3041,ia;networking;Guatemala,true
+p332,El mercado laboral en Telecomunicaciones está creciendo increíblemente.,2020-05-25,7711,desarrollo;ia;liderazgo;cloud,false
+p333,Emocionado de compartir que acabo de completar mi certificación en Azure.,2022-07-03,5973,producto;devops;ia,false
+p334,¿Alguien más está trabajando con GCP? Me encantaría conectar.,2025-07-29,7031,latam;noticias;trabajo,false
+p335,Gran evento de networking hoy. Aprendí mucho sobre Telecomunicaciones.,2022-08-02,1422,devops;aprendizaje,true
+p336,Emocionado de compartir que acabo de completar mi certificación en Transporte.,2024-10-29,985,networking;ia;fintech;ciberseguridad,false
+p337,Debate: ¿cuál es el mayor reto de MongoDB en Latinoamérica?,2022-08-30,2588,tech;innovacion,false
+p338,¿Alguien más está trabajando con AWS? Me encantaría conectar.,2020-06-19,2368,python;Guatemala,false
+p339,El mercado laboral en Telecomunicaciones está creciendo increíblemente.,2024-01-08,5469,producto;innovacion;ia;startups,true
+p340,Compartiendo recursos gratuitos para aprender Node.js.,2024-09-26,196,liderazgo,true
+p341,¿Alguien más está trabajando con JavaScript? Me encantaría conectar.,2020-11-18,7507,aprendizaje;trabajo;python,true
+p342,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Swift.,2025-06-11,6808,ciberseguridad,true
+p343,Emocionado de compartir que acabo de completar mi certificación en Laravel.,2024-05-19,5377,carrera,true
+p344,El mercado laboral en Deep Learning está creciendo increíblemente.,2021-04-11,3339,edtech;ciberseguridad;latam;ia,false
+p345,Gran evento de networking hoy. Aprendí mucho sobre Turismo.,2026-09-06,374,diseño;python;fintech,false
+p346,Nuevo reto personal: aprender Linux en 30 días. ¿Quién se une?,2026-03-30,4393,carrera;noticias,true
+p347,El mercado laboral en JavaScript está creciendo increíblemente.,2020-02-19,3925,edtech;noticias,true
+p348,Emocionado de compartir que acabo de completar mi certificación en Finanzas.,2026-03-19,919,innovacion;networking;diseño,true
+p349,Pro tip sobre Node.js: siempre documenta tu proceso.,2023-12-11,3440,tech;innovacion;desarrollo,true
+p350,Debate: ¿cuál es el mayor reto de Finanzas en Latinoamérica?,2020-04-27,7859,python;carrera,false
+p351,El mercado laboral en Educación está creciendo increíblemente.,2026-09-17,4784,trabajo;diseño;devops,false
+p352,Acabo de publicar un artículo sobre las tendencias en Agile. ¿Qué opinan?,2026-02-25,1674,innovacion;ia;devops;carrera,false
+p353,Acabo de publicar un artículo sobre las tendencias en SQL. ¿Qué opinan?,2020-05-24,7731,carrera;desarrollo;aprendizaje;innovacion,false
+p354,¿Alguien más está trabajando con Medios? Me encantaría conectar.,2026-04-17,2765,trabajo;ia;aprendizaje;startups,false
+p355,Gran evento de networking hoy. Aprendí mucho sobre JavaScript.,2023-12-09,5479,carrera;data;startups,true
+p356,¿Alguien más está trabajando con Machine Learning? Me encantaría conectar.,2020-07-18,7504,data;liderazgo;networking;tech,true
+p357,Reflexión del día: la clave del éxito en Azure es la constancia.,2025-12-07,6839,aprendizaje;Guatemala;data,true
+p358,Pro tip sobre Tecnología: siempre documenta tu proceso.,2025-05-07,3949,tech;fintech,true
+p359,¿Alguien más está trabajando con CI/CD? Me encantaría conectar.,2025-07-21,5632,trabajo;liderazgo;empleo;aprendizaje,true
+p360,Nuevo reto personal: aprender Docker en 30 días. ¿Quién se une?,2026-02-20,3936,tech;trabajo,true
+p361,Acabo de publicar un artículo sobre las tendencias en Microservices. ¿Qué opinan?,2020-08-23,1134,startups;Guatemala;tech,true
+p362,Nuevo reto personal: aprender Docker en 30 días. ¿Quién se une?,2026-08-13,256,fintech,true
+p363,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Consultoría.,2025-07-24,3288,cloud;desarrollo;noticias;networking,false
+p364,Gran evento de networking hoy. Aprendí mucho sobre C++.,2024-05-23,1757,data,false
+p365,Buscando profesionales en Deep Learning para un proyecto increíble.,2022-06-19,6327,tech,true
+p366,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Rust.,2023-04-07,1830,empleo;producto;startups,true
+p367,Emocionado de compartir que acabo de completar mi certificación en Cassandra.,2023-02-12,871,liderazgo;diseño;aprendizaje;Guatemala,false
+p368,Gran evento de networking hoy. Aprendí mucho sobre Educación.,2024-05-06,1250,edtech;data;latam;trabajo,false
+p369,Reflexión del día: la clave del éxito en Swift es la constancia.,2023-10-11,1271,Guatemala;diseño;carrera;python,true
+p370,Reflexión del día: la clave del éxito en Kotlin es la constancia.,2022-10-20,306,cloud;startups,true
+p371,Nuevo reto personal: aprender CI/CD en 30 días. ¿Quién se une?,2025-04-01,3699,empleo,false
+p372,¿Alguien más está trabajando con Microservices? Me encantaría conectar.,2024-02-20,4248,devops,true
+p373,El mercado laboral en Consultoría está creciendo increíblemente.,2021-11-10,6325,Guatemala,true
+p374,Gran evento de networking hoy. Aprendí mucho sobre Linux.,2024-11-01,355,empleo,true
+p375,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Kotlin.,2025-06-21,4318,devops;noticias;diseño,true
+p376,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Computer Vision.,2024-04-12,6550,aprendizaje;ia,false
+p377,Reflexión del día: la clave del éxito en Elasticsearch es la constancia.,2024-05-20,5009,ciberseguridad;startups;networking,true
+p378,Reflexión del día: la clave del éxito en React es la constancia.,2022-11-29,5685,devops;ciberseguridad,false
+p379,Buscando profesionales en Finanzas para un proyecto increíble.,2020-10-15,2001,cloud;innovacion;ia;startups,false
+p380,Emocionado de compartir que acabo de completar mi certificación en Django.,2020-10-28,6861,ciberseguridad,true
+p381,Debate: ¿cuál es el mayor reto de Swift en Latinoamérica?,2024-04-06,5562,diseño;liderazgo;trabajo;devops,true
+p382,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Educación.,2022-10-15,5484,tech;carrera;ia;devops,false
+p383,¿Alguien más está trabajando con Medios? Me encantaría conectar.,2025-08-15,4651,trabajo,true
+p384,Debate: ¿cuál es el mayor reto de AWS en Latinoamérica?,2024-03-29,7834,startups;noticias,false
+p385,El mercado laboral en Computer Vision está creciendo increíblemente.,2022-05-15,2371,python,true
+p386,Acabo de publicar un artículo sobre las tendencias en Rust. ¿Qué opinan?,2023-02-24,763,ia;desarrollo,true
+p387,¿Alguien más está trabajando con Logística? Me encantaría conectar.,2026-04-22,5189,startups,true
+p388,Nuevo reto personal: aprender Agroindustria en 30 días. ¿Quién se une?,2020-12-17,5713,empleo;Guatemala,true
+p389,Pro tip sobre Medios: siempre documenta tu proceso.,2026-08-02,5476,startups,false
+p390,Pro tip sobre JavaScript: siempre documenta tu proceso.,2025-08-19,2958,tech;liderazgo;devops;python,false
+p391,Pro tip sobre C++: siempre documenta tu proceso.,2023-04-27,5411,desarrollo;data;ia;tech,true
+p392,¿Alguien más está trabajando con Spring Boot? Me encantaría conectar.,2023-12-19,6249,devops;Guatemala;noticias;networking,true
+p393,Pro tip sobre AWS: siempre documenta tu proceso.,2025-04-18,4912,python;innovacion;devops,true
+p394,Buscando profesionales en Node.js para un proyecto increíble.,2025-01-16,2175,producto;diseño;liderazgo,false
+p395,Emocionado de compartir que acabo de completar mi certificación en Agile.,2022-07-29,2022,edtech,true
+p396,Gran evento de networking hoy. Aprendí mucho sobre Salud.,2026-11-23,2366,empleo,false
+p397,Acabo de publicar un artículo sobre las tendencias en Go. ¿Qué opinan?,2020-01-18,6827,tech;cloud;empleo;aprendizaje,false
+p398,Nuevo reto personal: aprender Django en 30 días. ¿Quién se une?,2020-09-24,5757,latam,false
+p399,Gran evento de networking hoy. Aprendí mucho sobre FastAPI.,2020-12-24,5615,ia,true
+p400,El mercado laboral en Agile está creciendo increíblemente.,2024-07-21,5275,startups;aprendizaje;trabajo,true
+p401,Nuevo reto personal: aprender Django en 30 días. ¿Quién se une?,2024-06-10,306,startups;tech;python;devops,false
+p402,Acabo de publicar un artículo sobre las tendencias en Logística. ¿Qué opinan?,2025-11-04,3276,producto;startups;ciberseguridad;carrera,false
+p403,El mercado laboral en Spring Boot está creciendo increíblemente.,2025-10-17,568,tech;diseño;cloud;carrera,true
+p404,Emocionado de compartir que acabo de completar mi certificación en TypeScript.,2025-02-10,6536,tech;ia;innovacion;noticias,true
+p405,Compartiendo recursos gratuitos para aprender Elasticsearch.,2023-07-06,4703,producto;data;python,false
+p406,El mercado laboral en C++ está creciendo increíblemente.,2021-03-29,7631,innovacion,true
+p407,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Tecnología.,2024-09-29,6816,python,false
+p408,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Java.,2021-11-28,7552,devops,false
+p409,Acabo de publicar un artículo sobre las tendencias en Rust. ¿Qué opinan?,2023-12-31,2737,innovacion;devops;cloud;fintech,false
+p410,Compartiendo recursos gratuitos para aprender SQL.,2024-07-25,5745,latam;empleo;cloud,true
+p411,Pro tip sobre Retail: siempre documenta tu proceso.,2020-04-18,6705,cloud;latam,true
+p412,Emocionado de compartir que acabo de completar mi certificación en Gobierno.,2020-08-14,2548,carrera;diseño,false
+p413,Nuevo reto personal: aprender Node.js en 30 días. ¿Quién se une?,2024-04-29,5878,producto,false
+p414,Compartiendo recursos gratuitos para aprender Transporte.,2025-02-12,1928,innovacion,true
+p415,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Medios.,2023-05-27,6253,edtech;networking;devops;desarrollo,false
+p416,Debate: ¿cuál es el mayor reto de Finanzas en Latinoamérica?,2021-09-15,7611,ciberseguridad;latam,false
+p417,Nuevo reto personal: aprender Microservices en 30 días. ¿Quién se une?,2022-09-24,6845,noticias;fintech,false
+p418,El mercado laboral en Redis está creciendo increíblemente.,2021-01-13,2136,cloud,false
+p419,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Angular.,2021-05-24,7328,producto;carrera;innovacion;python,false
+p420,Emocionado de compartir que acabo de completar mi certificación en Terraform.,2024-01-30,4581,noticias,true
+p421,Nuevo reto personal: aprender Redis en 30 días. ¿Quién se une?,2026-10-24,1026,edtech,true
+p422,Gran evento de networking hoy. Aprendí mucho sobre Kotlin.,2023-10-20,200,edtech;liderazgo;ciberseguridad;producto,true
+p423,Nuevo reto personal: aprender Educación en 30 días. ¿Quién se une?,2022-12-13,3220,carrera;data;liderazgo,false
+p424,Emocionado de compartir que acabo de completar mi certificación en C++.,2023-04-27,5428,latam;noticias;tech,true
+p425,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Tecnología.,2022-08-30,2052,noticias;edtech,true
+p426,Debate: ¿cuál es el mayor reto de NLP en Latinoamérica?,2024-06-06,3256,latam;Guatemala,true
+p427,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Transporte.,2020-08-12,2697,producto,true
+p428,Gran evento de networking hoy. Aprendí mucho sobre TypeScript.,2020-01-30,392,trabajo,true
+p429,¿Alguien más está trabajando con Energía? Me encantaría conectar.,2023-08-31,3474,aprendizaje,true
+p430,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Redis.,2022-02-27,4602,devops;producto;diseño,true
+p431,Reflexión del día: la clave del éxito en Logística es la constancia.,2020-12-25,7007,tech;python,true
+p432,Compartiendo recursos gratuitos para aprender Educación.,2022-03-02,4348,fintech;carrera;liderazgo,true
+p433,Compartiendo recursos gratuitos para aprender Kafka.,2026-04-15,6985,noticias;networking;data;fintech,true
+p434,¿Alguien más está trabajando con TypeScript? Me encantaría conectar.,2022-12-16,5450,desarrollo;trabajo;noticias,false
+p435,Compartiendo recursos gratuitos para aprender FastAPI.,2024-08-17,7012,Guatemala;aprendizaje;ia,true
+p436,Reflexión del día: la clave del éxito en Go es la constancia.,2025-12-12,4480,networking;tech,false
+p437,Buscando profesionales en Educación para un proyecto increíble.,2020-11-30,4311,startups;trabajo;noticias;carrera,true
+p438,Compartiendo recursos gratuitos para aprender REST APIs.,2022-07-03,6786,networking,true
+p439,Gran evento de networking hoy. Aprendí mucho sobre Spring Boot.,2021-04-21,5654,producto;cloud;aprendizaje;desarrollo,true
+p440,Nuevo reto personal: aprender Agroindustria en 30 días. ¿Quién se une?,2026-11-01,4841,aprendizaje,false
+p441,Gran evento de networking hoy. Aprendí mucho sobre Laravel.,2020-03-02,6853,networking;cloud,true
+p442,Debate: ¿cuál es el mayor reto de SQL en Latinoamérica?,2022-07-23,5395,Guatemala;networking,true
+p443,Compartiendo recursos gratuitos para aprender Telecomunicaciones.,2024-07-05,6594,trabajo;empleo;carrera;producto,true
+p444,Pro tip sobre Git: siempre documenta tu proceso.,2022-12-01,4956,empleo;Guatemala;producto,false
+p445,Acabo de publicar un artículo sobre las tendencias en Spring Boot. ¿Qué opinan?,2023-05-19,5601,cloud;diseño;aprendizaje,false
+p446,El mercado laboral en C# está creciendo increíblemente.,2021-04-20,609,cloud;python;aprendizaje,false
+p447,Emocionado de compartir que acabo de completar mi certificación en Agile.,2025-10-29,200,ciberseguridad;noticias;ia,false
+p448,Nuevo reto personal: aprender RabbitMQ en 30 días. ¿Quién se une?,2023-11-25,4864,diseño,false
+p449,Debate: ¿cuál es el mayor reto de Gobierno en Latinoamérica?,2021-11-14,6389,desarrollo;noticias;producto;python,true
+p450,Nuevo reto personal: aprender SQL en 30 días. ¿Quién se une?,2021-02-05,5636,tech;edtech,false
+p451,Gran evento de networking hoy. Aprendí mucho sobre Seguros.,2022-08-22,3833,trabajo;aprendizaje,true
+p452,Debate: ¿cuál es el mayor reto de Seguros en Latinoamérica?,2024-06-13,3238,data,true
+p453,Buscando profesionales en AWS para un proyecto increíble.,2025-09-14,2432,ciberseguridad,true
+p454,Reflexión del día: la clave del éxito en Scrum es la constancia.,2023-08-01,2823,innovacion;cloud;liderazgo;data,false
+p455,Pro tip sobre Consultoría: siempre documenta tu proceso.,2026-06-29,2587,ia;liderazgo;diseño,true
+p456,Acabo de publicar un artículo sobre las tendencias en Finanzas. ¿Qué opinan?,2025-01-23,2207,ia,true
+p457,Pro tip sobre Kafka: siempre documenta tu proceso.,2022-06-06,3207,tech;data;edtech;desarrollo,false
+p458,Reflexión del día: la clave del éxito en Seguros es la constancia.,2023-12-25,3219,aprendizaje;trabajo;empleo;latam,false
+p459,Debate: ¿cuál es el mayor reto de Consultoría en Latinoamérica?,2021-10-18,1681,tech;ciberseguridad,true
+p460,Nuevo reto personal: aprender Linux en 30 días. ¿Quién se une?,2022-10-17,262,liderazgo;empleo,false
+p461,Compartiendo recursos gratuitos para aprender Computer Vision.,2021-07-24,4188,cloud;empleo;trabajo;python,false
+p462,Compartiendo recursos gratuitos para aprender Tecnología.,2025-11-06,4298,ia;empleo,false
+p463,Buscando profesionales en Tecnología para un proyecto increíble.,2024-10-14,2892,ciberseguridad;latam;networking,true
+p464,Emocionado de compartir que acabo de completar mi certificación en Elasticsearch.,2021-07-01,53,producto,false
+p465,Emocionado de compartir que acabo de completar mi certificación en Computer Vision.,2023-04-23,1128,devops;fintech;ia;aprendizaje,true
+p466,Pro tip sobre Scrum: siempre documenta tu proceso.,2024-10-26,6242,diseño;carrera,false
+p467,¿Alguien más está trabajando con React? Me encantaría conectar.,2023-09-02,2895,ia;fintech;edtech,true
+p468,Emocionado de compartir que acabo de completar mi certificación en Seguros.,2024-01-28,7249,python,true
+p469,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Kubernetes.,2026-01-11,6296,edtech;networking;aprendizaje,true
+p470,Buscando profesionales en RabbitMQ para un proyecto increíble.,2020-07-14,105,aprendizaje;tech,false
+p471,Reflexión del día: la clave del éxito en Kotlin es la constancia.,2022-09-12,2639,networking,true
+p472,Emocionado de compartir que acabo de completar mi certificación en Tecnología.,2022-02-18,5485,fintech;networking;diseño,false
+p473,Buscando profesionales en Redis para un proyecto increíble.,2023-09-17,6609,liderazgo;trabajo,false
+p474,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Swift.,2026-04-13,246,aprendizaje,false
+p475,Buscando profesionales en C# para un proyecto increíble.,2024-09-24,6883,producto;carrera;ciberseguridad;noticias,false
+p476,Emocionado de compartir que acabo de completar mi certificación en FastAPI.,2022-04-25,7029,devops,false
+p477,Acabo de publicar un artículo sobre las tendencias en Agroindustria. ¿Qué opinan?,2022-11-01,526,carrera,true
+p478,Gran evento de networking hoy. Aprendí mucho sobre Linux.,2022-12-16,4753,tech;fintech;ciberseguridad;startups,false
+p479,Debate: ¿cuál es el mayor reto de GCP en Latinoamérica?,2026-03-12,225,Guatemala,true
+p480,Pro tip sobre PostgreSQL: siempre documenta tu proceso.,2023-05-11,1169,edtech;empleo;desarrollo;tech,true
+p481,Acabo de publicar un artículo sobre las tendencias en C++. ¿Qué opinan?,2021-05-02,2938,Guatemala,true
+p482,Compartiendo recursos gratuitos para aprender Scrum.,2024-07-28,5040,trabajo;data;Guatemala;empleo,false
+p483,Nuevo reto personal: aprender React en 30 días. ¿Quién se une?,2022-09-28,5704,networking;fintech,true
+p484,Nuevo reto personal: aprender Machine Learning en 30 días. ¿Quién se une?,2026-02-23,1581,diseño;innovacion;startups;cloud,false
+p485,Acabo de publicar un artículo sobre las tendencias en Salud. ¿Qué opinan?,2020-08-22,7820,noticias;carrera;empleo,false
+p486,Debate: ¿cuál es el mayor reto de Medios en Latinoamérica?,2022-03-23,4880,python;trabajo;ia,true
+p487,Nuevo reto personal: aprender Retail en 30 días. ¿Quién se une?,2021-10-13,6693,Guatemala;desarrollo;fintech,false
+p488,Reflexión del día: la clave del éxito en Redis es la constancia.,2024-12-29,5768,carrera;python,true
+p489,¿Alguien más está trabajando con Neo4j? Me encantaría conectar.,2023-02-05,4354,cloud,true
+p490,Acabo de publicar un artículo sobre las tendencias en Agroindustria. ¿Qué opinan?,2024-01-09,6572,edtech,false
+p491,¿Alguien más está trabajando con Transporte? Me encantaría conectar.,2026-02-04,3537,startups,true
+p492,Reflexión del día: la clave del éxito en Agile es la constancia.,2022-06-20,3014,edtech;startups;fintech,false
+p493,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Gobierno.,2022-01-11,370,latam;liderazgo;aprendizaje,false
+p494,Nuevo reto personal: aprender Neo4j en 30 días. ¿Quién se une?,2025-07-24,4911,trabajo,true
+p495,Pro tip sobre Git: siempre documenta tu proceso.,2026-02-23,1830,edtech,false
+p496,Nuevo reto personal: aprender Redis en 30 días. ¿Quién se une?,2024-08-13,7959,innovacion;devops,false
+p497,Compartiendo recursos gratuitos para aprender C++.,2020-12-25,3187,ciberseguridad,false
+p498,El mercado laboral en SQL está creciendo increíblemente.,2025-03-18,7467,trabajo,false
+p499,Compartiendo recursos gratuitos para aprender Turismo.,2021-11-18,1487,data,true
+p500,Gran evento de networking hoy. Aprendí mucho sobre Tecnología.,2025-11-06,4875,python;tech;desarrollo;data,false
+p501,Pro tip sobre MongoDB: siempre documenta tu proceso.,2020-10-15,1064,tech;fintech,false
+p502,Acabo de publicar un artículo sobre las tendencias en CI/CD. ¿Qué opinan?,2021-03-09,6065,cloud,false
+p503,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Gobierno.,2026-08-31,1037,trabajo;diseño;Guatemala;edtech,false
+p504,Emocionado de compartir que acabo de completar mi certificación en Agroindustria.,2022-06-21,1730,ciberseguridad;desarrollo;fintech;latam,true
+p505,El mercado laboral en Terraform está creciendo increíblemente.,2026-04-16,7051,desarrollo;diseño;trabajo;ciberseguridad,false
+p506,Buscando profesionales en SQL para un proyecto increíble.,2025-03-29,3243,python;edtech,true
+p507,Compartiendo recursos gratuitos para aprender Python.,2025-04-10,1943,liderazgo;startups;producto;diseño,false
+p508,Acabo de publicar un artículo sobre las tendencias en AWS. ¿Qué opinan?,2025-03-09,5603,startups;devops;trabajo,true
+p509,Pro tip sobre Linux: siempre documenta tu proceso.,2026-07-09,7418,aprendizaje;networking,false
+p510,Compartiendo recursos gratuitos para aprender Retail.,2023-11-07,2333,startups;innovacion,false
+p511,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de C++.,2024-05-20,253,cloud;Guatemala;liderazgo,true
+p512,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Deep Learning.,2023-09-11,7821,innovacion,false
+p513,Nuevo reto personal: aprender Machine Learning en 30 días. ¿Quién se une?,2023-07-11,3690,fintech;noticias,false
+p514,Gran evento de networking hoy. Aprendí mucho sobre Microservices.,2026-03-11,590,noticias;desarrollo;startups;data,false
+p515,Compartiendo recursos gratuitos para aprender JavaScript.,2025-06-25,6889,python;innovacion,true
+p516,Compartiendo recursos gratuitos para aprender Transporte.,2025-03-23,3814,trabajo;fintech;diseño;data,false
+p517,Compartiendo recursos gratuitos para aprender Java.,2020-01-11,4029,carrera;liderazgo,true
+p518,Reflexión del día: la clave del éxito en Angular es la constancia.,2022-03-19,5861,startups;tech;cloud,true
+p519,Gran evento de networking hoy. Aprendí mucho sobre Git.,2026-08-04,4948,networking;ciberseguridad;Guatemala,true
+p520,Debate: ¿cuál es el mayor reto de Vue.js en Latinoamérica?,2022-07-07,712,fintech;carrera,false
+p521,Buscando profesionales en React para un proyecto increíble.,2025-02-21,1948,edtech;fintech;Guatemala,true
+p522,Acabo de publicar un artículo sobre las tendencias en Scrum. ¿Qué opinan?,2025-01-19,1276,producto;edtech;python,true
+p523,Reflexión del día: la clave del éxito en Seguros es la constancia.,2021-06-08,2012,noticias;ia;startups,false
+p524,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de GCP.,2020-05-16,4793,edtech;latam,false
+p525,Nuevo reto personal: aprender Azure en 30 días. ¿Quién se une?,2025-01-23,343,python;aprendizaje,true
+p526,Pro tip sobre Spring Boot: siempre documenta tu proceso.,2020-10-28,1593,startups;devops;latam;liderazgo,false
+p527,Pro tip sobre Telecomunicaciones: siempre documenta tu proceso.,2024-05-23,910,trabajo;ciberseguridad,true
+p528,Compartiendo recursos gratuitos para aprender Agile.,2021-01-16,7836,noticias;fintech,true
+p529,Gran evento de networking hoy. Aprendí mucho sobre AWS.,2020-05-01,3584,trabajo;networking;empleo;ciberseguridad,true
+p530,Compartiendo recursos gratuitos para aprender Tecnología.,2020-04-18,2987,startups;aprendizaje;ciberseguridad;edtech,false
+p531,Buscando profesionales en Microservices para un proyecto increíble.,2020-01-18,7674,latam;Guatemala;liderazgo,false
+p532,Emocionado de compartir que acabo de completar mi certificación en Kotlin.,2024-07-28,1738,aprendizaje;tech;noticias,false
+p533,Pro tip sobre Retail: siempre documenta tu proceso.,2026-01-16,4962,data;cloud;diseño,true
+p534,Pro tip sobre PostgreSQL: siempre documenta tu proceso.,2022-02-24,4723,devops,false
+p535,Emocionado de compartir que acabo de completar mi certificación en Java.,2025-10-29,1457,carrera;liderazgo,false
+p536,Debate: ¿cuál es el mayor reto de Microservices en Latinoamérica?,2021-08-05,7766,liderazgo;tech;empleo;fintech,true
+p537,Reflexión del día: la clave del éxito en TypeScript es la constancia.,2026-04-30,3638,Guatemala;fintech;tech,false
+p538,¿Alguien más está trabajando con Redis? Me encantaría conectar.,2026-10-16,304,diseño;innovacion;tech;ia,false
+p539,Compartiendo recursos gratuitos para aprender C++.,2021-12-08,316,data,true
+p540,Acabo de publicar un artículo sobre las tendencias en Kubernetes. ¿Qué opinan?,2026-11-10,271,aprendizaje;producto;noticias;empleo,true
+p541,Gran evento de networking hoy. Aprendí mucho sobre Vue.js.,2020-10-29,4515,fintech;cloud,true
+p542,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Salud.,2020-10-24,6067,liderazgo;carrera,true
+p543,¿Alguien más está trabajando con Python? Me encantaría conectar.,2023-10-13,1837,noticias,true
+p544,Reflexión del día: la clave del éxito en Vue.js es la constancia.,2024-09-07,345,ciberseguridad,true
+p545,Reflexión del día: la clave del éxito en Machine Learning es la constancia.,2022-08-13,5344,innovacion;devops;empleo;python,false
+p546,Acabo de publicar un artículo sobre las tendencias en Scrum. ¿Qué opinan?,2026-04-11,2655,ciberseguridad;innovacion;empleo;networking,true
+p547,Gran evento de networking hoy. Aprendí mucho sobre Angular.,2021-09-09,1300,ia,true
+p548,Gran evento de networking hoy. Aprendí mucho sobre SQL.,2026-03-16,434,devops;aprendizaje;edtech,false
+p549,Nuevo reto personal: aprender Machine Learning en 30 días. ¿Quién se une?,2026-07-02,2654,devops;noticias,false
+p550,Emocionado de compartir que acabo de completar mi certificación en Consultoría.,2026-05-14,3415,diseño,false
+p551,Acabo de publicar un artículo sobre las tendencias en Neo4j. ¿Qué opinan?,2021-09-29,5691,Guatemala;empleo;latam,false
+p552,Buscando profesionales en Neo4j para un proyecto increíble.,2026-03-03,3815,noticias;ciberseguridad;devops,true
+p553,Pro tip sobre Python: siempre documenta tu proceso.,2026-10-18,2233,Guatemala;noticias;innovacion;python,false
+p554,¿Alguien más está trabajando con Swift? Me encantaría conectar.,2026-11-23,4210,networking;ciberseguridad;startups;carrera,true
+p555,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Kotlin.,2025-09-30,6526,carrera;fintech,true
+p556,Debate: ¿cuál es el mayor reto de GraphQL en Latinoamérica?,2024-03-26,2106,innovacion,true
+p557,Emocionado de compartir que acabo de completar mi certificación en GCP.,2022-03-13,7091,ia;diseño;desarrollo;aprendizaje,true
+p558,Nuevo reto personal: aprender CI/CD en 30 días. ¿Quién se une?,2024-06-17,4446,data,true
+p559,Debate: ¿cuál es el mayor reto de Transporte en Latinoamérica?,2024-07-02,3096,noticias;liderazgo;latam,true
+p560,Reflexión del día: la clave del éxito en Redis es la constancia.,2026-07-14,4290,trabajo;empleo,false
+p561,Reflexión del día: la clave del éxito en Computer Vision es la constancia.,2024-01-18,1951,fintech;devops;ia,false
+p562,Emocionado de compartir que acabo de completar mi certificación en Rust.,2026-06-20,4947,producto,false
+p563,El mercado laboral en Java está creciendo increíblemente.,2025-11-09,3604,edtech,true
+p564,Pro tip sobre Python: siempre documenta tu proceso.,2025-10-08,6385,noticias;trabajo;latam;empleo,true
+p565,Pro tip sobre Redis: siempre documenta tu proceso.,2021-02-27,5935,noticias,false
+p566,Emocionado de compartir que acabo de completar mi certificación en Docker.,2022-07-15,1842,ciberseguridad;liderazgo;latam;innovacion,false
+p567,Pro tip sobre RabbitMQ: siempre documenta tu proceso.,2021-09-13,5309,aprendizaje;ia;fintech,true
+p568,Nuevo reto personal: aprender Go en 30 días. ¿Quién se une?,2021-01-10,286,python,false
+p569,Emocionado de compartir que acabo de completar mi certificación en Energía.,2021-03-10,4066,tech;empleo;latam,true
+p570,Reflexión del día: la clave del éxito en Azure es la constancia.,2023-03-29,4631,empleo;fintech;diseño;cloud,true
+p571,Emocionado de compartir que acabo de completar mi certificación en Rust.,2020-02-18,5526,producto;noticias,false
+p572,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Manufactura.,2026-10-06,3877,diseño;innovacion;fintech,false
+p573,Compartiendo recursos gratuitos para aprender Django.,2026-09-20,3459,producto;innovacion;startups,false
+p574,Reflexión del día: la clave del éxito en Azure es la constancia.,2021-09-11,3142,fintech;diseño;empleo,true
+p575,Acabo de publicar un artículo sobre las tendencias en Rust. ¿Qué opinan?,2024-07-14,2328,latam,true
+p576,Pro tip sobre Docker: siempre documenta tu proceso.,2020-06-10,7709,ia;data;cloud,false
+p577,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Retail.,2022-07-30,7113,aprendizaje;carrera;liderazgo;fintech,false
+p578,Gran evento de networking hoy. Aprendí mucho sobre NLP.,2021-04-16,6091,tech;desarrollo;Guatemala;noticias,true
+p579,Pro tip sobre Kubernetes: siempre documenta tu proceso.,2026-09-18,5384,latam,false
+p580,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Finanzas.,2024-05-20,4228,devops,false
+p581,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Scrum.,2020-05-22,4223,data,false
+p582,El mercado laboral en Linux está creciendo increíblemente.,2021-12-01,2320,fintech,false
+p583,Pro tip sobre Spring Boot: siempre documenta tu proceso.,2022-12-23,2709,liderazgo,false
+p584,Buscando profesionales en Vue.js para un proyecto increíble.,2022-11-24,3062,Guatemala;networking,false
+p585,Debate: ¿cuál es el mayor reto de Git en Latinoamérica?,2021-03-23,796,ia,true
+p586,Debate: ¿cuál es el mayor reto de Deep Learning en Latinoamérica?,2024-03-03,6559,ciberseguridad,false
+p587,Gran evento de networking hoy. Aprendí mucho sobre Kafka.,2024-10-03,7348,producto;cloud;empleo,true
+p588,Buscando profesionales en Azure para un proyecto increíble.,2026-06-20,3375,desarrollo,true
+p589,Emocionado de compartir que acabo de completar mi certificación en Energía.,2025-02-02,5924,diseño;devops,true
+p590,Emocionado de compartir que acabo de completar mi certificación en Gobierno.,2021-10-01,1210,devops;networking;latam;producto,false
+p591,Compartiendo recursos gratuitos para aprender Turismo.,2021-07-03,70,Guatemala;startups;ciberseguridad,true
+p592,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Deep Learning.,2025-06-06,7548,edtech,true
+p593,¿Alguien más está trabajando con Consultoría? Me encantaría conectar.,2023-02-28,3854,producto;ciberseguridad;devops,false
+p594,Acabo de publicar un artículo sobre las tendencias en CI/CD. ¿Qué opinan?,2020-01-21,2414,liderazgo;cloud,false
+p595,¿Alguien más está trabajando con Elasticsearch? Me encantaría conectar.,2026-02-21,7527,fintech;noticias;empleo,true
+p596,Acabo de publicar un artículo sobre las tendencias en MongoDB. ¿Qué opinan?,2020-11-17,3752,noticias;Guatemala,true
+p597,Acabo de publicar un artículo sobre las tendencias en Azure. ¿Qué opinan?,2021-08-13,5091,aprendizaje;innovacion,false
+p598,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Agroindustria.,2025-08-24,4247,liderazgo;ciberseguridad;desarrollo;innovacion,false
+p599,Nuevo reto personal: aprender Docker en 30 días. ¿Quién se une?,2023-02-15,2698,innovacion;startups;ia,true
+p600,Acabo de publicar un artículo sobre las tendencias en Python. ¿Qué opinan?,2021-04-18,7520,liderazgo;edtech,true
+p601,Gran evento de networking hoy. Aprendí mucho sobre Gobierno.,2020-01-14,5662,producto;aprendizaje;empleo,false
+p602,Nuevo reto personal: aprender Microservices en 30 días. ¿Quién se une?,2020-09-19,5720,devops;carrera,true
+p603,El mercado laboral en Agile está creciendo increíblemente.,2020-04-21,908,devops;desarrollo,false
+p604,Acabo de publicar un artículo sobre las tendencias en Elasticsearch. ¿Qué opinan?,2026-10-10,1985,fintech;latam;aprendizaje;trabajo,true
+p605,Nuevo reto personal: aprender PostgreSQL en 30 días. ¿Quién se une?,2026-03-20,6580,networking;edtech;cloud;python,false
+p606,Emocionado de compartir que acabo de completar mi certificación en Microservices.,2024-09-11,2746,desarrollo;tech;Guatemala,true
+p607,¿Alguien más está trabajando con CI/CD? Me encantaría conectar.,2020-05-23,1075,innovacion;diseño,false
+p608,Buscando profesionales en FastAPI para un proyecto increíble.,2020-08-04,1746,fintech;empleo;diseño;edtech,false
+p609,¿Alguien más está trabajando con NLP? Me encantaría conectar.,2024-08-22,5207,startups;innovacion,false
+p610,Gran evento de networking hoy. Aprendí mucho sobre Angular.,2020-09-13,6551,networking,true
+p611,Buscando profesionales en NLP para un proyecto increíble.,2020-02-28,4026,ciberseguridad;noticias,true
+p612,Gran evento de networking hoy. Aprendí mucho sobre PostgreSQL.,2020-11-13,2612,latam;producto;desarrollo,false
+p613,El mercado laboral en Linux está creciendo increíblemente.,2024-03-22,1897,aprendizaje;Guatemala;edtech,false
+p614,¿Alguien más está trabajando con Deep Learning? Me encantaría conectar.,2020-04-27,1353,Guatemala;networking,true
+p615,Reflexión del día: la clave del éxito en Agroindustria es la constancia.,2025-11-13,5774,aprendizaje;liderazgo;python;Guatemala,false
+p616,Gran evento de networking hoy. Aprendí mucho sobre Git.,2026-10-17,4308,empleo;ciberseguridad;desarrollo,true
+p617,Debate: ¿cuál es el mayor reto de Transporte en Latinoamérica?,2025-12-21,2347,python;Guatemala;networking;cloud,true
+p618,Compartiendo recursos gratuitos para aprender Django.,2021-11-17,6672,ia;empleo;data;tech,true
+p619,Gran evento de networking hoy. Aprendí mucho sobre Logística.,2024-04-12,4284,startups;networking;innovacion;noticias,false
+p620,Reflexión del día: la clave del éxito en MongoDB es la constancia.,2026-01-27,5754,empleo;noticias;networking,false
+p621,Debate: ¿cuál es el mayor reto de CI/CD en Latinoamérica?,2020-04-29,5917,networking;tech,false
+p622,Pro tip sobre Computer Vision: siempre documenta tu proceso.,2022-07-16,6808,innovacion;ia;tech,false
+p623,Reflexión del día: la clave del éxito en Microservices es la constancia.,2026-01-08,1864,devops;diseño,false
+p624,Compartiendo recursos gratuitos para aprender Tecnología.,2024-02-17,3934,Guatemala;aprendizaje,true
+p625,Buscando profesionales en Seguros para un proyecto increíble.,2021-06-12,7035,noticias;diseño;edtech;python,true
+p626,Acabo de publicar un artículo sobre las tendencias en GCP. ¿Qué opinan?,2022-05-22,2782,edtech;liderazgo;noticias,true
+p627,Emocionado de compartir que acabo de completar mi certificación en Logística.,2021-05-30,6356,cloud;diseño;fintech;networking,true
+p628,El mercado laboral en Azure está creciendo increíblemente.,2025-01-09,7559,startups,true
+p629,Acabo de publicar un artículo sobre las tendencias en JavaScript. ¿Qué opinan?,2021-09-16,2712,Guatemala;startups;aprendizaje,true
+p630,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Manufactura.,2025-01-16,7310,diseño;python;startups;trabajo,true
+p631,Gran evento de networking hoy. Aprendí mucho sobre Elasticsearch.,2026-04-04,4402,latam,false
+p632,Compartiendo recursos gratuitos para aprender Manufactura.,2023-03-15,3274,cloud;desarrollo;carrera;Guatemala,false
+p633,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Python.,2023-05-01,7896,desarrollo;fintech;devops,false
+p634,Pro tip sobre Salud: siempre documenta tu proceso.,2022-07-23,1697,edtech;empleo,true
+p635,Debate: ¿cuál es el mayor reto de React en Latinoamérica?,2023-03-06,4459,latam;ciberseguridad;innovacion,false
+p636,Emocionado de compartir que acabo de completar mi certificación en Python.,2024-09-29,7300,cloud;fintech,false
+p637,Nuevo reto personal: aprender Git en 30 días. ¿Quién se une?,2026-08-25,5549,empleo;aprendizaje;devops,true
+p638,Pro tip sobre PostgreSQL: siempre documenta tu proceso.,2020-04-08,5211,data;python;ia,true
+p639,Debate: ¿cuál es el mayor reto de TypeScript en Latinoamérica?,2022-07-12,7040,liderazgo;desarrollo,true
+p640,Debate: ¿cuál es el mayor reto de C# en Latinoamérica?,2022-09-15,5909,ia;carrera;networking;ciberseguridad,true
+p641,Buscando profesionales en Azure para un proyecto increíble.,2024-10-03,4503,Guatemala,true
+p642,Emocionado de compartir que acabo de completar mi certificación en NLP.,2020-03-10,7754,latam,true
+p643,Buscando profesionales en Redis para un proyecto increíble.,2023-02-21,6862,Guatemala;carrera,false
+p644,Emocionado de compartir que acabo de completar mi certificación en Kotlin.,2025-01-16,4022,desarrollo;innovacion,true
+p645,Nuevo reto personal: aprender Turismo en 30 días. ¿Quién se une?,2024-04-09,2996,fintech;producto;latam;innovacion,false
+p646,Nuevo reto personal: aprender Seguros en 30 días. ¿Quién se une?,2025-07-19,2790,producto;liderazgo;latam,false
+p647,Emocionado de compartir que acabo de completar mi certificación en ONG.,2023-11-04,2655,edtech;diseño,false
+p648,Reflexión del día: la clave del éxito en SQL es la constancia.,2020-12-05,3629,startups,false
+p649,Acabo de publicar un artículo sobre las tendencias en ONG. ¿Qué opinan?,2020-10-31,4580,producto;latam,true
+p650,Debate: ¿cuál es el mayor reto de AWS en Latinoamérica?,2021-06-20,6054,networking;python;innovacion,true
+p651,¿Alguien más está trabajando con Linux? Me encantaría conectar.,2023-07-07,788,producto,true
+p652,¿Alguien más está trabajando con Kubernetes? Me encantaría conectar.,2024-03-12,4025,edtech;startups;Guatemala,true
+p653,Emocionado de compartir que acabo de completar mi certificación en Telecomunicaciones.,2022-04-17,330,noticias;diseño,false
+p654,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Gobierno.,2022-12-09,3794,tech;desarrollo,true
+p655,Acabo de publicar un artículo sobre las tendencias en Logística. ¿Qué opinan?,2020-08-20,1544,fintech;cloud;empleo,true
+p656,Reflexión del día: la clave del éxito en Salud es la constancia.,2023-03-11,7193,tech;edtech;empleo,true
+p657,Gran evento de networking hoy. Aprendí mucho sobre Django.,2023-04-01,5275,liderazgo,false
+p658,¿Alguien más está trabajando con Vue.js? Me encantaría conectar.,2020-12-28,6739,latam,true
+p659,Nuevo reto personal: aprender Elasticsearch en 30 días. ¿Quién se une?,2026-05-30,2596,edtech,true
+p660,Acabo de publicar un artículo sobre las tendencias en Turismo. ¿Qué opinan?,2025-05-13,4978,ia;networking;diseño,true
+p661,Reflexión del día: la clave del éxito en AWS es la constancia.,2023-05-23,3331,ia,true
+p662,¿Alguien más está trabajando con Node.js? Me encantaría conectar.,2023-05-24,6070,devops;desarrollo,false
+p663,Pro tip sobre Go: siempre documenta tu proceso.,2022-04-07,1755,edtech;empleo;innovacion;aprendizaje,false
+p664,¿Alguien más está trabajando con Vue.js? Me encantaría conectar.,2025-07-14,1959,networking;trabajo;tech,true
+p665,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Rust.,2022-04-14,4116,cloud,true
+p666,¿Alguien más está trabajando con Docker? Me encantaría conectar.,2026-08-22,7039,ciberseguridad;python;empleo,true
+p667,El mercado laboral en NLP está creciendo increíblemente.,2025-12-03,5827,liderazgo,false
+p668,Compartiendo recursos gratuitos para aprender PostgreSQL.,2023-05-22,6631,empleo;data;trabajo,true
+p669,Compartiendo recursos gratuitos para aprender SQL.,2026-08-14,295,ia;fintech,true
+p670,Buscando profesionales en AWS para un proyecto increíble.,2024-05-26,7898,trabajo;innovacion,true
+p671,Buscando profesionales en Educación para un proyecto increíble.,2024-10-31,7217,noticias;python;startups;edtech,true
+p672,Pro tip sobre Rust: siempre documenta tu proceso.,2020-02-16,7030,edtech;ciberseguridad,true
+p673,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de C#.,2025-09-04,6497,startups;python;Guatemala;tech,true
+p674,Buscando profesionales en Finanzas para un proyecto increíble.,2022-04-23,6403,tech;cloud,false
+p675,Acabo de publicar un artículo sobre las tendencias en Git. ¿Qué opinan?,2024-02-15,3521,noticias,true
+p676,Acabo de publicar un artículo sobre las tendencias en ONG. ¿Qué opinan?,2025-10-27,3889,latam;python;edtech;noticias,false
+p677,Nuevo reto personal: aprender Educación en 30 días. ¿Quién se une?,2021-09-20,2933,networking;cloud;ia;carrera,true
+p678,¿Alguien más está trabajando con Linux? Me encantaría conectar.,2020-04-16,6842,fintech;noticias,true
+p679,¿Alguien más está trabajando con GraphQL? Me encantaría conectar.,2020-08-12,2584,tech;data;liderazgo;producto,false
+p680,Buscando profesionales en TypeScript para un proyecto increíble.,2024-10-04,3268,tech;latam;producto;devops,false
+p681,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Medios.,2024-06-13,3253,edtech;networking,true
+p682,Buscando profesionales en RabbitMQ para un proyecto increíble.,2025-03-04,485,noticias,true
+p683,Debate: ¿cuál es el mayor reto de Kafka en Latinoamérica?,2023-07-27,4283,tech,false
+p684,¿Alguien más está trabajando con Laravel? Me encantaría conectar.,2020-07-17,4582,data;cloud;empleo;startups,true
+p685,Emocionado de compartir que acabo de completar mi certificación en Telecomunicaciones.,2024-07-21,2765,startups;edtech;ciberseguridad;desarrollo,true
+p686,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Gobierno.,2021-12-01,1993,Guatemala;producto;tech;liderazgo,false
+p687,Reflexión del día: la clave del éxito en Swift es la constancia.,2025-11-18,6970,ciberseguridad;edtech;networking,false
+p688,El mercado laboral en Logística está creciendo increíblemente.,2023-10-15,6084,latam;Guatemala;trabajo,true
+p689,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Retail.,2021-04-13,7325,tech;data;startups;desarrollo,true
+p690,Buscando profesionales en MongoDB para un proyecto increíble.,2025-07-23,4445,ciberseguridad;edtech,false
+p691,Buscando profesionales en Linux para un proyecto increíble.,2026-04-23,6891,networking;cloud,true
+p692,Emocionado de compartir que acabo de completar mi certificación en Spring Boot.,2022-08-22,3368,innovacion;latam;desarrollo,false
+p693,Gran evento de networking hoy. Aprendí mucho sobre PostgreSQL.,2023-01-25,4237,noticias;edtech;devops;trabajo,false
+p694,Buscando profesionales en Cassandra para un proyecto increíble.,2020-12-27,1067,carrera,true
+p695,¿Alguien más está trabajando con Redis? Me encantaría conectar.,2023-09-25,2827,liderazgo;innovacion,false
+p696,Gran evento de networking hoy. Aprendí mucho sobre JavaScript.,2021-05-14,2131,desarrollo;startups;tech,true
+p697,¿Alguien más está trabajando con Salud? Me encantaría conectar.,2023-01-08,2073,latam,false
+p698,Reflexión del día: la clave del éxito en NLP es la constancia.,2021-04-06,5789,edtech;data;carrera,true
+p699,¿Alguien más está trabajando con PostgreSQL? Me encantaría conectar.,2026-01-16,3122,trabajo,false
+p700,Gran evento de networking hoy. Aprendí mucho sobre Agroindustria.,2020-05-07,7043,carrera;ia,true
+p701,El mercado laboral en Agile está creciendo increíblemente.,2021-11-12,3274,Guatemala,false
+p702,Nuevo reto personal: aprender Tecnología en 30 días. ¿Quién se une?,2023-01-09,3105,devops;empleo;carrera,true
+p703,Gran evento de networking hoy. Aprendí mucho sobre Machine Learning.,2022-11-12,7576,noticias;innovacion,true
+p704,Acabo de publicar un artículo sobre las tendencias en Telecomunicaciones. ¿Qué opinan?,2020-04-21,1625,fintech;devops;diseño,false
+p705,Acabo de publicar un artículo sobre las tendencias en GCP. ¿Qué opinan?,2026-05-09,2901,aprendizaje;tech;cloud;ia,true
+p706,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Seguros.,2024-08-21,5271,networking;noticias,true
+p707,Buscando profesionales en Seguros para un proyecto increíble.,2025-11-10,3083,devops;fintech;networking;edtech,true
+p708,Compartiendo recursos gratuitos para aprender Consultoría.,2024-12-27,6092,carrera;desarrollo,true
+p709,El mercado laboral en Terraform está creciendo increíblemente.,2020-08-14,7719,fintech;diseño;innovacion,true
+p710,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Angular.,2022-11-25,240,aprendizaje,false
+p711,Emocionado de compartir que acabo de completar mi certificación en NLP.,2021-04-09,570,aprendizaje;edtech,false
+p712,Emocionado de compartir que acabo de completar mi certificación en FastAPI.,2023-01-31,6686,ciberseguridad;devops;data,false
+p713,Pro tip sobre JavaScript: siempre documenta tu proceso.,2020-03-04,5660,empleo;noticias;liderazgo;Guatemala,false
+p714,Debate: ¿cuál es el mayor reto de C# en Latinoamérica?,2023-06-02,6646,producto;latam,false
+p715,Acabo de publicar un artículo sobre las tendencias en Scrum. ¿Qué opinan?,2024-05-04,3504,startups;networking;ia,false
+p716,Debate: ¿cuál es el mayor reto de RabbitMQ en Latinoamérica?,2023-12-19,6920,networking;noticias;Guatemala;empleo,true
+p717,Emocionado de compartir que acabo de completar mi certificación en C#.,2024-08-26,7920,diseño,false
+p718,Buscando profesionales en Laravel para un proyecto increíble.,2023-06-07,3776,edtech;Guatemala;liderazgo,true
+p719,Buscando profesionales en AWS para un proyecto increíble.,2021-04-26,6685,edtech;data;ciberseguridad;cloud,true
+p720,Gran evento de networking hoy. Aprendí mucho sobre Laravel.,2025-10-07,4964,edtech;ia;fintech;python,true
+p721,¿Alguien más está trabajando con Neo4j? Me encantaría conectar.,2020-02-22,3810,networking,false
+p722,Compartiendo recursos gratuitos para aprender GraphQL.,2023-10-15,3673,ia;cloud;python;devops,false
+p723,El mercado laboral en Docker está creciendo increíblemente.,2021-01-03,5724,empleo;diseño;edtech,true
+p724,Nuevo reto personal: aprender Tecnología en 30 días. ¿Quién se une?,2023-12-07,6339,ciberseguridad;data,true
+p725,Pro tip sobre React: siempre documenta tu proceso.,2025-12-30,6632,edtech;latam;carrera;fintech,false
+p726,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Computer Vision.,2021-05-25,5402,python;networking,false
+p727,Nuevo reto personal: aprender CI/CD en 30 días. ¿Quién se une?,2023-01-26,5220,edtech;noticias;trabajo;ia,false
+p728,El mercado laboral en Computer Vision está creciendo increíblemente.,2021-06-16,7237,desarrollo,false
+p729,Emocionado de compartir que acabo de completar mi certificación en Kafka.,2025-11-07,6474,ia;tech;noticias,true
+p730,¿Alguien más está trabajando con PostgreSQL? Me encantaría conectar.,2021-05-03,623,carrera;devops;edtech,true
+p731,¿Alguien más está trabajando con Git? Me encantaría conectar.,2025-08-29,1975,liderazgo,false
+p732,Nuevo reto personal: aprender Telecomunicaciones en 30 días. ¿Quién se une?,2023-05-27,1412,noticias;data;fintech,false
+p733,Debate: ¿cuál es el mayor reto de Vue.js en Latinoamérica?,2022-09-14,4071,startups;ciberseguridad;fintech;noticias,false
+p734,Emocionado de compartir que acabo de completar mi certificación en TypeScript.,2025-04-04,4590,diseño,true
+p735,Nuevo reto personal: aprender FastAPI en 30 días. ¿Quién se une?,2021-12-07,2738,empleo,true
+p736,Compartiendo recursos gratuitos para aprender Finanzas.,2026-03-22,6785,ciberseguridad,true
+p737,Reflexión del día: la clave del éxito en Linux es la constancia.,2025-06-01,4683,producto,false
+p738,Compartiendo recursos gratuitos para aprender Linux.,2024-08-14,5963,networking,false
+p739,Nuevo reto personal: aprender Agroindustria en 30 días. ¿Quién se une?,2022-04-12,4499,liderazgo;diseño,false
+p740,Pro tip sobre Go: siempre documenta tu proceso.,2024-08-05,2518,fintech;desarrollo;networking;trabajo,true
+p741,Emocionado de compartir que acabo de completar mi certificación en Angular.,2025-04-18,78,innovacion,true
+p742,Buscando profesionales en Cassandra para un proyecto increíble.,2025-10-31,6362,desarrollo,false
+p743,Debate: ¿cuál es el mayor reto de Tecnología en Latinoamérica?,2024-11-15,6155,empleo;python,false
+p744,Debate: ¿cuál es el mayor reto de JavaScript en Latinoamérica?,2026-05-26,7896,devops;desarrollo,false
+p745,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Swift.,2024-11-17,4028,ciberseguridad;innovacion;aprendizaje,true
+p746,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de PostgreSQL.,2023-11-24,485,startups;fintech;devops;Guatemala,false
+p747,Nuevo reto personal: aprender Neo4j en 30 días. ¿Quién se une?,2021-06-29,3498,carrera;latam;fintech;devops,true
+p748,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Machine Learning.,2021-10-18,4113,innovacion,false
+p749,Pro tip sobre Elasticsearch: siempre documenta tu proceso.,2026-06-23,2867,python,true
+p750,Acabo de publicar un artículo sobre las tendencias en GCP. ¿Qué opinan?,2021-06-26,6183,python;empleo,false
+p751,Reflexión del día: la clave del éxito en Linux es la constancia.,2026-11-09,1849,data,true
+p752,Debate: ¿cuál es el mayor reto de CI/CD en Latinoamérica?,2022-11-13,2828,latam;innovacion,true
+p753,Buscando profesionales en Python para un proyecto increíble.,2026-11-10,7458,innovacion,false
+p754,Emocionado de compartir que acabo de completar mi certificación en Finanzas.,2024-04-09,1860,ia;aprendizaje;desarrollo,false
+p755,Reflexión del día: la clave del éxito en GraphQL es la constancia.,2021-08-31,2226,carrera;noticias;latam;trabajo,true
+p756,Nuevo reto personal: aprender Tecnología en 30 días. ¿Quién se une?,2026-04-04,1639,diseño;liderazgo;tech;python,false
+p757,Buscando profesionales en Linux para un proyecto increíble.,2024-07-29,4919,data;networking,false
+p758,Gran evento de networking hoy. Aprendí mucho sobre Django.,2022-06-08,2112,networking;ciberseguridad,false
+p759,Debate: ¿cuál es el mayor reto de Linux en Latinoamérica?,2021-10-14,6335,innovacion;networking,true
+p760,Pro tip sobre Kafka: siempre documenta tu proceso.,2021-12-24,1525,liderazgo;data;trabajo,true
+p761,Buscando profesionales en Telecomunicaciones para un proyecto increíble.,2022-07-28,5877,edtech;python;tech;ciberseguridad,false
+p762,Reflexión del día: la clave del éxito en GraphQL es la constancia.,2022-04-30,2056,data,false
+p763,Emocionado de compartir que acabo de completar mi certificación en Laravel.,2022-03-20,1565,data;fintech,true
+p764,Compartiendo recursos gratuitos para aprender REST APIs.,2026-01-10,7268,ciberseguridad;devops,false
+p765,Gran evento de networking hoy. Aprendí mucho sobre REST APIs.,2020-12-03,1047,diseño;noticias;ciberseguridad,true
+p766,Acabo de publicar un artículo sobre las tendencias en Redis. ¿Qué opinan?,2022-06-16,3603,liderazgo,false
+p767,Compartiendo recursos gratuitos para aprender Kafka.,2021-04-10,3911,liderazgo;fintech;carrera;ciberseguridad,true
+p768,Compartiendo recursos gratuitos para aprender REST APIs.,2024-04-30,2423,edtech;latam;startups,false
+p769,Debate: ¿cuál es el mayor reto de Transporte en Latinoamérica?,2021-08-13,785,noticias;fintech;edtech,true
+p770,Pro tip sobre Scrum: siempre documenta tu proceso.,2021-10-06,3564,tech;Guatemala;data,true
+p771,Compartiendo recursos gratuitos para aprender Energía.,2025-01-18,1623,desarrollo;latam;producto;data,false
+p772,Debate: ¿cuál es el mayor reto de Seguros en Latinoamérica?,2021-06-27,4310,diseño;liderazgo,true
+p773,Buscando profesionales en Agile para un proyecto increíble.,2025-02-14,5026,fintech;desarrollo;data;ia,false
+p774,Emocionado de compartir que acabo de completar mi certificación en FastAPI.,2021-11-06,774,liderazgo;fintech;aprendizaje,false
+p775,Nuevo reto personal: aprender Retail en 30 días. ¿Quién se une?,2020-11-26,5578,networking,false
+p776,Emocionado de compartir que acabo de completar mi certificación en Linux.,2024-11-20,3558,diseño;fintech;python;carrera,false
+p777,Buscando profesionales en Kubernetes para un proyecto increíble.,2025-07-17,3420,ia;startups;liderazgo;fintech,false
+p778,Buscando profesionales en Swift para un proyecto increíble.,2026-04-10,4780,producto;ia;tech,true
+p779,El mercado laboral en GCP está creciendo increíblemente.,2022-01-28,2542,noticias;carrera,true
+p780,Reflexión del día: la clave del éxito en C++ es la constancia.,2023-08-25,2887,cloud;fintech;innovacion;startups,true
+p781,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Kafka.,2024-08-25,1866,producto;Guatemala;startups,true
+p782,Buscando profesionales en Computer Vision para un proyecto increíble.,2026-04-24,2849,startups;aprendizaje;latam,false
+p783,Compartiendo recursos gratuitos para aprender GraphQL.,2024-02-16,1625,noticias,true
+p784,El mercado laboral en Cassandra está creciendo increíblemente.,2022-06-08,256,networking,true
+p785,Emocionado de compartir que acabo de completar mi certificación en Microservices.,2021-08-22,6031,data;carrera;fintech;cloud,true
+p786,Nuevo reto personal: aprender Salud en 30 días. ¿Quién se une?,2024-05-18,5380,data;edtech;empleo;startups,false
+p787,Acabo de publicar un artículo sobre las tendencias en SQL. ¿Qué opinan?,2022-05-25,4902,aprendizaje,false
+p788,Emocionado de compartir que acabo de completar mi certificación en Telecomunicaciones.,2021-01-28,4753,python,true
+p789,Acabo de publicar un artículo sobre las tendencias en Computer Vision. ¿Qué opinan?,2025-10-28,3529,tech;innovacion;data;networking,false
+p790,Acabo de publicar un artículo sobre las tendencias en Kubernetes. ¿Qué opinan?,2025-01-06,6336,fintech;noticias,false
+p791,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Terraform.,2023-02-18,748,aprendizaje;python;producto;fintech,true
+p792,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Angular.,2025-07-23,792,startups;edtech;fintech;latam,true
+p793,Emocionado de compartir que acabo de completar mi certificación en Docker.,2023-12-04,6154,cloud;edtech;devops;aprendizaje,false
+p794,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Transporte.,2023-05-14,2088,data;edtech;cloud;ciberseguridad,false
+p795,El mercado laboral en Gobierno está creciendo increíblemente.,2020-08-21,6096,networking;desarrollo;liderazgo,true
+p796,Compartiendo recursos gratuitos para aprender GCP.,2024-05-12,3577,ia;ciberseguridad;data,false
+p797,El mercado laboral en Telecomunicaciones está creciendo increíblemente.,2023-05-25,6063,innovacion;ia;liderazgo;desarrollo,true
+p798,Pro tip sobre Laravel: siempre documenta tu proceso.,2022-10-02,6678,latam;python;producto,false
+p799,El mercado laboral en AWS está creciendo increíblemente.,2026-12-10,1755,carrera,true
+p800,Debate: ¿cuál es el mayor reto de AWS en Latinoamérica?,2020-08-24,1227,python;desarrollo,false
+p801,Acabo de publicar un artículo sobre las tendencias en Linux. ¿Qué opinan?,2026-10-27,7801,devops;cloud,false
+p802,Buscando profesionales en Azure para un proyecto increíble.,2022-10-25,4328,producto;Guatemala;empleo;trabajo,true
+p803,¿Alguien más está trabajando con Kafka? Me encantaría conectar.,2023-12-27,3185,cloud,false
+p804,¿Alguien más está trabajando con Python? Me encantaría conectar.,2025-11-04,4472,data,false
+p805,Acabo de publicar un artículo sobre las tendencias en PostgreSQL. ¿Qué opinan?,2026-12-22,2381,aprendizaje;tech;startups;liderazgo,true
+p806,Buscando profesionales en Elasticsearch para un proyecto increíble.,2024-07-06,2126,devops;innovacion;aprendizaje;liderazgo,true
+p807,Compartiendo recursos gratuitos para aprender Salud.,2020-12-01,3490,empleo,true
+p808,¿Alguien más está trabajando con Telecomunicaciones? Me encantaría conectar.,2023-10-16,362,liderazgo;fintech,false
+p809,Debate: ¿cuál es el mayor reto de AWS en Latinoamérica?,2023-12-09,4515,edtech;desarrollo;ia;diseño,true
+p810,Emocionado de compartir que acabo de completar mi certificación en Manufactura.,2023-05-24,1004,desarrollo;producto;cloud,true
+p811,Buscando profesionales en Terraform para un proyecto increíble.,2021-06-20,6922,edtech;fintech;carrera;tech,true
+p812,Buscando profesionales en Machine Learning para un proyecto increíble.,2023-07-09,2585,tech,true
+p813,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de GCP.,2025-05-27,1581,trabajo,true
+p814,¿Alguien más está trabajando con Vue.js? Me encantaría conectar.,2023-04-20,6640,innovacion;trabajo;ciberseguridad,true
+p815,Nuevo reto personal: aprender Computer Vision en 30 días. ¿Quién se une?,2020-08-12,3152,producto,false
+p816,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de SQL.,2026-06-27,949,carrera;diseño,false
+p817,Emocionado de compartir que acabo de completar mi certificación en Gobierno.,2023-12-30,2752,liderazgo,true
+p818,Compartiendo recursos gratuitos para aprender Energía.,2026-08-26,1823,ciberseguridad;innovacion;ia;desarrollo,false
+p819,Compartiendo recursos gratuitos para aprender Cassandra.,2020-11-10,3956,ciberseguridad,true
+p820,Compartiendo recursos gratuitos para aprender Kubernetes.,2026-11-04,7765,producto;data,true
+p821,El mercado laboral en Agroindustria está creciendo increíblemente.,2024-02-06,141,edtech;trabajo;producto;aprendizaje,true
+p822,Reflexión del día: la clave del éxito en Seguros es la constancia.,2026-08-17,1802,networking;ia,true
+p823,Acabo de publicar un artículo sobre las tendencias en SQL. ¿Qué opinan?,2023-12-16,1336,python;liderazgo,false
+p824,Emocionado de compartir que acabo de completar mi certificación en Microservices.,2020-08-01,7730,noticias;fintech,true
+p825,Pro tip sobre Cassandra: siempre documenta tu proceso.,2024-01-27,4277,carrera;networking;edtech,false
+p826,Acabo de publicar un artículo sobre las tendencias en NLP. ¿Qué opinan?,2020-01-29,3183,trabajo;ia;edtech;empleo,false
+p827,Debate: ¿cuál es el mayor reto de Kotlin en Latinoamérica?,2020-05-14,5322,python;carrera,false
+p828,¿Alguien más está trabajando con MongoDB? Me encantaría conectar.,2023-07-26,4017,empleo,true
+p829,¿Alguien más está trabajando con Computer Vision? Me encantaría conectar.,2024-11-02,393,ciberseguridad,true
+p830,¿Alguien más está trabajando con Microservices? Me encantaría conectar.,2021-06-23,7073,fintech;producto,true
+p831,Buscando profesionales en TypeScript para un proyecto increíble.,2022-01-15,2658,liderazgo;desarrollo;noticias,true
+p832,Emocionado de compartir que acabo de completar mi certificación en MongoDB.,2021-09-09,1811,startups,false
+p833,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de MongoDB.,2026-03-23,5391,tech,false
+p834,Compartiendo recursos gratuitos para aprender C++.,2026-05-26,6248,ciberseguridad;python;startups;latam,true
+p835,Nuevo reto personal: aprender React en 30 días. ¿Quién se une?,2020-12-30,533,python;data,false
+p836,Emocionado de compartir que acabo de completar mi certificación en Deep Learning.,2021-05-16,3317,trabajo;edtech;ciberseguridad,true
+p837,Acabo de publicar un artículo sobre las tendencias en Spring Boot. ¿Qué opinan?,2024-07-25,6879,ciberseguridad,true
+p838,Debate: ¿cuál es el mayor reto de Scrum en Latinoamérica?,2025-08-08,7430,devops,true
+p839,El mercado laboral en Transporte está creciendo increíblemente.,2022-08-25,2237,liderazgo;Guatemala;devops;latam,true
+p840,Gran evento de networking hoy. Aprendí mucho sobre Python.,2026-08-16,5571,desarrollo;python;aprendizaje,true
+p841,Debate: ¿cuál es el mayor reto de Logística en Latinoamérica?,2025-02-13,2148,carrera;aprendizaje;producto,true
+p842,Compartiendo recursos gratuitos para aprender Scrum.,2026-02-15,7492,liderazgo;diseño;python,false
+p843,Acabo de publicar un artículo sobre las tendencias en Swift. ¿Qué opinan?,2026-10-27,2246,startups,true
+p844,Compartiendo recursos gratuitos para aprender Scrum.,2020-03-06,2378,innovacion;diseño;aprendizaje,true
+p845,Nuevo reto personal: aprender Consultoría en 30 días. ¿Quién se une?,2022-02-19,5525,innovacion;carrera;producto,true
+p846,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Telecomunicaciones.,2023-11-15,1599,trabajo,false
+p847,Acabo de publicar un artículo sobre las tendencias en Cassandra. ¿Qué opinan?,2021-07-23,4296,trabajo;noticias;startups;fintech,false
+p848,El mercado laboral en AWS está creciendo increíblemente.,2026-07-13,7427,networking,false
+p849,Reflexión del día: la clave del éxito en Agile es la constancia.,2024-12-31,7842,ia;trabajo;carrera;networking,false
+p850,Gran evento de networking hoy. Aprendí mucho sobre Python.,2022-02-15,2526,devops;carrera,false
+p851,Pro tip sobre GraphQL: siempre documenta tu proceso.,2020-07-07,1023,latam;carrera;empleo;noticias,false
+p852,Compartiendo recursos gratuitos para aprender Docker.,2020-07-02,1295,latam,false
+p853,Reflexión del día: la clave del éxito en Node.js es la constancia.,2020-12-21,5872,Guatemala;networking,false
+p854,Reflexión del día: la clave del éxito en Seguros es la constancia.,2022-04-11,2786,Guatemala;carrera,true
+p855,Emocionado de compartir que acabo de completar mi certificación en Deep Learning.,2023-08-07,6104,producto;carrera;ia,false
+p856,Reflexión del día: la clave del éxito en C++ es la constancia.,2024-01-22,7829,Guatemala,true
+p857,Emocionado de compartir que acabo de completar mi certificación en REST APIs.,2024-01-14,7439,Guatemala;data,true
+p858,Buscando profesionales en Finanzas para un proyecto increíble.,2021-05-02,4219,latam;aprendizaje;tech,false
+p859,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Seguros.,2026-12-29,1883,fintech;networking;cloud,true
+p860,Reflexión del día: la clave del éxito en Finanzas es la constancia.,2021-05-21,54,networking,false
+p861,Acabo de publicar un artículo sobre las tendencias en Gobierno. ¿Qué opinan?,2022-07-15,5943,devops,true
+p862,Acabo de publicar un artículo sobre las tendencias en Medios. ¿Qué opinan?,2020-05-06,6614,desarrollo;cloud;devops;edtech,true
+p863,Compartiendo recursos gratuitos para aprender Transporte.,2025-03-22,7175,liderazgo;ciberseguridad;networking;edtech,false
+p864,Emocionado de compartir que acabo de completar mi certificación en Educación.,2021-08-31,791,aprendizaje,true
+p865,Buscando profesionales en Rust para un proyecto increíble.,2022-06-07,4031,desarrollo,true
+p866,Compartiendo recursos gratuitos para aprender Python.,2020-06-23,6586,networking;startups;empleo;aprendizaje,false
+p867,Pro tip sobre Deep Learning: siempre documenta tu proceso.,2026-11-30,6183,data;fintech;Guatemala;latam,false
+p868,Pro tip sobre Docker: siempre documenta tu proceso.,2023-11-21,7101,aprendizaje;data,false
+p869,El mercado laboral en Deep Learning está creciendo increíblemente.,2025-12-23,1177,noticias;diseño,true
+p870,Nuevo reto personal: aprender Kubernetes en 30 días. ¿Quién se une?,2023-04-25,6126,networking;diseño,false
+p871,Buscando profesionales en AWS para un proyecto increíble.,2021-04-23,553,desarrollo;fintech;ciberseguridad;empleo,true
+p872,Nuevo reto personal: aprender JavaScript en 30 días. ¿Quién se une?,2022-10-19,2062,latam;cloud;ciberseguridad,true
+p873,El mercado laboral en Seguros está creciendo increíblemente.,2025-04-16,1301,devops,false
+p874,Gran evento de networking hoy. Aprendí mucho sobre Elasticsearch.,2024-11-17,3110,edtech;python;ciberseguridad;networking,false
+p875,Acabo de publicar un artículo sobre las tendencias en AWS. ¿Qué opinan?,2025-08-12,3659,fintech,true
+p876,Emocionado de compartir que acabo de completar mi certificación en REST APIs.,2025-04-19,2567,ia;fintech,true
+p877,Debate: ¿cuál es el mayor reto de Agroindustria en Latinoamérica?,2024-05-16,4550,producto;data;trabajo,false
+p878,Debate: ¿cuál es el mayor reto de Kotlin en Latinoamérica?,2024-06-10,1051,fintech,true
+p879,Pro tip sobre Transporte: siempre documenta tu proceso.,2023-04-25,5831,devops,false
+p880,Buscando profesionales en Python para un proyecto increíble.,2021-05-13,124,ia;devops;startups;latam,true
+p881,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Manufactura.,2026-09-13,3128,latam;edtech;innovacion,false
+p882,Acabo de publicar un artículo sobre las tendencias en Turismo. ¿Qué opinan?,2022-04-18,1749,producto,false
+p883,¿Alguien más está trabajando con Telecomunicaciones? Me encantaría conectar.,2021-05-16,5599,cloud;devops;liderazgo,false
+p884,Reflexión del día: la clave del éxito en Scrum es la constancia.,2024-11-05,6897,tech;ia;python;data,false
+p885,Buscando profesionales en Docker para un proyecto increíble.,2023-05-20,4913,latam;edtech;ciberseguridad;aprendizaje,true
+p886,Debate: ¿cuál es el mayor reto de Deep Learning en Latinoamérica?,2025-11-14,4149,noticias,false
+p887,Emocionado de compartir que acabo de completar mi certificación en Logística.,2021-06-19,947,liderazgo;networking;noticias,false
+p888,Buscando profesionales en Redis para un proyecto increíble.,2024-11-25,7522,desarrollo;networking,false
+p889,Acabo de publicar un artículo sobre las tendencias en Git. ¿Qué opinan?,2020-07-03,7803,data;trabajo,true
+p890,Reflexión del día: la clave del éxito en Vue.js es la constancia.,2022-07-27,7134,devops;ciberseguridad;python,false
+p891,Emocionado de compartir que acabo de completar mi certificación en Docker.,2025-01-19,1693,startups,true
+p892,Gran evento de networking hoy. Aprendí mucho sobre Computer Vision.,2025-03-12,2536,noticias;devops;tech;innovacion,true
+p893,Buscando profesionales en Linux para un proyecto increíble.,2024-04-25,3367,carrera;tech;fintech,false
+p894,Gran evento de networking hoy. Aprendí mucho sobre Seguros.,2021-07-24,1327,trabajo;empleo,true
+p895,¿Alguien más está trabajando con Git? Me encantaría conectar.,2022-05-20,7034,ciberseguridad;empleo;noticias;devops,false
+p896,Reflexión del día: la clave del éxito en MongoDB es la constancia.,2022-12-06,5802,producto;data,true
+p897,Emocionado de compartir que acabo de completar mi certificación en Agroindustria.,2023-05-11,5913,diseño;liderazgo;aprendizaje,true
+p898,Compartiendo recursos gratuitos para aprender Educación.,2020-05-30,7373,carrera;fintech;python;devops,false
+p899,Buscando profesionales en C++ para un proyecto increíble.,2022-01-14,1657,diseño;devops;data,false
+p900,El mercado laboral en Telecomunicaciones está creciendo increíblemente.,2023-02-09,4737,trabajo,false
+p901,Gran evento de networking hoy. Aprendí mucho sobre Azure.,2021-02-05,1261,empleo;trabajo;tech,false
+p902,Debate: ¿cuál es el mayor reto de FastAPI en Latinoamérica?,2025-03-30,4565,noticias,true
+p903,Acabo de publicar un artículo sobre las tendencias en Computer Vision. ¿Qué opinan?,2022-07-12,6465,devops;diseño;desarrollo;trabajo,true
+p904,Debate: ¿cuál es el mayor reto de PostgreSQL en Latinoamérica?,2023-10-16,4746,latam;ciberseguridad;diseño,false
+p905,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Turismo.,2022-11-22,1367,producto,true
+p906,Pro tip sobre SQL: siempre documenta tu proceso.,2022-03-19,7548,data,false
+p907,Buscando profesionales en Agroindustria para un proyecto increíble.,2024-06-01,2756,empleo;noticias;carrera;innovacion,false
+p908,El mercado laboral en Cassandra está creciendo increíblemente.,2025-05-04,3998,liderazgo;data;latam,false
+p909,¿Alguien más está trabajando con Node.js? Me encantaría conectar.,2023-06-18,731,devops;producto;ia;liderazgo,false
+p910,Buscando profesionales en Retail para un proyecto increíble.,2026-03-24,192,empleo;aprendizaje;noticias,true
+p911,Buscando profesionales en Angular para un proyecto increíble.,2026-10-25,4971,fintech,false
+p912,Gran evento de networking hoy. Aprendí mucho sobre C#.,2024-01-28,7093,python,true
+p913,¿Alguien más está trabajando con Rust? Me encantaría conectar.,2022-07-06,4995,Guatemala,false
+p914,El mercado laboral en Seguros está creciendo increíblemente.,2020-01-01,2521,empleo;data;aprendizaje,false
+p915,Pro tip sobre Scrum: siempre documenta tu proceso.,2021-10-02,6210,devops,true
+p916,¿Alguien más está trabajando con Python? Me encantaría conectar.,2025-11-18,7788,trabajo;carrera;devops;innovacion,true
+p917,Acabo de publicar un artículo sobre las tendencias en Transporte. ¿Qué opinan?,2026-10-05,4675,Guatemala,false
+p918,Buscando profesionales en Deep Learning para un proyecto increíble.,2020-04-19,3124,producto;liderazgo;carrera;innovacion,true
+p919,Gran evento de networking hoy. Aprendí mucho sobre Neo4j.,2022-01-13,299,trabajo;python;empleo;data,false
+p920,Reflexión del día: la clave del éxito en MongoDB es la constancia.,2023-06-05,1832,python;latam,false
+p921,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de SQL.,2024-12-02,1296,latam;producto;noticias,true
+p922,Compartiendo recursos gratuitos para aprender Consultoría.,2024-01-31,2964,producto;data;empleo;noticias,false
+p923,Emocionado de compartir que acabo de completar mi certificación en C#.,2021-04-18,5581,startups;fintech;producto,true
+p924,Pro tip sobre Kafka: siempre documenta tu proceso.,2025-08-06,1684,aprendizaje;tech,false
+p925,El mercado laboral en GCP está creciendo increíblemente.,2024-07-22,4164,ia;python;desarrollo;Guatemala,false
+p926,Buscando profesionales en Logística para un proyecto increíble.,2023-11-21,4103,noticias;liderazgo;startups;data,true
+p927,Gran evento de networking hoy. Aprendí mucho sobre Laravel.,2023-01-17,7239,python;empleo;carrera;data,true
+p928,Pro tip sobre Linux: siempre documenta tu proceso.,2025-07-11,5389,latam;producto;carrera;devops,false
+p929,El mercado laboral en Neo4j está creciendo increíblemente.,2024-05-05,3154,liderazgo;diseño;devops,false
+p930,Debate: ¿cuál es el mayor reto de Rust en Latinoamérica?,2023-11-29,2896,devops;innovacion,false
+p931,Nuevo reto personal: aprender GraphQL en 30 días. ¿Quién se une?,2020-05-27,5872,devops;tech,false
+p932,Buscando profesionales en Neo4j para un proyecto increíble.,2025-07-21,1389,ciberseguridad,false
+p933,Compartiendo recursos gratuitos para aprender Transporte.,2025-11-17,5006,Guatemala;cloud;diseño;producto,false
+p934,Nuevo reto personal: aprender Gobierno en 30 días. ¿Quién se une?,2020-04-20,1941,latam;devops;ciberseguridad;python,false
+p935,El mercado laboral en Python está creciendo increíblemente.,2024-03-14,1880,data;ciberseguridad,false
+p936,Gran evento de networking hoy. Aprendí mucho sobre Git.,2022-02-11,1528,cloud,false
+p937,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de CI/CD.,2023-05-25,7995,edtech,false
+p938,Emocionado de compartir que acabo de completar mi certificación en Elasticsearch.,2022-06-25,3756,python;devops,true
+p939,Nuevo reto personal: aprender Python en 30 días. ¿Quién se une?,2024-05-01,1789,edtech;devops,true
+p940,Nuevo reto personal: aprender C++ en 30 días. ¿Quién se une?,2020-07-06,6571,aprendizaje;latam,true
+p941,El mercado laboral en Neo4j está creciendo increíblemente.,2026-07-09,3537,data;startups,false
+p942,Pro tip sobre Laravel: siempre documenta tu proceso.,2024-10-15,2182,aprendizaje;python;cloud;data,true
+p943,Pro tip sobre Angular: siempre documenta tu proceso.,2026-05-25,5073,devops;trabajo;Guatemala;producto,true
+p944,Emocionado de compartir que acabo de completar mi certificación en Tecnología.,2026-06-15,2323,python,true
+p945,Emocionado de compartir que acabo de completar mi certificación en Vue.js.,2025-06-26,3573,noticias,true
+p946,Compartiendo recursos gratuitos para aprender Medios.,2026-09-08,2686,carrera,false
+p947,El mercado laboral en Spring Boot está creciendo increíblemente.,2026-08-21,7218,noticias;liderazgo;diseño;data,true
+p948,Buscando profesionales en Medios para un proyecto increíble.,2020-03-29,3498,devops,false
+p949,Buscando profesionales en Gobierno para un proyecto increíble.,2023-08-09,3663,devops;edtech;noticias,true
+p950,Nuevo reto personal: aprender Java en 30 días. ¿Quién se une?,2023-11-09,5477,aprendizaje;python,true
+p951,Pro tip sobre Java: siempre documenta tu proceso.,2024-07-10,7050,Guatemala;aprendizaje;noticias;python,false
+p952,¿Alguien más está trabajando con REST APIs? Me encantaría conectar.,2026-01-28,5572,empleo,true
+p953,Buscando profesionales en Gobierno para un proyecto increíble.,2024-06-22,7556,data,true
+p954,Reflexión del día: la clave del éxito en Angular es la constancia.,2025-07-08,3782,latam;producto;diseño,false
+p955,Compartiendo recursos gratuitos para aprender C++.,2022-04-28,7448,noticias;aprendizaje,false
+p956,Emocionado de compartir que acabo de completar mi certificación en GCP.,2025-08-30,6377,noticias,true
+p957,Emocionado de compartir que acabo de completar mi certificación en REST APIs.,2024-07-14,6922,trabajo;tech;aprendizaje,false
+p958,Emocionado de compartir que acabo de completar mi certificación en Cassandra.,2020-05-26,7910,desarrollo;data;ciberseguridad;fintech,false
+p959,Pro tip sobre Deep Learning: siempre documenta tu proceso.,2023-01-06,4196,tech;cloud,false
+p960,El mercado laboral en Transporte está creciendo increíblemente.,2023-12-09,3788,aprendizaje;Guatemala,false
+p961,Debate: ¿cuál es el mayor reto de Kafka en Latinoamérica?,2020-01-30,7110,devops;producto;networking,false
+p962,Reflexión del día: la clave del éxito en Machine Learning es la constancia.,2020-08-24,5032,data,true
+p963,Pro tip sobre Computer Vision: siempre documenta tu proceso.,2025-09-03,2005,devops;cloud;ia;aprendizaje,false
+p964,Debate: ¿cuál es el mayor reto de Deep Learning en Latinoamérica?,2023-08-26,6112,devops;python;ciberseguridad,false
+p965,Debate: ¿cuál es el mayor reto de Git en Latinoamérica?,2022-06-02,196,empleo;diseño,true
+p966,Pro tip sobre REST APIs: siempre documenta tu proceso.,2024-03-02,3569,edtech,false
+p967,Reflexión del día: la clave del éxito en MongoDB es la constancia.,2026-12-11,5119,trabajo,false
+p968,Reflexión del día: la clave del éxito en Node.js es la constancia.,2020-06-03,7364,producto;fintech,false
+p969,Gran evento de networking hoy. Aprendí mucho sobre Angular.,2022-06-15,174,cloud;latam,false
+p970,Nuevo reto personal: aprender Spring Boot en 30 días. ¿Quién se une?,2020-01-14,2005,innovacion,true
+p971,Nuevo reto personal: aprender Laravel en 30 días. ¿Quién se une?,2020-09-03,6588,fintech;innovacion,true
+p972,Reflexión del día: la clave del éxito en Java es la constancia.,2021-04-26,1195,data;ia;ciberseguridad,false
+p973,Emocionado de compartir que acabo de completar mi certificación en Java.,2023-04-11,1048,ia;fintech,true
+p974,Debate: ¿cuál es el mayor reto de JavaScript en Latinoamérica?,2024-04-23,7645,python;startups,true
+p975,Debate: ¿cuál es el mayor reto de JavaScript en Latinoamérica?,2026-05-09,1945,latam,false
+p976,El mercado laboral en Docker está creciendo increíblemente.,2025-01-10,1781,innovacion;noticias;producto,false
+p977,Buscando profesionales en Git para un proyecto increíble.,2025-11-22,7710,devops;edtech,false
+p978,Compartiendo recursos gratuitos para aprender Kafka.,2023-09-03,1939,latam,true
+p979,El mercado laboral en React está creciendo increíblemente.,2025-06-13,1190,desarrollo;networking,false
+p980,Acabo de publicar un artículo sobre las tendencias en Consultoría. ¿Qué opinan?,2021-06-22,4807,trabajo;desarrollo;Guatemala,true
+p981,Nuevo reto personal: aprender Terraform en 30 días. ¿Quién se une?,2025-03-27,5616,desarrollo;fintech;ia;Guatemala,false
+p982,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de JavaScript.,2022-09-25,439,liderazgo,false
+p983,Debate: ¿cuál es el mayor reto de Finanzas en Latinoamérica?,2026-12-16,2689,devops;desarrollo;innovacion,false
+p984,¿Alguien más está trabajando con Kafka? Me encantaría conectar.,2023-10-18,122,desarrollo;ciberseguridad;startups,true
+p985,Debate: ¿cuál es el mayor reto de Consultoría en Latinoamérica?,2023-08-25,6038,desarrollo,true
+p986,Compartiendo recursos gratuitos para aprender Spring Boot.,2023-03-26,3335,python;cloud;Guatemala,true
+p987,Pro tip sobre Turismo: siempre documenta tu proceso.,2024-08-18,4879,latam;producto;edtech,true
+p988,Nuevo reto personal: aprender Medios en 30 días. ¿Quién se une?,2023-09-24,4164,python,true
+p989,Compartiendo recursos gratuitos para aprender Swift.,2025-01-03,3593,startups;innovacion;diseño,false
+p990,Pro tip sobre Laravel: siempre documenta tu proceso.,2024-03-04,4705,latam;startups,true
+p991,Reflexión del día: la clave del éxito en Node.js es la constancia.,2025-10-07,3664,startups;liderazgo,true
+p992,Pro tip sobre Agile: siempre documenta tu proceso.,2025-04-08,5043,tech,false
+p993,Emocionado de compartir que acabo de completar mi certificación en Tecnología.,2023-03-13,7161,latam;producto;startups,false
+p994,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de RabbitMQ.,2024-08-31,3783,trabajo;aprendizaje;networking,true
+p995,Compartiendo recursos gratuitos para aprender SQL.,2023-10-28,6456,fintech;noticias;trabajo;networking,false
+p996,Nuevo reto personal: aprender Git en 30 días. ¿Quién se une?,2022-06-24,2814,empleo,false
+p997,Gran evento de networking hoy. Aprendí mucho sobre Neo4j.,2022-12-15,5112,carrera,false
+p998,¿Alguien más está trabajando con Manufactura? Me encantaría conectar.,2021-09-26,7465,noticias;networking,false
+p999,Gran evento de networking hoy. Aprendí mucho sobre Terraform.,2022-03-19,6596,startups,false
+p1000,¿Alguien más está trabajando con RabbitMQ? Me encantaría conectar.,2022-04-07,2263,noticias,true
+p1001,Emocionado de compartir que acabo de completar mi certificación en GCP.,2023-03-04,7867,Guatemala;ciberseguridad;cloud,false
+p1002,Nuevo reto personal: aprender Azure en 30 días. ¿Quién se une?,2026-12-24,7892,latam;aprendizaje;empleo,true
+p1003,Gran evento de networking hoy. Aprendí mucho sobre Computer Vision.,2022-05-29,1667,fintech;noticias;edtech,false
+p1004,Gran evento de networking hoy. Aprendí mucho sobre Machine Learning.,2020-08-09,4591,tech;startups;liderazgo,true
+p1005,Emocionado de compartir que acabo de completar mi certificación en Machine Learning.,2024-09-05,6218,startups,true
+p1006,¿Alguien más está trabajando con Elasticsearch? Me encantaría conectar.,2020-12-29,3035,fintech;noticias;ciberseguridad,false
+p1007,Reflexión del día: la clave del éxito en Rust es la constancia.,2026-06-29,3742,cloud;carrera,false
+p1008,Emocionado de compartir que acabo de completar mi certificación en Retail.,2026-11-28,5584,ia;fintech,false
+p1009,Emocionado de compartir que acabo de completar mi certificación en Deep Learning.,2026-06-16,7828,diseño;fintech;tech,true
+p1010,Emocionado de compartir que acabo de completar mi certificación en Terraform.,2024-03-02,6472,producto;ia,true
+p1011,¿Alguien más está trabajando con Terraform? Me encantaría conectar.,2022-04-18,1418,empleo,false
+p1012,Acabo de publicar un artículo sobre las tendencias en TypeScript. ¿Qué opinan?,2020-05-15,5006,fintech;cloud,true
+p1013,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de MongoDB.,2022-09-22,4094,empleo,true
+p1014,Compartiendo recursos gratuitos para aprender Microservices.,2022-08-25,4451,desarrollo;empleo;diseño;ia,true
+p1015,El mercado laboral en Kubernetes está creciendo increíblemente.,2023-03-06,7803,desarrollo;trabajo;aprendizaje;innovacion,false
+p1016,Gran evento de networking hoy. Aprendí mucho sobre FastAPI.,2023-01-23,7214,tech;ciberseguridad,true
+p1017,Acabo de publicar un artículo sobre las tendencias en Machine Learning. ¿Qué opinan?,2021-01-14,1520,empleo;carrera;aprendizaje,false
+p1018,Pro tip sobre Laravel: siempre documenta tu proceso.,2021-09-01,5963,startups;devops;tech;innovacion,true
+p1019,Compartiendo recursos gratuitos para aprender Educación.,2021-11-12,6239,producto;aprendizaje;cloud;innovacion,false
+p1020,El mercado laboral en Rust está creciendo increíblemente.,2026-03-01,3886,startups;devops;producto;liderazgo,true
+p1021,Acabo de publicar un artículo sobre las tendencias en CI/CD. ¿Qué opinan?,2025-11-26,3652,startups,false
+p1022,Gran evento de networking hoy. Aprendí mucho sobre Energía.,2026-11-02,1779,cloud;ia;Guatemala,false
+p1023,Gran evento de networking hoy. Aprendí mucho sobre Linux.,2023-06-27,5354,data;producto,false
+p1024,Emocionado de compartir que acabo de completar mi certificación en Logística.,2021-09-17,5133,liderazgo;tech;ciberseguridad;carrera,false
+p1025,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de CI/CD.,2024-05-18,3426,trabajo,true
+p1026,Reflexión del día: la clave del éxito en SQL es la constancia.,2021-08-20,1990,devops;carrera,false
+p1027,Reflexión del día: la clave del éxito en Vue.js es la constancia.,2020-08-02,1855,data;cloud;noticias;edtech,false
+p1028,Emocionado de compartir que acabo de completar mi certificación en CI/CD.,2020-09-20,1669,noticias;startups;edtech;desarrollo,false
+p1029,Pro tip sobre Machine Learning: siempre documenta tu proceso.,2022-09-28,421,Guatemala;liderazgo;carrera,false
+p1030,Compartiendo recursos gratuitos para aprender Retail.,2025-01-14,5427,diseño;fintech;latam;innovacion,false
+p1031,El mercado laboral en Kafka está creciendo increíblemente.,2020-01-09,443,Guatemala;ia;networking,false
+p1032,Compartiendo recursos gratuitos para aprender Salud.,2025-05-15,5338,devops;diseño;producto;data,false
+p1033,Buscando profesionales en React para un proyecto increíble.,2025-03-27,298,aprendizaje;trabajo;devops,false
+p1034,Nuevo reto personal: aprender Angular en 30 días. ¿Quién se une?,2022-10-26,6550,empleo;python;startups,true
+p1035,¿Alguien más está trabajando con Kafka? Me encantaría conectar.,2025-09-20,3533,devops;innovacion;edtech;trabajo,false
+p1036,Reflexión del día: la clave del éxito en TypeScript es la constancia.,2022-10-19,2668,diseño,true
+p1037,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Deep Learning.,2023-11-24,5494,Guatemala,false
+p1038,Nuevo reto personal: aprender REST APIs en 30 días. ¿Quién se une?,2021-02-18,1928,Guatemala;ciberseguridad,false
+p1039,Emocionado de compartir que acabo de completar mi certificación en NLP.,2020-12-24,5127,data;empleo;edtech,false
+p1040,Gran evento de networking hoy. Aprendí mucho sobre PostgreSQL.,2022-04-18,1525,fintech;liderazgo;edtech;python,false
+p1041,Reflexión del día: la clave del éxito en Node.js es la constancia.,2022-04-17,4488,tech,false
+p1042,Emocionado de compartir que acabo de completar mi certificación en Agroindustria.,2025-09-01,5043,noticias,true
+p1043,Emocionado de compartir que acabo de completar mi certificación en Terraform.,2021-09-10,1039,desarrollo,false
+p1044,Nuevo reto personal: aprender Redis en 30 días. ¿Quién se une?,2023-04-25,4754,latam;producto;tech;Guatemala,true
+p1045,Pro tip sobre Java: siempre documenta tu proceso.,2022-01-08,2878,trabajo;startups;data;Guatemala,true
+p1046,Emocionado de compartir que acabo de completar mi certificación en Kubernetes.,2020-01-26,5140,noticias;latam;trabajo;cloud,true
+p1047,Gran evento de networking hoy. Aprendí mucho sobre Go.,2020-02-14,4877,networking;trabajo,false
+p1048,El mercado laboral en Git está creciendo increíblemente.,2025-02-09,2355,data;innovacion;trabajo,false
+p1049,Pro tip sobre FastAPI: siempre documenta tu proceso.,2021-09-26,358,cloud;ia;producto,true
+p1050,Pro tip sobre Docker: siempre documenta tu proceso.,2022-10-16,6552,empleo,false
+p1051,Gran evento de networking hoy. Aprendí mucho sobre PostgreSQL.,2023-12-10,3261,empleo,true
+p1052,Buscando profesionales en Linux para un proyecto increíble.,2020-12-20,7408,latam;Guatemala;desarrollo;tech,false
+p1053,Reflexión del día: la clave del éxito en Spring Boot es la constancia.,2025-02-01,2669,Guatemala;networking;aprendizaje,false
+p1054,Reflexión del día: la clave del éxito en ONG es la constancia.,2020-08-09,5525,carrera;diseño,false
+p1055,Debate: ¿cuál es el mayor reto de TypeScript en Latinoamérica?,2021-08-12,3724,trabajo;tech;latam,false
+p1056,El mercado laboral en Cassandra está creciendo increíblemente.,2020-06-19,3491,Guatemala,false
+p1057,¿Alguien más está trabajando con Retail? Me encantaría conectar.,2020-10-17,7958,ia;edtech,true
+p1058,Gran evento de networking hoy. Aprendí mucho sobre Redis.,2026-09-18,1659,cloud;latam,true
+p1059,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Telecomunicaciones.,2022-07-29,6227,tech;diseño,false
+p1060,Acabo de publicar un artículo sobre las tendencias en Deep Learning. ¿Qué opinan?,2023-02-28,6013,ia;aprendizaje;Guatemala,false
+p1061,Emocionado de compartir que acabo de completar mi certificación en ONG.,2024-12-16,4765,data;networking;trabajo,true
+p1062,Emocionado de compartir que acabo de completar mi certificación en Swift.,2023-01-16,1447,fintech;devops;aprendizaje;desarrollo,false
+p1063,Compartiendo recursos gratuitos para aprender Turismo.,2023-09-17,6055,liderazgo,true
+p1064,Reflexión del día: la clave del éxito en Finanzas es la constancia.,2020-05-21,2495,diseño,true
+p1065,Nuevo reto personal: aprender Tecnología en 30 días. ¿Quién se une?,2023-06-02,4459,Guatemala,true
+p1066,Emocionado de compartir que acabo de completar mi certificación en Agile.,2022-06-25,1559,carrera;latam;cloud,true
+p1067,Gran evento de networking hoy. Aprendí mucho sobre Angular.,2022-09-02,53,noticias;edtech;latam,false
+p1068,Buscando profesionales en Redis para un proyecto increíble.,2020-08-04,23,trabajo;carrera;devops,true
+p1069,Pro tip sobre Turismo: siempre documenta tu proceso.,2025-01-12,270,trabajo;innovacion,true
+p1070,Debate: ¿cuál es el mayor reto de Laravel en Latinoamérica?,2024-12-10,503,empleo,false
+p1071,Debate: ¿cuál es el mayor reto de RabbitMQ en Latinoamérica?,2026-12-24,1389,data;diseño,false
+p1072,¿Alguien más está trabajando con Neo4j? Me encantaría conectar.,2026-01-17,3064,desarrollo;trabajo;innovacion;carrera,false
+p1073,Nuevo reto personal: aprender JavaScript en 30 días. ¿Quién se une?,2023-12-23,4950,noticias,true
+p1074,Debate: ¿cuál es el mayor reto de Retail en Latinoamérica?,2026-04-24,1957,edtech,true
+p1075,Emocionado de compartir que acabo de completar mi certificación en Kafka.,2023-11-22,5907,liderazgo;ia;carrera,true
+p1076,Buscando profesionales en Tecnología para un proyecto increíble.,2020-10-28,3998,carrera;startups,false
+p1077,Emocionado de compartir que acabo de completar mi certificación en Deep Learning.,2026-10-02,5844,startups;python;carrera,false
+p1078,Debate: ¿cuál es el mayor reto de Tecnología en Latinoamérica?,2023-04-27,7602,networking;Guatemala;liderazgo,true
+p1079,Nuevo reto personal: aprender Redis en 30 días. ¿Quién se une?,2020-03-28,5439,carrera;latam;tech;liderazgo,false
+p1080,Gran evento de networking hoy. Aprendí mucho sobre Vue.js.,2020-02-20,3841,aprendizaje;networking;diseño,true
+p1081,Pro tip sobre C#: siempre documenta tu proceso.,2026-07-07,5420,aprendizaje;tech,true
+p1082,Compartiendo recursos gratuitos para aprender Microservices.,2024-04-17,6452,trabajo,false
+p1083,El mercado laboral en Medios está creciendo increíblemente.,2020-03-22,6058,tech,true
+p1084,Gran evento de networking hoy. Aprendí mucho sobre Transporte.,2020-01-14,4813,liderazgo,false
+p1085,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Python.,2026-03-26,550,python;data;networking;noticias,false
+p1086,Compartiendo recursos gratuitos para aprender React.,2025-11-30,197,fintech;edtech;desarrollo,false
+p1087,Pro tip sobre Energía: siempre documenta tu proceso.,2025-07-03,6972,python;ia;devops;fintech,false
+p1088,Reflexión del día: la clave del éxito en RabbitMQ es la constancia.,2024-04-28,4149,trabajo;liderazgo,false
+p1089,Gran evento de networking hoy. Aprendí mucho sobre GraphQL.,2026-09-23,7444,startups;aprendizaje;tech;noticias,false
+p1090,Buscando profesionales en REST APIs para un proyecto increíble.,2023-07-26,7878,carrera;edtech;liderazgo,true
+p1091,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Energía.,2021-11-16,1223,latam,true
+p1092,Buscando profesionales en Terraform para un proyecto increíble.,2024-07-01,1967,startups;desarrollo;fintech;producto,true
+p1093,Nuevo reto personal: aprender JavaScript en 30 días. ¿Quién se une?,2020-07-18,4063,trabajo;aprendizaje;innovacion,false
+p1094,Debate: ¿cuál es el mayor reto de Deep Learning en Latinoamérica?,2024-08-31,5234,data;latam;ciberseguridad;trabajo,true
+p1095,Debate: ¿cuál es el mayor reto de C# en Latinoamérica?,2025-06-30,5955,devops;desarrollo;innovacion;startups,false
+p1096,Pro tip sobre Agile: siempre documenta tu proceso.,2022-09-04,3062,diseño;ciberseguridad;startups,true
+p1097,El mercado laboral en FastAPI está creciendo increíblemente.,2024-03-07,3167,trabajo;empleo;latam;networking,true
+p1098,¿Alguien más está trabajando con Scrum? Me encantaría conectar.,2022-03-30,504,devops;aprendizaje;diseño;liderazgo,true
+p1099,Reflexión del día: la clave del éxito en CI/CD es la constancia.,2025-07-03,916,liderazgo,false
+p1100,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de SQL.,2022-02-13,1727,cloud;fintech;python,true
+p1101,Compartiendo recursos gratuitos para aprender Go.,2022-10-01,6264,ciberseguridad;data;python;Guatemala,false
+p1102,El mercado laboral en Kotlin está creciendo increíblemente.,2025-10-12,6535,latam;cloud;Guatemala;empleo,false
+p1103,Debate: ¿cuál es el mayor reto de React en Latinoamérica?,2020-08-06,1112,ciberseguridad;noticias;devops,false
+p1104,El mercado laboral en C# está creciendo increíblemente.,2021-04-10,1526,carrera;liderazgo,true
+p1105,Acabo de publicar un artículo sobre las tendencias en Salud. ¿Qué opinan?,2024-02-17,1001,cloud;liderazgo;empleo;networking,true
+p1106,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Django.,2020-12-04,3608,desarrollo;aprendizaje;Guatemala;tech,true
+p1107,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de GraphQL.,2023-02-08,5616,latam;diseño;python;Guatemala,false
+p1108,Pro tip sobre RabbitMQ: siempre documenta tu proceso.,2025-07-20,5937,liderazgo;ia;innovacion;startups,true
+p1109,¿Alguien más está trabajando con Agroindustria? Me encantaría conectar.,2021-05-29,5483,data;startups;diseño,false
+p1110,Buscando profesionales en Azure para un proyecto increíble.,2022-10-11,4119,ia,false
+p1111,Pro tip sobre Azure: siempre documenta tu proceso.,2020-05-09,7020,innovacion;empleo,true
+p1112,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Laravel.,2025-10-12,283,carrera;liderazgo,false
+p1113,Pro tip sobre GraphQL: siempre documenta tu proceso.,2023-12-14,3421,producto;devops,true
+p1114,Buscando profesionales en SQL para un proyecto increíble.,2021-02-15,3333,innovacion;tech;desarrollo;ciberseguridad,false
+p1115,Nuevo reto personal: aprender Java en 30 días. ¿Quién se une?,2024-06-25,4690,cloud;liderazgo;diseño,false
+p1116,Acabo de publicar un artículo sobre las tendencias en Telecomunicaciones. ¿Qué opinan?,2021-03-10,495,tech,false
+p1117,Reflexión del día: la clave del éxito en Consultoría es la constancia.,2025-06-16,6385,devops;producto;data;latam,false
+p1118,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Swift.,2021-04-14,7543,trabajo,true
+p1119,El mercado laboral en NLP está creciendo increíblemente.,2026-11-23,3405,data,true
+p1120,Compartiendo recursos gratuitos para aprender Git.,2022-10-02,3028,Guatemala;data;desarrollo;startups,true
+p1121,¿Alguien más está trabajando con Rust? Me encantaría conectar.,2023-08-23,5870,python;data;startups;innovacion,false
+p1122,Gran evento de networking hoy. Aprendí mucho sobre TypeScript.,2021-01-13,7132,startups;fintech;empleo;carrera,true
+p1123,Acabo de publicar un artículo sobre las tendencias en Transporte. ¿Qué opinan?,2023-10-01,7443,startups;aprendizaje;empleo,true
+p1124,Reflexión del día: la clave del éxito en Seguros es la constancia.,2021-05-20,6803,Guatemala;edtech,false
+p1125,Gran evento de networking hoy. Aprendí mucho sobre Scrum.,2021-11-25,1180,liderazgo;startups,true
+p1126,Pro tip sobre Transporte: siempre documenta tu proceso.,2020-12-07,6150,cloud;fintech;startups;devops,false
+p1127,Gran evento de networking hoy. Aprendí mucho sobre Agroindustria.,2020-09-11,7522,devops;noticias;fintech,true
+p1128,Debate: ¿cuál es el mayor reto de Microservices en Latinoamérica?,2020-07-26,3417,cloud,true
+p1129,Emocionado de compartir que acabo de completar mi certificación en Neo4j.,2026-06-25,6338,trabajo;carrera;data,false
+p1130,Reflexión del día: la clave del éxito en Go es la constancia.,2022-11-29,5180,empleo,true
+p1131,Reflexión del día: la clave del éxito en React es la constancia.,2023-04-07,5186,noticias,false
+p1132,Gran evento de networking hoy. Aprendí mucho sobre Go.,2024-04-17,4215,producto,false
+p1133,Gran evento de networking hoy. Aprendí mucho sobre Spring Boot.,2020-12-17,4331,devops;trabajo;data,true
+p1134,Compartiendo recursos gratuitos para aprender Angular.,2024-11-15,3211,tech;networking;desarrollo,false
+p1135,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Telecomunicaciones.,2020-10-02,2693,edtech;Guatemala;ciberseguridad;trabajo,false
+p1136,Compartiendo recursos gratuitos para aprender Scrum.,2021-02-09,5463,noticias;ciberseguridad;empleo,true
+p1137,Debate: ¿cuál es el mayor reto de GCP en Latinoamérica?,2021-12-28,6043,liderazgo;empleo;ia,true
+p1138,Compartiendo recursos gratuitos para aprender Kafka.,2021-02-24,5328,empleo;liderazgo;producto,false
+p1139,El mercado laboral en C# está creciendo increíblemente.,2023-04-03,902,tech;ia;data,false
+p1140,Debate: ¿cuál es el mayor reto de Tecnología en Latinoamérica?,2024-06-13,7383,liderazgo;trabajo,false
+p1141,Reflexión del día: la clave del éxito en PostgreSQL es la constancia.,2023-08-09,1260,trabajo,true
+p1142,Debate: ¿cuál es el mayor reto de Java en Latinoamérica?,2021-03-18,3688,python;networking;producto,false
+p1143,Debate: ¿cuál es el mayor reto de Kubernetes en Latinoamérica?,2024-11-20,5064,carrera;latam;producto;startups,true
+p1144,Debate: ¿cuál es el mayor reto de NLP en Latinoamérica?,2021-08-24,3795,producto;trabajo,true
+p1145,Compartiendo recursos gratuitos para aprender CI/CD.,2025-02-15,7265,producto;trabajo;aprendizaje,false
+p1146,Acabo de publicar un artículo sobre las tendencias en RabbitMQ. ¿Qué opinan?,2026-06-20,1013,data;networking;trabajo,true
+p1147,¿Alguien más está trabajando con C++? Me encantaría conectar.,2022-02-20,504,networking;data;trabajo,false
+p1148,Gran evento de networking hoy. Aprendí mucho sobre Transporte.,2025-12-25,6287,cloud;startups,true
+p1149,El mercado laboral en Spring Boot está creciendo increíblemente.,2020-02-20,5957,networking;devops,false
+p1150,Reflexión del día: la clave del éxito en Logística es la constancia.,2024-05-28,3904,diseño,true
+p1151,Reflexión del día: la clave del éxito en Python es la constancia.,2021-07-25,2565,devops;empleo,true
+p1152,El mercado laboral en MongoDB está creciendo increíblemente.,2024-12-11,6552,innovacion,false
+p1153,Gran evento de networking hoy. Aprendí mucho sobre Java.,2023-06-27,6330,producto;data,false
+p1154,Compartiendo recursos gratuitos para aprender Tecnología.,2024-10-13,5802,noticias;startups;python;ciberseguridad,false
+p1155,Pro tip sobre Medios: siempre documenta tu proceso.,2021-07-03,614,innovacion,false
+p1156,Reflexión del día: la clave del éxito en Manufactura es la constancia.,2023-04-11,6904,tech,true
+p1157,Buscando profesionales en RabbitMQ para un proyecto increíble.,2020-05-26,7229,ia;tech;edtech,false
+p1158,Reflexión del día: la clave del éxito en Docker es la constancia.,2025-03-07,6589,latam;devops,true
+p1159,Gran evento de networking hoy. Aprendí mucho sobre Azure.,2023-03-31,7252,aprendizaje,true
+p1160,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Vue.js.,2025-06-11,6914,edtech;cloud;liderazgo;ciberseguridad,false
+p1161,Debate: ¿cuál es el mayor reto de Vue.js en Latinoamérica?,2022-06-18,4551,ciberseguridad,true
+p1162,El mercado laboral en SQL está creciendo increíblemente.,2022-02-20,7436,diseño;data;fintech;empleo,false
+p1163,El mercado laboral en GraphQL está creciendo increíblemente.,2024-10-12,4226,noticias,true
+p1164,Acabo de publicar un artículo sobre las tendencias en Vue.js. ¿Qué opinan?,2022-08-09,2885,diseño;cloud;ia;desarrollo,false
+p1165,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de FastAPI.,2020-10-16,6722,aprendizaje,true
+p1166,Compartiendo recursos gratuitos para aprender Rust.,2022-02-22,2611,startups;edtech,false
+p1167,Debate: ¿cuál es el mayor reto de TypeScript en Latinoamérica?,2023-11-18,56,diseño;tech;noticias;latam,true
+p1168,Debate: ¿cuál es el mayor reto de Computer Vision en Latinoamérica?,2026-03-09,7527,liderazgo;startups;fintech,false
+p1169,Buscando profesionales en Manufactura para un proyecto increíble.,2023-11-20,3736,desarrollo;aprendizaje;edtech;networking,true
+p1170,Buscando profesionales en NLP para un proyecto increíble.,2020-02-17,6650,liderazgo;latam;ia,false
+p1171,El mercado laboral en Laravel está creciendo increíblemente.,2024-01-10,2276,empleo;latam,false
+p1172,Nuevo reto personal: aprender C++ en 30 días. ¿Quién se une?,2022-03-14,6693,edtech;python,false
+p1173,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Go.,2023-12-08,2409,liderazgo,false
+p1174,Buscando profesionales en Microservices para un proyecto increíble.,2023-12-22,898,tech,false
+p1175,Pro tip sobre Kubernetes: siempre documenta tu proceso.,2023-11-04,878,aprendizaje;cloud,false
+p1176,Nuevo reto personal: aprender Finanzas en 30 días. ¿Quién se une?,2026-10-15,80,tech;devops;ia,false
+p1177,Buscando profesionales en Cassandra para un proyecto increíble.,2021-08-06,1152,devops;networking,false
+p1178,Debate: ¿cuál es el mayor reto de Cassandra en Latinoamérica?,2025-08-19,6445,python;edtech;data;fintech,true
+p1179,Buscando profesionales en REST APIs para un proyecto increíble.,2026-02-10,917,desarrollo;ia,false
+p1180,¿Alguien más está trabajando con Gobierno? Me encantaría conectar.,2025-11-25,6684,latam;startups,false
+p1181,Debate: ¿cuál es el mayor reto de Kafka en Latinoamérica?,2023-08-04,7187,trabajo;ia,true
+p1182,Pro tip sobre Salud: siempre documenta tu proceso.,2023-07-23,7765,cloud;noticias;data;ia,true
+p1183,Acabo de publicar un artículo sobre las tendencias en Agile. ¿Qué opinan?,2022-04-23,1954,tech,false
+p1184,Reflexión del día: la clave del éxito en FastAPI es la constancia.,2020-08-08,6688,Guatemala;liderazgo;devops;fintech,true
+p1185,Emocionado de compartir que acabo de completar mi certificación en FastAPI.,2025-12-21,782,cloud,false
+p1186,Acabo de publicar un artículo sobre las tendencias en Computer Vision. ¿Qué opinan?,2024-03-04,5859,fintech,true
+p1187,Emocionado de compartir que acabo de completar mi certificación en Kotlin.,2020-10-04,4102,startups;ia,false
+p1188,Emocionado de compartir que acabo de completar mi certificación en NLP.,2020-12-23,3667,networking,false
+p1189,Gran evento de networking hoy. Aprendí mucho sobre Go.,2024-10-05,5197,ciberseguridad;innovacion;diseño;data,true
+p1190,¿Alguien más está trabajando con Docker? Me encantaría conectar.,2026-05-15,4969,tech;data;fintech;networking,true
+p1191,Acabo de publicar un artículo sobre las tendencias en Angular. ¿Qué opinan?,2023-06-29,5441,devops;data;startups;networking,true
+p1192,Emocionado de compartir que acabo de completar mi certificación en PostgreSQL.,2024-01-19,543,tech,false
+p1193,Gran evento de networking hoy. Aprendí mucho sobre Python.,2020-09-25,98,trabajo;data;cloud,false
+p1194,Nuevo reto personal: aprender GCP en 30 días. ¿Quién se une?,2025-02-07,4679,networking;python;noticias,true
+p1195,Compartiendo recursos gratuitos para aprender Kafka.,2021-06-07,5562,producto;latam,false
+p1196,Debate: ¿cuál es el mayor reto de Redis en Latinoamérica?,2021-06-18,5381,noticias,false
+p1197,¿Alguien más está trabajando con Tecnología? Me encantaría conectar.,2025-11-11,6559,edtech;ciberseguridad;innovacion;noticias,false
+p1198,Pro tip sobre Salud: siempre documenta tu proceso.,2024-11-28,7518,ia;data;desarrollo,false
+p1199,Pro tip sobre Microservices: siempre documenta tu proceso.,2020-11-09,1055,producto;ciberseguridad,true
+p1200,El mercado laboral en SQL está creciendo increíblemente.,2022-07-03,5035,diseño;empleo;python;devops,false
+p1201,Buscando profesionales en JavaScript para un proyecto increíble.,2023-01-31,2959,liderazgo,false
+p1202,Nuevo reto personal: aprender GCP en 30 días. ¿Quién se une?,2025-08-15,3357,diseño,false
+p1203,Debate: ¿cuál es el mayor reto de Django en Latinoamérica?,2023-02-23,929,noticias,false
+p1204,Acabo de publicar un artículo sobre las tendencias en Finanzas. ¿Qué opinan?,2020-06-13,2031,latam,false
+p1205,Nuevo reto personal: aprender Machine Learning en 30 días. ¿Quién se une?,2023-09-19,5077,liderazgo;trabajo,false
+p1206,Buscando profesionales en Microservices para un proyecto increíble.,2024-05-21,5900,python;latam,false
+p1207,Acabo de publicar un artículo sobre las tendencias en Agile. ¿Qué opinan?,2022-02-22,6284,liderazgo;empleo,false
+p1208,¿Alguien más está trabajando con Kafka? Me encantaría conectar.,2026-04-27,2590,tech;aprendizaje;cloud,false
+p1209,Gran evento de networking hoy. Aprendí mucho sobre ONG.,2025-02-11,69,python;innovacion,true
+p1210,Nuevo reto personal: aprender Angular en 30 días. ¿Quién se une?,2025-02-21,4578,empleo;python;fintech,false
+p1211,Nuevo reto personal: aprender Kafka en 30 días. ¿Quién se une?,2023-11-27,5889,cloud;fintech;Guatemala,false
+p1212,Acabo de publicar un artículo sobre las tendencias en Turismo. ¿Qué opinan?,2020-05-27,3687,innovacion;edtech;desarrollo;ciberseguridad,true
+p1213,Compartiendo recursos gratuitos para aprender Tecnología.,2021-07-08,7986,python,true
+p1214,Pro tip sobre Retail: siempre documenta tu proceso.,2021-07-26,5563,devops,true
+p1215,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Kubernetes.,2025-07-18,6224,trabajo,true
+p1216,Acabo de publicar un artículo sobre las tendencias en Linux. ¿Qué opinan?,2021-03-08,5636,latam;fintech;noticias;ciberseguridad,true
+p1217,Acabo de publicar un artículo sobre las tendencias en C++. ¿Qué opinan?,2020-04-04,7803,ciberseguridad;aprendizaje;noticias,true
+p1218,El mercado laboral en PostgreSQL está creciendo increíblemente.,2022-11-19,7790,networking;aprendizaje;startups,false
+p1219,Pro tip sobre TypeScript: siempre documenta tu proceso.,2022-11-25,4611,noticias;ia;trabajo;tech,true
+p1220,El mercado laboral en Redis está creciendo increíblemente.,2025-03-24,6378,cloud,true
+p1221,Reflexión del día: la clave del éxito en AWS es la constancia.,2025-03-12,6361,edtech,false
+p1222,Compartiendo recursos gratuitos para aprender Docker.,2022-07-07,6437,innovacion,true
+p1223,Reflexión del día: la clave del éxito en Kubernetes es la constancia.,2024-03-20,5401,desarrollo;liderazgo;producto;noticias,false
+p1224,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Telecomunicaciones.,2020-09-02,6183,diseño;python,false
+p1225,Buscando profesionales en Machine Learning para un proyecto increíble.,2021-02-18,6576,innovacion;producto;desarrollo;liderazgo,true
+p1226,Acabo de publicar un artículo sobre las tendencias en Linux. ¿Qué opinan?,2026-06-07,1317,innovacion;tech;startups,true
+p1227,¿Alguien más está trabajando con Turismo? Me encantaría conectar.,2022-02-23,484,desarrollo,false
+p1228,Acabo de publicar un artículo sobre las tendencias en FastAPI. ¿Qué opinan?,2021-07-10,2027,devops,false
+p1229,Debate: ¿cuál es el mayor reto de CI/CD en Latinoamérica?,2024-03-02,793,empleo,false
+p1230,Nuevo reto personal: aprender Agile en 30 días. ¿Quién se une?,2020-11-26,7352,python;tech;cloud;devops,true
+p1231,Pro tip sobre Laravel: siempre documenta tu proceso.,2022-03-21,5970,latam;carrera,false
+p1232,Acabo de publicar un artículo sobre las tendencias en Java. ¿Qué opinan?,2023-09-16,1720,networking;Guatemala;ia;diseño,true
+p1233,Buscando profesionales en C# para un proyecto increíble.,2020-10-26,6730,devops;trabajo;diseño,true
+p1234,¿Alguien más está trabajando con Git? Me encantaría conectar.,2020-04-20,5243,tech;carrera,true
+p1235,Pro tip sobre C++: siempre documenta tu proceso.,2022-10-12,6037,diseño;liderazgo;data;python,true
+p1236,Nuevo reto personal: aprender Medios en 30 días. ¿Quién se une?,2021-06-10,1446,fintech,false
+p1237,Acabo de publicar un artículo sobre las tendencias en React. ¿Qué opinan?,2024-10-02,6423,diseño;cloud;latam;data,false
+p1238,Compartiendo recursos gratuitos para aprender Kotlin.,2023-07-18,6348,trabajo;aprendizaje;fintech;Guatemala,false
+p1239,Acabo de publicar un artículo sobre las tendencias en Salud. ¿Qué opinan?,2021-08-03,3384,ciberseguridad,false
+p1240,Nuevo reto personal: aprender AWS en 30 días. ¿Quién se une?,2022-05-08,3592,ciberseguridad;networking;carrera,true
+p1241,Debate: ¿cuál es el mayor reto de GraphQL en Latinoamérica?,2024-02-19,491,devops,false
+p1242,Emocionado de compartir que acabo de completar mi certificación en Vue.js.,2022-02-23,1094,latam;ciberseguridad,false
+p1243,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Django.,2023-11-25,4187,edtech,true
+p1244,Compartiendo recursos gratuitos para aprender Salud.,2023-09-27,7175,desarrollo;tech,false
+p1245,Emocionado de compartir que acabo de completar mi certificación en Turismo.,2025-07-23,2589,noticias,true
+p1246,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Kafka.,2025-01-21,6621,latam;devops,false
+p1247,Reflexión del día: la clave del éxito en Azure es la constancia.,2022-01-10,2297,noticias;devops;startups;liderazgo,false
+p1248,Acabo de publicar un artículo sobre las tendencias en Manufactura. ¿Qué opinan?,2026-08-02,2009,startups,false
+p1249,Acabo de publicar un artículo sobre las tendencias en Telecomunicaciones. ¿Qué opinan?,2020-08-04,399,tech;carrera;liderazgo;ciberseguridad,true
+p1250,Gran evento de networking hoy. Aprendí mucho sobre Kubernetes.,2026-02-15,3558,fintech;innovacion,false
+p1251,Nuevo reto personal: aprender Telecomunicaciones en 30 días. ¿Quién se une?,2022-05-01,4070,liderazgo;cloud;ciberseguridad;latam,false
+p1252,Compartiendo recursos gratuitos para aprender Telecomunicaciones.,2024-04-04,169,networking,true
+p1253,Emocionado de compartir que acabo de completar mi certificación en Gobierno.,2022-11-07,199,empleo;latam;devops;data,false
+p1254,Emocionado de compartir que acabo de completar mi certificación en Rust.,2024-11-13,495,networking;diseño,false
+p1255,Pro tip sobre Java: siempre documenta tu proceso.,2024-12-08,4617,carrera;networking,false
+p1256,Compartiendo recursos gratuitos para aprender Logística.,2021-03-02,5788,startups;data;trabajo;fintech,false
+p1257,Emocionado de compartir que acabo de completar mi certificación en Node.js.,2021-06-23,3045,diseño,true
+p1258,Debate: ¿cuál es el mayor reto de Kafka en Latinoamérica?,2026-07-22,2434,fintech;diseño,false
+p1259,Acabo de publicar un artículo sobre las tendencias en Logística. ¿Qué opinan?,2021-09-25,3767,networking;fintech;cloud,false
+p1260,¿Alguien más está trabajando con Manufactura? Me encantaría conectar.,2025-08-07,4845,liderazgo;aprendizaje;devops,false
+p1261,Acabo de publicar un artículo sobre las tendencias en Agile. ¿Qué opinan?,2023-12-22,5826,innovacion;desarrollo;trabajo,true
+p1262,Pro tip sobre Finanzas: siempre documenta tu proceso.,2022-03-01,5944,noticias,false
+p1263,Compartiendo recursos gratuitos para aprender Finanzas.,2021-08-11,3599,desarrollo,true
+p1264,Reflexión del día: la clave del éxito en Consultoría es la constancia.,2021-08-17,7633,tech;empleo;data,true
+p1265,Gran evento de networking hoy. Aprendí mucho sobre Medios.,2021-06-13,3897,trabajo;innovacion;aprendizaje;devops,true
+p1266,Compartiendo recursos gratuitos para aprender Laravel.,2020-06-14,2278,Guatemala;fintech;latam;trabajo,true
+p1267,Reflexión del día: la clave del éxito en Computer Vision es la constancia.,2024-03-27,1895,trabajo,true
+p1268,Nuevo reto personal: aprender Python en 30 días. ¿Quién se une?,2021-07-10,5794,ciberseguridad;edtech,true
+p1269,Emocionado de compartir que acabo de completar mi certificación en Elasticsearch.,2023-04-10,5563,liderazgo;latam;empleo,true
+p1270,Pro tip sobre Retail: siempre documenta tu proceso.,2024-09-16,4017,devops;empleo;data;producto,true
+p1271,Nuevo reto personal: aprender RabbitMQ en 30 días. ¿Quién se une?,2022-12-21,1777,diseño;innovacion,true
+p1272,Debate: ¿cuál es el mayor reto de Manufactura en Latinoamérica?,2021-06-29,5860,desarrollo;data;producto;aprendizaje,true
+p1273,¿Alguien más está trabajando con Energía? Me encantaría conectar.,2023-11-12,980,tech,true
+p1274,Gran evento de networking hoy. Aprendí mucho sobre Python.,2025-06-28,3612,ia;devops,true
+p1275,Compartiendo recursos gratuitos para aprender REST APIs.,2022-10-26,7813,liderazgo;fintech;carrera;Guatemala,true
+p1276,Pro tip sobre Go: siempre documenta tu proceso.,2024-01-19,7394,noticias;cloud;trabajo,true
+p1277,Nuevo reto personal: aprender Vue.js en 30 días. ¿Quién se une?,2020-01-18,4590,ia;ciberseguridad,false
+p1278,Buscando profesionales en Java para un proyecto increíble.,2026-05-16,2960,noticias,true
+p1279,Buscando profesionales en Redis para un proyecto increíble.,2025-01-14,6963,trabajo;networking,false
+p1280,Buscando profesionales en Gobierno para un proyecto increíble.,2023-02-01,7711,startups,false
+p1281,Emocionado de compartir que acabo de completar mi certificación en ONG.,2021-10-16,5606,fintech;latam;producto;diseño,true
+p1282,El mercado laboral en Swift está creciendo increíblemente.,2024-08-14,4457,tech,true
+p1283,Pro tip sobre Swift: siempre documenta tu proceso.,2021-12-08,225,ia;empleo;trabajo;desarrollo,false
+p1284,Nuevo reto personal: aprender Vue.js en 30 días. ¿Quién se une?,2022-10-01,4884,liderazgo;aprendizaje;python,true
+p1285,Buscando profesionales en Node.js para un proyecto increíble.,2020-11-04,6658,producto;desarrollo;innovacion,false
+p1286,¿Alguien más está trabajando con Redis? Me encantaría conectar.,2024-01-17,3649,data,true
+p1287,Buscando profesionales en Python para un proyecto increíble.,2026-03-06,4307,aprendizaje,true
+p1288,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Docker.,2020-10-01,3808,tech;empleo;devops,true
+p1289,Buscando profesionales en Turismo para un proyecto increíble.,2020-04-08,385,desarrollo;diseño;ciberseguridad;aprendizaje,false
+p1290,Compartiendo recursos gratuitos para aprender Azure.,2025-10-13,5739,Guatemala;fintech;ciberseguridad;tech,false
+p1291,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Educación.,2021-02-01,2487,python;startups;producto,false
+p1292,Reflexión del día: la clave del éxito en ONG es la constancia.,2022-10-13,3201,producto;startups;fintech;carrera,true
+p1293,Pro tip sobre Vue.js: siempre documenta tu proceso.,2025-08-16,3516,trabajo;ciberseguridad;startups,true
+p1294,Emocionado de compartir que acabo de completar mi certificación en Kubernetes.,2022-07-14,5335,fintech;Guatemala;python,false
+p1295,Gran evento de networking hoy. Aprendí mucho sobre Swift.,2021-03-10,3989,devops;fintech;data;startups,true
+p1296,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de ONG.,2023-03-19,873,edtech;carrera;innovacion;devops,true
+p1297,Pro tip sobre Computer Vision: siempre documenta tu proceso.,2026-04-11,5505,liderazgo;desarrollo;edtech;latam,false
+p1298,Pro tip sobre Laravel: siempre documenta tu proceso.,2026-12-16,617,python,false
+p1299,Compartiendo recursos gratuitos para aprender Telecomunicaciones.,2024-11-23,3749,aprendizaje;startups,true
+p1300,El mercado laboral en Neo4j está creciendo increíblemente.,2022-08-25,5350,ciberseguridad;producto;Guatemala;data,false
+p1301,Pro tip sobre TypeScript: siempre documenta tu proceso.,2020-10-23,7921,devops;liderazgo,true
+p1302,¿Alguien más está trabajando con MongoDB? Me encantaría conectar.,2022-12-25,2919,devops;cloud,false
+p1303,El mercado laboral en Python está creciendo increíblemente.,2023-01-12,3607,startups,true
+p1304,Pro tip sobre REST APIs: siempre documenta tu proceso.,2026-08-10,1645,latam;ia;desarrollo;innovacion,false
+p1305,Gran evento de networking hoy. Aprendí mucho sobre Manufactura.,2026-07-03,1461,edtech;liderazgo;networking;python,true
+p1306,Compartiendo recursos gratuitos para aprender Logística.,2021-10-13,3847,Guatemala;noticias,true
+p1307,Reflexión del día: la clave del éxito en Terraform es la constancia.,2024-05-13,7299,empleo;ia;networking;cloud,true
+p1308,Emocionado de compartir que acabo de completar mi certificación en Computer Vision.,2023-10-30,3750,liderazgo;trabajo;latam,true
+p1309,Reflexión del día: la clave del éxito en Tecnología es la constancia.,2023-06-03,1487,carrera;tech;liderazgo,true
+p1310,Nuevo reto personal: aprender Agroindustria en 30 días. ¿Quién se une?,2025-07-04,6645,aprendizaje;diseño,true
+p1311,Debate: ¿cuál es el mayor reto de Seguros en Latinoamérica?,2022-04-21,252,devops;ia,true
+p1312,Compartiendo recursos gratuitos para aprender Linux.,2023-10-17,5359,networking;liderazgo,false
+p1313,Gran evento de networking hoy. Aprendí mucho sobre Finanzas.,2026-01-04,2186,innovacion;tech;noticias;python,false
+p1314,Emocionado de compartir que acabo de completar mi certificación en Java.,2025-08-04,2231,trabajo;devops;cloud;innovacion,true
+p1315,Emocionado de compartir que acabo de completar mi certificación en Manufactura.,2023-02-11,6006,fintech,false
+p1316,Acabo de publicar un artículo sobre las tendencias en ONG. ¿Qué opinan?,2023-03-08,1613,ciberseguridad;innovacion;ia;fintech,false
+p1317,Buscando profesionales en Machine Learning para un proyecto increíble.,2025-02-20,3577,ia;latam,false
+p1318,Debate: ¿cuál es el mayor reto de Cassandra en Latinoamérica?,2023-05-18,6819,Guatemala,false
+p1319,Nuevo reto personal: aprender Transporte en 30 días. ¿Quién se une?,2025-08-16,3580,trabajo;desarrollo;networking;startups,false
+p1320,Acabo de publicar un artículo sobre las tendencias en Go. ¿Qué opinan?,2023-01-27,1395,desarrollo;latam;cloud;diseño,true
+p1321,Acabo de publicar un artículo sobre las tendencias en C++. ¿Qué opinan?,2026-10-11,4121,empleo;aprendizaje;data;edtech,false
+p1322,Compartiendo recursos gratuitos para aprender SQL.,2021-12-05,673,networking;data,true
+p1323,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Medios.,2026-07-25,6836,trabajo;Guatemala,true
+p1324,Emocionado de compartir que acabo de completar mi certificación en Redis.,2021-05-18,1733,fintech;edtech,true
+p1325,Acabo de publicar un artículo sobre las tendencias en Tecnología. ¿Qué opinan?,2023-01-23,7766,latam;aprendizaje;innovacion,false
+p1326,¿Alguien más está trabajando con Terraform? Me encantaría conectar.,2022-12-25,904,diseño;edtech;carrera;tech,false
+p1327,Nuevo reto personal: aprender PostgreSQL en 30 días. ¿Quién se une?,2026-02-22,4825,liderazgo;ia,true
+p1328,Gran evento de networking hoy. Aprendí mucho sobre Kafka.,2023-06-24,3035,diseño;carrera;noticias;fintech,false
+p1329,Gran evento de networking hoy. Aprendí mucho sobre Turismo.,2024-03-05,6688,aprendizaje;carrera;devops;noticias,false
+p1330,Emocionado de compartir que acabo de completar mi certificación en Computer Vision.,2023-12-16,1029,desarrollo,false
+p1331,Compartiendo recursos gratuitos para aprender Kotlin.,2026-07-28,3569,Guatemala;empleo;ia,false
+p1332,Nuevo reto personal: aprender TypeScript en 30 días. ¿Quién se une?,2023-03-23,4695,desarrollo;networking;liderazgo;ciberseguridad,false
+p1333,Reflexión del día: la clave del éxito en Redis es la constancia.,2024-01-16,2450,networking;empleo;tech,false
+p1334,¿Alguien más está trabajando con Kafka? Me encantaría conectar.,2026-03-19,2963,aprendizaje,true
+p1335,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Energía.,2026-01-05,3829,diseño;desarrollo,false
+p1336,Compartiendo recursos gratuitos para aprender Laravel.,2020-05-22,505,noticias;networking;startups;aprendizaje,false
+p1337,Buscando profesionales en Git para un proyecto increíble.,2020-06-02,2013,ia;devops,true
+p1338,Emocionado de compartir que acabo de completar mi certificación en Angular.,2020-12-30,4456,liderazgo;cloud,true
+p1339,Emocionado de compartir que acabo de completar mi certificación en ONG.,2020-11-19,888,desarrollo,false
+p1340,Compartiendo recursos gratuitos para aprender Java.,2024-06-28,2897,desarrollo;ciberseguridad;Guatemala,false
+p1341,El mercado laboral en Cassandra está creciendo increíblemente.,2023-08-02,3043,edtech;startups,false
+p1342,Reflexión del día: la clave del éxito en SQL es la constancia.,2024-05-27,854,ia;devops;data,false
+p1343,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Redis.,2022-11-02,2838,edtech;desarrollo;data;Guatemala,true
+p1344,Pro tip sobre Seguros: siempre documenta tu proceso.,2026-05-31,7206,diseño;desarrollo,false
+p1345,Debate: ¿cuál es el mayor reto de Turismo en Latinoamérica?,2020-12-30,5379,Guatemala;latam,false
+p1346,Gran evento de networking hoy. Aprendí mucho sobre Agroindustria.,2026-12-04,3539,fintech;data,false
+p1347,Debate: ¿cuál es el mayor reto de Gobierno en Latinoamérica?,2026-01-09,3582,ia;innovacion;diseño,true
+p1348,Nuevo reto personal: aprender Logística en 30 días. ¿Quién se une?,2024-05-04,7405,edtech,true
+p1349,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Scrum.,2026-07-16,908,networking;devops;aprendizaje;producto,false
+p1350,Compartiendo recursos gratuitos para aprender Elasticsearch.,2024-09-20,5764,liderazgo;data,false
+p1351,Compartiendo recursos gratuitos para aprender Turismo.,2026-01-07,2326,aprendizaje;desarrollo,false
+p1352,¿Alguien más está trabajando con Cassandra? Me encantaría conectar.,2026-08-13,3748,aprendizaje;noticias,true
+p1353,¿Alguien más está trabajando con Energía? Me encantaría conectar.,2020-01-17,1074,ia;producto;python;fintech,false
+p1354,Debate: ¿cuál es el mayor reto de Salud en Latinoamérica?,2021-06-05,6854,data,false
+p1355,Reflexión del día: la clave del éxito en C++ es la constancia.,2021-06-10,1017,diseño;ia;liderazgo,true
+p1356,Compartiendo recursos gratuitos para aprender Laravel.,2023-12-12,5988,empleo;startups;devops;aprendizaje,true
+p1357,Reflexión del día: la clave del éxito en JavaScript es la constancia.,2021-01-19,3200,aprendizaje;data;diseño,true
+p1358,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Node.js.,2023-12-16,298,startups;data,true
+p1359,Gran evento de networking hoy. Aprendí mucho sobre Kotlin.,2023-08-16,1970,devops,true
+p1360,Buscando profesionales en TypeScript para un proyecto increíble.,2025-07-18,2571,producto;desarrollo;startups,true
+p1361,Compartiendo recursos gratuitos para aprender Laravel.,2021-10-15,502,startups;desarrollo,false
+p1362,Buscando profesionales en Educación para un proyecto increíble.,2023-11-20,403,devops;latam;tech;producto,true
+p1363,Debate: ¿cuál es el mayor reto de Medios en Latinoamérica?,2022-10-07,7714,desarrollo;python,false
+p1364,Emocionado de compartir que acabo de completar mi certificación en Kotlin.,2022-12-21,2210,startups,true
+p1365,¿Alguien más está trabajando con Java? Me encantaría conectar.,2026-12-13,98,noticias;trabajo;fintech;ciberseguridad,true
+p1366,Buscando profesionales en Kafka para un proyecto increíble.,2023-09-07,5755,networking;noticias,false
+p1367,Compartiendo recursos gratuitos para aprender GraphQL.,2022-06-22,4010,latam;Guatemala;devops;innovacion,false
+p1368,¿Alguien más está trabajando con Neo4j? Me encantaría conectar.,2021-06-05,3635,noticias;cloud;Guatemala,false
+p1369,Acabo de publicar un artículo sobre las tendencias en Computer Vision. ¿Qué opinan?,2021-03-13,2360,trabajo;empleo;carrera;aprendizaje,false
+p1370,¿Alguien más está trabajando con GCP? Me encantaría conectar.,2022-10-08,4752,liderazgo;networking,false
+p1371,Reflexión del día: la clave del éxito en Redis es la constancia.,2020-07-27,6817,ia;latam,true
+p1372,Compartiendo recursos gratuitos para aprender C++.,2022-04-30,7247,cloud;diseño;liderazgo,true
+p1373,Gran evento de networking hoy. Aprendí mucho sobre React.,2025-04-19,5068,desarrollo;empleo;startups,false
+p1374,Pro tip sobre Angular: siempre documenta tu proceso.,2022-05-31,5774,networking,true
+p1375,Buscando profesionales en Neo4j para un proyecto increíble.,2021-04-03,5641,networking,false
+p1376,Nuevo reto personal: aprender Agile en 30 días. ¿Quién se une?,2022-09-19,4647,Guatemala;innovacion;fintech,true
+p1377,Acabo de publicar un artículo sobre las tendencias en Telecomunicaciones. ¿Qué opinan?,2022-01-10,690,aprendizaje,true
+p1378,Reflexión del día: la clave del éxito en JavaScript es la constancia.,2024-05-22,7015,producto;ia;python,true
+p1379,Debate: ¿cuál es el mayor reto de Laravel en Latinoamérica?,2022-10-26,1553,devops;data;carrera;startups,false
+p1380,Buscando profesionales en Energía para un proyecto increíble.,2021-10-18,6133,liderazgo;ia;devops;networking,true
+p1381,Debate: ¿cuál es el mayor reto de Educación en Latinoamérica?,2020-01-31,5173,innovacion,true
+p1382,Reflexión del día: la clave del éxito en Agroindustria es la constancia.,2024-12-13,3260,Guatemala;empleo,false
+p1383,El mercado laboral en TypeScript está creciendo increíblemente.,2025-09-08,7392,ciberseguridad;Guatemala;fintech;noticias,true
+p1384,Emocionado de compartir que acabo de completar mi certificación en Agile.,2022-06-13,1543,data;python;tech,true
+p1385,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de JavaScript.,2020-09-02,5452,data;diseño;networking;Guatemala,false
+p1386,Compartiendo recursos gratuitos para aprender Seguros.,2025-05-03,7633,Guatemala;startups;carrera;latam,false
+p1387,¿Alguien más está trabajando con Elasticsearch? Me encantaría conectar.,2021-11-09,4528,innovacion;diseño;tech,true
+p1388,Acabo de publicar un artículo sobre las tendencias en Laravel. ¿Qué opinan?,2024-09-21,5224,cloud;empleo,false
+p1389,Gran evento de networking hoy. Aprendí mucho sobre Azure.,2024-08-19,7009,ia;Guatemala;startups,false
+p1390,Debate: ¿cuál es el mayor reto de Angular en Latinoamérica?,2023-09-25,991,Guatemala;noticias;data;ia,false
+p1391,¿Alguien más está trabajando con Manufactura? Me encantaría conectar.,2025-08-08,3243,latam;edtech;liderazgo;aprendizaje,false
+p1392,Gran evento de networking hoy. Aprendí mucho sobre Python.,2020-06-20,6435,edtech;cloud,false
+p1393,Debate: ¿cuál es el mayor reto de AWS en Latinoamérica?,2021-09-20,1493,devops;desarrollo;diseño;networking,true
+p1394,Emocionado de compartir que acabo de completar mi certificación en SQL.,2021-10-16,1507,Guatemala;ia,false
+p1395,Nuevo reto personal: aprender Azure en 30 días. ¿Quién se une?,2025-05-19,7518,data;innovacion;diseño,true
+p1396,Buscando profesionales en Cassandra para un proyecto increíble.,2024-06-12,3385,devops,true
+p1397,Acabo de publicar un artículo sobre las tendencias en Swift. ¿Qué opinan?,2024-10-25,2514,python;empleo,false
+p1398,Emocionado de compartir que acabo de completar mi certificación en NLP.,2020-11-13,1807,networking;empleo;liderazgo;ciberseguridad,true
+p1399,¿Alguien más está trabajando con Java? Me encantaría conectar.,2026-12-14,6382,latam;diseño,true
+p1400,Acabo de publicar un artículo sobre las tendencias en ONG. ¿Qué opinan?,2022-02-18,4965,empleo;producto,false
+p1401,Emocionado de compartir que acabo de completar mi certificación en Rust.,2023-06-05,4651,networking;ciberseguridad;devops;tech,false
+p1402,Gran evento de networking hoy. Aprendí mucho sobre Kafka.,2026-08-20,6635,data;producto;python,false
+p1403,El mercado laboral en Turismo está creciendo increíblemente.,2022-05-20,5400,noticias;carrera;innovacion,true
+p1404,Emocionado de compartir que acabo de completar mi certificación en Logística.,2024-11-30,4143,startups;carrera,false
+p1405,Gran evento de networking hoy. Aprendí mucho sobre CI/CD.,2026-10-24,2528,aprendizaje;fintech,true
+p1406,Compartiendo recursos gratuitos para aprender Seguros.,2026-05-03,5191,data;desarrollo;aprendizaje,true
+p1407,Compartiendo recursos gratuitos para aprender Salud.,2023-12-29,7417,desarrollo,false
+p1408,Nuevo reto personal: aprender Git en 30 días. ¿Quién se une?,2022-01-10,2737,empleo;liderazgo;noticias;carrera,false
+p1409,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Educación.,2021-08-22,1726,Guatemala;innovacion,true
+p1410,Pro tip sobre FastAPI: siempre documenta tu proceso.,2023-05-30,5880,ciberseguridad;edtech;producto;empleo,false
+p1411,Emocionado de compartir que acabo de completar mi certificación en Finanzas.,2023-01-12,3829,data;fintech,true
+p1412,Acabo de publicar un artículo sobre las tendencias en REST APIs. ¿Qué opinan?,2022-10-26,7169,aprendizaje;carrera;trabajo;python,false
+p1413,¿Alguien más está trabajando con Turismo? Me encantaría conectar.,2023-05-06,4911,ia;ciberseguridad;python;carrera,false
+p1414,Reflexión del día: la clave del éxito en Machine Learning es la constancia.,2026-02-26,3163,producto;empleo;devops;tech,true
+p1415,Compartiendo recursos gratuitos para aprender Turismo.,2026-12-25,2950,desarrollo,false
+p1416,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Tecnología.,2023-08-20,3416,cloud,false
+p1417,Acabo de publicar un artículo sobre las tendencias en TypeScript. ¿Qué opinan?,2026-04-18,7987,edtech;diseño,true
+p1418,¿Alguien más está trabajando con NLP? Me encantaría conectar.,2022-10-11,4460,trabajo,false
+p1419,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Salud.,2022-02-19,2194,aprendizaje;liderazgo;ia;networking,true
+p1420,Pro tip sobre Seguros: siempre documenta tu proceso.,2025-07-15,4935,diseño;producto,true
+p1421,¿Alguien más está trabajando con Retail? Me encantaría conectar.,2021-10-08,1310,ia,false
+p1422,Buscando profesionales en C++ para un proyecto increíble.,2025-08-14,6261,empleo;tech;diseño,true
+p1423,Buscando profesionales en Git para un proyecto increíble.,2021-02-11,2980,data;ia,true
+p1424,Buscando profesionales en Energía para un proyecto increíble.,2024-06-05,5219,fintech;ia,false
+p1425,Emocionado de compartir que acabo de completar mi certificación en Git.,2026-03-16,1453,empleo,false
+p1426,Emocionado de compartir que acabo de completar mi certificación en Vue.js.,2022-09-28,1001,noticias;empleo;python;trabajo,true
+p1427,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Azure.,2026-10-11,148,trabajo;fintech,false
+p1428,Pro tip sobre REST APIs: siempre documenta tu proceso.,2023-08-04,3267,tech,true
+p1429,Debate: ¿cuál es el mayor reto de C++ en Latinoamérica?,2026-07-11,5233,innovacion,false
+p1430,Nuevo reto personal: aprender Transporte en 30 días. ¿Quién se une?,2022-05-20,6724,startups;desarrollo,true
+p1431,Acabo de publicar un artículo sobre las tendencias en Node.js. ¿Qué opinan?,2025-09-21,7452,trabajo;latam;ia;Guatemala,false
+p1432,Debate: ¿cuál es el mayor reto de Cassandra en Latinoamérica?,2023-06-01,3566,trabajo,false
+p1433,Compartiendo recursos gratuitos para aprender TypeScript.,2026-03-12,3704,networking,false
+p1434,Reflexión del día: la clave del éxito en NLP es la constancia.,2022-02-02,7422,devops,true
+p1435,Emocionado de compartir que acabo de completar mi certificación en Scrum.,2022-08-30,5380,ciberseguridad,true
+p1436,Acabo de publicar un artículo sobre las tendencias en REST APIs. ¿Qué opinan?,2026-05-15,5255,empleo,true
+p1437,Reflexión del día: la clave del éxito en C# es la constancia.,2024-04-07,5456,tech,false
+p1438,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Medios.,2022-05-29,1457,edtech;ia;ciberseguridad,true
+p1439,Reflexión del día: la clave del éxito en Kafka es la constancia.,2023-12-05,1531,carrera;empleo;latam;networking,true
+p1440,Reflexión del día: la clave del éxito en Rust es la constancia.,2022-06-21,915,aprendizaje,false
+p1441,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Azure.,2023-04-03,1356,empleo;carrera,false
+p1442,Compartiendo recursos gratuitos para aprender Java.,2021-02-19,6138,carrera,false
+p1443,El mercado laboral en C# está creciendo increíblemente.,2021-04-07,6579,innovacion;ciberseguridad;aprendizaje;networking,true
+p1444,Reflexión del día: la clave del éxito en AWS es la constancia.,2021-01-27,2728,desarrollo;carrera,false
+p1445,Reflexión del día: la clave del éxito en MongoDB es la constancia.,2024-12-17,1915,empleo,true
+p1446,Emocionado de compartir que acabo de completar mi certificación en Scrum.,2026-06-06,2448,noticias,false
+p1447,Buscando profesionales en GraphQL para un proyecto increíble.,2020-04-04,2317,latam,true
+p1448,¿Alguien más está trabajando con Agile? Me encantaría conectar.,2025-11-07,2302,python,false
+p1449,Emocionado de compartir que acabo de completar mi certificación en Neo4j.,2023-08-13,6515,tech;desarrollo;devops,false
+p1450,Reflexión del día: la clave del éxito en Computer Vision es la constancia.,2023-04-07,3382,innovacion;python;cloud;noticias,false
+p1451,Gran evento de networking hoy. Aprendí mucho sobre Neo4j.,2026-11-03,4031,tech,true
+p1452,Emocionado de compartir que acabo de completar mi certificación en GraphQL.,2025-01-15,3217,fintech;startups;python,false
+p1453,El mercado laboral en Django está creciendo increíblemente.,2023-08-11,2684,ia,false
+p1454,Reflexión del día: la clave del éxito en Neo4j es la constancia.,2021-11-15,3723,cloud;networking;ciberseguridad;empleo,true
+p1455,¿Alguien más está trabajando con Consultoría? Me encantaría conectar.,2026-02-19,7436,networking;tech,false
+p1456,¿Alguien más está trabajando con Rust? Me encantaría conectar.,2021-10-07,517,devops;tech,false
+p1457,Buscando profesionales en Consultoría para un proyecto increíble.,2024-04-19,4375,ia,true
+p1458,Nuevo reto personal: aprender Java en 30 días. ¿Quién se une?,2022-01-02,2480,carrera,false
+p1459,¿Alguien más está trabajando con Go? Me encantaría conectar.,2025-04-05,5226,noticias;ia;innovacion,true
+p1460,Compartiendo recursos gratuitos para aprender Linux.,2023-01-17,4429,innovacion;liderazgo;aprendizaje,false
+p1461,Buscando profesionales en REST APIs para un proyecto increíble.,2021-01-01,1339,python;innovacion;fintech,true
+p1462,Acabo de publicar un artículo sobre las tendencias en REST APIs. ¿Qué opinan?,2023-05-04,4448,cloud,true
+p1463,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de TypeScript.,2021-05-24,817,Guatemala;edtech;aprendizaje,false
+p1464,Debate: ¿cuál es el mayor reto de Linux en Latinoamérica?,2025-03-18,3596,ia;liderazgo;Guatemala;networking,false
+p1465,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Linux.,2020-04-28,789,python;liderazgo;networking;trabajo,false
+p1466,Gran evento de networking hoy. Aprendí mucho sobre Kubernetes.,2023-09-18,615,innovacion;python;networking;fintech,true
+p1467,El mercado laboral en Python está creciendo increíblemente.,2022-10-27,5766,cloud;startups;innovacion,true
+p1468,Pro tip sobre Redis: siempre documenta tu proceso.,2021-07-10,2642,networking;python,false
+p1469,Compartiendo recursos gratuitos para aprender Git.,2022-01-17,4359,desarrollo;liderazgo;ciberseguridad,false
+p1470,Buscando profesionales en Terraform para un proyecto increíble.,2025-08-18,4086,innovacion;empleo,true
+p1471,Buscando profesionales en REST APIs para un proyecto increíble.,2023-10-22,5739,fintech;diseño;tech;empleo,false
+p1472,Emocionado de compartir que acabo de completar mi certificación en ONG.,2026-11-13,1988,fintech;aprendizaje;data;edtech,false
+p1473,Gran evento de networking hoy. Aprendí mucho sobre Docker.,2025-12-26,2342,networking;fintech;innovacion,true
+p1474,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Computer Vision.,2022-08-10,2614,fintech;latam;networking;edtech,true
+p1475,Muy agradecido con mi equipo por el lanzamiento de nuestro proyecto de Go.,2026-03-15,6005,fintech;innovacion;carrera;empleo,true
+p1476,Pro tip sobre FastAPI: siempre documenta tu proceso.,2023-09-27,7973,cloud;startups,true
+p1477,Gran evento de networking hoy. Aprendí mucho sobre REST APIs.,2021-10-09,463,aprendizaje,false
+p1478,Buscando profesionales en FastAPI para un proyecto increíble.,2023-01-11,6386,trabajo,false
+p1479,Debate: ¿cuál es el mayor reto de Gobierno en Latinoamérica?,2021-06-29,752,carrera;edtech;data,false
+p1480,Debate: ¿cuál es el mayor reto de GCP en Latinoamérica?,2021-12-26,7965,data;carrera;empleo;desarrollo,false
+p1481,Reflexión del día: la clave del éxito en Gobierno es la constancia.,2022-06-08,1597,innovacion;python;startups,false
+p1482,Acabo de publicar un artículo sobre las tendencias en Terraform. ¿Qué opinan?,2024-01-27,6547,diseño,false
+p1483,Buscando profesionales en Laravel para un proyecto increíble.,2023-04-04,7651,ia;trabajo,false
+p1484,Nuevo reto personal: aprender Spring Boot en 30 días. ¿Quién se une?,2026-06-16,2170,liderazgo;Guatemala;noticias,false
+p1485,Reflexión del día: la clave del éxito en Educación es la constancia.,2020-11-27,5175,empleo;diseño;startups,false
+p1486,Buscando profesionales en Machine Learning para un proyecto increíble.,2021-03-25,7366,ia;empleo;producto,true
+p1487,¿Alguien más está trabajando con Agroindustria? Me encantaría conectar.,2024-07-28,2237,diseño;producto;empleo;devops,false
+p1488,Acabo de publicar un artículo sobre las tendencias en Vue.js. ¿Qué opinan?,2026-07-30,4884,empleo;devops;innovacion;data,false
+p1489,Buscando profesionales en GraphQL para un proyecto increíble.,2026-12-21,5065,latam;diseño;liderazgo;trabajo,false
+p1490,Buscando profesionales en Consultoría para un proyecto increíble.,2020-01-09,500,Guatemala;trabajo;devops;latam,true
+p1491,El mercado laboral en Django está creciendo increíblemente.,2023-02-12,3933,fintech;cloud,true
+p1492,Nuevo reto personal: aprender Seguros en 30 días. ¿Quién se une?,2025-03-21,6658,devops;Guatemala,true
+p1493,¿Alguien más está trabajando con Java? Me encantaría conectar.,2025-08-22,751,devops;carrera,false
+p1494,Buscando profesionales en Salud para un proyecto increíble.,2025-05-13,4383,empleo;startups;data;python,true
+p1495,Acabo de publicar un artículo sobre las tendencias en REST APIs. ¿Qué opinan?,2024-08-29,108,aprendizaje;liderazgo;carrera;trabajo,true
+p1496,Gran evento de networking hoy. Aprendí mucho sobre Telecomunicaciones.,2026-09-02,5133,cloud;innovacion;startups;producto,true
+p1497,Reflexión del día: la clave del éxito en Telecomunicaciones es la constancia.,2020-09-18,4250,producto;edtech;diseño;python,false
+p1498,Nuevo reto personal: aprender Python en 30 días. ¿Quién se une?,2024-10-05,635,innovacion;ia;latam,true
+p1499,¿Alguien más está trabajando con C++? Me encantaría conectar.,2021-11-05,2608,networking,true

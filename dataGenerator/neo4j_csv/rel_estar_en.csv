@@ -1,0 +1,2501 @@
+usuario_id,empresa_id,cargo,fecha_inicio,actual
+u1960,e0,Intern,2017-11-01,false
+u1241,e1,Senior Developer,2015-09-23,false
+u2,e2,Director of Engineering,2017-03-14,true
+u706,e3,Engineering Manager,2018-01-08,false
+u1093,e4,Senior Developer,2021-04-10,true
+u1343,e5,Director of Engineering,2018-11-06,false
+u305,e6,Consultant,2018-12-28,false
+u81,e7,Junior Developer,2018-10-21,false
+u1659,e8,DevOps Engineer,2022-03-22,true
+u517,e9,DevOps Engineer,2019-05-29,true
+u291,e10,UX Designer,2022-08-22,false
+u1115,e11,Software Engineer,2020-03-28,false
+u640,e12,QA Engineer,2021-08-03,false
+u156,e13,Product Owner,2017-04-06,true
+u1065,e14,Junior Developer,2024-03-29,true
+u662,e15,Software Engineer,2017-04-11,true
+u749,e16,Software Engineer,2021-11-20,false
+u308,e17,Consultant,2022-06-30,false
+u1325,e18,DevOps Engineer,2021-10-03,false
+u664,e19,Junior Developer,2024-09-13,true
+u819,e20,Product Owner,2020-06-18,false
+u1258,e21,Product Owner,2019-08-08,true
+u1767,e22,QA Engineer,2022-09-13,false
+u1145,e23,QA Engineer,2021-04-21,false
+u709,e24,Software Engineer,2016-09-11,false
+u1491,e25,DevOps Engineer,2022-08-10,false
+u93,e26,Data Analyst,2019-04-11,true
+u18,e27,Senior Developer,2016-09-12,false
+u1176,e28,Engineering Manager,2020-09-02,true
+u1314,e29,Software Engineer,2020-02-27,true
+u270,e30,DevOps Engineer,2017-01-23,false
+u167,e31,Intern,2015-11-21,true
+u1383,e32,Product Owner,2022-08-08,false
+u264,e33,Senior Developer,2016-08-01,true
+u1200,e34,Data Analyst,2024-12-01,false
+u91,e35,QA Engineer,2016-01-26,false
+u1555,e36,QA Engineer,2019-01-22,true
+u1786,e37,Senior Developer,2016-10-07,false
+u973,e38,Engineering Manager,2020-06-13,false
+u1240,e39,Intern,2017-11-07,false
+u427,e40,Senior Developer,2024-09-05,true
+u397,e41,Intern,2023-07-27,true
+u1263,e42,QA Engineer,2016-12-15,true
+u356,e43,Director of Engineering,2015-01-18,true
+u1181,e44,Engineering Manager,2022-11-30,true
+u1178,e45,Engineering Manager,2017-01-11,true
+u848,e46,CTO,2017-02-23,false
+u798,e47,CTO,2023-11-12,false
+u1748,e48,QA Engineer,2023-08-05,false
+u1783,e49,Consultant,2019-05-13,false
+u419,e50,Software Engineer,2023-07-27,true
+u116,e51,Director of Engineering,2019-01-03,false
+u196,e52,Senior Developer,2022-10-22,false
+u1483,e53,DevOps Engineer,2019-01-26,true
+u1919,e54,QA Engineer,2019-04-14,false
+u520,e55,Tech Lead,2022-02-22,false
+u1628,e56,Director of Engineering,2021-06-15,true
+u192,e57,DevOps Engineer,2024-02-03,false
+u430,e58,Product Owner,2015-01-04,true
+u1760,e59,UX Designer,2022-02-07,true
+u813,e60,Junior Developer,2021-12-14,false
+u971,e61,Junior Developer,2016-02-12,true
+u1161,e62,Junior Developer,2020-08-10,false
+u358,e63,Data Analyst,2024-10-29,false
+u524,e64,Consultant,2020-07-28,false
+u1033,e65,Director of Engineering,2022-03-13,false
+u1274,e66,Director of Engineering,2019-05-15,false
+u1545,e67,Tech Lead,2016-03-05,true
+u469,e68,Engineering Manager,2015-04-10,true
+u208,e69,Intern,2022-06-02,false
+u1390,e70,Intern,2017-12-18,false
+u473,e71,Tech Lead,2020-07-14,true
+u1197,e72,Intern,2022-12-17,true
+u1481,e73,Junior Developer,2020-03-25,false
+u957,e74,DevOps Engineer,2021-12-06,false
+u818,e75,QA Engineer,2017-03-09,true
+u479,e76,Junior Developer,2015-07-18,true
+u827,e77,Junior Developer,2023-12-08,false
+u1706,e78,Junior Developer,2017-03-30,false
+u1057,e79,DevOps Engineer,2022-05-24,true
+u1597,e80,Senior Developer,2024-01-18,true
+u291,e81,Tech Lead,2021-08-15,false
+u339,e82,QA Engineer,2021-10-12,true
+u1822,e83,Director of Engineering,2022-05-27,true
+u837,e84,Director of Engineering,2024-07-07,false
+u1136,e85,QA Engineer,2016-04-27,true
+u1537,e86,Senior Developer,2020-01-10,false
+u723,e87,Software Engineer,2017-06-28,true
+u371,e88,Product Owner,2018-03-31,false
+u985,e89,UX Designer,2022-02-12,true
+u1960,e90,Consultant,2018-04-04,true
+u1649,e91,DevOps Engineer,2022-10-18,true
+u1293,e92,CTO,2021-09-16,true
+u13,e93,Product Owner,2023-10-17,false
+u1822,e94,UX Designer,2019-05-29,false
+u1915,e95,Consultant,2024-06-03,false
+u1285,e96,Junior Developer,2019-11-05,false
+u1610,e97,Junior Developer,2015-04-12,false
+u1876,e98,Consultant,2017-11-05,true
+u858,e99,Software Engineer,2016-06-11,true
+u413,e100,QA Engineer,2018-01-17,true
+u1675,e101,UX Designer,2018-01-11,false
+u1206,e102,Senior Developer,2016-05-23,true
+u296,e103,Intern,2019-07-16,false
+u1876,e104,Tech Lead,2015-09-07,true
+u1125,e105,Data Analyst,2020-08-23,true
+u1847,e106,UX Designer,2020-03-13,false
+u537,e107,Intern,2020-02-04,true
+u1899,e108,DevOps Engineer,2017-07-09,true
+u1916,e109,Tech Lead,2021-08-27,true
+u1282,e110,Director of Engineering,2024-04-06,true
+u848,e111,Software Engineer,2016-02-06,true
+u1859,e112,Business Analyst,2018-07-22,true
+u1999,e113,UX Designer,2023-11-15,false
+u474,e114,Software Engineer,2023-04-19,false
+u1324,e115,Junior Developer,2022-02-08,false
+u330,e116,UX Designer,2016-02-28,true
+u1763,e117,Director of Engineering,2024-05-29,true
+u557,e118,Engineering Manager,2016-09-21,true
+u131,e119,CTO,2018-11-10,true
+u1417,e120,Software Engineer,2023-05-01,true
+u2,e121,UX Designer,2022-03-25,true
+u261,e122,Data Analyst,2021-11-01,false
+u1843,e123,Consultant,2018-10-27,true
+u1630,e124,Engineering Manager,2024-01-16,true
+u328,e125,Engineering Manager,2023-03-05,false
+u1011,e126,Software Engineer,2015-08-05,true
+u708,e127,DevOps Engineer,2021-06-21,true
+u798,e128,Junior Developer,2021-12-19,false
+u151,e129,Intern,2017-10-31,false
+u958,e130,QA Engineer,2021-02-10,true
+u1319,e131,Junior Developer,2015-09-28,false
+u537,e132,QA Engineer,2020-07-03,false
+u466,e133,Junior Developer,2016-12-02,true
+u156,e134,Director of Engineering,2015-08-28,true
+u138,e135,Engineering Manager,2022-02-24,true
+u652,e136,UX Designer,2024-04-20,true
+u1953,e137,Consultant,2019-05-02,true
+u949,e138,Junior Developer,2015-06-18,false
+u1912,e139,Data Analyst,2023-06-06,true
+u969,e140,Senior Developer,2020-04-05,false
+u1481,e141,DevOps Engineer,2017-09-01,false
+u247,e142,Business Analyst,2024-07-22,true
+u1150,e143,Consultant,2024-11-03,false
+u1716,e144,Director of Engineering,2021-04-03,true
+u966,e145,Senior Developer,2016-02-11,true
+u1149,e146,CTO,2019-08-26,false
+u657,e147,Senior Developer,2021-03-20,false
+u345,e148,Engineering Manager,2019-08-16,false
+u1882,e149,Business Analyst,2016-01-03,true
+u1228,e150,Business Analyst,2019-03-25,false
+u1891,e151,Consultant,2016-10-05,false
+u1548,e152,Engineering Manager,2015-08-31,false
+u1209,e153,Software Engineer,2020-04-08,false
+u1607,e154,Consultant,2021-08-10,false
+u1788,e155,Data Analyst,2018-11-17,true
+u697,e156,Senior Developer,2016-02-17,true
+u797,e157,Engineering Manager,2018-10-06,false
+u1295,e158,Software Engineer,2017-04-20,true
+u468,e159,Business Analyst,2019-03-11,false
+u826,e160,QA Engineer,2016-07-30,false
+u1819,e161,Intern,2021-11-14,false
+u1653,e162,Data Analyst,2024-10-02,false
+u1940,e163,Junior Developer,2023-05-25,false
+u1910,e164,Business Analyst,2020-03-10,true
+u1907,e165,Senior Developer,2015-03-21,true
+u883,e166,Intern,2021-03-16,true
+u627,e167,Senior Developer,2020-11-13,true
+u1293,e168,Business Analyst,2024-03-24,true
+u1913,e169,QA Engineer,2022-03-06,false
+u1188,e170,Intern,2019-04-25,false
+u517,e171,UX Designer,2022-01-23,true
+u249,e172,Data Analyst,2020-10-20,false
+u960,e173,DevOps Engineer,2022-06-08,true
+u171,e174,Junior Developer,2021-07-01,false
+u263,e175,Senior Developer,2019-12-18,false
+u1851,e176,Junior Developer,2015-09-07,true
+u1736,e177,Director of Engineering,2018-07-17,false
+u1341,e178,Product Owner,2018-04-23,false
+u478,e179,Junior Developer,2021-01-24,false
+u1191,e180,DevOps Engineer,2017-02-05,false
+u1122,e181,Business Analyst,2015-03-19,false
+u659,e182,DevOps Engineer,2024-10-23,false
+u215,e183,CTO,2018-05-12,true
+u1243,e184,Director of Engineering,2023-08-27,false
+u716,e185,Junior Developer,2016-01-20,false
+u1989,e186,Engineering Manager,2017-11-02,false
+u1660,e187,Senior Developer,2022-04-20,true
+u926,e188,QA Engineer,2017-07-29,true
+u218,e189,Consultant,2022-11-24,true
+u835,e190,Software Engineer,2015-05-09,false
+u1514,e191,Business Analyst,2019-08-20,true
+u547,e192,CTO,2016-08-17,true
+u789,e193,Engineering Manager,2022-12-12,true
+u1065,e194,Data Analyst,2020-02-27,false
+u256,e195,Business Analyst,2018-03-16,true
+u731,e196,Product Owner,2018-01-28,true
+u1612,e197,Data Analyst,2018-09-23,false
+u65,e198,Data Analyst,2018-10-26,true
+u1358,e199,Product Owner,2021-01-01,false
+u408,e200,QA Engineer,2019-08-13,true
+u1014,e201,Business Analyst,2017-11-05,false
+u29,e202,Engineering Manager,2023-02-27,false
+u1953,e203,UX Designer,2015-12-30,true
+u672,e204,Software Engineer,2021-08-14,true
+u919,e205,Data Analyst,2019-08-27,false
+u1169,e206,Consultant,2016-03-16,true
+u107,e207,Software Engineer,2022-09-27,true
+u1813,e208,Consultant,2024-09-12,false
+u1883,e209,Intern,2024-06-21,true
+u1612,e210,CTO,2015-07-03,false
+u478,e211,Product Owner,2018-06-30,false
+u1367,e212,Business Analyst,2023-07-07,true
+u165,e213,DevOps Engineer,2019-09-25,true
+u212,e214,CTO,2023-09-11,true
+u62,e215,CTO,2017-01-08,false
+u1242,e216,UX Designer,2020-08-14,false
+u1212,e217,Business Analyst,2020-03-11,true
+u1587,e218,Intern,2015-08-11,true
+u1554,e219,Business Analyst,2015-07-10,true
+u1130,e220,Tech Lead,2015-09-23,true
+u695,e221,Software Engineer,2020-03-21,true
+u794,e222,Business Analyst,2019-07-17,false
+u1160,e223,Business Analyst,2019-07-31,false
+u308,e224,Consultant,2016-09-16,true
+u1342,e225,QA Engineer,2016-11-07,false
+u1967,e226,Senior Developer,2023-05-06,false
+u14,e227,Junior Developer,2021-10-14,true
+u1474,e228,Consultant,2016-06-01,false
+u673,e229,UX Designer,2019-12-16,true
+u967,e230,CTO,2024-10-19,false
+u1226,e231,Senior Developer,2023-03-24,true
+u58,e232,Intern,2019-09-06,false
+u1349,e233,UX Designer,2021-05-25,false
+u544,e234,Software Engineer,2016-05-19,false
+u1856,e235,CTO,2018-09-30,true
+u578,e236,Consultant,2023-10-23,true
+u250,e237,Junior Developer,2018-02-22,true
+u1567,e238,DevOps Engineer,2021-07-09,false
+u1545,e239,Intern,2015-02-15,true
+u237,e240,Consultant,2016-12-12,true
+u1276,e241,Tech Lead,2018-01-04,false
+u1981,e242,Engineering Manager,2021-03-06,true
+u1973,e243,QA Engineer,2018-05-23,false
+u197,e244,Engineering Manager,2018-10-02,false
+u633,e245,Junior Developer,2016-11-04,true
+u1559,e246,DevOps Engineer,2024-02-13,false
+u876,e247,Tech Lead,2015-02-20,true
+u1868,e248,DevOps Engineer,2019-06-26,false
+u137,e249,UX Designer,2020-12-19,false
+u1657,e250,Data Analyst,2018-12-12,true
+u1154,e251,DevOps Engineer,2016-06-19,true
+u256,e252,Product Owner,2018-03-07,false
+u1528,e253,Business Analyst,2017-12-20,true
+u910,e254,Business Analyst,2020-01-12,true
+u1809,e255,Junior Developer,2021-01-23,true
+u1742,e256,Junior Developer,2020-11-25,true
+u1927,e257,CTO,2018-12-19,false
+u1834,e258,UX Designer,2016-05-23,true
+u1755,e259,Software Engineer,2021-08-10,true
+u1306,e260,Tech Lead,2019-07-29,false
+u1649,e261,Junior Developer,2020-06-04,true
+u1029,e262,UX Designer,2024-02-09,true
+u1735,e263,Intern,2024-08-14,true
+u162,e264,Software Engineer,2020-10-30,false
+u519,e265,CTO,2023-11-08,false
+u1843,e266,Junior Developer,2022-01-04,false
+u565,e267,Business Analyst,2023-09-24,false
+u1789,e268,Engineering Manager,2024-05-26,false
+u499,e269,Product Owner,2022-01-05,true
+u1377,e270,Senior Developer,2023-06-04,true
+u1599,e271,QA Engineer,2018-12-24,true
+u68,e272,Director of Engineering,2016-03-26,true
+u1938,e273,UX Designer,2017-05-02,false
+u41,e274,Senior Developer,2021-05-02,false
+u297,e275,Director of Engineering,2019-08-14,false
+u1728,e276,Senior Developer,2022-10-02,true
+u1579,e277,Director of Engineering,2023-01-30,false
+u1293,e278,QA Engineer,2017-04-26,false
+u813,e279,CTO,2017-08-01,false
+u1231,e280,DevOps Engineer,2022-12-13,true
+u1739,e281,QA Engineer,2018-07-09,false
+u1965,e282,Intern,2019-04-02,false
+u1309,e283,QA Engineer,2016-02-25,true
+u1801,e284,Software Engineer,2021-07-04,true
+u237,e285,Intern,2022-08-18,true
+u1167,e286,Software Engineer,2024-01-08,false
+u230,e287,Junior Developer,2018-09-11,true
+u1049,e288,Business Analyst,2019-04-12,true
+u9,e289,Junior Developer,2015-12-26,true
+u346,e290,QA Engineer,2015-07-25,false
+u40,e291,Business Analyst,2020-11-26,false
+u770,e292,Senior Developer,2017-03-25,false
+u1733,e293,Tech Lead,2023-06-05,true
+u905,e294,Junior Developer,2017-08-05,false
+u1736,e295,Data Analyst,2015-01-17,true
+u883,e296,CTO,2024-11-11,false
+u99,e297,Data Analyst,2017-01-05,false
+u299,e298,DevOps Engineer,2022-04-02,true
+u1112,e299,UX Designer,2022-12-13,false
+u28,e300,Junior Developer,2018-08-20,true
+u1864,e301,Consultant,2024-08-21,false
+u983,e302,Data Analyst,2020-12-07,true
+u1938,e303,Director of Engineering,2017-11-02,false
+u31,e304,Tech Lead,2015-03-19,true
+u1458,e305,Director of Engineering,2021-09-16,false
+u960,e306,Business Analyst,2020-09-17,true
+u955,e307,Tech Lead,2020-06-16,false
+u1544,e308,CTO,2016-01-14,true
+u964,e309,Product Owner,2022-08-26,true
+u222,e310,Software Engineer,2015-04-03,false
+u1602,e311,Business Analyst,2023-05-16,false
+u231,e312,Data Analyst,2019-08-28,false
+u1795,e313,Business Analyst,2021-06-05,true
+u1226,e314,UX Designer,2021-02-22,false
+u1516,e315,UX Designer,2019-01-20,false
+u1551,e316,Consultant,2018-10-19,false
+u673,e317,Junior Developer,2024-06-15,false
+u963,e318,Senior Developer,2018-08-26,true
+u239,e319,Data Analyst,2024-03-10,true
+u985,e320,Senior Developer,2023-02-27,false
+u506,e321,Software Engineer,2015-05-29,false
+u475,e322,DevOps Engineer,2021-10-25,true
+u1205,e323,Engineering Manager,2023-02-01,true
+u1776,e324,CTO,2021-06-16,true
+u1179,e325,Business Analyst,2021-11-08,false
+u681,e326,Consultant,2017-09-02,false
+u277,e327,Consultant,2017-10-07,true
+u1998,e328,Intern,2024-05-09,false
+u415,e329,Product Owner,2020-07-25,true
+u633,e330,Product Owner,2015-02-19,true
+u1998,e331,UX Designer,2017-11-29,false
+u595,e332,Junior Developer,2019-12-02,false
+u1284,e333,Data Analyst,2024-05-26,true
+u1184,e334,Software Engineer,2020-11-08,true
+u122,e335,UX Designer,2019-12-12,true
+u305,e336,QA Engineer,2024-12-03,false
+u624,e337,Consultant,2018-01-08,true
+u1136,e338,Data Analyst,2024-09-13,false
+u406,e339,Software Engineer,2018-10-24,false
+u1095,e340,Junior Developer,2024-09-30,true
+u1680,e341,Business Analyst,2019-06-13,false
+u1166,e342,CTO,2018-09-10,false
+u1471,e343,Data Analyst,2017-09-29,false
+u196,e344,Senior Developer,2019-04-20,true
+u1934,e345,Junior Developer,2015-08-28,true
+u773,e346,CTO,2021-02-16,false
+u785,e347,UX Designer,2016-07-02,false
+u1661,e348,Consultant,2019-12-20,false
+u1574,e349,Consultant,2024-06-30,false
+u343,e350,Data Analyst,2015-06-20,false
+u1444,e351,Business Analyst,2024-05-09,false
+u1844,e352,DevOps Engineer,2022-04-02,true
+u800,e353,Consultant,2022-03-12,true
+u1806,e354,CTO,2016-11-27,true
+u696,e355,Tech Lead,2018-02-04,false
+u547,e356,Business Analyst,2023-11-06,false
+u374,e357,Product Owner,2015-08-14,true
+u1876,e358,Intern,2016-05-12,true
+u997,e359,Consultant,2024-07-14,true
+u1600,e360,Business Analyst,2016-11-04,true
+u71,e361,Senior Developer,2018-02-24,false
+u1376,e362,Intern,2018-05-22,true
+u1411,e363,Product Owner,2020-05-09,false
+u692,e364,Business Analyst,2016-08-23,false
+u111,e365,Product Owner,2021-05-01,true
+u1498,e366,Engineering Manager,2019-12-12,true
+u1940,e367,Junior Developer,2022-05-08,false
+u639,e368,CTO,2023-07-30,true
+u944,e369,Consultant,2016-04-14,false
+u855,e370,Intern,2018-05-06,true
+u812,e371,QA Engineer,2022-11-23,false
+u737,e372,Engineering Manager,2015-09-04,false
+u1600,e373,Intern,2017-02-01,false
+u1826,e374,Business Analyst,2016-03-20,true
+u1537,e375,Senior Developer,2017-06-12,true
+u1672,e376,Senior Developer,2021-03-07,false
+u1320,e377,Consultant,2018-02-07,true
+u576,e378,Director of Engineering,2016-04-28,true
+u496,e379,Junior Developer,2022-02-15,false
+u32,e380,Software Engineer,2021-11-15,false
+u1251,e381,Tech Lead,2016-02-26,false
+u1203,e382,Intern,2020-05-12,true
+u79,e383,Consultant,2020-02-12,false
+u1293,e384,Tech Lead,2016-01-16,true
+u1285,e385,Junior Developer,2022-01-07,false
+u317,e386,DevOps Engineer,2020-09-23,true
+u1770,e387,Consultant,2020-06-02,false
+u1976,e388,Director of Engineering,2018-06-24,true
+u1360,e389,Engineering Manager,2022-03-21,true
+u1594,e390,Junior Developer,2015-01-11,false
+u1808,e391,QA Engineer,2019-12-18,false
+u484,e392,Tech Lead,2022-07-11,true
+u912,e393,Engineering Manager,2015-08-01,false
+u1626,e394,Product Owner,2022-05-18,false
+u994,e395,Director of Engineering,2018-08-02,false
+u984,e396,Tech Lead,2020-01-28,true
+u805,e397,DevOps Engineer,2024-03-23,true
+u1488,e398,Senior Developer,2018-07-10,false
+u1722,e399,Tech Lead,2017-04-01,true
+u237,e400,Intern,2024-01-17,true
+u847,e401,QA Engineer,2019-03-08,true
+u188,e402,Junior Developer,2021-01-05,false
+u1087,e403,Data Analyst,2018-04-14,true
+u528,e404,Data Analyst,2021-12-02,false
+u926,e405,Junior Developer,2019-01-26,false
+u978,e406,Intern,2016-02-19,false
+u1219,e407,Director of Engineering,2016-08-10,true
+u1613,e408,QA Engineer,2017-09-24,true
+u484,e409,Junior Developer,2018-05-24,true
+u827,e410,Consultant,2023-01-19,true
+u216,e411,Tech Lead,2020-07-16,false
+u1880,e412,Director of Engineering,2017-04-11,true
+u8,e413,Senior Developer,2024-04-20,true
+u507,e414,Engineering Manager,2020-08-25,true
+u918,e415,Senior Developer,2024-12-03,true
+u1593,e416,Product Owner,2023-08-10,true
+u729,e417,Data Analyst,2015-09-23,false
+u331,e418,Intern,2015-09-29,true
+u1932,e419,Data Analyst,2020-03-09,true
+u1039,e420,Engineering Manager,2016-09-07,false
+u827,e421,Business Analyst,2018-05-15,false
+u1101,e422,UX Designer,2017-04-26,false
+u1886,e423,UX Designer,2024-03-20,true
+u933,e424,Senior Developer,2016-05-03,true
+u1953,e425,UX Designer,2018-06-22,true
+u728,e426,Senior Developer,2023-06-16,false
+u1072,e427,Tech Lead,2019-10-17,false
+u1054,e428,Product Owner,2020-04-03,true
+u49,e429,Consultant,2016-02-24,false
+u833,e430,Product Owner,2022-09-18,true
+u1627,e431,Intern,2021-09-15,true
+u466,e432,Business Analyst,2016-12-21,false
+u143,e433,Engineering Manager,2022-02-25,true
+u514,e434,QA Engineer,2015-07-23,false
+u1912,e435,Director of Engineering,2024-06-04,true
+u1703,e436,Tech Lead,2021-10-30,false
+u1662,e437,Intern,2020-01-24,true
+u1594,e438,Product Owner,2023-02-03,true
+u1898,e439,Software Engineer,2016-02-07,false
+u44,e440,Software Engineer,2015-11-07,true
+u1637,e441,Software Engineer,2019-01-15,false
+u1045,e442,UX Designer,2018-11-28,false
+u415,e443,Data Analyst,2022-09-05,true
+u1500,e444,Business Analyst,2024-12-18,true
+u1053,e445,Data Analyst,2016-06-17,false
+u273,e446,Consultant,2021-11-11,true
+u5,e447,Junior Developer,2022-05-10,true
+u154,e448,DevOps Engineer,2024-03-27,true
+u453,e449,Business Analyst,2018-06-15,false
+u1666,e450,Intern,2020-06-15,false
+u863,e451,UX Designer,2021-11-28,false
+u1850,e452,Business Analyst,2021-07-18,false
+u963,e453,Data Analyst,2020-11-14,false
+u1787,e454,DevOps Engineer,2016-12-24,true
+u672,e455,Senior Developer,2024-09-29,true
+u1881,e456,Tech Lead,2019-10-21,false
+u735,e457,UX Designer,2023-08-01,false
+u1812,e458,DevOps Engineer,2018-08-26,false
+u1464,e459,Software Engineer,2019-03-30,false
+u373,e460,Software Engineer,2021-03-15,true
+u93,e461,Business Analyst,2015-04-06,true
+u1441,e462,UX Designer,2017-03-20,false
+u470,e463,Business Analyst,2021-10-20,true
+u1354,e464,Senior Developer,2024-05-29,false
+u700,e465,Intern,2019-07-09,true
+u376,e466,DevOps Engineer,2021-04-29,true
+u1209,e467,Senior Developer,2018-09-21,true
+u1038,e468,Business Analyst,2015-09-12,true
+u503,e469,Business Analyst,2015-06-24,true
+u676,e470,Intern,2020-01-27,false
+u1754,e471,Data Analyst,2020-04-20,false
+u485,e472,Tech Lead,2022-05-02,false
+u1803,e473,Software Engineer,2021-08-30,false
+u154,e474,Senior Developer,2019-12-18,true
+u668,e475,Junior Developer,2023-10-30,false
+u1075,e476,DevOps Engineer,2022-11-02,true
+u1751,e477,CTO,2022-08-23,true
+u1848,e478,Business Analyst,2018-02-21,false
+u709,e479,Consultant,2020-08-28,true
+u343,e480,DevOps Engineer,2016-04-16,true
+u506,e481,Tech Lead,2019-07-22,false
+u1371,e482,Senior Developer,2021-07-10,true
+u1829,e483,Business Analyst,2019-04-27,true
+u316,e484,QA Engineer,2024-06-07,false
+u956,e485,Director of Engineering,2022-05-28,true
+u234,e486,Director of Engineering,2021-05-19,false
+u406,e487,Director of Engineering,2016-05-06,false
+u137,e488,CTO,2022-12-21,true
+u531,e489,Consultant,2023-05-10,true
+u83,e490,Data Analyst,2021-10-01,true
+u699,e491,Intern,2015-04-11,false
+u1015,e492,Engineering Manager,2022-10-04,true
+u1845,e493,Software Engineer,2015-06-23,false
+u1524,e494,Engineering Manager,2021-11-20,true
+u1374,e495,Data Analyst,2023-07-14,false
+u1174,e496,Junior Developer,2022-02-25,false
+u1884,e497,DevOps Engineer,2018-01-13,true
+u909,e498,DevOps Engineer,2020-02-20,false
+u784,e499,Product Owner,2024-04-03,false
+u859,e203,Intern,2020-03-22,false
+u1543,e30,Senior Developer,2018-10-30,false
+u64,e378,Director of Engineering,2020-06-07,false
+u415,e350,Business Analyst,2016-02-07,false
+u1049,e322,Junior Developer,2020-08-19,true
+u73,e88,Business Analyst,2022-08-25,false
+u656,e437,Intern,2022-12-10,false
+u1442,e139,Software Engineer,2023-12-07,false
+u637,e398,Business Analyst,2015-08-05,false
+u334,e231,Director of Engineering,2017-01-24,true
+u702,e126,Consultant,2022-11-29,true
+u1794,e308,Tech Lead,2023-11-09,true
+u1029,e433,Engineering Manager,2017-07-28,false
+u227,e406,Junior Developer,2016-02-16,true
+u1860,e378,Tech Lead,2021-07-13,false
+u1403,e49,Intern,2019-03-23,false
+u144,e312,Tech Lead,2020-12-02,true
+u1177,e191,Tech Lead,2015-03-19,false
+u132,e162,Data Analyst,2022-07-22,false
+u1687,e7,Senior Developer,2024-12-17,false
+u887,e186,Software Engineer,2021-02-05,false
+u1230,e178,Engineering Manager,2021-11-07,true
+u1713,e479,Data Analyst,2015-04-08,true
+u873,e263,Director of Engineering,2017-12-10,true
+u660,e369,Director of Engineering,2023-04-16,false
+u112,e99,CTO,2018-12-30,true
+u1118,e464,Intern,2018-12-11,true
+u1226,e19,Junior Developer,2020-08-05,true
+u236,e337,Senior Developer,2020-09-17,false
+u1154,e338,DevOps Engineer,2015-06-29,false
+u1939,e238,CTO,2021-12-22,false
+u794,e100,QA Engineer,2019-12-09,false
+u1236,e134,DevOps Engineer,2021-02-13,true
+u1551,e36,CTO,2015-07-26,true
+u1545,e108,Junior Developer,2024-04-16,false
+u1203,e201,Data Analyst,2023-06-04,true
+u1039,e121,UX Designer,2019-03-06,false
+u1736,e193,Intern,2019-07-09,true
+u1620,e7,Data Analyst,2022-09-23,false
+u1722,e242,Consultant,2018-01-03,false
+u578,e166,Software Engineer,2023-01-26,false
+u1158,e419,DevOps Engineer,2021-07-17,true
+u68,e165,Consultant,2017-12-11,false
+u1745,e161,Junior Developer,2020-11-06,false
+u1198,e77,Software Engineer,2019-01-08,false
+u995,e378,Software Engineer,2018-12-26,true
+u298,e435,Senior Developer,2016-02-18,true
+u944,e135,Data Analyst,2021-11-10,false
+u218,e431,Consultant,2017-05-26,false
+u1938,e111,Intern,2015-11-30,false
+u763,e15,Senior Developer,2024-10-02,true
+u846,e78,Intern,2023-04-17,true
+u151,e408,Junior Developer,2019-03-27,true
+u1313,e38,CTO,2020-04-16,true
+u1112,e137,CTO,2019-10-02,true
+u241,e259,Product Owner,2015-10-08,false
+u746,e327,QA Engineer,2018-03-15,true
+u1245,e309,Consultant,2018-11-28,false
+u779,e26,Director of Engineering,2022-07-20,false
+u434,e276,Junior Developer,2022-11-03,false
+u445,e400,CTO,2015-01-29,true
+u859,e468,QA Engineer,2020-11-24,false
+u825,e486,Engineering Manager,2020-07-28,true
+u835,e205,DevOps Engineer,2020-11-20,true
+u150,e366,Product Owner,2022-10-16,true
+u88,e339,QA Engineer,2021-08-09,true
+u613,e85,Senior Developer,2018-12-29,false
+u1938,e393,Engineering Manager,2018-02-22,false
+u943,e318,Business Analyst,2021-03-19,true
+u201,e192,Engineering Manager,2024-07-11,true
+u1437,e241,Director of Engineering,2018-12-12,false
+u456,e77,Intern,2020-06-04,true
+u942,e127,DevOps Engineer,2022-11-10,true
+u1141,e232,Intern,2016-03-10,true
+u315,e308,Data Analyst,2017-02-01,true
+u1215,e50,Tech Lead,2016-03-21,false
+u1716,e408,Tech Lead,2015-01-20,false
+u1474,e475,Tech Lead,2021-09-18,false
+u1263,e92,Senior Developer,2022-07-12,true
+u1909,e120,QA Engineer,2017-09-16,true
+u1343,e115,Engineering Manager,2016-05-23,false
+u433,e293,Senior Developer,2019-06-26,true
+u1108,e443,Consultant,2015-03-09,true
+u386,e409,Senior Developer,2022-09-15,true
+u330,e118,Junior Developer,2023-08-31,true
+u1889,e499,Software Engineer,2015-04-07,true
+u1755,e159,Senior Developer,2023-02-04,false
+u1156,e399,Director of Engineering,2020-09-12,false
+u1082,e336,Director of Engineering,2024-01-11,true
+u1082,e372,CTO,2018-12-06,false
+u774,e231,Junior Developer,2021-01-19,false
+u1483,e253,UX Designer,2017-02-14,true
+u1112,e241,Intern,2019-11-03,true
+u358,e232,Director of Engineering,2021-07-01,true
+u773,e440,Consultant,2020-04-23,false
+u287,e286,Product Owner,2023-04-20,true
+u1611,e54,Junior Developer,2016-12-20,true
+u223,e373,QA Engineer,2016-12-26,false
+u1181,e470,UX Designer,2018-02-12,false
+u709,e40,Engineering Manager,2023-08-27,false
+u1851,e267,DevOps Engineer,2023-03-26,true
+u63,e50,Data Analyst,2018-10-26,false
+u1402,e404,Product Owner,2020-12-17,true
+u1233,e222,UX Designer,2022-08-05,true
+u1747,e228,Engineering Manager,2020-03-11,false
+u336,e228,UX Designer,2021-11-15,true
+u1971,e117,Intern,2016-06-18,true
+u1884,e329,QA Engineer,2021-09-11,true
+u885,e499,QA Engineer,2020-10-03,true
+u959,e12,Senior Developer,2017-02-07,false
+u890,e20,Senior Developer,2018-07-21,false
+u1222,e232,Product Owner,2018-03-29,true
+u1228,e480,Software Engineer,2021-06-08,false
+u1155,e8,Junior Developer,2017-04-10,true
+u660,e248,Tech Lead,2022-02-04,true
+u857,e169,Intern,2020-07-29,false
+u577,e393,Tech Lead,2023-02-20,true
+u737,e431,CTO,2020-03-19,true
+u696,e123,CTO,2020-02-28,false
+u1783,e2,DevOps Engineer,2021-01-02,true
+u1072,e216,Intern,2016-08-09,false
+u1265,e321,Consultant,2019-07-23,false
+u1287,e94,Senior Developer,2023-04-02,true
+u85,e235,QA Engineer,2019-02-02,true
+u1817,e272,Senior Developer,2021-02-22,false
+u224,e127,Data Analyst,2021-08-15,false
+u1875,e436,DevOps Engineer,2019-07-20,false
+u981,e0,Engineering Manager,2019-10-08,false
+u1213,e420,Intern,2021-05-06,true
+u1552,e471,DevOps Engineer,2015-09-08,false
+u1904,e426,Intern,2024-02-14,false
+u917,e407,Intern,2015-07-28,false
+u1577,e107,QA Engineer,2023-07-22,false
+u1187,e73,Junior Developer,2023-11-09,false
+u281,e196,QA Engineer,2023-12-16,true
+u1616,e65,Junior Developer,2022-08-27,true
+u410,e381,Software Engineer,2018-11-21,true
+u396,e104,Business Analyst,2022-02-21,true
+u1683,e188,Tech Lead,2015-10-09,false
+u747,e157,CTO,2023-02-27,true
+u804,e185,CTO,2020-07-12,true
+u247,e162,CTO,2015-09-09,true
+u1415,e104,Senior Developer,2019-02-12,false
+u1564,e402,Engineering Manager,2024-08-12,false
+u1576,e131,Data Analyst,2020-02-25,true
+u1014,e55,DevOps Engineer,2015-04-14,false
+u1493,e168,Intern,2016-10-12,true
+u1220,e25,Product Owner,2015-07-11,true
+u979,e467,CTO,2024-06-15,true
+u1108,e396,Consultant,2016-06-08,false
+u1707,e438,Consultant,2021-12-30,true
+u1748,e1,Intern,2017-02-21,false
+u1865,e198,Tech Lead,2019-05-12,true
+u604,e279,Intern,2017-03-09,false
+u1030,e363,Intern,2023-05-19,true
+u217,e128,Software Engineer,2015-07-22,true
+u883,e144,Business Analyst,2015-05-18,true
+u1574,e462,Product Owner,2024-10-10,true
+u69,e240,Director of Engineering,2018-06-22,true
+u250,e419,QA Engineer,2017-04-08,true
+u347,e445,Director of Engineering,2016-12-13,true
+u1748,e60,Intern,2017-11-17,true
+u1894,e226,Engineering Manager,2018-05-16,false
+u331,e121,CTO,2024-12-03,true
+u1528,e395,Director of Engineering,2021-01-25,false
+u1984,e227,UX Designer,2018-12-12,true
+u889,e64,Data Analyst,2019-11-07,false
+u1352,e348,Tech Lead,2018-08-07,false
+u739,e155,Consultant,2024-10-08,false
+u87,e315,Data Analyst,2016-09-18,true
+u539,e342,Intern,2018-06-23,true
+u681,e377,UX Designer,2017-10-19,false
+u1561,e401,Intern,2016-05-07,true
+u80,e245,Director of Engineering,2019-03-30,false
+u928,e162,Consultant,2022-10-24,true
+u596,e115,Engineering Manager,2024-08-11,true
+u900,e336,Engineering Manager,2018-04-15,false
+u1527,e62,Product Owner,2024-03-05,true
+u1866,e319,Software Engineer,2018-05-12,true
+u800,e130,Junior Developer,2015-02-11,true
+u1976,e377,Business Analyst,2015-02-24,true
+u1551,e6,Senior Developer,2016-06-18,true
+u528,e321,Data Analyst,2019-03-20,false
+u419,e99,Data Analyst,2016-04-19,true
+u1916,e37,QA Engineer,2015-03-28,false
+u1049,e358,UX Designer,2015-04-22,false
+u1340,e190,Engineering Manager,2020-04-02,true
+u174,e457,Tech Lead,2020-04-06,false
+u869,e91,CTO,2022-04-29,true
+u847,e384,Tech Lead,2015-02-08,false
+u945,e495,UX Designer,2023-03-21,true
+u591,e67,Intern,2017-08-13,false
+u704,e354,Business Analyst,2024-01-17,true
+u503,e455,Consultant,2015-06-04,false
+u721,e192,Junior Developer,2021-11-22,true
+u1787,e294,Tech Lead,2019-11-09,true
+u1082,e464,Junior Developer,2021-10-28,true
+u670,e132,Product Owner,2022-05-17,false
+u1222,e420,Data Analyst,2018-09-17,true
+u1800,e199,Consultant,2022-05-21,false
+u702,e331,Tech Lead,2018-05-09,true
+u933,e381,Tech Lead,2023-03-11,false
+u1176,e371,Business Analyst,2024-10-08,true
+u1570,e180,Engineering Manager,2018-11-08,true
+u209,e94,UX Designer,2019-02-17,true
+u1172,e27,DevOps Engineer,2020-11-25,false
+u1188,e413,Tech Lead,2020-07-08,true
+u1723,e94,Business Analyst,2019-02-16,false
+u1216,e262,CTO,2018-12-23,true
+u418,e35,QA Engineer,2024-05-17,true
+u512,e281,QA Engineer,2021-11-08,true
+u1701,e489,Data Analyst,2022-07-22,false
+u164,e300,DevOps Engineer,2023-10-10,true
+u1141,e498,Software Engineer,2017-01-03,false
+u191,e380,Product Owner,2023-02-27,true
+u1337,e221,DevOps Engineer,2018-04-05,false
+u1141,e24,Director of Engineering,2018-08-26,false
+u1995,e293,QA Engineer,2022-09-29,false
+u1028,e236,Intern,2019-02-19,true
+u1783,e38,Intern,2018-05-03,true
+u1261,e405,Data Analyst,2019-05-06,false
+u1630,e377,Product Owner,2024-07-07,true
+u106,e346,QA Engineer,2019-06-07,true
+u699,e200,Senior Developer,2015-11-01,true
+u1354,e13,UX Designer,2018-04-06,true
+u1900,e216,Junior Developer,2018-04-22,false
+u1337,e450,Software Engineer,2022-04-11,true
+u1174,e307,Data Analyst,2019-10-29,true
+u1728,e271,CTO,2016-11-01,false
+u558,e298,Engineering Manager,2019-04-25,true
+u750,e448,Business Analyst,2024-08-27,true
+u1862,e7,Tech Lead,2020-05-12,true
+u557,e284,Consultant,2024-08-04,false
+u269,e35,Engineering Manager,2018-08-09,false
+u1951,e427,Software Engineer,2021-01-14,true
+u371,e68,Director of Engineering,2021-08-28,false
+u1074,e406,CTO,2019-09-10,false
+u1475,e55,CTO,2024-07-20,false
+u989,e29,Intern,2024-05-09,false
+u1295,e14,Intern,2019-01-11,true
+u39,e330,Director of Engineering,2018-06-20,false
+u715,e82,CTO,2020-04-26,true
+u1566,e143,Engineering Manager,2019-01-28,true
+u673,e245,Data Analyst,2018-03-01,true
+u990,e438,Director of Engineering,2021-12-08,false
+u1200,e160,Engineering Manager,2022-05-09,false
+u1528,e2,Senior Developer,2016-10-10,false
+u821,e251,Senior Developer,2015-07-22,true
+u1220,e497,DevOps Engineer,2020-06-27,false
+u1511,e262,Data Analyst,2021-11-03,true
+u421,e437,Business Analyst,2015-01-21,true
+u213,e25,UX Designer,2019-12-20,true
+u86,e187,Senior Developer,2023-01-15,false
+u1392,e93,Data Analyst,2020-01-20,true
+u525,e5,Product Owner,2021-05-06,false
+u461,e332,Tech Lead,2015-09-29,true
+u1391,e42,Engineering Manager,2023-01-28,false
+u1837,e456,Intern,2019-05-17,false
+u1776,e45,Tech Lead,2017-08-09,true
+u111,e291,Software Engineer,2017-04-13,false
+u1004,e285,Junior Developer,2023-12-15,true
+u903,e486,Tech Lead,2022-11-16,true
+u1092,e56,Tech Lead,2019-11-25,false
+u608,e486,Director of Engineering,2017-06-13,false
+u1124,e28,Director of Engineering,2016-09-26,false
+u1214,e422,Tech Lead,2022-05-07,true
+u455,e157,QA Engineer,2021-07-28,true
+u1538,e497,Software Engineer,2016-04-17,false
+u1856,e436,Software Engineer,2017-02-25,true
+u1296,e418,UX Designer,2021-05-11,true
+u1108,e330,Software Engineer,2017-06-13,true
+u952,e365,Engineering Manager,2021-04-15,true
+u1224,e451,CTO,2019-06-13,true
+u1079,e53,Intern,2018-04-21,true
+u971,e32,CTO,2019-08-19,false
+u806,e126,CTO,2016-11-22,true
+u1558,e139,QA Engineer,2017-11-12,true
+u1468,e435,Business Analyst,2022-10-23,true
+u1254,e70,QA Engineer,2019-02-17,true
+u1958,e408,Software Engineer,2021-11-09,true
+u1427,e228,Business Analyst,2020-03-03,true
+u936,e217,Tech Lead,2017-02-03,false
+u1048,e174,Data Analyst,2023-05-19,false
+u1527,e134,Intern,2024-12-14,true
+u381,e474,Tech Lead,2020-03-31,false
+u581,e31,Consultant,2016-06-16,true
+u1135,e36,CTO,2024-01-21,false
+u1227,e353,Senior Developer,2020-04-03,true
+u340,e32,Business Analyst,2016-04-17,true
+u1240,e76,Senior Developer,2024-12-01,true
+u1644,e379,Software Engineer,2016-03-14,false
+u946,e341,Intern,2021-07-24,false
+u1601,e32,Product Owner,2022-02-21,true
+u1800,e182,Senior Developer,2017-12-04,true
+u1278,e422,Tech Lead,2021-12-13,false
+u1455,e178,Tech Lead,2023-05-05,true
+u1088,e405,QA Engineer,2019-10-19,true
+u133,e76,Director of Engineering,2015-04-28,false
+u1402,e287,QA Engineer,2015-05-07,false
+u1159,e304,Intern,2022-08-16,true
+u980,e395,Intern,2015-06-22,false
+u1792,e2,Product Owner,2017-06-30,true
+u393,e79,Product Owner,2019-07-31,false
+u608,e305,Consultant,2015-02-20,true
+u1010,e366,Tech Lead,2020-10-22,false
+u258,e227,Director of Engineering,2015-07-05,true
+u478,e98,Intern,2023-06-21,true
+u908,e288,Business Analyst,2021-01-16,false
+u741,e98,Junior Developer,2022-04-16,false
+u1745,e477,DevOps Engineer,2019-09-25,false
+u530,e76,Junior Developer,2023-05-25,false
+u1820,e52,DevOps Engineer,2024-05-23,false
+u1793,e234,UX Designer,2015-05-02,true
+u721,e338,Tech Lead,2020-03-18,false
+u71,e155,DevOps Engineer,2023-12-26,true
+u1866,e416,QA Engineer,2019-11-13,false
+u1703,e95,Business Analyst,2020-08-13,false
+u939,e44,Tech Lead,2017-10-02,true
+u1370,e335,Senior Developer,2022-04-22,false
+u431,e351,Junior Developer,2019-03-15,true
+u1944,e415,CTO,2015-05-17,true
+u27,e358,Consultant,2019-07-18,false
+u1646,e111,UX Designer,2021-03-17,true
+u1982,e305,Intern,2020-06-26,false
+u765,e433,Tech Lead,2023-03-17,true
+u450,e40,Business Analyst,2018-06-22,false
+u773,e340,Director of Engineering,2017-08-18,false
+u1340,e13,DevOps Engineer,2020-11-18,true
+u1623,e278,UX Designer,2017-02-15,true
+u171,e356,Director of Engineering,2022-03-26,false
+u1223,e302,Consultant,2017-09-04,false
+u1636,e431,Business Analyst,2016-07-25,true
+u1219,e149,CTO,2024-05-02,true
+u96,e359,Director of Engineering,2024-09-07,false
+u1196,e291,Business Analyst,2023-10-17,false
+u41,e151,Tech Lead,2022-11-28,false
+u1985,e98,Director of Engineering,2016-11-09,true
+u1822,e282,Data Analyst,2019-08-03,true
+u1491,e10,Business Analyst,2019-07-24,true
+u141,e321,Intern,2019-11-30,true
+u270,e199,Senior Developer,2023-09-09,true
+u589,e239,Software Engineer,2022-06-06,false
+u943,e358,Junior Developer,2017-06-30,false
+u1700,e235,Software Engineer,2019-03-12,false
+u564,e254,Senior Developer,2022-11-16,false
+u420,e437,Consultant,2024-12-09,true
+u1835,e179,Consultant,2021-08-25,false
+u1027,e24,UX Designer,2017-11-05,true
+u1938,e83,CTO,2017-12-10,false
+u1057,e482,Data Analyst,2015-06-29,false
+u1275,e492,Consultant,2017-11-21,false
+u50,e463,Engineering Manager,2019-07-20,false
+u581,e417,Product Owner,2016-10-22,true
+u1133,e110,Business Analyst,2024-10-07,true
+u1933,e337,Intern,2023-07-02,true
+u1892,e485,Business Analyst,2018-05-30,false
+u1144,e21,Intern,2024-02-25,false
+u1352,e320,UX Designer,2018-04-03,false
+u779,e422,Intern,2021-01-09,true
+u1106,e380,Product Owner,2023-10-08,false
+u1772,e87,QA Engineer,2015-10-07,false
+u514,e319,DevOps Engineer,2020-05-27,false
+u1921,e483,Junior Developer,2017-01-07,true
+u1028,e121,Product Owner,2017-10-26,false
+u1776,e414,Junior Developer,2015-01-22,true
+u346,e102,Senior Developer,2021-03-13,true
+u302,e437,Business Analyst,2016-11-15,false
+u1476,e191,CTO,2015-09-21,false
+u1490,e180,UX Designer,2022-11-26,false
+u1167,e44,UX Designer,2019-12-11,false
+u312,e402,Consultant,2016-11-04,true
+u702,e440,Engineering Manager,2019-09-17,true
+u1683,e36,Tech Lead,2020-04-13,true
+u1886,e416,Tech Lead,2019-11-28,true
+u130,e234,Director of Engineering,2016-10-03,false
+u289,e116,DevOps Engineer,2016-09-21,true
+u1513,e460,QA Engineer,2016-03-02,false
+u1007,e342,UX Designer,2019-02-07,false
+u1075,e220,Tech Lead,2018-07-03,true
+u232,e445,Intern,2024-05-16,false
+u1429,e76,Director of Engineering,2023-01-31,true
+u484,e255,Director of Engineering,2022-09-05,true
+u591,e225,Intern,2018-08-02,false
+u664,e180,Business Analyst,2022-07-27,true
+u1095,e237,Business Analyst,2015-07-27,false
+u1789,e265,Senior Developer,2018-10-15,false
+u711,e455,Consultant,2024-12-30,true
+u471,e363,UX Designer,2022-09-08,true
+u239,e54,Engineering Manager,2022-11-23,false
+u1826,e289,Product Owner,2024-03-13,false
+u596,e137,Junior Developer,2023-07-31,true
+u1866,e394,Business Analyst,2016-11-27,true
+u1331,e81,Consultant,2018-01-29,false
+u585,e367,Junior Developer,2015-12-06,true
+u730,e381,Tech Lead,2020-09-28,false
+u414,e443,Director of Engineering,2015-12-25,true
+u941,e140,Software Engineer,2020-01-22,false
+u555,e119,Intern,2018-06-08,true
+u510,e303,Engineering Manager,2018-01-31,false
+u1322,e89,Senior Developer,2021-04-06,true
+u1069,e460,Business Analyst,2020-05-29,true
+u1255,e180,DevOps Engineer,2023-03-01,true
+u1985,e361,Tech Lead,2017-12-24,false
+u630,e349,QA Engineer,2023-12-18,true
+u663,e330,Product Owner,2020-10-12,true
+u1143,e315,QA Engineer,2016-04-15,true
+u1268,e71,Junior Developer,2024-05-20,true
+u1456,e274,Director of Engineering,2022-06-14,false
+u1986,e84,Senior Developer,2016-08-31,false
+u576,e345,Business Analyst,2017-03-01,false
+u1012,e90,DevOps Engineer,2024-12-29,false
+u120,e391,Engineering Manager,2016-05-27,false
+u1707,e20,Director of Engineering,2021-08-11,false
+u1792,e298,UX Designer,2021-11-28,false
+u1008,e240,Product Owner,2020-01-15,false
+u1822,e360,Tech Lead,2022-02-21,false
+u197,e296,Software Engineer,2020-11-08,false
+u703,e176,Junior Developer,2024-05-04,false
+u1935,e439,Product Owner,2024-07-30,true
+u1763,e360,Consultant,2023-10-28,false
+u1946,e481,Junior Developer,2020-11-29,true
+u939,e9,Software Engineer,2015-06-21,true
+u1785,e150,Product Owner,2023-07-31,true
+u195,e272,Engineering Manager,2015-10-23,false
+u1542,e348,QA Engineer,2016-11-02,false
+u1964,e402,CTO,2020-01-06,false
+u1952,e123,Engineering Manager,2017-01-15,true
+u934,e217,Junior Developer,2017-06-08,false
+u1925,e44,Consultant,2015-07-05,true
+u433,e162,QA Engineer,2022-11-07,true
+u1089,e141,UX Designer,2024-12-17,true
+u1776,e209,Product Owner,2023-11-18,true
+u1452,e300,Consultant,2021-11-06,true
+u1406,e400,CTO,2015-04-18,true
+u451,e375,QA Engineer,2023-04-13,true
+u901,e19,Junior Developer,2019-03-24,true
+u1514,e414,QA Engineer,2019-03-07,false
+u528,e497,Data Analyst,2021-02-03,true
+u1568,e80,Intern,2016-10-25,false
+u199,e370,Tech Lead,2018-09-17,true
+u13,e247,DevOps Engineer,2020-03-23,true
+u444,e490,Engineering Manager,2018-04-11,true
+u1697,e161,Consultant,2015-11-09,false
+u1567,e255,Tech Lead,2021-12-01,false
+u1557,e101,Tech Lead,2019-07-30,true
+u863,e420,Business Analyst,2023-08-05,false
+u678,e164,Business Analyst,2020-04-15,false
+u1077,e259,Consultant,2023-07-02,false
+u198,e91,UX Designer,2022-03-23,false
+u1539,e231,CTO,2019-05-09,true
+u1554,e108,QA Engineer,2019-12-04,false
+u139,e484,Software Engineer,2024-04-30,true
+u684,e148,DevOps Engineer,2022-07-30,false
+u758,e321,Director of Engineering,2024-12-30,false
+u1152,e325,Junior Developer,2017-12-02,true
+u1229,e273,Business Analyst,2017-05-11,true
+u1507,e187,QA Engineer,2018-07-23,true
+u1167,e151,Software Engineer,2017-09-07,true
+u511,e30,Tech Lead,2019-03-25,true
+u1419,e44,Director of Engineering,2024-05-14,false
+u1259,e44,QA Engineer,2020-02-29,false
+u1920,e229,Director of Engineering,2016-10-28,false
+u1805,e392,Director of Engineering,2023-01-24,true
+u1141,e175,Software Engineer,2015-04-06,true
+u1693,e197,Junior Developer,2024-05-01,false
+u340,e237,Software Engineer,2016-05-17,true
+u1517,e130,Intern,2019-02-01,false
+u1014,e357,Junior Developer,2018-12-17,false
+u1666,e362,CTO,2019-12-05,true
+u1802,e272,UX Designer,2016-08-30,true
+u491,e387,QA Engineer,2022-11-24,true
+u1469,e405,Product Owner,2018-06-01,true
+u1557,e128,Engineering Manager,2023-03-08,true
+u8,e86,Business Analyst,2021-07-25,true
+u526,e384,DevOps Engineer,2023-01-05,false
+u1895,e88,UX Designer,2018-01-10,false
+u836,e251,Data Analyst,2020-08-08,true
+u1465,e359,Engineering Manager,2021-04-24,false
+u1785,e262,QA Engineer,2022-02-27,true
+u1220,e133,Data Analyst,2017-08-09,false
+u1534,e219,Senior Developer,2023-03-16,true
+u930,e254,Software Engineer,2018-08-07,true
+u1312,e306,Intern,2020-06-16,true
+u1675,e208,Junior Developer,2017-05-18,false
+u73,e114,Product Owner,2020-09-09,true
+u1069,e334,Product Owner,2018-05-14,true
+u406,e17,Senior Developer,2019-01-01,true
+u1235,e69,Engineering Manager,2016-10-21,true
+u1651,e237,Engineering Manager,2021-02-07,false
+u253,e25,Junior Developer,2023-10-20,true
+u1333,e392,Data Analyst,2015-01-13,true
+u1924,e95,Product Owner,2023-12-19,false
+u459,e464,Data Analyst,2024-04-03,false
+u672,e370,DevOps Engineer,2020-06-18,false
+u1551,e288,DevOps Engineer,2022-12-06,false
+u772,e252,Business Analyst,2022-10-27,false
+u1224,e465,Data Analyst,2021-01-27,true
+u1311,e7,Data Analyst,2023-09-04,false
+u530,e114,Director of Engineering,2015-03-21,true
+u1798,e254,QA Engineer,2018-08-31,false
+u294,e37,Senior Developer,2024-12-06,false
+u414,e19,Business Analyst,2023-09-18,true
+u898,e96,Business Analyst,2016-12-16,false
+u290,e384,Software Engineer,2015-02-15,false
+u1294,e404,Tech Lead,2022-07-17,true
+u1850,e338,Engineering Manager,2019-09-22,false
+u1479,e238,Software Engineer,2023-03-19,false
+u160,e110,Business Analyst,2018-10-24,false
+u871,e119,UX Designer,2015-10-30,true
+u1758,e336,Intern,2016-08-20,true
+u973,e290,DevOps Engineer,2023-01-18,true
+u885,e75,Data Analyst,2016-10-20,false
+u483,e44,Intern,2018-11-24,true
+u1027,e42,UX Designer,2024-01-07,false
+u100,e327,CTO,2018-12-08,false
+u568,e284,Director of Engineering,2024-02-09,false
+u557,e250,Director of Engineering,2019-04-02,true
+u680,e22,QA Engineer,2024-04-28,false
+u1954,e94,Data Analyst,2018-11-30,false
+u217,e442,Software Engineer,2017-03-11,true
+u1613,e399,Tech Lead,2017-12-07,false
+u518,e195,Engineering Manager,2022-01-01,true
+u1383,e475,Senior Developer,2020-02-18,true
+u1055,e75,Intern,2020-12-22,false
+u678,e476,QA Engineer,2024-08-17,false
+u1118,e300,Director of Engineering,2023-11-26,false
+u1388,e377,CTO,2023-10-25,true
+u341,e438,Director of Engineering,2017-08-30,false
+u1942,e123,Director of Engineering,2019-07-28,true
+u890,e6,CTO,2020-12-02,true
+u1336,e202,Junior Developer,2018-03-29,false
+u1526,e19,Intern,2019-12-30,true
+u1860,e270,Product Owner,2019-09-21,false
+u46,e159,Senior Developer,2024-06-18,false
+u379,e238,Engineering Manager,2024-01-15,true
+u379,e252,Data Analyst,2016-05-19,true
+u1439,e485,Tech Lead,2021-12-25,true
+u1031,e493,Business Analyst,2018-05-14,false
+u1163,e499,Data Analyst,2020-10-10,false
+u610,e147,Product Owner,2023-02-12,true
+u1619,e68,Product Owner,2021-04-20,true
+u1687,e163,Engineering Manager,2021-03-27,true
+u477,e24,Engineering Manager,2015-07-24,true
+u501,e212,QA Engineer,2022-03-03,true
+u1654,e16,Engineering Manager,2021-03-30,true
+u1373,e103,UX Designer,2019-06-17,true
+u471,e498,DevOps Engineer,2021-02-11,true
+u1480,e193,Senior Developer,2020-04-10,false
+u1947,e225,QA Engineer,2018-06-21,true
+u1618,e87,Director of Engineering,2015-08-26,true
+u1571,e148,Director of Engineering,2019-01-18,false
+u568,e480,Intern,2015-05-14,false
+u1959,e471,CTO,2016-11-22,true
+u281,e148,Product Owner,2015-01-05,false
+u1667,e327,CTO,2024-03-17,false
+u223,e109,Software Engineer,2017-10-18,false
+u650,e64,Engineering Manager,2022-03-25,true
+u1240,e54,CTO,2023-11-22,true
+u1589,e154,Business Analyst,2018-03-15,true
+u1529,e230,Director of Engineering,2020-05-19,false
+u1816,e292,Senior Developer,2024-01-14,false
+u1228,e144,Director of Engineering,2024-12-03,false
+u496,e131,Intern,2023-10-13,true
+u34,e386,Consultant,2022-10-24,true
+u1250,e143,CTO,2015-01-25,true
+u519,e368,Senior Developer,2024-10-31,true
+u550,e487,QA Engineer,2016-08-19,false
+u359,e341,Director of Engineering,2024-11-28,false
+u1131,e424,QA Engineer,2016-04-05,true
+u164,e290,UX Designer,2015-10-31,false
+u809,e255,Data Analyst,2024-09-07,false
+u1715,e429,UX Designer,2015-12-06,false
+u1354,e15,Product Owner,2016-07-13,true
+u383,e184,Business Analyst,2023-01-16,false
+u932,e442,QA Engineer,2023-07-23,false
+u1647,e444,Senior Developer,2020-12-18,false
+u1987,e495,UX Designer,2015-12-18,false
+u339,e180,DevOps Engineer,2020-09-29,true
+u1727,e427,Business Analyst,2023-06-29,true
+u1649,e374,Junior Developer,2020-04-18,true
+u734,e233,Product Owner,2019-12-14,false
+u1214,e239,Director of Engineering,2019-10-31,true
+u1942,e374,DevOps Engineer,2021-12-06,false
+u586,e61,Junior Developer,2017-09-13,false
+u1181,e24,UX Designer,2019-05-08,false
+u1662,e405,UX Designer,2021-01-11,false
+u700,e217,Tech Lead,2020-08-14,true
+u463,e302,UX Designer,2016-12-20,true
+u534,e474,Product Owner,2018-02-18,false
+u1138,e360,Consultant,2018-01-19,true
+u1770,e294,Data Analyst,2024-08-01,false
+u50,e423,Software Engineer,2019-07-30,false
+u79,e180,Data Analyst,2024-12-19,true
+u1275,e48,Director of Engineering,2017-08-04,true
+u1543,e298,Tech Lead,2015-07-03,true
+u1199,e42,Tech Lead,2016-12-27,false
+u255,e255,Tech Lead,2023-11-01,false
+u427,e48,Product Owner,2018-09-11,false
+u44,e315,DevOps Engineer,2023-04-10,false
+u366,e395,Consultant,2017-10-13,true
+u1623,e285,Junior Developer,2017-08-11,false
+u993,e365,Senior Developer,2018-10-14,true
+u22,e482,Product Owner,2024-08-28,false
+u1957,e152,Junior Developer,2017-05-12,false
+u1182,e312,DevOps Engineer,2021-06-02,true
+u474,e434,Engineering Manager,2016-06-02,false
+u1888,e205,Director of Engineering,2019-11-18,false
+u1991,e79,Engineering Manager,2019-04-28,true
+u1550,e176,Tech Lead,2019-03-20,false
+u1404,e265,Product Owner,2021-07-13,false
+u466,e192,Senior Developer,2023-07-27,false
+u643,e287,Director of Engineering,2020-02-12,false
+u1979,e424,Senior Developer,2020-12-21,false
+u478,e226,Business Analyst,2018-03-19,true
+u1354,e308,Consultant,2016-01-01,false
+u1414,e339,Data Analyst,2022-11-20,true
+u502,e349,UX Designer,2021-12-22,true
+u749,e266,DevOps Engineer,2016-11-01,false
+u170,e32,Intern,2018-03-11,true
+u173,e180,Director of Engineering,2016-02-21,true
+u1635,e60,Software Engineer,2016-02-16,false
+u81,e170,Data Analyst,2023-03-15,false
+u900,e198,Intern,2024-05-17,true
+u1218,e485,Junior Developer,2018-05-26,true
+u1158,e170,UX Designer,2018-08-27,true
+u1260,e415,Senior Developer,2015-06-08,true
+u1518,e254,Junior Developer,2015-03-19,true
+u325,e118,Software Engineer,2020-09-21,true
+u459,e204,DevOps Engineer,2015-11-12,false
+u446,e303,Business Analyst,2021-02-25,false
+u1929,e464,UX Designer,2016-09-09,false
+u1157,e102,Junior Developer,2017-05-18,true
+u171,e294,DevOps Engineer,2022-06-06,false
+u163,e491,Junior Developer,2018-07-23,false
+u1823,e444,UX Designer,2017-12-02,true
+u1038,e376,QA Engineer,2023-02-06,true
+u1856,e259,Software Engineer,2017-02-06,true
+u1840,e143,Business Analyst,2022-05-07,true
+u1592,e411,Data Analyst,2023-06-24,false
+u1215,e243,Engineering Manager,2020-08-09,true
+u1155,e193,Business Analyst,2017-02-25,false
+u1226,e359,Senior Developer,2023-07-27,false
+u1248,e176,Business Analyst,2022-01-13,false
+u1496,e440,UX Designer,2022-07-16,true
+u441,e371,Director of Engineering,2024-04-19,false
+u183,e311,Junior Developer,2019-01-20,false
+u1751,e403,Engineering Manager,2015-02-25,true
+u1709,e147,Intern,2022-07-25,true
+u1375,e434,Junior Developer,2016-03-05,false
+u62,e52,Product Owner,2020-06-06,false
+u920,e227,CTO,2019-12-04,true
+u1743,e417,Intern,2016-03-31,true
+u1163,e452,Tech Lead,2023-07-09,true
+u798,e194,Consultant,2024-05-12,false
+u998,e97,UX Designer,2020-11-13,true
+u428,e239,Product Owner,2024-09-27,false
+u531,e370,QA Engineer,2016-05-13,true
+u1571,e141,DevOps Engineer,2020-02-01,true
+u1798,e414,Junior Developer,2021-10-30,true
+u457,e476,Consultant,2017-09-24,false
+u1549,e342,Data Analyst,2023-12-19,true
+u341,e154,CTO,2015-10-24,false
+u1031,e222,Software Engineer,2021-02-24,true
+u1740,e57,Intern,2023-05-10,false
+u594,e283,Data Analyst,2021-04-06,true
+u1455,e94,QA Engineer,2022-12-30,true
+u253,e251,Product Owner,2021-12-30,true
+u13,e239,QA Engineer,2016-02-17,true
+u1752,e229,Software Engineer,2018-05-23,true
+u199,e103,Senior Developer,2024-03-07,true
+u1380,e41,DevOps Engineer,2024-09-02,true
+u856,e54,Tech Lead,2017-09-12,true
+u1993,e248,Engineering Manager,2024-12-22,false
+u124,e149,QA Engineer,2016-04-21,false
+u676,e310,Intern,2022-02-03,false
+u1095,e214,Product Owner,2020-12-20,true
+u1403,e401,UX Designer,2021-07-19,false
+u385,e393,Data Analyst,2019-11-04,false
+u544,e29,Product Owner,2017-02-14,false
+u38,e49,Intern,2018-06-30,true
+u1077,e216,Consultant,2023-01-12,true
+u1310,e231,Data Analyst,2024-12-31,true
+u314,e269,Engineering Manager,2021-05-13,true
+u168,e314,Engineering Manager,2024-06-29,false
+u887,e292,Engineering Manager,2023-03-17,false
+u1218,e436,QA Engineer,2024-03-11,false
+u186,e354,Senior Developer,2018-04-13,true
+u387,e200,Intern,2017-09-08,true
+u40,e225,Senior Developer,2017-11-23,false
+u246,e264,Software Engineer,2015-11-23,true
+u704,e322,Product Owner,2024-08-08,false
+u1359,e175,CTO,2019-10-10,true
+u1864,e306,DevOps Engineer,2019-07-14,true
+u1842,e156,Business Analyst,2024-03-11,false
+u1771,e81,Director of Engineering,2021-09-18,true
+u1035,e153,QA Engineer,2024-03-15,true
+u161,e28,DevOps Engineer,2017-03-02,true
+u1743,e285,Engineering Manager,2022-05-16,true
+u1257,e55,Engineering Manager,2023-07-09,false
+u1495,e250,Director of Engineering,2017-04-16,true
+u241,e101,Director of Engineering,2022-01-15,true
+u760,e253,Product Owner,2024-12-07,true
+u189,e201,Software Engineer,2019-07-04,true
+u541,e234,UX Designer,2017-12-26,true
+u1726,e468,UX Designer,2020-12-22,false
+u1639,e413,QA Engineer,2019-08-27,false
+u1024,e96,Director of Engineering,2019-06-24,true
+u1745,e72,Engineering Manager,2016-10-15,true
+u1787,e241,QA Engineer,2018-10-31,false
+u1244,e117,Director of Engineering,2022-01-22,false
+u896,e36,Product Owner,2019-10-14,false
+u1106,e498,Business Analyst,2016-03-27,true
+u305,e77,Director of Engineering,2024-04-23,true
+u320,e481,Junior Developer,2019-02-28,true
+u161,e314,UX Designer,2015-10-03,false
+u1827,e423,Data Analyst,2023-09-10,true
+u1667,e171,Engineering Manager,2024-06-05,false
+u217,e384,Junior Developer,2023-03-20,true
+u475,e82,Software Engineer,2024-03-17,true
+u867,e126,Product Owner,2024-06-19,false
+u1587,e42,Data Analyst,2020-11-05,false
+u1513,e104,Engineering Manager,2024-07-24,true
+u59,e183,Product Owner,2015-01-09,true
+u488,e201,Intern,2020-02-21,false
+u591,e295,Director of Engineering,2021-06-26,false
+u1729,e287,Business Analyst,2016-09-15,true
+u511,e325,Tech Lead,2017-01-18,false
+u560,e452,QA Engineer,2018-07-03,true
+u359,e303,Product Owner,2019-11-01,false
+u966,e253,Senior Developer,2024-06-09,false
+u1089,e74,QA Engineer,2021-11-19,true
+u1624,e255,QA Engineer,2019-05-03,true
+u800,e148,CTO,2018-11-30,false
+u830,e13,CTO,2018-06-14,false
+u1848,e239,Tech Lead,2017-12-26,true
+u26,e191,Business Analyst,2019-11-15,false
+u1189,e171,UX Designer,2018-10-20,true
+u1426,e278,Director of Engineering,2015-11-19,true
+u132,e456,Senior Developer,2023-03-21,false
+u515,e101,Junior Developer,2016-11-03,true
+u91,e128,Tech Lead,2023-07-20,false
+u322,e147,Director of Engineering,2019-06-06,false
+u1253,e393,DevOps Engineer,2020-07-28,false
+u1802,e233,Junior Developer,2015-11-10,true
+u992,e482,Junior Developer,2018-03-19,false
+u861,e79,Product Owner,2021-04-09,true
+u802,e382,Data Analyst,2021-07-29,false
+u1757,e156,Junior Developer,2017-07-08,true
+u144,e396,Tech Lead,2023-04-05,true
+u1893,e375,CTO,2015-02-20,false
+u367,e382,Senior Developer,2018-07-16,true
+u698,e382,Senior Developer,2020-09-01,true
+u896,e144,Product Owner,2017-05-31,true
+u1154,e60,Product Owner,2019-03-28,false
+u1613,e434,Senior Developer,2016-12-06,false
+u955,e217,DevOps Engineer,2023-10-23,true
+u206,e40,QA Engineer,2022-09-11,true
+u5,e397,Consultant,2019-10-02,false
+u901,e21,Engineering Manager,2020-10-10,false
+u779,e136,Consultant,2022-03-26,true
+u1322,e19,QA Engineer,2022-01-18,false
+u1972,e69,DevOps Engineer,2023-08-21,true
+u401,e10,Engineering Manager,2020-12-06,false
+u1759,e382,Engineering Manager,2019-09-27,true
+u1044,e273,Product Owner,2019-06-21,true
+u1435,e213,Senior Developer,2022-03-15,false
+u546,e321,CTO,2024-04-27,true
+u1108,e93,QA Engineer,2021-12-04,true
+u656,e244,Director of Engineering,2024-08-11,true
+u749,e92,Junior Developer,2015-10-13,false
+u1174,e241,Intern,2022-10-23,false
+u717,e442,Tech Lead,2018-03-27,false
+u1873,e139,Engineering Manager,2021-02-15,true
+u755,e487,Data Analyst,2015-07-16,false
+u1099,e487,Business Analyst,2015-04-20,true
+u824,e76,Director of Engineering,2019-06-20,false
+u1052,e473,UX Designer,2018-07-03,false
+u1741,e261,Data Analyst,2019-04-25,true
+u174,e235,Software Engineer,2023-04-04,false
+u614,e335,Consultant,2018-08-15,true
+u299,e426,Tech Lead,2017-11-12,false
+u459,e444,Tech Lead,2018-08-06,true
+u1873,e157,Product Owner,2019-05-08,false
+u1415,e30,Business Analyst,2018-05-14,false
+u1279,e296,Software Engineer,2017-08-27,false
+u1497,e92,Product Owner,2023-02-11,false
+u11,e337,Data Analyst,2015-06-04,true
+u1357,e346,DevOps Engineer,2018-09-07,false
+u948,e53,CTO,2015-10-05,true
+u64,e394,Junior Developer,2018-07-30,false
+u1505,e485,Senior Developer,2021-02-04,true
+u1003,e233,CTO,2017-08-26,false
+u1234,e248,Engineering Manager,2016-03-24,true
+u1090,e14,QA Engineer,2020-09-20,true
+u1346,e471,Engineering Manager,2015-08-14,false
+u999,e159,CTO,2022-07-25,false
+u1148,e52,DevOps Engineer,2017-09-10,false
+u1352,e414,QA Engineer,2020-11-25,false
+u317,e182,Intern,2015-08-13,true
+u668,e182,UX Designer,2020-05-26,true
+u1789,e488,CTO,2019-03-25,true
+u1082,e121,Senior Developer,2020-05-12,false
+u726,e320,Software Engineer,2019-03-07,false
+u1746,e396,Product Owner,2021-04-17,false
+u1049,e5,Business Analyst,2022-04-30,true
+u508,e10,Tech Lead,2023-04-29,true
+u899,e496,Product Owner,2022-11-08,true
+u392,e4,Tech Lead,2018-10-09,false
+u1673,e219,Director of Engineering,2017-03-08,false
+u592,e56,Software Engineer,2023-07-24,true
+u510,e412,Consultant,2022-04-09,false
+u107,e437,Consultant,2018-05-11,true
+u610,e112,Junior Developer,2022-05-21,true
+u778,e382,UX Designer,2018-11-20,false
+u339,e308,Data Analyst,2023-07-02,true
+u1540,e178,CTO,2017-05-02,true
+u1342,e422,Director of Engineering,2016-06-09,true
+u1521,e422,CTO,2020-06-02,false
+u1748,e331,Intern,2023-02-25,false
+u1523,e161,Engineering Manager,2017-08-26,false
+u350,e238,CTO,2019-11-05,true
+u718,e112,Consultant,2024-03-30,true
+u586,e149,Director of Engineering,2024-04-26,true
+u448,e365,Data Analyst,2019-03-28,true
+u1191,e253,Engineering Manager,2018-07-31,false
+u114,e259,Junior Developer,2019-05-22,false
+u1097,e492,Engineering Manager,2019-12-21,true
+u736,e24,Junior Developer,2022-06-30,true
+u633,e376,Engineering Manager,2018-10-11,false
+u304,e364,Product Owner,2016-01-17,false
+u268,e10,Consultant,2018-04-07,true
+u975,e406,Product Owner,2021-07-13,false
+u1782,e233,Junior Developer,2022-07-06,true
+u313,e348,Consultant,2016-03-06,true
+u301,e450,Engineering Manager,2024-03-14,true
+u1169,e20,UX Designer,2020-06-11,true
+u1789,e211,Director of Engineering,2023-05-22,true
+u1889,e200,Business Analyst,2018-11-15,false
+u1859,e331,DevOps Engineer,2016-08-01,false
+u588,e56,Product Owner,2023-12-25,true
+u1470,e63,Senior Developer,2024-09-03,false
+u667,e389,Tech Lead,2015-10-13,true
+u498,e361,Software Engineer,2016-12-19,true
+u1764,e237,Software Engineer,2019-07-10,true
+u195,e226,Junior Developer,2023-08-29,false
+u697,e384,Engineering Manager,2019-04-21,true
+u1385,e245,DevOps Engineer,2018-01-07,false
+u1405,e299,Director of Engineering,2020-02-11,false
+u411,e380,Consultant,2020-08-11,false
+u1781,e252,UX Designer,2020-04-15,true
+u182,e279,Intern,2018-07-11,true
+u509,e426,Senior Developer,2020-02-08,false
+u670,e74,Tech Lead,2024-10-08,true
+u723,e261,Junior Developer,2019-08-20,false
+u272,e472,Tech Lead,2018-04-07,false
+u727,e20,Intern,2015-07-22,false
+u51,e462,Tech Lead,2015-03-21,true
+u302,e459,Data Analyst,2023-11-17,false
+u524,e490,Intern,2016-04-14,false
+u673,e1,CTO,2017-10-24,true
+u336,e150,Business Analyst,2023-11-05,true
+u551,e0,Product Owner,2024-06-30,true
+u1813,e44,Junior Developer,2018-09-07,false
+u1285,e480,Engineering Manager,2017-01-06,false
+u1754,e225,CTO,2015-10-23,false
+u1481,e203,Engineering Manager,2021-08-19,true
+u1475,e359,Business Analyst,2016-04-28,false
+u228,e43,Tech Lead,2017-10-01,false
+u835,e431,DevOps Engineer,2018-12-31,false
+u1948,e460,QA Engineer,2017-11-03,false
+u1191,e390,DevOps Engineer,2015-08-19,false
+u201,e234,Product Owner,2017-08-22,true
+u1880,e210,CTO,2021-02-21,true
+u438,e488,UX Designer,2022-03-28,true
+u577,e348,Junior Developer,2019-01-07,true
+u681,e26,CTO,2020-06-05,true
+u1138,e173,QA Engineer,2022-07-22,true
+u182,e419,UX Designer,2016-07-25,true
+u1373,e339,Data Analyst,2017-10-09,false
+u214,e19,Software Engineer,2018-12-21,false
+u752,e303,Product Owner,2024-11-13,true
+u987,e81,Consultant,2022-10-06,false
+u949,e411,Tech Lead,2016-05-21,false
+u1405,e91,UX Designer,2018-05-18,false
+u1198,e260,Tech Lead,2023-11-19,true
+u1632,e13,QA Engineer,2023-09-02,true
+u921,e194,Data Analyst,2021-01-25,true
+u560,e198,Consultant,2022-04-30,false
+u832,e371,Consultant,2016-07-23,true
+u1286,e439,Director of Engineering,2022-12-12,false
+u735,e312,Consultant,2016-02-11,true
+u567,e144,Intern,2017-08-16,true
+u379,e116,Senior Developer,2024-11-02,false
+u627,e408,CTO,2022-07-26,false
+u590,e283,Intern,2022-04-08,true
+u776,e396,UX Designer,2023-11-21,false
+u72,e159,DevOps Engineer,2020-07-18,true
+u1824,e386,Junior Developer,2020-03-05,false
+u1403,e88,Engineering Manager,2022-02-06,true
+u915,e40,Intern,2016-01-01,true
+u830,e421,Intern,2023-05-10,false
+u180,e294,DevOps Engineer,2020-12-17,false
+u1641,e322,Director of Engineering,2016-11-03,false
+u46,e474,Data Analyst,2020-11-19,true
+u1086,e331,Software Engineer,2018-05-01,true
+u149,e381,Junior Developer,2015-01-11,true
+u1705,e306,UX Designer,2018-05-13,true
+u282,e84,DevOps Engineer,2022-01-19,false
+u1617,e429,Junior Developer,2024-03-26,false
+u866,e199,Intern,2019-12-13,true
+u253,e124,Senior Developer,2019-05-13,false
+u602,e383,DevOps Engineer,2021-04-27,true
+u1711,e386,Intern,2024-05-03,true
+u1186,e180,Business Analyst,2021-02-25,false
+u976,e116,Engineering Manager,2018-08-20,true
+u1386,e100,UX Designer,2019-10-06,true
+u627,e395,Business Analyst,2018-01-21,false
+u1057,e451,Software Engineer,2024-04-09,false
+u934,e145,Senior Developer,2020-02-29,true
+u728,e134,UX Designer,2015-01-17,true
+u1024,e487,Junior Developer,2023-02-26,true
+u150,e189,CTO,2022-08-03,false
+u982,e250,Product Owner,2023-09-11,false
+u1653,e210,Intern,2019-12-09,false
+u286,e463,Software Engineer,2018-08-24,false
+u88,e499,QA Engineer,2021-01-17,true
+u356,e485,Software Engineer,2022-04-23,true
+u1090,e214,Consultant,2015-03-29,false
+u1075,e228,Consultant,2024-03-26,true
+u1935,e33,Intern,2018-10-17,false
+u1380,e314,Engineering Manager,2022-06-30,true
+u1516,e75,Director of Engineering,2020-08-13,false
+u27,e285,Intern,2021-07-19,true
+u1161,e150,Business Analyst,2022-03-28,true
+u1177,e473,Senior Developer,2023-10-16,true
+u1727,e225,Product Owner,2024-01-19,false
+u274,e342,Director of Engineering,2018-04-05,false
+u166,e363,Product Owner,2022-04-03,true
+u1738,e473,Director of Engineering,2021-04-30,false
+u1250,e99,Tech Lead,2015-07-02,true
+u783,e331,Junior Developer,2023-08-10,true
+u366,e160,Business Analyst,2017-06-07,true
+u1492,e30,Data Analyst,2017-02-11,false
+u1353,e173,Junior Developer,2018-11-21,true
+u775,e210,Junior Developer,2018-04-04,true
+u1748,e166,Software Engineer,2017-10-03,false
+u1401,e298,Consultant,2019-02-18,false
+u118,e178,Consultant,2019-04-25,true
+u733,e329,Business Analyst,2017-09-23,true
+u867,e342,Software Engineer,2022-08-25,true
+u522,e401,Senior Developer,2023-05-17,true
+u1800,e343,Product Owner,2019-04-19,false
+u1252,e412,Engineering Manager,2015-02-01,false
+u1196,e34,Software Engineer,2016-06-13,true
+u983,e362,Product Owner,2019-02-12,true
+u1101,e446,Software Engineer,2024-07-09,false
+u692,e292,Intern,2017-11-20,false
+u635,e3,Junior Developer,2022-02-02,true
+u1479,e162,Data Analyst,2018-09-26,true
+u532,e480,Data Analyst,2024-06-01,true
+u1497,e82,UX Designer,2015-01-12,false
+u553,e463,QA Engineer,2020-02-29,false
+u1219,e167,CTO,2020-07-15,false
+u903,e193,Director of Engineering,2018-08-30,true
+u746,e101,QA Engineer,2020-09-19,true
+u1046,e170,Engineering Manager,2020-02-22,false
+u1793,e475,Tech Lead,2020-09-17,true
+u1345,e366,Data Analyst,2022-06-24,true
+u608,e132,Junior Developer,2018-03-29,true
+u152,e115,Director of Engineering,2023-04-13,false
+u157,e309,DevOps Engineer,2020-10-06,false
+u1637,e298,Business Analyst,2021-05-14,true
+u986,e155,Senior Developer,2024-06-05,false
+u938,e183,Junior Developer,2023-12-28,true
+u1741,e451,Consultant,2019-04-02,false
+u273,e444,Product Owner,2020-04-21,false
+u1153,e195,CTO,2017-03-01,false
+u1177,e311,Tech Lead,2017-10-15,false
+u612,e4,UX Designer,2016-11-07,true
+u1041,e431,Engineering Manager,2023-05-26,false
+u1364,e220,CTO,2019-09-21,false
+u1502,e343,Consultant,2023-07-28,false
+u1557,e416,Senior Developer,2017-07-15,false
+u466,e334,Director of Engineering,2018-05-17,true
+u1935,e420,QA Engineer,2019-11-25,true
+u574,e289,Software Engineer,2015-02-05,false
+u1557,e291,Senior Developer,2020-07-22,false
+u1853,e227,Tech Lead,2024-04-20,false
+u1572,e97,Engineering Manager,2016-09-09,true
+u1198,e283,Senior Developer,2023-01-08,false
+u730,e270,Software Engineer,2020-05-06,false
+u1276,e24,Senior Developer,2024-03-19,false
+u509,e188,DevOps Engineer,2017-05-22,false
+u628,e293,Tech Lead,2020-04-22,false
+u696,e290,Product Owner,2020-01-14,false
+u983,e157,Junior Developer,2024-11-05,false
+u673,e452,CTO,2023-12-23,true
+u801,e462,Senior Developer,2018-11-28,false
+u1137,e174,DevOps Engineer,2016-12-23,false
+u312,e41,DevOps Engineer,2016-02-23,true
+u1443,e44,Data Analyst,2018-08-03,false
+u1313,e411,Software Engineer,2021-09-04,true
+u757,e83,Intern,2022-08-07,false
+u10,e471,Senior Developer,2024-03-25,true
+u1217,e5,Engineering Manager,2015-10-07,false
+u1561,e16,Data Analyst,2016-07-09,false
+u347,e14,Software Engineer,2020-06-04,false
+u760,e402,Software Engineer,2022-10-26,false
+u1621,e132,Engineering Manager,2018-04-21,true
+u1820,e432,Engineering Manager,2021-08-12,false
+u881,e368,Engineering Manager,2018-06-28,false
+u775,e103,DevOps Engineer,2018-05-07,false
+u815,e305,Director of Engineering,2023-03-09,true
+u617,e446,UX Designer,2015-09-11,true
+u1510,e91,Data Analyst,2023-08-05,true
+u1377,e379,Junior Developer,2023-05-18,true
+u1070,e431,Junior Developer,2019-07-22,false
+u812,e71,Product Owner,2015-03-11,true
+u1633,e69,Intern,2023-06-10,true
+u1280,e303,Consultant,2022-09-26,true
+u582,e479,Software Engineer,2016-12-30,true
+u369,e156,Senior Developer,2021-08-02,false
+u1113,e355,Product Owner,2019-08-29,false
+u458,e68,Product Owner,2018-10-26,false
+u433,e285,DevOps Engineer,2019-03-18,true
+u457,e81,QA Engineer,2024-01-02,false
+u126,e252,DevOps Engineer,2022-06-27,true
+u824,e271,Product Owner,2019-12-12,true
+u123,e230,Junior Developer,2019-01-12,false
+u799,e339,Intern,2022-09-13,true
+u1318,e24,QA Engineer,2024-11-18,false
+u1924,e446,CTO,2016-09-20,false
+u1550,e99,Engineering Manager,2022-06-25,true
+u6,e470,Tech Lead,2024-02-04,false
+u276,e492,Director of Engineering,2024-03-11,false
+u89,e309,QA Engineer,2016-01-23,false
+u1710,e237,Engineering Manager,2015-09-30,true
+u296,e459,Intern,2015-07-22,true
+u77,e117,Tech Lead,2023-10-14,true
+u546,e15,Senior Developer,2023-12-19,false
+u1751,e268,CTO,2019-01-12,true
+u1099,e178,Tech Lead,2018-09-21,true
+u1181,e81,Consultant,2022-12-07,false
+u1196,e77,Business Analyst,2020-12-21,false
+u1928,e401,Junior Developer,2015-01-16,false
+u1461,e184,Intern,2022-05-23,true
+u307,e33,UX Designer,2018-02-11,true
+u60,e498,Software Engineer,2021-06-29,false
+u1841,e101,Software Engineer,2019-09-12,false
+u1952,e400,Business Analyst,2022-05-08,true
+u93,e411,Junior Developer,2017-08-08,false
+u803,e43,QA Engineer,2015-01-30,true
+u1648,e362,Data Analyst,2020-01-20,false
+u1053,e219,DevOps Engineer,2022-05-26,false
+u1193,e100,Junior Developer,2017-05-07,true
+u258,e77,Senior Developer,2015-07-28,true
+u1123,e259,Engineering Manager,2018-05-06,true
+u975,e238,UX Designer,2021-10-11,false
+u1576,e319,Director of Engineering,2020-07-24,true
+u1867,e211,Business Analyst,2017-11-21,true
+u220,e362,QA Engineer,2015-11-10,false
+u1763,e308,Consultant,2020-10-31,true
+u292,e129,Software Engineer,2015-06-01,true
+u814,e263,Consultant,2016-05-11,true
+u832,e121,UX Designer,2022-10-02,false
+u634,e330,Senior Developer,2015-07-26,true
+u277,e367,Senior Developer,2016-05-16,true
+u700,e236,DevOps Engineer,2020-05-04,false
+u294,e370,Engineering Manager,2015-02-11,true
+u1317,e221,Senior Developer,2016-12-21,true
+u1414,e143,QA Engineer,2016-07-12,false
+u1709,e41,Software Engineer,2016-02-20,true
+u1899,e270,Senior Developer,2018-07-09,false
+u1079,e39,Tech Lead,2022-12-10,false
+u5,e446,Data Analyst,2020-02-13,true
+u1610,e183,Senior Developer,2021-12-07,true
+u549,e310,Software Engineer,2015-02-26,true
+u832,e267,QA Engineer,2015-03-09,true
+u1469,e352,Senior Developer,2020-04-26,true
+u1792,e20,Junior Developer,2020-06-06,false
+u240,e197,Director of Engineering,2015-08-10,false
+u1087,e228,Consultant,2021-10-16,true
+u872,e302,Product Owner,2023-02-08,false
+u951,e150,Tech Lead,2021-12-12,false
+u1092,e72,DevOps Engineer,2019-03-09,false
+u208,e249,QA Engineer,2017-01-28,false
+u40,e493,Software Engineer,2020-09-28,true
+u1630,e443,Product Owner,2023-05-10,true
+u530,e231,QA Engineer,2024-06-14,false
+u488,e464,Software Engineer,2018-08-14,false
+u1089,e181,Product Owner,2023-04-09,true
+u1710,e241,DevOps Engineer,2018-12-07,true
+u1295,e172,Data Analyst,2017-04-24,false
+u341,e95,DevOps Engineer,2017-09-15,false
+u548,e341,Tech Lead,2018-04-26,false
+u1348,e345,Engineering Manager,2015-10-08,true
+u1977,e290,CTO,2020-02-29,false
+u1241,e480,DevOps Engineer,2020-06-18,true
+u279,e162,QA Engineer,2017-11-08,true
+u1006,e13,Tech Lead,2019-11-13,true
+u709,e469,Director of Engineering,2016-11-13,false
+u1363,e240,DevOps Engineer,2016-06-20,false
+u1064,e326,UX Designer,2015-02-10,true
+u111,e319,DevOps Engineer,2021-03-31,true
+u25,e204,Product Owner,2022-11-25,false
+u1589,e61,QA Engineer,2023-10-11,false
+u988,e180,Engineering Manager,2019-07-28,false
+u1851,e302,Tech Lead,2015-10-08,false
+u1530,e345,Director of Engineering,2024-10-16,true
+u1819,e23,Tech Lead,2016-10-19,false
+u480,e63,Tech Lead,2021-04-16,true
+u1347,e441,QA Engineer,2015-05-25,true
+u1502,e409,Junior Developer,2021-11-29,true
+u492,e490,Intern,2021-10-11,false
+u429,e103,CTO,2021-02-03,true
+u960,e410,DevOps Engineer,2018-10-06,true
+u229,e309,Director of Engineering,2019-02-12,false
+u659,e479,Senior Developer,2016-10-02,false
+u609,e482,Data Analyst,2020-11-13,false
+u259,e348,Data Analyst,2024-03-26,false
+u460,e180,Product Owner,2019-05-23,true
+u364,e253,Director of Engineering,2015-07-23,true
+u1070,e436,Junior Developer,2022-01-12,false
+u389,e449,DevOps Engineer,2020-05-24,false
+u329,e138,Engineering Manager,2023-06-26,false
+u424,e229,QA Engineer,2015-02-17,false
+u199,e23,Engineering Manager,2015-07-23,true
+u1912,e373,Tech Lead,2024-09-17,true
+u726,e385,Tech Lead,2016-04-17,false
+u86,e410,Intern,2016-01-17,true
+u1508,e60,Software Engineer,2024-12-01,false
+u1260,e353,Consultant,2021-03-19,false
+u28,e279,Director of Engineering,2015-12-12,true
+u262,e414,Director of Engineering,2018-04-22,false
+u1117,e224,DevOps Engineer,2015-05-27,true
+u299,e255,CTO,2015-11-28,true
+u742,e219,Data Analyst,2019-11-10,true
+u1186,e303,Intern,2015-08-29,false
+u1547,e124,Engineering Manager,2023-09-26,false
+u1683,e391,DevOps Engineer,2023-05-22,false
+u41,e182,Director of Engineering,2024-03-01,false
+u1722,e478,Intern,2023-06-05,false
+u500,e460,Software Engineer,2024-11-26,true
+u464,e181,Director of Engineering,2017-09-24,false
+u1870,e300,Junior Developer,2023-04-01,true
+u256,e27,Software Engineer,2019-03-04,false
+u1827,e491,Data Analyst,2019-03-30,true
+u1243,e331,Senior Developer,2018-10-03,false
+u1538,e480,Director of Engineering,2018-06-09,false
+u517,e332,Data Analyst,2022-01-03,true
+u432,e2,Product Owner,2019-01-08,true
+u60,e464,Product Owner,2023-01-11,false
+u1695,e390,Business Analyst,2017-02-24,true
+u108,e171,DevOps Engineer,2023-03-16,true
+u866,e172,Product Owner,2021-04-21,false
+u815,e47,Intern,2018-06-22,true
+u1968,e113,DevOps Engineer,2022-11-29,true
+u256,e287,Product Owner,2015-06-26,false
+u1459,e428,Data Analyst,2018-11-12,true
+u1008,e275,Software Engineer,2020-06-05,true
+u16,e320,Product Owner,2022-01-14,false
+u1796,e110,Product Owner,2016-01-01,false
+u1653,e271,Senior Developer,2024-02-10,false
+u1143,e144,Consultant,2015-07-02,true
+u663,e116,Junior Developer,2024-02-21,false
+u792,e451,Director of Engineering,2017-05-13,false
+u101,e387,Director of Engineering,2017-06-17,true
+u1685,e454,UX Designer,2018-06-10,false
+u263,e36,Consultant,2022-03-13,true
+u89,e421,UX Designer,2017-08-23,true
+u1084,e294,CTO,2015-02-24,true
+u1915,e449,Junior Developer,2016-02-20,false
+u1065,e322,Senior Developer,2017-09-21,true
+u1428,e411,UX Designer,2022-06-07,true
+u1081,e147,Tech Lead,2017-04-20,true
+u650,e267,Data Analyst,2021-04-01,true
+u74,e258,Engineering Manager,2018-12-21,false
+u842,e356,Engineering Manager,2016-06-26,false
+u1858,e355,UX Designer,2022-02-15,false
+u540,e494,CTO,2019-11-11,true
+u1394,e460,Director of Engineering,2019-04-19,true
+u566,e67,UX Designer,2016-06-11,false
+u1918,e22,Tech Lead,2020-06-15,true
+u1340,e243,Director of Engineering,2018-09-14,true
+u533,e74,Consultant,2018-04-10,false
+u1622,e50,Tech Lead,2021-11-27,true
+u291,e265,Software Engineer,2021-03-22,false
+u1839,e244,Junior Developer,2019-06-17,false
+u1883,e75,Consultant,2018-11-25,true
+u1530,e80,UX Designer,2017-09-16,false
+u1976,e416,DevOps Engineer,2024-10-02,true
+u124,e5,Product Owner,2015-04-25,false
+u1956,e249,Junior Developer,2016-08-13,true
+u1796,e107,Software Engineer,2023-12-31,false
+u1712,e271,Intern,2020-10-07,false
+u382,e224,DevOps Engineer,2022-03-07,true
+u1140,e130,Tech Lead,2017-08-07,true
+u800,e316,Senior Developer,2024-03-26,true
+u504,e372,DevOps Engineer,2017-09-07,true
+u101,e236,Business Analyst,2018-11-14,false
+u621,e70,QA Engineer,2018-07-07,false
+u759,e236,UX Designer,2016-12-25,true
+u1271,e359,QA Engineer,2023-06-06,true
+u229,e131,CTO,2015-04-12,true
+u111,e5,Data Analyst,2024-03-11,false
+u1588,e442,Junior Developer,2021-02-14,false
+u1553,e33,CTO,2016-03-15,false
+u1958,e496,Junior Developer,2019-09-09,false
+u1439,e442,CTO,2024-11-23,true
+u770,e21,Engineering Manager,2015-09-20,true
+u1462,e481,CTO,2018-05-27,false
+u1977,e442,Consultant,2022-11-16,true
+u1556,e406,Consultant,2023-12-01,false
+u1719,e393,Junior Developer,2020-06-12,false
+u1123,e29,QA Engineer,2018-06-12,false
+u84,e375,Junior Developer,2019-02-04,true
+u1705,e157,Product Owner,2015-09-10,false
+u1705,e38,CTO,2022-12-22,false
+u819,e247,Intern,2015-07-09,true
+u239,e248,CTO,2016-06-02,false
+u1528,e424,Software Engineer,2018-06-09,true
+u1578,e106,Tech Lead,2021-10-28,false
+u811,e106,Engineering Manager,2017-05-27,true
+u737,e16,Business Analyst,2018-12-22,false
+u1167,e416,Product Owner,2017-12-30,true
+u1722,e173,Senior Developer,2018-01-20,true
+u203,e437,Intern,2020-07-06,false
+u166,e442,Tech Lead,2016-10-02,false
+u711,e460,Engineering Manager,2016-02-07,true
+u898,e124,Business Analyst,2015-12-03,false
+u1974,e467,Senior Developer,2018-09-23,false
+u1777,e322,Tech Lead,2015-08-30,true
+u628,e195,Senior Developer,2016-02-15,false
+u716,e325,DevOps Engineer,2020-01-27,true
+u1647,e411,DevOps Engineer,2024-04-11,true
+u1886,e234,Data Analyst,2018-10-17,false
+u186,e269,Data Analyst,2015-02-07,true
+u1806,e33,Business Analyst,2021-01-16,true
+u1509,e202,Engineering Manager,2016-09-11,false
+u825,e32,DevOps Engineer,2021-05-25,true
+u254,e219,Product Owner,2020-07-16,true
+u718,e447,Engineering Manager,2019-05-24,true
+u549,e36,Consultant,2023-03-18,false
+u542,e175,Consultant,2020-07-25,false
+u326,e165,Intern,2020-04-11,true
+u995,e80,UX Designer,2019-03-29,true
+u1734,e105,CTO,2020-08-13,false
+u554,e492,CTO,2019-10-08,true
+u471,e352,QA Engineer,2015-03-18,false
+u1469,e209,Business Analyst,2018-03-02,true
+u386,e386,Software Engineer,2020-04-28,true
+u414,e449,DevOps Engineer,2024-01-01,true
+u713,e196,Data Analyst,2016-12-12,true
+u700,e457,UX Designer,2019-04-16,true
+u1500,e303,Consultant,2017-01-20,false
+u1918,e325,Senior Developer,2016-07-04,false
+u95,e344,Intern,2019-08-08,false
+u299,e359,Senior Developer,2020-03-14,true
+u957,e198,UX Designer,2017-08-15,false
+u495,e37,Intern,2020-03-30,false
+u829,e342,Product Owner,2018-10-18,false
+u358,e27,DevOps Engineer,2021-01-30,true
+u1566,e92,Tech Lead,2024-11-07,true
+u782,e53,Product Owner,2022-04-28,false
+u1965,e160,DevOps Engineer,2023-02-05,true
+u707,e297,QA Engineer,2024-03-30,true
+u1774,e210,Engineering Manager,2017-02-18,true
+u1373,e186,Tech Lead,2019-06-13,true
+u430,e79,Senior Developer,2021-07-16,true
+u509,e147,Software Engineer,2018-02-04,false
+u1538,e343,UX Designer,2021-08-05,true
+u595,e243,Engineering Manager,2018-02-19,true
+u1760,e130,Software Engineer,2019-11-27,false
+u83,e455,Junior Developer,2024-10-18,false
+u379,e220,Engineering Manager,2019-04-29,false
+u1,e126,Software Engineer,2020-01-25,false
+u48,e413,CTO,2021-03-18,true
+u1682,e456,Software Engineer,2018-04-25,true
+u135,e26,Engineering Manager,2016-06-05,false
+u1147,e340,Data Analyst,2022-10-02,true
+u879,e311,Senior Developer,2022-01-07,false
+u1944,e52,DevOps Engineer,2016-02-07,true
+u1563,e94,Senior Developer,2021-11-05,true
+u1565,e432,DevOps Engineer,2015-10-15,true
+u672,e101,CTO,2019-09-16,false
+u1144,e172,DevOps Engineer,2015-02-12,false
+u1410,e35,Tech Lead,2019-03-23,true
+u759,e126,DevOps Engineer,2019-10-07,false
+u1532,e75,DevOps Engineer,2020-01-31,true
+u1727,e37,Senior Developer,2019-02-19,false
+u1006,e396,Intern,2017-03-20,false
+u925,e242,DevOps Engineer,2016-03-24,true
+u307,e127,Senior Developer,2016-06-14,false
+u1077,e348,Junior Developer,2018-09-25,false
+u1974,e192,DevOps Engineer,2021-05-19,false
+u1606,e425,Tech Lead,2018-05-05,true
+u1309,e130,Director of Engineering,2024-04-17,true
+u896,e71,Junior Developer,2015-05-18,true
+u753,e323,Intern,2019-11-09,false
+u562,e497,Consultant,2016-11-12,false
+u1364,e434,Director of Engineering,2021-07-15,false
+u447,e258,Product Owner,2022-09-06,true
+u1541,e54,Intern,2019-01-27,true
+u1447,e6,Senior Developer,2017-12-17,true
+u700,e24,Software Engineer,2021-03-12,true
+u716,e251,Director of Engineering,2021-04-01,false
+u122,e200,Tech Lead,2016-04-04,false
+u488,e321,Product Owner,2015-05-24,true
+u1568,e23,DevOps Engineer,2020-02-25,true
+u388,e218,Tech Lead,2017-10-12,false
+u1718,e7,Director of Engineering,2021-01-08,true
+u581,e217,QA Engineer,2019-06-08,false
+u657,e133,Software Engineer,2024-08-06,true
+u571,e401,Product Owner,2019-10-28,true
+u485,e65,Senior Developer,2020-04-22,true
+u202,e109,Business Analyst,2015-11-23,true
+u901,e276,Business Analyst,2015-06-07,false
+u102,e492,DevOps Engineer,2023-07-24,false
+u1094,e310,Tech Lead,2020-08-07,false
+u712,e197,Data Analyst,2016-05-14,true
+u991,e43,Senior Developer,2023-06-25,true
+u1277,e333,Tech Lead,2018-05-06,false
+u1808,e461,Intern,2016-03-24,false
+u622,e407,Business Analyst,2019-12-07,true
+u1336,e304,Consultant,2023-01-03,true
+u1080,e498,Consultant,2023-07-04,false
+u777,e251,Software Engineer,2024-01-19,true
+u839,e88,Data Analyst,2016-07-30,false
+u1605,e355,Product Owner,2018-06-25,true
+u1574,e137,DevOps Engineer,2022-08-05,true
+u883,e441,Intern,2023-12-24,true
+u1959,e79,Consultant,2017-06-11,true
+u567,e190,Engineering Manager,2017-01-09,true
+u1099,e212,Software Engineer,2017-06-16,false
+u1930,e307,Consultant,2020-01-01,false
+u1468,e319,Product Owner,2024-12-28,true
+u517,e338,Junior Developer,2020-12-26,false
+u579,e442,Software Engineer,2024-09-01,true
+u802,e259,Consultant,2019-07-01,false
+u1645,e42,DevOps Engineer,2018-03-25,false
+u470,e336,Director of Engineering,2017-11-29,true
+u1925,e281,QA Engineer,2018-11-06,false
+u327,e390,Consultant,2018-01-16,false
+u1074,e117,QA Engineer,2015-12-19,true
+u415,e312,Intern,2016-10-29,false
+u1461,e380,QA Engineer,2016-04-17,false
+u78,e367,Data Analyst,2018-02-19,false
+u1948,e454,Tech Lead,2016-08-08,false
+u1881,e220,Business Analyst,2021-01-20,false
+u1984,e329,Business Analyst,2021-07-26,false
+u1327,e126,Intern,2024-03-03,true
+u1028,e432,Data Analyst,2019-10-19,true
+u734,e40,Senior Developer,2022-07-23,true
+u913,e197,Tech Lead,2024-05-21,true
+u581,e471,DevOps Engineer,2018-01-28,false
+u531,e15,Product Owner,2020-08-27,false
+u641,e216,Engineering Manager,2023-06-23,false
+u1342,e111,Software Engineer,2018-11-03,false
+u1128,e189,Data Analyst,2018-06-27,true
+u1693,e417,Data Analyst,2024-10-11,false
+u718,e29,Data Analyst,2016-09-21,false
+u310,e206,CTO,2024-12-28,false
+u625,e266,Intern,2018-01-22,true
+u1628,e230,Product Owner,2023-12-29,true
+u394,e227,Junior Developer,2023-12-25,false
+u305,e145,Data Analyst,2021-12-31,false
+u1875,e56,Engineering Manager,2023-06-26,false
+u1203,e473,Business Analyst,2017-08-30,false
+u575,e25,Product Owner,2020-06-04,false
+u597,e40,DevOps Engineer,2020-06-24,false
+u972,e151,Software Engineer,2023-07-19,false
+u939,e0,Junior Developer,2021-01-13,true
+u1801,e422,QA Engineer,2023-11-03,false
+u1077,e296,DevOps Engineer,2020-12-06,false
+u1595,e73,QA Engineer,2022-08-04,true
+u14,e457,CTO,2020-07-28,false
+u887,e398,QA Engineer,2019-01-17,false
+u1140,e413,Business Analyst,2016-12-09,true
+u1611,e267,UX Designer,2015-11-10,true
+u550,e92,Director of Engineering,2024-07-04,true
+u38,e393,Consultant,2017-03-28,true
+u1910,e170,Engineering Manager,2022-10-27,false
+u446,e488,Junior Developer,2022-09-08,true
+u512,e339,Software Engineer,2022-12-23,true
+u762,e356,Senior Developer,2019-05-07,true
+u342,e459,CTO,2019-09-26,true
+u1797,e2,CTO,2020-12-26,true
+u1461,e125,CTO,2015-08-23,false
+u276,e140,CTO,2016-08-11,false
+u827,e247,UX Designer,2020-04-10,false
+u1743,e15,CTO,2015-06-15,true
+u982,e335,Intern,2021-06-21,false
+u648,e127,Senior Developer,2020-10-07,false
+u1759,e119,Junior Developer,2022-11-21,false
+u277,e164,Intern,2023-01-04,true
+u1199,e404,Junior Developer,2022-06-14,true
+u1817,e101,CTO,2017-02-04,true
+u477,e282,Consultant,2020-06-14,false
+u48,e271,Director of Engineering,2024-09-28,false
+u193,e277,Junior Developer,2019-01-09,false
+u1694,e342,QA Engineer,2018-01-01,true
+u1230,e346,Software Engineer,2015-06-18,false
+u1534,e425,Junior Developer,2019-05-22,false
+u1465,e441,QA Engineer,2023-02-02,true
+u1879,e109,Software Engineer,2021-06-06,false
+u1439,e17,Intern,2015-11-25,false
+u560,e374,Director of Engineering,2017-12-03,false
+u1512,e21,Data Analyst,2019-08-07,true
+u842,e476,Senior Developer,2020-10-07,false
+u892,e289,Product Owner,2023-12-05,false
+u1898,e322,Engineering Manager,2021-08-02,true
+u1192,e58,Product Owner,2023-04-26,true
+u1068,e44,Director of Engineering,2022-07-04,true
+u1852,e37,Product Owner,2020-10-30,true
+u576,e142,Data Analyst,2018-06-26,false
+u415,e448,Intern,2022-10-03,true
+u220,e126,Intern,2015-09-16,false
+u1945,e475,DevOps Engineer,2018-08-25,false
+u857,e328,Engineering Manager,2017-06-11,true
+u168,e56,CTO,2024-05-01,false
+u1142,e107,Tech Lead,2019-02-05,true
+u582,e481,CTO,2022-06-10,true
+u1073,e348,Intern,2019-09-01,true
+u1296,e272,Consultant,2023-02-01,false
+u971,e212,Intern,2018-02-22,true
+u316,e300,UX Designer,2018-04-29,false
+u1267,e289,Junior Developer,2018-10-16,true
+u6,e373,DevOps Engineer,2019-01-27,true
+u32,e371,Software Engineer,2021-08-30,true
+u322,e291,Engineering Manager,2017-06-28,false
+u1525,e395,Business Analyst,2020-09-06,true
+u1757,e314,Senior Developer,2024-05-15,true
+u822,e364,DevOps Engineer,2023-07-22,true
+u1490,e299,DevOps Engineer,2022-02-20,false
+u1516,e401,Director of Engineering,2021-10-30,false
+u1971,e356,Intern,2021-06-08,true
+u779,e341,DevOps Engineer,2022-01-05,false
+u1884,e247,CTO,2023-12-02,true
+u724,e499,Data Analyst,2019-05-17,true
+u920,e461,Engineering Manager,2018-09-16,true
+u1647,e152,Engineering Manager,2016-04-04,false
+u149,e101,Business Analyst,2020-11-02,true
+u992,e255,Engineering Manager,2024-01-07,false
+u315,e173,Junior Developer,2023-02-28,true
+u388,e284,Consultant,2024-04-09,true
+u1120,e311,DevOps Engineer,2022-06-10,false
+u1214,e92,Consultant,2021-02-25,false
+u948,e34,Senior Developer,2015-09-11,false
+u1663,e182,Senior Developer,2022-06-08,true
+u1624,e434,Senior Developer,2023-10-29,false
+u1507,e166,Tech Lead,2024-08-21,true
+u650,e381,Intern,2020-11-26,true
+u1260,e313,CTO,2016-08-20,false
+u138,e20,Engineering Manager,2017-01-23,false
+u393,e357,CTO,2023-09-14,true
+u717,e322,Junior Developer,2016-05-12,true
+u1087,e60,Junior Developer,2019-02-21,true
+u1130,e147,Software Engineer,2023-12-30,true
+u1861,e76,DevOps Engineer,2015-02-21,false
+u821,e373,Senior Developer,2016-04-26,false
+u988,e208,Director of Engineering,2019-11-25,false
+u1644,e144,Business Analyst,2020-12-02,true
+u318,e197,Product Owner,2016-12-21,true
+u638,e167,Business Analyst,2020-09-19,true
+u513,e316,Engineering Manager,2017-03-11,true
+u664,e454,DevOps Engineer,2018-09-17,true
+u494,e114,DevOps Engineer,2023-05-11,true
+u1867,e50,DevOps Engineer,2016-05-10,false
+u758,e159,UX Designer,2019-10-02,true
+u1512,e69,QA Engineer,2017-10-01,true
+u596,e155,UX Designer,2016-11-05,false
+u1229,e354,Engineering Manager,2019-12-31,false
+u525,e28,Engineering Manager,2021-12-08,false
+u266,e383,Consultant,2023-08-20,true
+u430,e462,Engineering Manager,2016-04-22,true
+u622,e228,Junior Developer,2024-10-03,true
+u1241,e331,Director of Engineering,2024-11-29,true
+u1054,e445,Tech Lead,2016-02-04,false
+u1575,e436,Intern,2015-07-09,true
+u782,e454,Software Engineer,2015-04-05,true
+u411,e477,Tech Lead,2016-10-08,true
+u1697,e440,QA Engineer,2022-08-07,true
+u270,e200,Consultant,2016-10-26,true
+u390,e402,UX Designer,2015-05-21,false
+u494,e67,Senior Developer,2022-06-09,false
+u1710,e142,UX Designer,2024-04-16,false
+u1000,e28,Consultant,2018-02-13,false
+u1657,e198,Business Analyst,2018-11-08,true
+u439,e174,QA Engineer,2023-09-16,true
+u496,e295,Business Analyst,2017-11-14,true
+u125,e474,Tech Lead,2015-06-18,false
+u774,e243,CTO,2021-08-17,false
+u1885,e273,Business Analyst,2023-10-12,false
+u749,e351,Consultant,2024-10-26,true
+u1440,e273,Engineering Manager,2023-10-04,false
+u804,e92,Business Analyst,2024-07-12,false
+u1944,e31,Software Engineer,2016-01-01,true
+u903,e171,CTO,2020-11-06,true
+u2,e58,Director of Engineering,2019-06-23,true
+u1448,e322,UX Designer,2020-11-23,true
+u1132,e417,Director of Engineering,2019-09-20,true
+u160,e496,Consultant,2021-07-27,true
+u1794,e69,Business Analyst,2023-04-27,false
+u640,e448,Product Owner,2024-02-27,false
+u659,e72,Junior Developer,2018-05-27,false
+u1996,e386,Data Analyst,2024-05-18,false
+u1940,e304,Tech Lead,2021-11-01,false
+u721,e181,QA Engineer,2021-03-27,true
+u732,e106,Tech Lead,2015-12-07,true
+u1636,e462,Director of Engineering,2022-08-14,true
+u891,e116,Consultant,2022-07-17,true
+u1878,e416,Data Analyst,2018-04-15,true
+u638,e464,Software Engineer,2020-12-17,true
+u1977,e380,Consultant,2016-01-31,false
+u1401,e31,Data Analyst,2018-07-21,false
+u411,e464,Business Analyst,2022-05-31,false
+u1748,e230,Engineering Manager,2019-06-18,true
+u1561,e283,QA Engineer,2018-01-07,false
+u1224,e239,Tech Lead,2021-02-15,false
+u142,e130,QA Engineer,2015-01-15,true
+u1754,e171,Product Owner,2017-08-15,false
+u891,e47,QA Engineer,2019-08-26,false
+u1461,e64,Product Owner,2017-10-16,true
+u101,e314,UX Designer,2022-11-27,true
+u234,e483,Software Engineer,2016-07-14,false
+u1058,e379,Director of Engineering,2024-02-16,false
+u1301,e183,Data Analyst,2021-10-10,false
+u1758,e117,CTO,2015-04-03,false
+u62,e328,DevOps Engineer,2015-06-24,false
+u1850,e426,Consultant,2023-03-11,false
+u35,e101,CTO,2017-06-13,false
+u1920,e389,Business Analyst,2019-04-07,false
+u488,e446,Product Owner,2021-02-13,true
+u1589,e206,Consultant,2020-01-02,true
+u932,e288,CTO,2017-04-21,true
+u933,e59,Engineering Manager,2015-12-21,false
+u49,e420,CTO,2017-08-22,true
+u1843,e108,Consultant,2021-01-25,false
+u891,e494,CTO,2017-07-03,false
+u1266,e348,Tech Lead,2019-12-08,true
+u845,e247,Consultant,2019-07-02,true
+u102,e264,Data Analyst,2024-01-05,true
+u803,e261,CTO,2023-11-27,false
+u8,e60,Director of Engineering,2017-01-04,false
+u1999,e357,CTO,2020-08-24,true
+u1800,e392,CTO,2021-04-17,false
+u179,e499,Business Analyst,2024-02-25,false
+u104,e404,Tech Lead,2019-01-01,false
+u825,e371,UX Designer,2018-10-06,false
+u9,e476,Junior Developer,2015-08-08,false
+u1103,e420,Product Owner,2018-07-04,false
+u675,e22,Senior Developer,2017-05-20,false
+u784,e165,Senior Developer,2022-03-21,true
+u0,e259,Engineering Manager,2019-07-26,false
+u67,e266,Software Engineer,2019-07-24,false
+u1762,e61,Tech Lead,2020-12-07,false
+u904,e407,Intern,2019-02-10,false
+u1658,e31,CTO,2023-10-26,false
+u1811,e272,DevOps Engineer,2021-12-13,false
+u1354,e418,DevOps Engineer,2020-06-03,false
+u986,e361,Director of Engineering,2017-05-29,false
+u763,e440,DevOps Engineer,2023-04-25,true
+u1673,e176,DevOps Engineer,2020-02-09,false
+u1163,e158,DevOps Engineer,2022-02-20,true
+u35,e14,Business Analyst,2020-09-19,true
+u1904,e10,Tech Lead,2018-12-25,false
+u1278,e406,Senior Developer,2023-05-15,false
+u941,e104,Consultant,2023-07-22,true
+u1279,e69,Tech Lead,2015-10-29,false
+u303,e27,Director of Engineering,2023-04-02,false
+u553,e5,Consultant,2017-08-10,true
+u1273,e413,Tech Lead,2020-07-28,false
+u782,e274,Junior Developer,2017-05-21,true
+u198,e301,DevOps Engineer,2017-10-19,false
+u41,e337,CTO,2020-07-22,true
+u1187,e94,Product Owner,2020-12-10,false
+u664,e443,CTO,2022-06-29,true
+u1822,e288,Director of Engineering,2018-07-07,false
+u894,e57,Director of Engineering,2022-08-12,false
+u1765,e302,Junior Developer,2024-08-16,true
+u1954,e103,Engineering Manager,2017-09-15,false
+u771,e30,QA Engineer,2015-01-21,false
+u1975,e67,Data Analyst,2024-12-14,false
+u408,e415,Software Engineer,2023-03-28,true
+u1327,e280,DevOps Engineer,2023-09-03,true
+u691,e27,CTO,2017-05-17,true
+u257,e387,Junior Developer,2019-06-15,true
+u7,e438,UX Designer,2022-11-27,false
+u978,e295,Product Owner,2024-12-16,false
+u784,e473,Product Owner,2024-06-01,false
+u1623,e316,Consultant,2018-09-24,false
+u1533,e165,UX Designer,2015-03-01,true
+u1904,e172,CTO,2023-12-16,true
+u742,e230,Data Analyst,2016-10-26,true
+u799,e0,QA Engineer,2021-10-20,false
+u22,e218,Junior Developer,2022-08-31,false
+u1975,e26,Senior Developer,2016-10-29,true
+u604,e45,UX Designer,2019-09-29,true
+u1871,e137,Consultant,2016-11-26,false
+u472,e148,Consultant,2017-03-08,true
+u976,e491,Director of Engineering,2016-10-24,true
+u935,e139,Junior Developer,2020-02-16,false
+u306,e396,CTO,2020-08-09,false
+u1013,e211,Product Owner,2020-12-06,true
+u1770,e164,Data Analyst,2015-11-27,false
+u440,e60,CTO,2016-12-24,false
+u658,e351,Engineering Manager,2015-11-26,true
+u1789,e333,Consultant,2015-11-12,true
+u922,e378,Engineering Manager,2015-12-09,true
+u1060,e378,CTO,2018-10-01,false
+u384,e185,Intern,2017-03-23,true
+u1307,e470,DevOps Engineer,2024-11-30,false
+u531,e143,DevOps Engineer,2020-03-05,true
+u493,e133,Consultant,2015-05-14,false
+u774,e410,UX Designer,2021-03-31,true
+u1558,e98,UX Designer,2016-03-20,false
+u814,e489,Business Analyst,2017-08-10,false
+u732,e459,Intern,2015-12-06,false
+u1294,e72,DevOps Engineer,2024-04-19,false
+u1811,e63,Engineering Manager,2020-03-13,false
+u761,e456,Business Analyst,2020-07-20,true
+u468,e75,UX Designer,2017-08-11,false
+u1064,e22,Intern,2022-11-07,true
+u864,e347,Director of Engineering,2018-05-30,false
+u84,e23,DevOps Engineer,2020-04-22,true
+u1987,e404,UX Designer,2021-01-09,true
+u1776,e225,Junior Developer,2020-04-18,true
+u1427,e83,QA Engineer,2024-07-28,false
+u476,e293,DevOps Engineer,2015-02-28,true
+u1434,e496,QA Engineer,2017-03-16,false
+u1698,e156,Senior Developer,2024-06-04,true
+u1677,e444,QA Engineer,2015-06-14,false
+u1580,e394,Junior Developer,2024-10-09,false
+u1716,e204,Software Engineer,2016-06-14,false
+u1540,e452,Intern,2016-03-26,true
+u1016,e445,Business Analyst,2015-09-17,false
+u716,e208,UX Designer,2022-10-10,false
+u1160,e69,QA Engineer,2017-10-05,true
+u1373,e188,Tech Lead,2018-05-01,false
+u398,e176,Consultant,2016-10-29,false
+u210,e70,Director of Engineering,2015-07-10,true
+u317,e188,DevOps Engineer,2022-09-26,true
+u1716,e120,DevOps Engineer,2017-06-23,true
+u1522,e252,DevOps Engineer,2019-02-24,true
+u1267,e359,UX Designer,2023-05-21,true
+u738,e217,Engineering Manager,2018-08-22,true
+u574,e22,Intern,2019-04-04,false
+u1929,e180,Senior Developer,2020-09-28,true
+u1527,e355,Intern,2017-04-04,true
+u814,e119,Intern,2016-04-14,true
+u214,e207,Intern,2018-10-08,true
+u1278,e446,CTO,2021-07-29,true
+u498,e223,Engineering Manager,2021-07-26,true
+u1855,e27,Tech Lead,2019-06-26,true
+u1146,e188,CTO,2021-06-05,false
+u1078,e218,Intern,2023-05-17,false
+u1388,e175,Engineering Manager,2015-08-10,false
+u1610,e200,Consultant,2020-07-10,false
+u525,e427,QA Engineer,2016-03-30,true
+u813,e73,Intern,2018-11-06,false
+u1549,e227,Director of Engineering,2017-08-14,true
+u1004,e160,Junior Developer,2022-10-31,true
+u1034,e102,Senior Developer,2024-10-28,true
+u894,e93,DevOps Engineer,2016-05-16,true
+u1865,e490,Tech Lead,2024-04-22,false
+u852,e435,Data Analyst,2018-06-04,true
+u899,e3,Junior Developer,2023-05-18,true
+u192,e224,Business Analyst,2023-03-07,false
+u1845,e105,Software Engineer,2021-03-13,true
+u1213,e386,Engineering Manager,2015-11-09,true
+u1282,e372,Consultant,2023-07-30,true
+u738,e68,Data Analyst,2015-04-07,true
+u72,e378,Data Analyst,2022-03-19,true
+u213,e400,Product Owner,2017-02-24,false
+u914,e73,Business Analyst,2022-06-05,true
+u759,e106,Senior Developer,2018-12-20,false
+u1862,e58,DevOps Engineer,2016-09-30,true
+u668,e85,QA Engineer,2024-07-18,false
+u1587,e423,Director of Engineering,2018-06-05,true
+u699,e128,Junior Developer,2023-08-31,false
+u1624,e98,Engineering Manager,2018-10-15,false
+u1854,e416,Director of Engineering,2020-03-11,false
+u1484,e445,Engineering Manager,2024-10-02,false
+u460,e53,QA Engineer,2023-06-22,true
+u1816,e194,Junior Developer,2024-03-26,true
+u816,e419,Data Analyst,2022-06-04,true
+u698,e385,Senior Developer,2020-04-09,true
+u838,e461,CTO,2015-12-05,false
+u1387,e200,Consultant,2017-02-04,false
+u1437,e343,Director of Engineering,2022-02-20,false
+u903,e474,Senior Developer,2016-07-02,false
+u1408,e394,Director of Engineering,2015-08-11,false
+u1203,e489,Engineering Manager,2022-08-23,true
+u1839,e311,Intern,2019-03-30,false
+u1767,e418,Data Analyst,2024-08-08,true
+u1348,e346,UX Designer,2017-02-25,true
+u430,e175,Engineering Manager,2017-03-05,false
+u594,e104,Senior Developer,2020-05-01,true
+u1594,e293,Engineering Manager,2017-06-24,false
+u1953,e246,Intern,2017-01-04,false
+u871,e374,UX Designer,2024-02-05,true
+u145,e285,Consultant,2018-03-07,true
+u1081,e0,Engineering Manager,2018-05-02,false
+u212,e109,Tech Lead,2018-08-21,true
+u1629,e240,Engineering Manager,2020-01-25,true
+u1379,e36,Tech Lead,2015-06-05,true
+u723,e56,Director of Engineering,2022-10-11,true
+u399,e307,Intern,2020-07-14,true
+u532,e432,Software Engineer,2023-01-18,true
+u336,e156,Engineering Manager,2024-03-09,true
+u975,e139,QA Engineer,2024-07-05,true
+u457,e382,UX Designer,2020-05-07,true
+u1798,e462,Data Analyst,2020-09-21,false
+u349,e75,Director of Engineering,2016-04-01,true
+u1693,e367,Junior Developer,2017-07-01,false
+u1995,e414,Junior Developer,2024-06-22,false
+u754,e378,Senior Developer,2021-09-25,true
+u740,e406,Tech Lead,2022-06-22,true
+u1777,e263,Product Owner,2021-04-15,false
+u1411,e452,Product Owner,2015-09-03,false
+u1330,e376,Director of Engineering,2019-12-03,false
+u1122,e295,Tech Lead,2019-06-28,false
+u301,e298,Data Analyst,2017-12-11,true
+u240,e222,QA Engineer,2022-12-20,false
+u795,e2,UX Designer,2024-05-12,true
+u1248,e324,Consultant,2024-03-13,true
+u1741,e129,Product Owner,2017-04-09,false
+u1178,e430,Director of Engineering,2023-01-20,false
+u1442,e477,Tech Lead,2022-11-21,true
+u1678,e362,UX Designer,2017-04-21,false
+u887,e190,DevOps Engineer,2018-12-08,true
+u577,e64,Software Engineer,2024-06-22,false
+u84,e211,UX Designer,2017-07-01,false
+u889,e21,Data Analyst,2016-05-17,true
+u1771,e343,Data Analyst,2022-07-15,true
+u440,e255,UX Designer,2015-04-11,true
+u1583,e218,Software Engineer,2019-02-12,false
+u1790,e466,CTO,2019-08-25,true
+u677,e198,Director of Engineering,2019-09-04,true
+u501,e409,UX Designer,2024-10-04,false
+u835,e28,Product Owner,2024-10-25,false
+u384,e371,Product Owner,2021-05-29,true
+u1507,e98,Director of Engineering,2016-02-28,true
+u1503,e119,Senior Developer,2015-03-29,true
+u1473,e450,Director of Engineering,2024-06-05,true
+u89,e191,DevOps Engineer,2016-04-18,false
+u735,e392,UX Designer,2023-12-11,false
+u606,e178,Product Owner,2022-12-03,true
+u1900,e190,Product Owner,2020-06-16,true
+u1473,e432,Business Analyst,2019-12-28,false
+u1331,e477,Engineering Manager,2022-08-27,true
+u1586,e229,DevOps Engineer,2019-08-21,true
+u1809,e76,DevOps Engineer,2020-03-18,true
+u180,e53,Consultant,2023-11-25,false
+u717,e163,UX Designer,2016-11-05,false
+u1766,e369,Software Engineer,2021-09-01,true
+u902,e243,DevOps Engineer,2022-12-23,true
+u1451,e202,Consultant,2017-01-22,true
+u418,e185,UX Designer,2018-06-15,false
+u1629,e25,Product Owner,2015-04-07,true
+u341,e474,Software Engineer,2018-01-09,false
+u335,e202,Data Analyst,2020-08-18,true
+u1760,e269,Tech Lead,2018-02-01,true
+u1675,e201,Director of Engineering,2021-09-07,false
+u1487,e285,Software Engineer,2016-05-11,true
+u1825,e284,Tech Lead,2017-11-29,false
+u956,e412,Intern,2016-11-30,false
+u1720,e244,Product Owner,2018-07-19,true
+u886,e387,QA Engineer,2021-11-06,false
+u1484,e150,Data Analyst,2024-04-30,false
+u1351,e455,Business Analyst,2021-08-17,false
+u1826,e297,Intern,2015-05-11,false
+u1541,e460,Senior Developer,2023-10-04,false
+u1314,e167,Tech Lead,2023-11-05,false
+u1917,e218,Junior Developer,2022-02-17,false
+u1178,e248,Senior Developer,2015-05-07,false
+u1466,e283,DevOps Engineer,2019-04-26,false
+u1264,e236,Consultant,2023-12-16,false
+u329,e88,Data Analyst,2015-03-25,true
+u709,e246,Director of Engineering,2019-04-12,false
+u1396,e485,Intern,2018-11-04,false
+u1577,e209,Senior Developer,2015-03-28,true
+u329,e406,Engineering Manager,2023-02-04,true
+u1607,e178,CTO,2020-08-05,true
+u7,e150,Intern,2021-02-01,true
+u434,e499,Intern,2016-05-01,false
+u1491,e406,UX Designer,2023-12-12,false
+u498,e270,Engineering Manager,2020-05-31,true
+u170,e491,Software Engineer,2018-01-08,false
+u1752,e387,Intern,2017-06-17,true
+u142,e42,Junior Developer,2017-11-13,true
+u655,e225,Senior Developer,2015-10-31,false
+u534,e115,Product Owner,2024-03-23,false
+u1075,e194,CTO,2019-10-26,false
+u495,e272,QA Engineer,2021-01-03,true
+u299,e453,Tech Lead,2020-12-07,true
+u1379,e16,Junior Developer,2019-04-24,false
+u575,e102,Software Engineer,2021-01-20,true
+u1640,e148,Consultant,2020-01-29,false
+u1668,e111,UX Designer,2024-02-16,true
+u1226,e454,Software Engineer,2023-01-16,false
+u1489,e345,Product Owner,2015-12-20,false
+u534,e231,Consultant,2019-02-19,false
+u1716,e31,Consultant,2020-12-04,false
+u363,e57,Director of Engineering,2018-03-12,false
+u1741,e149,Data Analyst,2023-11-07,false
+u1423,e77,QA Engineer,2022-07-22,true
+u365,e344,Junior Developer,2022-05-03,false
+u1092,e467,Senior Developer,2024-06-11,true
+u59,e63,Senior Developer,2019-09-06,true
+u157,e219,Software Engineer,2022-01-28,false
+u758,e448,CTO,2019-02-23,false
+u664,e236,Senior Developer,2015-06-25,true
+u1552,e118,Director of Engineering,2023-07-27,true
+u480,e370,Product Owner,2022-07-21,false
+u847,e247,Software Engineer,2023-10-07,false
+u565,e46,Junior Developer,2024-02-23,true
+u1990,e37,DevOps Engineer,2019-09-25,false
+u1880,e74,Consultant,2018-01-08,true
+u1338,e234,Director of Engineering,2022-08-23,false
+u1385,e217,Senior Developer,2015-04-28,true
+u1406,e313,CTO,2017-12-11,true
+u1236,e1,UX Designer,2018-05-16,false
+u228,e8,Senior Developer,2019-09-28,true
+u1688,e386,Software Engineer,2024-12-05,false
+u1040,e174,DevOps Engineer,2018-08-14,false
+u235,e153,Senior Developer,2022-06-21,false
+u1471,e296,Director of Engineering,2018-02-25,false
+u268,e279,Tech Lead,2021-08-10,true
+u1784,e485,CTO,2023-11-23,true
+u918,e95,Product Owner,2017-07-01,true
+u714,e49,Engineering Manager,2022-03-15,true
+u1638,e436,Intern,2018-04-20,false
+u271,e480,Product Owner,2018-01-12,true
+u1261,e336,QA Engineer,2024-09-09,false
+u270,e385,DevOps Engineer,2016-04-29,true
+u1519,e141,Engineering Manager,2024-02-20,false
+u439,e11,UX Designer,2021-04-22,true
+u800,e37,Junior Developer,2024-09-16,false
+u892,e179,QA Engineer,2019-04-17,false
+u1665,e269,Senior Developer,2019-10-11,false
+u15,e332,Director of Engineering,2016-04-10,false
+u674,e2,Senior Developer,2022-10-08,false
+u272,e105,UX Designer,2016-06-14,true
+u864,e314,Data Analyst,2021-07-02,false
+u1157,e403,Consultant,2017-08-31,false
+u1450,e228,Business Analyst,2019-07-27,false
+u192,e100,UX Designer,2015-10-03,true
+u757,e441,Software Engineer,2023-11-07,false
+u599,e118,DevOps Engineer,2017-01-08,true
+u1144,e371,Engineering Manager,2016-05-27,false
+u1577,e137,UX Designer,2023-02-25,true
+u1477,e185,Product Owner,2016-09-12,true
+u221,e236,QA Engineer,2019-09-29,true
+u614,e128,Senior Developer,2018-04-08,false
+u865,e232,Business Analyst,2018-08-28,false
+u1972,e165,Consultant,2022-05-31,true
+u182,e290,Product Owner,2021-01-08,false
+u1869,e70,DevOps Engineer,2021-08-16,true
+u1040,e87,DevOps Engineer,2022-12-02,false
+u595,e117,Software Engineer,2024-11-05,true
+u858,e108,Junior Developer,2023-01-23,true
+u1794,e137,Junior Developer,2018-12-02,true
+u1779,e101,Product Owner,2020-05-24,false
+u355,e47,Junior Developer,2022-07-19,false
+u177,e5,Director of Engineering,2015-10-04,true
+u29,e93,Software Engineer,2024-03-28,true
+u1700,e467,Intern,2019-05-27,false
+u484,e353,UX Designer,2015-08-11,false
+u1718,e285,DevOps Engineer,2015-05-05,false
+u436,e53,Product Owner,2016-03-10,true
+u267,e477,Data Analyst,2015-02-27,true
+u1451,e234,QA Engineer,2017-09-26,false
+u1580,e101,Data Analyst,2022-03-16,true
+u1810,e392,Consultant,2016-06-25,true
+u1560,e399,Software Engineer,2021-08-18,true
+u15,e227,Data Analyst,2021-07-25,true
+u1996,e171,Tech Lead,2023-01-06,false
+u879,e172,Software Engineer,2023-05-08,true
+u63,e102,Product Owner,2023-12-02,true
+u1143,e258,Junior Developer,2024-10-03,false
+u1255,e178,Senior Developer,2019-04-01,true
+u1032,e109,Junior Developer,2017-05-13,true
+u112,e413,CTO,2015-07-09,true
+u1348,e434,Tech Lead,2016-05-31,true
+u7,e436,Product Owner,2016-06-13,true
+u1479,e251,Junior Developer,2018-02-14,true
+u1031,e204,Director of Engineering,2021-04-08,true
+u1002,e192,Product Owner,2018-04-07,false
+u702,e335,CTO,2016-09-02,true
+u1692,e353,QA Engineer,2022-06-13,true
+u384,e42,Intern,2015-01-31,true
+u293,e443,Director of Engineering,2018-01-08,true
+u700,e441,DevOps Engineer,2022-07-04,true
+u1255,e407,UX Designer,2024-04-13,true
+u958,e392,Director of Engineering,2022-10-16,false
+u937,e147,Consultant,2021-06-01,true
+u30,e484,QA Engineer,2020-01-13,true
+u1509,e369,DevOps Engineer,2024-08-03,false
+u789,e489,UX Designer,2016-03-28,true
+u1466,e306,QA Engineer,2018-02-28,true
+u297,e119,CTO,2024-11-29,true
+u1282,e405,Junior Developer,2019-02-08,false
+u570,e439,DevOps Engineer,2017-05-15,true
+u1999,e173,Senior Developer,2018-04-21,true
+u302,e293,Data Analyst,2018-02-21,false
+u1950,e374,Business Analyst,2023-06-21,false
+u760,e67,Product Owner,2016-03-06,false
+u920,e480,Engineering Manager,2019-11-23,true
+u258,e115,QA Engineer,2019-07-30,true
+u665,e42,Product Owner,2022-09-30,true
+u1091,e388,CTO,2020-09-23,true
+u1057,e202,Engineering Manager,2023-03-11,true
+u1166,e317,UX Designer,2024-04-04,true
+u854,e477,UX Designer,2024-08-12,true
+u153,e362,Business Analyst,2020-09-28,true
+u1737,e402,Engineering Manager,2024-04-01,false
+u1591,e200,CTO,2020-03-19,true
+u1046,e175,Data Analyst,2017-04-27,false
+u1885,e152,UX Designer,2015-07-10,false
+u1842,e9,Consultant,2023-09-19,true
+u1978,e343,Software Engineer,2024-12-15,false
+u129,e474,DevOps Engineer,2024-10-29,true
+u1895,e8,Junior Developer,2018-09-29,true
+u1245,e200,Product Owner,2021-03-27,false
+u1615,e366,CTO,2023-11-14,false
+u1083,e349,UX Designer,2020-11-17,false
+u1207,e298,Business Analyst,2018-10-01,true
+u1482,e143,Director of Engineering,2015-02-04,false
+u1359,e167,DevOps Engineer,2021-05-13,true
+u142,e233,UX Designer,2023-05-01,true
+u853,e294,Tech Lead,2023-07-20,false
+u337,e22,Senior Developer,2015-10-05,false
+u719,e390,Tech Lead,2015-01-06,false
+u836,e32,Data Analyst,2022-12-01,false
+u766,e305,UX Designer,2023-08-12,false
+u1574,e444,Tech Lead,2017-12-30,true
+u1312,e236,Product Owner,2021-06-01,false
+u1061,e36,Product Owner,2015-08-24,false
+u1245,e25,DevOps Engineer,2022-11-14,true
+u1244,e110,Junior Developer,2024-04-19,false
+u1053,e303,Intern,2016-02-29,true
+u255,e321,Intern,2023-04-28,false
+u1517,e420,QA Engineer,2020-05-19,false
+u1944,e119,Software Engineer,2024-10-27,false
+u473,e6,Tech Lead,2021-05-19,true
+u1074,e328,Business Analyst,2018-12-16,false
+u1679,e425,Junior Developer,2016-01-19,false
+u1913,e225,Product Owner,2023-10-12,true
+u1346,e264,Director of Engineering,2018-11-04,true
+u179,e65,Senior Developer,2020-05-06,true
+u1935,e100,Engineering Manager,2018-09-23,false
+u1064,e75,Software Engineer,2015-12-30,false
+u1460,e153,Software Engineer,2019-01-04,false
+u1166,e441,CTO,2023-10-25,true
+u23,e212,Director of Engineering,2018-06-27,false
+u1155,e358,Engineering Manager,2019-02-07,true
+u990,e294,Director of Engineering,2022-09-08,false
+u476,e428,Business Analyst,2016-03-06,true
+u416,e410,Product Owner,2018-09-24,false
+u161,e332,DevOps Engineer,2016-06-30,false
+u1941,e378,DevOps Engineer,2015-04-26,false
+u122,e281,Junior Developer,2019-03-31,false
+u70,e252,Intern,2015-03-29,false
+u205,e338,QA Engineer,2020-12-15,false
+u370,e134,Business Analyst,2016-10-23,false
+u1637,e37,Product Owner,2024-03-25,true
+u719,e166,Data Analyst,2016-06-18,true
+u218,e475,Data Analyst,2021-12-09,true
+u599,e263,Software Engineer,2020-03-13,false
+u1619,e293,Business Analyst,2017-03-04,true
+u1335,e258,Junior Developer,2018-02-05,false
+u1931,e149,Business Analyst,2024-09-30,true
+u399,e359,Senior Developer,2020-12-04,false
+u1860,e57,Intern,2023-07-13,true
+u334,e486,Senior Developer,2020-03-23,false
+u920,e100,CTO,2016-06-06,true
+u910,e396,DevOps Engineer,2018-07-19,false
+u1048,e58,Junior Developer,2016-10-05,false
+u392,e356,DevOps Engineer,2024-02-20,false
+u97,e280,Software Engineer,2022-07-06,false
+u346,e314,QA Engineer,2019-05-15,false
+u481,e417,DevOps Engineer,2016-10-26,true
+u990,e329,UX Designer,2023-10-13,true
+u688,e447,DevOps Engineer,2016-07-28,true
+u595,e60,Intern,2023-06-12,true
+u434,e126,Product Owner,2016-12-03,false
+u1658,e464,Tech Lead,2022-04-23,false
+u87,e497,Senior Developer,2023-11-04,true
+u964,e129,DevOps Engineer,2020-11-10,true
+u440,e158,Consultant,2022-01-02,true
+u1730,e365,Tech Lead,2017-04-05,true
+u1582,e242,Consultant,2020-01-14,true
+u705,e491,Intern,2016-07-04,true
+u337,e260,Product Owner,2021-04-15,false
+u340,e191,Consultant,2020-11-04,false
+u532,e137,Junior Developer,2021-03-20,false
+u354,e176,Software Engineer,2016-11-27,true
+u1910,e434,Data Analyst,2019-08-04,false
+u368,e139,QA Engineer,2022-10-03,false

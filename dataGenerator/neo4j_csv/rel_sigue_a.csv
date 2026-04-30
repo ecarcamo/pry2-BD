@@ -1,0 +1,4001 @@
+usuario_id,empresa_id,fecha_seguimiento,notificaciones,motivo
+u1509,e66,2026-04-30,true,interés en la industria
+u471,e363,2026-11-18,false,cliente potencial
+u463,e390,2024-04-20,false,trabajo actual
+u583,e383,2021-06-21,false,cliente potencial
+u1744,e271,2026-08-10,true,ex empleador
+u957,e311,2021-03-03,false,posible empleador
+u1797,e185,2019-12-04,true,interés general
+u1518,e48,2026-04-28,true,interés en la industria
+u874,e159,2025-02-08,false,networking
+u1731,e440,2022-05-27,true,trabajo actual
+u1423,e495,2023-01-06,false,ex empleador
+u434,e19,2021-03-11,true,seguimiento de ofertas
+u1716,e402,2024-05-24,true,cliente potencial
+u1991,e227,2026-04-08,true,ex empleador
+u1839,e158,2025-08-29,false,networking
+u131,e102,2024-11-17,true,trabajo actual
+u1396,e316,2024-05-02,false,trabajo actual
+u145,e141,2022-06-02,false,seguimiento de ofertas
+u893,e428,2024-07-11,true,posible empleador
+u1042,e385,2025-07-13,true,interés en la industria
+u1510,e37,2022-03-31,false,posible empleador
+u1798,e319,2021-07-21,false,cliente potencial
+u645,e132,2019-10-15,false,seguimiento de ofertas
+u403,e106,2025-10-06,false,interés general
+u1361,e493,2022-06-13,false,networking
+u1826,e451,2019-09-27,false,interés general
+u1375,e472,2024-03-02,true,interés general
+u1465,e381,2023-06-20,true,interés en la industria
+u1503,e203,2020-02-13,false,interés en la industria
+u1805,e135,2024-12-08,true,interés en la industria
+u776,e347,2023-03-18,false,interés en la industria
+u1992,e118,2024-05-13,true,posible empleador
+u1556,e405,2022-11-19,true,networking
+u413,e311,2021-08-12,false,networking
+u1474,e2,2024-01-21,true,trabajo actual
+u378,e113,2022-01-10,true,interés en la industria
+u273,e106,2025-06-21,false,ex empleador
+u396,e296,2020-12-21,false,interés en la industria
+u1999,e379,2019-10-12,false,seguimiento de ofertas
+u1085,e283,2024-10-24,true,ex empleador
+u1653,e286,2022-08-28,false,interés en la industria
+u1243,e470,2020-08-23,true,seguimiento de ofertas
+u1790,e374,2020-08-13,false,interés general
+u299,e427,2021-07-09,true,cliente potencial
+u182,e410,2024-03-11,true,ex empleador
+u538,e140,2023-02-01,true,interés general
+u371,e90,2019-06-20,true,interés en la industria
+u759,e185,2023-04-14,true,cliente potencial
+u694,e194,2024-05-20,true,interés general
+u1363,e170,2025-05-09,false,posible empleador
+u1298,e203,2024-09-06,true,posible empleador
+u1946,e28,2024-07-10,true,interés general
+u1671,e462,2020-07-28,true,seguimiento de ofertas
+u1020,e132,2019-08-24,true,posible empleador
+u585,e264,2020-06-14,false,networking
+u7,e451,2019-07-01,true,ex empleador
+u886,e246,2023-02-17,true,ex empleador
+u901,e486,2022-07-17,true,ex empleador
+u364,e351,2026-05-18,true,ex empleador
+u1168,e175,2022-01-27,false,cliente potencial
+u937,e0,2025-03-21,true,trabajo actual
+u1708,e387,2019-05-19,false,networking
+u1652,e279,2024-04-23,false,ex empleador
+u1894,e173,2023-06-17,false,interés en la industria
+u918,e103,2026-12-01,false,seguimiento de ofertas
+u149,e497,2020-12-06,true,posible empleador
+u92,e244,2021-04-15,true,interés general
+u1452,e386,2024-09-04,true,ex empleador
+u73,e385,2023-06-12,false,trabajo actual
+u948,e474,2025-01-21,false,interés general
+u1775,e47,2024-12-02,false,cliente potencial
+u1693,e19,2025-08-30,true,trabajo actual
+u758,e197,2022-02-15,false,seguimiento de ofertas
+u428,e23,2023-12-22,true,trabajo actual
+u1227,e193,2021-07-06,true,interés general
+u1333,e425,2025-06-16,false,trabajo actual
+u68,e191,2020-11-24,true,posible empleador
+u272,e55,2024-02-27,false,interés general
+u1250,e27,2019-06-02,false,trabajo actual
+u904,e120,2025-10-18,true,interés general
+u1596,e247,2026-04-08,true,cliente potencial
+u1220,e403,2023-04-10,false,trabajo actual
+u1643,e52,2023-09-08,false,interés en la industria
+u1108,e242,2022-12-13,false,cliente potencial
+u1986,e106,2023-02-14,true,seguimiento de ofertas
+u1326,e344,2019-09-16,true,trabajo actual
+u1516,e209,2021-06-19,true,posible empleador
+u1051,e248,2022-03-23,true,cliente potencial
+u1266,e320,2026-03-01,false,interés en la industria
+u749,e339,2020-07-07,true,interés general
+u803,e8,2026-06-18,true,networking
+u826,e288,2025-04-20,true,posible empleador
+u1561,e481,2019-07-29,false,trabajo actual
+u575,e29,2020-06-03,true,networking
+u1888,e264,2025-12-25,true,interés en la industria
+u1655,e130,2025-09-16,false,interés general
+u856,e322,2021-11-16,false,trabajo actual
+u686,e169,2021-09-11,true,interés en la industria
+u323,e486,2020-06-27,false,cliente potencial
+u1863,e415,2024-10-07,false,trabajo actual
+u1280,e496,2025-09-14,false,networking
+u1516,e432,2021-02-07,true,seguimiento de ofertas
+u863,e366,2026-12-18,true,interés en la industria
+u586,e427,2026-03-04,true,ex empleador
+u1180,e495,2026-04-09,true,interés en la industria
+u828,e408,2021-05-08,true,interés en la industria
+u1762,e244,2023-08-23,true,interés en la industria
+u659,e435,2025-11-19,false,networking
+u707,e259,2021-04-06,true,trabajo actual
+u1235,e177,2025-05-16,false,seguimiento de ofertas
+u445,e354,2022-12-25,true,cliente potencial
+u1160,e38,2022-09-25,false,trabajo actual
+u1657,e322,2021-07-04,false,interés en la industria
+u1624,e270,2026-08-09,true,networking
+u658,e395,2025-02-16,true,ex empleador
+u994,e81,2026-12-08,true,networking
+u1125,e212,2021-04-13,true,interés general
+u173,e298,2026-01-22,true,ex empleador
+u112,e154,2026-02-23,true,seguimiento de ofertas
+u730,e281,2023-09-16,false,interés general
+u848,e336,2020-11-28,false,posible empleador
+u1325,e217,2021-04-29,false,ex empleador
+u1191,e9,2025-10-10,true,posible empleador
+u1441,e415,2026-10-23,true,networking
+u1080,e496,2020-03-04,true,trabajo actual
+u1844,e479,2020-07-21,true,seguimiento de ofertas
+u1074,e339,2021-03-02,true,trabajo actual
+u1772,e437,2025-09-04,false,interés en la industria
+u983,e450,2022-02-02,false,posible empleador
+u1719,e215,2023-02-17,false,seguimiento de ofertas
+u270,e137,2024-04-16,false,seguimiento de ofertas
+u1794,e480,2025-12-01,false,seguimiento de ofertas
+u1528,e276,2024-01-28,true,posible empleador
+u1227,e23,2021-03-02,false,cliente potencial
+u1901,e31,2020-04-10,false,cliente potencial
+u452,e489,2023-11-01,true,seguimiento de ofertas
+u655,e415,2023-10-20,false,interés en la industria
+u1801,e134,2023-03-22,false,networking
+u1720,e135,2025-03-17,false,cliente potencial
+u1995,e326,2023-03-20,true,seguimiento de ofertas
+u1030,e473,2026-01-24,true,cliente potencial
+u941,e177,2026-03-26,true,cliente potencial
+u882,e251,2024-08-28,false,interés general
+u578,e397,2022-05-03,false,trabajo actual
+u575,e122,2023-02-13,false,posible empleador
+u23,e310,2024-06-16,true,seguimiento de ofertas
+u1554,e451,2023-01-01,false,trabajo actual
+u734,e172,2021-03-31,false,interés en la industria
+u950,e97,2021-07-19,true,networking
+u588,e290,2026-05-23,false,cliente potencial
+u395,e177,2020-12-13,false,networking
+u1616,e473,2020-05-21,false,posible empleador
+u691,e137,2019-03-03,true,interés en la industria
+u1506,e392,2023-09-27,false,ex empleador
+u1175,e41,2020-11-26,false,cliente potencial
+u900,e147,2021-06-13,false,ex empleador
+u1446,e112,2020-05-15,false,posible empleador
+u1100,e31,2025-01-04,false,interés en la industria
+u1939,e346,2022-09-29,false,seguimiento de ofertas
+u1687,e255,2023-06-10,true,networking
+u719,e53,2025-01-05,true,posible empleador
+u1560,e192,2025-12-01,false,seguimiento de ofertas
+u1057,e339,2022-08-20,false,networking
+u380,e472,2023-01-16,false,interés general
+u844,e279,2022-09-21,false,posible empleador
+u209,e494,2022-01-20,true,ex empleador
+u1366,e350,2019-02-18,true,networking
+u1794,e304,2019-05-12,false,interés en la industria
+u1792,e92,2019-12-29,true,trabajo actual
+u1647,e378,2020-02-17,true,interés general
+u430,e183,2020-12-01,true,interés en la industria
+u1251,e227,2023-11-25,false,cliente potencial
+u1796,e477,2026-02-14,true,interés general
+u1092,e451,2024-04-27,false,ex empleador
+u706,e55,2023-02-06,false,interés en la industria
+u93,e454,2023-03-28,false,trabajo actual
+u16,e218,2026-07-11,true,networking
+u489,e313,2020-05-21,false,seguimiento de ofertas
+u959,e418,2023-08-24,true,interés general
+u961,e415,2026-08-14,false,cliente potencial
+u778,e247,2024-07-08,false,cliente potencial
+u1720,e393,2019-08-11,false,networking
+u521,e157,2025-04-10,true,networking
+u956,e22,2025-02-18,false,trabajo actual
+u1539,e351,2024-09-24,false,interés en la industria
+u1092,e119,2025-06-14,true,posible empleador
+u1989,e335,2022-01-08,true,seguimiento de ofertas
+u1840,e489,2019-05-29,true,interés en la industria
+u1449,e250,2023-10-10,true,posible empleador
+u346,e86,2025-01-21,true,cliente potencial
+u1285,e459,2025-06-08,true,ex empleador
+u306,e118,2022-04-30,true,ex empleador
+u771,e360,2020-06-03,false,trabajo actual
+u419,e136,2023-09-25,true,cliente potencial
+u697,e97,2026-09-12,true,networking
+u1954,e124,2022-06-18,false,interés general
+u932,e136,2024-07-27,false,cliente potencial
+u354,e132,2026-09-14,false,posible empleador
+u820,e294,2024-03-28,true,interés general
+u1903,e39,2025-10-08,true,networking
+u501,e226,2021-07-06,true,interés general
+u252,e495,2019-11-24,true,ex empleador
+u551,e270,2021-04-14,true,networking
+u309,e288,2024-01-09,false,interés en la industria
+u764,e352,2024-10-18,true,trabajo actual
+u443,e388,2021-08-02,false,ex empleador
+u1344,e123,2024-09-03,true,ex empleador
+u486,e492,2019-09-27,true,seguimiento de ofertas
+u543,e1,2023-12-04,false,interés en la industria
+u1752,e10,2025-07-27,false,seguimiento de ofertas
+u1264,e100,2021-01-24,false,seguimiento de ofertas
+u1845,e351,2019-03-29,false,seguimiento de ofertas
+u523,e480,2026-10-14,true,ex empleador
+u500,e497,2021-06-19,true,networking
+u1685,e21,2022-08-05,false,trabajo actual
+u1671,e59,2023-05-13,false,cliente potencial
+u1768,e353,2026-09-10,false,posible empleador
+u1046,e32,2020-04-08,false,networking
+u929,e182,2025-06-04,false,networking
+u1924,e264,2019-01-19,true,cliente potencial
+u48,e403,2021-04-21,true,cliente potencial
+u521,e41,2025-01-06,false,posible empleador
+u1655,e476,2024-03-10,false,trabajo actual
+u465,e343,2026-04-09,false,interés general
+u1802,e69,2022-01-14,true,seguimiento de ofertas
+u737,e115,2020-11-17,true,networking
+u704,e488,2026-07-23,true,seguimiento de ofertas
+u1400,e366,2019-02-15,true,ex empleador
+u152,e82,2019-08-23,true,interés general
+u581,e467,2023-03-01,true,cliente potencial
+u166,e87,2019-09-06,true,seguimiento de ofertas
+u1637,e290,2022-04-02,true,cliente potencial
+u1499,e141,2022-10-27,false,ex empleador
+u1716,e455,2022-10-29,false,networking
+u359,e81,2025-07-08,false,interés general
+u1763,e49,2020-11-19,false,ex empleador
+u1654,e251,2019-07-18,true,interés general
+u331,e487,2026-10-07,true,ex empleador
+u487,e413,2020-01-06,false,ex empleador
+u249,e422,2026-12-07,false,seguimiento de ofertas
+u789,e326,2024-03-31,true,seguimiento de ofertas
+u1599,e453,2025-08-25,false,trabajo actual
+u1223,e344,2022-03-03,false,cliente potencial
+u1195,e466,2024-01-27,true,interés general
+u1586,e230,2019-11-17,true,cliente potencial
+u352,e29,2022-08-27,true,seguimiento de ofertas
+u421,e156,2021-03-03,false,trabajo actual
+u131,e118,2022-11-23,false,interés en la industria
+u874,e490,2026-03-04,true,trabajo actual
+u343,e319,2019-04-21,true,ex empleador
+u249,e319,2026-05-26,false,cliente potencial
+u1740,e343,2023-04-01,true,ex empleador
+u75,e88,2023-03-23,true,interés en la industria
+u1708,e397,2026-04-14,false,trabajo actual
+u1653,e339,2026-03-02,true,interés general
+u1702,e491,2023-12-06,false,posible empleador
+u1883,e29,2023-02-27,true,networking
+u1883,e325,2021-12-29,false,networking
+u1207,e406,2025-06-04,false,ex empleador
+u1108,e349,2020-09-18,false,seguimiento de ofertas
+u5,e72,2026-07-04,true,cliente potencial
+u798,e196,2025-04-08,true,posible empleador
+u1949,e107,2021-11-08,false,trabajo actual
+u724,e170,2023-08-29,false,interés en la industria
+u1953,e185,2025-07-17,false,seguimiento de ofertas
+u1478,e437,2023-01-08,true,seguimiento de ofertas
+u142,e350,2026-10-11,false,interés en la industria
+u1531,e12,2025-07-25,true,seguimiento de ofertas
+u1722,e163,2020-02-21,false,posible empleador
+u145,e378,2021-06-24,true,ex empleador
+u4,e321,2026-03-06,false,trabajo actual
+u1499,e233,2020-12-12,false,cliente potencial
+u1800,e459,2020-11-05,true,interés en la industria
+u255,e322,2020-05-20,true,interés en la industria
+u849,e279,2021-02-07,false,posible empleador
+u1719,e263,2019-02-06,true,seguimiento de ofertas
+u134,e366,2022-03-19,false,cliente potencial
+u781,e69,2023-01-03,true,seguimiento de ofertas
+u1247,e187,2023-07-07,false,ex empleador
+u1916,e313,2020-07-05,false,seguimiento de ofertas
+u156,e340,2019-09-23,false,networking
+u163,e335,2020-01-20,false,trabajo actual
+u393,e488,2024-03-29,false,networking
+u852,e189,2026-10-12,true,trabajo actual
+u221,e219,2019-09-15,true,networking
+u1191,e104,2024-07-04,true,interés general
+u1227,e258,2019-07-24,true,ex empleador
+u1444,e431,2021-01-21,true,trabajo actual
+u720,e357,2021-10-08,false,cliente potencial
+u1454,e208,2026-02-15,true,cliente potencial
+u1262,e309,2026-05-30,false,networking
+u431,e279,2026-04-08,true,seguimiento de ofertas
+u874,e474,2024-07-11,true,cliente potencial
+u1326,e207,2024-04-01,false,interés general
+u1036,e50,2022-02-01,true,trabajo actual
+u469,e436,2023-09-06,true,interés general
+u382,e370,2026-08-03,true,interés general
+u950,e475,2021-09-03,true,networking
+u1085,e30,2025-08-28,false,interés general
+u1578,e71,2022-03-28,true,posible empleador
+u757,e432,2026-01-05,true,posible empleador
+u1654,e463,2024-01-29,true,interés en la industria
+u255,e450,2022-11-23,true,seguimiento de ofertas
+u1425,e11,2021-02-18,false,trabajo actual
+u1434,e308,2021-03-31,true,ex empleador
+u617,e394,2026-07-18,false,networking
+u536,e423,2026-11-23,true,trabajo actual
+u583,e26,2025-10-23,true,interés general
+u857,e486,2026-02-05,true,interés general
+u966,e193,2021-05-03,false,seguimiento de ofertas
+u1637,e317,2024-09-12,true,interés en la industria
+u1608,e317,2023-06-24,true,ex empleador
+u381,e184,2024-04-04,true,posible empleador
+u427,e420,2021-04-23,false,ex empleador
+u184,e156,2020-03-19,true,posible empleador
+u983,e462,2020-04-11,true,cliente potencial
+u1325,e73,2020-04-30,true,interés en la industria
+u1685,e166,2019-06-26,false,cliente potencial
+u1423,e241,2025-06-18,false,trabajo actual
+u733,e363,2024-02-18,true,seguimiento de ofertas
+u643,e287,2025-04-14,false,networking
+u1545,e90,2022-11-23,true,networking
+u1145,e163,2019-05-14,false,trabajo actual
+u1894,e185,2019-01-24,true,networking
+u1814,e20,2025-04-16,false,trabajo actual
+u611,e338,2021-03-06,true,seguimiento de ofertas
+u5,e367,2023-11-11,true,posible empleador
+u988,e175,2021-06-29,false,seguimiento de ofertas
+u1682,e423,2022-11-02,true,interés en la industria
+u1221,e487,2019-08-01,false,trabajo actual
+u1969,e165,2026-09-30,true,cliente potencial
+u288,e297,2024-11-15,false,ex empleador
+u1853,e380,2023-10-09,false,networking
+u636,e407,2024-06-02,false,seguimiento de ofertas
+u429,e435,2024-09-14,false,ex empleador
+u1487,e184,2020-07-21,true,interés general
+u986,e274,2021-10-24,true,networking
+u725,e110,2021-08-09,true,cliente potencial
+u701,e69,2022-03-26,true,networking
+u794,e488,2019-07-29,true,cliente potencial
+u784,e432,2022-10-15,true,interés en la industria
+u291,e357,2023-11-29,true,interés general
+u370,e167,2025-08-01,true,trabajo actual
+u731,e82,2025-12-09,false,networking
+u1727,e126,2020-10-06,true,interés general
+u844,e415,2023-01-20,false,networking
+u1704,e405,2021-01-19,false,cliente potencial
+u1152,e248,2020-08-09,false,posible empleador
+u1004,e247,2025-04-21,false,trabajo actual
+u1521,e404,2020-11-23,false,ex empleador
+u805,e156,2023-02-25,false,interés general
+u875,e6,2023-10-12,false,cliente potencial
+u1867,e62,2025-04-11,true,interés general
+u1320,e148,2021-01-11,false,posible empleador
+u490,e327,2022-07-04,true,posible empleador
+u639,e141,2023-03-13,true,ex empleador
+u1851,e215,2023-06-03,false,ex empleador
+u1128,e232,2026-03-14,true,cliente potencial
+u201,e307,2022-06-09,false,ex empleador
+u438,e35,2026-09-26,true,networking
+u984,e221,2023-08-20,false,cliente potencial
+u984,e245,2020-12-04,false,interés en la industria
+u672,e161,2024-03-31,false,interés general
+u1840,e309,2020-04-21,true,interés en la industria
+u757,e394,2024-03-21,true,ex empleador
+u49,e368,2020-10-25,false,ex empleador
+u1205,e228,2026-06-08,true,trabajo actual
+u1272,e246,2022-01-25,false,ex empleador
+u520,e367,2025-12-08,false,ex empleador
+u1281,e323,2021-02-01,true,cliente potencial
+u306,e255,2021-05-17,true,posible empleador
+u1414,e392,2019-04-29,true,ex empleador
+u1441,e293,2026-09-04,false,interés general
+u335,e254,2020-08-06,true,interés en la industria
+u165,e30,2021-03-11,false,posible empleador
+u617,e476,2026-04-23,true,cliente potencial
+u852,e154,2019-01-09,false,ex empleador
+u1409,e229,2025-09-24,true,posible empleador
+u978,e373,2019-01-27,false,interés en la industria
+u1001,e273,2022-07-23,true,cliente potencial
+u201,e130,2019-06-10,false,interés en la industria
+u1511,e400,2024-01-23,true,cliente potencial
+u266,e388,2026-08-07,false,cliente potencial
+u1429,e377,2024-12-13,false,networking
+u981,e120,2024-04-16,true,ex empleador
+u273,e134,2026-08-28,false,seguimiento de ofertas
+u1087,e1,2023-05-24,false,seguimiento de ofertas
+u1372,e284,2021-10-31,false,interés en la industria
+u1395,e180,2026-09-27,true,ex empleador
+u1966,e271,2021-09-18,true,trabajo actual
+u394,e449,2026-11-30,false,cliente potencial
+u1856,e148,2020-05-28,false,trabajo actual
+u132,e328,2021-07-29,false,cliente potencial
+u1753,e431,2024-05-14,false,interés en la industria
+u716,e165,2021-05-15,true,cliente potencial
+u1244,e422,2019-07-08,true,networking
+u460,e435,2021-05-09,true,trabajo actual
+u1698,e82,2026-12-07,true,cliente potencial
+u917,e428,2024-02-16,true,interés general
+u1553,e133,2020-12-27,true,cliente potencial
+u1010,e411,2021-09-28,true,seguimiento de ofertas
+u1563,e467,2022-04-14,false,seguimiento de ofertas
+u1707,e53,2025-11-28,true,interés general
+u1291,e62,2025-02-03,true,seguimiento de ofertas
+u1233,e486,2022-09-28,false,posible empleador
+u689,e309,2021-07-01,false,interés en la industria
+u1426,e105,2020-07-19,true,networking
+u992,e144,2023-10-21,false,trabajo actual
+u1589,e17,2019-07-16,false,interés en la industria
+u508,e358,2019-11-29,false,ex empleador
+u884,e236,2024-03-10,false,interés en la industria
+u1385,e4,2021-10-18,true,networking
+u1537,e303,2023-12-26,false,interés en la industria
+u1441,e22,2026-02-18,false,networking
+u666,e451,2022-12-13,true,networking
+u1648,e407,2026-08-31,true,trabajo actual
+u36,e252,2024-03-15,true,posible empleador
+u1781,e169,2025-06-26,true,interés en la industria
+u223,e364,2026-09-02,false,networking
+u684,e149,2026-07-25,false,interés general
+u1313,e304,2026-03-12,false,posible empleador
+u46,e92,2023-12-05,true,ex empleador
+u1335,e77,2019-03-01,true,trabajo actual
+u1162,e107,2025-08-09,false,ex empleador
+u203,e485,2024-03-28,true,seguimiento de ofertas
+u1292,e186,2023-10-22,false,trabajo actual
+u1308,e312,2021-06-30,false,posible empleador
+u1939,e485,2020-02-18,true,interés general
+u1340,e229,2025-07-16,false,seguimiento de ofertas
+u980,e321,2022-09-28,true,seguimiento de ofertas
+u11,e32,2022-03-08,true,posible empleador
+u193,e325,2021-03-17,false,posible empleador
+u104,e253,2023-04-16,true,ex empleador
+u1006,e4,2020-08-12,false,interés en la industria
+u961,e320,2025-12-05,true,interés en la industria
+u1310,e199,2025-09-24,false,interés general
+u1994,e469,2025-03-19,false,posible empleador
+u1555,e293,2019-02-27,false,posible empleador
+u194,e371,2019-10-24,false,interés general
+u1379,e227,2024-03-22,false,trabajo actual
+u114,e222,2019-05-27,false,interés en la industria
+u584,e177,2024-04-27,true,posible empleador
+u776,e298,2022-11-03,true,interés en la industria
+u1724,e441,2024-01-23,false,posible empleador
+u119,e311,2022-05-21,true,trabajo actual
+u776,e97,2024-08-25,false,ex empleador
+u1478,e127,2019-12-05,false,ex empleador
+u1944,e8,2024-09-16,true,seguimiento de ofertas
+u107,e351,2019-11-16,false,ex empleador
+u246,e334,2023-04-16,true,posible empleador
+u1005,e263,2026-06-23,true,seguimiento de ofertas
+u1047,e201,2024-05-28,true,ex empleador
+u1823,e68,2024-12-30,false,interés en la industria
+u730,e290,2025-05-15,false,trabajo actual
+u1811,e481,2021-02-11,false,posible empleador
+u1249,e55,2025-03-19,false,cliente potencial
+u284,e225,2022-07-29,true,interés general
+u843,e44,2024-04-22,false,posible empleador
+u1093,e373,2021-09-27,true,cliente potencial
+u1036,e246,2020-08-17,false,seguimiento de ofertas
+u226,e186,2022-07-07,false,interés general
+u966,e462,2023-01-11,true,cliente potencial
+u1588,e293,2025-04-23,true,posible empleador
+u486,e494,2021-03-22,false,seguimiento de ofertas
+u1982,e123,2020-08-16,false,posible empleador
+u1894,e314,2024-04-22,true,ex empleador
+u798,e235,2020-10-30,false,networking
+u1709,e425,2023-08-22,true,interés general
+u128,e383,2023-06-10,true,posible empleador
+u1371,e239,2022-06-13,false,interés en la industria
+u1657,e92,2025-03-05,false,trabajo actual
+u292,e211,2021-04-11,true,trabajo actual
+u651,e201,2026-05-20,false,trabajo actual
+u789,e205,2021-09-28,true,networking
+u1697,e338,2025-05-15,true,trabajo actual
+u670,e270,2024-05-01,false,interés en la industria
+u232,e304,2021-05-11,false,interés general
+u1869,e86,2022-03-04,true,interés en la industria
+u1252,e415,2021-12-10,true,trabajo actual
+u1994,e400,2026-07-21,true,ex empleador
+u486,e119,2025-04-16,true,seguimiento de ofertas
+u29,e4,2025-08-18,false,trabajo actual
+u1418,e490,2026-04-17,false,trabajo actual
+u736,e254,2020-05-09,true,interés general
+u350,e92,2019-02-04,true,posible empleador
+u1504,e1,2020-04-22,false,ex empleador
+u186,e15,2026-08-18,true,cliente potencial
+u79,e267,2019-12-12,false,networking
+u1044,e449,2026-07-17,false,posible empleador
+u1637,e445,2024-02-14,false,posible empleador
+u867,e142,2020-11-17,true,cliente potencial
+u672,e289,2021-11-06,true,trabajo actual
+u122,e302,2019-10-04,false,interés en la industria
+u1157,e205,2026-04-25,false,ex empleador
+u701,e247,2025-03-27,false,interés general
+u1206,e67,2024-02-03,false,networking
+u1321,e175,2023-08-20,true,trabajo actual
+u898,e482,2020-05-18,false,networking
+u47,e416,2022-05-01,false,ex empleador
+u1277,e406,2022-03-18,false,posible empleador
+u394,e317,2023-04-26,false,posible empleador
+u800,e403,2026-10-14,true,posible empleador
+u207,e497,2023-10-03,false,trabajo actual
+u1340,e116,2024-11-15,false,cliente potencial
+u1977,e220,2025-12-11,true,networking
+u98,e379,2025-06-11,false,trabajo actual
+u1532,e447,2022-05-15,true,interés general
+u925,e473,2020-05-03,true,ex empleador
+u1694,e65,2023-03-13,true,seguimiento de ofertas
+u444,e255,2021-05-02,true,posible empleador
+u1153,e137,2020-10-01,true,trabajo actual
+u348,e196,2020-06-19,false,trabajo actual
+u1092,e69,2024-01-16,false,cliente potencial
+u1553,e79,2026-03-20,false,interés general
+u307,e65,2020-02-01,false,ex empleador
+u338,e92,2021-10-07,false,interés en la industria
+u872,e492,2022-04-11,true,ex empleador
+u1552,e158,2021-03-19,true,interés en la industria
+u845,e235,2022-06-21,true,cliente potencial
+u1125,e463,2022-01-19,false,interés general
+u1414,e132,2026-12-19,true,interés en la industria
+u1654,e70,2024-11-16,true,cliente potencial
+u954,e260,2021-04-17,true,posible empleador
+u982,e451,2021-05-14,true,networking
+u623,e284,2026-12-13,true,interés general
+u1553,e49,2025-05-13,false,cliente potencial
+u1307,e35,2023-12-14,true,posible empleador
+u370,e96,2022-09-08,false,interés en la industria
+u1312,e35,2026-05-22,false,seguimiento de ofertas
+u19,e346,2023-10-07,false,posible empleador
+u1414,e183,2020-07-13,true,interés en la industria
+u109,e117,2020-04-22,false,seguimiento de ofertas
+u81,e98,2021-10-11,true,seguimiento de ofertas
+u840,e431,2020-01-12,false,interés en la industria
+u897,e298,2026-11-15,true,trabajo actual
+u1657,e379,2022-08-08,true,cliente potencial
+u399,e262,2020-12-29,false,networking
+u508,e178,2020-11-05,true,cliente potencial
+u1264,e33,2019-08-27,true,posible empleador
+u1485,e129,2025-05-13,false,interés general
+u1732,e90,2021-05-09,false,seguimiento de ofertas
+u612,e421,2024-05-18,true,ex empleador
+u1018,e11,2020-12-06,false,networking
+u334,e358,2025-03-24,false,networking
+u1181,e275,2022-07-22,false,networking
+u772,e182,2023-10-31,true,seguimiento de ofertas
+u643,e116,2020-05-21,true,networking
+u1041,e9,2025-01-01,false,cliente potencial
+u991,e30,2023-12-30,false,networking
+u1798,e1,2020-01-03,false,posible empleador
+u1205,e261,2023-01-29,true,seguimiento de ofertas
+u107,e164,2025-01-12,true,ex empleador
+u1108,e138,2025-11-28,false,interés en la industria
+u1298,e422,2026-10-28,false,interés en la industria
+u1090,e459,2021-04-30,false,networking
+u1987,e347,2019-02-02,true,trabajo actual
+u796,e356,2021-03-23,false,ex empleador
+u487,e362,2020-05-07,false,seguimiento de ofertas
+u377,e428,2019-10-13,true,networking
+u1899,e164,2022-08-07,true,networking
+u1083,e305,2024-01-03,false,ex empleador
+u1474,e168,2021-12-14,true,ex empleador
+u115,e209,2024-11-19,true,trabajo actual
+u1461,e388,2026-08-26,false,trabajo actual
+u1578,e474,2026-11-23,true,ex empleador
+u1849,e46,2024-08-02,false,trabajo actual
+u339,e343,2022-12-02,false,posible empleador
+u1397,e269,2021-10-01,true,cliente potencial
+u1213,e240,2019-04-16,true,ex empleador
+u504,e286,2025-03-21,true,networking
+u467,e279,2020-09-06,true,interés general
+u85,e358,2020-01-22,true,interés en la industria
+u301,e162,2022-09-08,true,interés general
+u1442,e461,2020-02-22,false,interés general
+u1024,e283,2020-02-29,false,posible empleador
+u1692,e6,2019-01-11,true,cliente potencial
+u26,e324,2019-06-05,false,interés en la industria
+u891,e442,2025-11-27,true,seguimiento de ofertas
+u1965,e72,2025-04-15,true,networking
+u1725,e352,2021-06-04,true,interés general
+u1293,e467,2026-12-23,true,posible empleador
+u1444,e401,2026-03-11,true,interés general
+u596,e34,2023-05-03,false,ex empleador
+u1587,e67,2026-01-17,false,trabajo actual
+u1472,e10,2022-05-11,false,posible empleador
+u1103,e181,2020-01-13,true,posible empleador
+u1297,e342,2024-06-25,false,trabajo actual
+u672,e322,2021-01-29,true,ex empleador
+u1273,e326,2024-07-29,true,trabajo actual
+u1322,e443,2026-05-11,true,seguimiento de ofertas
+u1001,e425,2020-11-30,false,interés general
+u113,e413,2022-01-03,true,interés en la industria
+u2,e216,2024-10-14,true,trabajo actual
+u706,e378,2019-08-26,true,ex empleador
+u888,e426,2024-02-23,true,cliente potencial
+u1437,e145,2021-07-01,true,networking
+u964,e467,2019-02-14,true,posible empleador
+u530,e275,2019-07-23,false,ex empleador
+u1133,e212,2023-08-03,false,networking
+u1425,e309,2026-09-07,false,networking
+u1152,e235,2024-03-19,false,interés general
+u1142,e373,2020-06-28,false,cliente potencial
+u1684,e466,2019-09-23,false,seguimiento de ofertas
+u603,e314,2025-10-15,false,ex empleador
+u308,e59,2022-01-04,false,networking
+u1745,e390,2020-01-18,true,networking
+u240,e170,2021-04-21,false,interés general
+u310,e190,2020-03-31,true,interés en la industria
+u1746,e415,2021-02-28,true,seguimiento de ofertas
+u1058,e213,2022-10-14,true,seguimiento de ofertas
+u415,e361,2022-04-10,false,seguimiento de ofertas
+u1999,e216,2021-08-06,false,seguimiento de ofertas
+u1166,e490,2025-06-21,false,trabajo actual
+u61,e135,2025-11-27,true,seguimiento de ofertas
+u1749,e155,2021-01-11,false,ex empleador
+u1208,e40,2019-10-01,true,ex empleador
+u60,e426,2026-07-30,false,networking
+u123,e471,2023-08-25,true,interés general
+u1472,e44,2026-06-09,true,networking
+u1315,e383,2019-01-09,true,cliente potencial
+u1594,e290,2024-07-05,true,posible empleador
+u1660,e154,2019-02-04,true,seguimiento de ofertas
+u1660,e312,2021-04-29,false,ex empleador
+u1646,e217,2023-01-23,false,interés en la industria
+u774,e270,2020-05-15,false,cliente potencial
+u6,e349,2023-07-31,true,ex empleador
+u756,e231,2024-03-29,false,seguimiento de ofertas
+u1139,e13,2019-11-06,false,interés general
+u171,e325,2024-11-29,false,networking
+u162,e303,2024-10-21,true,posible empleador
+u510,e293,2019-07-09,false,interés general
+u1697,e165,2021-01-14,false,ex empleador
+u1510,e332,2020-11-24,false,trabajo actual
+u1763,e176,2023-05-05,false,trabajo actual
+u653,e104,2026-10-26,true,cliente potencial
+u10,e8,2024-04-17,false,trabajo actual
+u375,e321,2019-01-11,false,interés en la industria
+u639,e343,2023-11-05,true,posible empleador
+u1607,e175,2021-03-08,true,interés general
+u1430,e223,2022-10-14,false,trabajo actual
+u409,e391,2020-10-18,false,seguimiento de ofertas
+u1863,e190,2019-10-29,true,posible empleador
+u865,e359,2021-07-09,true,interés general
+u1795,e73,2019-09-23,false,networking
+u427,e471,2025-03-01,true,posible empleador
+u420,e422,2023-07-21,true,trabajo actual
+u223,e404,2024-08-17,true,posible empleador
+u989,e350,2021-06-09,true,ex empleador
+u480,e380,2026-01-23,false,interés general
+u867,e372,2020-11-30,false,networking
+u816,e17,2021-02-22,true,interés general
+u450,e267,2022-01-20,true,cliente potencial
+u1560,e106,2020-08-15,true,interés general
+u1649,e382,2021-06-17,false,interés en la industria
+u1482,e269,2023-07-01,true,interés general
+u1749,e115,2022-07-02,false,interés en la industria
+u464,e56,2023-04-14,true,cliente potencial
+u1868,e269,2021-01-04,true,posible empleador
+u1603,e255,2021-09-26,true,cliente potencial
+u1362,e352,2024-10-08,false,seguimiento de ofertas
+u1669,e257,2020-12-09,false,ex empleador
+u1045,e490,2024-06-13,false,ex empleador
+u1218,e401,2019-11-14,true,posible empleador
+u1586,e248,2026-07-07,true,posible empleador
+u1802,e379,2019-06-03,true,interés general
+u177,e246,2022-12-27,true,interés general
+u1181,e234,2022-09-01,false,interés en la industria
+u845,e444,2025-11-14,true,posible empleador
+u543,e365,2021-08-04,false,trabajo actual
+u261,e137,2026-03-19,true,interés en la industria
+u1744,e253,2024-01-30,true,networking
+u1921,e291,2025-02-13,false,networking
+u348,e161,2025-05-01,false,cliente potencial
+u761,e145,2025-07-02,true,trabajo actual
+u626,e163,2024-02-06,false,trabajo actual
+u1023,e258,2024-05-14,false,interés en la industria
+u557,e442,2021-07-29,true,interés general
+u1228,e250,2021-10-06,true,interés general
+u787,e194,2024-07-04,true,interés en la industria
+u136,e169,2021-10-24,false,interés general
+u56,e399,2020-09-28,true,ex empleador
+u737,e303,2020-11-01,true,trabajo actual
+u1200,e433,2021-12-29,false,ex empleador
+u288,e304,2019-06-18,true,posible empleador
+u570,e154,2021-07-03,true,trabajo actual
+u307,e458,2021-02-04,true,ex empleador
+u1714,e429,2023-06-09,false,posible empleador
+u315,e261,2026-03-25,true,interés general
+u265,e489,2021-04-25,false,ex empleador
+u1279,e249,2021-03-14,false,seguimiento de ofertas
+u443,e4,2024-01-30,true,cliente potencial
+u1778,e497,2025-12-20,false,ex empleador
+u124,e78,2024-02-05,true,seguimiento de ofertas
+u129,e146,2020-08-15,false,cliente potencial
+u53,e142,2019-06-13,true,posible empleador
+u747,e35,2019-01-31,false,trabajo actual
+u1390,e59,2020-12-30,false,cliente potencial
+u1616,e438,2025-04-12,true,interés general
+u1995,e58,2023-10-06,false,seguimiento de ofertas
+u1282,e473,2020-11-20,true,trabajo actual
+u962,e269,2021-08-25,true,seguimiento de ofertas
+u1332,e323,2021-06-09,false,seguimiento de ofertas
+u1122,e61,2019-01-21,true,ex empleador
+u995,e424,2024-02-08,false,interés en la industria
+u1100,e356,2025-06-10,false,trabajo actual
+u563,e30,2024-01-16,true,trabajo actual
+u887,e185,2022-08-14,false,networking
+u1190,e317,2026-01-29,false,interés general
+u1093,e44,2020-03-22,true,interés general
+u559,e345,2026-11-26,false,networking
+u837,e411,2024-02-17,true,interés en la industria
+u600,e78,2026-04-12,true,networking
+u1741,e308,2020-02-12,false,posible empleador
+u1805,e203,2020-12-12,true,cliente potencial
+u58,e7,2024-01-07,true,interés en la industria
+u1254,e97,2025-10-14,false,cliente potencial
+u1081,e315,2026-09-07,false,interés en la industria
+u1102,e228,2023-06-11,true,trabajo actual
+u912,e418,2022-01-03,false,seguimiento de ofertas
+u1481,e237,2026-01-12,true,ex empleador
+u1617,e352,2019-08-07,true,networking
+u1814,e258,2023-06-11,true,networking
+u1354,e159,2025-10-24,false,interés en la industria
+u918,e63,2021-05-02,false,interés general
+u959,e335,2021-12-22,true,networking
+u1299,e236,2020-01-09,true,interés general
+u1307,e389,2020-12-02,true,interés en la industria
+u1314,e5,2022-08-06,false,ex empleador
+u1094,e387,2025-11-18,false,seguimiento de ofertas
+u1424,e482,2025-02-13,true,ex empleador
+u1643,e314,2020-01-31,false,networking
+u429,e211,2024-02-12,true,ex empleador
+u220,e54,2020-01-27,true,interés en la industria
+u1495,e221,2025-06-19,false,interés en la industria
+u1711,e351,2019-04-11,true,ex empleador
+u1124,e462,2022-01-21,true,cliente potencial
+u115,e165,2020-05-16,false,networking
+u1591,e475,2022-09-30,false,trabajo actual
+u657,e445,2022-05-25,true,posible empleador
+u1415,e436,2025-10-20,false,interés general
+u1644,e195,2023-07-08,true,trabajo actual
+u1912,e450,2020-12-15,false,seguimiento de ofertas
+u421,e312,2020-10-31,false,ex empleador
+u506,e456,2023-04-06,false,interés general
+u807,e250,2019-04-15,true,interés en la industria
+u49,e287,2023-08-29,true,posible empleador
+u1829,e317,2021-11-25,false,interés en la industria
+u990,e183,2025-01-08,false,networking
+u777,e453,2022-05-09,true,posible empleador
+u73,e25,2020-08-30,true,posible empleador
+u1114,e64,2019-06-20,false,ex empleador
+u904,e251,2024-06-22,true,networking
+u355,e392,2020-02-22,true,trabajo actual
+u921,e279,2026-07-27,false,interés en la industria
+u738,e252,2025-11-26,true,interés general
+u1244,e109,2021-12-01,false,seguimiento de ofertas
+u276,e158,2021-08-18,false,ex empleador
+u1916,e1,2019-04-07,true,ex empleador
+u822,e454,2024-12-24,true,seguimiento de ofertas
+u1559,e264,2019-03-25,true,interés general
+u1970,e278,2026-01-31,true,ex empleador
+u1399,e349,2023-10-14,false,networking
+u85,e350,2021-04-28,false,interés general
+u1063,e267,2024-03-30,true,interés en la industria
+u1752,e96,2022-10-26,false,posible empleador
+u946,e74,2025-01-17,false,posible empleador
+u1473,e443,2022-01-18,false,networking
+u1894,e444,2021-01-05,false,seguimiento de ofertas
+u440,e356,2022-03-07,true,interés en la industria
+u1622,e377,2025-10-27,true,posible empleador
+u362,e472,2026-01-13,true,ex empleador
+u616,e466,2022-02-16,false,trabajo actual
+u1084,e193,2023-09-03,true,networking
+u629,e256,2026-05-06,false,ex empleador
+u1911,e390,2023-10-29,false,ex empleador
+u1485,e323,2023-11-08,false,networking
+u691,e291,2025-10-31,true,posible empleador
+u889,e467,2025-06-22,true,networking
+u1402,e489,2021-10-13,false,ex empleador
+u391,e92,2026-08-15,true,interés en la industria
+u1022,e129,2025-01-29,true,seguimiento de ofertas
+u1263,e497,2022-06-11,false,cliente potencial
+u369,e215,2024-07-17,false,interés en la industria
+u1905,e231,2023-10-10,false,interés general
+u503,e68,2019-01-02,false,interés general
+u1925,e413,2022-07-02,true,seguimiento de ofertas
+u1376,e290,2023-05-25,false,networking
+u1839,e372,2021-06-18,false,cliente potencial
+u1449,e53,2023-08-23,true,posible empleador
+u73,e185,2026-12-13,false,trabajo actual
+u1216,e367,2021-04-29,false,trabajo actual
+u1967,e163,2021-08-26,true,networking
+u1438,e158,2021-01-05,true,cliente potencial
+u1382,e392,2025-01-29,false,ex empleador
+u1328,e95,2019-10-30,false,cliente potencial
+u870,e481,2022-04-05,false,posible empleador
+u883,e0,2026-10-06,true,networking
+u273,e125,2019-05-19,true,networking
+u1921,e355,2022-04-21,false,seguimiento de ofertas
+u275,e16,2024-10-10,false,trabajo actual
+u537,e93,2022-05-09,true,ex empleador
+u821,e161,2025-11-21,false,ex empleador
+u1570,e95,2019-06-28,false,interés en la industria
+u402,e259,2019-09-05,true,networking
+u505,e30,2024-02-29,false,cliente potencial
+u574,e233,2019-07-07,true,interés general
+u1418,e483,2020-11-29,true,interés en la industria
+u1563,e495,2020-01-24,false,cliente potencial
+u1263,e81,2023-05-07,false,seguimiento de ofertas
+u1391,e290,2024-07-16,true,posible empleador
+u11,e367,2021-01-21,false,interés en la industria
+u1263,e37,2023-11-20,true,networking
+u1696,e343,2022-10-21,true,networking
+u1113,e410,2026-02-08,false,ex empleador
+u1912,e415,2020-04-11,true,seguimiento de ofertas
+u1604,e268,2023-09-27,true,interés en la industria
+u496,e318,2019-06-27,true,interés general
+u441,e480,2025-02-13,false,ex empleador
+u264,e142,2021-07-10,false,posible empleador
+u1298,e275,2024-06-19,false,ex empleador
+u824,e63,2021-06-10,false,ex empleador
+u1064,e22,2020-05-12,true,posible empleador
+u605,e456,2021-09-28,true,interés general
+u46,e194,2026-10-20,false,trabajo actual
+u1413,e337,2025-08-08,false,seguimiento de ofertas
+u1754,e0,2021-09-15,true,trabajo actual
+u39,e341,2021-02-26,true,networking
+u578,e344,2024-01-07,true,interés en la industria
+u618,e187,2019-02-28,true,cliente potencial
+u60,e462,2023-04-28,false,posible empleador
+u42,e33,2024-01-27,false,cliente potencial
+u1020,e100,2024-01-07,true,networking
+u925,e266,2026-06-01,true,seguimiento de ofertas
+u1685,e72,2023-11-05,false,trabajo actual
+u423,e124,2019-04-11,true,trabajo actual
+u1098,e98,2022-10-09,true,posible empleador
+u719,e30,2022-12-09,false,interés en la industria
+u1750,e490,2019-04-07,false,cliente potencial
+u1148,e70,2022-05-14,false,interés general
+u524,e49,2024-12-01,true,interés general
+u1058,e43,2019-07-29,false,posible empleador
+u1968,e434,2023-12-01,false,interés en la industria
+u94,e96,2026-02-18,true,seguimiento de ofertas
+u1453,e186,2021-10-11,false,interés general
+u283,e175,2022-02-04,true,interés general
+u139,e397,2021-10-27,false,trabajo actual
+u615,e221,2026-06-10,true,cliente potencial
+u921,e64,2021-12-29,false,interés general
+u958,e227,2026-05-04,false,seguimiento de ofertas
+u928,e92,2026-11-28,true,seguimiento de ofertas
+u1012,e95,2024-08-20,false,interés general
+u1495,e316,2024-10-07,false,interés general
+u637,e487,2019-08-15,false,interés general
+u1324,e365,2020-03-06,true,interés general
+u29,e481,2025-07-08,true,posible empleador
+u30,e493,2022-03-28,false,ex empleador
+u1755,e474,2025-11-17,false,seguimiento de ofertas
+u1823,e62,2021-03-13,true,networking
+u812,e89,2025-07-12,false,posible empleador
+u771,e87,2022-06-30,true,posible empleador
+u1699,e123,2025-11-29,false,posible empleador
+u1966,e489,2020-01-18,true,interés general
+u1214,e78,2026-01-27,false,ex empleador
+u567,e85,2025-01-31,false,interés general
+u290,e244,2023-07-25,true,interés en la industria
+u1012,e122,2023-11-30,true,cliente potencial
+u1365,e472,2022-11-15,false,seguimiento de ofertas
+u679,e147,2019-06-28,false,interés general
+u1271,e397,2026-05-16,true,seguimiento de ofertas
+u724,e1,2021-12-28,false,posible empleador
+u1976,e387,2023-05-10,false,ex empleador
+u1288,e425,2020-01-07,true,interés general
+u25,e460,2025-06-12,true,posible empleador
+u1936,e290,2021-09-25,false,seguimiento de ofertas
+u367,e481,2019-12-16,false,posible empleador
+u1281,e239,2024-04-24,false,cliente potencial
+u1364,e306,2024-05-10,false,ex empleador
+u399,e437,2023-11-26,true,networking
+u1899,e370,2022-12-26,false,interés general
+u607,e359,2025-02-18,false,ex empleador
+u1699,e174,2025-12-08,false,cliente potencial
+u95,e155,2025-12-10,false,posible empleador
+u904,e323,2020-05-04,false,interés en la industria
+u115,e367,2026-05-14,true,posible empleador
+u395,e345,2025-03-02,false,cliente potencial
+u1931,e330,2023-03-07,true,posible empleador
+u1097,e472,2022-10-10,true,seguimiento de ofertas
+u1847,e143,2026-12-10,false,interés en la industria
+u136,e341,2026-08-15,false,ex empleador
+u391,e344,2026-07-08,false,seguimiento de ofertas
+u1516,e139,2026-07-28,false,posible empleador
+u1121,e301,2024-03-07,true,posible empleador
+u110,e484,2023-12-05,false,seguimiento de ofertas
+u55,e405,2025-03-26,true,cliente potencial
+u1415,e478,2026-12-01,true,trabajo actual
+u1565,e345,2025-02-14,false,ex empleador
+u121,e467,2020-07-29,false,interés en la industria
+u1960,e64,2025-02-27,false,networking
+u1257,e444,2023-10-31,true,cliente potencial
+u520,e24,2022-09-09,true,posible empleador
+u715,e234,2025-02-10,false,trabajo actual
+u1228,e487,2020-10-10,false,networking
+u1084,e334,2024-09-14,true,posible empleador
+u401,e146,2020-04-24,true,trabajo actual
+u1191,e171,2019-08-10,false,networking
+u658,e488,2021-10-18,false,seguimiento de ofertas
+u72,e198,2024-06-03,false,seguimiento de ofertas
+u367,e50,2026-06-03,false,cliente potencial
+u1305,e417,2025-10-25,false,posible empleador
+u984,e492,2020-02-07,false,seguimiento de ofertas
+u1294,e0,2020-09-29,false,interés general
+u1613,e411,2021-05-14,false,cliente potencial
+u1216,e66,2022-01-22,false,seguimiento de ofertas
+u635,e296,2022-11-25,true,networking
+u561,e126,2019-06-11,false,interés general
+u606,e306,2024-04-25,false,seguimiento de ofertas
+u1233,e417,2023-04-29,false,cliente potencial
+u1549,e268,2026-09-25,true,cliente potencial
+u1042,e200,2024-04-02,true,interés general
+u1179,e211,2019-05-10,true,networking
+u302,e348,2024-04-25,true,interés en la industria
+u1217,e265,2026-10-15,false,seguimiento de ofertas
+u265,e278,2024-09-19,false,interés general
+u633,e279,2020-04-28,true,seguimiento de ofertas
+u819,e108,2022-06-16,false,trabajo actual
+u1718,e26,2020-12-26,false,seguimiento de ofertas
+u268,e457,2021-03-05,false,interés en la industria
+u1398,e167,2023-05-16,true,networking
+u713,e20,2023-08-01,false,networking
+u733,e298,2024-12-22,true,interés general
+u1156,e79,2021-12-27,true,networking
+u1667,e65,2024-02-13,false,trabajo actual
+u1089,e402,2026-11-30,true,interés en la industria
+u490,e91,2024-11-28,false,posible empleador
+u396,e263,2019-11-23,false,ex empleador
+u1632,e415,2025-08-17,false,interés general
+u345,e347,2023-11-03,false,cliente potencial
+u1750,e382,2019-05-06,false,trabajo actual
+u1288,e6,2020-07-18,true,ex empleador
+u686,e225,2024-10-16,false,cliente potencial
+u438,e218,2020-01-07,false,posible empleador
+u624,e61,2021-09-02,true,ex empleador
+u749,e170,2019-05-31,true,seguimiento de ofertas
+u1632,e356,2025-01-30,true,trabajo actual
+u632,e322,2026-02-03,true,interés en la industria
+u1806,e28,2019-06-22,true,posible empleador
+u1921,e235,2020-02-24,false,trabajo actual
+u813,e452,2025-05-10,false,cliente potencial
+u1076,e152,2019-05-27,true,ex empleador
+u227,e256,2026-06-19,true,seguimiento de ofertas
+u1101,e478,2021-01-25,true,interés general
+u1671,e55,2024-09-22,true,cliente potencial
+u1751,e415,2025-03-01,true,trabajo actual
+u585,e265,2020-11-02,true,cliente potencial
+u1363,e95,2023-10-05,true,interés general
+u793,e100,2025-04-22,false,interés en la industria
+u101,e72,2025-05-10,true,interés en la industria
+u723,e296,2026-04-28,true,trabajo actual
+u1735,e23,2026-09-29,false,trabajo actual
+u768,e51,2020-07-04,false,cliente potencial
+u1525,e391,2021-11-03,true,seguimiento de ofertas
+u1264,e418,2020-05-03,true,trabajo actual
+u1925,e311,2019-02-19,true,trabajo actual
+u569,e402,2025-02-23,true,networking
+u1710,e348,2022-03-22,false,networking
+u1233,e160,2020-01-04,true,ex empleador
+u596,e130,2021-06-30,false,cliente potencial
+u1102,e229,2022-12-05,true,ex empleador
+u1489,e388,2019-01-30,false,trabajo actual
+u767,e296,2020-04-14,false,ex empleador
+u225,e244,2026-11-13,false,trabajo actual
+u36,e134,2023-02-28,false,seguimiento de ofertas
+u1241,e269,2023-08-20,true,interés en la industria
+u1543,e397,2026-02-04,false,seguimiento de ofertas
+u454,e331,2022-06-14,false,interés en la industria
+u126,e235,2025-12-22,true,interés en la industria
+u1102,e141,2020-04-12,false,cliente potencial
+u340,e352,2025-10-26,false,interés en la industria
+u1580,e191,2019-01-25,true,cliente potencial
+u1051,e435,2022-01-03,false,ex empleador
+u1589,e80,2022-02-06,true,interés en la industria
+u502,e140,2023-03-12,true,seguimiento de ofertas
+u1618,e225,2021-02-03,false,networking
+u277,e313,2026-08-20,true,interés general
+u1465,e382,2026-10-13,true,cliente potencial
+u1384,e79,2019-09-18,true,interés en la industria
+u922,e95,2021-02-18,true,seguimiento de ofertas
+u1276,e131,2023-01-23,false,networking
+u938,e86,2020-01-27,false,interés en la industria
+u1538,e448,2021-09-07,true,cliente potencial
+u1413,e125,2024-06-05,true,networking
+u818,e114,2025-12-19,true,cliente potencial
+u1614,e482,2023-01-22,true,trabajo actual
+u107,e330,2019-09-18,true,cliente potencial
+u406,e36,2019-06-04,true,seguimiento de ofertas
+u37,e389,2021-05-17,true,networking
+u1738,e317,2026-10-05,false,seguimiento de ofertas
+u628,e303,2024-03-16,true,cliente potencial
+u649,e450,2026-01-16,false,interés general
+u763,e39,2024-07-19,false,ex empleador
+u97,e354,2019-12-22,false,posible empleador
+u1348,e357,2026-07-01,false,interés en la industria
+u556,e148,2019-06-22,true,interés general
+u426,e354,2021-01-07,false,networking
+u199,e74,2019-09-06,true,seguimiento de ofertas
+u646,e180,2026-03-04,true,posible empleador
+u1056,e90,2019-02-19,true,interés en la industria
+u1320,e409,2026-02-26,true,trabajo actual
+u1280,e80,2019-10-20,true,posible empleador
+u1374,e450,2024-03-26,false,posible empleador
+u1731,e285,2023-12-30,true,interés general
+u1201,e266,2025-10-15,true,networking
+u1771,e106,2024-06-25,false,posible empleador
+u1656,e23,2021-11-17,false,networking
+u1608,e9,2026-03-13,true,networking
+u847,e390,2025-08-13,false,seguimiento de ofertas
+u1688,e107,2023-01-13,true,posible empleador
+u1371,e12,2023-07-12,false,interés general
+u1422,e286,2022-11-12,false,networking
+u97,e235,2024-05-10,true,interés general
+u246,e205,2024-09-17,false,networking
+u1979,e26,2024-05-18,false,posible empleador
+u790,e152,2022-01-06,false,trabajo actual
+u830,e61,2022-05-12,false,interés general
+u574,e418,2019-01-29,false,posible empleador
+u63,e274,2023-07-30,true,seguimiento de ofertas
+u1041,e276,2025-10-12,true,interés general
+u635,e223,2026-02-20,true,interés general
+u1229,e445,2022-03-05,true,cliente potencial
+u1175,e461,2020-01-21,false,networking
+u658,e230,2019-09-28,false,cliente potencial
+u1461,e157,2019-04-26,true,networking
+u1226,e372,2019-12-24,false,ex empleador
+u934,e488,2021-02-08,false,ex empleador
+u713,e36,2024-04-18,true,interés general
+u1350,e79,2025-03-25,true,networking
+u264,e254,2024-03-27,true,interés en la industria
+u1603,e418,2026-02-08,false,interés general
+u804,e367,2026-10-15,false,interés general
+u1234,e385,2023-07-29,false,cliente potencial
+u1746,e210,2022-09-24,false,posible empleador
+u1039,e236,2026-11-25,true,posible empleador
+u1101,e34,2021-04-18,true,interés en la industria
+u1482,e234,2023-10-12,true,posible empleador
+u1874,e29,2022-02-25,false,networking
+u1689,e483,2019-08-26,true,interés general
+u1263,e257,2025-01-18,false,seguimiento de ofertas
+u1476,e433,2024-03-26,false,trabajo actual
+u1000,e181,2023-06-08,true,interés en la industria
+u650,e126,2022-09-22,true,seguimiento de ofertas
+u734,e166,2022-05-28,false,interés general
+u851,e367,2026-11-29,true,interés general
+u378,e391,2019-09-12,false,cliente potencial
+u818,e435,2020-05-16,true,interés en la industria
+u1417,e476,2026-12-01,false,ex empleador
+u1238,e417,2022-09-03,true,posible empleador
+u1819,e251,2025-11-23,false,seguimiento de ofertas
+u1653,e176,2020-09-24,false,trabajo actual
+u1938,e18,2025-08-27,false,seguimiento de ofertas
+u755,e28,2023-09-03,true,interés en la industria
+u464,e91,2020-06-27,true,seguimiento de ofertas
+u873,e134,2022-06-24,true,posible empleador
+u558,e488,2021-08-28,true,cliente potencial
+u954,e51,2020-02-20,true,cliente potencial
+u1851,e278,2023-01-28,true,seguimiento de ofertas
+u1874,e447,2025-05-29,false,posible empleador
+u361,e270,2026-03-19,true,trabajo actual
+u1278,e357,2024-09-03,false,interés general
+u351,e344,2025-02-22,true,interés en la industria
+u1947,e222,2024-12-20,true,interés general
+u1149,e210,2022-09-12,false,seguimiento de ofertas
+u1452,e236,2025-04-11,true,cliente potencial
+u1316,e321,2024-12-04,true,networking
+u698,e357,2023-04-08,false,interés general
+u1170,e221,2020-10-18,false,ex empleador
+u632,e129,2023-07-13,false,ex empleador
+u585,e406,2026-12-11,false,interés general
+u1297,e177,2022-10-09,true,trabajo actual
+u321,e223,2020-03-04,false,posible empleador
+u608,e155,2025-01-25,false,posible empleador
+u326,e428,2019-10-10,false,cliente potencial
+u688,e23,2021-07-09,true,networking
+u1735,e407,2026-09-25,true,seguimiento de ofertas
+u1783,e52,2026-10-11,false,interés en la industria
+u31,e389,2023-02-24,true,posible empleador
+u1097,e219,2026-01-06,true,seguimiento de ofertas
+u456,e56,2026-10-05,false,interés general
+u543,e257,2026-10-13,true,posible empleador
+u252,e329,2019-04-08,false,ex empleador
+u522,e132,2026-03-19,false,interés general
+u193,e233,2020-02-01,false,interés general
+u1712,e129,2020-09-13,false,ex empleador
+u1363,e203,2026-02-10,true,posible empleador
+u100,e289,2020-01-02,true,interés general
+u340,e176,2023-08-14,false,interés en la industria
+u478,e214,2025-09-08,false,trabajo actual
+u64,e90,2023-03-14,false,trabajo actual
+u34,e143,2020-01-10,true,interés en la industria
+u372,e427,2023-12-17,false,interés general
+u1293,e244,2021-01-17,false,seguimiento de ofertas
+u919,e389,2019-11-25,false,networking
+u1172,e334,2025-07-05,false,interés general
+u367,e148,2024-03-27,true,ex empleador
+u1360,e490,2020-02-06,false,posible empleador
+u1522,e231,2024-04-08,true,trabajo actual
+u977,e397,2020-04-09,true,cliente potencial
+u1740,e198,2019-08-07,false,interés general
+u867,e339,2021-05-01,false,interés general
+u571,e308,2019-01-29,true,trabajo actual
+u335,e220,2024-11-01,false,ex empleador
+u1597,e300,2023-06-17,true,networking
+u446,e290,2022-02-02,true,posible empleador
+u200,e241,2020-09-16,true,cliente potencial
+u1912,e441,2022-05-12,false,trabajo actual
+u68,e372,2024-12-10,true,interés general
+u81,e137,2026-07-23,true,posible empleador
+u613,e42,2023-03-13,true,trabajo actual
+u1935,e258,2019-04-27,false,trabajo actual
+u1898,e94,2025-05-28,false,interés en la industria
+u1594,e435,2020-05-16,true,interés general
+u858,e223,2021-10-09,true,posible empleador
+u129,e196,2019-12-28,true,cliente potencial
+u629,e222,2020-05-02,false,ex empleador
+u793,e466,2019-12-28,false,networking
+u1657,e88,2020-02-06,false,interés en la industria
+u1325,e4,2020-03-16,true,trabajo actual
+u883,e261,2022-04-24,false,interés general
+u452,e483,2025-07-08,false,posible empleador
+u51,e40,2020-12-06,true,networking
+u1071,e386,2020-01-02,true,posible empleador
+u1354,e396,2021-08-20,false,ex empleador
+u936,e43,2023-03-19,true,seguimiento de ofertas
+u226,e325,2021-01-01,true,trabajo actual
+u475,e283,2020-03-06,true,cliente potencial
+u1529,e377,2025-05-12,false,cliente potencial
+u1188,e59,2021-07-28,true,cliente potencial
+u1086,e273,2021-04-27,true,interés general
+u160,e86,2025-10-26,false,trabajo actual
+u869,e61,2026-09-13,false,posible empleador
+u44,e326,2023-04-04,false,trabajo actual
+u232,e162,2024-09-05,true,networking
+u1287,e147,2021-03-18,true,ex empleador
+u143,e143,2026-03-16,false,networking
+u924,e207,2021-10-18,true,networking
+u1241,e276,2022-08-28,true,interés general
+u1841,e329,2025-12-26,false,ex empleador
+u616,e405,2024-01-27,false,networking
+u849,e65,2021-11-09,true,posible empleador
+u216,e408,2023-06-01,false,trabajo actual
+u1829,e397,2026-09-28,false,cliente potencial
+u1557,e492,2022-10-27,false,networking
+u1161,e372,2022-10-29,false,interés en la industria
+u1914,e62,2022-11-02,true,interés general
+u1711,e85,2021-05-23,false,networking
+u590,e397,2020-12-14,false,networking
+u111,e143,2019-02-06,false,seguimiento de ofertas
+u1258,e392,2024-01-16,false,interés en la industria
+u488,e180,2025-03-23,false,networking
+u694,e344,2021-11-21,true,seguimiento de ofertas
+u627,e73,2024-01-01,false,networking
+u1832,e330,2024-08-20,true,trabajo actual
+u729,e8,2025-07-31,false,seguimiento de ofertas
+u1287,e219,2022-07-23,true,interés en la industria
+u761,e458,2021-08-09,true,interés general
+u1426,e432,2025-10-10,true,interés en la industria
+u1367,e312,2021-12-07,true,cliente potencial
+u1400,e390,2025-04-20,true,interés en la industria
+u65,e393,2025-11-21,false,trabajo actual
+u298,e124,2020-01-17,true,posible empleador
+u1017,e139,2022-12-31,true,interés en la industria
+u1831,e186,2024-02-20,false,ex empleador
+u459,e487,2019-05-16,false,trabajo actual
+u903,e378,2025-11-09,false,ex empleador
+u1907,e406,2022-08-23,true,seguimiento de ofertas
+u1831,e90,2025-11-11,true,trabajo actual
+u1448,e371,2020-09-09,false,seguimiento de ofertas
+u1845,e324,2023-06-21,false,ex empleador
+u1485,e430,2020-02-20,true,interés general
+u1983,e462,2026-05-14,false,trabajo actual
+u1578,e243,2022-11-13,true,networking
+u529,e38,2025-04-08,false,interés en la industria
+u1201,e486,2020-08-31,true,networking
+u848,e417,2019-06-19,true,ex empleador
+u1527,e443,2021-04-15,true,trabajo actual
+u1776,e166,2024-04-25,false,ex empleador
+u1228,e49,2023-07-19,false,ex empleador
+u1502,e141,2025-12-20,true,trabajo actual
+u381,e488,2021-08-08,false,seguimiento de ofertas
+u256,e63,2024-06-27,false,cliente potencial
+u314,e390,2025-11-23,false,ex empleador
+u1393,e374,2023-02-22,false,trabajo actual
+u1064,e248,2022-01-02,false,posible empleador
+u436,e157,2022-12-16,true,cliente potencial
+u1385,e170,2026-01-05,false,seguimiento de ofertas
+u1641,e116,2023-04-13,false,interés general
+u879,e311,2025-05-17,false,seguimiento de ofertas
+u410,e383,2026-09-18,false,ex empleador
+u1939,e92,2019-01-24,false,networking
+u1928,e376,2023-10-06,true,interés en la industria
+u700,e247,2020-09-06,true,seguimiento de ofertas
+u1188,e260,2019-03-17,true,seguimiento de ofertas
+u1554,e408,2022-02-03,true,interés en la industria
+u153,e188,2020-03-18,true,posible empleador
+u1373,e39,2023-07-27,false,trabajo actual
+u190,e100,2021-10-23,false,interés general
+u1022,e322,2020-02-16,false,posible empleador
+u832,e143,2019-07-03,false,cliente potencial
+u1656,e52,2022-10-23,false,ex empleador
+u585,e241,2025-04-29,false,networking
+u1959,e480,2022-10-30,true,posible empleador
+u1758,e32,2024-01-03,true,posible empleador
+u1629,e52,2020-09-12,true,ex empleador
+u296,e143,2026-03-18,true,seguimiento de ofertas
+u850,e352,2019-08-20,true,cliente potencial
+u1353,e421,2023-02-08,false,networking
+u940,e474,2023-07-23,false,posible empleador
+u1697,e22,2023-10-23,true,cliente potencial
+u3,e163,2019-04-16,false,interés general
+u818,e37,2019-04-08,false,ex empleador
+u385,e496,2022-11-25,true,interés general
+u1250,e218,2019-07-01,true,trabajo actual
+u1882,e237,2021-08-12,true,seguimiento de ofertas
+u1287,e125,2021-04-15,false,cliente potencial
+u1681,e87,2021-11-23,false,networking
+u1642,e356,2021-02-21,true,ex empleador
+u1083,e24,2023-08-08,true,cliente potencial
+u1314,e300,2021-08-19,false,networking
+u397,e442,2026-12-14,false,cliente potencial
+u898,e238,2025-03-16,false,posible empleador
+u430,e61,2024-04-06,false,ex empleador
+u1691,e89,2025-12-11,true,trabajo actual
+u1196,e66,2020-01-23,false,posible empleador
+u1664,e173,2019-04-06,false,seguimiento de ofertas
+u627,e163,2019-02-15,false,ex empleador
+u1839,e168,2025-06-07,true,networking
+u1973,e132,2022-06-17,false,seguimiento de ofertas
+u579,e162,2026-07-21,false,interés en la industria
+u814,e261,2022-12-10,true,cliente potencial
+u1156,e473,2021-09-17,false,posible empleador
+u1467,e314,2023-06-04,false,seguimiento de ofertas
+u626,e444,2022-06-10,false,interés general
+u394,e340,2022-12-22,false,interés general
+u727,e10,2024-05-29,true,trabajo actual
+u581,e432,2020-09-06,false,cliente potencial
+u748,e342,2022-06-30,false,trabajo actual
+u1384,e169,2019-02-09,true,ex empleador
+u805,e214,2025-04-23,false,interés en la industria
+u1018,e44,2024-07-24,true,seguimiento de ofertas
+u1350,e215,2024-05-28,false,interés general
+u566,e241,2022-05-07,true,networking
+u678,e394,2021-12-13,true,seguimiento de ofertas
+u1738,e499,2022-12-26,false,interés general
+u536,e487,2023-02-10,true,interés general
+u1939,e223,2024-11-05,false,cliente potencial
+u1880,e389,2024-11-03,true,interés en la industria
+u1208,e31,2025-08-15,true,cliente potencial
+u144,e126,2022-09-02,true,trabajo actual
+u1842,e172,2023-12-15,true,interés en la industria
+u837,e15,2022-08-27,false,interés en la industria
+u1249,e156,2022-11-06,false,ex empleador
+u209,e27,2024-02-15,true,ex empleador
+u1065,e414,2019-02-24,true,ex empleador
+u1788,e459,2024-12-23,false,seguimiento de ofertas
+u1084,e47,2023-04-09,true,networking
+u1495,e429,2024-02-21,false,networking
+u136,e435,2022-09-14,false,interés general
+u691,e433,2025-05-29,true,posible empleador
+u1146,e149,2026-05-07,false,interés general
+u23,e453,2024-09-30,false,networking
+u1128,e446,2026-10-24,false,seguimiento de ofertas
+u975,e156,2023-07-07,false,interés en la industria
+u1642,e193,2025-09-16,true,trabajo actual
+u336,e162,2022-03-28,false,cliente potencial
+u511,e202,2026-02-25,true,trabajo actual
+u1108,e126,2024-07-28,true,seguimiento de ofertas
+u1907,e430,2026-12-24,false,ex empleador
+u746,e95,2019-06-26,false,cliente potencial
+u398,e210,2022-07-31,true,trabajo actual
+u1191,e53,2019-02-17,false,seguimiento de ofertas
+u1003,e400,2020-05-28,false,ex empleador
+u1836,e325,2025-06-16,true,networking
+u389,e331,2025-07-10,false,seguimiento de ofertas
+u718,e53,2024-11-15,false,interés en la industria
+u165,e36,2026-11-26,false,trabajo actual
+u719,e455,2023-11-11,false,posible empleador
+u589,e15,2021-10-01,true,trabajo actual
+u1544,e262,2019-04-14,false,networking
+u172,e375,2025-01-25,true,posible empleador
+u1909,e164,2024-03-14,false,posible empleador
+u16,e323,2024-05-26,false,posible empleador
+u1943,e22,2025-02-15,false,networking
+u823,e341,2023-08-24,true,networking
+u475,e67,2023-06-22,true,posible empleador
+u1150,e235,2024-10-05,true,posible empleador
+u1516,e247,2022-02-22,false,seguimiento de ofertas
+u1768,e197,2021-06-25,true,cliente potencial
+u541,e133,2025-11-20,true,cliente potencial
+u510,e100,2022-08-14,false,trabajo actual
+u496,e340,2020-07-25,true,posible empleador
+u1250,e153,2021-02-23,true,trabajo actual
+u816,e203,2020-09-02,true,cliente potencial
+u1319,e481,2022-03-01,false,interés en la industria
+u1637,e75,2022-06-07,false,trabajo actual
+u1923,e80,2023-04-19,false,trabajo actual
+u363,e171,2025-11-09,false,seguimiento de ofertas
+u1224,e231,2022-09-19,false,trabajo actual
+u358,e239,2025-02-19,false,ex empleador
+u492,e233,2024-11-18,false,interés en la industria
+u132,e389,2025-08-05,false,ex empleador
+u1133,e480,2024-12-05,false,posible empleador
+u313,e105,2026-05-28,true,networking
+u258,e422,2026-05-22,false,ex empleador
+u1179,e200,2019-10-21,true,interés general
+u1464,e166,2021-03-20,true,interés en la industria
+u376,e387,2023-07-20,true,ex empleador
+u1611,e120,2023-01-01,false,interés en la industria
+u82,e158,2022-11-21,true,seguimiento de ofertas
+u963,e258,2026-04-15,false,posible empleador
+u174,e144,2024-03-21,false,networking
+u1425,e102,2024-12-27,false,networking
+u1367,e434,2022-06-07,true,interés en la industria
+u430,e32,2025-04-11,true,interés en la industria
+u87,e488,2020-11-13,true,ex empleador
+u614,e241,2022-10-15,false,networking
+u1352,e327,2022-12-06,true,posible empleador
+u1648,e423,2026-02-26,false,seguimiento de ofertas
+u125,e10,2026-01-06,false,trabajo actual
+u795,e180,2022-08-14,false,cliente potencial
+u367,e3,2024-07-13,false,interés en la industria
+u643,e188,2019-01-09,false,interés en la industria
+u500,e203,2024-12-10,true,posible empleador
+u491,e277,2020-03-29,true,ex empleador
+u213,e437,2026-04-15,false,seguimiento de ofertas
+u1780,e479,2026-05-03,true,seguimiento de ofertas
+u1484,e483,2025-08-11,true,interés general
+u337,e354,2021-11-14,true,interés en la industria
+u899,e304,2023-03-24,false,interés general
+u1772,e412,2024-02-21,true,posible empleador
+u629,e450,2021-10-26,false,posible empleador
+u1436,e430,2023-09-26,true,ex empleador
+u1989,e372,2025-01-22,false,ex empleador
+u456,e0,2019-05-26,true,networking
+u1467,e426,2022-04-06,false,trabajo actual
+u775,e333,2024-02-12,false,seguimiento de ofertas
+u1571,e214,2022-09-15,true,cliente potencial
+u1854,e180,2026-11-22,false,ex empleador
+u1949,e358,2025-12-29,true,cliente potencial
+u391,e219,2020-08-30,false,interés en la industria
+u1852,e232,2023-06-26,false,ex empleador
+u1188,e219,2019-07-04,false,ex empleador
+u35,e130,2026-05-23,false,seguimiento de ofertas
+u93,e374,2024-10-22,true,trabajo actual
+u1159,e63,2020-12-28,false,ex empleador
+u1787,e321,2023-08-04,true,cliente potencial
+u320,e274,2020-08-09,false,trabajo actual
+u1117,e273,2022-10-30,true,networking
+u1242,e360,2019-08-05,true,trabajo actual
+u1339,e32,2020-02-20,false,cliente potencial
+u107,e476,2023-04-02,true,ex empleador
+u830,e161,2022-02-05,false,networking
+u788,e175,2020-12-31,true,trabajo actual
+u119,e267,2025-09-11,false,posible empleador
+u342,e124,2022-03-12,false,trabajo actual
+u945,e414,2019-06-16,true,posible empleador
+u1508,e431,2026-01-14,true,interés en la industria
+u913,e312,2024-11-20,false,interés en la industria
+u1316,e81,2025-08-28,true,trabajo actual
+u155,e346,2023-02-17,false,posible empleador
+u435,e424,2023-10-14,false,posible empleador
+u1098,e89,2021-11-26,true,seguimiento de ofertas
+u1890,e222,2021-09-17,true,seguimiento de ofertas
+u1340,e139,2026-05-08,false,interés general
+u178,e260,2025-04-23,false,interés en la industria
+u41,e340,2022-03-05,true,ex empleador
+u660,e334,2024-12-05,false,seguimiento de ofertas
+u1485,e391,2022-05-24,true,cliente potencial
+u336,e201,2026-01-21,false,ex empleador
+u1966,e252,2024-01-28,true,seguimiento de ofertas
+u493,e363,2024-06-18,true,trabajo actual
+u1224,e494,2019-12-03,false,seguimiento de ofertas
+u1479,e264,2026-12-21,false,networking
+u1513,e115,2024-11-27,false,networking
+u1501,e492,2023-05-28,false,interés en la industria
+u1187,e164,2024-12-25,false,trabajo actual
+u716,e249,2020-05-19,true,seguimiento de ofertas
+u731,e148,2025-07-31,true,trabajo actual
+u491,e175,2021-12-15,false,interés general
+u1140,e259,2025-02-24,false,seguimiento de ofertas
+u283,e340,2023-11-24,true,interés general
+u1938,e280,2025-10-13,false,seguimiento de ofertas
+u534,e146,2022-08-04,false,posible empleador
+u443,e150,2020-12-24,false,networking
+u1168,e143,2019-11-14,true,seguimiento de ofertas
+u331,e484,2020-08-26,false,ex empleador
+u442,e475,2022-10-10,false,trabajo actual
+u1828,e438,2026-06-05,true,ex empleador
+u871,e305,2024-07-30,true,interés general
+u1885,e366,2019-08-23,true,networking
+u1743,e492,2021-12-26,false,ex empleador
+u1499,e40,2021-06-15,false,cliente potencial
+u120,e281,2024-11-02,true,posible empleador
+u1003,e451,2019-07-03,true,interés general
+u256,e374,2021-03-20,true,ex empleador
+u1728,e296,2024-06-12,true,interés en la industria
+u1247,e169,2021-09-29,false,ex empleador
+u841,e47,2024-02-01,true,interés general
+u1086,e293,2025-12-28,false,cliente potencial
+u331,e50,2023-11-24,true,ex empleador
+u592,e324,2024-10-03,true,seguimiento de ofertas
+u830,e7,2020-10-02,true,seguimiento de ofertas
+u351,e245,2023-04-09,true,interés en la industria
+u1054,e209,2023-09-21,true,posible empleador
+u1473,e4,2020-07-24,false,seguimiento de ofertas
+u552,e278,2025-09-26,false,trabajo actual
+u1657,e455,2023-07-13,true,interés en la industria
+u87,e351,2025-12-01,false,seguimiento de ofertas
+u250,e249,2020-10-18,false,seguimiento de ofertas
+u1198,e258,2025-04-20,true,ex empleador
+u1287,e253,2025-08-23,true,posible empleador
+u504,e383,2021-10-01,false,networking
+u1937,e75,2019-04-11,true,networking
+u1064,e251,2023-12-07,false,cliente potencial
+u18,e132,2024-04-02,true,trabajo actual
+u689,e248,2020-02-22,true,trabajo actual
+u909,e157,2021-02-10,true,trabajo actual
+u998,e497,2022-09-28,true,networking
+u123,e401,2023-08-30,true,cliente potencial
+u1248,e305,2019-05-01,false,interés general
+u1321,e90,2023-04-08,true,ex empleador
+u1370,e388,2024-04-17,true,ex empleador
+u90,e389,2024-07-30,false,seguimiento de ofertas
+u1908,e246,2019-12-16,false,interés general
+u830,e348,2022-07-11,true,networking
+u157,e99,2019-03-10,false,interés en la industria
+u1242,e471,2024-04-16,true,interés general
+u48,e420,2022-12-09,true,trabajo actual
+u1619,e494,2022-05-21,true,networking
+u170,e41,2019-11-29,false,networking
+u1992,e264,2023-10-12,true,seguimiento de ofertas
+u1579,e220,2024-08-06,false,posible empleador
+u546,e42,2026-02-18,false,interés general
+u222,e346,2022-03-17,false,trabajo actual
+u277,e154,2021-07-03,false,cliente potencial
+u140,e461,2020-07-30,true,seguimiento de ofertas
+u1781,e74,2024-12-20,false,networking
+u1068,e378,2021-10-24,true,cliente potencial
+u1806,e474,2026-06-28,true,interés en la industria
+u271,e458,2025-12-09,false,networking
+u1519,e27,2020-07-17,true,interés en la industria
+u923,e422,2022-07-09,false,interés en la industria
+u762,e309,2020-02-03,false,interés general
+u1260,e323,2024-07-12,false,posible empleador
+u915,e81,2023-03-28,true,interés en la industria
+u1013,e232,2025-05-12,false,trabajo actual
+u639,e473,2019-07-01,false,interés general
+u1001,e484,2022-05-13,true,cliente potencial
+u880,e491,2022-03-05,false,interés en la industria
+u766,e243,2026-12-25,true,trabajo actual
+u818,e64,2025-08-03,true,ex empleador
+u873,e187,2025-06-26,false,interés general
+u1423,e187,2023-05-15,true,cliente potencial
+u893,e340,2024-05-06,true,trabajo actual
+u1814,e39,2022-06-16,true,ex empleador
+u1502,e412,2020-02-19,true,interés general
+u1776,e471,2019-07-05,true,posible empleador
+u1585,e321,2021-02-15,false,interés en la industria
+u1790,e78,2020-03-31,true,ex empleador
+u1671,e300,2024-09-17,true,trabajo actual
+u1584,e274,2024-01-07,true,ex empleador
+u1749,e42,2020-01-17,true,trabajo actual
+u1977,e69,2024-10-20,false,networking
+u1113,e13,2025-12-02,false,interés en la industria
+u1195,e427,2026-04-24,true,posible empleador
+u381,e29,2022-05-12,true,interés en la industria
+u1276,e188,2026-09-22,false,interés general
+u229,e124,2026-08-17,false,trabajo actual
+u1057,e136,2025-05-11,true,networking
+u421,e41,2020-12-17,true,interés en la industria
+u77,e243,2021-12-11,false,interés general
+u567,e256,2024-01-16,false,networking
+u170,e126,2019-04-18,false,interés en la industria
+u1749,e93,2026-05-24,true,trabajo actual
+u455,e294,2023-12-24,false,interés en la industria
+u796,e64,2021-05-21,true,cliente potencial
+u620,e37,2025-03-01,true,ex empleador
+u1635,e367,2022-11-29,true,cliente potencial
+u850,e98,2021-02-21,true,posible empleador
+u1935,e118,2020-05-01,true,seguimiento de ofertas
+u488,e450,2023-08-25,true,ex empleador
+u1067,e403,2024-02-14,false,interés general
+u989,e85,2022-10-14,true,posible empleador
+u261,e28,2019-11-16,false,posible empleador
+u1836,e358,2024-10-20,true,seguimiento de ofertas
+u1499,e110,2026-10-28,false,trabajo actual
+u45,e60,2019-09-18,false,posible empleador
+u1960,e156,2020-01-21,false,interés en la industria
+u93,e442,2025-07-16,true,trabajo actual
+u1048,e348,2020-11-04,true,networking
+u152,e34,2022-05-26,false,seguimiento de ofertas
+u33,e376,2021-11-17,true,interés en la industria
+u1092,e433,2024-09-01,true,posible empleador
+u1397,e114,2026-12-10,false,cliente potencial
+u632,e121,2024-01-25,true,networking
+u856,e74,2023-01-15,true,trabajo actual
+u931,e399,2019-04-06,false,networking
+u1318,e211,2023-08-02,true,seguimiento de ofertas
+u1882,e458,2025-07-10,false,trabajo actual
+u451,e383,2021-02-18,false,trabajo actual
+u384,e353,2026-03-01,false,seguimiento de ofertas
+u1513,e320,2022-05-07,false,interés en la industria
+u404,e469,2022-05-27,true,ex empleador
+u5,e390,2022-07-01,true,cliente potencial
+u772,e485,2026-03-11,false,ex empleador
+u327,e451,2024-01-15,true,networking
+u1109,e207,2025-01-18,false,networking
+u738,e343,2021-05-15,false,ex empleador
+u1379,e144,2019-09-30,true,seguimiento de ofertas
+u676,e240,2021-05-27,true,posible empleador
+u1643,e219,2021-07-23,false,posible empleador
+u436,e168,2022-07-23,false,posible empleador
+u830,e408,2026-01-26,false,interés en la industria
+u223,e467,2025-06-23,true,networking
+u1383,e20,2020-01-04,true,trabajo actual
+u1334,e16,2025-04-26,false,cliente potencial
+u1204,e400,2023-10-01,true,interés general
+u425,e385,2024-07-28,true,interés general
+u63,e179,2019-09-30,true,seguimiento de ofertas
+u256,e219,2026-01-11,true,cliente potencial
+u1888,e182,2025-12-20,false,posible empleador
+u1713,e168,2019-11-25,false,cliente potencial
+u1476,e296,2021-12-28,false,networking
+u775,e97,2022-08-02,false,interés en la industria
+u1219,e370,2021-11-12,true,interés general
+u1555,e343,2023-12-05,false,ex empleador
+u1193,e180,2019-10-15,false,interés en la industria
+u1765,e467,2021-03-02,true,posible empleador
+u1318,e363,2023-01-26,false,seguimiento de ofertas
+u1377,e393,2026-10-13,false,networking
+u1966,e46,2026-01-29,false,interés en la industria
+u1118,e30,2025-06-20,false,cliente potencial
+u704,e379,2025-10-28,true,cliente potencial
+u202,e60,2019-09-30,false,seguimiento de ofertas
+u197,e316,2025-10-18,true,cliente potencial
+u1729,e419,2023-10-01,false,posible empleador
+u1579,e305,2020-03-04,false,networking
+u1574,e15,2020-08-18,true,interés en la industria
+u414,e139,2026-09-07,true,networking
+u1971,e135,2025-10-10,false,posible empleador
+u4,e368,2026-03-05,true,seguimiento de ofertas
+u1419,e357,2026-01-23,true,networking
+u715,e417,2022-05-07,true,interés en la industria
+u1585,e381,2020-08-14,true,seguimiento de ofertas
+u330,e228,2025-09-28,true,seguimiento de ofertas
+u1691,e239,2024-08-28,true,interés general
+u1513,e333,2026-11-21,false,ex empleador
+u833,e71,2021-08-09,false,interés en la industria
+u1780,e303,2026-06-08,true,ex empleador
+u137,e344,2021-02-07,true,networking
+u1398,e379,2019-06-04,true,posible empleador
+u1046,e148,2021-03-02,false,seguimiento de ofertas
+u942,e304,2026-02-03,false,cliente potencial
+u973,e187,2024-02-27,true,cliente potencial
+u771,e38,2025-01-11,true,cliente potencial
+u1473,e388,2020-03-30,true,posible empleador
+u381,e266,2020-07-18,false,networking
+u498,e497,2022-07-30,true,networking
+u1814,e331,2021-03-29,true,interés general
+u949,e360,2020-05-31,false,ex empleador
+u684,e59,2020-08-19,false,seguimiento de ofertas
+u907,e439,2023-09-27,false,networking
+u1903,e427,2024-01-30,false,posible empleador
+u1925,e340,2023-10-23,false,seguimiento de ofertas
+u707,e233,2025-06-07,false,seguimiento de ofertas
+u1828,e218,2021-01-28,false,interés general
+u1229,e134,2025-07-09,false,posible empleador
+u1361,e342,2024-11-03,true,cliente potencial
+u1593,e146,2024-01-25,false,interés general
+u773,e372,2023-03-12,true,interés en la industria
+u1114,e443,2019-03-28,false,interés general
+u442,e287,2024-03-26,true,cliente potencial
+u1073,e109,2022-07-22,false,interés en la industria
+u349,e402,2025-02-24,false,posible empleador
+u1215,e487,2024-09-16,true,cliente potencial
+u580,e142,2022-05-20,false,networking
+u266,e452,2026-08-14,true,trabajo actual
+u1501,e131,2025-04-13,true,posible empleador
+u158,e320,2021-04-14,true,ex empleador
+u1597,e338,2019-01-08,true,networking
+u1884,e230,2022-11-10,true,ex empleador
+u125,e256,2020-08-29,true,networking
+u134,e455,2022-05-10,true,trabajo actual
+u1332,e182,2024-12-02,false,ex empleador
+u884,e144,2026-03-15,false,ex empleador
+u178,e0,2026-07-25,true,posible empleador
+u1679,e466,2024-02-26,true,interés general
+u10,e84,2022-03-14,false,networking
+u1023,e290,2021-11-10,false,ex empleador
+u854,e234,2023-04-19,false,trabajo actual
+u1049,e496,2024-01-15,true,networking
+u302,e386,2021-10-29,false,interés general
+u1097,e259,2022-03-21,false,trabajo actual
+u1987,e289,2023-06-07,false,seguimiento de ofertas
+u1629,e11,2026-05-13,true,posible empleador
+u437,e340,2026-11-25,true,seguimiento de ofertas
+u1426,e436,2019-07-07,false,cliente potencial
+u1873,e351,2021-10-03,false,networking
+u1008,e64,2026-05-14,true,seguimiento de ofertas
+u1731,e414,2022-11-18,false,trabajo actual
+u1960,e379,2022-04-22,false,posible empleador
+u670,e61,2019-08-12,false,ex empleador
+u493,e479,2024-03-03,false,ex empleador
+u723,e127,2025-12-04,true,interés general
+u750,e113,2026-02-01,false,ex empleador
+u1404,e355,2019-10-12,false,cliente potencial
+u808,e478,2021-03-16,true,seguimiento de ofertas
+u1505,e236,2021-03-18,true,networking
+u1501,e281,2024-10-15,true,posible empleador
+u463,e116,2020-10-19,false,cliente potencial
+u1486,e473,2020-07-02,true,posible empleador
+u36,e308,2019-05-18,true,cliente potencial
+u403,e161,2019-12-18,false,ex empleador
+u1965,e449,2020-07-08,true,interés general
+u934,e283,2025-06-24,true,posible empleador
+u1952,e260,2022-11-24,true,seguimiento de ofertas
+u1549,e455,2021-01-20,true,seguimiento de ofertas
+u1039,e481,2026-04-25,true,posible empleador
+u833,e353,2025-06-10,false,ex empleador
+u1816,e388,2021-10-03,true,interés general
+u146,e416,2022-01-23,false,trabajo actual
+u790,e299,2019-03-28,true,posible empleador
+u516,e56,2019-09-29,true,networking
+u865,e395,2021-10-02,false,networking
+u1748,e91,2025-04-25,false,trabajo actual
+u1501,e228,2021-02-23,false,interés general
+u828,e348,2020-06-22,true,seguimiento de ofertas
+u1014,e276,2024-06-14,true,interés general
+u611,e466,2019-01-25,true,networking
+u794,e59,2020-02-05,true,seguimiento de ofertas
+u1621,e440,2020-12-14,false,ex empleador
+u1942,e190,2020-06-13,true,networking
+u498,e217,2025-10-08,true,interés general
+u1491,e271,2025-10-14,false,trabajo actual
+u1795,e264,2020-07-24,false,seguimiento de ofertas
+u555,e189,2025-02-01,false,networking
+u1254,e256,2023-01-15,true,interés en la industria
+u156,e474,2019-09-16,true,interés en la industria
+u1019,e236,2024-11-02,false,cliente potencial
+u220,e2,2023-03-05,false,ex empleador
+u1705,e39,2023-07-04,true,posible empleador
+u117,e309,2021-06-15,true,interés general
+u1041,e171,2020-11-03,false,networking
+u75,e138,2025-07-30,true,ex empleador
+u977,e156,2026-08-31,false,cliente potencial
+u1603,e420,2024-12-01,true,posible empleador
+u369,e303,2021-10-01,true,posible empleador
+u666,e39,2024-06-25,false,networking
+u1933,e301,2020-09-05,false,seguimiento de ofertas
+u4,e460,2026-03-27,false,cliente potencial
+u1629,e256,2025-04-18,true,seguimiento de ofertas
+u785,e183,2021-12-09,false,posible empleador
+u1646,e75,2021-10-10,false,posible empleador
+u1299,e187,2020-12-17,false,interés general
+u1130,e260,2024-07-13,false,interés general
+u823,e5,2021-01-16,false,seguimiento de ofertas
+u191,e291,2025-11-23,true,trabajo actual
+u1653,e144,2026-07-18,false,cliente potencial
+u988,e77,2022-04-10,false,networking
+u99,e97,2022-12-25,true,networking
+u199,e458,2025-10-01,true,interés en la industria
+u245,e238,2021-12-08,true,seguimiento de ofertas
+u918,e6,2026-11-09,false,posible empleador
+u78,e388,2025-08-18,true,posible empleador
+u1412,e327,2020-12-17,false,cliente potencial
+u1147,e240,2019-04-28,true,cliente potencial
+u82,e202,2020-09-22,true,trabajo actual
+u164,e471,2026-12-03,true,interés en la industria
+u167,e361,2021-11-26,true,networking
+u263,e25,2025-01-15,false,interés general
+u1367,e302,2020-06-16,true,seguimiento de ofertas
+u1737,e339,2022-03-22,true,interés general
+u205,e382,2024-11-12,true,interés en la industria
+u1750,e221,2026-09-22,false,interés en la industria
+u1785,e314,2021-06-14,true,seguimiento de ofertas
+u1389,e18,2021-04-25,false,cliente potencial
+u940,e91,2022-02-06,false,seguimiento de ofertas
+u1065,e279,2023-08-22,false,seguimiento de ofertas
+u1114,e368,2026-12-27,true,networking
+u806,e134,2023-12-25,false,interés general
+u1013,e220,2024-08-11,false,seguimiento de ofertas
+u1223,e469,2024-10-25,true,networking
+u1153,e144,2025-07-13,true,seguimiento de ofertas
+u122,e394,2026-08-26,true,interés general
+u631,e322,2025-05-29,false,trabajo actual
+u1031,e177,2023-09-08,true,trabajo actual
+u1896,e250,2019-08-15,true,interés en la industria
+u1183,e111,2019-03-27,true,interés en la industria
+u74,e255,2025-01-05,false,ex empleador
+u1987,e402,2019-07-28,false,trabajo actual
+u509,e67,2025-10-24,false,cliente potencial
+u1907,e218,2021-06-08,true,posible empleador
+u381,e243,2026-06-01,false,networking
+u1493,e347,2025-05-23,true,cliente potencial
+u1574,e352,2026-07-28,true,trabajo actual
+u704,e15,2021-07-26,false,seguimiento de ofertas
+u1607,e16,2019-11-16,true,seguimiento de ofertas
+u1777,e43,2024-09-07,true,seguimiento de ofertas
+u1915,e306,2019-06-26,true,seguimiento de ofertas
+u299,e447,2022-03-24,true,ex empleador
+u1510,e19,2024-04-19,false,seguimiento de ofertas
+u647,e465,2022-09-11,false,seguimiento de ofertas
+u1267,e253,2019-07-29,true,interés general
+u1745,e39,2020-06-12,true,seguimiento de ofertas
+u972,e21,2019-07-24,true,cliente potencial
+u275,e380,2020-11-13,true,networking
+u840,e125,2024-01-12,false,cliente potencial
+u1805,e463,2024-08-12,true,trabajo actual
+u513,e44,2023-12-01,false,seguimiento de ofertas
+u491,e457,2022-06-09,true,posible empleador
+u1721,e35,2019-03-04,true,seguimiento de ofertas
+u841,e271,2026-05-17,true,cliente potencial
+u909,e38,2022-07-02,false,interés general
+u365,e451,2024-02-28,true,seguimiento de ofertas
+u373,e320,2024-10-04,false,seguimiento de ofertas
+u1672,e159,2019-02-09,false,interés en la industria
+u1765,e88,2020-05-13,true,networking
+u958,e336,2020-08-28,false,trabajo actual
+u1162,e337,2025-02-14,true,trabajo actual
+u1472,e213,2025-04-12,false,interés general
+u433,e176,2024-07-05,false,ex empleador
+u509,e392,2019-11-16,false,cliente potencial
+u287,e186,2023-07-27,true,networking
+u1852,e185,2026-06-14,true,trabajo actual
+u130,e19,2026-07-12,false,trabajo actual
+u1693,e372,2021-07-18,true,interés general
+u468,e53,2022-06-18,true,posible empleador
+u622,e3,2024-11-07,false,cliente potencial
+u755,e146,2026-01-15,true,posible empleador
+u448,e375,2026-06-27,true,posible empleador
+u1309,e447,2025-03-22,false,trabajo actual
+u1025,e82,2022-02-18,true,interés general
+u1716,e400,2021-08-01,false,seguimiento de ofertas
+u1932,e427,2026-08-03,true,networking
+u635,e310,2021-08-18,true,interés en la industria
+u1440,e261,2025-04-04,false,interés en la industria
+u235,e340,2025-06-21,true,seguimiento de ofertas
+u1248,e403,2020-05-13,true,cliente potencial
+u1125,e176,2023-01-06,false,cliente potencial
+u633,e323,2019-08-04,true,interés general
+u1378,e37,2022-12-15,false,posible empleador
+u1244,e395,2026-08-24,true,ex empleador
+u1334,e339,2023-08-16,true,ex empleador
+u1983,e413,2019-12-15,true,seguimiento de ofertas
+u1900,e61,2021-12-09,false,seguimiento de ofertas
+u1359,e217,2024-07-03,true,trabajo actual
+u450,e322,2019-09-25,false,seguimiento de ofertas
+u369,e224,2022-04-27,false,interés general
+u172,e296,2022-01-12,false,trabajo actual
+u1986,e379,2020-10-10,false,trabajo actual
+u1488,e112,2023-11-23,true,trabajo actual
+u835,e99,2019-10-16,false,trabajo actual
+u536,e157,2022-08-03,false,posible empleador
+u927,e363,2026-12-28,false,interés en la industria
+u651,e44,2022-11-13,true,trabajo actual
+u34,e50,2019-03-13,false,interés en la industria
+u1140,e146,2019-02-14,false,trabajo actual
+u1211,e160,2022-02-05,false,ex empleador
+u1854,e410,2019-04-01,false,interés en la industria
+u1111,e305,2026-11-19,false,ex empleador
+u1254,e463,2019-10-19,true,networking
+u1007,e262,2022-01-20,false,networking
+u1694,e386,2021-03-15,true,seguimiento de ofertas
+u1220,e5,2023-04-11,true,networking
+u887,e341,2021-12-23,true,trabajo actual
+u88,e383,2022-04-21,false,ex empleador
+u1898,e375,2019-06-17,false,trabajo actual
+u1694,e314,2023-04-08,true,interés en la industria
+u58,e45,2023-05-20,true,seguimiento de ofertas
+u445,e130,2024-06-12,true,posible empleador
+u534,e92,2020-11-09,false,ex empleador
+u467,e48,2023-09-29,false,interés en la industria
+u749,e320,2026-12-13,true,networking
+u1859,e65,2020-06-26,true,ex empleador
+u474,e64,2022-11-20,false,seguimiento de ofertas
+u1155,e295,2022-08-06,true,cliente potencial
+u766,e74,2025-06-25,true,networking
+u1956,e202,2019-09-18,false,networking
+u503,e208,2021-07-01,true,posible empleador
+u1103,e333,2019-01-26,true,interés general
+u1985,e449,2020-02-07,true,trabajo actual
+u1374,e5,2022-05-06,true,interés en la industria
+u549,e82,2022-10-13,true,ex empleador
+u1389,e20,2020-04-22,true,posible empleador
+u152,e426,2020-04-29,true,interés en la industria
+u838,e198,2019-12-03,false,posible empleador
+u962,e28,2019-04-23,true,interés general
+u1545,e277,2026-10-03,false,ex empleador
+u1856,e437,2019-11-09,true,trabajo actual
+u1274,e188,2019-11-23,true,networking
+u1108,e212,2019-10-25,true,interés en la industria
+u1391,e74,2022-02-11,false,trabajo actual
+u677,e276,2019-01-22,true,posible empleador
+u377,e87,2020-07-02,true,posible empleador
+u790,e287,2024-12-15,false,cliente potencial
+u1487,e293,2022-07-04,true,networking
+u1933,e197,2020-09-07,false,seguimiento de ofertas
+u981,e230,2023-08-16,true,posible empleador
+u545,e241,2025-04-05,false,ex empleador
+u1212,e156,2019-07-29,false,interés general
+u1657,e147,2024-07-29,false,interés en la industria
+u1146,e498,2023-08-18,true,interés en la industria
+u506,e155,2022-04-02,false,interés en la industria
+u1300,e38,2024-09-05,false,trabajo actual
+u1826,e176,2019-01-14,true,interés en la industria
+u1447,e391,2024-11-01,false,interés en la industria
+u1832,e478,2024-09-24,true,seguimiento de ofertas
+u857,e478,2023-07-11,false,cliente potencial
+u810,e90,2020-11-14,false,trabajo actual
+u673,e188,2024-05-28,false,interés general
+u942,e72,2023-12-17,true,posible empleador
+u292,e499,2025-10-12,true,cliente potencial
+u1585,e17,2026-09-30,false,interés general
+u1883,e30,2021-04-29,true,ex empleador
+u1568,e455,2025-12-27,false,networking
+u1462,e178,2025-07-23,true,interés en la industria
+u402,e4,2022-01-28,true,posible empleador
+u1655,e330,2023-12-02,false,trabajo actual
+u1824,e419,2021-03-19,false,ex empleador
+u923,e125,2026-10-07,true,trabajo actual
+u1874,e370,2025-03-09,true,trabajo actual
+u464,e33,2022-11-12,true,cliente potencial
+u58,e177,2023-02-09,false,networking
+u1445,e458,2025-01-20,false,ex empleador
+u1478,e313,2021-03-13,true,interés general
+u305,e5,2019-05-05,false,seguimiento de ofertas
+u1816,e308,2023-10-29,true,seguimiento de ofertas
+u1587,e439,2026-12-07,true,trabajo actual
+u378,e121,2022-10-15,true,ex empleador
+u1024,e453,2024-07-16,true,ex empleador
+u72,e20,2023-08-07,false,networking
+u1185,e313,2022-02-13,false,seguimiento de ofertas
+u1813,e74,2024-09-07,false,cliente potencial
+u595,e171,2025-08-10,true,ex empleador
+u1053,e495,2020-11-05,true,seguimiento de ofertas
+u992,e105,2020-07-19,false,cliente potencial
+u1754,e188,2019-12-08,true,interés en la industria
+u478,e160,2022-02-24,true,interés en la industria
+u1785,e486,2024-06-07,false,posible empleador
+u1353,e475,2025-10-03,false,interés general
+u362,e364,2024-02-24,true,interés general
+u1984,e356,2021-07-11,false,ex empleador
+u848,e408,2020-05-10,false,posible empleador
+u1346,e32,2021-02-17,true,ex empleador
+u304,e482,2026-01-03,false,cliente potencial
+u1898,e207,2025-02-28,true,trabajo actual
+u1869,e321,2020-06-02,true,networking
+u150,e190,2020-05-23,true,cliente potencial
+u987,e438,2022-04-29,true,trabajo actual
+u1078,e132,2024-07-11,false,ex empleador
+u684,e447,2022-09-12,true,networking
+u1543,e492,2019-01-13,false,interés en la industria
+u453,e328,2019-04-19,true,seguimiento de ofertas
+u149,e419,2022-06-22,false,seguimiento de ofertas
+u204,e95,2026-02-20,true,posible empleador
+u1889,e159,2024-08-05,true,interés en la industria
+u1835,e251,2023-02-22,true,interés en la industria
+u372,e148,2022-01-10,false,trabajo actual
+u1623,e187,2025-02-08,false,posible empleador
+u574,e406,2022-08-26,true,seguimiento de ofertas
+u848,e47,2020-08-02,true,networking
+u170,e229,2020-06-06,true,ex empleador
+u1561,e371,2022-06-25,true,cliente potencial
+u1690,e397,2021-07-17,true,networking
+u244,e454,2021-03-27,false,networking
+u1896,e350,2025-10-28,false,interés en la industria
+u1427,e175,2024-02-06,false,posible empleador
+u271,e348,2024-10-04,true,networking
+u513,e154,2025-08-02,false,seguimiento de ofertas
+u1487,e457,2024-05-13,false,interés en la industria
+u538,e64,2024-07-16,false,trabajo actual
+u800,e436,2021-03-28,true,cliente potencial
+u652,e139,2026-10-24,false,interés en la industria
+u713,e426,2026-02-12,false,posible empleador
+u1492,e437,2023-05-24,false,posible empleador
+u108,e491,2023-09-06,false,seguimiento de ofertas
+u356,e59,2025-06-26,true,trabajo actual
+u1516,e329,2019-02-12,true,trabajo actual
+u5,e112,2023-09-09,true,ex empleador
+u1218,e162,2025-06-10,false,interés en la industria
+u331,e357,2022-01-21,false,cliente potencial
+u1027,e107,2026-07-18,false,trabajo actual
+u425,e192,2020-01-24,false,networking
+u48,e285,2023-05-20,true,posible empleador
+u331,e468,2022-08-21,true,trabajo actual
+u207,e277,2023-12-30,true,trabajo actual
+u1189,e486,2024-05-18,false,interés general
+u297,e234,2026-12-04,false,networking
+u33,e239,2026-01-19,false,seguimiento de ofertas
+u1851,e252,2023-07-09,false,networking
+u1418,e138,2022-08-03,true,cliente potencial
+u252,e119,2021-08-19,true,cliente potencial
+u526,e87,2023-10-26,false,ex empleador
+u994,e66,2023-10-15,true,trabajo actual
+u1138,e137,2025-07-24,false,interés en la industria
+u1872,e425,2022-03-22,false,cliente potencial
+u192,e103,2024-01-21,false,ex empleador
+u1047,e282,2020-12-28,true,ex empleador
+u1940,e424,2025-08-26,false,interés en la industria
+u251,e75,2020-05-29,false,cliente potencial
+u1028,e395,2019-04-05,true,networking
+u1938,e73,2023-04-09,true,cliente potencial
+u1907,e344,2021-08-11,true,seguimiento de ofertas
+u1740,e108,2026-10-25,false,networking
+u1109,e304,2026-04-02,true,ex empleador
+u1680,e499,2023-04-16,false,interés en la industria
+u1011,e125,2020-10-16,false,seguimiento de ofertas
+u842,e265,2024-03-13,true,cliente potencial
+u1223,e94,2021-06-07,false,cliente potencial
+u1034,e321,2020-06-07,false,posible empleador
+u1824,e357,2026-07-10,true,cliente potencial
+u285,e189,2023-09-11,false,ex empleador
+u1857,e426,2022-06-14,true,interés general
+u921,e444,2024-07-03,false,posible empleador
+u1234,e77,2021-01-09,false,seguimiento de ofertas
+u1748,e464,2026-07-26,true,posible empleador
+u73,e459,2021-02-06,false,seguimiento de ofertas
+u1050,e355,2024-02-29,false,trabajo actual
+u741,e66,2025-07-15,false,interés general
+u1110,e374,2022-12-09,false,posible empleador
+u1989,e175,2020-05-13,true,posible empleador
+u146,e316,2022-06-26,false,trabajo actual
+u1875,e478,2020-06-01,true,seguimiento de ofertas
+u1617,e97,2025-05-12,false,seguimiento de ofertas
+u1998,e233,2024-07-13,false,posible empleador
+u1243,e131,2020-09-06,false,networking
+u1183,e133,2020-08-12,false,networking
+u200,e311,2024-03-06,true,ex empleador
+u459,e354,2019-09-05,false,posible empleador
+u1291,e369,2019-12-06,false,seguimiento de ofertas
+u1837,e165,2026-02-27,false,cliente potencial
+u1859,e252,2026-12-27,true,networking
+u759,e35,2026-06-22,false,interés en la industria
+u407,e399,2024-12-17,false,ex empleador
+u1445,e237,2020-07-16,false,cliente potencial
+u692,e416,2024-01-13,false,interés general
+u717,e148,2024-11-14,true,ex empleador
+u1861,e360,2023-10-12,true,networking
+u1904,e208,2026-08-29,true,trabajo actual
+u952,e215,2019-04-07,true,cliente potencial
+u51,e221,2025-10-10,false,trabajo actual
+u284,e340,2024-01-25,false,posible empleador
+u834,e83,2019-10-30,false,posible empleador
+u1699,e476,2020-10-25,true,ex empleador
+u736,e404,2020-04-02,true,cliente potencial
+u409,e229,2019-12-20,true,cliente potencial
+u1865,e414,2024-12-03,true,cliente potencial
+u337,e185,2021-12-09,false,interés general
+u587,e471,2022-08-13,true,networking
+u532,e297,2023-01-01,false,posible empleador
+u1757,e466,2024-07-24,true,seguimiento de ofertas
+u147,e476,2021-02-01,false,interés general
+u1094,e448,2024-06-19,true,trabajo actual
+u1622,e254,2026-01-23,false,trabajo actual
+u39,e344,2020-08-08,false,posible empleador
+u382,e460,2026-01-04,false,networking
+u1610,e438,2023-01-06,true,interés en la industria
+u549,e235,2024-11-19,true,seguimiento de ofertas
+u1834,e310,2020-11-09,true,seguimiento de ofertas
+u367,e365,2019-06-16,true,interés general
+u1412,e0,2022-10-26,false,interés en la industria
+u876,e98,2022-08-03,false,trabajo actual
+u1086,e467,2023-11-12,false,ex empleador
+u290,e252,2019-03-30,false,posible empleador
+u692,e479,2020-05-30,true,seguimiento de ofertas
+u327,e345,2023-09-28,false,seguimiento de ofertas
+u796,e477,2022-10-27,false,interés general
+u552,e185,2026-04-07,false,trabajo actual
+u1503,e123,2022-02-23,true,trabajo actual
+u1756,e354,2023-07-31,false,networking
+u281,e445,2026-09-08,true,seguimiento de ofertas
+u233,e69,2025-01-06,true,posible empleador
+u98,e267,2022-12-05,true,posible empleador
+u1670,e329,2019-04-01,false,trabajo actual
+u1427,e462,2025-03-24,true,interés general
+u1347,e390,2024-07-09,false,networking
+u1539,e471,2025-06-06,true,interés general
+u1209,e249,2022-03-17,true,trabajo actual
+u1767,e308,2023-07-30,true,cliente potencial
+u308,e144,2025-03-27,true,networking
+u9,e47,2024-04-12,false,cliente potencial
+u1559,e431,2024-04-08,false,interés en la industria
+u65,e320,2026-04-12,false,trabajo actual
+u369,e175,2025-03-25,true,interés en la industria
+u122,e39,2024-02-15,true,interés en la industria
+u632,e371,2020-09-25,true,cliente potencial
+u489,e38,2024-11-27,true,interés general
+u118,e420,2021-09-25,false,cliente potencial
+u1476,e440,2024-05-21,true,trabajo actual
+u977,e347,2024-05-26,false,networking
+u687,e420,2020-08-18,true,trabajo actual
+u298,e49,2019-05-09,true,interés general
+u1046,e226,2022-06-22,true,cliente potencial
+u1294,e342,2024-11-14,true,interés general
+u26,e141,2021-02-26,false,cliente potencial
+u24,e206,2021-09-01,true,cliente potencial
+u1852,e318,2019-03-08,false,networking
+u1593,e164,2026-08-03,true,ex empleador
+u1835,e423,2025-01-19,false,interés general
+u769,e458,2023-08-05,false,trabajo actual
+u660,e165,2022-04-11,false,interés en la industria
+u1373,e419,2021-09-01,true,posible empleador
+u1103,e170,2023-06-14,true,cliente potencial
+u1319,e356,2026-08-03,false,cliente potencial
+u585,e460,2024-07-23,false,networking
+u464,e249,2026-12-25,false,interés en la industria
+u154,e96,2022-10-18,false,trabajo actual
+u1698,e249,2021-04-08,false,seguimiento de ofertas
+u970,e97,2025-09-09,true,ex empleador
+u1509,e176,2026-08-21,false,cliente potencial
+u1340,e134,2026-08-31,false,posible empleador
+u393,e377,2020-06-16,true,cliente potencial
+u631,e125,2019-08-15,false,seguimiento de ofertas
+u428,e29,2022-08-11,true,trabajo actual
+u1190,e74,2021-01-08,true,posible empleador
+u1737,e95,2022-10-03,true,networking
+u157,e398,2022-07-20,true,interés general
+u118,e37,2019-03-15,true,ex empleador
+u1560,e186,2025-03-13,false,trabajo actual
+u150,e153,2019-08-24,true,cliente potencial
+u1000,e147,2019-06-15,false,networking
+u1477,e419,2023-09-21,true,posible empleador
+u440,e136,2020-04-06,true,ex empleador
+u24,e350,2022-08-03,true,posible empleador
+u484,e276,2019-10-12,true,seguimiento de ofertas
+u797,e373,2025-02-26,false,interés en la industria
+u457,e48,2025-01-25,false,networking
+u1197,e165,2026-07-28,false,networking
+u1139,e316,2025-07-17,true,interés en la industria
+u869,e461,2026-06-26,false,networking
+u783,e1,2023-11-15,true,ex empleador
+u133,e453,2024-06-14,false,trabajo actual
+u1936,e313,2025-11-09,false,posible empleador
+u1137,e123,2023-08-04,false,posible empleador
+u582,e83,2023-09-07,false,cliente potencial
+u822,e328,2019-08-16,false,cliente potencial
+u961,e207,2021-01-31,false,interés general
+u589,e397,2026-09-01,true,ex empleador
+u582,e15,2023-07-22,true,seguimiento de ofertas
+u1126,e153,2021-04-07,true,posible empleador
+u1854,e74,2024-05-09,true,interés en la industria
+u248,e352,2024-05-28,false,posible empleador
+u124,e294,2020-05-22,true,trabajo actual
+u1839,e416,2019-08-17,true,networking
+u685,e456,2026-05-07,true,cliente potencial
+u73,e127,2023-04-02,false,interés en la industria
+u1018,e408,2024-10-12,false,ex empleador
+u1911,e315,2022-10-26,true,interés general
+u1000,e10,2022-05-18,true,interés en la industria
+u666,e433,2020-11-14,true,posible empleador
+u30,e46,2021-01-24,true,interés general
+u1884,e301,2019-11-15,true,cliente potencial
+u1832,e190,2019-05-26,true,interés general
+u1488,e199,2021-05-27,true,networking
+u1927,e271,2021-01-21,false,trabajo actual
+u1980,e56,2024-02-01,true,cliente potencial
+u1231,e3,2026-11-05,false,posible empleador
+u1197,e174,2022-04-25,true,interés general
+u1737,e21,2020-09-06,false,seguimiento de ofertas
+u1561,e200,2025-08-02,true,trabajo actual
+u985,e340,2022-06-10,true,interés general
+u1035,e56,2020-04-15,true,networking
+u133,e285,2022-07-25,true,seguimiento de ofertas
+u1921,e435,2022-12-18,true,cliente potencial
+u726,e89,2024-11-27,false,seguimiento de ofertas
+u720,e451,2025-03-10,true,posible empleador
+u1236,e359,2023-12-22,false,interés en la industria
+u1083,e193,2022-02-22,true,posible empleador
+u310,e44,2019-03-08,true,networking
+u715,e359,2021-07-25,false,cliente potencial
+u1879,e199,2020-06-09,false,interés en la industria
+u351,e47,2020-10-14,false,interés general
+u1576,e268,2024-05-10,false,ex empleador
+u1594,e357,2026-07-04,false,cliente potencial
+u166,e370,2024-05-05,true,ex empleador
+u1353,e53,2024-12-30,false,interés general
+u705,e455,2024-01-16,false,trabajo actual
+u370,e386,2026-07-06,true,interés general
+u654,e312,2024-09-11,false,cliente potencial
+u1013,e219,2019-11-10,true,posible empleador
+u1978,e283,2024-07-07,false,seguimiento de ofertas
+u295,e373,2019-03-16,false,seguimiento de ofertas
+u795,e406,2019-02-19,false,cliente potencial
+u464,e267,2024-02-09,false,interés en la industria
+u29,e470,2025-01-16,true,ex empleador
+u1046,e21,2026-05-06,true,interés general
+u1879,e156,2022-11-20,true,posible empleador
+u1537,e110,2026-12-26,true,interés general
+u553,e14,2026-12-31,false,trabajo actual
+u936,e91,2023-06-03,true,interés en la industria
+u294,e266,2025-02-07,true,ex empleador
+u1219,e283,2026-03-11,true,interés en la industria
+u1772,e335,2025-11-07,false,ex empleador
+u1091,e458,2025-12-21,false,ex empleador
+u786,e340,2026-12-24,true,seguimiento de ofertas
+u1923,e53,2020-08-21,true,interés en la industria
+u588,e330,2022-10-20,false,cliente potencial
+u302,e454,2021-10-12,true,networking
+u350,e72,2019-02-28,false,cliente potencial
+u1548,e327,2020-01-11,true,posible empleador
+u834,e244,2026-01-19,true,interés en la industria
+u461,e495,2020-12-28,true,ex empleador
+u1088,e357,2020-03-02,false,trabajo actual
+u429,e136,2023-08-10,true,seguimiento de ofertas
+u1896,e1,2021-01-28,false,seguimiento de ofertas
+u1834,e78,2019-09-26,false,interés general
+u188,e421,2024-11-14,false,trabajo actual
+u511,e78,2025-05-06,false,cliente potencial
+u844,e68,2025-01-01,false,interés en la industria
+u1463,e372,2021-04-18,true,interés general
+u1775,e6,2026-08-15,false,interés en la industria
+u1432,e27,2020-09-29,false,interés en la industria
+u1791,e292,2026-06-22,false,interés en la industria
+u1407,e173,2020-05-10,false,interés general
+u1094,e331,2020-07-18,true,networking
+u867,e317,2026-03-06,false,posible empleador
+u556,e197,2021-07-29,false,ex empleador
+u1302,e410,2026-03-17,true,networking
+u1487,e13,2025-10-09,false,cliente potencial
+u7,e75,2021-01-18,true,trabajo actual
+u490,e390,2024-01-24,true,interés en la industria
+u1529,e19,2024-02-04,true,interés general
+u1575,e272,2019-08-15,false,interés general
+u874,e467,2024-05-15,true,interés en la industria
+u1474,e148,2024-02-13,true,seguimiento de ofertas
+u1230,e252,2019-05-12,false,seguimiento de ofertas
+u42,e356,2022-08-07,true,seguimiento de ofertas
+u622,e104,2019-04-23,false,networking
+u1890,e417,2024-07-15,true,seguimiento de ofertas
+u479,e336,2021-05-26,false,trabajo actual
+u1910,e456,2021-04-03,true,posible empleador
+u824,e492,2026-03-15,true,seguimiento de ofertas
+u1054,e343,2021-09-30,true,cliente potencial
+u342,e244,2019-08-23,true,interés general
+u969,e390,2022-01-07,false,cliente potencial
+u172,e314,2020-07-08,true,networking
+u1115,e41,2024-09-10,true,ex empleador
+u222,e19,2021-09-11,false,trabajo actual
+u1131,e286,2026-11-20,true,cliente potencial
+u182,e499,2019-02-01,true,ex empleador
+u1830,e6,2023-07-10,true,interés en la industria
+u1223,e468,2021-11-11,true,trabajo actual
+u777,e417,2024-10-24,false,ex empleador
+u944,e431,2026-12-10,false,cliente potencial
+u1659,e316,2022-06-24,false,posible empleador
+u174,e296,2024-02-20,false,networking
+u734,e242,2020-05-11,true,interés general
+u1909,e156,2026-06-01,false,ex empleador
+u682,e237,2019-11-24,false,seguimiento de ofertas
+u905,e6,2021-09-04,true,interés general
+u789,e200,2026-10-15,false,trabajo actual
+u516,e65,2021-09-04,false,trabajo actual
+u552,e133,2024-10-03,false,networking
+u306,e446,2021-10-28,false,interés en la industria
+u63,e253,2025-03-16,false,networking
+u635,e288,2026-03-12,true,seguimiento de ofertas
+u946,e388,2024-09-06,false,interés general
+u1516,e30,2026-08-29,false,networking
+u1464,e175,2022-05-21,false,cliente potencial
+u403,e439,2020-07-30,false,seguimiento de ofertas
+u1851,e494,2026-08-31,true,ex empleador
+u1492,e403,2019-08-13,true,seguimiento de ofertas
+u1090,e189,2024-11-01,false,posible empleador
+u1622,e481,2019-12-04,false,trabajo actual
+u493,e238,2022-07-05,true,interés general
+u158,e268,2024-04-05,true,seguimiento de ofertas
+u1398,e199,2022-01-06,true,interés en la industria
+u1214,e139,2020-08-11,true,interés en la industria
+u1330,e355,2022-07-20,true,interés general
+u123,e189,2020-08-13,false,interés general
+u1363,e315,2026-09-01,false,seguimiento de ofertas
+u915,e40,2023-07-12,false,ex empleador
+u276,e146,2021-12-02,true,ex empleador
+u4,e316,2019-11-18,true,posible empleador
+u1201,e176,2026-01-09,false,interés general
+u1660,e450,2021-03-24,true,interés en la industria
+u1983,e347,2021-02-16,false,cliente potencial
+u1549,e458,2025-09-21,false,seguimiento de ofertas
+u1952,e203,2023-05-08,true,posible empleador
+u1542,e369,2019-09-18,false,networking
+u1573,e213,2026-06-12,false,cliente potencial
+u1833,e164,2022-05-21,true,trabajo actual
+u67,e233,2026-09-11,true,trabajo actual
+u24,e317,2022-10-24,false,interés general
+u1049,e49,2021-10-13,false,seguimiento de ofertas
+u1178,e300,2020-04-05,false,interés general
+u1089,e293,2026-06-26,true,posible empleador
+u1731,e420,2020-02-07,false,ex empleador
+u1590,e439,2026-12-16,false,cliente potencial
+u273,e460,2020-09-14,true,interés en la industria
+u1090,e30,2025-08-10,false,interés en la industria
+u1476,e171,2021-06-02,true,posible empleador
+u333,e433,2019-06-21,true,trabajo actual
+u282,e65,2026-01-12,true,seguimiento de ofertas
+u1090,e396,2025-08-09,true,networking
+u1693,e30,2019-01-14,true,posible empleador
+u399,e479,2025-12-11,false,ex empleador
+u391,e372,2020-11-10,false,ex empleador
+u1354,e116,2025-09-25,true,interés en la industria
+u319,e158,2019-12-27,true,cliente potencial
+u1138,e256,2024-12-01,true,seguimiento de ofertas
+u231,e126,2025-03-22,false,cliente potencial
+u428,e499,2021-11-27,true,seguimiento de ofertas
+u1327,e108,2020-04-07,false,ex empleador
+u677,e226,2020-02-11,false,interés en la industria
+u1134,e383,2026-07-06,false,interés en la industria
+u462,e243,2019-06-19,false,networking
+u75,e94,2026-10-30,false,ex empleador
+u19,e403,2026-03-14,false,seguimiento de ofertas
+u429,e367,2023-08-02,true,interés general
+u431,e65,2026-10-27,false,networking
+u1230,e279,2023-10-19,false,trabajo actual
+u677,e308,2026-08-11,true,ex empleador
+u517,e340,2024-03-31,true,trabajo actual
+u886,e481,2020-07-07,false,ex empleador
+u1315,e204,2024-04-26,true,networking
+u376,e324,2019-11-13,true,trabajo actual
+u1558,e319,2026-09-01,true,trabajo actual
+u839,e387,2025-07-21,false,interés en la industria
+u59,e255,2026-07-26,false,cliente potencial
+u1808,e107,2026-05-08,true,interés general
+u491,e279,2021-08-31,true,networking
+u1538,e354,2019-05-19,true,posible empleador
+u29,e125,2024-01-20,false,cliente potencial
+u1340,e472,2026-10-06,true,seguimiento de ofertas
+u1088,e413,2026-11-20,false,networking
+u1776,e418,2024-08-13,true,interés general
+u1770,e127,2026-04-29,false,cliente potencial
+u1517,e177,2020-01-17,true,cliente potencial
+u406,e465,2025-07-23,false,interés general
+u879,e193,2022-11-29,true,cliente potencial
+u514,e277,2022-08-08,false,networking
+u284,e30,2023-10-15,true,posible empleador
+u599,e374,2023-12-28,false,networking
+u771,e222,2020-01-03,false,trabajo actual
+u587,e7,2024-09-06,false,posible empleador
+u713,e229,2023-12-19,true,ex empleador
+u983,e162,2026-01-25,false,ex empleador
+u549,e60,2020-03-08,false,cliente potencial
+u1664,e27,2026-11-26,false,posible empleador
+u232,e479,2026-02-01,true,trabajo actual
+u1554,e117,2022-09-17,true,networking
+u1794,e125,2023-03-16,true,ex empleador
+u1564,e167,2026-02-05,true,seguimiento de ofertas
+u1958,e284,2024-02-27,true,trabajo actual
+u817,e200,2022-04-04,false,interés general
+u506,e168,2024-12-29,false,ex empleador
+u1367,e121,2019-01-14,true,interés en la industria
+u452,e209,2021-05-26,true,interés en la industria
+u838,e233,2025-07-10,false,interés general
+u1015,e325,2019-01-05,false,trabajo actual
+u1126,e100,2023-05-08,false,trabajo actual
+u1060,e144,2023-07-13,false,interés en la industria
+u1957,e465,2025-08-24,true,networking
+u376,e33,2023-01-26,false,cliente potencial
+u1092,e64,2025-03-29,false,networking
+u1062,e466,2026-03-05,true,ex empleador
+u1114,e67,2025-04-19,true,interés en la industria
+u1959,e262,2024-02-16,true,networking
+u401,e143,2025-04-02,false,interés en la industria
+u1510,e429,2026-09-18,false,interés en la industria
+u178,e259,2024-03-03,false,seguimiento de ofertas
+u832,e376,2026-11-02,false,cliente potencial
+u335,e28,2025-03-07,false,ex empleador
+u1689,e46,2026-10-15,false,interés general
+u1162,e450,2022-10-18,false,posible empleador
+u1417,e279,2019-08-04,true,posible empleador
+u649,e437,2025-10-02,false,networking
+u757,e438,2025-10-03,true,posible empleador
+u1755,e349,2023-10-16,false,interés general
+u217,e360,2022-11-06,true,ex empleador
+u629,e404,2022-01-03,true,posible empleador
+u1904,e347,2023-12-21,true,seguimiento de ofertas
+u730,e320,2022-04-08,true,interés en la industria
+u948,e252,2020-05-22,false,ex empleador
+u1994,e434,2023-02-18,false,trabajo actual
+u0,e136,2024-12-07,false,networking
+u794,e154,2021-02-05,true,interés en la industria
+u608,e72,2020-10-28,false,cliente potencial
+u137,e333,2020-10-02,true,posible empleador
+u545,e418,2024-03-12,true,cliente potencial
+u798,e4,2021-03-30,false,interés general
+u848,e165,2022-07-01,false,seguimiento de ofertas
+u630,e403,2020-09-08,true,posible empleador
+u1922,e437,2021-01-02,false,interés en la industria
+u619,e202,2023-10-19,false,interés general
+u1997,e166,2024-12-24,true,interés en la industria
+u57,e444,2021-06-23,false,interés en la industria
+u1472,e293,2020-10-06,false,cliente potencial
+u1730,e90,2023-07-19,true,posible empleador
+u174,e232,2019-08-18,false,ex empleador
+u1791,e220,2024-02-08,true,interés en la industria
+u163,e192,2024-11-26,false,posible empleador
+u1608,e394,2021-07-30,false,posible empleador
+u877,e68,2026-01-25,true,interés en la industria
+u1009,e199,2024-02-22,false,posible empleador
+u37,e170,2021-07-01,true,seguimiento de ofertas
+u572,e159,2025-11-29,false,cliente potencial
+u247,e388,2023-05-29,true,networking
+u1146,e440,2025-01-20,true,trabajo actual
+u751,e294,2023-10-31,true,ex empleador
+u607,e471,2026-12-11,true,interés general
+u998,e30,2026-06-11,false,ex empleador
+u1226,e196,2022-04-15,true,seguimiento de ofertas
+u1741,e76,2023-03-17,false,seguimiento de ofertas
+u615,e260,2024-10-27,false,ex empleador
+u1073,e186,2026-10-26,true,cliente potencial
+u163,e189,2020-12-11,false,interés en la industria
+u866,e435,2019-07-18,false,interés en la industria
+u1031,e269,2021-12-30,true,networking
+u58,e383,2023-07-11,true,interés general
+u1556,e210,2019-06-15,false,seguimiento de ofertas
+u1685,e362,2021-02-26,false,posible empleador
+u1054,e333,2020-11-05,true,interés en la industria
+u282,e145,2023-03-12,true,trabajo actual
+u683,e137,2021-11-26,false,networking
+u32,e474,2022-10-02,false,interés general
+u79,e490,2023-08-25,true,cliente potencial
+u1399,e215,2022-08-14,true,cliente potencial
+u869,e249,2021-04-22,false,trabajo actual
+u1117,e442,2023-06-11,false,interés en la industria
+u524,e283,2023-05-01,true,ex empleador
+u836,e362,2020-11-24,true,posible empleador
+u1624,e3,2021-12-05,true,seguimiento de ofertas
+u676,e58,2026-06-26,true,posible empleador
+u829,e331,2020-12-16,false,cliente potencial
+u1155,e190,2024-01-14,true,posible empleador
+u345,e233,2025-12-15,true,interés en la industria
+u509,e134,2021-01-12,false,seguimiento de ofertas
+u154,e460,2021-04-25,false,networking
+u121,e256,2020-11-17,false,posible empleador
+u692,e132,2026-01-04,false,networking
+u325,e77,2024-02-10,false,interés general
+u322,e380,2023-03-22,true,cliente potencial
+u1111,e90,2024-05-29,false,trabajo actual
+u1813,e157,2019-03-28,false,trabajo actual
+u1291,e291,2023-02-17,false,interés general
+u209,e148,2023-06-15,true,cliente potencial
+u1380,e341,2026-07-18,true,posible empleador
+u1277,e230,2022-12-15,false,posible empleador
+u848,e104,2019-11-23,false,interés general
+u1080,e112,2026-10-02,false,trabajo actual
+u408,e294,2020-11-03,false,networking
+u1197,e462,2026-03-19,true,seguimiento de ofertas
+u1980,e264,2024-07-30,false,interés en la industria
+u207,e371,2023-06-13,false,trabajo actual
+u47,e261,2025-11-19,true,ex empleador
+u1589,e379,2020-05-12,true,cliente potencial
+u1195,e428,2019-11-03,true,interés en la industria
+u1971,e95,2023-05-08,false,trabajo actual
+u1588,e36,2020-11-04,false,ex empleador
+u1446,e138,2021-10-13,false,networking
+u1813,e3,2021-07-09,false,seguimiento de ofertas
+u731,e407,2023-10-14,false,cliente potencial
+u1455,e457,2020-08-30,true,cliente potencial
+u1967,e288,2019-05-09,false,posible empleador
+u1962,e298,2023-08-07,true,posible empleador
+u1741,e72,2023-06-08,false,interés en la industria
+u296,e51,2020-11-06,true,posible empleador
+u1119,e423,2019-06-20,true,trabajo actual
+u1163,e474,2026-09-23,true,seguimiento de ofertas
+u1789,e365,2026-01-06,false,trabajo actual
+u1879,e161,2026-01-27,true,networking
+u1131,e117,2026-04-28,false,trabajo actual
+u1153,e329,2020-10-02,false,posible empleador
+u285,e377,2025-08-05,false,interés en la industria
+u164,e215,2025-01-21,false,networking
+u1239,e453,2026-06-12,false,posible empleador
+u1838,e371,2021-05-22,true,networking
+u1120,e459,2024-03-08,false,trabajo actual
+u284,e438,2020-05-26,false,networking
+u908,e422,2019-10-08,false,posible empleador
+u1839,e40,2023-05-08,true,interés en la industria
+u1349,e402,2021-03-26,true,interés general
+u807,e495,2024-05-24,true,interés en la industria
+u865,e248,2020-05-22,true,posible empleador
+u1515,e418,2024-05-06,true,ex empleador
+u633,e102,2024-10-13,true,ex empleador
+u1198,e433,2022-04-06,true,networking
+u1455,e91,2024-02-20,true,ex empleador
+u1787,e390,2026-09-30,false,interés general
+u1655,e472,2021-03-07,false,trabajo actual
+u1296,e186,2022-12-12,false,cliente potencial
+u1589,e113,2026-11-05,false,interés en la industria
+u735,e59,2023-02-05,false,cliente potencial
+u397,e258,2025-07-06,true,trabajo actual
+u589,e199,2022-08-09,true,cliente potencial
+u1100,e232,2019-08-11,true,ex empleador
+u1590,e135,2026-05-19,true,seguimiento de ofertas
+u1126,e430,2020-09-09,true,interés en la industria
+u1021,e67,2019-10-13,true,trabajo actual
+u1470,e5,2025-09-25,false,seguimiento de ofertas
+u824,e282,2021-03-19,true,cliente potencial
+u1086,e351,2022-09-09,true,posible empleador
+u104,e138,2024-09-25,true,ex empleador
+u49,e169,2023-02-21,true,trabajo actual
+u536,e366,2022-08-21,false,posible empleador
+u1946,e65,2025-11-23,true,posible empleador
+u1159,e165,2025-01-11,true,posible empleador
+u1683,e451,2021-09-28,true,trabajo actual
+u1291,e67,2026-11-24,true,posible empleador
+u1315,e76,2022-10-26,false,seguimiento de ofertas
+u327,e292,2020-04-28,true,ex empleador
+u1647,e487,2023-10-21,true,trabajo actual
+u72,e160,2024-11-01,false,posible empleador
+u509,e82,2025-03-05,true,interés general
+u20,e309,2022-01-02,true,interés en la industria
+u813,e362,2025-09-22,false,cliente potencial
+u1154,e390,2025-05-13,false,interés en la industria
+u842,e135,2025-07-20,true,seguimiento de ofertas
+u763,e244,2026-08-01,true,cliente potencial
+u630,e9,2026-06-19,false,interés en la industria
+u1235,e34,2024-01-21,true,interés general
+u572,e300,2026-06-23,false,ex empleador
+u679,e443,2019-02-09,false,cliente potencial
+u1319,e194,2021-11-15,false,ex empleador
+u968,e267,2021-09-10,false,trabajo actual
+u1827,e178,2022-07-15,true,interés general
+u190,e413,2019-09-12,false,seguimiento de ofertas
+u542,e469,2026-10-07,false,posible empleador
+u1912,e330,2019-03-31,true,posible empleador
+u617,e167,2025-09-17,false,interés en la industria
+u665,e34,2024-03-24,false,posible empleador
+u331,e445,2025-04-10,false,networking
+u1981,e141,2021-06-25,false,interés en la industria
+u1009,e73,2025-11-25,false,trabajo actual
+u902,e88,2020-09-05,true,ex empleador
+u1829,e334,2023-06-02,true,trabajo actual
+u1908,e437,2023-01-13,false,ex empleador
+u1766,e361,2022-11-17,true,posible empleador
+u1875,e210,2022-01-10,true,ex empleador
+u1170,e325,2023-08-10,false,ex empleador
+u562,e212,2021-06-04,false,interés general
+u1043,e337,2021-08-12,true,seguimiento de ofertas
+u1057,e129,2019-05-15,true,ex empleador
+u391,e441,2023-11-02,true,ex empleador
+u1794,e64,2023-08-16,false,networking
+u930,e299,2023-05-14,false,ex empleador
+u1995,e156,2023-10-19,false,interés general
+u1707,e445,2021-05-16,true,ex empleador
+u222,e117,2024-06-09,true,interés general
+u1545,e467,2021-11-23,false,interés general
+u1324,e63,2022-10-27,false,networking
+u1531,e432,2026-08-06,true,seguimiento de ofertas
+u1497,e420,2026-02-24,false,interés general
+u527,e8,2025-10-31,false,interés en la industria
+u1730,e95,2019-01-03,true,cliente potencial
+u1735,e192,2023-02-16,false,networking
+u1455,e215,2024-02-07,true,networking
+u31,e206,2019-12-06,false,cliente potencial
+u27,e29,2022-10-19,false,ex empleador
+u321,e257,2021-05-25,true,interés general
+u1070,e143,2021-08-10,true,seguimiento de ofertas
+u1626,e106,2019-01-30,true,seguimiento de ofertas
+u1661,e330,2022-09-13,false,cliente potencial
+u577,e299,2021-10-16,false,interés en la industria
+u482,e336,2019-09-22,false,interés general
+u1513,e435,2020-10-07,false,interés en la industria
+u1084,e381,2022-05-05,false,networking
+u431,e42,2019-06-13,true,seguimiento de ofertas
+u1481,e213,2024-03-10,true,seguimiento de ofertas
+u939,e54,2023-02-03,true,cliente potencial
+u92,e173,2024-05-19,true,interés en la industria
+u1117,e272,2020-12-16,false,posible empleador
+u418,e73,2026-06-22,false,networking
+u1786,e132,2024-12-22,false,ex empleador
+u652,e123,2022-01-15,false,interés en la industria
+u484,e217,2023-06-27,false,seguimiento de ofertas
+u218,e332,2025-12-28,true,posible empleador
+u660,e218,2024-05-20,true,interés general
+u432,e40,2020-04-10,true,posible empleador
+u216,e188,2019-07-24,false,seguimiento de ofertas
+u1127,e214,2024-04-21,false,trabajo actual
+u62,e385,2019-03-26,true,posible empleador
+u1390,e368,2020-01-30,false,ex empleador
+u3,e234,2022-06-24,false,posible empleador
+u1421,e469,2024-05-04,false,networking
+u1219,e209,2024-02-21,true,posible empleador
+u17,e319,2025-09-16,true,networking
+u659,e218,2024-05-11,false,ex empleador
+u1367,e313,2024-11-26,true,ex empleador
+u1044,e373,2022-10-18,false,trabajo actual
+u742,e217,2022-05-02,true,posible empleador
+u1369,e472,2026-01-02,false,interés general
+u643,e120,2025-11-11,true,cliente potencial
+u380,e425,2021-08-14,false,interés general
+u1775,e251,2024-10-15,false,ex empleador
+u1762,e133,2026-10-20,false,interés general
+u835,e319,2021-10-12,false,cliente potencial
+u383,e173,2020-07-28,true,interés en la industria
+u1299,e475,2019-05-27,true,cliente potencial
+u284,e342,2025-03-10,true,trabajo actual
+u1793,e48,2021-03-15,true,cliente potencial
+u512,e27,2022-05-13,false,interés en la industria
+u958,e106,2023-04-26,true,interés general
+u949,e464,2026-10-18,true,interés general
+u675,e244,2019-08-31,false,posible empleador
+u419,e9,2022-08-14,true,trabajo actual
+u1862,e81,2024-04-26,false,trabajo actual
+u120,e446,2019-02-23,true,interés general
+u1506,e284,2025-02-11,false,trabajo actual
+u799,e181,2019-12-17,true,cliente potencial
+u1385,e8,2025-11-03,true,cliente potencial
+u1575,e324,2020-05-28,true,interés en la industria
+u1640,e126,2024-04-11,true,cliente potencial
+u1049,e161,2020-08-30,true,interés general
+u279,e389,2019-10-11,true,posible empleador
+u748,e487,2026-11-22,true,seguimiento de ofertas
+u495,e8,2020-12-16,false,cliente potencial
+u1113,e223,2021-03-27,false,ex empleador
+u1990,e433,2021-05-22,true,interés general
+u618,e411,2021-12-04,true,interés en la industria
+u870,e422,2023-05-15,false,posible empleador
+u639,e348,2024-11-13,false,ex empleador
+u892,e429,2025-02-26,true,interés en la industria
+u1951,e0,2025-09-06,false,networking
+u289,e253,2021-06-07,true,trabajo actual
+u1950,e463,2021-07-09,false,interés general
+u463,e234,2020-01-15,true,cliente potencial
+u656,e43,2026-05-22,true,cliente potencial
+u1357,e315,2023-07-16,true,interés en la industria
+u480,e245,2024-12-06,true,trabajo actual
+u1178,e26,2023-12-11,false,ex empleador
+u1460,e230,2019-07-22,true,trabajo actual
+u784,e83,2019-04-07,false,seguimiento de ofertas
+u1731,e80,2026-09-29,false,trabajo actual
+u459,e493,2021-12-17,true,ex empleador
+u977,e483,2026-09-19,false,interés en la industria
+u983,e365,2024-01-19,false,networking
+u1334,e116,2021-03-22,true,trabajo actual
+u1001,e69,2024-05-14,true,cliente potencial
+u15,e485,2024-04-12,false,networking
+u626,e218,2025-01-08,false,posible empleador
+u1150,e371,2022-01-18,false,ex empleador
+u1688,e190,2019-11-30,false,interés general
+u684,e110,2026-07-29,true,cliente potencial
+u637,e122,2025-11-18,true,ex empleador
+u604,e88,2024-10-04,false,ex empleador
+u1915,e121,2024-12-22,true,interés en la industria
+u1498,e283,2020-10-07,false,ex empleador
+u522,e328,2024-03-05,false,trabajo actual
+u145,e244,2023-04-06,true,posible empleador
+u1395,e171,2024-09-06,false,interés en la industria
+u124,e337,2021-04-14,true,seguimiento de ofertas
+u846,e101,2023-10-10,true,networking
+u1321,e259,2019-06-20,false,cliente potencial
+u723,e273,2021-07-30,true,ex empleador
+u1020,e207,2025-05-01,true,interés general
+u555,e301,2026-06-19,false,trabajo actual
+u125,e320,2021-08-04,false,cliente potencial
+u1321,e372,2024-04-11,false,networking
+u1420,e21,2025-06-15,false,seguimiento de ofertas
+u1986,e129,2023-12-13,false,networking
+u1316,e441,2024-07-14,true,posible empleador
+u1659,e52,2020-04-11,false,seguimiento de ofertas
+u816,e42,2019-04-18,true,posible empleador
+u420,e298,2022-09-13,false,networking
+u1080,e211,2026-04-27,false,interés general
+u1708,e47,2022-11-12,false,interés en la industria
+u292,e258,2023-07-15,false,trabajo actual
+u1399,e336,2024-04-11,true,ex empleador
+u384,e104,2019-11-16,true,interés general
+u992,e89,2020-10-24,false,seguimiento de ofertas
+u10,e99,2025-09-27,true,cliente potencial
+u1690,e452,2019-02-12,false,seguimiento de ofertas
+u995,e110,2026-07-21,false,seguimiento de ofertas
+u1977,e284,2026-01-17,false,networking
+u1468,e428,2022-01-05,true,trabajo actual
+u1882,e78,2021-12-11,false,interés en la industria
+u636,e281,2019-05-14,false,networking
+u1971,e336,2022-11-29,false,networking
+u590,e373,2024-08-29,false,networking
+u1659,e382,2021-09-18,false,seguimiento de ofertas
+u1981,e313,2019-07-22,false,seguimiento de ofertas
+u661,e251,2020-01-21,false,posible empleador
+u75,e289,2023-04-06,false,interés general
+u1981,e149,2021-08-04,false,interés en la industria
+u919,e57,2021-06-08,false,interés general
+u1790,e103,2020-05-28,false,interés en la industria
+u1930,e446,2021-06-28,false,ex empleador
+u1119,e447,2023-11-05,false,trabajo actual
+u1456,e185,2023-11-03,false,interés general
+u1313,e266,2024-01-09,false,networking
+u666,e497,2019-06-13,false,posible empleador
+u893,e38,2021-07-10,false,cliente potencial
+u1730,e486,2020-10-10,false,trabajo actual
+u379,e313,2019-01-03,true,seguimiento de ofertas
+u948,e78,2021-07-21,false,trabajo actual
+u1622,e224,2024-02-09,false,seguimiento de ofertas
+u584,e107,2023-07-10,true,cliente potencial
+u1376,e88,2025-05-06,true,posible empleador
+u785,e491,2023-11-17,true,posible empleador
+u1222,e66,2023-06-18,true,posible empleador
+u1670,e337,2022-10-10,true,cliente potencial
+u1979,e313,2019-07-15,false,posible empleador
+u260,e363,2019-01-12,false,interés general
+u361,e478,2021-07-13,true,interés en la industria
+u822,e326,2023-10-14,true,interés general
+u1723,e320,2020-03-13,false,posible empleador
+u1807,e353,2025-05-06,true,networking
+u247,e483,2020-07-15,false,trabajo actual
+u209,e347,2026-05-02,false,seguimiento de ofertas
+u1486,e427,2020-09-16,true,interés general
+u1702,e390,2022-06-22,true,ex empleador
+u1700,e352,2019-07-06,false,posible empleador
+u378,e269,2022-07-18,false,interés general
+u535,e266,2022-01-25,false,interés en la industria
+u655,e456,2025-05-07,false,seguimiento de ofertas
+u1953,e156,2019-04-17,true,networking
+u1538,e103,2019-06-25,true,networking
+u1853,e360,2020-09-29,false,seguimiento de ofertas
+u1546,e86,2020-01-13,true,interés general
+u621,e293,2021-06-20,true,trabajo actual
+u1601,e494,2022-08-15,false,networking
+u1753,e53,2020-09-23,false,interés en la industria
+u262,e215,2024-04-27,false,networking
+u1635,e45,2026-05-31,false,cliente potencial
+u445,e492,2025-04-18,true,interés general
+u1551,e44,2024-03-08,false,cliente potencial
+u1412,e404,2024-04-15,true,cliente potencial
+u84,e167,2023-05-05,false,interés en la industria
+u1234,e231,2021-04-28,false,cliente potencial
+u1327,e40,2019-12-24,true,posible empleador
+u1480,e161,2020-07-20,false,seguimiento de ofertas
+u1925,e376,2023-05-10,false,ex empleador
+u1429,e133,2024-03-27,false,interés en la industria
+u1704,e336,2023-07-19,true,ex empleador
+u1108,e114,2019-10-29,true,interés general
+u1501,e474,2022-06-21,false,posible empleador
+u127,e94,2023-11-20,false,ex empleador
+u302,e107,2019-06-23,true,interés en la industria
+u524,e488,2024-01-13,false,seguimiento de ofertas
+u988,e236,2025-05-04,true,ex empleador
+u1398,e181,2024-05-24,true,trabajo actual
+u1883,e4,2019-08-15,false,interés en la industria
+u573,e236,2025-10-13,false,trabajo actual
+u634,e234,2019-06-26,false,interés en la industria
+u151,e463,2023-12-17,true,ex empleador
+u964,e183,2025-09-09,true,posible empleador
+u1429,e218,2023-06-15,true,posible empleador
+u349,e167,2019-02-01,false,seguimiento de ofertas
+u1186,e54,2026-05-06,false,ex empleador
+u1428,e163,2022-11-28,true,networking
+u1012,e479,2020-06-29,false,trabajo actual
+u884,e95,2021-06-21,true,ex empleador
+u288,e114,2020-07-23,false,seguimiento de ofertas
+u1956,e420,2026-09-19,true,networking
+u1563,e337,2024-05-05,false,interés en la industria
+u1487,e168,2020-04-25,true,ex empleador
+u323,e429,2019-08-23,false,ex empleador
+u1096,e4,2023-07-09,false,ex empleador
+u562,e73,2022-07-22,true,interés en la industria
+u1269,e435,2021-05-02,true,ex empleador
+u1078,e139,2026-08-23,true,ex empleador
+u1473,e471,2019-03-18,false,interés en la industria
+u953,e102,2022-07-04,false,trabajo actual
+u1474,e137,2022-12-19,false,ex empleador
+u281,e190,2025-09-19,true,cliente potencial
+u630,e354,2022-10-24,true,seguimiento de ofertas
+u1307,e288,2024-07-12,false,ex empleador
+u1710,e111,2026-01-18,true,interés general
+u695,e9,2021-03-16,false,ex empleador
+u746,e443,2020-03-02,true,networking
+u1338,e454,2024-11-14,true,interés general
+u360,e232,2022-10-10,false,seguimiento de ofertas
+u376,e179,2020-10-29,true,cliente potencial
+u356,e295,2026-01-23,false,interés en la industria
+u1690,e245,2022-08-19,false,posible empleador
+u522,e222,2026-11-18,true,networking
+u1986,e108,2020-02-04,true,seguimiento de ofertas
+u1844,e358,2019-12-29,true,posible empleador
+u94,e353,2023-08-07,false,seguimiento de ofertas
+u1416,e325,2021-05-16,true,interés general
+u1684,e271,2022-10-06,false,posible empleador
+u238,e436,2019-03-09,false,seguimiento de ofertas
+u1682,e160,2026-08-08,true,cliente potencial
+u1985,e133,2025-12-17,true,seguimiento de ofertas
+u463,e405,2019-01-01,true,ex empleador
+u1648,e67,2023-03-08,true,seguimiento de ofertas
+u1848,e211,2023-08-29,true,ex empleador
+u1458,e234,2021-05-22,true,trabajo actual
+u565,e164,2026-10-27,true,interés en la industria
+u1079,e243,2024-10-15,false,ex empleador
+u1408,e488,2024-03-18,true,cliente potencial
+u1815,e458,2022-03-20,true,seguimiento de ofertas
+u1122,e108,2022-08-08,true,networking
+u420,e7,2019-02-28,false,interés en la industria
+u1649,e73,2021-06-25,true,seguimiento de ofertas
+u1686,e382,2025-05-26,false,trabajo actual
+u1896,e262,2025-01-08,false,ex empleador
+u894,e311,2026-08-17,true,cliente potencial
+u1464,e233,2025-06-11,true,interés en la industria
+u1344,e81,2022-07-22,true,posible empleador
+u1591,e15,2025-12-02,true,posible empleador
+u1783,e371,2024-11-26,false,ex empleador
+u1683,e156,2021-05-15,false,cliente potencial
+u1855,e53,2021-01-05,false,posible empleador
+u1501,e437,2024-04-29,false,trabajo actual
+u1157,e141,2020-05-15,true,trabajo actual
+u31,e169,2019-03-26,false,interés en la industria
+u1675,e394,2025-06-25,true,cliente potencial
+u225,e467,2025-01-26,false,interés general
+u1152,e205,2019-10-05,false,interés en la industria
+u563,e133,2021-03-06,true,interés en la industria
+u1008,e400,2024-01-02,false,networking
+u1529,e383,2023-05-07,false,seguimiento de ofertas
+u1827,e78,2020-08-13,true,seguimiento de ofertas
+u1779,e30,2019-09-29,true,seguimiento de ofertas
+u1466,e491,2025-08-07,false,posible empleador
+u555,e407,2020-09-14,false,cliente potencial
+u688,e495,2021-10-03,false,interés en la industria
+u893,e54,2020-01-22,true,trabajo actual
+u552,e55,2026-06-08,true,posible empleador
+u1907,e262,2019-02-03,true,interés general
+u368,e145,2024-05-18,true,interés en la industria
+u239,e420,2019-12-21,false,networking
+u1518,e70,2021-07-08,true,ex empleador
+u193,e49,2026-12-24,true,seguimiento de ofertas
+u1667,e343,2026-06-04,true,seguimiento de ofertas
+u1143,e122,2019-08-24,true,posible empleador
+u1980,e439,2025-01-24,false,interés general
+u406,e74,2020-02-16,false,trabajo actual
+u1974,e148,2026-04-04,true,interés en la industria
+u832,e375,2022-04-25,false,networking
+u249,e82,2023-12-01,false,cliente potencial
+u205,e143,2020-02-04,true,interés general
+u1360,e169,2022-03-17,false,seguimiento de ofertas
+u1373,e232,2019-05-15,true,seguimiento de ofertas
+u1838,e444,2024-07-05,true,networking
+u1508,e239,2022-09-09,false,seguimiento de ofertas
+u955,e495,2021-03-11,false,posible empleador
+u283,e326,2022-01-10,true,cliente potencial
+u226,e326,2025-03-23,true,networking
+u1432,e88,2020-01-26,true,posible empleador
+u840,e1,2021-09-23,false,networking
+u1795,e48,2019-03-06,true,interés en la industria
+u1696,e423,2025-09-23,true,posible empleador
+u45,e438,2020-04-06,false,interés en la industria
+u1933,e273,2019-02-02,false,seguimiento de ofertas
+u956,e69,2019-05-14,false,trabajo actual
+u1992,e229,2020-05-02,true,networking
+u1995,e15,2026-04-12,false,seguimiento de ofertas
+u1924,e107,2019-04-01,true,ex empleador
+u376,e276,2025-05-28,true,trabajo actual
+u962,e403,2025-01-26,false,seguimiento de ofertas
+u1020,e117,2023-02-08,false,trabajo actual
+u1470,e19,2020-11-10,true,seguimiento de ofertas
+u659,e103,2021-06-29,true,interés general
+u594,e78,2019-10-11,false,seguimiento de ofertas
+u771,e434,2026-09-07,false,cliente potencial
+u1913,e480,2024-10-16,false,ex empleador
+u1118,e251,2021-10-29,false,interés general
+u547,e210,2020-12-30,false,interés general
+u1428,e294,2025-06-10,false,trabajo actual
+u1893,e422,2020-05-02,true,posible empleador
+u603,e348,2025-03-06,false,seguimiento de ofertas
+u1404,e0,2021-10-03,false,interés general
+u1113,e126,2019-06-14,true,interés en la industria
+u1860,e94,2020-02-14,true,cliente potencial
+u395,e462,2026-03-27,false,interés general
+u377,e316,2020-01-06,false,seguimiento de ofertas
+u1444,e340,2020-11-06,true,posible empleador
+u122,e333,2019-01-01,true,interés en la industria
+u1766,e492,2025-04-17,true,interés general
+u1990,e383,2025-02-11,true,networking
+u642,e346,2020-06-22,false,trabajo actual
+u17,e485,2025-04-14,false,interés general
+u285,e327,2020-12-18,true,networking
+u1201,e113,2026-08-03,true,seguimiento de ofertas
+u1063,e344,2020-10-31,false,ex empleador
+u507,e219,2021-03-08,true,trabajo actual
+u456,e326,2021-02-25,false,ex empleador
+u1920,e76,2021-05-20,false,trabajo actual
+u1765,e207,2023-05-22,true,cliente potencial
+u1950,e97,2026-11-12,true,networking
+u853,e431,2024-04-30,true,interés en la industria
+u1412,e365,2021-11-20,true,trabajo actual
+u1959,e321,2022-06-02,true,networking
+u1507,e41,2023-07-05,false,networking
+u765,e341,2024-03-30,false,posible empleador
+u1915,e278,2020-03-26,true,interés general
+u1591,e78,2026-08-14,true,trabajo actual
+u56,e189,2023-09-16,false,interés general
+u1332,e477,2024-12-11,true,ex empleador
+u271,e140,2019-10-27,false,networking
+u1419,e483,2026-05-16,true,trabajo actual
+u1195,e309,2024-11-09,true,seguimiento de ofertas
+u1115,e362,2021-09-09,true,posible empleador
+u469,e207,2024-09-28,false,seguimiento de ofertas
+u1386,e243,2026-01-02,true,posible empleador
+u1734,e156,2023-10-03,false,cliente potencial
+u440,e143,2026-04-26,true,posible empleador
+u404,e175,2023-03-08,true,ex empleador
+u951,e146,2026-01-17,false,ex empleador
+u1877,e453,2025-06-04,true,networking
+u58,e39,2026-10-28,true,seguimiento de ofertas
+u1760,e38,2023-04-17,false,cliente potencial
+u316,e274,2020-06-14,true,interés en la industria
+u94,e148,2024-01-21,false,seguimiento de ofertas
+u888,e445,2021-06-14,true,posible empleador
+u1152,e89,2025-03-19,false,interés en la industria
+u1553,e44,2026-11-24,false,ex empleador
+u812,e472,2023-02-02,true,ex empleador
+u1225,e405,2025-04-06,true,interés en la industria
+u410,e285,2021-02-25,true,networking
+u1978,e53,2023-06-30,true,ex empleador
+u171,e372,2024-01-20,true,interés general
+u589,e32,2021-02-12,false,trabajo actual
+u1698,e187,2021-08-08,true,interés en la industria
+u602,e471,2022-04-01,false,interés general
+u924,e6,2024-11-14,true,seguimiento de ofertas
+u428,e361,2022-03-14,false,cliente potencial
+u1590,e455,2019-12-29,true,seguimiento de ofertas
+u619,e222,2026-05-01,true,seguimiento de ofertas
+u365,e74,2023-03-27,false,networking
+u1091,e192,2025-02-22,false,posible empleador
+u1155,e178,2023-01-17,false,interés general
+u1355,e40,2021-12-23,true,seguimiento de ofertas
+u1569,e9,2024-10-02,true,ex empleador
+u1867,e375,2019-07-29,true,trabajo actual
+u723,e264,2021-03-19,false,interés general
+u1523,e183,2023-07-01,false,interés en la industria
+u123,e260,2022-06-27,false,interés en la industria
+u166,e238,2019-10-27,false,seguimiento de ofertas
+u1565,e499,2023-09-24,true,networking
+u1202,e296,2020-12-25,false,cliente potencial
+u1833,e376,2026-12-23,true,cliente potencial
+u1078,e464,2019-09-01,true,posible empleador
+u675,e444,2021-04-02,false,interés en la industria
+u1643,e299,2023-03-19,true,posible empleador
+u1865,e138,2022-03-11,true,interés general
+u1332,e19,2019-09-24,true,networking
+u1796,e407,2021-01-22,false,posible empleador
+u1354,e304,2026-08-02,true,seguimiento de ofertas
+u1430,e146,2020-09-07,true,trabajo actual
+u53,e51,2021-01-22,true,posible empleador
+u270,e10,2022-08-17,true,cliente potencial
+u312,e363,2025-03-02,true,cliente potencial
+u831,e417,2022-03-06,true,networking
+u1327,e93,2019-12-01,true,trabajo actual
+u463,e58,2023-08-06,true,interés general
+u745,e143,2020-09-15,false,seguimiento de ofertas
+u1803,e59,2024-06-04,true,cliente potencial
+u749,e49,2020-09-24,false,interés en la industria
+u1200,e425,2025-05-17,true,cliente potencial
+u530,e157,2026-03-21,false,seguimiento de ofertas
+u1088,e188,2021-05-08,false,posible empleador
+u1917,e388,2023-04-29,true,trabajo actual
+u861,e465,2026-12-06,true,networking
+u650,e287,2019-02-28,true,interés en la industria
+u650,e67,2020-01-20,true,networking
+u702,e151,2023-03-02,false,trabajo actual
+u1486,e324,2020-04-24,false,posible empleador
+u1829,e139,2024-11-13,false,interés en la industria
+u730,e364,2026-02-15,true,posible empleador
+u31,e99,2021-09-28,false,trabajo actual
+u1233,e401,2020-06-28,false,cliente potencial
+u1202,e186,2019-04-13,false,ex empleador
+u1995,e492,2024-10-01,false,interés general
+u267,e95,2022-04-26,true,seguimiento de ofertas
+u1193,e99,2025-11-18,false,posible empleador
+u351,e119,2019-07-03,true,seguimiento de ofertas
+u1598,e397,2025-05-06,false,interés en la industria
+u514,e13,2024-08-03,false,interés en la industria
+u1492,e129,2020-03-23,true,trabajo actual
+u1060,e322,2024-04-27,true,seguimiento de ofertas
+u1195,e359,2019-04-08,false,cliente potencial
+u1497,e94,2024-02-23,false,networking
+u1783,e479,2019-09-21,true,trabajo actual
+u934,e363,2021-09-02,false,interés en la industria
+u475,e258,2023-02-06,true,ex empleador
+u976,e219,2020-02-11,true,ex empleador
+u1479,e274,2024-11-17,true,interés en la industria
+u412,e215,2022-01-27,false,interés en la industria
+u370,e434,2025-05-13,false,cliente potencial
+u1135,e261,2026-09-07,false,networking
+u1093,e344,2024-11-10,false,interés en la industria
+u247,e153,2020-05-14,true,ex empleador
+u1762,e31,2020-06-16,false,interés en la industria
+u223,e141,2024-08-19,false,ex empleador
+u131,e216,2026-09-04,true,cliente potencial
+u1649,e404,2022-03-31,true,posible empleador
+u153,e391,2022-10-29,true,interés en la industria
+u163,e237,2020-01-15,true,seguimiento de ofertas
+u51,e4,2020-03-27,true,networking
+u1200,e89,2026-04-30,false,seguimiento de ofertas
+u1962,e482,2025-02-02,true,interés en la industria
+u1293,e238,2021-06-03,false,seguimiento de ofertas
+u1050,e64,2024-03-02,true,seguimiento de ofertas
+u977,e409,2023-04-29,false,ex empleador
+u1467,e76,2020-08-03,false,networking
+u1256,e163,2020-11-12,false,posible empleador
+u796,e299,2021-07-28,false,ex empleador
+u355,e210,2024-05-15,false,interés general
+u1968,e175,2021-04-29,true,posible empleador
+u1450,e468,2025-07-19,true,networking
+u769,e195,2025-06-19,true,cliente potencial
+u1814,e464,2020-03-20,true,interés general
+u245,e276,2019-08-09,false,networking
+u909,e194,2024-11-17,true,cliente potencial
+u1105,e258,2022-03-01,true,cliente potencial
+u1790,e327,2020-09-04,true,cliente potencial
+u346,e21,2021-01-25,false,cliente potencial
+u1405,e245,2022-08-18,false,networking
+u119,e360,2026-05-29,false,trabajo actual
+u3,e289,2024-11-20,false,ex empleador
+u1066,e28,2020-05-10,true,networking
+u243,e423,2026-12-14,true,ex empleador
+u1143,e75,2022-06-01,false,ex empleador
+u1252,e410,2020-10-03,false,cliente potencial
+u807,e282,2025-02-15,false,networking
+u1541,e461,2020-11-13,false,trabajo actual
+u367,e198,2019-11-06,false,trabajo actual
+u689,e90,2020-02-27,true,seguimiento de ofertas
+u23,e166,2022-02-28,true,interés general
+u1649,e238,2021-12-03,true,posible empleador
+u1298,e143,2024-06-30,true,networking
+u1241,e186,2019-09-30,true,interés general
+u733,e209,2023-01-26,true,interés en la industria
+u251,e263,2020-09-16,true,interés general
+u425,e105,2024-12-25,true,trabajo actual
+u1039,e376,2021-05-21,true,interés en la industria
+u1458,e275,2020-03-09,false,cliente potencial
+u1596,e331,2020-08-09,false,ex empleador
+u463,e252,2023-03-15,true,seguimiento de ofertas
+u1245,e382,2022-03-07,true,trabajo actual
+u130,e397,2020-12-04,true,trabajo actual
+u1371,e427,2019-03-08,true,trabajo actual
+u1525,e71,2025-08-19,false,ex empleador
+u1152,e198,2023-12-26,true,trabajo actual
+u1661,e233,2025-02-03,false,posible empleador
+u591,e317,2022-02-27,true,trabajo actual
+u1116,e142,2025-07-17,true,networking
+u1106,e319,2019-04-24,false,seguimiento de ofertas
+u1610,e265,2024-06-16,true,interés general
+u1161,e82,2020-04-22,true,interés en la industria
+u591,e164,2024-07-24,true,interés en la industria
+u524,e307,2019-08-25,true,cliente potencial
+u1837,e230,2025-01-25,true,interés general
+u748,e426,2022-07-20,false,cliente potencial
+u1498,e199,2024-06-30,true,ex empleador
+u683,e187,2025-02-10,false,posible empleador
+u880,e183,2019-08-08,true,interés en la industria
+u1810,e101,2023-09-06,false,ex empleador
+u975,e446,2026-10-11,true,interés general
+u1987,e396,2023-02-07,true,interés en la industria
+u1850,e436,2019-05-06,false,interés en la industria
+u1933,e353,2022-09-20,true,networking
+u730,e73,2019-06-26,false,ex empleador
+u1327,e58,2019-02-14,true,interés general
+u277,e218,2023-06-11,true,networking
+u316,e91,2025-04-13,true,interés en la industria
+u113,e261,2023-12-26,true,posible empleador
+u1873,e32,2019-12-10,true,interés en la industria
+u755,e150,2020-02-16,true,posible empleador
+u851,e426,2022-11-23,true,networking
+u1107,e269,2022-01-07,false,seguimiento de ofertas
+u517,e70,2019-01-06,false,networking
+u13,e166,2021-11-08,false,ex empleador
+u431,e337,2024-06-20,false,ex empleador
+u396,e316,2019-10-21,false,cliente potencial
+u1593,e318,2022-07-28,true,posible empleador
+u1758,e380,2023-12-23,false,networking
+u575,e348,2024-02-11,true,ex empleador
+u1022,e411,2026-08-05,false,interés en la industria
+u1462,e410,2025-06-24,true,cliente potencial
+u1906,e202,2022-12-10,true,networking
+u1457,e22,2021-08-28,false,networking
+u1595,e180,2020-09-03,false,ex empleador
+u427,e168,2026-09-27,false,interés en la industria
+u1034,e263,2023-08-30,true,trabajo actual
+u199,e202,2026-01-28,false,networking
+u1031,e332,2020-07-04,false,networking
+u73,e432,2024-02-27,false,interés en la industria
+u479,e409,2025-12-18,false,ex empleador
+u1782,e180,2021-10-28,false,cliente potencial
+u583,e264,2019-10-07,false,ex empleador
+u563,e99,2020-07-13,true,trabajo actual
+u1119,e138,2019-09-10,true,interés general
+u489,e344,2025-01-11,false,seguimiento de ofertas
+u1555,e275,2019-10-26,false,interés en la industria
+u188,e68,2023-03-07,false,interés en la industria
+u1522,e232,2026-05-18,false,interés general
+u1286,e134,2025-09-04,true,ex empleador
+u973,e384,2026-02-26,false,trabajo actual
+u115,e176,2025-01-31,true,posible empleador
+u1617,e89,2019-10-06,false,interés en la industria
+u1392,e66,2024-01-11,true,seguimiento de ofertas
+u909,e183,2019-08-06,false,ex empleador
+u613,e47,2019-12-18,false,seguimiento de ofertas
+u252,e101,2022-09-26,false,networking
+u1996,e239,2023-10-27,false,ex empleador
+u46,e234,2020-03-21,false,interés en la industria
+u1396,e139,2025-11-29,true,networking
+u1575,e384,2022-11-02,false,networking
+u816,e213,2023-01-24,false,trabajo actual
+u1218,e133,2025-02-27,true,cliente potencial
+u319,e130,2025-11-12,true,ex empleador
+u274,e24,2019-06-15,true,interés en la industria
+u987,e455,2024-10-10,true,ex empleador
+u1218,e492,2026-01-23,true,interés en la industria
+u701,e278,2020-08-05,false,ex empleador
+u575,e297,2025-12-02,true,trabajo actual
+u616,e383,2022-07-19,true,networking
+u691,e380,2023-04-23,true,cliente potencial
+u287,e177,2020-03-21,true,trabajo actual
+u207,e14,2026-05-07,false,interés en la industria
+u1439,e67,2022-12-20,true,ex empleador
+u1564,e449,2023-07-01,true,seguimiento de ofertas
+u1127,e321,2021-05-01,false,interés general
+u679,e313,2022-06-01,true,interés en la industria
+u65,e391,2019-05-22,true,posible empleador
+u359,e455,2023-03-13,false,posible empleador
+u289,e408,2020-10-25,false,cliente potencial
+u1422,e147,2024-02-07,true,ex empleador
+u1140,e20,2021-03-14,false,interés general
+u115,e449,2024-04-14,true,posible empleador
+u127,e419,2025-03-14,false,ex empleador
+u1064,e400,2026-01-19,true,ex empleador
+u15,e461,2023-02-14,true,interés en la industria
+u748,e494,2019-02-18,false,ex empleador
+u1271,e62,2021-03-10,true,trabajo actual
+u317,e427,2026-10-03,true,seguimiento de ofertas
+u621,e490,2025-12-12,false,cliente potencial
+u1180,e44,2021-08-17,false,interés general
+u265,e306,2022-01-12,false,networking
+u1349,e193,2019-04-19,true,interés en la industria
+u1668,e2,2022-09-21,false,interés general
+u437,e398,2020-12-06,false,trabajo actual
+u1804,e150,2020-09-11,false,trabajo actual
+u812,e464,2020-12-13,false,networking
+u169,e206,2020-10-07,false,networking
+u1063,e373,2026-10-27,true,interés general
+u1138,e314,2024-01-15,false,seguimiento de ofertas
+u1980,e280,2019-12-15,false,trabajo actual
+u17,e471,2023-03-23,false,interés en la industria
+u340,e146,2021-10-31,false,ex empleador
+u677,e434,2026-06-27,false,networking
+u31,e6,2024-10-21,false,interés en la industria
+u311,e421,2026-08-13,true,seguimiento de ofertas
+u1159,e183,2020-02-17,false,networking
+u1454,e376,2024-03-29,false,ex empleador
+u38,e450,2026-12-29,false,interés en la industria
+u803,e499,2024-04-04,true,interés en la industria
+u406,e89,2025-11-02,true,interés en la industria
+u495,e368,2026-12-12,false,posible empleador
+u1687,e388,2024-02-12,true,interés en la industria
+u1069,e389,2023-07-29,true,seguimiento de ofertas
+u253,e263,2021-09-25,false,interés en la industria
+u370,e137,2025-09-15,true,networking
+u865,e457,2020-07-24,true,interés general
+u286,e218,2024-11-09,true,ex empleador
+u1171,e439,2025-08-28,false,trabajo actual
+u909,e19,2020-08-26,false,networking
+u1352,e454,2021-07-14,false,trabajo actual
+u160,e310,2022-04-30,true,interés en la industria
+u1168,e409,2025-06-06,false,seguimiento de ofertas
+u94,e473,2020-06-19,true,ex empleador
+u1136,e486,2021-04-30,false,trabajo actual
+u696,e495,2024-04-26,false,seguimiento de ofertas
+u1577,e8,2025-11-01,false,interés general
+u1331,e242,2024-07-08,false,interés en la industria
+u743,e0,2024-09-21,false,ex empleador
+u723,e75,2020-12-07,true,trabajo actual
+u247,e189,2020-04-10,false,posible empleador
+u1171,e250,2025-08-24,true,seguimiento de ofertas
+u1852,e416,2025-12-08,true,interés general
+u1322,e114,2021-06-22,false,ex empleador
+u1154,e160,2023-08-19,false,networking
+u1184,e399,2023-02-10,true,networking
+u430,e108,2024-01-28,false,interés en la industria
+u1810,e339,2019-06-21,false,networking
+u1357,e285,2024-02-22,false,ex empleador
+u1917,e358,2019-04-04,false,interés general
+u1720,e99,2020-10-30,true,interés general
+u960,e278,2025-01-01,true,trabajo actual
+u1548,e243,2023-12-07,false,interés general
+u1597,e491,2024-11-24,false,networking
+u730,e29,2019-02-09,false,cliente potencial
+u71,e347,2021-12-25,true,posible empleador
+u532,e421,2025-10-02,true,trabajo actual
+u1031,e234,2024-09-24,true,ex empleador
+u1752,e282,2021-10-10,false,trabajo actual
+u1956,e301,2020-12-26,true,cliente potencial
+u478,e208,2026-11-21,true,cliente potencial
+u658,e169,2020-05-19,true,cliente potencial
+u753,e411,2025-10-30,false,networking
+u1057,e1,2020-06-08,false,interés en la industria
+u1698,e90,2025-11-21,false,posible empleador
+u255,e123,2020-11-11,false,trabajo actual
+u972,e203,2025-03-18,true,trabajo actual
+u1310,e290,2020-10-19,false,interés general
+u1173,e304,2024-10-28,false,cliente potencial
+u13,e201,2021-11-18,true,networking
+u183,e103,2024-01-04,false,seguimiento de ofertas
+u1278,e172,2022-09-21,true,posible empleador
+u1400,e248,2020-03-13,false,interés general
+u1604,e437,2025-07-13,false,interés general
+u244,e74,2024-10-23,true,trabajo actual
+u210,e29,2021-11-01,false,posible empleador
+u1381,e428,2019-12-22,false,interés en la industria
+u1388,e126,2022-04-05,true,ex empleador
+u165,e344,2026-08-05,false,trabajo actual
+u637,e158,2023-07-10,true,networking
+u929,e63,2026-05-09,false,networking
+u382,e292,2021-03-01,true,trabajo actual
+u1628,e270,2026-05-04,true,networking
+u39,e62,2022-04-11,false,networking
+u625,e52,2021-06-10,false,interés en la industria
+u1023,e418,2026-07-03,false,interés en la industria
+u1426,e473,2022-03-31,false,trabajo actual
+u104,e248,2024-04-14,true,interés en la industria
+u509,e309,2019-01-01,false,interés general
+u347,e275,2025-03-09,true,trabajo actual
+u982,e473,2019-03-06,false,posible empleador
+u942,e397,2024-06-30,false,trabajo actual
+u1927,e270,2024-04-17,true,networking
+u1139,e377,2026-01-30,true,ex empleador
+u356,e395,2020-10-02,false,interés en la industria
+u10,e20,2023-06-24,false,cliente potencial
+u1050,e304,2021-06-23,false,posible empleador
+u1406,e112,2021-01-31,false,trabajo actual
+u1069,e76,2019-04-02,false,posible empleador
+u1570,e175,2021-01-24,true,trabajo actual
+u1634,e52,2023-10-03,false,ex empleador
+u1259,e431,2019-01-15,true,networking
+u1412,e283,2024-10-23,false,seguimiento de ofertas
+u503,e101,2026-04-07,false,interés general
+u817,e25,2025-08-16,false,ex empleador
+u829,e108,2026-07-12,true,seguimiento de ofertas
+u774,e227,2026-04-22,false,interés en la industria
+u901,e450,2019-01-08,true,interés en la industria
+u1380,e367,2023-05-31,false,cliente potencial
+u1947,e26,2025-05-31,true,seguimiento de ofertas
+u87,e251,2023-04-13,false,posible empleador
+u1548,e129,2021-02-13,false,trabajo actual
+u1807,e288,2025-09-14,false,networking
+u1773,e38,2026-12-19,true,cliente potencial
+u991,e302,2024-12-10,false,interés general
+u695,e479,2025-07-13,false,posible empleador
+u1909,e151,2021-03-31,true,cliente potencial
+u217,e45,2022-02-12,false,cliente potencial
+u659,e305,2025-07-01,false,ex empleador
+u101,e225,2023-09-03,false,cliente potencial
+u1774,e159,2024-09-24,false,interés en la industria
+u598,e9,2021-12-06,false,posible empleador
+u195,e362,2021-06-21,true,interés general
+u1966,e454,2025-12-05,true,cliente potencial
+u1359,e280,2022-01-09,false,interés general
+u1161,e61,2023-05-15,false,interés general
+u37,e397,2022-11-25,true,seguimiento de ofertas
+u670,e335,2026-09-23,true,seguimiento de ofertas
+u1531,e176,2026-10-26,false,seguimiento de ofertas
+u75,e259,2026-09-25,true,trabajo actual
+u1822,e147,2020-03-27,false,networking
+u1127,e366,2021-06-14,false,ex empleador
+u1116,e89,2023-11-27,true,trabajo actual
+u1749,e9,2024-07-08,true,seguimiento de ofertas
+u943,e482,2021-05-07,true,trabajo actual
+u25,e330,2021-04-18,true,interés general
+u1902,e493,2019-09-29,false,networking
+u156,e95,2024-10-05,true,interés en la industria
+u1188,e5,2023-10-11,true,interés general
+u1246,e300,2023-09-25,false,interés en la industria
+u955,e452,2020-12-08,true,ex empleador
+u1583,e28,2019-05-04,true,cliente potencial
+u1916,e76,2026-09-07,true,interés en la industria
+u918,e424,2024-01-10,false,seguimiento de ofertas
+u949,e79,2023-02-02,true,cliente potencial
+u466,e400,2026-12-19,false,interés general
+u1934,e93,2025-12-30,true,seguimiento de ofertas
+u71,e264,2020-07-11,false,seguimiento de ofertas
+u1031,e481,2020-10-03,true,networking
+u445,e264,2022-08-18,true,trabajo actual
+u13,e429,2020-09-15,true,interés en la industria
+u1557,e172,2025-05-14,false,seguimiento de ofertas
+u101,e303,2020-02-23,false,trabajo actual
+u1693,e434,2025-01-02,true,ex empleador
+u1870,e249,2025-09-14,true,networking
+u1604,e318,2020-12-04,true,ex empleador
+u1105,e406,2022-12-29,true,seguimiento de ofertas
+u147,e394,2020-06-10,false,trabajo actual
+u925,e17,2024-03-08,true,interés en la industria
+u1183,e254,2019-02-10,false,ex empleador
+u517,e492,2019-04-03,false,interés en la industria
+u47,e350,2025-08-23,false,cliente potencial
+u280,e132,2023-09-03,true,networking
+u1671,e397,2021-04-06,false,ex empleador
+u1243,e427,2022-03-09,true,interés general
+u1857,e469,2020-03-18,true,seguimiento de ofertas
+u1337,e435,2019-04-19,false,posible empleador
+u561,e7,2026-09-22,false,trabajo actual
+u1978,e281,2022-11-19,true,posible empleador
+u1924,e77,2023-04-08,true,trabajo actual
+u1559,e252,2026-04-05,true,trabajo actual
+u217,e195,2025-07-29,false,interés general
+u631,e256,2022-01-23,true,networking
+u1088,e207,2022-03-26,false,posible empleador
+u1731,e328,2022-10-03,false,networking
+u1227,e13,2026-09-23,true,trabajo actual
+u938,e298,2026-12-08,false,cliente potencial
+u372,e215,2023-09-30,true,cliente potencial
+u842,e347,2026-06-14,true,cliente potencial
+u149,e428,2022-03-25,false,seguimiento de ofertas
+u625,e327,2023-07-20,false,interés general
+u485,e148,2024-04-26,false,posible empleador
+u1525,e58,2024-06-23,true,networking
+u1188,e489,2024-02-24,false,cliente potencial
+u281,e431,2022-06-29,true,interés general
+u101,e404,2026-09-29,false,posible empleador
+u330,e94,2020-09-26,true,interés en la industria
+u386,e118,2020-11-05,false,posible empleador
+u591,e199,2022-06-14,true,networking
+u36,e495,2026-07-25,true,seguimiento de ofertas
+u220,e269,2024-12-29,false,trabajo actual
+u855,e245,2020-07-07,true,networking
+u596,e409,2023-03-24,true,seguimiento de ofertas
+u1363,e483,2022-02-21,true,posible empleador
+u1636,e256,2023-12-14,true,interés en la industria
+u1759,e58,2021-08-02,false,interés en la industria
+u650,e136,2025-06-13,false,posible empleador
+u1432,e411,2024-10-20,false,posible empleador
+u215,e57,2025-10-24,true,networking
+u1802,e83,2023-05-05,false,trabajo actual
+u891,e49,2023-08-09,true,interés en la industria
+u1174,e108,2022-06-26,true,interés general
+u1789,e160,2023-07-10,true,posible empleador
+u445,e84,2022-03-07,true,ex empleador
+u928,e253,2020-09-29,true,ex empleador
+u969,e330,2024-06-01,true,seguimiento de ofertas
+u117,e484,2022-10-03,true,seguimiento de ofertas
+u339,e165,2025-11-29,true,cliente potencial
+u1968,e185,2026-06-14,false,networking
+u642,e498,2019-06-10,true,posible empleador
+u1338,e407,2026-08-31,false,interés en la industria
+u169,e326,2023-04-02,false,seguimiento de ofertas
+u389,e484,2020-09-24,true,seguimiento de ofertas
+u269,e260,2026-04-02,false,cliente potencial
+u397,e383,2023-04-03,true,ex empleador
+u1198,e159,2020-06-05,false,interés en la industria
+u1974,e323,2024-12-28,true,interés en la industria
+u552,e109,2024-10-31,false,interés general
+u563,e1,2025-08-15,false,posible empleador
+u202,e487,2025-06-08,false,trabajo actual
+u408,e408,2020-05-16,true,trabajo actual
+u588,e232,2021-11-24,false,networking
+u253,e494,2025-11-07,true,interés general
+u212,e416,2025-08-28,false,posible empleador
+u1328,e315,2020-05-13,true,trabajo actual
+u216,e168,2023-09-14,true,seguimiento de ofertas
+u562,e106,2020-07-19,false,posible empleador
+u423,e73,2021-07-08,true,ex empleador
+u1490,e12,2023-09-04,false,networking
+u1821,e82,2019-09-13,true,networking
+u1378,e270,2020-05-06,true,interés en la industria
+u742,e219,2024-07-09,false,trabajo actual
+u1914,e256,2021-07-08,true,networking
+u1688,e166,2024-07-09,false,networking
+u963,e426,2020-06-08,false,networking
+u465,e346,2020-07-22,true,ex empleador
+u469,e390,2024-09-02,true,networking
+u9,e134,2021-08-14,true,networking
+u629,e255,2023-03-28,false,cliente potencial
+u252,e103,2025-08-08,false,cliente potencial
+u465,e305,2024-02-04,false,interés en la industria
+u970,e15,2019-05-16,true,interés en la industria
+u173,e299,2022-05-16,true,cliente potencial
+u132,e189,2026-03-08,true,seguimiento de ofertas
+u1741,e358,2025-01-15,true,networking
+u1843,e338,2022-07-12,true,interés en la industria
+u800,e157,2019-07-12,false,trabajo actual
+u249,e266,2026-07-03,true,cliente potencial
+u1302,e449,2025-06-03,true,cliente potencial
+u740,e116,2023-02-23,true,seguimiento de ofertas
+u773,e373,2026-11-18,true,ex empleador
+u1629,e248,2021-10-19,false,interés en la industria
+u134,e259,2026-03-30,true,interés en la industria
+u34,e154,2024-01-25,false,seguimiento de ofertas
+u1363,e185,2024-12-06,false,networking
+u1353,e215,2019-12-01,false,interés general
+u1984,e405,2026-05-08,false,networking
+u1476,e138,2023-04-15,false,cliente potencial
+u1423,e401,2023-08-05,false,cliente potencial
+u1294,e17,2025-02-22,false,trabajo actual
+u642,e327,2024-09-14,false,cliente potencial
+u1766,e241,2022-09-14,true,posible empleador
+u1337,e488,2020-10-19,false,ex empleador
+u1860,e305,2026-11-14,false,cliente potencial
+u1200,e25,2019-12-12,true,posible empleador
+u1905,e332,2023-03-02,false,networking
+u1326,e120,2026-03-07,false,interés en la industria
+u889,e110,2025-01-17,false,networking
+u816,e365,2020-01-04,true,interés general
+u1738,e378,2026-08-31,true,ex empleador
+u873,e351,2023-05-28,true,ex empleador
+u53,e17,2024-11-15,true,interés en la industria
+u707,e150,2020-07-16,false,seguimiento de ofertas
+u1218,e363,2019-01-14,false,ex empleador
+u1303,e429,2023-04-29,false,posible empleador
+u658,e192,2024-08-06,true,trabajo actual
+u1151,e162,2019-02-18,false,interés en la industria
+u1527,e141,2025-05-19,true,interés general
+u821,e44,2019-01-15,false,trabajo actual
+u580,e55,2023-03-22,true,ex empleador
+u270,e310,2022-03-18,true,ex empleador
+u692,e138,2022-01-11,false,networking
+u102,e319,2024-11-04,true,posible empleador
+u1830,e324,2020-11-01,true,interés general
+u1871,e331,2022-07-29,true,trabajo actual
+u1336,e393,2023-02-01,true,seguimiento de ofertas
+u18,e200,2022-09-10,false,seguimiento de ofertas
+u548,e32,2019-10-29,true,interés en la industria
+u1182,e206,2025-04-01,true,interés general
+u882,e354,2026-09-03,true,seguimiento de ofertas
+u600,e105,2024-02-21,true,trabajo actual
+u1372,e204,2023-04-02,true,ex empleador
+u1630,e316,2019-05-27,false,trabajo actual
+u939,e419,2025-08-12,true,interés en la industria
+u967,e52,2021-10-06,false,cliente potencial
+u550,e395,2019-05-31,true,trabajo actual
+u688,e173,2023-03-06,true,cliente potencial
+u782,e150,2022-05-12,false,seguimiento de ofertas
+u1777,e91,2021-08-12,true,interés general
+u314,e370,2020-12-02,true,ex empleador
+u1127,e364,2025-09-01,false,networking
+u1588,e372,2020-04-28,true,trabajo actual
+u490,e347,2024-06-21,false,ex empleador
+u1772,e224,2021-03-03,true,interés en la industria
+u1721,e114,2021-03-13,false,networking
+u298,e153,2022-03-22,false,seguimiento de ofertas
+u112,e457,2020-03-12,true,ex empleador
+u863,e12,2019-06-15,true,interés en la industria
+u1642,e239,2020-12-17,true,interés en la industria
+u1704,e200,2025-02-05,false,interés general
+u1175,e444,2024-05-12,true,networking
+u1669,e248,2023-08-25,false,ex empleador
+u374,e36,2025-03-21,true,seguimiento de ofertas
+u332,e445,2022-01-30,false,networking
+u1764,e202,2021-02-26,false,cliente potencial
+u1178,e207,2024-06-06,false,interés en la industria
+u1034,e383,2025-11-13,true,posible empleador
+u251,e209,2021-08-13,false,interés general
+u1124,e360,2023-04-26,false,networking
+u982,e352,2022-04-12,false,networking
+u1895,e252,2025-04-02,true,trabajo actual
+u1837,e96,2022-12-19,true,trabajo actual
+u249,e93,2023-03-06,false,interés general
+u1841,e459,2022-02-21,false,trabajo actual
+u1617,e388,2020-09-04,true,cliente potencial
+u1892,e294,2021-08-22,false,cliente potencial
+u842,e348,2024-07-01,true,interés en la industria
+u1486,e187,2023-04-29,false,posible empleador
+u975,e290,2022-06-19,true,trabajo actual
+u807,e285,2019-04-27,true,interés en la industria
+u1514,e347,2026-03-30,true,posible empleador
+u1968,e271,2020-05-30,true,interés en la industria
+u1086,e1,2021-10-10,false,interés general
+u1314,e455,2020-12-27,true,networking
+u1046,e155,2023-03-12,true,cliente potencial
+u1997,e386,2021-05-29,false,posible empleador
+u518,e210,2023-05-06,false,ex empleador
+u21,e396,2026-04-03,false,networking
+u1900,e76,2024-01-11,false,ex empleador
+u1182,e298,2024-08-18,true,interés en la industria
+u1817,e217,2019-10-03,true,trabajo actual
+u154,e168,2026-03-21,false,interés en la industria
+u1370,e309,2022-09-24,false,seguimiento de ofertas
+u1831,e348,2026-05-14,false,ex empleador
+u291,e293,2026-07-16,false,ex empleador
+u9,e185,2022-09-25,true,ex empleador
+u1182,e13,2024-10-11,false,ex empleador
+u580,e408,2026-02-16,false,interés general
+u1465,e395,2024-12-03,false,posible empleador
+u161,e354,2026-02-01,true,trabajo actual
+u1829,e223,2026-07-15,false,cliente potencial
+u748,e299,2026-02-06,true,interés en la industria
+u1082,e219,2024-04-26,false,interés en la industria
+u361,e283,2024-05-14,true,posible empleador
+u752,e485,2026-06-07,false,interés en la industria
+u851,e144,2019-08-02,true,posible empleador
+u1954,e395,2021-05-22,false,posible empleador
+u1827,e54,2026-08-16,true,ex empleador
+u1928,e11,2022-05-15,true,networking
+u679,e141,2020-10-05,false,networking
+u363,e28,2021-09-07,false,trabajo actual
+u120,e51,2021-08-25,false,posible empleador
+u1330,e54,2022-08-10,false,ex empleador
+u224,e359,2023-01-01,true,interés general
+u781,e109,2024-03-09,true,trabajo actual
+u1986,e312,2020-12-15,true,posible empleador
+u400,e279,2023-09-11,false,cliente potencial
+u701,e383,2020-05-28,true,posible empleador
+u1193,e450,2025-10-27,false,trabajo actual
+u25,e372,2020-03-25,false,trabajo actual
+u1824,e253,2021-06-21,false,ex empleador
+u37,e40,2026-03-29,false,ex empleador
+u507,e237,2025-07-28,true,ex empleador
+u1361,e8,2024-01-20,true,interés general
+u1819,e176,2026-03-15,true,trabajo actual
+u1575,e181,2026-08-23,false,interés en la industria
+u538,e474,2021-06-25,true,posible empleador
+u34,e120,2019-04-22,true,trabajo actual
+u1766,e348,2020-02-13,false,ex empleador
+u1075,e83,2026-12-07,true,networking
+u1631,e309,2020-06-22,true,networking
+u1880,e153,2024-01-19,false,interés en la industria
+u94,e470,2020-10-16,true,seguimiento de ofertas
+u1247,e430,2019-09-09,true,cliente potencial
+u1574,e358,2020-01-19,false,ex empleador
+u1911,e198,2022-04-16,true,interés en la industria
+u1134,e139,2023-10-01,false,trabajo actual
+u1887,e433,2024-10-24,false,interés general
+u649,e313,2024-10-16,true,cliente potencial
+u1004,e25,2025-02-14,false,interés en la industria
+u1554,e109,2025-06-04,false,posible empleador
+u748,e25,2026-02-05,false,interés en la industria
+u150,e57,2024-09-13,false,cliente potencial
+u1931,e494,2019-11-29,true,trabajo actual
+u563,e338,2022-09-02,true,trabajo actual
+u457,e378,2021-04-11,false,posible empleador
+u313,e300,2021-12-24,false,cliente potencial
+u1499,e449,2024-12-13,true,posible empleador
+u1077,e241,2022-08-10,false,interés general
+u1482,e225,2022-09-28,true,interés general
+u815,e227,2023-07-09,false,seguimiento de ofertas
+u798,e308,2023-05-09,true,networking
+u1512,e76,2022-01-31,false,interés en la industria
+u1965,e60,2019-09-11,true,ex empleador
+u1149,e192,2026-01-24,true,ex empleador
+u59,e426,2020-04-03,false,seguimiento de ofertas
+u679,e126,2022-06-28,true,ex empleador
+u1,e41,2023-10-15,true,interés en la industria
+u1425,e37,2023-07-23,true,trabajo actual
+u1636,e26,2020-04-24,true,cliente potencial
+u1512,e206,2024-02-16,false,trabajo actual
+u233,e160,2025-03-22,false,networking
+u335,e348,2019-12-11,true,networking
+u277,e493,2020-02-10,true,trabajo actual
+u123,e26,2024-09-10,true,networking
+u1751,e173,2021-11-05,false,interés general
+u1018,e340,2021-02-08,false,trabajo actual
+u1940,e472,2023-10-13,true,interés en la industria
+u474,e167,2023-01-29,true,interés general
+u1713,e425,2025-06-30,false,interés en la industria
+u174,e112,2021-11-05,true,interés en la industria
+u864,e344,2020-07-13,false,ex empleador
+u1949,e357,2024-06-25,false,posible empleador
+u1920,e216,2023-12-26,true,seguimiento de ofertas
+u329,e238,2019-03-15,true,trabajo actual
+u1511,e330,2025-10-14,true,networking
+u340,e41,2025-01-04,true,posible empleador
+u1023,e59,2023-04-22,false,interés general
+u193,e452,2019-08-20,true,posible empleador
+u1539,e403,2020-11-27,false,networking
+u1300,e7,2020-01-08,false,seguimiento de ofertas
+u204,e232,2019-10-20,false,trabajo actual
+u123,e64,2022-02-17,false,trabajo actual
+u407,e401,2026-10-18,true,ex empleador
+u1292,e150,2020-04-12,false,interés general
+u308,e14,2021-08-05,true,networking
+u801,e71,2022-07-28,false,networking
+u1154,e424,2024-07-09,true,interés general
+u535,e233,2020-06-16,true,posible empleador
+u725,e423,2019-12-26,true,trabajo actual
+u548,e111,2026-03-17,false,cliente potencial
+u1931,e154,2024-02-08,false,seguimiento de ofertas
+u1628,e105,2025-07-03,true,interés general
+u1815,e61,2021-10-06,true,posible empleador
+u162,e395,2025-06-29,false,ex empleador
+u728,e266,2024-02-11,true,trabajo actual
+u83,e182,2022-01-01,false,networking
+u1102,e153,2021-12-19,true,trabajo actual
+u1749,e209,2021-10-08,false,seguimiento de ofertas
+u967,e312,2020-03-10,false,interés en la industria
+u564,e71,2026-07-25,true,ex empleador
+u1634,e320,2020-04-18,false,interés en la industria
+u1186,e104,2022-08-19,false,networking
+u1061,e410,2026-09-19,true,posible empleador
+u1888,e0,2024-08-08,true,interés en la industria
+u982,e292,2025-03-29,false,seguimiento de ofertas
+u1892,e252,2023-10-08,false,networking
+u1582,e2,2026-11-08,true,posible empleador
+u285,e466,2022-04-17,false,seguimiento de ofertas
+u757,e36,2023-06-29,false,ex empleador
+u1184,e193,2026-10-05,true,interés general
+u450,e329,2023-01-04,true,ex empleador
+u737,e405,2026-01-19,false,seguimiento de ofertas
+u1797,e172,2021-11-02,false,cliente potencial
+u211,e92,2021-01-22,true,trabajo actual
+u0,e131,2026-04-11,true,ex empleador
+u302,e20,2026-08-15,true,networking
+u1537,e440,2022-06-14,false,seguimiento de ofertas
+u61,e222,2024-09-15,false,interés en la industria
+u1007,e385,2026-06-16,true,trabajo actual
+u1384,e428,2026-04-04,true,cliente potencial
+u836,e159,2020-10-06,false,cliente potencial
+u196,e352,2021-07-19,false,trabajo actual
+u995,e467,2023-10-03,false,interés general
+u575,e418,2022-06-02,false,interés general
+u1487,e217,2019-07-11,true,trabajo actual
+u1455,e200,2023-11-17,false,cliente potencial
+u131,e312,2025-01-23,true,interés en la industria
+u586,e273,2026-11-16,true,interés general
+u579,e426,2019-04-15,false,ex empleador
+u1839,e467,2022-01-27,false,interés en la industria
+u1763,e461,2026-04-30,false,posible empleador
+u1392,e0,2026-09-16,false,interés en la industria
+u902,e408,2021-06-05,true,interés en la industria
+u1231,e465,2020-05-28,true,seguimiento de ofertas
+u1342,e301,2024-05-09,true,posible empleador
+u803,e264,2019-06-09,false,posible empleador
+u406,e22,2026-10-14,true,interés general
+u1454,e42,2024-07-05,false,ex empleador
+u690,e59,2020-10-17,false,trabajo actual
+u462,e161,2022-07-04,false,interés en la industria
+u433,e311,2023-03-10,true,interés en la industria
+u1501,e396,2026-08-31,true,seguimiento de ofertas
+u1712,e80,2022-10-18,true,trabajo actual
+u1713,e280,2019-05-24,true,interés en la industria
+u1180,e298,2022-11-05,false,networking
+u777,e67,2024-12-16,false,seguimiento de ofertas
+u1823,e484,2024-03-01,true,seguimiento de ofertas
+u1902,e70,2022-12-28,false,cliente potencial
+u491,e34,2020-04-05,true,interés en la industria
+u492,e86,2020-09-11,true,interés general
+u564,e32,2025-12-15,false,networking
+u918,e265,2021-09-13,true,trabajo actual
+u1547,e288,2025-03-07,false,interés en la industria
+u651,e277,2024-10-31,true,posible empleador
+u1611,e96,2023-07-03,false,networking
+u1752,e396,2022-01-25,false,networking
+u963,e118,2025-08-05,false,posible empleador
+u46,e97,2023-01-12,false,trabajo actual
+u1387,e110,2026-03-18,false,networking
+u1347,e492,2021-03-22,false,cliente potencial
+u1627,e424,2026-03-06,true,seguimiento de ofertas
+u1811,e466,2019-06-18,true,seguimiento de ofertas
+u931,e130,2021-07-19,true,trabajo actual
+u868,e253,2026-11-16,false,posible empleador
+u1824,e390,2019-03-24,false,interés general
+u1970,e157,2022-11-19,false,ex empleador
+u1550,e33,2019-11-16,false,interés en la industria
+u1496,e489,2022-03-20,true,seguimiento de ofertas
+u1467,e121,2023-03-31,true,networking
+u151,e92,2024-09-10,true,cliente potencial
+u1454,e425,2026-10-06,true,seguimiento de ofertas
+u1433,e442,2026-12-14,true,trabajo actual
+u466,e156,2020-12-02,true,cliente potencial
+u1646,e362,2019-06-22,false,ex empleador
+u1220,e354,2019-11-05,false,networking
+u1136,e398,2019-12-21,false,posible empleador
+u173,e312,2025-08-14,false,interés general
+u499,e370,2026-06-27,true,interés general
+u1136,e113,2019-07-17,false,ex empleador
+u1559,e353,2019-01-10,false,trabajo actual
+u579,e173,2022-06-19,true,interés en la industria
+u576,e459,2023-01-08,true,ex empleador
+u1045,e318,2025-01-04,true,posible empleador
+u788,e61,2025-07-16,false,ex empleador
+u109,e155,2020-08-20,false,cliente potencial
+u1861,e396,2023-03-27,true,networking
+u501,e75,2026-05-03,true,interés general
+u367,e242,2021-09-02,true,interés en la industria
+u1787,e77,2023-07-25,true,ex empleador
+u171,e82,2020-03-28,true,seguimiento de ofertas
+u1697,e288,2026-02-17,false,cliente potencial
+u1949,e298,2024-09-05,true,interés en la industria
+u1165,e340,2025-02-26,true,interés general
+u1002,e488,2022-10-03,false,seguimiento de ofertas
+u1414,e165,2019-07-03,true,trabajo actual
+u1474,e347,2024-01-13,false,interés en la industria
+u88,e237,2023-04-01,true,posible empleador
+u1505,e422,2024-02-28,false,cliente potencial
+u1988,e230,2024-05-26,false,interés general
+u646,e282,2026-06-29,true,seguimiento de ofertas
+u85,e478,2023-03-16,true,ex empleador
+u108,e175,2024-04-04,true,trabajo actual
+u1508,e59,2025-06-27,false,seguimiento de ofertas
+u1287,e160,2022-06-03,true,networking
+u241,e330,2021-04-17,true,posible empleador
+u1654,e67,2020-06-16,true,ex empleador
+u1114,e464,2019-03-28,true,interés en la industria
+u194,e203,2019-05-03,true,posible empleador
+u1552,e19,2023-12-01,true,interés general
+u1336,e147,2022-07-20,true,networking
+u1831,e297,2026-09-29,false,interés en la industria
+u194,e155,2019-05-29,false,interés en la industria
+u0,e7,2022-12-03,false,interés general
+u856,e62,2021-04-19,false,networking
+u305,e471,2024-08-02,true,trabajo actual
+u1895,e195,2023-12-10,true,seguimiento de ofertas
+u217,e165,2025-10-09,true,posible empleador
+u1255,e37,2019-10-22,true,posible empleador
+u170,e222,2024-07-16,true,interés en la industria
+u1995,e118,2023-03-07,true,interés general
+u1889,e147,2026-06-19,true,cliente potencial
+u1227,e403,2023-07-09,false,interés general
+u1142,e400,2020-12-26,true,seguimiento de ofertas
+u1523,e184,2021-10-10,true,interés en la industria
+u737,e64,2023-09-04,true,posible empleador
+u1288,e276,2021-01-14,true,interés en la industria
+u1512,e318,2022-11-25,false,interés en la industria
+u269,e246,2022-09-05,false,ex empleador
+u1202,e117,2026-02-25,false,trabajo actual
+u1476,e403,2024-08-08,false,cliente potencial
+u22,e247,2025-06-24,false,cliente potencial
+u1738,e417,2026-08-12,true,interés en la industria
+u209,e103,2023-07-30,false,trabajo actual
+u1746,e40,2021-11-12,false,posible empleador
+u1658,e275,2026-04-19,true,ex empleador
+u344,e445,2021-06-07,true,networking
+u1655,e262,2025-09-12,false,trabajo actual
+u1975,e411,2022-03-29,false,cliente potencial
+u1566,e240,2023-07-08,false,trabajo actual
+u428,e65,2023-08-28,false,interés en la industria
+u1319,e441,2022-11-07,false,posible empleador
+u121,e436,2023-08-01,true,interés general
+u1247,e182,2023-12-28,true,seguimiento de ofertas
+u1277,e8,2022-12-11,true,trabajo actual
+u1534,e350,2021-07-30,true,ex empleador
+u1221,e464,2025-02-24,true,networking
+u1038,e433,2021-01-09,false,interés general
+u1752,e345,2024-06-06,true,posible empleador
+u1133,e262,2019-07-31,true,interés general
+u76,e86,2020-11-17,true,seguimiento de ofertas
+u704,e443,2025-04-21,true,ex empleador
+u1877,e462,2023-05-05,true,posible empleador
+u512,e78,2019-09-26,true,seguimiento de ofertas
+u1218,e267,2026-01-13,true,trabajo actual
+u689,e135,2025-09-01,true,interés general
+u1007,e263,2023-05-14,false,seguimiento de ofertas
+u1894,e311,2021-09-10,false,cliente potencial
+u1603,e421,2026-02-26,true,seguimiento de ofertas
+u578,e58,2021-02-25,false,interés general
+u426,e485,2024-11-04,false,ex empleador
+u321,e189,2026-03-29,false,ex empleador
+u830,e0,2025-08-15,true,ex empleador
+u1096,e109,2024-02-18,true,interés en la industria
+u581,e251,2026-09-21,true,interés en la industria
+u136,e95,2025-01-20,true,interés general
+u1566,e216,2020-07-14,false,trabajo actual
+u1510,e302,2024-04-11,true,seguimiento de ofertas
+u1957,e102,2021-06-04,false,seguimiento de ofertas
+u1277,e466,2020-12-08,true,seguimiento de ofertas
+u1116,e335,2022-01-27,false,interés general
+u439,e300,2023-12-10,true,trabajo actual
+u1377,e328,2020-07-22,false,cliente potencial
+u1752,e67,2025-03-08,true,ex empleador
+u81,e294,2024-07-08,false,interés en la industria
+u1847,e243,2024-08-05,true,posible empleador
+u495,e433,2025-06-08,false,seguimiento de ofertas
+u1691,e84,2022-12-20,true,interés general
+u1788,e144,2019-01-20,false,networking
+u882,e41,2024-12-17,false,seguimiento de ofertas
+u495,e98,2023-08-07,false,trabajo actual
+u1056,e428,2023-01-22,false,trabajo actual
+u199,e327,2020-05-21,false,interés general
+u1016,e276,2023-06-08,true,ex empleador
+u1570,e180,2021-09-05,true,trabajo actual
+u992,e7,2025-10-14,true,interés en la industria
+u383,e304,2026-02-18,false,ex empleador
+u1924,e249,2022-08-30,false,interés general
+u730,e460,2023-03-10,false,posible empleador
+u202,e237,2019-08-23,true,trabajo actual
+u1799,e357,2024-01-21,true,interés en la industria
+u1886,e475,2019-08-08,true,cliente potencial
+u1894,e448,2026-10-30,false,interés general
+u1400,e352,2021-03-23,true,networking
+u476,e462,2023-01-05,false,trabajo actual
+u252,e108,2022-06-27,true,interés en la industria
+u358,e396,2026-06-01,true,posible empleador
+u1898,e139,2019-01-28,false,networking
+u1344,e339,2023-06-24,true,interés general
+u1855,e252,2020-11-24,false,trabajo actual
+u1391,e224,2020-11-18,false,networking
+u1237,e498,2020-07-04,false,ex empleador
+u1391,e45,2026-07-05,false,posible empleador
+u1012,e185,2023-04-27,true,networking
+u28,e145,2024-03-05,false,trabajo actual
+u799,e397,2022-06-11,false,posible empleador
+u1426,e491,2020-03-30,true,interés general
+u959,e204,2025-07-16,false,cliente potencial
+u1624,e488,2019-06-09,false,seguimiento de ofertas
+u333,e284,2025-12-05,true,trabajo actual
+u330,e151,2023-11-21,true,interés en la industria
+u1335,e322,2020-07-19,true,cliente potencial
+u121,e12,2025-09-26,true,ex empleador
+u1957,e31,2021-01-25,true,trabajo actual
+u1599,e379,2023-09-06,true,interés en la industria
+u1025,e41,2022-02-18,false,seguimiento de ofertas
+u1382,e152,2026-08-10,true,ex empleador
+u779,e130,2025-05-16,false,interés en la industria
+u41,e101,2026-01-16,false,seguimiento de ofertas
+u1887,e12,2023-06-27,true,ex empleador
+u342,e373,2025-07-15,true,seguimiento de ofertas
+u1633,e304,2025-07-22,false,networking
+u1479,e304,2020-02-09,true,trabajo actual
+u810,e250,2025-07-28,true,interés general
+u251,e292,2022-12-07,true,cliente potencial
+u1641,e56,2021-01-31,false,posible empleador
+u1290,e264,2021-04-09,false,networking
+u563,e395,2022-06-15,true,posible empleador
+u155,e320,2020-03-09,false,cliente potencial
+u609,e491,2025-03-28,true,seguimiento de ofertas
+u1677,e485,2020-12-08,true,networking
+u1382,e2,2022-05-17,false,interés general
+u1461,e410,2019-06-12,false,interés en la industria
+u7,e207,2024-07-09,true,seguimiento de ofertas
+u1279,e287,2022-10-25,true,interés general
+u1787,e367,2023-12-08,true,networking
+u133,e97,2024-02-24,true,trabajo actual
+u3,e120,2023-11-12,true,interés en la industria
+u1130,e264,2022-07-02,false,posible empleador
+u661,e403,2021-02-01,true,networking
+u1269,e453,2022-11-27,false,ex empleador
+u999,e493,2021-05-27,true,ex empleador
+u851,e379,2020-11-20,true,seguimiento de ofertas
+u1381,e85,2022-01-12,false,seguimiento de ofertas
+u1409,e192,2023-03-31,true,interés general
+u361,e92,2020-05-03,true,interés general
+u569,e28,2025-08-10,true,posible empleador
+u1584,e344,2024-06-30,false,seguimiento de ofertas
+u1958,e117,2026-12-03,true,cliente potencial
+u592,e425,2023-01-28,false,cliente potencial
+u1578,e218,2019-06-10,false,posible empleador
+u1156,e165,2020-07-13,true,ex empleador
+u1607,e110,2024-08-18,false,posible empleador
+u808,e467,2021-09-06,true,seguimiento de ofertas
+u1544,e283,2019-05-01,false,interés general
+u666,e355,2023-05-14,false,posible empleador
+u348,e95,2026-07-07,false,posible empleador
+u1650,e433,2021-03-06,false,ex empleador
+u1212,e209,2021-12-09,true,trabajo actual
+u1337,e137,2023-05-17,true,interés general
+u1392,e388,2025-03-09,true,ex empleador
+u1960,e134,2021-01-09,false,interés en la industria
+u1424,e66,2019-06-29,true,interés en la industria
+u434,e76,2025-09-25,true,seguimiento de ofertas
+u926,e203,2019-01-08,false,posible empleador
+u1539,e291,2024-10-01,false,posible empleador
+u239,e313,2023-11-14,false,cliente potencial
+u1870,e122,2022-04-13,true,posible empleador
+u1093,e121,2026-05-15,true,posible empleador
+u747,e58,2019-06-28,true,ex empleador
+u179,e420,2026-03-13,true,posible empleador
+u804,e485,2019-11-21,true,posible empleador
+u1067,e61,2025-07-20,false,trabajo actual
+u859,e470,2019-07-25,false,interés en la industria
+u1712,e393,2025-06-30,true,seguimiento de ofertas
+u283,e337,2019-11-07,false,cliente potencial
+u1317,e366,2023-01-14,false,seguimiento de ofertas
+u496,e165,2022-11-21,false,seguimiento de ofertas
+u161,e80,2026-12-14,true,interés en la industria
+u558,e339,2020-11-17,true,networking
+u1612,e183,2026-08-02,true,cliente potencial
+u1505,e13,2024-12-29,true,posible empleador
+u1715,e72,2025-09-19,false,ex empleador
+u959,e145,2026-03-15,true,interés en la industria
+u742,e413,2025-10-18,true,posible empleador
+u1918,e52,2024-03-04,false,trabajo actual
+u624,e470,2026-08-24,false,trabajo actual
+u597,e75,2022-07-18,false,posible empleador
+u1660,e241,2020-01-09,false,ex empleador
+u84,e63,2019-03-02,false,trabajo actual
+u977,e25,2023-01-17,true,cliente potencial
+u232,e350,2025-03-31,false,trabajo actual
+u146,e255,2019-05-19,true,trabajo actual
+u774,e190,2019-01-29,false,interés general
+u1307,e425,2021-04-26,false,posible empleador
+u218,e133,2022-07-20,true,ex empleador
+u1798,e443,2025-08-28,true,trabajo actual
+u599,e120,2026-07-03,true,interés en la industria
+u1499,e41,2025-05-25,false,seguimiento de ofertas
+u109,e280,2022-09-15,false,networking
+u1273,e93,2022-05-15,true,seguimiento de ofertas
+u868,e286,2025-01-14,true,trabajo actual
+u229,e491,2022-09-17,true,seguimiento de ofertas
+u1471,e478,2021-08-28,false,seguimiento de ofertas
+u1529,e31,2020-03-29,true,posible empleador
+u1841,e33,2020-08-02,false,ex empleador
+u10,e256,2020-01-21,false,interés general
+u376,e280,2026-06-02,false,networking
+u107,e340,2025-10-23,true,ex empleador
+u263,e423,2026-01-20,false,cliente potencial
+u308,e145,2022-08-27,true,seguimiento de ofertas
+u877,e77,2024-12-13,true,interés en la industria
+u241,e176,2022-05-12,false,interés general
+u1023,e157,2021-05-26,true,interés general
+u916,e189,2023-03-21,true,cliente potencial
+u1171,e86,2021-01-20,true,interés en la industria
+u1921,e275,2026-07-07,true,posible empleador
+u1668,e27,2022-03-23,false,networking
+u1269,e26,2025-05-18,true,trabajo actual
+u87,e239,2021-03-24,false,cliente potencial
+u1048,e17,2023-12-01,false,networking
+u62,e301,2020-09-05,true,cliente potencial
+u1878,e498,2019-04-23,true,posible empleador
+u935,e121,2021-09-16,false,seguimiento de ofertas
+u141,e482,2023-08-02,false,interés general
+u1658,e219,2020-10-20,true,posible empleador
+u1495,e186,2024-12-03,true,trabajo actual
+u1403,e286,2023-12-01,true,interés general
+u1596,e454,2019-05-21,false,networking
+u1333,e60,2023-10-07,true,ex empleador
+u313,e358,2019-02-07,false,cliente potencial
+u1141,e246,2024-02-14,false,seguimiento de ofertas
+u1849,e156,2019-01-03,true,cliente potencial
+u1167,e88,2026-10-21,true,networking
+u990,e404,2022-10-15,true,networking
+u386,e460,2021-05-21,false,cliente potencial
+u1427,e419,2021-03-12,false,trabajo actual
+u1456,e376,2019-04-07,true,interés en la industria
+u602,e470,2019-03-02,false,interés en la industria
+u256,e249,2020-03-08,true,seguimiento de ofertas
+u1771,e29,2021-02-02,false,ex empleador
+u684,e273,2021-01-12,false,interés en la industria
+u1556,e155,2026-02-27,true,posible empleador
+u1047,e219,2020-06-28,false,interés general
+u89,e294,2021-11-22,true,seguimiento de ofertas
+u1929,e0,2023-11-10,true,ex empleador
+u434,e38,2019-11-03,true,cliente potencial
+u931,e156,2022-06-04,true,cliente potencial
+u486,e461,2019-01-03,true,trabajo actual
+u237,e338,2022-02-17,true,interés en la industria
+u1076,e165,2026-10-13,true,cliente potencial
+u1888,e138,2021-11-29,true,interés en la industria
+u538,e254,2025-04-03,false,seguimiento de ofertas
+u741,e111,2019-03-18,false,networking
+u378,e342,2025-02-15,true,cliente potencial
+u523,e267,2024-08-02,true,ex empleador
+u22,e71,2026-05-22,false,trabajo actual
+u293,e133,2023-09-18,false,interés en la industria
+u49,e386,2024-10-23,true,interés general
+u838,e489,2020-01-18,false,trabajo actual
+u71,e113,2026-12-19,true,cliente potencial
+u160,e142,2022-11-03,true,cliente potencial
+u496,e223,2019-04-17,true,posible empleador
+u453,e14,2024-08-09,false,ex empleador
+u1225,e228,2026-09-28,true,posible empleador
+u452,e224,2026-08-11,false,trabajo actual
+u639,e119,2019-12-27,false,interés en la industria
+u1604,e429,2023-02-09,true,ex empleador
+u260,e293,2020-08-20,false,posible empleador
+u650,e364,2022-03-01,false,networking
+u771,e324,2019-06-15,false,interés en la industria
+u1286,e2,2024-12-31,false,cliente potencial
+u136,e149,2024-08-07,false,posible empleador
+u887,e416,2026-11-28,true,trabajo actual
+u1771,e39,2022-09-21,true,interés en la industria
+u318,e108,2020-12-07,true,seguimiento de ofertas
+u882,e137,2021-10-22,false,cliente potencial
+u1710,e319,2026-01-17,false,interés general
+u1083,e93,2021-04-24,true,interés en la industria
+u310,e121,2022-09-22,true,ex empleador
+u340,e140,2025-09-16,true,interés en la industria
+u518,e300,2022-09-18,true,cliente potencial
+u1065,e425,2026-03-08,true,interés general
+u1750,e390,2022-12-01,true,trabajo actual
+u568,e462,2019-11-13,true,trabajo actual
+u557,e99,2019-01-18,false,trabajo actual
+u1476,e379,2024-03-07,true,cliente potencial
+u1848,e86,2020-07-15,true,posible empleador
+u265,e70,2023-02-10,false,interés en la industria
+u1233,e377,2022-06-17,false,networking
+u1687,e229,2026-01-31,false,cliente potencial
+u614,e147,2023-03-18,false,interés en la industria
+u1323,e240,2022-09-23,false,ex empleador
+u1623,e405,2025-08-04,false,trabajo actual
+u842,e241,2022-06-27,true,seguimiento de ofertas
+u545,e117,2021-08-25,false,trabajo actual
+u53,e305,2024-08-30,true,networking
+u1273,e236,2024-06-30,false,networking
+u1462,e43,2024-02-17,false,networking
+u886,e409,2023-10-21,false,ex empleador
+u1644,e398,2025-01-15,false,networking
+u886,e183,2025-03-10,false,networking
+u1366,e45,2024-12-02,true,interés general
+u1887,e75,2020-01-09,false,posible empleador
+u1964,e406,2020-09-03,false,trabajo actual
+u808,e155,2019-12-27,true,posible empleador
+u738,e277,2023-01-31,true,trabajo actual
+u1078,e467,2026-12-26,true,ex empleador
+u80,e353,2024-03-29,true,interés en la industria
+u15,e319,2025-09-27,true,interés general
+u1264,e182,2021-06-05,true,interés general
+u1873,e266,2024-08-05,false,trabajo actual
+u1509,e84,2022-05-03,false,cliente potencial
+u1416,e170,2026-03-26,true,posible empleador
+u1083,e380,2022-06-18,true,cliente potencial
+u131,e446,2024-02-09,false,interés en la industria
+u1934,e289,2026-03-12,true,seguimiento de ofertas
+u1684,e332,2023-05-18,true,interés general
+u866,e42,2021-04-16,true,seguimiento de ofertas
+u1988,e272,2020-05-16,true,posible empleador
+u1996,e486,2026-07-02,false,interés general
+u1994,e417,2024-12-10,false,interés en la industria
+u642,e218,2019-08-05,true,interés general
+u945,e244,2019-05-16,true,posible empleador
+u569,e288,2026-12-26,false,posible empleador
+u1221,e72,2022-04-14,false,posible empleador
+u1639,e58,2019-11-09,true,networking
+u1979,e282,2020-12-11,false,cliente potencial
+u1656,e81,2022-08-23,true,networking
+u1629,e453,2024-08-23,true,ex empleador
+u842,e338,2024-03-04,false,trabajo actual
+u1225,e473,2022-02-06,false,networking
+u1979,e52,2019-03-08,true,ex empleador
+u1346,e444,2022-01-13,true,interés general
+u954,e8,2021-10-23,false,trabajo actual
+u982,e187,2020-05-03,false,posible empleador
+u104,e498,2021-11-15,false,ex empleador
+u1853,e385,2020-12-09,false,interés en la industria
+u1504,e23,2022-11-20,true,posible empleador
+u294,e221,2026-07-22,false,cliente potencial
+u1769,e297,2021-01-31,false,interés general
+u1013,e330,2023-11-13,true,trabajo actual
+u1193,e470,2023-08-19,true,trabajo actual
+u1191,e304,2024-05-05,false,trabajo actual
+u1996,e404,2024-11-11,true,cliente potencial
+u1595,e359,2022-12-09,false,ex empleador
+u1350,e226,2025-06-04,true,ex empleador
+u1031,e395,2026-03-22,false,networking
+u1895,e30,2021-07-26,false,ex empleador
+u1190,e89,2022-06-28,true,seguimiento de ofertas
+u579,e468,2019-04-30,true,interés general
+u1538,e410,2022-01-07,false,posible empleador
+u39,e338,2019-06-16,false,interés general
+u370,e284,2023-04-01,false,cliente potencial
+u1005,e314,2019-02-18,false,trabajo actual
+u613,e290,2021-09-13,true,posible empleador
+u633,e156,2025-06-15,false,posible empleador
+u703,e189,2019-07-05,true,interés en la industria
+u78,e96,2026-01-18,false,seguimiento de ofertas
+u1222,e335,2021-07-23,true,cliente potencial
+u232,e161,2025-07-13,true,posible empleador
+u1417,e343,2022-04-23,true,seguimiento de ofertas
+u610,e131,2024-02-23,false,trabajo actual
+u1306,e269,2021-03-25,true,networking
+u1268,e413,2024-11-29,false,interés general
+u870,e168,2022-01-02,true,interés general
+u1912,e275,2023-03-07,false,interés en la industria
+u1996,e333,2021-08-16,true,cliente potencial
+u361,e97,2025-01-08,false,seguimiento de ofertas
+u1442,e46,2019-12-07,false,interés en la industria
+u126,e421,2019-02-15,false,seguimiento de ofertas
+u1108,e80,2025-04-18,true,interés en la industria
+u1227,e363,2021-09-11,false,seguimiento de ofertas
+u1387,e177,2025-01-26,false,interés en la industria
+u347,e331,2026-02-27,false,trabajo actual
+u1109,e41,2023-06-05,false,posible empleador
+u564,e493,2022-04-06,false,seguimiento de ofertas
+u1790,e159,2019-06-12,false,interés en la industria
+u568,e43,2019-02-05,true,cliente potencial
+u1583,e311,2024-06-01,false,interés en la industria
+u824,e315,2026-12-27,false,trabajo actual
+u123,e343,2022-12-25,true,ex empleador
+u478,e305,2026-05-13,true,posible empleador
+u1337,e367,2025-03-18,false,interés en la industria
+u873,e219,2025-05-02,true,seguimiento de ofertas
+u592,e455,2025-08-08,false,seguimiento de ofertas
+u1452,e204,2024-11-27,false,ex empleador
+u790,e328,2021-09-24,false,interés general
+u1398,e212,2022-01-21,true,trabajo actual
+u1179,e240,2025-03-22,true,interés en la industria
+u1919,e354,2022-02-13,true,interés en la industria
+u1695,e7,2021-04-26,true,posible empleador
+u1793,e467,2023-02-18,false,cliente potencial
+u1905,e246,2020-09-13,true,seguimiento de ofertas
+u1856,e245,2022-01-11,false,cliente potencial
+u1976,e382,2020-07-11,true,networking
+u381,e273,2025-06-16,true,posible empleador
+u646,e433,2024-09-27,true,cliente potencial
+u354,e415,2026-04-22,true,posible empleador
+u420,e127,2022-05-08,false,trabajo actual
+u314,e454,2021-07-26,false,networking
+u1667,e304,2019-11-20,true,ex empleador
+u86,e28,2021-05-12,true,interés general
+u974,e455,2026-10-03,false,seguimiento de ofertas
+u1952,e499,2020-05-06,true,seguimiento de ofertas
+u974,e151,2025-12-20,false,trabajo actual
+u1249,e282,2023-07-21,false,networking
+u62,e21,2023-11-03,true,ex empleador
+u149,e326,2024-03-30,true,interés general
+u1103,e325,2026-06-22,true,cliente potencial
+u325,e311,2021-01-02,true,ex empleador
+u129,e359,2022-03-22,false,seguimiento de ofertas
+u582,e114,2024-11-02,true,interés general
+u1505,e382,2019-01-21,false,trabajo actual
+u1528,e29,2022-01-14,true,trabajo actual
+u372,e121,2019-06-26,false,seguimiento de ofertas
+u1871,e304,2023-12-10,false,cliente potencial
+u396,e85,2023-07-27,true,networking
