@@ -11,6 +11,7 @@ FRONTEND_PORT=5500
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 CYAN='\033[0;36m'
+RED='\033[0;31m'
 RESET='\033[0m'
 
 cleanup() {
@@ -21,15 +22,30 @@ cleanup() {
 }
 trap cleanup INT TERM
 
-# ---------- backend ----------
-echo -e "${CYAN}Iniciando backend en :${BACKEND_PORT}...${RESET}"
+# ---------- venv ----------
 cd "$BACKEND"
-node src/server.js &
+if [ ! -d ".venv" ]; then
+  echo -e "${CYAN}Creando entorno virtual en backend/.venv...${RESET}"
+  python3 -m venv .venv
+fi
+# shellcheck disable=SC1091
+source .venv/bin/activate
+
+# Instalar dependencias si faltan (chequeo barato: existe django-admin?)
+if ! python -c "import django" >/dev/null 2>&1; then
+  echo -e "${CYAN}Instalando dependencias de Python...${RESET}"
+  pip install --quiet --upgrade pip
+  pip install --quiet -r requirements.txt
+fi
+
+# ---------- backend (Django) ----------
+echo -e "${CYAN}Iniciando backend Django en :${BACKEND_PORT}...${RESET}"
+python manage.py runserver "0.0.0.0:${BACKEND_PORT}" --noreload &
 BACKEND_PID=$!
 
 # Esperar hasta que el backend responda (máx 15 s)
 for i in $(seq 1 30); do
-  if curl -sf "http://localhost:${BACKEND_PORT}/ping" > /dev/null 2>&1; then
+  if curl -sf "http://localhost:${BACKEND_PORT}/api/ping/" > /dev/null 2>&1; then
     echo -e "${GREEN}Backend listo.${RESET}"
     break
   fi
@@ -40,7 +56,6 @@ done
 echo -e "${CYAN}Sirviendo frontend en http://localhost:${FRONTEND_PORT}${RESET}"
 cd "$FRONTEND"
 
-# Usar npx serve si está disponible, si no python3 http.server
 if command -v npx &> /dev/null && npx --yes serve --version &> /dev/null; then
   npx serve -l "$FRONTEND_PORT" . &
 elif command -v python3 &> /dev/null; then
@@ -48,12 +63,12 @@ elif command -v python3 &> /dev/null; then
 elif command -v python &> /dev/null; then
   python -m http.server "$FRONTEND_PORT" &
 else
-  echo "No se encontró un servidor HTTP. Abre frontend/NeoLab.html manualmente."
+  echo -e "${RED}No se encontró un servidor HTTP. Abre frontend/NeoLab.html manualmente.${RESET}"
 fi
 FRONTEND_PID=$!
 
 echo -e "\n${GREEN}Todo corriendo:${RESET}"
-echo -e "  Backend  → http://localhost:${BACKEND_PORT}/ping"
+echo -e "  Backend  → http://localhost:${BACKEND_PORT}/api/ping/"
 echo -e "  Frontend → http://localhost:${FRONTEND_PORT}/NeoLab.html"
 echo -e "\n${YELLOW}Presiona Ctrl+C para detener ambos.${RESET}\n"
 
