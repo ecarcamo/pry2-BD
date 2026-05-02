@@ -93,17 +93,27 @@
       patchPropsBulk: (body)              => post('/educacion/bulk-update/', body),
     },
 
+    experiencia: {
+      create:         (props)  => post('/experiencia/', props),
+      list:           (f = {}) => get('/experiencia/' + qs(f)),
+      get:            (expId)  => get(`/experiencia/${encodeURIComponent(expId)}/`),
+      patchProps:     (expId, body) => patch(`/experiencia/${encodeURIComponent(expId)}/`, body),
+      patchPropsBulk: (body)  => post('/experiencia/bulk-update/', body),
+      delete:         (expId)  => del(`/experiencia/${encodeURIComponent(expId)}/`),
+    },
+
     // Relaciones del dominio
-    conectar:      (body) => post('/relaciones/conexiones/',         body),
-    darLike:       (body) => post('/relaciones/likes/',              body),
-    comentar:      (body) => post('/relaciones/comentarios/',        body),
-    compartir:     (body) => post('/relaciones/compartidos/',        body),
-    postular:      (body) => post('/relaciones/postulaciones/',      body),
-    seguirEmpresa: (body) => post('/relaciones/seguimientos/',       body),
-    trabajarEn:    (body) => post('/relaciones/empleos-historial/',  body),
-    estudiarEn:    (body) => post('/relaciones/estudios/',           body),
-    mencionar:     (body) => post('/relaciones/menciones/',          body),
-    crearRelacion: (body) => post('/relaciones/generica/',           body),
+    conectar:       (body) => post('/relaciones/conexiones/',    body),
+    darLike:        (body) => post('/relaciones/likes/',         body),
+    comentar:       (body) => post('/relaciones/comentarios/',   body),
+    compartir:      (body) => post('/relaciones/compartidos/',   body),
+    postular:       (body) => post('/relaciones/postulaciones/', body),
+    seguirEmpresa:  (body) => post('/relaciones/seguimientos/',  body),
+    trabajoEn:      (body) => post('/relaciones/trabajo-en/',    body),
+    experienciaEn:  (body) => post('/relaciones/experiencia-en/', body),
+    estudiarEn:     (body) => post('/relaciones/estudios/',      body),
+    mencionar:      (body) => post('/relaciones/menciones/',     body),
+    crearRelacion:  (body) => post('/relaciones/generica/',      body),
 
     consultas: {
       topConexiones:          (params = {}) => get('/consultas/usuarios-top-conexiones/' + qs(params)),

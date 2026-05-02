@@ -34,20 +34,25 @@ window.SEED = (function () {
       institucion: 'String', carrera: 'String', grado: 'String',
       pais: 'String', acreditada: 'Boolean',
     },
+    ExperienciaLaboral: {
+      expId: 'String', cargo: 'String', salario: 'Float',
+      descripcion: 'String', activo: 'Boolean',
+    },
   };
 
   const REL_SCHEMA = {
-    CONECTADO_CON: { fecha_conexion: 'Date', nivel: 'String', aceptada: 'Boolean' },
-    PUBLICO:       { fecha: 'Date', anonimo: 'Boolean', desde_empresa: 'Boolean' },
-    DIO_LIKE:      { fecha: 'Date', tipo_reaccion: 'String', notificado: 'Boolean' },
-    COMENTO:       { contenido: 'String', fecha: 'Date', editado: 'Boolean' },
-    COMPARTIO:     { fecha: 'Date', con_comentario: 'Boolean', visibilidad: 'String' },
-    ESTUDIO_EN:    { fecha_inicio: 'Date', fecha_graduacion: 'Date', graduado: 'Boolean' },
-    POSTULO_A:     { fecha_postulacion: 'Date', estado: 'String', carta_presentacion: 'Boolean' },
-    OFERTA:        { fecha_publicacion: 'Date', urgente: 'Boolean', remunerado: 'Boolean' },
-    SIGUE_A:       { fecha_seguimiento: 'Date', notificaciones: 'Boolean', motivo: 'String' },
-    ESTAR_EN:      { cargo: 'String', fecha_inicio: 'Date', actual: 'Boolean' },
-    MENCIONA:      { fecha: 'Date', tipo: 'String', confirmada: 'Boolean' },
+    CONECTADO_CON:  { fecha_conexion: 'Date', nivel: 'String', aceptada: 'Boolean' },
+    PUBLICO:        { fecha: 'Date', anonimo: 'Boolean', desde_empresa: 'Boolean' },
+    DIO_LIKE:       { fecha: 'Date', tipo_reaccion: 'String', notificado: 'Boolean' },
+    COMENTO:        { contenido: 'String', fecha: 'Date', editado: 'Boolean' },
+    COMPARTIO:      { fecha: 'Date', con_comentario: 'Boolean', visibilidad: 'String' },
+    ESTUDIO_EN:     { fecha_inicio: 'Date', fecha_graduacion: 'Date', graduado: 'Boolean' },
+    POSTULO_A:      { fecha_postulacion: 'Date', estado: 'String', carta_presentacion: 'Boolean' },
+    OFERTA:         { fecha_publicacion: 'Date', urgente: 'Boolean', remunerado: 'Boolean' },
+    SIGUE_A:        { fecha_seguimiento: 'Date', notificaciones: 'Boolean', motivo: 'String' },
+    TRABAJO_EN:     { fecha_inicio: 'Date', fecha_fin: 'Date', verificado: 'Boolean' },
+    EXPERIENCIA_EN: { departamento: 'String', tipo_contrato: 'String', modalidad: 'String' },
+    MENCIONA:       { fecha: 'Date', tipo: 'String', confirmada: 'Boolean' },
   };
 
   // ----- Helpers -----
@@ -168,6 +173,23 @@ window.SEED = (function () {
       fecha_publicacion: D('2026-02-15'),
     }},
 
+    // ExperienciaLaboral
+    { id: 'n18', labels: ['ExperienciaLaboral'], props: {
+      expId: 'exp1', cargo: 'Backend Developer',
+      salario: 2200.0, descripcion: 'Desarrollo de APIs y microservicios',
+      activo: true,
+    }},
+    { id: 'n19', labels: ['ExperienciaLaboral'], props: {
+      expId: 'exp2', cargo: 'Data Engineer',
+      salario: 2800.0, descripcion: 'Pipelines de datos con Spark y Cypher',
+      activo: true,
+    }},
+    { id: 'n20', labels: ['ExperienciaLaboral'], props: {
+      expId: 'exp3', cargo: 'Database Architect',
+      salario: 3100.0, descripcion: 'Diseño de bases de datos distribuidas',
+      activo: false,
+    }},
+
     // Educación
     { id: 'n16', labels: ['Educacion'], props: {
       institucion: 'Universidad del Valle de Guatemala',
@@ -256,13 +278,21 @@ window.SEED = (function () {
     { id: 'r27', type: 'SIGUE_A', from: 'n4', to: 'n7', props: {
       fecha_seguimiento: D('2024-12-03'), notificaciones: true,  motivo: 'networking' } },
 
-    // ESTAR_EN
-    { id: 'r28', type: 'ESTAR_EN', from: 'n1', to: 'n7', props: {
-      cargo: 'Backend Developer', fecha_inicio: D('2024-01-15'), actual: true } },
-    { id: 'r29', type: 'ESTAR_EN', from: 'n3', to: 'n8', props: {
-      cargo: 'Data Engineer', fecha_inicio: D('2024-08-01'), actual: true } },
-    { id: 'r30', type: 'ESTAR_EN', from: 'n2', to: 'n7', props: {
-      cargo: 'Database Architect', fecha_inicio: D('2022-09-01'), actual: false } },
+    // TRABAJO_EN (Usuario → ExperienciaLaboral)
+    { id: 'r28', type: 'TRABAJO_EN', from: 'n1', to: 'n18', props: {
+      fecha_inicio: D('2024-01-15'), fecha_fin: '', verificado: true } },
+    { id: 'r29', type: 'TRABAJO_EN', from: 'n3', to: 'n19', props: {
+      fecha_inicio: D('2024-08-01'), fecha_fin: '', verificado: true } },
+    { id: 'r30', type: 'TRABAJO_EN', from: 'n2', to: 'n20', props: {
+      fecha_inicio: D('2022-09-01'), fecha_fin: D('2024-06-30'), verificado: true } },
+
+    // EXPERIENCIA_EN (ExperienciaLaboral → Empresa)
+    { id: 'r33', type: 'EXPERIENCIA_EN', from: 'n18', to: 'n7', props: {
+      departamento: 'Backend', tipo_contrato: 'tiempo_completo', modalidad: 'híbrido' } },
+    { id: 'r34', type: 'EXPERIENCIA_EN', from: 'n19', to: 'n8', props: {
+      departamento: 'Data Engineering', tipo_contrato: 'tiempo_completo', modalidad: 'remoto' } },
+    { id: 'r35', type: 'EXPERIENCIA_EN', from: 'n20', to: 'n7', props: {
+      departamento: 'Plataforma', tipo_contrato: 'tiempo_completo', modalidad: 'presencial' } },
 
     // MENCIONA (Publicacion→Usuario)
     { id: 'r31', type: 'MENCIONA', from: 'n10', to: 'n2', props: {

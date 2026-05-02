@@ -76,6 +76,25 @@ RETURN u`
 })
 RETURN e`
       },
+      {
+        title: 'Nodo ExperienciaLaboral (nodo intermedio)',
+        subtitle: 'Registro de experiencia laboral con 5 propiedades',
+        endpoint: {
+          call: 'experiencia.create',
+          body: { cargo: 'Full Stack Developer', salario: 2500.0,
+                  descripcion: 'Desarrollo web end-to-end con React y Django',
+                  activo: true },
+        },
+        query:
+`CREATE (exp:ExperienciaLaboral {
+  expId: randomUUID(),
+  cargo: 'Full Stack Developer',
+  salario: 2500.0,
+  descripcion: 'Desarrollo web end-to-end con React y Django',
+  activo: true
+})
+RETURN exp`
+      },
     ],
   },
 
@@ -178,8 +197,8 @@ RETURN e.titulo, keys(e) AS propiedades`
     section: '4. Relaciones con propiedades',
     items: [
       {
-        title: 'CREATE relación entre 2 nodos existentes',
-        subtitle: 'CONECTADO_CON con 3 propiedades',
+        title: 'CONECTADO_CON — usuarios',
+        subtitle: 'Nicolás conecta con María López · 3 propiedades',
         endpoint: {
           call: 'conectar',
           body: { userIdA: 'n1', userIdB: 'n4',
@@ -194,6 +213,60 @@ CREATE (a)-[r:CONECTADO_CON {
   aceptada: true
 }]->(b)
 RETURN a.nombre, type(r), b.nombre`
+      },
+      {
+        title: 'TRABAJO_EN — Usuario → ExperienciaLaboral',
+        subtitle: 'Ana Pérez inicia experiencia laboral · 3 propiedades',
+        endpoint: {
+          call: 'trabajoEn',
+          body: { userId: 'n6', expId: 'n18',
+                  fecha_inicio: '2026-05-02', fecha_fin: '', verificado: false },
+        },
+        query:
+`MATCH (u:Usuario {email: 'aperez@correo.com'}),
+      (exp:ExperienciaLaboral {expId: 'exp1'})
+CREATE (u)-[r:TRABAJO_EN {
+  fecha_inicio: '2026-05-02',
+  fecha_fin: '',
+  verificado: false
+}]->(exp)
+RETURN u.nombre, type(r), exp.cargo`
+      },
+      {
+        title: 'EXPERIENCIA_EN — ExperienciaLaboral → Empresa',
+        subtitle: 'Vincula la experiencia con PixelForge · 3 propiedades',
+        endpoint: {
+          call: 'experienciaEn',
+          body: { expId: 'exp1', empresaId: 'n9',
+                  departamento: 'Diseño UX', tipo_contrato: 'tiempo_completo', modalidad: 'presencial' },
+        },
+        query:
+`MATCH (exp:ExperienciaLaboral {expId: 'exp1'}),
+      (e:Empresa {nombre: 'PixelForge'})
+CREATE (exp)-[r:EXPERIENCIA_EN {
+  departamento: 'Diseño UX',
+  tipo_contrato: 'tiempo_completo',
+  modalidad: 'presencial'
+}]->(e)
+RETURN exp.cargo, type(r), e.nombre`
+      },
+      {
+        title: 'SIGUE_A — Usuario → Empresa',
+        subtitle: 'Diego Ramírez sigue a Datatec · 3 propiedades',
+        endpoint: {
+          call: 'seguirEmpresa',
+          body: { userId: 'n5', empresaId: 'n7',
+                  fecha_seguimiento: '2026-05-02', notificaciones: true, motivo: 'posible cliente' },
+        },
+        query:
+`MATCH (u:Usuario {email: 'dramirez@correo.com'}),
+      (e:Empresa {nombre: 'Datatec'})
+CREATE (u)-[r:SIGUE_A {
+  fecha_seguimiento: '2026-05-02',
+  notificaciones: true,
+  motivo: 'posible cliente'
+}]->(e)
+RETURN u.nombre, type(r), e.nombre`
       },
     ],
   },

@@ -140,21 +140,44 @@ def seguimientos(request):
 
 
 @api_view(['POST'])
-def empleos_historial(request):
+def trabajo_en(request):
+    """TRABAJO_EN: Usuario → ExperienciaLaboral."""
     body = request.data or {}
-    require_fields(body, ['userId', 'empresaId', 'cargo'])
+    require_fields(body, ['userId', 'expId'])
     props = {
-        'cargo': body['cargo'],
         'fecha_inicio': body.get('fecha_inicio') or _today(),
-        'actual': bool(body.get('actual', True)),
+        'fecha_fin':    body.get('fecha_fin', ''),
+        'verificado':   bool(body.get('verificado', False)),
     }
     cypher = (
-        "MATCH (u:Usuario {userId: $userId}), (e:Empresa {empresaId: $empresaId}) "
-        "CREATE (u)-[r:ESTAR_EN $props]->(e) "
-        "RETURN u, type(r), e"
+        "MATCH (u:Usuario {userId: $userId}), "
+        "(exp:ExperienciaLaboral {expId: $expId}) "
+        "CREATE (u)-[r:TRABAJO_EN $props]->(exp) "
+        "RETURN u, type(r), exp"
     )
     return _create_rel(cypher, {
-        'userId': body['userId'], 'empresaId': body['empresaId'], 'props': props,
+        'userId': body['userId'], 'expId': body['expId'], 'props': props,
+    })
+
+
+@api_view(['POST'])
+def experiencia_en(request):
+    """EXPERIENCIA_EN: ExperienciaLaboral → Empresa."""
+    body = request.data or {}
+    require_fields(body, ['expId', 'empresaId'])
+    props = {
+        'departamento':  body.get('departamento', ''),
+        'tipo_contrato': body.get('tipo_contrato', 'tiempo_completo'),
+        'modalidad':     body.get('modalidad', 'presencial'),
+    }
+    cypher = (
+        "MATCH (exp:ExperienciaLaboral {expId: $expId}), "
+        "(e:Empresa {empresaId: $empresaId}) "
+        "CREATE (exp)-[r:EXPERIENCIA_EN $props]->(e) "
+        "RETURN exp, type(r), e"
+    )
+    return _create_rel(cypher, {
+        'expId': body['expId'], 'empresaId': body['empresaId'], 'props': props,
     })
 
 

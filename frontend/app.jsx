@@ -6,12 +6,13 @@ const { useState, useEffect, useMemo, useRef, useCallback } = React;
 
 // --- Colores por label (alineados con CSS vars) ---
 const LABEL_COLORS = {
-  Usuario:     'var(--c-usuario)',
-  Admin:       'var(--c-admin)',
-  Empresa:     'var(--c-empresa)',
-  Publicacion: 'var(--c-publicacion)',
-  Empleo:      'var(--c-empleo)',
-  Educacion:   'var(--c-educacion)',
+  Usuario:            'var(--c-usuario)',
+  Admin:              'var(--c-admin)',
+  Empresa:            'var(--c-empresa)',
+  Publicacion:        'var(--c-publicacion)',
+  Empleo:             'var(--c-empleo)',
+  Educacion:          'var(--c-educacion)',
+  ExperienciaLaboral: 'var(--c-experiencia)',
 };
 
 // "etiqueta principal" para colorear un nodo (Admin se superpone a Usuario)

@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'apps.publicaciones',
     'apps.empleos',
     'apps.educacion',
+    'apps.experiencia_laboral',
     'apps.relaciones',
     'apps.consultas',
 ]

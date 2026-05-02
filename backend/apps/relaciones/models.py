@@ -53,10 +53,16 @@ class SigueARel(StructuredRel):
     motivo = StringProperty(default='')
 
 
-class EstarEnRel(StructuredRel):
-    cargo = StringProperty(required=True)
+class TrabajoEnRel(StructuredRel):
     fecha_inicio = DateProperty()
-    actual = BooleanProperty(default=True)
+    fecha_fin    = DateProperty()
+    verificado   = BooleanProperty(default=False)
+
+
+class ExperienciaEnRel(StructuredRel):
+    departamento  = StringProperty(default='')
+    tipo_contrato = StringProperty(default='tiempo_completo')
+    modalidad     = StringProperty(default='presencial')
 
 
 class EstudioEnRel(StructuredRel):
