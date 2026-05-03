@@ -106,7 +106,7 @@ RETURN exp`
         subtitle: 'Buscar un Usuario por email',
         query:
 `MATCH (u:Usuario {email: 'nconcua@uvg.edu.gt'})
-RETURN u.nombre AS nombre, u.titular AS titular, u.habilidades AS habilidades`
+RETURN coalesce(u.nombre, u.email) AS nombre, u.titular AS titular, u.habilidades AS habilidades`
       },
       {
         title: 'Consultar múltiples nodos',
@@ -114,7 +114,7 @@ RETURN u.nombre AS nombre, u.titular AS titular, u.habilidades AS habilidades`
         query:
 `MATCH (u:Usuario)
 WHERE u.abierto_a_trabajo = true
-RETURN u.nombre AS nombre, u.titular AS titular, u.conexiones_count AS conexiones
+RETURN coalesce(u.nombre, u.email) AS nombre, u.titular AS titular, u.conexiones_count AS conexiones
 ORDER BY conexiones DESC`
       },
       {
@@ -146,7 +146,7 @@ RETURN e.modalidad AS modalidad,
         query:
 `MATCH (u:Usuario {email: 'nconcua@uvg.edu.gt'})
 SET u.telefono = '+502 5555-1234'
-RETURN u.nombre, u.telefono`
+RETURN coalesce(u.nombre, u.email) AS nombre, u.telefono`
       },
       {
         title: 'Agregar propiedad a múltiples nodos',
@@ -163,7 +163,7 @@ RETURN e.titulo, e.disponible`
         query:
 `MATCH (u:Usuario {email: 'eascencio@uvg.edu.gt'})
 SET u.titular = 'Senior Data Engineer en Cloudly'
-RETURN u.nombre, u.titular`
+RETURN coalesce(u.nombre, u.email) AS nombre, u.titular`
       },
       {
         title: 'Actualizar propiedad de múltiples nodos',
@@ -171,7 +171,7 @@ RETURN u.nombre, u.titular`
         query:
 `MATCH (u:Usuario)
 SET u.conexiones_count = u.conexiones_count + 10
-RETURN u.nombre, u.conexiones_count
+RETURN coalesce(u.nombre, u.email) AS nombre, u.conexiones_count
 ORDER BY u.conexiones_count DESC`
       },
       {
@@ -180,7 +180,7 @@ ORDER BY u.conexiones_count DESC`
         query:
 `MATCH (u:Usuario {email: 'nconcua@uvg.edu.gt'})
 REMOVE u.telefono
-RETURN u.nombre, keys(u) AS propiedades`
+RETURN coalesce(u.nombre, u.email) AS nombre, keys(u) AS propiedades`
       },
       {
         title: 'Eliminar propiedad de múltiples nodos',
@@ -198,75 +198,61 @@ RETURN e.titulo, keys(e) AS propiedades`
     items: [
       {
         title: 'CONECTADO_CON — usuarios',
-        subtitle: 'Nicolás conecta con María López · 3 propiedades',
-        endpoint: {
-          call: 'conectar',
-          body: { userIdA: 'n1', userIdB: 'n4',
-                  fecha_conexion: '2026-04-26', nivel: '1er', aceptada: true },
-        },
+        subtitle: 'Toma 2 usuarios cualquiera · 3 propiedades',
         query:
-`MATCH (a:Usuario {email: 'nconcua@uvg.edu.gt'}),
-      (b:Usuario {email: 'mlopez@correo.com'})
+`MATCH (a:Usuario), (b:Usuario)
+WHERE elementId(a) <> elementId(b)
+  AND NOT (a)-[:CONECTADO_CON]->(b)
+WITH a, b LIMIT 1
 CREATE (a)-[r:CONECTADO_CON {
-  fecha_conexion: '2026-04-26',
+  fecha_conexion: '2026-05-03',
   nivel: '1er',
   aceptada: true
 }]->(b)
-RETURN a.nombre, type(r), b.nombre`
-      },
-      {
-        title: 'TRABAJO_EN — Usuario → ExperienciaLaboral',
-        subtitle: 'Ana Pérez inicia experiencia laboral · 3 propiedades',
-        endpoint: {
-          call: 'trabajoEn',
-          body: { userId: 'n6', expId: 'n18',
-                  fecha_inicio: '2026-05-02', fecha_fin: '', verificado: false },
-        },
-        query:
-`MATCH (u:Usuario {email: 'aperez@correo.com'}),
-      (exp:ExperienciaLaboral {expId: 'exp1'})
-CREATE (u)-[r:TRABAJO_EN {
-  fecha_inicio: '2026-05-02',
-  fecha_fin: '',
-  verificado: false
-}]->(exp)
-RETURN u.nombre, type(r), exp.cargo`
-      },
-      {
-        title: 'EXPERIENCIA_EN — ExperienciaLaboral → Empresa',
-        subtitle: 'Vincula la experiencia con PixelForge · 3 propiedades',
-        endpoint: {
-          call: 'experienciaEn',
-          body: { expId: 'exp1', empresaId: 'n9',
-                  departamento: 'Diseño UX', tipo_contrato: 'tiempo_completo', modalidad: 'presencial' },
-        },
-        query:
-`MATCH (exp:ExperienciaLaboral {expId: 'exp1'}),
-      (e:Empresa {nombre: 'PixelForge'})
-CREATE (exp)-[r:EXPERIENCIA_EN {
-  departamento: 'Diseño UX',
-  tipo_contrato: 'tiempo_completo',
-  modalidad: 'presencial'
-}]->(e)
-RETURN exp.cargo, type(r), e.nombre`
+RETURN coalesce(a.nombre, a.email) AS origen, type(r) AS relacion, coalesce(b.nombre, b.email) AS destino`
       },
       {
         title: 'SIGUE_A — Usuario → Empresa',
-        subtitle: 'Diego Ramírez sigue a Datatec · 3 propiedades',
-        endpoint: {
-          call: 'seguirEmpresa',
-          body: { userId: 'n5', empresaId: 'n7',
-                  fecha_seguimiento: '2026-05-02', notificaciones: true, motivo: 'posible cliente' },
-        },
+        subtitle: 'Toma 1 usuario y 1 empresa cualquiera · 3 propiedades',
         query:
-`MATCH (u:Usuario {email: 'dramirez@correo.com'}),
-      (e:Empresa {nombre: 'Datatec'})
+`MATCH (u:Usuario), (e:Empresa)
+WHERE NOT (u)-[:SIGUE_A]->(e)
+WITH u, e LIMIT 1
 CREATE (u)-[r:SIGUE_A {
-  fecha_seguimiento: '2026-05-02',
+  fecha_seguimiento: '2026-05-03',
   notificaciones: true,
-  motivo: 'posible cliente'
+  motivo: 'interés profesional'
 }]->(e)
-RETURN u.nombre, type(r), e.nombre`
+RETURN coalesce(u.nombre, u.email) AS usuario, type(r) AS relacion, e.nombre AS empresa`
+      },
+      {
+        title: 'POSTULO_A — Usuario → Empleo',
+        subtitle: 'Toma 1 usuario y 1 empleo activo · 3 propiedades',
+        query:
+`MATCH (u:Usuario), (j:Empleo)
+WHERE j.activo = true
+  AND NOT (u)-[:POSTULO_A]->(j)
+WITH u, j LIMIT 1
+CREATE (u)-[r:POSTULO_A {
+  fecha_postulacion: '2026-05-03',
+  estado: 'pendiente',
+  carta_presentacion: true
+}]->(j)
+RETURN coalesce(u.nombre, u.email) AS usuario, type(r) AS relacion, j.titulo AS empleo`
+      },
+      {
+        title: 'COMENTO — Usuario → Publicacion',
+        subtitle: 'Toma 1 usuario y 1 publicación · 3 propiedades',
+        query:
+`MATCH (u:Usuario), (p:Publicacion)
+WHERE NOT (u)-[:COMENTO]->(p)
+WITH u, p LIMIT 1
+CREATE (u)-[r:COMENTO {
+  contenido: 'Muy interesante esta publicación.',
+  fecha: '2026-05-03',
+  editado: false
+}]->(p)
+RETURN coalesce(u.nombre, u.email) AS usuario, type(r) AS relacion, p.contenido[..40] AS publicacion`
       },
       {
         title: 'Crear relación manual',
@@ -281,11 +267,12 @@ RETURN u.nombre, type(r), e.nombre`
     items: [
       {
         title: 'Agregar propiedad a 1 relación',
-        subtitle: 'SET nota en POSTULO_A',
+        subtitle: 'SET nota en una POSTULO_A cualquiera',
         query:
-`MATCH (u:Usuario {email:'nconcua@uvg.edu.gt'})-[r:POSTULO_A]->(e:Empleo)
+`MATCH (u:Usuario)-[r:POSTULO_A]->(e:Empleo)
+WITH u, r, e LIMIT 1
 SET r.nota = 'Candidato priorizado por reclutador'
-RETURN u.nombre, e.titulo, r.estado, r.nota`
+RETURN coalesce(u.nombre, u.email) AS usuario, e.titulo, r.estado, r.nota`
       },
       {
         title: 'Agregar propiedad a múltiples relaciones',
@@ -297,11 +284,12 @@ RETURN emp.nombre, j.titulo, r.fuente`
       },
       {
         title: 'Actualizar propiedad de 1 relación',
-        subtitle: 'Cambiar estado de postulación',
+        subtitle: 'Cambiar estado de una POSTULO_A cualquiera',
         query:
-`MATCH (u:Usuario {email:'nconcua@uvg.edu.gt'})-[r:POSTULO_A]->(e:Empleo)
+`MATCH (u:Usuario)-[r:POSTULO_A]->(e:Empleo)
+WITH u, r, e LIMIT 1
 SET r.estado = 'revisado'
-RETURN u.nombre, e.titulo, r.estado`
+RETURN coalesce(u.nombre, u.email) AS usuario, e.titulo, r.estado`
       },
       {
         title: 'Actualizar propiedad de múltiples relaciones',
@@ -313,11 +301,12 @@ RETURN count(r) AS likes_actualizados`
       },
       {
         title: 'Eliminar propiedad de 1 relación',
-        subtitle: 'REMOVE r.nota en POSTULO_A',
+        subtitle: 'REMOVE r.nota de una POSTULO_A cualquiera',
         query:
-`MATCH (u:Usuario {email:'nconcua@uvg.edu.gt'})-[r:POSTULO_A]->(e:Empleo)
+`MATCH (u:Usuario)-[r:POSTULO_A]->(e:Empleo)
+WITH u, r, e LIMIT 1
 REMOVE r.nota
-RETURN u.nombre, e.titulo, keys(r) AS props`
+RETURN coalesce(u.nombre, u.email) AS usuario, e.titulo, keys(r) AS props`
       },
       {
         title: 'Eliminar propiedad de múltiples relaciones',
@@ -388,7 +377,7 @@ window.PRESET_QUERIES = [
     label: 'Q1 · Top usuarios por conexiones',
     query:
 `MATCH (u:Usuario)
-RETURN u.nombre AS usuario,
+RETURN coalesce(u.nombre, u.email) AS usuario,
        u.titular AS titular,
        u.conexiones_count AS conexiones
 ORDER BY conexiones DESC
@@ -433,7 +422,7 @@ RETURN avg(p.likes_count) AS promedio_likes,
 `MATCH (u:Usuario)-[r:POSTULO_A]->(j:Empleo)
 RETURN r.estado AS estado,
        count(*) AS cantidad,
-       collect(u.nombre) AS candidatos
+       collect(coalesce(u.nombre, u.email)) AS candidatos
 ORDER BY cantidad DESC`
   },
   {
@@ -441,7 +430,7 @@ ORDER BY cantidad DESC`
     label: 'Q6 · Quién publicó qué (autoría)',
     query:
 `MATCH (u:Usuario)-[:PUBLICO]->(p:Publicacion)
-RETURN u.nombre AS autor,
+RETURN coalesce(u.nombre, u.email) AS autor,
        p.contenido AS publicacion,
        p.likes_count AS likes,
        p.tags AS tags
