@@ -30,10 +30,13 @@ def collection(request):
     return _listar(request)
 
 
-@api_view(['GET', 'PATCH'])
+@api_view(['GET', 'PATCH', 'DELETE'])
 def detail(request, post_id):
     if request.method == 'PATCH':
         return _actualizar(request, post_id)
+    if request.method == 'DELETE':
+        run_write("MATCH (p:Publicacion {postId: $id}) DETACH DELETE p", {'id': post_id})
+        return Response(status=status.HTTP_204_NO_CONTENT)
     return _obtener(post_id)
 
 

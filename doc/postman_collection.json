@@ -18,6 +18,15 @@
             "method": "GET",
             "url": "{{base}}/ping/"
           }
+        },
+        {
+          "name": "POST /reset/ — restaurar seed",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/reset/",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{}" }
+          }
         }
       ]
     },
@@ -182,6 +191,13 @@
               "raw": "{\n  \"filter\": { \"verificada\": true },\n  \"set\": { \"badge\": \"verified_2026\" },\n  \"remove\": []\n}"
             }
           }
+        },
+        {
+          "name": "DELETE /empresas/:empresaId/",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base}}/empresas/n7/"
+          }
         }
       ]
     },
@@ -254,6 +270,13 @@
               "mode": "raw",
               "raw": "{\n  \"filter\": { \"es_oferta\": false },\n  \"set\": { \"revisada\": true },\n  \"remove\": []\n}"
             }
+          }
+        },
+        {
+          "name": "DELETE /publicaciones/:postId/",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base}}/publicaciones/n10/"
           }
         }
       ]
@@ -328,6 +351,13 @@
               "raw": "{\n  \"filter\": { \"activo\": true },\n  \"set\": { \"disponible\": true },\n  \"remove\": []\n}"
             }
           }
+        },
+        {
+          "name": "DELETE /empleos/:empleoId/",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base}}/empleos/n13/"
+          }
         }
       ]
     },
@@ -398,6 +428,76 @@
             "body": {
               "mode": "raw",
               "raw": "{\n  \"filter\": { \"acreditada\": true },\n  \"set\": { \"verificada_2026\": true },\n  \"remove\": []\n}"
+            }
+          }
+        },
+        {
+          "name": "DELETE /educacion/:educacionId/",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base}}/educacion/n16/"
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "ExperienciaLaboral",
+      "item": [
+        {
+          "name": "POST /experiencia/ — crear nodo intermedio",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/experiencia/",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"cargo\": \"Full Stack Developer\",\n  \"salario\": 2500.0,\n  \"descripcion\": \"Desarrollo web end-to-end con React y Django\",\n  \"activo\": true\n}"
+            }
+          }
+        },
+        {
+          "name": "GET /experiencia/ — todas",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/experiencia/"
+          }
+        },
+        {
+          "name": "GET /experiencia/:expId/",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/experiencia/exp-id-aqui/"
+          }
+        },
+        {
+          "name": "PATCH /experiencia/:expId/",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base}}/experiencia/exp-id-aqui/",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"set\": { \"salario\": 3000.0 },\n  \"remove\": []\n}"
+            }
+          }
+        },
+        {
+          "name": "DELETE /experiencia/:expId/",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base}}/experiencia/exp-id-aqui/"
+          }
+        },
+        {
+          "name": "POST /experiencia/bulk-update/",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/experiencia/bulk-update/",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filter\": { \"activo\": true },\n  \"set\": { \"verificado\": true },\n  \"remove\": []\n}"
             }
           }
         }
@@ -480,14 +580,26 @@
           }
         },
         {
-          "name": "POST /relaciones/empleos-historial/ — ESTAR_EN",
+          "name": "POST /relaciones/trabajo-en/ — TRABAJO_EN",
           "request": {
             "method": "POST",
-            "url": "{{base}}/relaciones/empleos-historial/",
+            "url": "{{base}}/relaciones/trabajo-en/",
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"userId\": \"n1\",\n  \"empresaId\": \"n7\",\n  \"cargo\": \"Backend Developer\",\n  \"fecha_inicio\": \"2024-01-15\",\n  \"actual\": true\n}"
+              "raw": "{\n  \"userId\": \"n1\",\n  \"expId\": \"exp-id-aqui\",\n  \"fecha_inicio\": \"2024-01-15\",\n  \"fecha_fin\": \"\",\n  \"verificado\": true\n}"
+            }
+          }
+        },
+        {
+          "name": "POST /relaciones/experiencia-en/ — EXPERIENCIA_EN",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/relaciones/experiencia-en/",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"empresaId\": \"n7\",\n  \"expId\": \"exp-id-aqui\",\n  \"departamento\": \"Ingeniería\",\n  \"tipo_contrato\": \"tiempo_completo\",\n  \"modalidad\": \"híbrido\"\n}"
             }
           }
         },

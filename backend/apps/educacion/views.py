@@ -22,10 +22,13 @@ def collection(request):
     return _listar(request)
 
 
-@api_view(['GET', 'PATCH'])
+@api_view(['GET', 'PATCH', 'DELETE'])
 def detail(request, educacion_id):
     if request.method == 'PATCH':
         return _actualizar(request, educacion_id)
+    if request.method == 'DELETE':
+        run_write("MATCH (ed:Educacion {educacionId: $id}) DETACH DELETE ed", {'id': educacion_id})
+        return Response(status=status.HTTP_204_NO_CONTENT)
     return _obtener(educacion_id)
 
 

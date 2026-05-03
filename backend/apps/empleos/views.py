@@ -27,10 +27,13 @@ def collection(request):
     return _listar(request)
 
 
-@api_view(['GET', 'PATCH'])
+@api_view(['GET', 'PATCH', 'DELETE'])
 def detail(request, empleo_id):
     if request.method == 'PATCH':
         return _actualizar(request, empleo_id)
+    if request.method == 'DELETE':
+        run_write("MATCH (j:Empleo {empleoId: $id}) DETACH DELETE j", {'id': empleo_id})
+        return Response(status=status.HTTP_204_NO_CONTENT)
     return _obtener(empleo_id)
 
 
