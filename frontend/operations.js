@@ -324,36 +324,40 @@ RETURN emp.nombre, j.titulo, keys(r) AS props`
     items: [
       {
         title: 'Eliminar 1 relación',
-        subtitle: 'DELETE de un DIO_LIKE específico',
+        subtitle: 'DELETE de 1 DIO_LIKE cualquiera (LIMIT 1)',
         query:
 `MATCH (u:Usuario)-[r:DIO_LIKE]->(p:Publicacion)
-WHERE u.email = 'mlopez@correo.com'
+WITH u, r, p LIMIT 1
 DELETE r
 RETURN count(r) AS eliminadas`
       },
       {
         title: 'Eliminar múltiples relaciones',
-        subtitle: 'Borrar todos los DIO_LIKE',
+        subtitle: 'Borrar todos los DIO_LIKE restantes',
         query:
 `MATCH ()-[r:DIO_LIKE]->()
-DELETE r
-RETURN count(r) AS eliminadas`
+WITH collect(r) AS rels, count(r) AS total
+FOREACH (r IN rels | DELETE r)
+RETURN total AS eliminadas`
       },
       {
         title: 'Eliminar 1 nodo (DETACH DELETE)',
-        subtitle: 'Borra una Publicacion y sus relaciones',
+        subtitle: 'Borra 1 Publicacion cualquiera y sus relaciones',
         query:
 `MATCH (p:Publicacion)
-WHERE p.tags = ['ux','research']
-DETACH DELETE p`
+WITH p LIMIT 1
+DETACH DELETE p
+RETURN count(p) AS eliminados`
       },
       {
         title: 'Eliminar múltiples nodos (DETACH DELETE)',
-        subtitle: 'Empleos inactivos',
+        subtitle: 'Borra todos los Empleos inactivos',
         query:
 `MATCH (e:Empleo)
 WHERE e.activo = false
-DETACH DELETE e`
+WITH collect(e) AS nodos, count(e) AS total
+FOREACH (e IN nodos | DETACH DELETE e)
+RETURN total AS eliminados`
       },
     ],
   },
