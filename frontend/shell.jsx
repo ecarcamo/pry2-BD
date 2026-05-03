@@ -95,6 +95,158 @@ function renderCell(v) {
   return String(v);
 }
 
+function CreateRelForm({ onClose, onSubmit }) {
+  const LABELS = ['Usuario', 'Empresa', 'Publicacion', 'Empleo', 'Educacion', 'ExperienciaLaboral'];
+  const ID_FIELDS = {
+    Usuario: 'userId', Empresa: 'empresaId', Publicacion: 'postId',
+    Empleo: 'empleoId', Educacion: 'educacionId', ExperienciaLaboral: 'expId',
+  };
+  const REL_TYPES = [
+    'CONECTADO_CON', 'SIGUE_A', 'POSTULO_A', 'TRABAJO_EN', 'EXPERIENCIA_EN',
+    'ESTUDIO_EN', 'DIO_LIKE', 'COMENTO', 'COMPARTIO', 'MENCIONA', 'OFERTA', 'CUSTOM',
+  ];
+
+  const [fromLabel, setFromLabel] = useS('Usuario');
+  const [fromId,    setFromId]    = useS('');
+  const [toLabel,   setToLabel]   = useS('Empresa');
+  const [toId,      setToId]      = useS('');
+  const [relType,   setRelType]   = useS('SIGUE_A');
+  const [customType, setCustomType] = useS('');
+  const [props, setProps] = useS([
+    { key: '', value: '' },
+    { key: '', value: '' },
+    { key: '', value: '' },
+  ]);
+  const [loading, setLoading] = useS(false);
+  const [error,   setError]   = useS('');
+
+  const updateProp = (i, field, val) =>
+    setProps(prev => prev.map((p, idx) => idx === i ? { ...p, [field]: val } : p));
+  const addProp    = () => setProps(prev => [...prev, { key: '', value: '' }]);
+  const removeProp = (i) => setProps(prev => prev.filter((_, idx) => idx !== i));
+
+  const parseVal = (v) => {
+    if (v === 'true')  return true;
+    if (v === 'false') return false;
+    const n = Number(v);
+    return (!isNaN(n) && v !== '') ? n : v;
+  };
+
+  const handleSubmit = async () => {
+    setError('');
+    const valid = props.filter(p => p.key.trim() !== '');
+    if (valid.length < 3) { setError('Se requieren mínimo 3 propiedades con nombre.'); return; }
+    if (!fromId.trim() || !toId.trim()) { setError('El ID de origen y destino son requeridos.'); return; }
+    const finalType = relType === 'CUSTOM' ? customType.trim().toUpperCase() : relType;
+    if (!finalType) { setError('Especifica el tipo de relación.'); return; }
+
+    const properties = {};
+    valid.forEach(p => { properties[p.key.trim()] = parseVal(p.value.trim()); });
+
+    setLoading(true);
+    try {
+      await onSubmit({
+        from: { label: fromLabel, idField: ID_FIELDS[fromLabel], idValue: fromId.trim() },
+        to:   { label: toLabel,   idField: ID_FIELDS[toLabel],   idValue: toId.trim() },
+        type: finalType,
+        properties,
+      });
+      onClose();
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-box" onClick={e => e.stopPropagation()}>
+        <div className="modal-head">
+          <span>Crear Relación con Propiedades</span>
+          <button className="ghost-btn" onClick={onClose}>✕</button>
+        </div>
+        <div className="modal-body">
+
+          <div className="form-section-label">Nodo origen</div>
+          <div className="form-row">
+            <label>Label</label>
+            <select value={fromLabel} onChange={e => setFromLabel(e.target.value)}>
+              {LABELS.map(l => <option key={l}>{l}</option>)}
+            </select>
+          </div>
+          <div className="form-row">
+            <label>{ID_FIELDS[fromLabel]}</label>
+            <input value={fromId} onChange={e => setFromId(e.target.value)}
+                   placeholder="ej. n1 o UUID" />
+          </div>
+
+          <div className="form-section-label" style={{marginTop:12}}>Nodo destino</div>
+          <div className="form-row">
+            <label>Label</label>
+            <select value={toLabel} onChange={e => setToLabel(e.target.value)}>
+              {LABELS.map(l => <option key={l}>{l}</option>)}
+            </select>
+          </div>
+          <div className="form-row">
+            <label>{ID_FIELDS[toLabel]}</label>
+            <input value={toId} onChange={e => setToId(e.target.value)}
+                   placeholder="ej. n7 o UUID" />
+          </div>
+
+          <div className="form-section-label" style={{marginTop:12}}>Tipo de relación</div>
+          <div className="form-row">
+            <label>Tipo</label>
+            <select value={relType} onChange={e => setRelType(e.target.value)}>
+              {REL_TYPES.map(t => <option key={t}>{t}</option>)}
+            </select>
+          </div>
+          {relType === 'CUSTOM' && (
+            <div className="form-row">
+              <label>Nombre</label>
+              <input value={customType}
+                     onChange={e => setCustomType(e.target.value.toUpperCase())}
+                     placeholder="MI_RELACION" />
+            </div>
+          )}
+
+          <div className="form-section-label" style={{marginTop:12}}>
+            Propiedades
+            <span style={{color:'var(--text-dim)', fontSize:10, marginLeft:8, textTransform:'none'}}>
+              mínimo 3
+            </span>
+          </div>
+          <div className="form-props">
+            {props.map((p, i) => (
+              <div key={i} className="prop-row">
+                <input placeholder="nombre" value={p.key}
+                       onChange={e => updateProp(i, 'key', e.target.value)} />
+                <input placeholder="valor (true/false/número/texto)" value={p.value}
+                       onChange={e => updateProp(i, 'value', e.target.value)} />
+                {props.length > 3 && (
+                  <button className="prop-remove" onClick={() => removeProp(i)}>×</button>
+                )}
+              </div>
+            ))}
+            <button className="ghost-btn"
+                    style={{marginTop:6, fontSize:'10px', width:'100%'}}
+                    onClick={addProp}>+ Agregar propiedad</button>
+          </div>
+
+          {error && <div className="form-error">⚠ {error}</div>}
+
+          <button className="run-btn"
+                  style={{marginTop:14, width:'100%', justifyContent:'center'}}
+                  onClick={handleSubmit}
+                  disabled={loading}>
+            {loading ? 'Creando...' : '▸ Crear Relación'}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   const [graph, setGraph]         = useS(freshGraphFromSeed());
   const [version, setVersion]     = useS(0);
@@ -105,6 +257,7 @@ function App() {
   const [toast, setToast]         = useS(null);
   const [neo4jStatus, setNeo4jStatus] = useS('checking'); // 'ok' | 'offline' | 'checking'
   const [instanceInfo, setInstanceInfo] = useS(null);
+  const [showRelForm, setShowRelForm] = useS(false);
 
   const showToast = (msg, kind='ok') => {
     setToast({ msg, kind });
@@ -170,8 +323,69 @@ function App() {
     setLog(prev => [entry, ...prev].slice(0, 80));
   };
 
+  const handleCreateRel = async (body) => {
+    const ts = new Date().toLocaleTimeString('es-GT', { hour12: false });
+    const propsStr = Object.entries(body.properties)
+      .map(([k, v]) => `${k}: ${typeof v === 'string' ? `'${v}'` : v}`)
+      .join(', ');
+    const displayCypher =
+      `MATCH (a:${body.from.label} {${body.from.idField}: '${body.from.idValue}'}),\n` +
+      `      (b:${body.to.label} {${body.to.idField}: '${body.to.idValue}'})\n` +
+      `CREATE (a)-[r:${body.type} {${propsStr}}]->(b)\n` +
+      `RETURN a, type(r), b`;
+
+    if (neo4jStatus === 'ok') {
+      try {
+        const data = await window.API.crearRelacion(body);
+        setLog(prev => [{
+          ts, query: displayCypher, kind: 'write', ok: true,
+          result: { columns: data.columns || [], rows: data.rows || [], stats: data.stats || {} },
+          summary: shortStats(data.stats) || (data.rows ? `${data.rows.length} fila(s)` : ''),
+          source: 'neo4j', cypherUsed: data.meta?.cypher,
+        }, ...prev].slice(0, 80));
+        showToast('Relación creada en Neo4j Aura', 'ok');
+      } catch (err) {
+        setLog(prev => [{
+          ts, query: displayCypher, kind: 'write', ok: false,
+          error: err.message, source: 'neo4j',
+        }, ...prev].slice(0, 80));
+        showToast('Error: ' + err.message, 'err');
+        throw err;
+      }
+    } else {
+      const localCypher =
+        `MATCH (a:${body.from.label} {${body.from.idField}: '${body.from.idValue}'}), ` +
+        `(b:${body.to.label} {${body.to.idField}: '${body.to.idValue}'}) ` +
+        `CREATE (a)-[r:${body.type} {${propsStr}}]->(b) RETURN a, type(r), b`;
+      try {
+        const next = deepCloneGraph(graph);
+        const res = window.CypherEngine.execute(localCypher, next);
+        setGraph(next);
+        setVersion(v => v + 1);
+        setLog(prev => [{
+          ts, query: localCypher, kind: 'write', ok: true,
+          result: res, summary: shortStats(res.stats) || '',
+          source: 'local',
+        }, ...prev].slice(0, 80));
+        showToast('Relación creada (modo offline)', 'ok');
+      } catch (err) {
+        setLog(prev => [{
+          ts, query: localCypher, kind: 'write', ok: false,
+          error: err.message, source: 'local',
+        }, ...prev].slice(0, 80));
+        showToast('Error: ' + err.message, 'err');
+        throw err;
+      }
+    }
+  };
+
   // handleOp: prefiere endpoint si existe y hay conexión, sino rawCypher/local
   const handleOp = async (op) => {
+    if (op.special === 'crear-relacion-form') {
+      setShowRelForm(true);
+      return;
+    }
+
     if (op.special === 'reset') {
       if (neo4jStatus === 'ok') {
         try {
@@ -290,7 +504,9 @@ function App() {
                 </button>
                 <div className="op-section-body">
                   {sec.items.map((it, j) => (
-                    <button key={j} className="op-btn" onClick={() => handleOp(it)}>
+                    <button key={j}
+                            className={'op-btn' + (it.special === 'crear-relacion-form' ? ' form-trigger' : '')}
+                            onClick={() => handleOp(it)}>
                       <span className="op-title">{it.title}</span>
                       <span className="op-cypher">{it.subtitle}</span>
                     </button>
@@ -404,6 +620,13 @@ function App() {
 
       {toast && (
         <div className={'toast show ' + (toast.kind || 'ok')}>{toast.msg}</div>
+      )}
+
+      {showRelForm && (
+        <CreateRelForm
+          onClose={() => setShowRelForm(false)}
+          onSubmit={handleCreateRel}
+        />
       )}
     </>
   );

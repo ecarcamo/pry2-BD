@@ -1,25 +1,27 @@
 """
 Generates CSVs for Neo4j Aura import — LinkedIn-style social network.
 
-Nodes (5000 distinct):
-  Usuario      : 2000  (200 also carry :Admin dual-label)
-  Empresa      :  500
-  Publicacion  : 1500
-  Empleo       :  600
-  Educacion    :  400
+Nodes (6500 distinct):
+  Usuario             : 2000  (200 also carry :Admin dual-label)
+  Empresa             :  500
+  Publicacion         : 1500
+  Empleo              :  600
+  Educacion           :  400
+  ExperienciaLaboral  : 1500  (intermediate node between Usuario and Empresa)
 
-Relationships (11 types, all guaranteed connected):
-  CONECTADO_CON   Usuario  → Usuario
-  PUBLICO         Usuario  → Publicacion
-  DIO_LIKE        Usuario  → Publicacion
-  COMENTO         Usuario  → Publicacion
-  COMPARTIO       Usuario  → Publicacion
-  ESTUDIO_EN      Usuario  → Educacion
-  POSTULO_A       Usuario  → Empleo
-  OFERTA          Empresa  → Empleo
-  SIGUE_A         Usuario  → Empresa
-  ESTAR_EN        Usuario  → Empresa
-  MENCIONA        Publicacion → Usuario
+Relationships (12 types, all guaranteed connected):
+  CONECTADO_CON   Usuario            → Usuario
+  PUBLICO         Usuario            → Publicacion
+  DIO_LIKE        Usuario            → Publicacion
+  COMENTO         Usuario            → Publicacion
+  COMPARTIO       Usuario            → Publicacion
+  ESTUDIO_EN      Usuario            → Educacion
+  POSTULO_A       Usuario            → Empleo
+  OFERTA          Empresa            → Empleo
+  SIGUE_A         Usuario            → Empresa
+  TRABAJO_EN      Usuario            → ExperienciaLaboral
+  EXPERIENCIA_EN  ExperienciaLaboral → Empresa
+  MENCIONA        Publicacion        → Usuario
 
 List properties (habilidades, tags) use ';' as separator.
 In Cypher: split(row.field, ';')
@@ -42,6 +44,7 @@ N_EMPRESAS      =  500
 N_PUBLICACIONES = 1500
 N_EMPLEOS       =  600
 N_EDUCACIONES   =  400
+N_EXPERIENCIAS  = 1500
 
 OUT = "neo4j_csv"
 os.makedirs(OUT, exist_ok=True)
@@ -186,6 +189,21 @@ MOTIVOS_SIGUE   = ["posible empleador","interés en la industria","networking",
                    "trabajo actual","interés general"]
 TIPOS_MENCION   = ["autor","colaborador","etiqueta"]
 VISIBILIDADES   = ["pública","conexiones","privada"]
+DEPARTAMENTOS   = [
+    "Backend","Frontend","Data Engineering","DevOps","Infraestructura","QA",
+    "Producto","Diseño UX","Ciberseguridad","BI y Analytics","Mobile","Cloud",
+    "Plataforma","Machine Learning","Operaciones","Finanzas","Legal","Marketing",
+]
+TIPOS_CONTRATO  = ["tiempo_completo","medio_tiempo","freelance","contrato","pasantía"]
+DESCRIPCIONES   = [
+    "Desarrollo y mantenimiento de {area} en un entorno ágil.",
+    "Liderazgo técnico del equipo de {area} con enfoque en calidad.",
+    "Implementación de soluciones escalables para {area}.",
+    "Colaboración con equipos multidisciplinarios en proyectos de {area}.",
+    "Investigación y aplicación de nuevas tecnologías en {area}.",
+    "Optimización de procesos y rendimiento en {area}.",
+    "Consultoría interna y externa para proyectos de {area}.",
+]
 
 # ─────────────────────────────────────────────────────────────────────────────
 # NODES
@@ -282,22 +300,38 @@ write_csv("educaciones.csv", [
     "educacion_id","institucion","carrera","grado","pais","acreditada",
 ], ed_rows)
 
+# ── ExperienciaLaboral ────────────────────────────────────────────────────────
+exp_rows = []
+for i in range(N_EXPERIENCIAS):
+    dept = random.choice(DEPARTAMENTOS)
+    desc = random.choice(DESCRIPCIONES).format(area=dept.lower())
+    smin = round(random.uniform(800, 8000), 2)
+    exp_rows.append([
+        f"exp{i}", random.choice(CARGOS),
+        smin, desc, rand_bool(),
+    ])
+write_csv("experiencias.csv", [
+    "exp_id","cargo","salario","descripcion","activo",
+], exp_rows)
+
 # ─────────────────────────────────────────────────────────────────────────────
 # RELATIONSHIPS
 # All 11 types. Connectivity guarantees:
 #   • Every Publicacion  ← exactly 1 PUBLICO           (from a Usuario)
 #   • Every Empleo       ← exactly 1 OFERTA            (from an Empresa)
 #   • Every Educacion    ← at least 1 ESTUDIO_EN       (from a Usuario)
-#   • Every Empresa      ← at least 1 ESTAR_EN         (from a Usuario)
+#   • Every Empresa      ← at least 1 EXPERIENCIA_EN   (from an ExperienciaLaboral)
+#   • Every ExperienciaLaboral ← at least 1 TRABAJO_EN (from a Usuario)
 #   • Every Usuario      → at least 1 CONECTADO_CON    (to another Usuario)
 # ─────────────────────────────────────────────────────────────────────────────
 print("\n── Relationships ────────────────────────────────────────────────────────")
 
-U = [f"u{i}"  for i in range(N_USUARIOS)]
-E = [f"e{i}"  for i in range(N_EMPRESAS)]
-P = [f"p{i}"  for i in range(N_PUBLICACIONES)]
-J = [f"j{i}"  for i in range(N_EMPLEOS)]
-ED= [f"ed{i}" for i in range(N_EDUCACIONES)]
+U   = [f"u{i}"   for i in range(N_USUARIOS)]
+E   = [f"e{i}"   for i in range(N_EMPRESAS)]
+P   = [f"p{i}"   for i in range(N_PUBLICACIONES)]
+J   = [f"j{i}"   for i in range(N_EMPLEOS)]
+ED  = [f"ed{i}"  for i in range(N_EDUCACIONES)]
+EXP = [f"exp{i}" for i in range(N_EXPERIENCIAS)]
 
 # ── 1. CONECTADO_CON  Usuario → Usuario ───────────────────────────────────────
 # Spanning chain guarantees every user has ≥1 connection, then add extras.
@@ -477,30 +511,76 @@ write_csv("rel_sigue_a.csv",
     ["usuario_id","empresa_id","fecha_seguimiento","notificaciones","motivo"],
     sig_rows)
 
-# ── 10. ESTAR_EN  Usuario → Empresa ───────────────────────────────────────────
-# Every empresa gets at least 1 employee first, then extras.
-ee_seen = set()
-ee_rows = []
+# ── 10. EXPERIENCIA_EN  ExperienciaLaboral → Empresa ──────────────────────────
+# Every empresa gets at least 1 ExperienciaLaboral first, then extras.
+xen_seen = set()
+xen_rows = []
 
-for eid in E:
-    u = random.choice(U)
-    while (u, eid) in ee_seen:
-        u = random.choice(U)
-    ee_seen.add((u, eid))
-    ee_rows.append([u, eid,
-                    random.choice(CARGOS), rand_date(2015, 2024), rand_bool()])
+shuffled_e = E[:]
+random.shuffle(shuffled_e)
+exp_pool = EXP[:]
+random.shuffle(exp_pool)
+
+# guarantee: each empresa has at least 1 experiencia
+for idx, eid in enumerate(shuffled_e):
+    xid = exp_pool[idx % len(exp_pool)]
+    while (xid, eid) in xen_seen:
+        xid = random.choice(EXP)
+    xen_seen.add((xid, eid))
+    xen_rows.append([xid, eid,
+                     random.choice(DEPARTAMENTOS),
+                     random.choice(TIPOS_CONTRATO),
+                     random.choice(MODALIDADES)])
 
 attempts = 0
-while len(ee_rows) < 2500 and attempts < 200_000:
-    u, eid = random.choice(U), random.choice(E)
-    if (u, eid) not in ee_seen:
-        ee_seen.add((u, eid))
-        ee_rows.append([u, eid,
-                        random.choice(CARGOS), rand_date(2015, 2024), rand_bool()])
+while len(xen_rows) < 2500 and attempts < 200_000:
+    xid, eid = random.choice(EXP), random.choice(E)
+    if (xid, eid) not in xen_seen:
+        xen_seen.add((xid, eid))
+        xen_rows.append([xid, eid,
+                         random.choice(DEPARTAMENTOS),
+                         random.choice(TIPOS_CONTRATO),
+                         random.choice(MODALIDADES)])
     attempts += 1
-write_csv("rel_estar_en.csv",
-    ["usuario_id","empresa_id","cargo","fecha_inicio","actual"],
-    ee_rows)
+write_csv("rel_experiencia_en.csv",
+    ["exp_id","empresa_id","departamento","tipo_contrato","modalidad"],
+    xen_rows)
+
+# ── 11. TRABAJO_EN  Usuario → ExperienciaLaboral ──────────────────────────────
+# Every ExperienciaLaboral gets at least 1 usuario first, then extras.
+te_seen = set()
+te_rows = []
+
+shuffled_exp = EXP[:]
+random.shuffle(shuffled_exp)
+
+for xid in shuffled_exp:
+    u = random.choice(U)
+    while (u, xid) in te_seen:
+        u = random.choice(U)
+    te_seen.add((u, xid))
+    yi = random.randint(2015, 2024)
+    activo = rand_bool()
+    te_rows.append([u, xid,
+                    date(yi, 1, 1).isoformat(),
+                    date(yi + random.randint(1, 4), 6, 30).isoformat() if activo == "false" else "",
+                    rand_bool()])
+
+attempts = 0
+while len(te_rows) < 3000 and attempts < 200_000:
+    u, xid = random.choice(U), random.choice(EXP)
+    if (u, xid) not in te_seen:
+        te_seen.add((u, xid))
+        yi = random.randint(2015, 2024)
+        activo = rand_bool()
+        te_rows.append([u, xid,
+                        date(yi, 1, 1).isoformat(),
+                        date(yi + random.randint(1, 4), 6, 30).isoformat() if activo == "false" else "",
+                        rand_bool()])
+    attempts += 1
+write_csv("rel_trabajo_en.csv",
+    ["usuario_id","exp_id","fecha_inicio","fecha_fin","verificado"],
+    te_rows)
 
 # ── 11. MENCIONA  Publicacion → Usuario ───────────────────────────────────────
 men_seen = set()
@@ -520,10 +600,11 @@ write_csv("rel_menciona.csv",
 # ─────────────────────────────────────────────────────────────────────────────
 # Summary
 # ─────────────────────────────────────────────────────────────────────────────
-total_nodes = N_USUARIOS + N_EMPRESAS + N_PUBLICACIONES + N_EMPLEOS + N_EDUCACIONES
+total_nodes = N_USUARIOS + N_EMPRESAS + N_PUBLICACIONES + N_EMPLEOS + N_EDUCACIONES + N_EXPERIENCIAS
 print(f"""
 ── Summary ──────────────────────────────────────────────────────────────────
   Nodes  : {total_nodes} distinct  ({N_ADMINS} usuarios also carry :Admin)
+           includes {N_EXPERIENCIAS} ExperienciaLaboral (intermediate nodes)
   Output : {OUT}/
 ─────────────────────────────────────────────────────────────────────────────
 """)
@@ -540,11 +621,12 @@ CYPHER = """
 
 ── Step 0: Constraints (run once before loading) ────────────────────────────
 
-CREATE CONSTRAINT usuario_id   IF NOT EXISTS FOR (n:Usuario)    REQUIRE n.usuario_id   IS UNIQUE;
-CREATE CONSTRAINT empresa_id   IF NOT EXISTS FOR (n:Empresa)    REQUIRE n.empresa_id   IS UNIQUE;
-CREATE CONSTRAINT pub_id       IF NOT EXISTS FOR (n:Publicacion) REQUIRE n.publicacion_id IS UNIQUE;
-CREATE CONSTRAINT empleo_id    IF NOT EXISTS FOR (n:Empleo)     REQUIRE n.empleo_id    IS UNIQUE;
-CREATE CONSTRAINT educacion_id IF NOT EXISTS FOR (n:Educacion)  REQUIRE n.educacion_id IS UNIQUE;
+CREATE CONSTRAINT usuario_id    IF NOT EXISTS FOR (n:Usuario)            REQUIRE n.usuario_id    IS UNIQUE;
+CREATE CONSTRAINT empresa_id    IF NOT EXISTS FOR (n:Empresa)            REQUIRE n.empresa_id    IS UNIQUE;
+CREATE CONSTRAINT pub_id        IF NOT EXISTS FOR (n:Publicacion)        REQUIRE n.publicacion_id IS UNIQUE;
+CREATE CONSTRAINT empleo_id     IF NOT EXISTS FOR (n:Empleo)             REQUIRE n.empleo_id     IS UNIQUE;
+CREATE CONSTRAINT educacion_id  IF NOT EXISTS FOR (n:Educacion)          REQUIRE n.educacion_id  IS UNIQUE;
+CREATE CONSTRAINT exp_id        IF NOT EXISTS FOR (n:ExperienciaLaboral) REQUIRE n.exp_id        IS UNIQUE;
 
 ── Step 1: Nodes ─────────────────────────────────────────────────────────────
 
@@ -626,6 +708,19 @@ CALL {
     grado:        row.grado,
     pais:         row.pais,
     acreditada:   row.acreditada = 'true'
+  })
+} IN TRANSACTIONS OF 500 ROWS;
+
+// ExperienciaLaboral
+LOAD CSV WITH HEADERS FROM 'file:///experiencias.csv' AS row
+CALL {
+  WITH row
+  CREATE (:ExperienciaLaboral {
+    exp_id:      row.exp_id,
+    cargo:       row.cargo,
+    salario:     toFloat(row.salario),
+    descripcion: row.descripcion,
+    activo:      row.activo = 'true'
   })
 } IN TRANSACTIONS OF 500 ROWS;
 
@@ -739,16 +834,28 @@ CALL {
       r.motivo            = row.motivo
 } IN TRANSACTIONS OF 500 ROWS;
 
-// ESTAR_EN
-LOAD CSV WITH HEADERS FROM 'file:///rel_estar_en.csv' AS row
+// EXPERIENCIA_EN
+LOAD CSV WITH HEADERS FROM 'file:///rel_experiencia_en.csv' AS row
 CALL {
   WITH row
-  MATCH (u:Usuario {usuario_id: row.usuario_id})
-  MATCH (e:Empresa {empresa_id: row.empresa_id})
-  MERGE (u)-[r:ESTAR_EN]->(e)
-  SET r.cargo        = row.cargo,
-      r.fecha_inicio = date(row.fecha_inicio),
-      r.actual       = row.actual = 'true'
+  MATCH (exp:ExperienciaLaboral {exp_id:    row.exp_id})
+  MATCH (e:Empresa              {empresa_id: row.empresa_id})
+  MERGE (exp)-[r:EXPERIENCIA_EN]->(e)
+  SET r.departamento  = row.departamento,
+      r.tipo_contrato = row.tipo_contrato,
+      r.modalidad     = row.modalidad
+} IN TRANSACTIONS OF 500 ROWS;
+
+// TRABAJO_EN
+LOAD CSV WITH HEADERS FROM 'file:///rel_trabajo_en.csv' AS row
+CALL {
+  WITH row
+  MATCH (u:Usuario              {usuario_id: row.usuario_id})
+  MATCH (exp:ExperienciaLaboral {exp_id:     row.exp_id})
+  MERGE (u)-[r:TRABAJO_EN]->(exp)
+  SET r.fecha_inicio = date(row.fecha_inicio),
+      r.fecha_fin    = CASE WHEN row.fecha_fin <> '' THEN date(row.fecha_fin) ELSE null END,
+      r.verificado   = row.verificado = 'true'
 } IN TRANSACTIONS OF 500 ROWS;
 
 // MENCIONA

@@ -268,6 +268,11 @@ CREATE (u)-[r:SIGUE_A {
 }]->(e)
 RETURN u.nombre, type(r), e.nombre`
       },
+      {
+        title: 'Crear relación manual',
+        subtitle: 'Formulario: elige nodos, tipo y propiedades dinámicamente',
+        special: 'crear-relacion-form',
+      },
     ],
   },
 
