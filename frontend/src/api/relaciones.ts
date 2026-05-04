@@ -38,4 +38,37 @@ export const relacionesApi = {
     type: string
     properties: Record<string, unknown>
   }) => api.post<ApiResult>('/relaciones/generica/', body),
+
+  patchRelacion: (body: {
+    from: { label: string; idField: string; idValue: string }
+    to: { label: string; idField: string; idValue: string }
+    type: string
+    set?: Record<string, unknown>
+    remove?: string[]
+  }) => api.patch<ApiResult>('/relaciones/patch/', body),
+
+  bulkPatchRelacion: (body: {
+    from_label: string
+    to_label: string
+    type: string
+    filter?: Record<string, unknown>
+    set?: Record<string, unknown>
+    remove?: string[]
+  }) => api.post<ApiResult>('/relaciones/bulk-patch/', body),
+
+  deleteRelacion: (params: {
+    from_label: string; from_id_field: string; from_id_value: string
+    to_label: string; to_id_field: string; to_id_value: string
+    type: string
+  }) => {
+    const qs = new URLSearchParams(params as Record<string, string>).toString()
+    return api.delete<ApiResult>(`/relaciones/delete/?${qs}`)
+  },
+
+  bulkDeleteRelacion: (body: {
+    from_label: string; to_label: string; type: string; filter?: Record<string, unknown>
+  }) => api.post<ApiResult>('/relaciones/bulk-delete/', body),
+
+  bulkDeleteNodos: (body: { label: string; filter?: Record<string, unknown> }) =>
+    api.post<ApiResult>('/relaciones/bulk-delete-nodos/', body),
 }

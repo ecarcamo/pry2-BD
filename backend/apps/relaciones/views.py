@@ -9,7 +9,14 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from apps.core.lib.cypher_build import safe_label, safe_prop, safe_rel_type
+from apps.core.lib.cypher_build import (
+    build_filter_clause,
+    build_remove_clause,
+    build_set_clause,
+    safe_label,
+    safe_prop,
+    safe_rel_type,
+)
 from apps.core.lib.db import run_write
 from apps.core.lib.validate import require_fields, require_min_props
 from apps.core.lib.views import envelope
@@ -246,3 +253,147 @@ def relacion_generica(request):
         'props': body['properties'],
     })
     return Response(envelope(result, cypher), status=status.HTTP_201_CREATED)
+
+
+@api_view(['PATCH'])
+def patch_relacion(request):
+    """PATCH /api/relaciones/patch/ — actualiza props de 1 relación.
+
+    Body: {from:{label,idField,idValue}, to:{label,idField,idValue}, type, set:{}, remove:[]}
+    """
+    body = request.data or {}
+    require_fields(body, ['from', 'to', 'type'])
+    fr = body['from']
+    to = body['to']
+    set_dict = body.get('set') or {}
+    remove_list = body.get('remove') or []
+
+    from_label = safe_label(fr['label'])
+    to_label = safe_label(to['label'])
+    rel_type = safe_rel_type(body['type'])
+    from_id_field = safe_prop(fr['idField'])
+    to_id_field = safe_prop(to['idField'])
+
+    set_cl = build_set_clause(set_dict, alias='r')
+    rem_cl = build_remove_clause(remove_list, alias='r')
+    if not set_cl and not rem_cl:
+        return Response({'detail': 'Nada que actualizar'}, status=status.HTTP_400_BAD_REQUEST)
+
+    cypher = (
+        f"MATCH (a:{from_label} {{{from_id_field}: $fromId}})"
+        f"-[r:{rel_type}]->"
+        f"(b:{to_label} {{{to_id_field}: $toId}}) "
+        f"{set_cl} {rem_cl} RETURN r"
+    )
+    result = run_write(cypher, {
+        'fromId': fr['idValue'],
+        'toId': to['idValue'],
+        'set': set_dict,
+    })
+    return Response(envelope(result, cypher))
+
+
+@api_view(['POST'])
+def patch_relacion_bulk(request):
+    """POST /api/relaciones/bulk-patch/ — actualiza props de múltiples relaciones.
+
+    Body: {from_label, to_label, type, filter:{prop:value,...}, set:{}, remove:[]}
+    """
+    body = request.data or {}
+    require_fields(body, ['from_label', 'to_label', 'type'])
+    set_dict = body.get('set') or {}
+    remove_list = body.get('remove') or []
+    filter_dict = body.get('filter') or {}
+
+    from_label = safe_label(body['from_label'])
+    to_label = safe_label(body['to_label'])
+    rel_type = safe_rel_type(body['type'])
+
+    set_cl = build_set_clause(set_dict, alias='r')
+    rem_cl = build_remove_clause(remove_list, alias='r')
+    if not set_cl and not rem_cl:
+        return Response({'detail': 'Nada que actualizar'}, status=status.HTTP_400_BAD_REQUEST)
+
+    where_cl = build_filter_clause(filter_dict, alias='r', param_name='filter') if filter_dict else ''
+
+    cypher = (
+        f"MATCH (a:{from_label})-[r:{rel_type}]->(b:{to_label}) "
+        f"{where_cl} {set_cl} {rem_cl} RETURN r"
+    )
+    result = run_write(cypher, {'set': set_dict, 'filter': filter_dict})
+    return Response(envelope(result, cypher))
+
+
+@api_view(['DELETE'])
+def delete_relacion(request):
+    """DELETE /api/relaciones/delete/ — elimina 1 relación.
+
+    Query params: from_label, from_id_field, from_id_value, to_label, to_id_field, to_id_value, type
+    """
+    qp = request.query_params
+    try:
+        from_label = safe_label(qp['from_label'])
+        to_label = safe_label(qp['to_label'])
+        rel_type = safe_rel_type(qp['type'])
+        from_id_field = safe_prop(qp['from_id_field'])
+        to_id_field = safe_prop(qp['to_id_field'])
+    except (KeyError, ValueError) as exc:
+        return Response({'detail': str(exc)}, status=status.HTTP_400_BAD_REQUEST)
+
+    cypher = (
+        f"MATCH (a:{from_label} {{{from_id_field}: $fromId}})"
+        f"-[r:{rel_type}]->"
+        f"(b:{to_label} {{{to_id_field}: $toId}}) "
+        "WITH r, id(r) AS rid DELETE r RETURN count(rid) AS deleted"
+    )
+    result = run_write(cypher, {
+        'fromId': qp.get('from_id_value', ''),
+        'toId': qp.get('to_id_value', ''),
+    })
+    return Response(envelope(result, cypher))
+
+
+@api_view(['POST'])
+def delete_relacion_bulk(request):
+    """POST /api/relaciones/bulk-delete/ — elimina múltiples relaciones.
+
+    Body: {from_label, to_label, type, filter:{prop:value,...}}
+    """
+    body = request.data or {}
+    require_fields(body, ['from_label', 'to_label', 'type'])
+    filter_dict = body.get('filter') or {}
+
+    from_label = safe_label(body['from_label'])
+    to_label = safe_label(body['to_label'])
+    rel_type = safe_rel_type(body['type'])
+
+    where_cl = build_filter_clause(filter_dict, alias='r', param_name='filter') if filter_dict else ''
+
+    cypher = (
+        f"MATCH (a:{from_label})-[r:{rel_type}]->(b:{to_label}) "
+        f"{where_cl} WITH r, id(r) AS rid DELETE r RETURN count(rid) AS deleted"
+    )
+    result = run_write(cypher, {'filter': filter_dict})
+    return Response(envelope(result, cypher))
+
+
+@api_view(['POST'])
+def delete_nodos_bulk(request):
+    """POST /api/relaciones/bulk-delete-nodos/ — elimina múltiples nodos.
+
+    Body: {label, filter:{prop:value,...}}
+    """
+    body = request.data or {}
+    require_fields(body, ['label'])
+    filter_dict = body.get('filter') or {}
+
+    label = safe_label(body['label'])
+
+    where_cl = build_filter_clause(filter_dict, alias='n', param_name='filter') if filter_dict else ''
+
+    cypher = (
+        f"MATCH (n:{label}) {where_cl} "
+        "WITH n, id(n) AS nid DETACH DELETE n RETURN count(nid) AS deleted"
+    )
+    result = run_write(cypher, {'filter': filter_dict})
+    return Response(envelope(result, cypher))

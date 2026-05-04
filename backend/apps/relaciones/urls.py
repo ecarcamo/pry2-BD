@@ -14,4 +14,9 @@ urlpatterns = [
     path('estudios/', views.estudios, name='rel-estudios'),
     path('menciones/', views.menciones, name='rel-menciones'),
     path('generica/', views.relacion_generica, name='rel-generica'),
+    path('patch/', views.patch_relacion, name='rel-patch'),
+    path('bulk-patch/', views.patch_relacion_bulk, name='rel-bulk-patch'),
+    path('delete/', views.delete_relacion, name='rel-delete'),
+    path('bulk-delete/', views.delete_relacion_bulk, name='rel-bulk-delete'),
+    path('bulk-delete-nodos/', views.delete_nodos_bulk, name='rel-bulk-delete-nodos'),
 ]

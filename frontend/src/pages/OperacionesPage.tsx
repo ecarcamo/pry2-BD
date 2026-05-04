@@ -4,6 +4,7 @@ import { usuariosApi } from '../api/usuarios'
 import { empresasApi } from '../api/empresas'
 import { empleosApi } from '../api/empleos'
 import { relacionesApi } from '../api/relaciones'
+import { consultasApi } from '../api/consultas'
 import { CheckIcon } from '../lib/icons'
 import type { ApiResult } from '../types/api'
 
@@ -144,17 +145,119 @@ export default function OperacionesPage() {
     } catch (e) { setOp('del1', null, String(e)) }
   }
 
-  // ── 8. Eliminar relaciones vía relación genérica + bulk ────────────────────
+  // ── 8. Eliminar múltiples nodos (bulk) ────────────────────────────────────
   const [bulkDelLabel, setBulkDelLabel] = useState('Empleo')
-  const [bulkDelField, setBulkDelField] = useState('activo')
-  const [bulkDelValue, setBulkDelValue] = useState('false')
-  async function eliminarBulk() {
+  const [bulkDelFilterField, setBulkDelFilterField] = useState('activo')
+  const [bulkDelFilterValue, setBulkDelFilterValue] = useState('false')
+  async function eliminarNodosBulk() {
     try {
-      const res = await empleosApi.bulkUpdate({ activo: false }, {}, ['activo'])
-      // Simulate bulk delete by removing a property to show bulk op
+      const filter = bulkDelFilterField
+        ? { [bulkDelFilterField]: bulkDelFilterValue === 'true' ? true : bulkDelFilterValue === 'false' ? false : bulkDelFilterValue }
+        : {}
+      const res = await relacionesApi.bulkDeleteNodos({ label: bulkDelLabel, filter })
       setOp('del2', res, null)
-      showToast('Bulk remove completado', 'ok')
+      showToast('Nodos eliminados en bulk', 'ok')
     } catch (e) { setOp('del2', null, String(e)) }
+  }
+
+  // ── 9. Actualizar propiedad de 1 relación ─────────────────────────────────
+  const [relPatchFromId, setRelPatchFromId] = useState('')
+  const [relPatchToId, setRelPatchToId] = useState('')
+  const [relPatchField, setRelPatchField] = useState('notificado')
+  const [relPatchValue, setRelPatchValue] = useState('true')
+  async function patchRelacion() {
+    try {
+      const res = await relacionesApi.patchRelacion({
+        from: { label: 'Usuario', idField: 'userId', idValue: relPatchFromId },
+        to: { label: 'Publicacion', idField: 'postId', idValue: relPatchToId },
+        type: 'DIO_LIKE',
+        set: { [relPatchField]: relPatchValue === 'true' ? true : relPatchValue === 'false' ? false : relPatchValue },
+      })
+      setOp('rpatch1', res, null)
+      showToast('Propiedad de relación actualizada', 'ok')
+    } catch (e) { setOp('rpatch1', null, String(e)) }
+  }
+
+  // ── 10. Eliminar propiedad de 1 relación ──────────────────────────────────
+  const [relRemoveFromId, setRelRemoveFromId] = useState('')
+  const [relRemoveToId, setRelRemoveToId] = useState('')
+  const [relRemoveProp, setRelRemoveProp] = useState('notificado')
+  async function removeRelProp() {
+    try {
+      const res = await relacionesApi.patchRelacion({
+        from: { label: 'Usuario', idField: 'userId', idValue: relRemoveFromId },
+        to: { label: 'Publicacion', idField: 'postId', idValue: relRemoveToId },
+        type: 'DIO_LIKE',
+        remove: [relRemoveProp],
+      })
+      setOp('rrem1', res, null)
+      showToast('Propiedad de relación eliminada', 'ok')
+    } catch (e) { setOp('rrem1', null, String(e)) }
+  }
+
+  // ── 11. Actualizar props de múltiples relaciones (bulk) ───────────────────
+  const [relBulkPatchField, setRelBulkPatchField] = useState('notificado')
+  const [relBulkPatchValue, setRelBulkPatchValue] = useState('true')
+  async function bulkPatchRelaciones() {
+    try {
+      const res = await relacionesApi.bulkPatchRelacion({
+        from_label: 'Usuario',
+        to_label: 'Publicacion',
+        type: 'DIO_LIKE',
+        set: { [relBulkPatchField]: relBulkPatchValue === 'true' ? true : relBulkPatchValue === 'false' ? false : relBulkPatchValue },
+      })
+      setOp('rbulk', res, null)
+      showToast('Bulk patch de relaciones completado', 'ok')
+    } catch (e) { setOp('rbulk', null, String(e)) }
+  }
+
+  // ── 12. Eliminar 1 relación ────────────────────────────────────────────────
+  const [relDelFromId, setRelDelFromId] = useState('')
+  const [relDelToId, setRelDelToId] = useState('')
+  async function eliminarRelacion() {
+    try {
+      const res = await relacionesApi.deleteRelacion({
+        from_label: 'Usuario', from_id_field: 'userId', from_id_value: relDelFromId,
+        to_label: 'Publicacion', to_id_field: 'postId', to_id_value: relDelToId,
+        type: 'DIO_LIKE',
+      })
+      setOp('rdel1', res, null)
+      showToast('Relación DIO_LIKE eliminada', 'ok')
+    } catch (e) { setOp('rdel1', null, String(e)) }
+  }
+
+  // ── 13. Eliminar múltiples relaciones (bulk) ───────────────────────────────
+  const [relBulkDelType, setRelBulkDelType] = useState('COMENTO')
+  const [relBulkDelFilterField, setRelBulkDelFilterField] = useState('editado')
+  const [relBulkDelFilterValue, setRelBulkDelFilterValue] = useState('false')
+  async function eliminarRelacionesBulk() {
+    try {
+      const filter = relBulkDelFilterField
+        ? { [relBulkDelFilterField]: relBulkDelFilterValue === 'true' ? true : relBulkDelFilterValue === 'false' ? false : relBulkDelFilterValue }
+        : {}
+      const res = await relacionesApi.bulkDeleteRelacion({
+        from_label: 'Usuario',
+        to_label: 'Publicacion',
+        type: relBulkDelType,
+        filter,
+      })
+      setOp('rdel2', res, null)
+      showToast('Relaciones eliminadas en bulk', 'ok')
+    } catch (e) { setOp('rdel2', null, String(e)) }
+  }
+
+  // ── 14. Eliminar props de relación bulk (REMOVE) ──────────────────────────
+  async function bulkRemoveRelProp() {
+    try {
+      const res = await relacionesApi.bulkPatchRelacion({
+        from_label: 'Usuario',
+        to_label: 'Empresa',
+        type: 'SIGUE_A',
+        remove: ['motivo'],
+      })
+      setOp('rremb', res, null)
+      showToast('Prop "motivo" eliminada de todas las relaciones SIGUE_A', 'ok')
+    } catch (e) { setOp('rremb', null, String(e)) }
   }
 
   return (
@@ -263,14 +366,119 @@ export default function OperacionesPage() {
           <ResultBox result={result['del1']?.res ?? null} error={result['del1']?.err ?? null} />
         </OpCard>
 
-        <OpCard title="⑧ Eliminar propiedades — bulk REMOVE">
+        <OpCard title="⑧ Eliminar múltiples nodos — bulk DETACH DELETE">
           <p className="text-mute" style={{ fontSize: 12, marginBottom: 8 }}>
-            Elimina la propiedad 'activo' de todos los Empleos donde activo = false
+            Elimina todos los nodos de un label que cumplan un filtro
           </p>
-          <button className="btn-danger" onClick={eliminarBulk}>
-            MATCH (e:Empleo WHERE activo=false) REMOVE e.activo
+          <div className="form-grid">
+            <select className="input" value={bulkDelLabel} onChange={e => setBulkDelLabel(e.target.value)}>
+              {['Empleo', 'Empresa', 'Usuario', 'Publicacion'].map(l => <option key={l} value={l}>{l}</option>)}
+            </select>
+            <input className="input" placeholder="Campo filtro (ej: activo)" value={bulkDelFilterField}
+              onChange={e => setBulkDelFilterField(e.target.value)} />
+            <input className="input" placeholder="Valor (ej: false)" value={bulkDelFilterValue}
+              onChange={e => setBulkDelFilterValue(e.target.value)} />
+          </div>
+          <button className="btn-danger" onClick={eliminarNodosBulk}>
+            MATCH (n:{bulkDelLabel} WHERE n.{bulkDelFilterField || '...'}) DETACH DELETE n
           </button>
           <ResultBox result={result['del2']?.res ?? null} error={result['del2']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="⑨ Actualizar propiedad de 1 relación — DIO_LIKE">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 8 }}>
+            SET sobre relación DIO_LIKE entre Usuario y Publicacion
+          </p>
+          <div className="form-grid">
+            <input className="input" placeholder="userId" value={relPatchFromId}
+              onChange={e => setRelPatchFromId(e.target.value)} />
+            <input className="input" placeholder="postId" value={relPatchToId}
+              onChange={e => setRelPatchToId(e.target.value)} />
+            <input className="input" placeholder="Campo (ej: notificado)" value={relPatchField}
+              onChange={e => setRelPatchField(e.target.value)} />
+            <input className="input" placeholder="Valor (ej: true)" value={relPatchValue}
+              onChange={e => setRelPatchValue(e.target.value)} />
+          </div>
+          <button className="btn-primary" onClick={patchRelacion}>SET r.{relPatchField || 'campo'} = valor</button>
+          <ResultBox result={result['rpatch1']?.res ?? null} error={result['rpatch1']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="⑩ Eliminar propiedad de 1 relación — DIO_LIKE">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 8 }}>
+            REMOVE sobre relación DIO_LIKE entre Usuario y Publicacion
+          </p>
+          <div className="form-grid">
+            <input className="input" placeholder="userId" value={relRemoveFromId}
+              onChange={e => setRelRemoveFromId(e.target.value)} />
+            <input className="input" placeholder="postId" value={relRemoveToId}
+              onChange={e => setRelRemoveToId(e.target.value)} />
+            <input className="input" placeholder="Propiedad a eliminar (ej: notificado)" value={relRemoveProp}
+              onChange={e => setRelRemoveProp(e.target.value)} />
+          </div>
+          <button className="btn-danger" onClick={removeRelProp}>REMOVE r.{relRemoveProp || 'prop'}</button>
+          <ResultBox result={result['rrem1']?.res ?? null} error={result['rrem1']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="⑪ Actualizar props de múltiples relaciones — DIO_LIKE bulk">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 8 }}>
+            SET en todas las relaciones DIO_LIKE (Usuario → Publicacion)
+          </p>
+          <div className="form-grid">
+            <input className="input" placeholder="Campo (ej: notificado)" value={relBulkPatchField}
+              onChange={e => setRelBulkPatchField(e.target.value)} />
+            <input className="input" placeholder="Valor (ej: true)" value={relBulkPatchValue}
+              onChange={e => setRelBulkPatchValue(e.target.value)} />
+          </div>
+          <button className="btn-primary" onClick={bulkPatchRelaciones}>
+            MATCH ()-[r:DIO_LIKE]-&gt;() SET r.{relBulkPatchField || 'campo'}
+          </button>
+          <ResultBox result={result['rbulk']?.res ?? null} error={result['rbulk']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="⑫ Eliminar 1 relación — DIO_LIKE">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 8 }}>
+            DELETE relación DIO_LIKE entre un Usuario y una Publicacion específica
+          </p>
+          <div className="form-grid">
+            <input className="input" placeholder="userId" value={relDelFromId}
+              onChange={e => setRelDelFromId(e.target.value)} />
+            <input className="input" placeholder="postId" value={relDelToId}
+              onChange={e => setRelDelToId(e.target.value)} />
+          </div>
+          <button className="btn-danger" onClick={eliminarRelacion}>DELETE [:DIO_LIKE]</button>
+          <ResultBox result={result['rdel1']?.res ?? null} error={result['rdel1']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="⑬ Eliminar múltiples relaciones — bulk DELETE">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 8 }}>
+            DELETE todas las relaciones de un tipo con filtro opcional en sus props
+          </p>
+          <div className="form-grid">
+            <select className="input" value={relBulkDelType} onChange={e => setRelBulkDelType(e.target.value)}>
+              {['COMENTO', 'DIO_LIKE', 'COMPARTIO', 'SIGUE_A'].map(t => <option key={t} value={t}>{t}</option>)}
+            </select>
+            <input className="input" placeholder="Campo filtro (ej: editado)" value={relBulkDelFilterField}
+              onChange={e => setRelBulkDelFilterField(e.target.value)} />
+            <input className="input" placeholder="Valor (ej: false)" value={relBulkDelFilterValue}
+              onChange={e => setRelBulkDelFilterValue(e.target.value)} />
+          </div>
+          <p className="text-mute" style={{ fontSize: 11 }}>
+            Nota: COMENTO y DIO_LIKE/COMPARTIO van de Usuario→Publicacion; SIGUE_A va de Usuario→Empresa
+          </p>
+          <button className="btn-danger" onClick={eliminarRelacionesBulk}>
+            MATCH ()-[r:{relBulkDelType}]-&gt;() {relBulkDelFilterField ? `WHERE r.${relBulkDelFilterField}` : ''} DELETE r
+          </button>
+          <ResultBox result={result['rdel2']?.res ?? null} error={result['rdel2']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="⑭ Eliminar props de múltiples relaciones — SIGUE_A bulk REMOVE">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 8 }}>
+            REMOVE prop "motivo" de todas las relaciones SIGUE_A (Usuario → Empresa)
+          </p>
+          <button className="btn-danger" onClick={bulkRemoveRelProp}>
+            MATCH ()-[r:SIGUE_A]-&gt;() REMOVE r.motivo
+          </button>
+          <ResultBox result={result['rremb']?.res ?? null} error={result['rremb']?.err ?? null} />
         </OpCard>
       </div>
     </div>
