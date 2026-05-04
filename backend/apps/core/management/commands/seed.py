@@ -1,173 +1,362 @@
-"""`python manage.py seed` — borra todo y carga el seed (espejo de frontend/seed.js)."""
+"""`python manage.py seed` — borra todo y carga datos desde los CSVs de dataGenerator.
+
+Busca los CSVs en ../../dataGenerator/neo4j_csv/ relativo al BASE_DIR del proyecto.
+Si no existen, los genera ejecutando generate_neo4j_csv.py.
+Usa UNWIND para cargar en batches compatibles con Neo4j Aura.
+"""
+import csv
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+from django.conf import settings
 from django.core.management.base import BaseCommand
 
 from apps.core.lib.db import close_driver, run_write
 
-NODES = [
-    {'id': 'n1', 'labels': ['Usuario'], 'props': {
-        'userId': 'n1', 'nombre': 'Nicolás Concuá', 'email': 'nconcua@uvg.edu.gt',
-        'titular': 'Backend Developer en Datatec',
-        'habilidades': ['Python', 'Neo4j', 'Cypher', 'Docker'],
-        'abierto_a_trabajo': True, 'fecha_registro': '2023-01-15', 'conexiones_count': 142,
-    }},
-    {'id': 'n2', 'labels': ['Usuario', 'Admin'], 'props': {
-        'userId': 'n2', 'nombre': 'Esteban Cárcamo', 'email': 'ecarcamo@uvg.edu.gt',
-        'titular': 'Database Architect & Platform Admin',
-        'habilidades': ['PostgreSQL', 'Cypher', 'Kubernetes'],
-        'abierto_a_trabajo': False, 'fecha_registro': '2022-08-03', 'conexiones_count': 287,
-        'nivel_acceso': 'superadmin', 'puede_moderar': True,
-        'fecha_asignacion': '2023-02-10', 'asignado_por': 'Mario Barrientos', 'activo': True,
-    }},
-    {'id': 'n3', 'labels': ['Usuario'], 'props': {
-        'userId': 'n3', 'nombre': 'Ernesto Ascencio', 'email': 'eascencio@uvg.edu.gt',
-        'titular': 'Data Engineer en Cloudly',
-        'habilidades': ['Spark', 'Cypher', 'SQL', 'Python'],
-        'abierto_a_trabajo': True, 'fecha_registro': '2023-03-20', 'conexiones_count': 96,
-    }},
-    {'id': 'n4', 'labels': ['Usuario'], 'props': {
-        'userId': 'n4', 'nombre': 'María López', 'email': 'mlopez@correo.com',
-        'titular': 'Frontend Developer',
-        'habilidades': ['React', 'TypeScript', 'CSS'],
-        'abierto_a_trabajo': False, 'fecha_registro': '2024-05-11', 'conexiones_count': 53,
-    }},
-    {'id': 'n5', 'labels': ['Usuario'], 'props': {
-        'userId': 'n5', 'nombre': 'Diego Ramírez', 'email': 'dramirez@correo.com',
-        'titular': 'Recruiter Senior',
-        'habilidades': ['Reclutamiento', 'LinkedIn Recruiter'],
-        'abierto_a_trabajo': False, 'fecha_registro': '2022-11-30', 'conexiones_count': 412,
-    }},
-    {'id': 'n6', 'labels': ['Usuario'], 'props': {
-        'userId': 'n6', 'nombre': 'Ana Pérez', 'email': 'aperez@correo.com',
-        'titular': 'UX Designer',
-        'habilidades': ['Figma', 'Research', 'Prototyping'],
-        'abierto_a_trabajo': True, 'fecha_registro': '2024-01-22', 'conexiones_count': 78,
-    }},
-    {'id': 'n7', 'labels': ['Empresa'], 'props': {
-        'empresaId': 'n7', 'nombre': 'Datatec', 'industria': 'Tecnología', 'pais': 'Guatemala',
-        'verificada': True, 'empleados_count': 320, 'fecha_fundacion': '2010-04-12',
-    }},
-    {'id': 'n8', 'labels': ['Empresa'], 'props': {
-        'empresaId': 'n8', 'nombre': 'Cloudly', 'industria': 'Cloud Services', 'pais': 'México',
-        'verificada': True, 'empleados_count': 1200, 'fecha_fundacion': '2015-09-01',
-    }},
-    {'id': 'n9', 'labels': ['Empresa'], 'props': {
-        'empresaId': 'n9', 'nombre': 'PixelForge', 'industria': 'Diseño', 'pais': 'Guatemala',
-        'verificada': False, 'empleados_count': 45, 'fecha_fundacion': '2019-06-18',
-    }},
-    {'id': 'n10', 'labels': ['Publicacion'], 'props': {
-        'postId': 'n10',
-        'contenido': 'Acabamos de migrar nuestro grafo de relaciones a Neo4j. Ganamos 4x en queries de recomendación.',
-        'fecha_publicacion': '2026-04-10', 'likes_count': 38,
-        'tags': ['neo4j', 'grafos', 'backend'], 'es_oferta': False,
-    }},
-    {'id': 'n11', 'labels': ['Publicacion'], 'props': {
-        'postId': 'n11',
-        'contenido': 'Buscamos Data Engineer con experiencia en Spark + Cypher. Modalidad híbrida en GT.',
-        'fecha_publicacion': '2026-04-15', 'likes_count': 12,
-        'tags': ['empleo', 'data'], 'es_oferta': True,
-    }},
-    {'id': 'n12', 'labels': ['Publicacion'], 'props': {
-        'postId': 'n12',
-        'contenido': 'Tres aprendizajes después de 6 meses haciendo research en producto.',
-        'fecha_publicacion': '2026-04-18', 'likes_count': 64,
-        'tags': ['ux', 'research'], 'es_oferta': False,
-    }},
-    {'id': 'n13', 'labels': ['Empleo'], 'props': {
-        'empleoId': 'n13', 'titulo': 'Backend Developer Sr.',
-        'salario_min': 1800.00, 'salario_max': 2600.00,
-        'modalidad': 'híbrido', 'activo': True, 'fecha_publicacion': '2026-03-28',
-    }},
-    {'id': 'n14', 'labels': ['Empleo'], 'props': {
-        'empleoId': 'n14', 'titulo': 'Data Engineer',
-        'salario_min': 2200.00, 'salario_max': 3200.00,
-        'modalidad': 'remoto', 'activo': True, 'fecha_publicacion': '2026-04-02',
-    }},
-    {'id': 'n15', 'labels': ['Empleo'], 'props': {
-        'empleoId': 'n15', 'titulo': 'UX Designer Jr.',
-        'salario_min': 900.00, 'salario_max': 1400.00,
-        'modalidad': 'presencial', 'activo': False, 'fecha_publicacion': '2026-02-15',
-    }},
-    {'id': 'n16', 'labels': ['Educacion'], 'props': {
-        'educacionId': 'n16',
-        'institucion': 'Universidad del Valle de Guatemala',
-        'carrera': 'Ingeniería en Ciencias de la Computación',
-        'grado': 'Licenciatura', 'pais': 'Guatemala', 'acreditada': True,
-    }},
-    {'id': 'n17', 'labels': ['Educacion'], 'props': {
-        'educacionId': 'n17', 'institucion': 'Tec de Monterrey',
-        'carrera': 'Maestría en Ciencia de Datos',
-        'grado': 'Maestría', 'pais': 'México', 'acreditada': True,
-    }},
-]
+CSV_DIR = Path(settings.BASE_DIR).parent / 'dataGenerator' / 'neo4j_csv'
+GENERATOR = Path(settings.BASE_DIR).parent / 'dataGenerator' / 'generate_neo4j_csv.py'
 
-RELS = [
-    {'from': 'n1', 'to': 'n2', 'type': 'CONECTADO_CON', 'props': {'fecha_conexion': '2023-02-01', 'nivel': '1er', 'aceptada': True}},
-    {'from': 'n1', 'to': 'n3', 'type': 'CONECTADO_CON', 'props': {'fecha_conexion': '2023-04-12', 'nivel': '1er', 'aceptada': True}},
-    {'from': 'n2', 'to': 'n3', 'type': 'CONECTADO_CON', 'props': {'fecha_conexion': '2023-05-18', 'nivel': '1er', 'aceptada': True}},
-    {'from': 'n4', 'to': 'n6', 'type': 'CONECTADO_CON', 'props': {'fecha_conexion': '2024-06-02', 'nivel': '1er', 'aceptada': True}},
-    {'from': 'n5', 'to': 'n1', 'type': 'CONECTADO_CON', 'props': {'fecha_conexion': '2024-08-22', 'nivel': '2do', 'aceptada': False}},
-    {'from': 'n1', 'to': 'n10', 'type': 'PUBLICO', 'props': {'fecha': '2026-04-10', 'anonimo': False, 'desde_empresa': False}},
-    {'from': 'n5', 'to': 'n11', 'type': 'PUBLICO', 'props': {'fecha': '2026-04-15', 'anonimo': False, 'desde_empresa': True}},
-    {'from': 'n6', 'to': 'n12', 'type': 'PUBLICO', 'props': {'fecha': '2026-04-18', 'anonimo': False, 'desde_empresa': False}},
-    {'from': 'n2', 'to': 'n10', 'type': 'DIO_LIKE', 'props': {'fecha': '2026-04-11', 'tipo_reaccion': 'celebro', 'notificado': True}},
-    {'from': 'n3', 'to': 'n10', 'type': 'DIO_LIKE', 'props': {'fecha': '2026-04-11', 'tipo_reaccion': 'me_gusta', 'notificado': True}},
-    {'from': 'n4', 'to': 'n12', 'type': 'DIO_LIKE', 'props': {'fecha': '2026-04-19', 'tipo_reaccion': 'apoyo', 'notificado': False}},
-    {'from': 'n3', 'to': 'n10', 'type': 'COMENTO', 'props': {'contenido': '¡Qué buen caso de uso! ¿Probaron APOC?', 'fecha': '2026-04-12', 'editado': False}},
-    {'from': 'n6', 'to': 'n12', 'type': 'COMENTO', 'props': {'contenido': 'Gran resumen, gracias por compartir.', 'fecha': '2026-04-19', 'editado': True}},
-    {'from': 'n2', 'to': 'n10', 'type': 'COMPARTIO', 'props': {'fecha': '2026-04-12', 'con_comentario': True, 'visibilidad': 'pública'}},
-    {'from': 'n1', 'to': 'n16', 'type': 'ESTUDIO_EN', 'props': {'fecha_inicio': '2020-01-15', 'fecha_graduacion': '2024-12-10', 'graduado': True}},
-    {'from': 'n2', 'to': 'n16', 'type': 'ESTUDIO_EN', 'props': {'fecha_inicio': '2018-01-15', 'fecha_graduacion': '2022-12-10', 'graduado': True}},
-    {'from': 'n3', 'to': 'n17', 'type': 'ESTUDIO_EN', 'props': {'fecha_inicio': '2024-08-01', 'fecha_graduacion': '2026-06-30', 'graduado': False}},
-    {'from': 'n1', 'to': 'n13', 'type': 'POSTULO_A', 'props': {'fecha_postulacion': '2026-04-01', 'estado': 'pendiente', 'carta_presentacion': True}},
-    {'from': 'n3', 'to': 'n14', 'type': 'POSTULO_A', 'props': {'fecha_postulacion': '2026-04-05', 'estado': 'revisado', 'carta_presentacion': False}},
-    {'from': 'n6', 'to': 'n15', 'type': 'POSTULO_A', 'props': {'fecha_postulacion': '2026-02-20', 'estado': 'rechazado', 'carta_presentacion': True}},
-    {'from': 'n7', 'to': 'n13', 'type': 'OFERTA', 'props': {'fecha_publicacion': '2026-03-28', 'urgente': True, 'remunerado': True}},
-    {'from': 'n8', 'to': 'n14', 'type': 'OFERTA', 'props': {'fecha_publicacion': '2026-04-02', 'urgente': False, 'remunerado': True}},
-    {'from': 'n9', 'to': 'n15', 'type': 'OFERTA', 'props': {'fecha_publicacion': '2026-02-15', 'urgente': False, 'remunerado': False}},
-    {'from': 'n1', 'to': 'n8', 'type': 'SIGUE_A', 'props': {'fecha_seguimiento': '2024-09-10', 'notificaciones': True, 'motivo': 'posible empleador'}},
-    {'from': 'n3', 'to': 'n8', 'type': 'SIGUE_A', 'props': {'fecha_seguimiento': '2024-10-01', 'notificaciones': True, 'motivo': 'trabajo actual'}},
-    {'from': 'n6', 'to': 'n9', 'type': 'SIGUE_A', 'props': {'fecha_seguimiento': '2025-01-15', 'notificaciones': False, 'motivo': 'interés general'}},
-    {'from': 'n4', 'to': 'n7', 'type': 'SIGUE_A', 'props': {'fecha_seguimiento': '2024-12-03', 'notificaciones': True, 'motivo': 'networking'}},
-    {'from': 'n1', 'to': 'n7', 'type': 'ESTAR_EN', 'props': {'cargo': 'Backend Developer', 'fecha_inicio': '2024-01-15', 'actual': True}},
-    {'from': 'n3', 'to': 'n8', 'type': 'ESTAR_EN', 'props': {'cargo': 'Data Engineer', 'fecha_inicio': '2024-08-01', 'actual': True}},
-    {'from': 'n2', 'to': 'n7', 'type': 'ESTAR_EN', 'props': {'cargo': 'Database Architect', 'fecha_inicio': '2022-09-01', 'actual': False}},
-    {'from': 'n10', 'to': 'n2', 'type': 'MENCIONA', 'props': {'fecha': '2026-04-10', 'tipo': 'colaborador', 'confirmada': True}},
-    {'from': 'n11', 'to': 'n3', 'type': 'MENCIONA', 'props': {'fecha': '2026-04-15', 'tipo': 'etiqueta', 'confirmada': False}},
-]
+BATCH = 500
 
-ID_FIELD = {
-    'Usuario': 'userId', 'Empresa': 'empresaId', 'Publicacion': 'postId',
-    'Empleo': 'empleoId', 'Educacion': 'educacionId',
-}
+
+def _read_csv(name):
+    path = CSV_DIR / name
+    if not path.exists():
+        return []
+    with open(path, newline='', encoding='utf-8') as f:
+        return list(csv.DictReader(f))
+
+
+def _unwind_write(cypher_tpl, rows, batch=BATCH, stdout=None):
+    total = 0
+    for i in range(0, len(rows), batch):
+        chunk = rows[i:i + batch]
+        run_write(cypher_tpl, {'rows': chunk})
+        total += len(chunk)
+    if stdout:
+        stdout.write(f'  {total} filas procesadas')
+    return total
 
 
 class Command(BaseCommand):
-    help = 'Borra el grafo y carga el seed (mismos datos que frontend/seed.js).'
+    help = 'Borra el grafo y carga los datos desde dataGenerator/neo4j_csv/'
 
     def handle(self, *_args, **_opts):
         try:
+            if not CSV_DIR.exists() or not any(CSV_DIR.iterdir()):
+                self.stdout.write('CSVs no encontrados — generando...')
+                result = subprocess.run(
+                    [sys.executable, str(GENERATOR)],
+                    capture_output=True, text=True,
+                    cwd=str(GENERATOR.parent),
+                )
+                if result.returncode != 0:
+                    self.stderr.write(result.stderr)
+                    raise RuntimeError('Falló generate_neo4j_csv.py')
+                self.stdout.write(result.stdout)
+
             self.stdout.write('Borrando datos existentes...')
             run_write('MATCH (n) DETACH DELETE n')
 
-            self.stdout.write(f'Creando {len(NODES)} nodos...')
-            for node in NODES:
-                labels = ':'.join(node['labels'])
-                run_write(f'CREATE (n:{labels} $props)', {'props': node['props']})
+            # ── Nodos ──────────────────────────────────────────────────────
+            self.stdout.write('Cargando Usuarios...')
+            rows = _read_csv('usuarios.csv')
+            _unwind_write(
+                """
+UNWIND $rows AS row
+CALL {
+  WITH row
+  CREATE (u:Usuario {
+    usuario_id:        row.usuario_id,
+    nombre:            row.nombre,
+    email:             row.email,
+    titular:           row.titular,
+    habilidades:       split(row.habilidades, ';'),
+    abierto_a_trabajo: row.abierto_a_trabajo = 'true',
+    fecha_registro:    date(row.fecha_registro),
+    conexiones_count:  toInteger(row.conexiones_count)
+  })
+  WITH u, row WHERE row.is_admin = 'true'
+  SET u:Admin,
+      u.nivel_acceso     = row.nivel_acceso,
+      u.puede_moderar    = row.puede_moderar = 'true',
+      u.fecha_asignacion = date(row.fecha_asignacion),
+      u.asignado_por     = row.asignado_por,
+      u.activo           = row.admin_activo = 'true'
+} IN TRANSACTIONS OF 500 ROWS
+""",
+                rows, stdout=self.stdout,
+            )
 
-            label_map = {n['id']: n['labels'][0] for n in NODES}
-            self.stdout.write(f'Creando {len(RELS)} relaciones...')
-            for rel in RELS:
-                from_label = label_map[rel['from']]
-                to_label = label_map[rel['to']]
-                from_field = ID_FIELD[from_label]
-                to_field = ID_FIELD[to_label]
-                cypher = (
-                    f"MATCH (a:{from_label} {{{from_field}: $fromId}}), "
-                    f"(b:{to_label} {{{to_field}: $toId}}) "
-                    f"CREATE (a)-[r:{rel['type']} $props]->(b)"
-                )
-                run_write(cypher, {'fromId': rel['from'], 'toId': rel['to'], 'props': rel['props']})
+            self.stdout.write('Cargando Empresas...')
+            rows = _read_csv('empresas.csv')
+            _unwind_write(
+                """
+UNWIND $rows AS row
+CREATE (:Empresa {
+  empresa_id:      row.empresa_id,
+  nombre:          row.nombre,
+  industria:       row.industria,
+  pais:            row.pais,
+  verificada:      row.verificada = 'true',
+  empleados_count: toInteger(row.empleados_count),
+  fecha_fundacion: date(row.fecha_fundacion)
+})
+""",
+                rows, stdout=self.stdout,
+            )
 
-            self.stdout.write(self.style.SUCCESS('Seed completado.'))
+            self.stdout.write('Cargando Publicaciones...')
+            rows = _read_csv('publicaciones.csv')
+            _unwind_write(
+                """
+UNWIND $rows AS row
+CREATE (:Publicacion {
+  publicacion_id:    row.publicacion_id,
+  contenido:         row.contenido,
+  fecha_publicacion: date(row.fecha_publicacion),
+  likes_count:       toInteger(row.likes_count),
+  tags:              split(row.tags, ';'),
+  es_oferta:         row.es_oferta = 'true'
+})
+""",
+                rows, stdout=self.stdout,
+            )
+
+            self.stdout.write('Cargando Empleos...')
+            rows = _read_csv('empleos.csv')
+            _unwind_write(
+                """
+UNWIND $rows AS row
+CREATE (:Empleo {
+  empleo_id:         row.empleo_id,
+  titulo:            row.titulo,
+  salario_min:       toFloat(row.salario_min),
+  salario_max:       toFloat(row.salario_max),
+  modalidad:         row.modalidad,
+  activo:            row.activo = 'true',
+  fecha_publicacion: date(row.fecha_publicacion)
+})
+""",
+                rows, stdout=self.stdout,
+            )
+
+            self.stdout.write('Cargando Educaciones...')
+            rows = _read_csv('educaciones.csv')
+            _unwind_write(
+                """
+UNWIND $rows AS row
+CREATE (:Educacion {
+  educacion_id: row.educacion_id,
+  institucion:  row.institucion,
+  carrera:      row.carrera,
+  grado:        row.grado,
+  pais:         row.pais,
+  acreditada:   row.acreditada = 'true'
+})
+""",
+                rows, stdout=self.stdout,
+            )
+
+            self.stdout.write('Cargando ExperienciasLaborales...')
+            rows = _read_csv('experiencias.csv')
+            _unwind_write(
+                """
+UNWIND $rows AS row
+CREATE (:ExperienciaLaboral {
+  exp_id:      row.exp_id,
+  cargo:       row.cargo,
+  salario:     toFloat(row.salario),
+  descripcion: row.descripcion,
+  activo:      row.activo = 'true'
+})
+""",
+                rows, stdout=self.stdout,
+            )
+
+            # ── Relaciones ─────────────────────────────────────────────────
+            self.stdout.write('Cargando CONECTADO_CON...')
+            rows = _read_csv('rel_conectado_con.csv')
+            _unwind_write(
+                """
+UNWIND $rows AS row
+MATCH (a:Usuario {usuario_id: row.from_usuario_id})
+MATCH (b:Usuario {usuario_id: row.to_usuario_id})
+MERGE (a)-[r:CONECTADO_CON]->(b)
+SET r.fecha_conexion = date(row.fecha_conexion),
+    r.nivel          = row.nivel,
+    r.aceptada       = row.aceptada = 'true'
+""",
+                rows, stdout=self.stdout,
+            )
+
+            self.stdout.write('Cargando PUBLICO...')
+            rows = _read_csv('rel_publico.csv')
+            _unwind_write(
+                """
+UNWIND $rows AS row
+MATCH (u:Usuario     {usuario_id:     row.usuario_id})
+MATCH (p:Publicacion {publicacion_id: row.publicacion_id})
+MERGE (u)-[r:PUBLICO]->(p)
+SET r.fecha         = date(row.fecha),
+    r.anonimo       = row.anonimo       = 'true',
+    r.desde_empresa = row.desde_empresa = 'true'
+""",
+                rows, stdout=self.stdout,
+            )
+
+            self.stdout.write('Cargando DIO_LIKE...')
+            rows = _read_csv('rel_dio_like.csv')
+            _unwind_write(
+                """
+UNWIND $rows AS row
+MATCH (u:Usuario     {usuario_id:     row.usuario_id})
+MATCH (p:Publicacion {publicacion_id: row.publicacion_id})
+MERGE (u)-[r:DIO_LIKE]->(p)
+SET r.fecha         = date(row.fecha),
+    r.tipo_reaccion = row.tipo_reaccion,
+    r.notificado    = row.notificado = 'true'
+""",
+                rows, stdout=self.stdout,
+            )
+
+            self.stdout.write('Cargando COMENTO...')
+            rows = _read_csv('rel_comento.csv')
+            _unwind_write(
+                """
+UNWIND $rows AS row
+MATCH (u:Usuario     {usuario_id:     row.usuario_id})
+MATCH (p:Publicacion {publicacion_id: row.publicacion_id})
+MERGE (u)-[r:COMENTO]->(p)
+SET r.contenido = row.contenido,
+    r.fecha     = date(row.fecha),
+    r.editado   = row.editado = 'true'
+""",
+                rows, stdout=self.stdout,
+            )
+
+            self.stdout.write('Cargando COMPARTIO...')
+            rows = _read_csv('rel_compartio.csv')
+            _unwind_write(
+                """
+UNWIND $rows AS row
+MATCH (u:Usuario     {usuario_id:     row.usuario_id})
+MATCH (p:Publicacion {publicacion_id: row.publicacion_id})
+MERGE (u)-[r:COMPARTIO]->(p)
+SET r.fecha          = date(row.fecha),
+    r.con_comentario = row.con_comentario = 'true',
+    r.visibilidad    = row.visibilidad
+""",
+                rows, stdout=self.stdout,
+            )
+
+            self.stdout.write('Cargando ESTUDIO_EN...')
+            rows = _read_csv('rel_estudio_en.csv')
+            _unwind_write(
+                """
+UNWIND $rows AS row
+MATCH (u:Usuario   {usuario_id:   row.usuario_id})
+MATCH (e:Educacion {educacion_id: row.educacion_id})
+MERGE (u)-[r:ESTUDIO_EN]->(e)
+SET r.fecha_inicio     = date(row.fecha_inicio),
+    r.fecha_graduacion = CASE WHEN row.fecha_graduacion <> '' THEN date(row.fecha_graduacion) ELSE null END,
+    r.graduado         = row.graduado = 'true'
+""",
+                rows, stdout=self.stdout,
+            )
+
+            self.stdout.write('Cargando POSTULO_A...')
+            rows = _read_csv('rel_postulo_a.csv')
+            _unwind_write(
+                """
+UNWIND $rows AS row
+MATCH (u:Usuario {usuario_id: row.usuario_id})
+MATCH (j:Empleo  {empleo_id:  row.empleo_id})
+MERGE (u)-[r:POSTULO_A]->(j)
+SET r.fecha_postulacion  = date(row.fecha_postulacion),
+    r.estado             = row.estado,
+    r.carta_presentacion = row.carta_presentacion = 'true'
+""",
+                rows, stdout=self.stdout,
+            )
+
+            self.stdout.write('Cargando OFERTA...')
+            rows = _read_csv('rel_oferta.csv')
+            _unwind_write(
+                """
+UNWIND $rows AS row
+MATCH (e:Empresa {empresa_id: row.empresa_id})
+MATCH (j:Empleo  {empleo_id:  row.empleo_id})
+MERGE (e)-[r:OFERTA]->(j)
+SET r.fecha_publicacion = date(row.fecha_publicacion),
+    r.urgente           = row.urgente    = 'true',
+    r.remunerado        = row.remunerado = 'true'
+""",
+                rows, stdout=self.stdout,
+            )
+
+            self.stdout.write('Cargando SIGUE_A...')
+            rows = _read_csv('rel_sigue_a.csv')
+            _unwind_write(
+                """
+UNWIND $rows AS row
+MATCH (u:Usuario {usuario_id: row.usuario_id})
+MATCH (e:Empresa {empresa_id: row.empresa_id})
+MERGE (u)-[r:SIGUE_A]->(e)
+SET r.fecha_seguimiento = date(row.fecha_seguimiento),
+    r.notificaciones    = row.notificaciones = 'true',
+    r.motivo            = row.motivo
+""",
+                rows, stdout=self.stdout,
+            )
+
+            self.stdout.write('Cargando EXPERIENCIA_EN...')
+            rows = _read_csv('rel_experiencia_en.csv')
+            _unwind_write(
+                """
+UNWIND $rows AS row
+MATCH (exp:ExperienciaLaboral {exp_id:     row.exp_id})
+MATCH (e:Empresa              {empresa_id: row.empresa_id})
+MERGE (exp)-[r:EXPERIENCIA_EN]->(e)
+SET r.departamento  = row.departamento,
+    r.tipo_contrato = row.tipo_contrato,
+    r.modalidad     = row.modalidad
+""",
+                rows, stdout=self.stdout,
+            )
+
+            self.stdout.write('Cargando TRABAJO_EN...')
+            rows = _read_csv('rel_trabajo_en.csv')
+            _unwind_write(
+                """
+UNWIND $rows AS row
+MATCH (u:Usuario              {usuario_id: row.usuario_id})
+MATCH (exp:ExperienciaLaboral {exp_id:     row.exp_id})
+MERGE (u)-[r:TRABAJO_EN]->(exp)
+SET r.fecha_inicio = date(row.fecha_inicio),
+    r.fecha_fin    = CASE WHEN row.fecha_fin <> '' THEN date(row.fecha_fin) ELSE null END,
+    r.verificado   = row.verificado = 'true'
+""",
+                rows, stdout=self.stdout,
+            )
+
+            self.stdout.write('Cargando MENCIONA...')
+            rows = _read_csv('rel_menciona.csv')
+            _unwind_write(
+                """
+UNWIND $rows AS row
+MATCH (p:Publicacion {publicacion_id: row.publicacion_id})
+MATCH (u:Usuario     {usuario_id:     row.usuario_id})
+MERGE (p)-[r:MENCIONA]->(u)
+SET r.fecha      = date(row.fecha),
+    r.tipo       = row.tipo,
+    r.confirmada = row.confirmada = 'true'
+""",
+                rows, stdout=self.stdout,
+            )
+
+            self.stdout.write(self.style.SUCCESS('Seed completado exitosamente.'))
         finally:
             close_driver()
