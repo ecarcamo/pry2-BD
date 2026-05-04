@@ -2,44 +2,75 @@ import { useCallback, useEffect, useState } from 'react'
 import ForceGraph2D from 'react-force-graph-2d'
 import { useStore } from '../store/StoreContext'
 import { grafoApi } from '../api/grafo'
-import type { GrafoNode, GrafoRel } from '../types/api'
+import type { GrafoNode } from '../types/api'
 import { XIcon, RefreshIcon } from '../lib/icons'
 
-const LABEL_COLORS: Record<string, string> = {
-  Usuario: '#4f8ef7',
-  Admin: '#e55',
-  Empresa: '#f5a623',
-  Publicacion: '#7ed321',
-  Empleo: '#9b59b6',
-  Educacion: '#1abc9c',
-  ExperienciaLaboral: '#e67e22',
+// Paleta más rica y distinguible
+const LABEL_META: Record<string, { color: string; border: string; textColor: string }> = {
+  Usuario:            { color: '#3b82f6', border: '#93c5fd', textColor: '#dbeafe' },
+  Admin:              { color: '#ef4444', border: '#fca5a5', textColor: '#fee2e2' },
+  Empresa:            { color: '#f59e0b', border: '#fcd34d', textColor: '#fef3c7' },
+  Publicacion:        { color: '#10b981', border: '#6ee7b7', textColor: '#d1fae5' },
+  Empleo:             { color: '#8b5cf6', border: '#c4b5fd', textColor: '#ede9fe' },
+  Educacion:          { color: '#06b6d4', border: '#67e8f9', textColor: '#cffafe' },
+  ExperienciaLaboral: { color: '#f97316', border: '#fdba74', textColor: '#ffedd5' },
 }
+
+const REL_COLORS: Record<string, string> = {
+  CONECTADO_CON:  '#3b82f6',
+  PUBLICO:        '#10b981',
+  DIO_LIKE:       '#ef4444',
+  COMENTO:        '#f59e0b',
+  COMPARTIO:      '#8b5cf6',
+  SIGUE_A:        '#f97316',
+  POSTULO_A:      '#06b6d4',
+  OFERTA:         '#f59e0b',
+  ESTUDIO_EN:     '#06b6d4',
+  TRABAJO_EN:     '#f97316',
+  EXPERIENCIA_EN: '#f97316',
+  MENCIONA:       '#10b981',
+}
+
+const DEFAULT_META = { color: '#6b7280', border: '#9ca3af', textColor: '#f3f4f6' }
+const CANVAS_BG = '#1a1d27'
 
 const LABELS = ['', 'Usuario', 'Empresa', 'Publicacion', 'Empleo', 'Educacion', 'ExperienciaLaboral']
 
-function nodeColor(node: GrafoNode): string {
-  for (const l of node.labels) {
-    if (LABEL_COLORS[l]) return LABEL_COLORS[l]
+function nodeMeta(labels: string[]) {
+  // Admin tiene prioridad visual
+  if (labels.includes('Admin')) return LABEL_META['Admin']
+  for (const l of labels) {
+    if (LABEL_META[l]) return LABEL_META[l]
   }
-  return '#888'
+  return DEFAULT_META
 }
 
-function nodeLabel(node: GrafoNode): string {
-  const p = node.props
-  return (p.nombre as string) ?? (p.titulo as string) ?? (p.contenido as string)?.slice(0, 30) ?? node.labels[0] ?? ''
+function nodeLabel(props: Record<string, unknown>): string {
+  const s =
+    (props.nombre as string) ??
+    (props.titulo as string) ??
+    (props.contenido as string)?.slice(0, 24) ??
+    ''
+  return s.length > 18 ? s.slice(0, 16) + '…' : s
+}
+
+function relColor(type: string): string {
+  return REL_COLORS[type] ?? '#4b5563'
 }
 
 export default function GraphOverlay() {
   const { graphOpen, setGraphOpen } = useStore()
   const [nodes, setNodes] = useState<GrafoNode[]>([])
-  const [rels, setRels] = useState<GrafoRel[]>([])
+  const [rels, setRels] = useState<ReturnType<typeof grafoApi.sample> extends Promise<infer R> ? R['rels'] : never>([])
   const [loading, setLoading] = useState(false)
   const [label, setLabel] = useState('')
-  const [limit, setLimit] = useState(150)
+  const [limit, setLimit] = useState(120)
   const [selected, setSelected] = useState<GrafoNode | null>(null)
+  const [showLabels, setShowLabels] = useState(true)
 
   const load = useCallback(async () => {
     setLoading(true)
+    setSelected(null)
     try {
       const data = await grafoApi.sample(limit, label || undefined)
       setNodes(data.nodes)
@@ -58,72 +89,175 @@ export default function GraphOverlay() {
   if (!graphOpen) return null
 
   const graphData = {
-    nodes: nodes.map(n => ({ id: n.id, labels: n.labels, props: n.props, color: nodeColor(n), name: nodeLabel(n) })),
-    links: rels.map(r => ({ source: r.from, target: r.to, label: r.type })),
+    nodes: nodes.map(n => ({
+      id: n.id,
+      labels: n.labels,
+      props: n.props,
+      name: nodeLabel(n.props),
+      meta: nodeMeta(n.labels),
+    })),
+    links: rels.map(r => ({
+      source: r.from,
+      target: r.to,
+      type: r.type,
+      color: relColor(r.type),
+    })),
+  }
+
+  type FGNode = (typeof graphData.nodes)[0] & { x?: number; y?: number }
+  type FGLink = (typeof graphData.links)[0]
+
+  function paintNode(node: FGNode, ctx: CanvasRenderingContext2D, globalScale: number) {
+    const { x = 0, y = 0, meta, name } = node
+    const r = Math.max(4, 7 / Math.sqrt(globalScale))
+    const fontSize = Math.max(8, 9 / Math.sqrt(globalScale))
+
+    // Glow
+    ctx.shadowColor = meta.color
+    ctx.shadowBlur = 8
+
+    // Circle fill
+    ctx.beginPath()
+    ctx.arc(x, y, r, 0, 2 * Math.PI)
+    ctx.fillStyle = meta.color
+    ctx.fill()
+
+    // Border ring
+    ctx.strokeStyle = meta.border
+    ctx.lineWidth = 1.5 / globalScale
+    ctx.stroke()
+
+    ctx.shadowBlur = 0
+
+    // Label
+    if (showLabels && globalScale > 0.5 && name) {
+      ctx.font = `${fontSize}px "Source Sans 3", sans-serif`
+      ctx.textAlign = 'center'
+      ctx.textBaseline = 'top'
+
+      const textW = ctx.measureText(name).width
+      const pad = 3 / globalScale
+      const bh = fontSize + pad * 2
+
+      // Pill background
+      ctx.fillStyle = 'rgba(20,22,32,0.82)'
+      ctx.beginPath()
+      ctx.roundRect(x - textW / 2 - pad, y + r + 2 / globalScale, textW + pad * 2, bh, 3 / globalScale)
+      ctx.fill()
+
+      ctx.fillStyle = meta.textColor
+      ctx.fillText(name, x, y + r + 2 / globalScale + pad)
+    }
   }
 
   return (
     <div className="graph-overlay">
+      {/* Header */}
       <div className="graph-header">
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-          <span style={{ fontWeight: 600 }}>Visualizador del grafo</span>
-          <select className="input" value={label} onChange={e => setLabel(e.target.value)} style={{ width: 160 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+          <span style={{ fontWeight: 600, fontSize: 14 }}>Visualizador del grafo</span>
+
+          <select
+            className="input"
+            value={label}
+            onChange={e => setLabel(e.target.value)}
+            style={{ width: 170, fontSize: 13 }}
+          >
             {LABELS.map(l => <option key={l} value={l}>{l || 'Todos los labels'}</option>)}
           </select>
-          <select className="input" value={limit} onChange={e => setLimit(Number(e.target.value))} style={{ width: 90 }}>
-            {[50, 100, 150, 200, 300].map(v => <option key={v} value={v}>{v} nodos</option>)}
+
+          <select
+            className="input"
+            value={limit}
+            onChange={e => setLimit(Number(e.target.value))}
+            style={{ width: 100, fontSize: 13 }}
+          >
+            {[60, 120, 200, 300].map(v => <option key={v} value={v}>{v} nodos</option>)}
           </select>
-          <button className="btn-ghost" onClick={load} disabled={loading}>
-            <RefreshIcon size={14} /> {loading ? 'Cargando…' : 'Recargar'}
+
+          <button
+            className="btn-ghost"
+            onClick={() => setShowLabels(s => !s)}
+            style={{ fontSize: 12 }}
+          >
+            {showLabels ? 'Ocultar labels' : 'Mostrar labels'}
           </button>
-          <span className="text-mute" style={{ fontSize: 12 }}>
-            {nodes.length} nodos · {rels.length} rels
+
+          <button className="btn-ghost" onClick={load} disabled={loading} style={{ fontSize: 12 }}>
+            <RefreshIcon size={13} /> {loading ? 'Cargando…' : 'Recargar'}
+          </button>
+
+          <span style={{ fontSize: 12, color: 'var(--text-dim)' }}>
+            {nodes.length} nodos · {rels.length} relaciones
           </span>
         </div>
+
         <button className="btn-icon" onClick={() => setGraphOpen(false)}>
           <XIcon size={18} />
         </button>
       </div>
 
+      {/* Canvas + sidebar */}
       <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
-        <div style={{ flex: 1 }}>
+        <div style={{ flex: 1, position: 'relative' }}>
           {loading ? (
-            <div className="loading" style={{ paddingTop: 80 }}>Cargando grafo…</div>
+            <div className="loading" style={{ paddingTop: 100 }}>Cargando grafo desde Neo4j…</div>
           ) : (
             <ForceGraph2D
               graphData={graphData}
-              nodeLabel="name"
-              nodeColor="color"
-              nodeRelSize={5}
-              linkLabel="label"
-              linkDirectionalArrowLength={4}
+              nodeCanvasObject={(node, ctx, scale) => paintNode(node as FGNode, ctx, scale)}
+              nodeCanvasObjectMode={() => 'replace'}
+              nodeRelSize={7}
+              linkColor={(link: object) => (link as FGLink).color ?? '#4b5563'}
+              linkWidth={1.2}
+              linkDirectionalArrowLength={5}
               linkDirectionalArrowRelPos={1}
-              linkCurvature={0.1}
-              onNodeClick={(node: Record<string, unknown>) => {
-                const n = nodes.find(x => x.id === (node as { id: string }).id)
+              linkDirectionalParticles={1}
+              linkDirectionalParticleSpeed={0.005}
+              linkDirectionalParticleWidth={2}
+              linkCurvature={0.15}
+              onNodeClick={(node: object) => {
+                const n = nodes.find(x => x.id === (node as FGNode).id)
                 setSelected(n ?? null)
               }}
-              backgroundColor="var(--surface)"
+              backgroundColor={CANVAS_BG}
+              cooldownTicks={120}
+              d3AlphaDecay={0.02}
+              d3VelocityDecay={0.3}
             />
           )}
         </div>
 
+        {/* Node detail panel */}
         {selected && (
           <div className="graph-sidebar">
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 12 }}>
-              <strong>Nodo seleccionado</strong>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
+              <strong style={{ fontSize: 13 }}>Nodo seleccionado</strong>
               <button className="btn-icon" onClick={() => setSelected(null)}><XIcon size={14} /></button>
             </div>
-            <div className="node-labels">
-              {selected.labels.map(l => (
-                <span key={l} className="tag" style={{ background: LABEL_COLORS[l] ?? '#888', color: '#fff' }}>{l}</span>
-              ))}
+            <div className="node-labels" style={{ marginBottom: 12 }}>
+              {selected.labels.map(l => {
+                const m = LABEL_META[l] ?? DEFAULT_META
+                return (
+                  <span key={l} style={{
+                    background: m.color, color: m.textColor,
+                    border: `1px solid ${m.border}`,
+                    borderRadius: 5, padding: '2px 8px', fontSize: 11, fontWeight: 600,
+                  }}>{l}</span>
+                )
+              })}
             </div>
             <div className="node-props">
               {Object.entries(selected.props).map(([k, v]) => (
                 <div key={k} className="prop-row">
                   <span className="prop-key">{k}</span>
-                  <span className="prop-val">{typeof v === 'object' ? JSON.stringify(v) : String(v ?? '')}</span>
+                  <span className="prop-val">
+                    {Array.isArray(v)
+                      ? (v as string[]).join(', ')
+                      : typeof v === 'object'
+                        ? JSON.stringify(v)
+                        : String(v ?? '')}
+                  </span>
                 </div>
               ))}
             </div>
@@ -131,13 +265,21 @@ export default function GraphOverlay() {
         )}
       </div>
 
+      {/* Legend */}
       <div className="graph-legend">
-        {Object.entries(LABEL_COLORS).map(([l, c]) => (
-          <span key={l} style={{ display: 'flex', alignItems: 'center', gap: 4, fontSize: 11 }}>
-            <span style={{ width: 10, height: 10, borderRadius: '50%', background: c, display: 'inline-block' }} />
+        {Object.entries(LABEL_META).map(([l, m]) => (
+          <span key={l} style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 11 }}>
+            <span style={{
+              width: 10, height: 10, borderRadius: '50%',
+              background: m.color, border: `1.5px solid ${m.border}`,
+              display: 'inline-block',
+            }} />
             {l}
           </span>
         ))}
+        <span style={{ marginLeft: 16, color: 'var(--text-dim)', fontSize: 11 }}>
+          Click en nodo para ver propiedades · Scroll para zoom · Arrastrar para mover
+        </span>
       </div>
     </div>
   )

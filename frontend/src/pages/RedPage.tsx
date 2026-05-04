@@ -11,6 +11,8 @@ export default function RedPage() {
   const [usuarios, setUsuarios] = useState<Usuario[]>([])
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
+  const [connected, setConnected] = useState<Set<string>>(new Set())
+  const [pending, setPending] = useState<Set<string>>(new Set())
 
   const myId = me ? (me.props.userId ?? me.props.usuario_id ?? '') : ''
 
@@ -30,12 +32,16 @@ export default function RedPage() {
 
   async function handleConectar(u: Usuario) {
     const uid = nodeId(u.props)
-    if (!myId || !uid || uid === myId) return
+    if (!myId || !uid || uid === myId || connected.has(uid) || pending.has(uid)) return
+    setPending(p => new Set(p).add(uid))
     try {
       await relacionesApi.conectar(myId, uid)
+      setConnected(c => new Set(c).add(uid))
       showToast(`Conectado con ${u.props.nombre}`, 'ok')
     } catch (e) {
       showToast(`Error: ${e instanceof Error ? e.message : e}`, 'err')
+    } finally {
+      setPending(p => { const n = new Set(p); n.delete(uid); return n })
     }
   }
 
@@ -86,9 +92,19 @@ export default function RedPage() {
                   <div className="user-card-meta">{u.props.conexiones_count ?? 0} conexiones</div>
                 </div>
                 {!isMe && (
-                  <button className="btn-secondary" onClick={() => handleConectar(u)}>
-                    <PlusIcon size={14} /> Conectar
-                  </button>
+                  connected.has(uid) ? (
+                    <button className="btn-connected" disabled>
+                      ✓ Conectado
+                    </button>
+                  ) : pending.has(uid) ? (
+                    <button className="btn-secondary" disabled style={{ opacity: 0.6 }}>
+                      Conectando…
+                    </button>
+                  ) : (
+                    <button className="btn-secondary" onClick={() => handleConectar(u)}>
+                      <PlusIcon size={14} /> Conectar
+                    </button>
+                  )
                 )}
               </div>
             )

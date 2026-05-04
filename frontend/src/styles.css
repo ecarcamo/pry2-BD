@@ -697,12 +697,9 @@ input, textarea, select { font-family: inherit; font-size: inherit; color: inher
   background: var(--bg-2);
   border-top: 1px solid var(--border);
   z-index: 51;
-  transform: translateY(100%);
-  transition: transform 0.25s ease;
   display: flex; flex-direction: column;
   box-shadow: 0 -10px 40px rgba(0,0,0,0.35);
 }
-.drawer.open { transform: translateY(0); }
 .drawer-head {
   display: flex; align-items: center; gap: 12px;
   padding: 12px 20px;
@@ -1019,6 +1016,7 @@ input, textarea, select { font-family: inherit; font-size: inherit; color: inher
 .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
 .btn-secondary { background: var(--card-hi); border-color: var(--border); color: var(--text); }
 .btn-secondary:hover { background: var(--hover); }
+.btn-connected { background: #14532d; border: 1px solid #16a34a; color: #86efac; border-radius: 8px; padding: 7px 14px; font-size: 13px; font-weight: 500; cursor: default; display: flex; align-items: center; gap: 5px; white-space: nowrap; }
 .btn-ghost { background: transparent; border-color: var(--border); color: var(--text-mute); }
 .btn-ghost:hover { color: var(--text); border-color: var(--text-mute); }
 .btn-danger { background: transparent; border-color: var(--border); color: var(--err); }

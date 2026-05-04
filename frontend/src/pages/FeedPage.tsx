@@ -23,8 +23,14 @@ export default function FeedPage() {
   async function load() {
     setLoading(true)
     try {
-      const res = await publicacionesApi.list({ limit: '30' })
-      setPosts(extractNodes(res) as PubNode[])
+      const res = await publicacionesApi.list({ limit: '50' })
+      const all = extractNodes(res) as PubNode[]
+      all.sort((a, b) => {
+        const da = String(a.props.fecha_publicacion ?? '')
+        const db = String(b.props.fecha_publicacion ?? '')
+        return db.localeCompare(da)
+      })
+      setPosts(all)
     } catch {
       showToast('Error al cargar publicaciones', 'err')
     } finally {
