@@ -94,7 +94,7 @@ function InfluencersSection({ neo4jStatus }) {
       {!loading && !error && data.length > 0 && (
         <div className="ds-bars">
           {data.map((item, i) => (
-            <InfluencerBar key={item.userId || i} item={item} maxScore={maxScore} rank={i} />
+            <InfluencerBar key={item.usuario_id || i} item={item} maxScore={maxScore} rank={i} />
           ))}
         </div>
       )}
@@ -173,7 +173,7 @@ function RecomendacionesSection({ neo4jStatus }) {
       {!loading && data && data.length > 0 && (
         <div className="ds-rec-list">
           {data.map((item, i) => (
-            <div key={item.userId || i} className="ds-rec-card">
+            <div key={item.usuario_id || i} className="ds-rec-card">
               <div className="ds-rec-score-badge">
                 <span className="ds-rec-pct">{(item.jaccard * 100).toFixed(1)}</span>
                 <span className="ds-rec-pct-label">%</span>
