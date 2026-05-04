@@ -1,0 +1,41 @@
+import { api } from './client'
+import type { ApiResult } from '../types/api'
+
+export const relacionesApi = {
+  conectar: (userIdA: string, userIdB: string, nivel = '1er', aceptada = true) =>
+    api.post<ApiResult>('/relaciones/conexiones/', { userIdA, userIdB, nivel, aceptada }),
+
+  like: (userId: string, postId: string, tipo_reaccion = 'me_gusta') =>
+    api.post<ApiResult>('/relaciones/likes/', { userId, postId, tipo_reaccion }),
+
+  comentar: (userId: string, postId: string, contenido: string) =>
+    api.post<ApiResult>('/relaciones/comentarios/', { userId, postId, contenido }),
+
+  compartir: (userId: string, postId: string, visibilidad = 'pública') =>
+    api.post<ApiResult>('/relaciones/compartidos/', { userId, postId, visibilidad }),
+
+  postular: (userId: string, empleoId: string, carta_presentacion = false) =>
+    api.post<ApiResult>('/relaciones/postulaciones/', { userId, empleoId, carta_presentacion }),
+
+  seguir: (userId: string, empresaId: string, motivo = 'interés general') =>
+    api.post<ApiResult>('/relaciones/seguimientos/', { userId, empresaId, motivo }),
+
+  trabajoEn: (userId: string, expId: string, fecha_inicio: string) =>
+    api.post<ApiResult>('/relaciones/trabajo-en/', { userId, expId, fecha_inicio }),
+
+  experienciaEn: (expId: string, empresaId: string, departamento: string, tipo_contrato: string, modalidad: string) =>
+    api.post<ApiResult>('/relaciones/experiencia-en/', { expId, empresaId, departamento, tipo_contrato, modalidad }),
+
+  estudiar: (userId: string, educacionId: string, fecha_inicio: string) =>
+    api.post<ApiResult>('/relaciones/estudios/', { userId, educacionId, fecha_inicio }),
+
+  mencionar: (postId: string, userId: string, tipo = 'etiqueta') =>
+    api.post<ApiResult>('/relaciones/menciones/', { postId, userId, tipo }),
+
+  generica: (body: {
+    from: { label: string; idField: string; idValue: string }
+    to: { label: string; idField: string; idValue: string }
+    type: string
+    properties: Record<string, unknown>
+  }) => api.post<ApiResult>('/relaciones/generica/', body),
+}
