@@ -2,7 +2,11 @@ import { useStore } from '../store/StoreContext'
 import { initials } from '../lib/format'
 import { SearchIcon, GraphIcon, CodeIcon } from '../lib/icons'
 
-const ROLES = ['Usuario', 'Reclutador', 'Admin'] as const
+const ROLES = [
+  { id: 'Usuario', label: 'Profesional' },
+  { id: 'Reclutador', label: 'Reclutador' },
+  { id: 'Admin', label: 'Admin' },
+] as const
 
 export default function Topbar() {
   const { role, setRole, me, setTab, setDrawer, setGraphOpen } = useStore()
@@ -19,10 +23,10 @@ export default function Topbar() {
         <input placeholder="Buscar profesionales, empresas, vacantes…" readOnly />
       </div>
 
-      <div className="role-switch">
+      <div className="role-switch" title="Cambiar vista de perfil">
         {ROLES.map(r => (
-          <button key={r} className={role === r ? 'active' : ''} onClick={() => setRole(r)}>
-            {r}
+          <button key={r.id} className={role === r.id ? 'active' : ''} onClick={() => setRole(r.id)}>
+            {r.label}
           </button>
         ))}
       </div>

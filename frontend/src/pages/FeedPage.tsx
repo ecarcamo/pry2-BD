@@ -4,7 +4,7 @@ import { publicacionesApi } from '../api/publicaciones'
 import { relacionesApi } from '../api/relaciones'
 import { extractNodes, initials, nodeId, timeAgo } from '../lib/format'
 import type { Publicacion } from '../types/api'
-import { HeartIcon, MessageIcon, ShareIcon, PlusIcon } from '../lib/icons'
+import { HeartIcon, MessageIcon, ShareIcon, PlusIcon, EditIcon } from '../lib/icons'
 
 type PubNode = Publicacion
 
@@ -15,8 +15,14 @@ export default function FeedPage() {
   const [showForm, setShowForm] = useState(false)
   const [contenido, setContenido] = useState('')
   const [hashtags, setHashtags] = useState('')
+
+  // comentarios
   const [commentOpen, setCommentOpen] = useState<string | null>(null)
   const [commentText, setCommentText] = useState('')
+
+  // editar comentario (patch propiedad de 1 relación)
+  const [editCommentOpen, setEditCommentOpen] = useState<string | null>(null)
+  const [editCommentText, setEditCommentText] = useState('')
 
   const myId = me ? (me.props.userId ?? me.props.usuario_id ?? '') : ''
 
@@ -46,9 +52,7 @@ export default function FeedPage() {
     try {
       await publicacionesApi.create({ userId: myId, contenido, tags })
       showToast('Publicación creada', 'ok')
-      setContenido('')
-      setHashtags('')
-      setShowForm(false)
+      setContenido(''); setHashtags(''); setShowForm(false)
       load()
     } catch (e) {
       showToast(`Error: ${e instanceof Error ? e.message : e}`, 'err')
@@ -60,21 +64,20 @@ export default function FeedPage() {
     const pid = nodeId(post.props)
     try {
       await relacionesApi.like(myId, pid)
-      showToast('¡Like enviado!', 'ok')
+      showToast('¡Reacción enviada!', 'ok')
       load()
     } catch (e) {
       showToast(`Error: ${e instanceof Error ? e.message : e}`, 'err')
     }
   }
 
-  async function handleCommentar(post: PubNode) {
+  async function handleComentar(post: PubNode) {
     if (!myId || !commentText.trim()) return
     const pid = nodeId(post.props)
     try {
       await relacionesApi.comentar(myId, pid, commentText)
       showToast('Comentario enviado', 'ok')
-      setCommentOpen(null)
-      setCommentText('')
+      setCommentOpen(null); setCommentText('')
     } catch (e) {
       showToast(`Error: ${e instanceof Error ? e.message : e}`, 'err')
     }
@@ -86,6 +89,26 @@ export default function FeedPage() {
     try {
       await relacionesApi.compartir(myId, pid)
       showToast('Compartido', 'ok')
+    } catch (e) {
+      showToast(`Error: ${e instanceof Error ? e.message : e}`, 'err')
+    }
+  }
+
+  // Editar la propiedad "contenido" de la relación COMENTO (patch 1 relación)
+  async function handleEditarComentario(post: PubNode) {
+    if (!myId || !editCommentText.trim()) return
+    const pid = nodeId(post.props)
+    const idField = pid.startsWith('p') ? 'publicacion_id' : 'postId'
+    const fromField = myId.startsWith('u') ? 'usuario_id' : 'userId'
+    try {
+      await relacionesApi.patchRelacion({
+        from: { label: 'Usuario', idField: fromField, idValue: myId },
+        to: { label: 'Publicacion', idField, idValue: pid },
+        type: 'COMENTO',
+        set: { contenido: editCommentText, editado: true },
+      })
+      showToast('Comentario actualizado (editado = true)', 'ok')
+      setEditCommentOpen(null); setEditCommentText('')
     } catch (e) {
       showToast(`Error: ${e instanceof Error ? e.message : e}`, 'err')
     }
@@ -126,7 +149,6 @@ export default function FeedPage() {
         )}
       </div>
 
-      {/* Feed */}
       {loading ? (
         <div className="loading">Cargando publicaciones…</div>
       ) : posts.length === 0 ? (
@@ -156,19 +178,25 @@ export default function FeedPage() {
                 <button className="action-btn" onClick={() => handleLike(post)}>
                   <HeartIcon size={16} /> Me gusta
                 </button>
-                <button
-                  className="action-btn"
-                  onClick={() => {
-                    setCommentOpen(commentOpen === pid ? null : pid)
-                    setCommentText('')
-                  }}
-                >
+                <button className="action-btn" onClick={() => {
+                  setCommentOpen(commentOpen === pid ? null : pid)
+                  setEditCommentOpen(null)
+                  setCommentText('')
+                }}>
                   <MessageIcon size={16} /> Comentar
                 </button>
                 <button className="action-btn" onClick={() => handleCompartir(post)}>
                   <ShareIcon size={16} /> Compartir
                 </button>
+                <button className="action-btn" onClick={() => {
+                  setEditCommentOpen(editCommentOpen === pid ? null : pid)
+                  setCommentOpen(null)
+                  setEditCommentText('')
+                }}>
+                  <EditIcon size={16} /> Editar comentario
+                </button>
               </div>
+
               {commentOpen === pid && (
                 <div className="comment-form">
                   <input
@@ -177,7 +205,24 @@ export default function FeedPage() {
                     value={commentText}
                     onChange={e => setCommentText(e.target.value)}
                   />
-                  <button className="btn-primary" onClick={() => handleCommentar(post)}>Enviar</button>
+                  <button className="btn-primary" onClick={() => handleComentar(post)}>Enviar</button>
+                </div>
+              )}
+
+              {editCommentOpen === pid && (
+                <div className="comment-form">
+                  <p className="text-mute" style={{ fontSize: 12, margin: '0 0 6px' }}>
+                    Actualiza el contenido de tu comentario en esta publicación (SET r.contenido, r.editado = true)
+                  </p>
+                  <input
+                    className="composer-input"
+                    placeholder="Nuevo texto del comentario…"
+                    value={editCommentText}
+                    onChange={e => setEditCommentText(e.target.value)}
+                  />
+                  <button className="btn-primary" onClick={() => handleEditarComentario(post)}>
+                    Actualizar comentario
+                  </button>
                 </div>
               )}
             </div>

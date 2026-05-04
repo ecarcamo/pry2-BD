@@ -7,14 +7,18 @@ import type { Usuario } from '../types/api'
 import { NetworkIcon, PlusIcon } from '../lib/icons'
 
 export default function RedPage() {
-  const { me, showToast } = useStore()
+  const { me, role, showToast } = useStore()
   const [usuarios, setUsuarios] = useState<Usuario[]>([])
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
   const [connected, setConnected] = useState<Set<string>>(new Set())
   const [pending, setPending] = useState<Set<string>>(new Set())
 
+  // bulk: marcar todas las conexiones como notificadas
+  const [marcando, setMarcando] = useState(false)
+
   const myId = me ? (me.props.userId ?? me.props.usuario_id ?? '') : ''
+  const isAdmin = role === 'Admin'
 
   async function load() {
     setLoading(true)
@@ -41,7 +45,43 @@ export default function RedPage() {
     } catch (e) {
       showToast(`Error: ${e instanceof Error ? e.message : e}`, 'err')
     } finally {
-      setPending(p => { const n = new Set(p); n.delete(uid); return n })
+      setPending(p => { const n = new Set(p); n.delete(uid ?? ''); return n })
+    }
+  }
+
+  async function handleDesconectar(u: Usuario) {
+    const uid = nodeId(u.props)
+    if (!myId || !uid) return
+    try {
+      await relacionesApi.deleteRelacion({
+        from_label: 'Usuario', from_id_field: nodeId(me!.props) === me?.props.userId ? 'userId' : 'usuario_id',
+        from_id_value: myId,
+        to_label: 'Usuario', to_id_field: uid.startsWith('u') ? 'usuario_id' : 'userId',
+        to_id_value: uid,
+        type: 'CONECTADO_CON',
+      })
+      setConnected(c => { const n = new Set(c); n.delete(uid); return n })
+      showToast(`Desconectado de ${u.props.nombre}`, 'ok')
+    } catch (e) {
+      showToast(`Error: ${e instanceof Error ? e.message : e}`, 'err')
+    }
+  }
+
+  async function handleMarcartTodasNotificadas() {
+    setMarcando(true)
+    try {
+      const res = await relacionesApi.bulkPatchRelacion({
+        from_label: 'Usuario',
+        to_label: 'Usuario',
+        type: 'CONECTADO_CON',
+        set: { aceptada: true },
+      })
+      const n = (res as { stats: { propsSet?: number } }).stats?.propsSet ?? 0
+      showToast(`${n} conexión(es) marcadas como aceptadas`, 'ok')
+    } catch (e) {
+      showToast(`Error: ${e instanceof Error ? e.message : e}`, 'err')
+    } finally {
+      setMarcando(false)
     }
   }
 
@@ -57,6 +97,14 @@ export default function RedPage() {
       <div className="page-header">
         <NetworkIcon size={20} />
         <h2>Mi red</h2>
+        <div style={{ marginLeft: 'auto', display: 'flex', gap: 8 }}>
+          {isAdmin && (
+            <button className="btn-ghost" style={{ fontSize: 13 }}
+              onClick={handleMarcartTodasNotificadas} disabled={marcando}>
+              {marcando ? 'Actualizando…' : 'Marcar todas las conexiones como aceptadas'}
+            </button>
+          )}
+        </div>
       </div>
 
       <input
@@ -73,6 +121,8 @@ export default function RedPage() {
           {filtered.map(u => {
             const uid = nodeId(u.props)
             const isMe = uid === myId
+            const isConnected = connected.has(uid)
+            const isPending = pending.has(uid)
             return (
               <div key={uid || u.elementId} className="card user-card">
                 <div className="user-card-avatar">{initials(u.props.nombre)}</div>
@@ -92,19 +142,25 @@ export default function RedPage() {
                   <div className="user-card-meta">{u.props.conexiones_count ?? 0} conexiones</div>
                 </div>
                 {!isMe && (
-                  connected.has(uid) ? (
-                    <button className="btn-connected" disabled>
-                      ✓ Conectado
-                    </button>
-                  ) : pending.has(uid) ? (
-                    <button className="btn-secondary" disabled style={{ opacity: 0.6 }}>
-                      Conectando…
-                    </button>
-                  ) : (
-                    <button className="btn-secondary" onClick={() => handleConectar(u)}>
-                      <PlusIcon size={14} /> Conectar
-                    </button>
-                  )
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                    {isConnected ? (
+                      <>
+                        <button className="btn-connected" disabled>✓ Conectado</button>
+                        <button className="btn-ghost" style={{ fontSize: 12 }}
+                          onClick={() => handleDesconectar(u)}>
+                          Desconectar
+                        </button>
+                      </>
+                    ) : isPending ? (
+                      <button className="btn-secondary" disabled style={{ opacity: 0.6 }}>
+                        Conectando…
+                      </button>
+                    ) : (
+                      <button className="btn-secondary" onClick={() => handleConectar(u)}>
+                        <PlusIcon size={14} /> Conectar
+                      </button>
+                    )}
+                  </div>
                 )}
               </div>
             )
