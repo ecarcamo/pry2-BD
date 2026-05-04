@@ -341,17 +341,19 @@ FOREACH (r IN rels | DELETE r)
 RETURN total AS eliminadas`
       },
       {
-        title: 'Eliminar 1 nodo (DETACH DELETE)',
-        subtitle: 'Borra 1 Publicacion cualquiera y sus relaciones',
+        title: 'Eliminar 1 nodo (HTTP DELETE)',
+        subtitle: 'DELETE /publicaciones/n12/ — endpoint REST tipado',
+        endpoint: {
+          call: 'publicaciones.delete',
+          body: 'n12',
+        },
         query:
-`MATCH (p:Publicacion)
-WITH p LIMIT 1
-DETACH DELETE p
-RETURN count(p) AS eliminados`
+`MATCH (p:Publicacion {postId: 'n12'})
+DETACH DELETE p`,
       },
       {
         title: 'Eliminar múltiples nodos (DETACH DELETE)',
-        subtitle: 'Borra todos los Empleos inactivos',
+        subtitle: 'Borra todos los Empleos inactivos vía Cypher',
         query:
 `MATCH (e:Empleo)
 WHERE e.activo = false

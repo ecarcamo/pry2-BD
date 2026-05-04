@@ -420,10 +420,10 @@ function App() {
         const entry = {
           ts, query: op.query || `// ${op.endpoint.call}(...)`,
           kind: 'write', ok: true,
-          result: { columns: data.columns || [], rows: data.rows || [], stats: data.stats || {} },
-          summary: shortStats(data.stats) || (data.rows ? `${data.rows.length} fila(s)` : ''),
+          result: { columns: data?.columns || [], rows: data?.rows || [], stats: data?.stats || {} },
+          summary: data ? (shortStats(data.stats) || `${(data.rows||[]).length} fila(s)`) : 'Eliminado (204)',
           source: 'neo4j',
-          cypherUsed: data.meta?.cypher,
+          cypherUsed: data?.meta?.cypher,
         };
         setLog(prev => [entry, ...prev].slice(0, 80));
         if (op.query) setEditor(op.query);

@@ -67,6 +67,7 @@
       get:            (empresaId)         => get(`/empresas/${encodeURIComponent(empresaId)}/`),
       patchProps:     (empresaId, body)   => patch(`/empresas/${encodeURIComponent(empresaId)}/`, body),
       patchPropsBulk: (body)              => post('/empresas/bulk-update/', body),
+      delete:         (empresaId)         => del(`/empresas/${encodeURIComponent(empresaId)}/`),
     },
 
     publicaciones: {
@@ -75,6 +76,7 @@
       get:            (postId)            => get(`/publicaciones/${encodeURIComponent(postId)}/`),
       patchProps:     (postId, body)      => patch(`/publicaciones/${encodeURIComponent(postId)}/`, body),
       patchPropsBulk: (body)              => post('/publicaciones/bulk-update/', body),
+      delete:         (postId)            => del(`/publicaciones/${encodeURIComponent(postId)}/`),
     },
 
     empleos: {
@@ -83,6 +85,7 @@
       get:            (empleoId)          => get(`/empleos/${encodeURIComponent(empleoId)}/`),
       patchProps:     (empleoId, body)    => patch(`/empleos/${encodeURIComponent(empleoId)}/`, body),
       patchPropsBulk: (body)              => post('/empleos/bulk-update/', body),
+      delete:         (empleoId)          => del(`/empleos/${encodeURIComponent(empleoId)}/`),
     },
 
     educacion: {
@@ -91,6 +94,7 @@
       get:            (educacionId)       => get(`/educacion/${encodeURIComponent(educacionId)}/`),
       patchProps:     (educacionId, body) => patch(`/educacion/${encodeURIComponent(educacionId)}/`, body),
       patchPropsBulk: (body)              => post('/educacion/bulk-update/', body),
+      delete:         (educacionId)       => del(`/educacion/${encodeURIComponent(educacionId)}/`),
     },
 
     experiencia: {
