@@ -51,6 +51,17 @@ def run_write(cypher, params=None):
     return run_query(cypher, params, mode='write')
 
 
+def run_auto(cypher, params=None):
+    """Auto-commit (implicit) transaction — required for CALL { } IN TRANSACTIONS."""
+    params = params or {}
+    driver = get_driver()
+    with driver.session(database=settings.NEO4J_DATABASE) as session:
+        result = session.run(cypher, **params)
+        records = list(result)
+        summary = result.consume()
+    return records_to_rows(records, summary)
+
+
 def verify_connectivity():
     get_driver().verify_connectivity()
 

@@ -4,7 +4,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from .lib.db import run_read, run_write, verify_connectivity
+from .lib.db import run_read, run_write, run_auto, verify_connectivity
 
 
 @api_view(['GET'])
@@ -35,8 +35,12 @@ def cypher_passthrough(request):
         return Response({'detail': 'query requerido'}, status=status.HTTP_400_BAD_REQUEST)
 
     try:
-        runner = run_write if mode == 'write' else run_read
-        result = runner(query, params)
+        if mode == 'auto':
+            result = run_auto(query, params)
+        elif mode == 'write':
+            result = run_write(query, params)
+        else:
+            result = run_read(query, params)
     except Exception as exc:
         return Response({'detail': str(exc)}, status=status.HTTP_400_BAD_REQUEST)
 

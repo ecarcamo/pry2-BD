@@ -372,6 +372,16 @@ RETURN total AS eliminados`
         subtitle: 'Vuelve al estado inicial del seed',
         special: 'reset',
       },
+      {
+        title: 'Limpiar base de datos (Aura)',
+        subtitle: 'Borra relaciones, nodos y constraints en Neo4j Aura',
+        special: 'clean-db',
+      },
+      {
+        title: 'Importar datos desde GitHub (Aura)',
+        subtitle: 'Constraints + 5 nodos + 11 relaciones vía LOAD CSV',
+        special: 'import-db',
+      },
     ],
   },
 ];

@@ -18,7 +18,8 @@ function freshGraphFromSeed() {
 
 function classifyQuery(q) {
   const u = q.toUpperCase();
-  if (/\b(CREATE|MERGE|SET|REMOVE|DELETE|DETACH)\b/.test(u)) return 'write';
+  if (/\bLOAD CSV\b/.test(u)) return 'auto';
+  if (/\b(CREATE|MERGE|SET|REMOVE|DELETE|DETACH|DROP)\b/.test(u)) return 'write';
   return 'read';
 }
 
@@ -386,6 +387,198 @@ function App() {
       return;
     }
 
+    if (op.special === 'clean-db') {
+      const cleanQueries = [
+        'MATCH ()-[r]->() DELETE r',
+        'MATCH (n) DELETE n',
+        'DROP CONSTRAINT usuario_id IF EXISTS',
+        'DROP CONSTRAINT empresa_id IF EXISTS',
+        'DROP CONSTRAINT pub_id IF EXISTS',
+        'DROP CONSTRAINT empleo_id IF EXISTS',
+        'DROP CONSTRAINT educacion_id IF EXISTS',
+      ];
+      for (const q of cleanQueries) {
+        await runQuery(q);
+      }
+      return;
+    }
+
+    const BASE = 'https://raw.githubusercontent.com/ecarcamo/pry2-BD/main/dataGenerator/neo4j_csv/';
+    if (op.special === 'import-db') {
+      const importQueries = [
+        `CREATE CONSTRAINT usuario_id   IF NOT EXISTS FOR (n:Usuario)    REQUIRE n.usuario_id      IS UNIQUE`,
+        `CREATE CONSTRAINT empresa_id   IF NOT EXISTS FOR (n:Empresa)    REQUIRE n.empresa_id      IS UNIQUE`,
+        `CREATE CONSTRAINT pub_id       IF NOT EXISTS FOR (n:Publicacion) REQUIRE n.publicacion_id  IS UNIQUE`,
+        `CREATE CONSTRAINT empleo_id    IF NOT EXISTS FOR (n:Empleo)     REQUIRE n.empleo_id       IS UNIQUE`,
+        `CREATE CONSTRAINT educacion_id IF NOT EXISTS FOR (n:Educacion)  REQUIRE n.educacion_id    IS UNIQUE`,
+        `LOAD CSV WITH HEADERS FROM '${BASE}usuarios.csv' AS row
+CALL {
+  WITH row
+  CREATE (u:Usuario {
+    usuario_id:        row.usuario_id,
+    nombre:            row.nombre,
+    email:             row.email,
+    titular:           row.titular,
+    habilidades:       split(row.habilidades, ';'),
+    abierto_a_trabajo: row.abierto_a_trabajo = 'true',
+    fecha_registro:    date(row.fecha_registro),
+    conexiones_count:  toInteger(row.conexiones_count)
+  })
+  WITH u, row WHERE row.is_admin = 'true'
+  SET u:Admin,
+      u.nivel_acceso     = row.nivel_acceso,
+      u.puede_moderar    = row.puede_moderar = 'true',
+      u.fecha_asignacion = date(row.fecha_asignacion),
+      u.asignado_por     = row.asignado_por,
+      u.activo           = row.admin_activo = 'true'
+} IN TRANSACTIONS OF 500 ROWS`,
+        `LOAD CSV WITH HEADERS FROM '${BASE}empresas.csv' AS row
+CALL {
+  WITH row
+  CREATE (:Empresa {
+    empresa_id:      row.empresa_id,
+    nombre:          row.nombre,
+    industria:       row.industria,
+    pais:            row.pais,
+    verificada:      row.verificada = 'true',
+    empleados_count: toInteger(row.empleados_count),
+    fecha_fundacion: date(row.fecha_fundacion)
+  })
+} IN TRANSACTIONS OF 500 ROWS`,
+        `LOAD CSV WITH HEADERS FROM '${BASE}publicaciones.csv' AS row
+CALL {
+  WITH row
+  CREATE (:Publicacion {
+    publicacion_id:    row.publicacion_id,
+    contenido:         row.contenido,
+    fecha_publicacion: date(row.fecha_publicacion),
+    likes_count:       toInteger(row.likes_count),
+    tags:              split(row.tags, ';'),
+    es_oferta:         row.es_oferta = 'true'
+  })
+} IN TRANSACTIONS OF 500 ROWS`,
+        `LOAD CSV WITH HEADERS FROM '${BASE}empleos.csv' AS row
+CALL {
+  WITH row
+  CREATE (:Empleo {
+    empleo_id:         row.empleo_id,
+    titulo:            row.titulo,
+    salario_min:       toFloat(row.salario_min),
+    salario_max:       toFloat(row.salario_max),
+    modalidad:         row.modalidad,
+    activo:            row.activo = 'true',
+    fecha_publicacion: date(row.fecha_publicacion)
+  })
+} IN TRANSACTIONS OF 500 ROWS`,
+        `LOAD CSV WITH HEADERS FROM '${BASE}educaciones.csv' AS row
+CALL {
+  WITH row
+  CREATE (:Educacion {
+    educacion_id: row.educacion_id,
+    institucion:  row.institucion,
+    carrera:      row.carrera,
+    grado:        row.grado,
+    pais:         row.pais,
+    acreditada:   row.acreditada = 'true'
+  })
+} IN TRANSACTIONS OF 500 ROWS`,
+        `LOAD CSV WITH HEADERS FROM '${BASE}rel_conectado_con.csv' AS row
+CALL {
+  WITH row
+  MATCH (a:Usuario {usuario_id: row.from_usuario_id})
+  MATCH (b:Usuario {usuario_id: row.to_usuario_id})
+  MERGE (a)-[r:CONECTADO_CON]->(b)
+  SET r.fecha_conexion = date(row.fecha_conexion), r.nivel = row.nivel, r.aceptada = row.aceptada = 'true'
+} IN TRANSACTIONS OF 500 ROWS`,
+        `LOAD CSV WITH HEADERS FROM '${BASE}rel_publico.csv' AS row
+CALL {
+  WITH row
+  MATCH (u:Usuario {usuario_id: row.usuario_id})
+  MATCH (p:Publicacion {publicacion_id: row.publicacion_id})
+  MERGE (u)-[r:PUBLICO]->(p)
+  SET r.fecha = date(row.fecha), r.anonimo = row.anonimo = 'true', r.desde_empresa = row.desde_empresa = 'true'
+} IN TRANSACTIONS OF 500 ROWS`,
+        `LOAD CSV WITH HEADERS FROM '${BASE}rel_dio_like.csv' AS row
+CALL {
+  WITH row
+  MATCH (u:Usuario {usuario_id: row.usuario_id})
+  MATCH (p:Publicacion {publicacion_id: row.publicacion_id})
+  MERGE (u)-[r:DIO_LIKE]->(p)
+  SET r.fecha = date(row.fecha), r.tipo_reaccion = row.tipo_reaccion, r.notificado = row.notificado = 'true'
+} IN TRANSACTIONS OF 500 ROWS`,
+        `LOAD CSV WITH HEADERS FROM '${BASE}rel_comento.csv' AS row
+CALL {
+  WITH row
+  MATCH (u:Usuario {usuario_id: row.usuario_id})
+  MATCH (p:Publicacion {publicacion_id: row.publicacion_id})
+  MERGE (u)-[r:COMENTO]->(p)
+  SET r.contenido = row.contenido, r.fecha = date(row.fecha), r.editado = row.editado = 'true'
+} IN TRANSACTIONS OF 500 ROWS`,
+        `LOAD CSV WITH HEADERS FROM '${BASE}rel_compartio.csv' AS row
+CALL {
+  WITH row
+  MATCH (u:Usuario {usuario_id: row.usuario_id})
+  MATCH (p:Publicacion {publicacion_id: row.publicacion_id})
+  MERGE (u)-[r:COMPARTIO]->(p)
+  SET r.fecha = date(row.fecha), r.con_comentario = row.con_comentario = 'true', r.visibilidad = row.visibilidad
+} IN TRANSACTIONS OF 500 ROWS`,
+        `LOAD CSV WITH HEADERS FROM '${BASE}rel_estudio_en.csv' AS row
+CALL {
+  WITH row
+  MATCH (u:Usuario {usuario_id: row.usuario_id})
+  MATCH (e:Educacion {educacion_id: row.educacion_id})
+  MERGE (u)-[r:ESTUDIO_EN]->(e)
+  SET r.fecha_inicio = date(row.fecha_inicio),
+      r.fecha_graduacion = CASE WHEN row.fecha_graduacion <> '' THEN date(row.fecha_graduacion) ELSE null END,
+      r.graduado = row.graduado = 'true'
+} IN TRANSACTIONS OF 500 ROWS`,
+        `LOAD CSV WITH HEADERS FROM '${BASE}rel_postulo_a.csv' AS row
+CALL {
+  WITH row
+  MATCH (u:Usuario {usuario_id: row.usuario_id})
+  MATCH (j:Empleo {empleo_id: row.empleo_id})
+  MERGE (u)-[r:POSTULO_A]->(j)
+  SET r.fecha_postulacion = date(row.fecha_postulacion), r.estado = row.estado, r.carta_presentacion = row.carta_presentacion = 'true'
+} IN TRANSACTIONS OF 500 ROWS`,
+        `LOAD CSV WITH HEADERS FROM '${BASE}rel_oferta.csv' AS row
+CALL {
+  WITH row
+  MATCH (e:Empresa {empresa_id: row.empresa_id})
+  MATCH (j:Empleo {empleo_id: row.empleo_id})
+  MERGE (e)-[r:OFERTA]->(j)
+  SET r.fecha_publicacion = date(row.fecha_publicacion), r.urgente = row.urgente = 'true', r.remunerado = row.remunerado = 'true'
+} IN TRANSACTIONS OF 500 ROWS`,
+        `LOAD CSV WITH HEADERS FROM '${BASE}rel_sigue_a.csv' AS row
+CALL {
+  WITH row
+  MATCH (u:Usuario {usuario_id: row.usuario_id})
+  MATCH (e:Empresa {empresa_id: row.empresa_id})
+  MERGE (u)-[r:SIGUE_A]->(e)
+  SET r.fecha_seguimiento = date(row.fecha_seguimiento), r.notificaciones = row.notificaciones = 'true', r.motivo = row.motivo
+} IN TRANSACTIONS OF 500 ROWS`,
+        `LOAD CSV WITH HEADERS FROM '${BASE}rel_estar_en.csv' AS row
+CALL {
+  WITH row
+  MATCH (u:Usuario {usuario_id: row.usuario_id})
+  MATCH (e:Empresa {empresa_id: row.empresa_id})
+  MERGE (u)-[r:ESTAR_EN]->(e)
+  SET r.cargo = row.cargo, r.fecha_inicio = date(row.fecha_inicio), r.actual = row.actual = 'true'
+} IN TRANSACTIONS OF 500 ROWS`,
+        `LOAD CSV WITH HEADERS FROM '${BASE}rel_menciona.csv' AS row
+CALL {
+  WITH row
+  MATCH (p:Publicacion {publicacion_id: row.publicacion_id})
+  MATCH (u:Usuario {usuario_id: row.usuario_id})
+  MERGE (p)-[r:MENCIONA]->(u)
+  SET r.fecha = date(row.fecha), r.tipo = row.tipo, r.confirmada = row.confirmada = 'true'
+} IN TRANSACTIONS OF 500 ROWS`,
+      ];
+      for (const q of importQueries) {
+        await runQuery(q);
+      }
+      return;
+    }
+
     if (op.special === 'reset') {
       if (neo4jStatus === 'ok') {
         try {
@@ -587,7 +780,7 @@ function App() {
             {log.map((e, i) => (
               <div key={i} className="log-entry">
                 <div className="head">
-                  <span className={'badge ' + (e.ok ? (e.kind === 'write' ? 'write' : 'read') : 'err')}>
+                  <span className={'badge ' + (e.ok ? (e.kind === 'write' || e.kind === 'auto' ? 'write' : 'read') : 'err')}>
                     {e.ok ? e.kind : 'error'}
                   </span>
                   <span className="ts">{e.ts}</span>
