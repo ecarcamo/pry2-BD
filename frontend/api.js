@@ -130,6 +130,12 @@
       agregacion:             (body)        => post('/consultas/agregacion/', body),
     },
 
+    datascience: {
+      influencers:      (limit = 10) => get('/datascience/influencers/' + qs({ limit })),
+      recomendaciones:  (userId)     => get(`/datascience/recomendaciones/${encodeURIComponent(userId)}/`),
+      gradosSeparacion: (from, to)   => get('/datascience/grados-separacion/' + qs({ from, to })),
+    },
+
     rawCypher: (query, params = {}, mode = 'read') =>
       post('/cypher/', { query, params, mode }),
   };

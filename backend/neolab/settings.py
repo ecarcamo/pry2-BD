@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'apps.experiencia_laboral',
     'apps.relaciones',
     'apps.consultas',
+    'apps.datascience',
 ]
 
 MIDDLEWARE = [

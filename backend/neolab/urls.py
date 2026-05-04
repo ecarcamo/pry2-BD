@@ -11,6 +11,7 @@ api_patterns = [
     path('experiencia/', include('apps.experiencia_laboral.urls')),
     path('relaciones/', include('apps.relaciones.urls')),
     path('consultas/', include('apps.consultas.urls')),
+    path('datascience/', include('apps.datascience.urls')),
 ]
 
 urlpatterns = [

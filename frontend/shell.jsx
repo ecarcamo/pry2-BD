@@ -259,6 +259,7 @@ function App() {
   const [neo4jStatus, setNeo4jStatus] = useS('checking'); // 'ok' | 'offline' | 'checking'
   const [instanceInfo, setInstanceInfo] = useS(null);
   const [showRelForm, setShowRelForm] = useS(false);
+  const [rightTab, setRightTab] = useS('cypher');
 
   const showToast = (msg, kind='ok') => {
     setToast({ msg, kind });
@@ -726,88 +727,103 @@ CALL {
           )}
         </div>
 
-        {/* RIGHT: cypher console */}
+        {/* RIGHT: cypher console + data science */}
         <div className="col right">
-          <div className="panel-head">
-            <span className="dot" style={{background:'var(--c-empleo)'}}></span>
-            Consola Cypher
-            {neo4jStatus !== 'ok' && (
-              <span style={{marginLeft:8, fontFamily:'var(--mono)', fontSize:9, color:'#f59e0b'}}>
-                (motor local)
-              </span>
-            )}
-          </div>
-          <div className="editor-wrap">
-            <div className="editor">
-              <textarea
-                ref={editorRef}
-                value={editor}
-                onChange={(e) => setEditor(e.target.value)}
-                spellCheck={false}
-                placeholder="// Escribe tu query en Cypher y presiona Run o Ctrl+Enter"
-              />
-            </div>
-            <div className="editor-bar">
-              <button className="run-btn" onClick={() => runQuery(editor)}>
-                ▸ Run
-                <span className="kbd">⌘↵</span>
-              </button>
-              <button className="ghost-btn" onClick={() => setEditor('')}>limpiar</button>
-              <span style={{marginLeft:'auto', fontFamily:'var(--mono)', fontSize:10, color:'var(--text-dim)'}}>
-                {editor.length} chars
-              </span>
-            </div>
-            <div className="preset-row">
-              <span style={{color:'var(--text-dim)', fontFamily:'var(--mono)', fontSize:10, alignSelf:'center', marginRight:4}}>
-                consultas del modelo:
-              </span>
-              {window.PRESET_QUERIES.map((p, i) => (
-                <button key={i} className="preset-chip" onClick={() => { setEditor(p.query); runQuery(p.query); }}>
-                  {p.label}
-                  <span className="who">{p.who}</span>
-                </button>
-              ))}
-            </div>
+          <div className="right-tab-bar">
+            <button
+              className={'right-tab' + (rightTab === 'cypher' ? ' active' : '')}
+              onClick={() => setRightTab('cypher')}>
+              <span style={{display:'inline-block', width:6, height:6, borderRadius:'50%', background:'var(--c-empleo)', marginRight:6}}></span>
+              Consola Cypher
+              {neo4jStatus !== 'ok' && (
+                <span style={{marginLeft:6, fontSize:9, color:'#f59e0b'}}>(local)</span>
+              )}
+            </button>
+            <button
+              className={'right-tab' + (rightTab === 'datascience' ? ' active' : '')}
+              onClick={() => setRightTab('datascience')}>
+              <span style={{display:'inline-block', width:6, height:6, borderRadius:'50%', background:'var(--c-admin)', marginRight:6}}></span>
+              Data Science
+            </button>
           </div>
 
-          <div className="log">
-            {log.length === 0 && (
-              <div className="empty">
-                Aún no hay queries.<br/>
-                Usa el panel izquierdo o escribe Cypher arriba.
-              </div>
-            )}
-            {log.map((e, i) => (
-              <div key={i} className="log-entry">
-                <div className="head">
-                  <span className={'badge ' + (e.ok ? (e.kind === 'write' || e.kind === 'auto' ? 'write' : 'read') : 'err')}>
-                    {e.ok ? e.kind : 'error'}
-                  </span>
-                  <span className="ts">{e.ts}</span>
-                  {e.source && (
-                    <span style={{fontFamily:'var(--mono)', fontSize:9, color: e.source === 'neo4j' ? '#22c55e' : '#9ca3af', marginLeft:4}}>
-                      {e.source === 'neo4j' ? '⬡ Aura' : '⬡ local'}
-                    </span>
-                  )}
+          {rightTab === 'cypher' ? (
+            <>
+              <div className="editor-wrap">
+                <div className="editor">
+                  <textarea
+                    ref={editorRef}
+                    value={editor}
+                    onChange={(e) => setEditor(e.target.value)}
+                    spellCheck={false}
+                    placeholder="// Escribe tu query en Cypher y presiona Run o Ctrl+Enter"
+                  />
                 </div>
-                <div className="query"
-                  dangerouslySetInnerHTML={{ __html: window.highlightCypher(e.query) }} />
-                {e.cypherUsed && (
-                  <div style={{fontFamily:'var(--mono)', fontSize:9, color:'var(--text-dim)', marginTop:2, wordBreak:'break-all'}}>
-                    ↳ {e.cypherUsed}
+                <div className="editor-bar">
+                  <button className="run-btn" onClick={() => runQuery(editor)}>
+                    ▸ Run
+                    <span className="kbd">⌘↵</span>
+                  </button>
+                  <button className="ghost-btn" onClick={() => setEditor('')}>limpiar</button>
+                  <span style={{marginLeft:'auto', fontFamily:'var(--mono)', fontSize:10, color:'var(--text-dim)'}}>
+                    {editor.length} chars
+                  </span>
+                </div>
+                <div className="preset-row">
+                  <span style={{color:'var(--text-dim)', fontFamily:'var(--mono)', fontSize:10, alignSelf:'center', marginRight:4}}>
+                    consultas del modelo:
+                  </span>
+                  {window.PRESET_QUERIES.map((p, i) => (
+                    <button key={i} className="preset-chip" onClick={() => { setEditor(p.query); runQuery(p.query); }}>
+                      {p.label}
+                      <span className="who">{p.who}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="log">
+                {log.length === 0 && (
+                  <div className="empty">
+                    Aún no hay queries.<br/>
+                    Usa el panel izquierdo o escribe Cypher arriba.
                   </div>
                 )}
-                {e.ok ? (
-                  <>
-                    <div className="summary">{e.summary}</div>
-                    {e.result && <ResultTable res={e.result} />}
-                  </>
-                ) : (
-                  <div className="err-msg">⚠ {e.error}</div>
-                )}
+                {log.map((e, i) => (
+                  <div key={i} className="log-entry">
+                    <div className="head">
+                      <span className={'badge ' + (e.ok ? (e.kind === 'write' || e.kind === 'auto' ? 'write' : 'read') : 'err')}>
+                        {e.ok ? e.kind : 'error'}
+                      </span>
+                      <span className="ts">{e.ts}</span>
+                      {e.source && (
+                        <span style={{fontFamily:'var(--mono)', fontSize:9, color: e.source === 'neo4j' ? '#22c55e' : '#9ca3af', marginLeft:4}}>
+                          {e.source === 'neo4j' ? '⬡ Aura' : '⬡ local'}
+                        </span>
+                      )}
+                    </div>
+                    <div className="query"
+                      dangerouslySetInnerHTML={{ __html: window.highlightCypher(e.query) }} />
+                    {e.cypherUsed && (
+                      <div style={{fontFamily:'var(--mono)', fontSize:9, color:'var(--text-dim)', marginTop:2, wordBreak:'break-all'}}>
+                        ↳ {e.cypherUsed}
+                      </div>
+                    )}
+                    {e.ok ? (
+                      <>
+                        <div className="summary">{e.summary}</div>
+                        {e.result && <ResultTable res={e.result} />}
+                      </>
+                    ) : (
+                      <div className="err-msg">⚠ {e.error}</div>
+                    )}
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </>
+          ) : (
+            <window.DataSciencePanel neo4jStatus={neo4jStatus} />
+          )}
         </div>
       </div>
 
