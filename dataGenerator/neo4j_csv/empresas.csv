@@ -1,501 +1,551 @@
 empresa_id,nombre,industria,pais,verificada,empleados_count,fecha_fundacion
-e0,EdgeLabs Inc,Logística,Argentina,false,55485,1987-06-04
-e1,OpenData Inc,Finanzas,Panamá,true,23503,1996-06-20
-e2,AlphaLabs LLC,Energía,Brasil,false,40326,2004-11-04
-e3,DeepBase S.A.,ONG,Venezuela,false,28032,1989-05-10
-e4,BlueOps Ltda,Finanzas,Costa Rica,false,16146,2010-09-09
-e5,SmartData S.R.L.,ONG,Paraguay,false,53043,2011-01-19
-e6,PeakBridge Corp,ONG,Argentina,true,25543,1999-06-17
-e7,FutureMind Corp,Turismo,Uruguay,true,49064,2015-10-21
-e8,BrightSystems LLC,Energía,El Salvador,false,11636,2009-04-26
-e9,PrimeForge S.A.,Educación,Brasil,true,21498,1986-02-23
-e10,FutureLogic Inc,Logística,Ecuador,true,24868,2021-08-31
-e11,NexusStream S.R.L.,Logística,Perú,true,27578,2010-05-15
-e12,RapidSoft Corp,Finanzas,Chile,true,42236,1995-10-09
-e13,CoreNet Inc,ONG,Cuba,true,33864,1992-06-01
-e14,BrightMind LLC,Manufactura,Ecuador,false,18450,1987-02-05
-e15,NexusForge S.R.L.,Manufactura,Guatemala,true,32956,2015-11-24
-e16,TechLabs Inc,Telecomunicaciones,Ecuador,true,67677,1997-07-06
-e17,AlphaGroup LLC,Consultoría,El Salvador,true,79262,2011-07-06
-e18,SwiftGroup Ltda,Tecnología,El Salvador,false,42094,1988-10-09
-e19,BlueBase S.R.L.,Medios,España,false,7556,2004-11-07
-e20,BlueBridge Ltda,Salud,Perú,true,16304,1986-04-28
-e21,TechNet Corp,Energía,Perú,true,24167,2019-09-12
-e22,ClearGroup LLC,Logística,Honduras,false,61202,1994-10-18
-e23,PeakLabs Inc,Seguros,México,false,52675,1998-05-27
-e24,FlexSolutions Inc,Tecnología,Perú,false,6872,1995-09-06
-e25,RapidSystems Corp,Medios,Chile,false,17740,2013-04-08
-e26,AlphaLabs S.R.L.,Finanzas,El Salvador,false,7041,1990-12-08
-e27,FlexBase S.A.,Agroindustria,El Salvador,false,66376,1992-06-29
-e28,ClearOps Inc,Retail,Panamá,true,56331,2022-04-02
-e29,CoreSolutions S.A.,Energía,Uruguay,true,66641,2014-09-18
-e30,OpenNet Corp,Agroindustria,Colombia,false,75202,2005-02-02
-e31,PrimeDynamics Ltda,Logística,Brasil,true,13705,2008-06-13
-e32,PeakByte S.R.L.,Logística,Brasil,false,78411,2020-06-02
-e33,SmartBase Ltda,Seguros,Paraguay,true,77247,2018-03-14
-e34,FutureDynamics Corp,Tecnología,Bolivia,true,18743,2021-12-10
-e35,ClearBridge Corp,Telecomunicaciones,España,true,29164,2011-06-28
-e36,PrimeNet S.A.,Retail,Argentina,true,71844,2011-04-11
-e37,BoldLabs S.R.L.,Educación,Costa Rica,false,73722,2000-03-24
-e38,EdgeBase S.A.,Tecnología,Colombia,true,59048,2004-08-07
-e39,CoreGroup LLC,Seguros,Bolivia,false,39354,1992-09-29
-e40,CoreDynamics Inc,Turismo,Nicaragua,false,8426,2008-01-12
-e41,SwiftData LLC,Retail,Perú,false,68935,2013-11-04
-e42,BoldMind S.A.,Medios,República Dominicana,false,8843,2002-05-27
-e43,SwiftSystems Inc,Salud,Perú,false,75446,2013-10-26
-e44,OpenNet61 S.R.L.,Transporte,Uruguay,true,42551,2008-02-12
-e45,ClearOps Ltda,Transporte,Brasil,false,25280,2015-06-05
-e46,BoldForge S.A.,Turismo,España,true,51779,2021-01-24
-e47,GlobalSystems Ltda,Finanzas,Brasil,true,54690,1988-10-02
-e48,RapidNet LLC,Tecnología,Argentina,false,42300,2000-12-26
-e49,BlueOps S.R.L.,Seguros,Paraguay,false,43335,2007-05-25
-e50,SwiftNet Corp,Medios,Panamá,false,46155,1989-06-25
-e51,CoreBase Inc,Agroindustria,Venezuela,true,907,1987-05-07
-e52,RapidData Inc,Medios,Nicaragua,false,69603,1990-12-16
-e53,AlphaSystems Corp,Salud,Paraguay,false,46265,1996-06-15
-e54,BlueWorks LLC,Manufactura,Venezuela,false,34090,1988-01-31
-e55,SwiftByte Ltda,Logística,Bolivia,true,18847,2020-12-17
-e56,PeakHub Ltda,Agroindustria,República Dominicana,false,2236,2007-12-29
-e57,EdgeDynamics Inc,Finanzas,Colombia,false,2615,1995-12-31
-e58,ClearHub S.A.,Consultoría,Venezuela,true,27818,2007-12-31
-e59,ClearSystems LLC,Finanzas,Costa Rica,true,70861,2012-06-06
-e60,BoldForge79 Corp,Salud,Perú,false,75820,1985-07-18
-e61,DeepBridge S.R.L.,Salud,Cuba,false,78178,2006-09-30
-e62,DeepMind LLC,Transporte,Costa Rica,true,72786,1997-01-20
-e63,GlobalHub Corp,ONG,Cuba,false,69036,1985-08-04
-e64,AlphaDynamics S.A.,Turismo,Perú,false,49508,2018-09-22
-e65,FlexSoft Ltda,Tecnología,Brasil,false,65318,2013-09-20
-e66,EdgeByte Corp,Tecnología,Costa Rica,true,18406,2014-07-06
-e67,ClearSolutions LLC,Transporte,Venezuela,true,5815,2020-12-13
-e68,EdgeLabs Corp,Seguros,Cuba,true,43542,2008-05-09
-e69,PrimeStream S.A.,Turismo,Perú,false,20138,1986-11-01
-e70,EdgeWorks Ltda,Turismo,Honduras,false,37457,2008-11-21
-e71,ClearOps Corp,Gobierno,Argentina,false,8751,2008-01-13
-e72,ClearBase S.R.L.,Seguros,Chile,true,494,2007-06-21
-e73,SwiftGroup42 S.R.L.,Seguros,Uruguay,false,13906,2010-08-05
-e74,ClearCorp LLC,Energía,Chile,false,4090,2018-01-20
-e75,OpenCloud Inc,Transporte,Chile,false,55058,2022-08-15
-e76,FlexSoft28 S.A.,Turismo,Perú,true,50334,2003-01-27
-e77,CoreByte LLC,Salud,Panamá,true,69429,2020-10-22
-e78,SmartOps Ltda,Seguros,España,false,19235,2002-02-11
-e79,OpenDynamics Ltda,Consultoría,Paraguay,true,55113,1991-11-08
-e80,EdgeGroup Inc,Retail,Ecuador,false,15613,2005-03-14
-e81,FutureData Ltda,Tecnología,España,true,29894,2006-02-25
-e82,DeepSystems S.A.,Agroindustria,Costa Rica,false,71071,2013-02-27
-e83,BrightSystems S.R.L.,Transporte,Honduras,false,76152,1999-06-28
-e84,PrimeLabs S.R.L.,Turismo,Paraguay,false,41161,1999-01-30
-e85,PeakByte Ltda,Salud,República Dominicana,true,59311,2018-08-06
-e86,PeakOps Ltda,Salud,Panamá,true,42006,2007-03-02
-e87,FutureSystems Ltda,Consultoría,Panamá,false,21983,2003-03-03
-e88,BoldHub Ltda,Transporte,República Dominicana,false,53883,1994-03-19
-e89,SwiftSolutions LLC,Tecnología,El Salvador,false,10400,1991-10-09
-e90,EdgeByte Inc,Educación,Chile,true,78997,1986-04-02
-e91,BlueLabs Ltda,Educación,España,false,12893,2007-11-30
-e92,NexusSolutions S.R.L.,Logística,Guatemala,false,50869,2017-01-31
-e93,FutureSystems S.A.,Finanzas,Honduras,true,28773,2006-07-31
-e94,NexusByte Ltda,Retail,Uruguay,true,29357,1997-05-01
-e95,SwiftBridge S.R.L.,Consultoría,Cuba,false,6068,1995-11-19
-e96,BlueSystems Inc,Logística,Costa Rica,false,66992,2012-07-20
-e97,ClearData S.R.L.,Energía,Perú,false,46450,2015-12-23
-e98,BrightSolutions Inc,Turismo,Ecuador,true,22398,2022-09-04
-e99,PeakWorks Corp,Medios,Costa Rica,true,41729,2004-09-26
-e100,DigitalLogic LLC,Salud,Nicaragua,false,79112,2015-04-21
-e101,EdgeData Corp,Transporte,Venezuela,true,40796,2001-06-29
-e102,SwiftCloud LLC,Educación,Colombia,false,8384,1998-11-04
-e103,FlexSystems S.R.L.,Educación,España,true,42307,1987-03-18
-e104,PeakNet Ltda,Turismo,Argentina,false,51592,2021-09-29
-e105,BoldStream S.A.,Finanzas,Brasil,false,59036,2012-09-19
-e106,BrightCloud S.A.,Retail,Ecuador,false,35007,2001-01-08
-e107,ClearData Corp,Transporte,Paraguay,false,75311,2021-05-06
-e108,AlphaSolutions LLC,Agroindustria,Paraguay,false,2847,1987-12-24
-e109,ClearHub LLC,Medios,El Salvador,true,65363,2007-09-13
-e110,PeakWorks76 Inc,Gobierno,Honduras,true,78839,2016-07-19
-e111,NexusOps LLC,Educación,Nicaragua,false,73352,2019-09-21
-e112,PeakSystems LLC,Salud,Costa Rica,false,39895,2013-10-28
-e113,CoreForge LLC,Manufactura,Bolivia,true,49281,2018-01-12
-e114,OpenLabs Ltda,Gobierno,Venezuela,true,76435,2004-06-01
-e115,RapidSolutions Inc,Telecomunicaciones,Bolivia,false,50381,2022-12-23
-e116,FlexBase Inc,Manufactura,Argentina,false,75022,2001-01-01
-e117,BoldSoft S.R.L.,Salud,El Salvador,false,79932,1990-02-26
-e118,ClearLabs Inc,Tecnología,Costa Rica,true,21186,1992-06-05
-e119,SmartData14 Inc,Salud,Bolivia,true,29884,2020-05-03
-e120,AlphaBase S.R.L.,Logística,Uruguay,true,77447,1996-06-12
-e121,BoldHub S.R.L.,Logística,Honduras,false,3395,2018-01-05
-e122,NexusByte S.R.L.,Retail,República Dominicana,false,37839,2014-10-22
-e123,EdgeHub S.A.,Retail,Paraguay,false,3885,2010-10-20
-e124,DeepNet S.R.L.,Manufactura,Argentina,true,54485,2001-12-01
-e125,BrightOps S.A.,ONG,Paraguay,false,57092,1988-07-01
-e126,TechGroup Corp,ONG,Ecuador,false,22802,2021-05-24
-e127,DigitalGroup LLC,Retail,Ecuador,false,77130,2009-05-31
-e128,DigitalLabs LLC,Turismo,Paraguay,true,55188,2006-11-26
-e129,OpenStream S.R.L.,Tecnología,Argentina,false,59299,2012-07-22
-e130,SmartDynamics LLC,Consultoría,Venezuela,false,15777,1997-04-22
-e131,AlphaSolutions Ltda,Manufactura,Perú,true,45945,1987-10-24
-e132,BrightSoft Inc,Gobierno,Paraguay,false,18374,2021-04-16
-e133,RapidSystems S.A.,ONG,Ecuador,false,16818,2002-01-11
-e134,PeakLabs Ltda,Gobierno,Uruguay,false,46673,2011-02-20
-e135,CoreCorp Inc,Turismo,Uruguay,false,12157,1998-05-25
-e136,FutureSystems29 Ltda,Medios,Guatemala,true,43856,2000-05-26
-e137,SmartHub Corp,Consultoría,Venezuela,false,63070,1991-04-24
-e138,CoreCloud Ltda,Energía,Brasil,true,39422,2006-01-12
-e139,EdgeForge S.A.,Transporte,Panamá,false,49551,2017-10-20
-e140,SmartLogic S.R.L.,Logística,Bolivia,true,19515,2001-01-15
-e141,SmartWorks Corp,Turismo,Nicaragua,false,77296,2021-12-16
-e142,BlueHub S.A.,Retail,Guatemala,false,1840,2011-02-28
-e143,BlueSoft LLC,Turismo,El Salvador,false,55705,1989-04-02
-e144,SwiftHub S.A.,Seguros,Panamá,true,7844,1989-06-25
-e145,BoldMind LLC,Salud,Bolivia,true,76332,1988-10-13
-e146,BlueLabs S.A.,Transporte,Ecuador,false,63105,2008-12-29
-e147,ClearCorp S.R.L.,Educación,Guatemala,false,71903,1988-06-25
-e148,BoldOps S.A.,Finanzas,Cuba,false,68757,1999-05-12
-e149,ClearSoft LLC,Medios,Honduras,true,53296,2013-10-24
-e150,BoldSolutions LLC,Agroindustria,Brasil,true,32042,2021-04-10
-e151,SmartLogic Corp,Manufactura,Perú,true,52995,1986-06-29
-e152,DigitalCorp LLC,Finanzas,Chile,false,43950,2014-01-09
-e153,BlueSolutions S.R.L.,Medios,España,true,37798,2018-03-27
-e154,GlobalWorks Corp,Retail,Guatemala,false,53599,2006-07-20
-e155,DigitalWorks Corp,Salud,Venezuela,false,77188,2010-05-29
-e156,NexusSolutions S.A.,ONG,Paraguay,true,26985,2018-03-16
-e157,SwiftGroup LLC,Retail,España,false,4906,1986-06-01
-e158,BlueForge Ltda,Retail,Chile,true,6195,2001-09-16
-e159,RapidGroup S.R.L.,Tecnología,Argentina,true,9909,1990-02-09
-e160,PeakBase Ltda,Consultoría,Perú,true,75491,1989-07-14
-e161,PeakForge S.R.L.,Manufactura,Panamá,true,67777,2001-12-29
-e162,GlobalHub LLC,Energía,Cuba,false,43989,2022-05-05
-e163,ClearSoft Corp,Retail,Perú,false,24346,2007-06-16
-e164,RapidSoft80 Inc,Agroindustria,Guatemala,true,34574,2011-03-08
-e165,SwiftBridge Inc,Telecomunicaciones,Venezuela,true,7154,2017-09-25
-e166,DeepLogic LLC,Agroindustria,Honduras,false,31795,1997-05-31
-e167,DeepCloud S.R.L.,Gobierno,Chile,false,30425,2000-12-24
-e168,RapidLabs Corp,Manufactura,Uruguay,false,48628,2021-07-08
-e169,BlueByte S.A.,Transporte,El Salvador,false,20680,2001-08-02
-e170,EdgeData S.A.,Agroindustria,Paraguay,false,13802,1996-12-16
-e171,FlexLogic LLC,Energía,Uruguay,false,20883,1997-12-11
-e172,BrightBase Inc,Agroindustria,Costa Rica,true,44320,1994-05-08
-e173,BoldByte S.R.L.,Agroindustria,España,false,32757,1991-11-30
-e174,AlphaHub S.R.L.,ONG,El Salvador,true,39044,1989-08-19
-e175,BlueMind S.A.,Manufactura,Honduras,false,25767,2018-06-02
-e176,BoldForge Corp,Transporte,Perú,false,53857,2009-08-10
-e177,BlueData S.R.L.,Agroindustria,Ecuador,true,54137,2020-03-16
-e178,GlobalNet S.R.L.,Retail,Bolivia,false,77373,2013-08-29
-e179,EdgeStream Ltda,Salud,Paraguay,true,46473,1995-01-28
-e180,SwiftLabs S.A.,ONG,Nicaragua,true,60552,1988-12-19
-e181,TechForge S.A.,Logística,Perú,false,17154,2002-01-10
-e182,DigitalMind S.R.L.,Manufactura,Guatemala,true,35906,2009-01-21
-e183,FutureBridge Inc,Tecnología,República Dominicana,true,50682,2017-10-31
-e184,PrimeByte LLC,Educación,España,true,37427,2002-11-12
-e185,PeakByte Corp,Turismo,Uruguay,true,42387,2013-10-26
-e186,PrimeGroup S.R.L.,Manufactura,Uruguay,false,45160,2018-09-03
-e187,RapidHub LLC,Educación,Honduras,true,76697,2021-03-07
-e188,DeepSoft S.A.,Telecomunicaciones,Uruguay,false,66283,2022-12-21
-e189,SmartWorks LLC,Agroindustria,Uruguay,false,74348,2005-08-23
-e190,SmartStream Inc,Turismo,Guatemala,false,72191,1995-01-22
-e191,PeakDynamics LLC,Educación,México,true,51079,1989-10-27
-e192,CoreLogic Ltda,Tecnología,Argentina,false,32371,2010-06-19
-e193,FutureBase S.R.L.,Finanzas,Colombia,true,29687,1995-05-23
-e194,PrimeBase LLC,Logística,Paraguay,false,26895,2015-10-04
-e195,PrimeCloud S.A.,Consultoría,México,false,11624,2017-09-03
-e196,DigitalLabs Inc,Logística,Cuba,true,4951,1988-04-25
-e197,PrimeCloud15 Inc,Tecnología,Bolivia,true,3275,1987-02-19
-e198,AlphaCorp S.A.,Retail,Nicaragua,false,54666,1990-05-05
-e199,RapidCloud S.A.,Salud,Cuba,true,32312,1998-02-05
-e200,NexusWorks LLC,Transporte,Nicaragua,false,39641,2009-10-30
-e201,PrimeGroup S.A.,Telecomunicaciones,Costa Rica,true,9799,2004-02-01
-e202,DigitalMind Ltda,Educación,El Salvador,true,26933,2009-05-20
-e203,RapidSystems43 Inc,Educación,Colombia,false,15215,1994-02-13
-e204,NexusWorks Ltda,Consultoría,Guatemala,true,39784,2005-10-24
-e205,TechCorp Ltda,Salud,Bolivia,true,15637,1990-12-12
-e206,BoldOps S.R.L.,Consultoría,Costa Rica,true,63524,2016-04-10
-e207,SmartStream LLC,Agroindustria,El Salvador,false,64347,2002-01-27
-e208,AlphaBridge LLC,Salud,Ecuador,true,4926,2013-08-01
-e209,FlexSoft16 S.R.L.,ONG,Argentina,false,22203,1996-03-11
-e210,NexusWorks Corp,Consultoría,México,true,31135,1988-09-12
-e211,BlueHub Corp,Finanzas,Paraguay,false,24329,2002-06-06
-e212,SmartBridge Ltda,Transporte,Panamá,false,21927,1999-07-01
-e213,CoreMind S.R.L.,Consultoría,Colombia,true,18219,2013-05-25
-e214,OpenSoft Inc,Salud,Honduras,false,68245,2008-08-01
-e215,OpenBridge Inc,Consultoría,Nicaragua,true,7658,1986-05-17
-e216,OpenWorks Ltda,Medios,Paraguay,false,45605,2014-10-05
-e217,RapidHub Corp,Gobierno,Nicaragua,false,19099,1993-04-07
-e218,BrightLabs Inc,Retail,Uruguay,false,17477,2019-02-10
-e219,OpenNet5 Corp,ONG,Guatemala,false,2966,2014-10-04
-e220,DigitalLabs Corp,Transporte,Argentina,true,677,2021-09-17
-e221,RapidData S.R.L.,Agroindustria,Chile,false,5321,2020-04-28
-e222,SwiftOps S.A.,Tecnología,Guatemala,false,53641,2009-04-16
-e223,FutureSystems S.R.L.,Transporte,Argentina,false,17780,2009-01-21
-e224,NexusSolutions Inc,Agroindustria,Chile,true,65742,2017-04-21
-e225,GlobalWorks86 LLC,Retail,Ecuador,true,72389,1991-08-24
-e226,CoreCorp Ltda,Retail,Bolivia,true,70271,1997-06-17
-e227,FlexDynamics LLC,Seguros,Perú,false,79439,2011-07-07
-e228,FutureSoft S.A.,Tecnología,Venezuela,true,5123,2017-07-31
-e229,BoldBase Inc,Educación,Ecuador,false,13350,2016-08-09
-e230,GlobalForge Corp,Tecnología,Costa Rica,true,41780,2019-12-24
-e231,BrightGroup LLC,Seguros,Brasil,true,1013,2020-07-04
-e232,ClearSoft S.A.,Gobierno,El Salvador,true,78495,2019-01-21
-e233,BrightData LLC,Tecnología,España,true,9550,1986-01-24
-e234,AlphaWorks Ltda,Consultoría,Costa Rica,true,39499,1988-06-18
-e235,FutureDynamics LLC,Seguros,Argentina,false,37747,2006-01-23
-e236,BoldBridge Inc,Consultoría,España,true,22985,1988-10-24
-e237,SwiftCloud Ltda,Energía,Guatemala,false,29109,2018-11-30
-e238,OpenMind Ltda,Tecnología,Ecuador,false,73188,2011-04-02
-e239,GlobalGroup S.A.,Energía,Cuba,false,32854,1995-09-30
-e240,RapidStream Ltda,Tecnología,Costa Rica,false,72433,1999-07-01
-e241,OpenMind Corp,Consultoría,Guatemala,false,24464,2010-11-01
-e242,TechBridge Ltda,Agroindustria,Brasil,true,39074,2001-02-12
-e243,NexusData Ltda,Agroindustria,Guatemala,false,8749,2017-08-26
-e244,DigitalNet Corp,Agroindustria,Honduras,true,30619,2005-04-17
-e245,PrimeLogic Inc,Finanzas,Colombia,false,41736,1991-06-16
-e246,BrightBridge S.A.,Energía,Paraguay,true,39179,2011-05-14
-e247,BoldSystems LLC,Gobierno,Ecuador,true,67122,1997-07-30
-e248,PeakMind S.R.L.,ONG,Cuba,true,52146,1998-04-08
-e249,PrimeSoft Inc,Logística,Chile,false,1209,2008-11-04
-e250,AlphaCorp LLC,Retail,Venezuela,true,27874,1998-07-11
-e251,SwiftSolutions S.A.,Transporte,Colombia,false,16527,1998-10-23
-e252,GlobalDynamics Corp,Energía,Uruguay,true,42952,2008-12-24
-e253,BlueDynamics Inc,Consultoría,Brasil,true,50364,1992-10-23
-e254,FlexByte Inc,Tecnología,Chile,false,21576,2001-07-20
-e255,BrightSystems99 LLC,Energía,España,false,78624,1998-01-22
-e256,OpenCorp LLC,Salud,Costa Rica,true,68870,2002-05-10
-e257,EdgeSystems Corp,Tecnología,España,false,51430,1993-03-31
-e258,FutureStream S.A.,Turismo,Chile,true,63628,1998-04-04
-e259,CoreStream LLC,Retail,Guatemala,false,11414,2003-04-09
-e260,BrightCloud LLC,Educación,Panamá,true,77387,1992-11-25
-e261,RapidNet Ltda,Telecomunicaciones,El Salvador,true,51942,1994-12-05
-e262,NexusLogic S.A.,Telecomunicaciones,Argentina,true,76866,1992-01-15
-e263,SwiftSystems Corp,Gobierno,Guatemala,true,19831,1987-01-09
-e264,ClearWorks S.R.L.,Finanzas,Argentina,true,31928,1994-06-30
-e265,OpenStream LLC,Logística,Cuba,false,11118,2012-01-31
-e266,DigitalSolutions S.A.,Tecnología,Chile,false,56408,1989-06-18
-e267,RapidGroup LLC,Medios,Uruguay,false,64527,1987-11-15
-e268,SwiftLogic Corp,Consultoría,Guatemala,false,75948,2012-11-20
-e269,NexusForge S.A.,Consultoría,Panamá,true,17929,2018-04-29
-e270,EdgeLabs85 S.R.L.,Turismo,Honduras,true,37347,1999-11-15
-e271,RapidSoft Inc,Consultoría,Ecuador,false,1694,2020-02-05
-e272,GlobalStream Corp,Gobierno,Perú,true,10532,2015-01-22
-e273,BrightMind Inc,Agroindustria,Paraguay,false,7666,2000-06-16
-e274,CoreMind99 Inc,Salud,España,true,75441,1992-03-08
-e275,BoldLabs84 Corp,Logística,República Dominicana,true,53327,2014-09-15
-e276,SmartStream S.A.,Retail,España,true,9086,2015-04-16
-e277,GlobalNet Inc,Turismo,Guatemala,false,62639,2013-05-18
-e278,ClearHub Corp,Energía,España,true,26017,2015-09-06
-e279,FlexWorks Ltda,Gobierno,Brasil,true,9396,1991-03-12
-e280,RapidData38 S.R.L.,Seguros,Panamá,false,28933,2007-05-04
-e281,SmartLabs Corp,Retail,Cuba,false,25249,1985-12-20
-e282,DigitalSolutions S.R.L.,Energía,Honduras,false,32208,2010-07-24
-e283,BoldByte21 LLC,Salud,Perú,true,34043,2004-08-14
-e284,OpenStream82 Ltda,ONG,Uruguay,true,16631,2006-06-23
-e285,BoldBase S.A.,Logística,República Dominicana,true,65143,2003-07-08
-e286,BlueByte45 LLC,Seguros,España,true,12363,1989-05-31
-e287,PrimeSolutions Inc,Gobierno,Chile,false,51510,1998-02-19
-e288,CoreBridge Inc,Energía,Panamá,true,18949,2006-11-19
-e289,CoreBase Corp,Gobierno,Ecuador,true,64105,2022-06-07
-e290,OpenNet98 Inc,Logística,Paraguay,false,69338,2004-10-18
-e291,SwiftSoft Ltda,Agroindustria,Chile,true,36537,2021-07-09
-e292,DeepSoft S.R.L.,Gobierno,Argentina,true,40226,2003-04-01
-e293,NexusDynamics S.A.,Agroindustria,Brasil,true,74391,2003-10-15
-e294,BlueNet Ltda,Medios,Argentina,true,7118,2003-12-02
-e295,NexusOps Inc,Logística,Chile,true,41897,2016-07-01
-e296,TechStream Inc,Telecomunicaciones,Venezuela,false,18161,1988-04-10
-e297,NexusByte S.A.,Consultoría,Paraguay,false,582,1993-05-07
-e298,NexusHub Corp,Logística,Honduras,true,37611,2000-06-21
-e299,FlexByte19 Corp,Educación,Nicaragua,false,6817,2005-08-03
-e300,TechHub LLC,Seguros,España,true,38362,2005-04-24
-e301,BoldGroup LLC,Telecomunicaciones,Honduras,true,7363,2010-06-15
-e302,PrimeDynamics S.A.,ONG,El Salvador,false,58372,1985-07-12
-e303,RapidHub Inc,Energía,España,false,26284,1985-03-13
-e304,GlobalLabs LLC,Retail,Guatemala,true,67904,1998-02-09
-e305,SwiftBase LLC,ONG,Venezuela,true,26826,2018-10-07
-e306,PeakBridge Inc,ONG,Guatemala,true,70822,2012-02-25
-e307,RapidMind S.R.L.,Salud,Perú,false,1153,2000-01-20
-e308,PrimeStream Corp,Agroindustria,Cuba,true,3159,2010-03-23
-e309,OpenBridge Corp,Finanzas,Argentina,true,19090,1996-09-25
-e310,FutureLogic S.A.,Telecomunicaciones,Panamá,true,129,1988-06-22
-e311,GlobalDynamics52 S.A.,Logística,Panamá,true,70905,1987-03-11
-e312,PeakData S.R.L.,Seguros,Brasil,true,37475,1996-06-14
-e313,SmartSystems Corp,Finanzas,Venezuela,true,8382,2000-08-20
-e314,RapidNet45 S.A.,Telecomunicaciones,Costa Rica,true,68487,2013-06-15
-e315,GlobalBase Ltda,Telecomunicaciones,El Salvador,false,60051,1999-05-06
-e316,OpenData S.A.,Telecomunicaciones,México,true,13524,2003-02-03
-e317,SwiftDynamics Inc,Consultoría,Honduras,true,63849,2022-09-19
-e318,BrightCloud Corp,Finanzas,Colombia,true,20295,2005-10-02
-e319,GlobalNet Ltda,Seguros,República Dominicana,true,63413,2016-06-24
-e320,GlobalBridge S.A.,Educación,Panamá,false,55622,2020-11-01
-e321,SwiftBridge S.A.,Salud,Brasil,false,50522,2004-09-03
-e322,OpenByte S.R.L.,Seguros,Perú,true,20959,2003-07-26
-e323,SmartMind S.A.,Medios,Guatemala,false,70305,1994-04-21
-e324,OpenHub Corp,Gobierno,República Dominicana,true,77088,2000-08-07
-e325,ClearDynamics Inc,Retail,República Dominicana,false,32373,2001-05-12
-e326,EdgeForge Ltda,Seguros,Chile,false,20879,2002-05-27
-e327,RapidGroup S.A.,Turismo,El Salvador,false,73352,1986-12-11
-e328,SmartDynamics Ltda,Transporte,Paraguay,false,71844,2006-10-02
-e329,FutureHub S.A.,Telecomunicaciones,Guatemala,true,67569,2000-04-18
-e330,PeakCorp Inc,Manufactura,El Salvador,false,56370,2011-07-31
-e331,BoldForge42 S.A.,Gobierno,México,true,41944,1990-08-23
-e332,SwiftLogic56 S.A.,Energía,Guatemala,false,24971,1985-05-06
-e333,BoldByte Inc,Retail,Guatemala,false,29338,2009-12-03
-e334,CoreMind Inc,Logística,Honduras,true,15852,2019-02-03
-e335,SwiftSoft LLC,Medios,España,false,66064,2002-06-29
-e336,PeakSolutions Ltda,Finanzas,Guatemala,false,10881,1991-07-28
-e337,SmartSystems LLC,Transporte,España,true,38702,2015-04-15
-e338,AlphaMind LLC,Finanzas,Panamá,false,58603,2006-01-25
-e339,GlobalStream S.R.L.,Agroindustria,Argentina,false,14209,2001-11-16
-e340,OpenStream Inc,Gobierno,Uruguay,false,59681,2003-03-31
-e341,AlphaSystems Ltda,ONG,Nicaragua,true,25539,1997-11-25
-e342,PrimeSolutions S.A.,Gobierno,España,true,36913,1991-03-18
-e343,RapidLogic LLC,Turismo,Cuba,true,23904,1990-09-15
-e344,SmartByte S.A.,Transporte,Ecuador,true,60126,1985-12-15
-e345,OpenSoft87 LLC,Agroindustria,México,true,43863,2007-02-09
-e346,DeepWorks S.A.,Medios,México,true,5758,1988-02-09
-e347,RapidGroup Inc,Tecnología,Guatemala,true,17645,2003-01-02
-e348,OpenCloud Ltda,Telecomunicaciones,Venezuela,false,44084,2011-10-27
-e349,BrightCloud30 Corp,Consultoría,Nicaragua,true,46954,2007-01-26
-e350,SmartStream15 Corp,ONG,El Salvador,true,33059,2002-03-31
-e351,EdgeData Inc,ONG,Bolivia,true,20426,1986-01-11
-e352,PeakLabs90 LLC,Agroindustria,Paraguay,false,19179,2019-12-06
-e353,SwiftGroup Corp,ONG,República Dominicana,false,34595,2011-07-27
-e354,CoreMind18 Corp,Tecnología,México,true,18523,1985-12-07
-e355,BoldNet S.R.L.,Finanzas,Colombia,false,49422,2020-06-07
-e356,TechDynamics S.A.,Tecnología,República Dominicana,false,36684,1994-05-09
-e357,NexusMind S.A.,ONG,Perú,true,25981,1995-07-09
-e358,BlueBridge S.R.L.,Telecomunicaciones,Uruguay,true,1696,1989-01-04
-e359,DigitalSystems S.R.L.,Finanzas,Brasil,true,68996,2021-10-26
-e360,FutureByte LLC,Salud,República Dominicana,false,68303,1990-02-11
-e361,TechSoft Ltda,Finanzas,Chile,true,44040,2016-05-10
-e362,PrimeLabs Corp,Manufactura,Cuba,true,30171,1987-03-20
-e363,PrimeForge S.R.L.,Turismo,Paraguay,false,11612,1995-11-17
-e364,ClearNet LLC,Tecnología,Nicaragua,true,18403,1991-02-25
-e365,ClearData S.A.,Gobierno,Brasil,false,60154,2016-04-14
-e366,PrimeOps S.A.,Gobierno,Ecuador,true,11580,1986-08-19
-e367,OpenCloud LLC,Energía,Guatemala,false,65178,1994-02-05
-e368,FutureOps Ltda,Seguros,Bolivia,true,12417,2010-01-07
-e369,DeepWorks S.R.L.,Consultoría,España,false,79492,1995-06-11
-e370,FlexBridge S.R.L.,Gobierno,Guatemala,true,53164,2021-06-09
-e371,FlexBridge Inc,Educación,Nicaragua,false,62756,2002-11-10
-e372,NexusData29 Inc,Energía,Paraguay,false,3231,1988-12-09
-e373,RapidCorp Inc,ONG,Chile,true,24137,2004-01-27
-e374,ClearBridge Inc,Seguros,Nicaragua,true,74704,2016-05-14
-e375,PeakOps S.R.L.,ONG,Colombia,false,42590,1992-08-01
-e376,CoreCloud S.R.L.,Tecnología,Honduras,false,76134,2011-03-09
-e377,EdgeDynamics Ltda,Educación,España,false,44757,2012-12-03
-e378,FlexMind Inc,Retail,Paraguay,false,79080,2022-07-02
-e379,FlexNet Corp,Tecnología,República Dominicana,true,73022,2001-07-27
-e380,BoldSolutions Corp,Tecnología,Colombia,false,16367,2019-09-08
-e381,BrightWorks Inc,Medios,El Salvador,true,74938,1988-02-21
-e382,NexusByte Corp,ONG,Panamá,true,70052,2008-11-26
-e383,BrightLabs S.R.L.,Educación,Bolivia,false,5171,1987-07-08
-e384,OpenSystems S.A.,Manufactura,Venezuela,false,77914,2016-07-31
-e385,CoreData Inc,Logística,Panamá,false,6536,2013-02-06
-e386,EdgeSolutions LLC,Telecomunicaciones,Guatemala,true,13336,2017-10-18
-e387,NexusDynamics S.R.L.,Tecnología,Colombia,false,4745,2007-02-18
-e388,PrimeCorp Ltda,Tecnología,Uruguay,false,19570,1993-02-16
-e389,CoreForge54 Ltda,Telecomunicaciones,Argentina,true,50399,1992-07-17
-e390,DigitalSolutions Inc,Telecomunicaciones,Guatemala,true,34308,2020-03-27
-e391,CoreNet S.R.L.,Agroindustria,España,false,75273,2005-03-29
-e392,OpenForge Inc,Consultoría,Guatemala,false,64866,2020-01-28
-e393,SmartBase Corp,ONG,Cuba,false,53488,2015-06-06
-e394,FlexBase94 Inc,Logística,Perú,false,39846,1996-05-10
-e395,OpenForge Corp,Medios,Colombia,false,49924,2014-05-25
-e396,ClearCloud Ltda,Agroindustria,Panamá,true,35093,2007-09-24
-e397,PeakSoft Ltda,Energía,Panamá,false,20984,2003-09-07
-e398,FlexHub Inc,ONG,Bolivia,false,31511,1991-12-03
-e399,TechOps Inc,Gobierno,Nicaragua,false,609,2007-10-14
-e400,FutureSoft LLC,Manufactura,Paraguay,true,33016,1998-06-29
-e401,EdgeBridge Ltda,Medios,República Dominicana,true,46675,1986-01-25
-e402,AlphaDynamics48 S.R.L.,Finanzas,Cuba,true,69741,1997-01-27
-e403,RapidOps LLC,Tecnología,México,false,25840,1997-07-30
-e404,CoreStream74 S.A.,Turismo,Honduras,true,64238,1991-05-14
-e405,DeepDynamics Corp,Gobierno,Guatemala,true,73702,1986-04-14
-e406,SmartBridge LLC,Medios,República Dominicana,false,14419,2000-11-23
-e407,DigitalGroup S.R.L.,Tecnología,Bolivia,false,3045,2014-07-07
-e408,CoreCloud S.A.,Consultoría,Perú,false,29760,1987-11-27
-e409,NexusOps Ltda,Transporte,Ecuador,true,64428,2012-10-31
-e410,BlueHub94 S.R.L.,Educación,Argentina,true,31336,2014-06-19
-e411,OpenByte S.A.,Transporte,Chile,false,46929,1993-04-14
-e412,BrightBase LLC,Agroindustria,Uruguay,true,45091,1989-12-24
-e413,DigitalData Corp,Logística,Ecuador,true,72624,2017-01-26
-e414,OpenLogic Corp,Medios,Colombia,false,56553,1986-11-03
-e415,FutureLabs Ltda,Energía,Costa Rica,true,10285,2006-05-20
-e416,AlphaLogic Corp,Medios,Ecuador,false,4106,2019-04-24
-e417,ClearGroup Inc,Manufactura,República Dominicana,true,54500,2005-06-10
-e418,PeakForge Inc,Transporte,Uruguay,true,18412,2022-12-11
-e419,SmartDynamics Inc,Gobierno,Paraguay,true,55768,1996-07-18
-e420,GlobalCorp Inc,Tecnología,Nicaragua,false,68917,1990-04-26
-e421,SwiftOps Inc,Manufactura,Guatemala,true,55570,2010-08-13
-e422,EdgeLabs Ltda,Agroindustria,Ecuador,true,30795,2012-09-28
-e423,FutureDynamics S.A.,Agroindustria,El Salvador,true,40742,2000-01-21
-e424,DigitalDynamics S.R.L.,Retail,España,false,57775,1995-03-18
-e425,GlobalCorp LLC,Transporte,Ecuador,true,40455,2007-07-11
-e426,OpenLabs S.R.L.,Consultoría,España,true,19048,2001-07-26
-e427,FutureForge Inc,Consultoría,Panamá,true,18983,2009-10-21
-e428,CoreForge S.A.,Energía,Venezuela,true,61794,2001-03-25
-e429,OpenOps Inc,Turismo,Chile,true,14454,2017-03-23
-e430,BlueSoft Ltda,Tecnología,Bolivia,false,25448,1988-10-25
-e431,SwiftHub S.R.L.,Consultoría,Ecuador,false,48835,1995-02-04
-e432,SmartSystems S.R.L.,Manufactura,Brasil,false,63402,1990-04-29
-e433,GlobalDynamics S.A.,Agroindustria,España,true,61312,2012-02-20
-e434,NexusNet Corp,Salud,Honduras,true,21207,2007-11-05
-e435,GlobalBridge LLC,Salud,México,false,29971,2021-10-15
-e436,FutureGroup LLC,Educación,Brasil,true,52054,2010-06-12
-e437,SmartDynamics29 S.R.L.,Turismo,Paraguay,false,14940,2019-09-02
-e438,TechLogic LLC,Seguros,Honduras,false,138,2004-10-30
-e439,AlphaLogic Ltda,Salud,Panamá,true,7412,1996-05-29
-e440,PrimeDynamics3 LLC,Tecnología,España,false,68264,1995-12-13
-e441,BoldMind Ltda,Finanzas,Perú,false,45389,1987-06-25
-e442,CoreStream Corp,Seguros,Uruguay,false,51993,1987-02-13
-e443,EdgeSystems3 Ltda,Telecomunicaciones,Venezuela,false,60203,2015-06-24
-e444,OpenSoft S.R.L.,Salud,República Dominicana,true,31479,2020-05-20
-e445,ClearCloud14 S.A.,Salud,Ecuador,true,58521,1992-09-27
-e446,SmartSystems14 LLC,Energía,Venezuela,false,7888,1989-07-06
-e447,BoldSoft LLC,Retail,Guatemala,true,30814,2009-01-07
-e448,BoldCorp Corp,Energía,Chile,true,72122,2018-03-16
-e449,PeakLabs S.R.L.,ONG,Nicaragua,true,53890,1994-12-21
-e450,ClearSolutions70 Ltda,Salud,El Salvador,true,49866,2011-12-05
-e451,TechOps S.R.L.,Seguros,Brasil,false,63723,2004-03-21
-e452,FlexCorp S.A.,Finanzas,Guatemala,false,16970,1988-08-16
-e453,PrimeWorks S.A.,Logística,Guatemala,false,14970,2004-06-15
-e454,EdgeBase Ltda,Gobierno,Guatemala,false,13667,1993-02-02
-e455,PeakOps S.A.,Seguros,Panamá,true,14444,2020-01-15
-e456,DeepLabs Ltda,Transporte,Bolivia,false,34028,2001-04-20
-e457,ClearStream Inc,Retail,Cuba,false,45114,2000-03-07
-e458,RapidWorks Ltda,Manufactura,Honduras,false,65351,1988-07-06
-e459,EdgeOps Inc,Educación,Nicaragua,false,18539,2022-12-21
-e460,ClearForge Ltda,Gobierno,Uruguay,true,17635,2018-04-17
-e461,RapidNet Inc,Energía,Guatemala,false,47648,2007-03-07
-e462,PeakOps27 Ltda,Seguros,El Salvador,false,6109,1992-06-10
-e463,NexusHub S.R.L.,Consultoría,Uruguay,true,39584,1998-05-01
-e464,RapidNet65 Inc,Telecomunicaciones,Perú,true,38919,2015-07-03
-e465,GlobalLabs Inc,Agroindustria,Argentina,false,22831,2013-02-02
-e466,GlobalLogic LLC,Consultoría,Nicaragua,true,14781,2011-12-17
-e467,RapidCloud S.R.L.,Agroindustria,Perú,false,34341,2006-07-01
-e468,TechBase Inc,Medios,Uruguay,false,77756,2007-11-26
-e469,FlexSolutions LLC,ONG,República Dominicana,true,401,1986-04-09
-e470,PrimeCloud LLC,Logística,Cuba,true,52643,2017-09-12
-e471,EdgeLabs75 LLC,Retail,Cuba,true,21986,2006-08-25
-e472,DigitalNet78 LLC,Transporte,Colombia,true,34642,1987-03-29
-e473,RapidGroup Ltda,Educación,Colombia,false,22336,1990-10-03
-e474,SwiftCorp Corp,Logística,Argentina,true,2686,1988-12-04
-e475,BoldWorks Inc,ONG,México,false,43875,2015-05-18
-e476,BrightData Ltda,Seguros,Venezuela,false,37347,2011-02-03
-e477,FutureOps78 S.A.,Medios,Chile,true,13963,2006-12-30
-e478,GlobalWorks71 Inc,Medios,Paraguay,false,67745,2018-02-04
-e479,GlobalCloud Ltda,Educación,Guatemala,false,10098,2007-02-04
-e480,PeakDynamics Inc,Energía,Argentina,false,26239,2022-03-11
-e481,GlobalCorp Ltda,Turismo,Panamá,false,58813,2021-09-10
-e482,CoreBridge S.A.,Agroindustria,Cuba,false,79806,2003-06-01
-e483,PeakMind Ltda,Seguros,Colombia,true,75239,2022-08-24
-e484,PeakData92 Ltda,Finanzas,Uruguay,true,6217,1990-02-08
-e485,PeakSolutions Inc,Salud,Paraguay,false,45630,1993-06-16
-e486,CoreWorks Inc,Energía,Perú,false,15808,2020-12-28
-e487,EdgeLabs80 Ltda,Medios,Venezuela,true,5961,1998-12-05
-e488,FutureSystems LLC,Logística,Chile,false,38788,2001-09-01
-e489,SwiftDynamics Ltda,Energía,Costa Rica,false,30735,2015-07-05
-e490,FutureByte Ltda,Educación,España,false,36507,2017-11-10
-e491,PeakStream S.R.L.,Retail,España,false,44839,1989-10-01
-e492,BrightBase S.A.,Manufactura,Costa Rica,true,33310,2022-04-29
-e493,FlexBridge LLC,Educación,Chile,true,53201,2021-05-21
-e494,DigitalWorks S.R.L.,ONG,Ecuador,false,46934,1996-08-01
-e495,GlobalHub S.R.L.,Transporte,Costa Rica,true,12306,1999-01-31
-e496,RapidHub S.A.,Energía,Guatemala,false,78366,2002-12-10
-e497,SwiftDynamics7 S.R.L.,Agroindustria,Bolivia,false,75939,2009-02-24
-e498,BrightGroup S.R.L.,Transporte,México,true,14114,2005-09-04
-e499,FlexHub Corp,Salud,Paraguay,false,66623,1987-11-21
+e0,FlexGroup S.R.L.,Agroindustria,Paraguay,false,19179,2019-12-06
+e1,SwiftGroup Corp,ONG,República Dominicana,false,34595,2011-07-27
+e2,CoreMind S.R.L.,Retail,Bolivia,true,5173,2021-05-16
+e3,DigitalGroup S.A.,ONG,México,true,39881,2014-11-25
+e4,RapidSolutions Corp,Salud,Brasil,true,73341,2019-05-08
+e5,BlueBase LLC,Retail,El Salvador,true,52523,2014-03-27
+e6,PeakSystems S.R.L.,Telecomunicaciones,Ecuador,false,55166,2022-11-27
+e7,PeakNet Ltda,Telecomunicaciones,Guatemala,true,7640,1987-07-21
+e8,DigitalByte S.A.,Seguros,Cuba,true,8656,2009-10-23
+e9,BrightData S.A.,Tecnología,Bolivia,true,22749,2008-08-17
+e10,EdgeDynamics S.R.L.,Transporte,Colombia,false,71281,2011-12-03
+e11,CoreStream S.R.L.,Finanzas,Cuba,true,6480,1996-10-10
+e12,EdgeOps Inc,Agroindustria,Colombia,true,54730,2002-09-02
+e13,CoreCloud S.R.L.,Tecnología,Nicaragua,true,18403,1991-02-25
+e14,ClearData S.A.,Gobierno,Brasil,false,60154,2016-04-14
+e15,PrimeOps S.A.,Gobierno,Ecuador,true,11580,1986-08-19
+e16,OpenCloud LLC,Energía,Guatemala,false,65178,1994-02-05
+e17,FutureOps Ltda,Seguros,Bolivia,true,12417,2010-01-07
+e18,DeepWorks S.R.L.,Consultoría,España,false,79492,1995-06-11
+e19,FlexBridge S.R.L.,Gobierno,Guatemala,true,53164,2021-06-09
+e20,FlexBridge Inc,Educación,Nicaragua,false,62756,2002-11-10
+e21,NexusData Ltda,Telecomunicaciones,Paraguay,true,56691,2009-06-09
+e22,SwiftLogic S.A.,Salud,Uruguay,true,60288,2003-01-05
+e23,CoreByte LLC,Manufactura,Paraguay,false,57023,2004-11-29
+e24,SwiftData S.A.,Telecomunicaciones,Honduras,false,11233,2002-09-23
+e25,BlueCorp LLC,Tecnología,Honduras,false,76134,2011-03-09
+e26,EdgeDynamics Ltda,Educación,España,false,44757,2012-12-03
+e27,FlexMind Inc,Retail,Paraguay,false,79080,2022-07-02
+e28,FlexNet Corp,Tecnología,República Dominicana,true,73022,2001-07-27
+e29,BoldSolutions Corp,Tecnología,Colombia,false,16367,2019-09-08
+e30,BrightWorks Inc,Medios,El Salvador,true,74938,1988-02-21
+e31,NexusByte Corp,ONG,Panamá,true,70052,2008-11-26
+e32,BrightLabs S.R.L.,Educación,Bolivia,false,5171,1987-07-08
+e33,OpenSystems S.A.,Manufactura,Venezuela,false,77914,2016-07-31
+e34,CoreData Inc,Logística,Panamá,false,6536,2013-02-06
+e35,EdgeSolutions LLC,Telecomunicaciones,Guatemala,true,13336,2017-10-18
+e36,NexusDynamics S.R.L.,Tecnología,Colombia,false,4745,2007-02-18
+e37,PrimeCorp Ltda,Tecnología,Uruguay,false,19570,1993-02-16
+e38,CoreForge LLC,Agroindustria,Cuba,true,15616,2013-06-10
+e39,BoldSolutions Inc,Manufactura,México,true,65346,2013-08-30
+e40,PeakSolutions LLC,Transporte,Chile,false,55515,1991-03-26
+e41,PrimeByte Inc,Gobierno,Ecuador,false,37795,1986-02-12
+e42,BlueMind S.R.L.,Salud,Venezuela,false,51262,2014-10-04
+e43,FutureLogic Inc,Logística,Venezuela,true,49873,2009-05-07
+e44,FlexHub Corp,Consultoría,Venezuela,false,28697,1996-05-30
+e45,BlueLabs Corp,ONG,Paraguay,false,46401,2008-01-24
+e46,PeakBase Ltda,Telecomunicaciones,Bolivia,true,46301,2014-05-19
+e47,BoldBridge S.R.L.,Manufactura,Paraguay,false,28299,2004-06-23
+e48,RapidSoft Ltda,Medios,Ecuador,true,3850,2014-09-28
+e49,BrightMind Corp,Seguros,El Salvador,true,66580,2012-04-26
+e50,AlphaForge LLC,Agroindustria,Cuba,true,33016,1998-06-29
+e51,EdgeBridge Ltda,Medios,República Dominicana,true,46675,1986-01-25
+e52,AlphaDynamics S.A.,Gobierno,México,true,69741,1997-01-27
+e53,RapidOps LLC,Tecnología,México,false,25840,1997-07-30
+e54,CoreStream LLC,Finanzas,Honduras,false,29799,2018-02-13
+e55,FlexGroup Ltda,Medios,Venezuela,false,637,1995-11-04
+e56,BoldSolutions S.A.,Agroindustria,España,false,73291,2000-10-02
+e57,GlobalLogic S.A.,Retail,Guatemala,false,45032,1986-01-15
+e58,CoreCloud S.A.,Consultoría,Perú,false,29760,1987-11-27
+e59,NexusOps Ltda,Transporte,Ecuador,true,64428,2012-10-31
+e60,BlueHub S.A.,Educación,Argentina,true,31336,2014-06-19
+e61,OpenByte S.A.,Transporte,Chile,false,46929,1993-04-14
+e62,BrightBase LLC,Agroindustria,Uruguay,true,45091,1989-12-24
+e63,DigitalData Corp,Logística,Ecuador,true,72624,2017-01-26
+e64,OpenLogic Corp,Medios,Colombia,false,56553,1986-11-03
+e65,FutureLabs Ltda,Energía,Costa Rica,true,10285,2006-05-20
+e66,AlphaLogic Corp,Medios,Ecuador,false,4106,2019-04-24
+e67,ClearGroup Inc,Manufactura,República Dominicana,true,54500,2005-06-10
+e68,PeakForge Inc,Transporte,Uruguay,true,18412,2022-12-11
+e69,SmartDynamics Inc,Gobierno,Paraguay,true,55768,1996-07-18
+e70,GlobalCorp Inc,Tecnología,Nicaragua,false,68917,1990-04-26
+e71,SwiftOps Inc,Manufactura,Guatemala,true,55570,2010-08-13
+e72,EdgeLabs Ltda,Agroindustria,Ecuador,true,30795,2012-09-28
+e73,FutureDynamics S.A.,Agroindustria,El Salvador,true,40742,2000-01-21
+e74,DigitalDynamics S.R.L.,Retail,España,false,57775,1995-03-18
+e75,GlobalCorp LLC,Transporte,Ecuador,true,40455,2007-07-11
+e76,OpenLabs S.R.L.,Consultoría,España,true,19048,2001-07-26
+e77,FutureForge Inc,Consultoría,Panamá,true,18983,2009-10-21
+e78,CoreForge S.A.,Energía,Venezuela,true,61794,2001-03-25
+e79,OpenOps Inc,Turismo,Chile,true,14454,2017-03-23
+e80,BlueSoft Ltda,Tecnología,Bolivia,false,25448,1988-10-25
+e81,SwiftHub S.R.L.,Consultoría,Ecuador,false,48835,1995-02-04
+e82,SmartSystems S.R.L.,Manufactura,Brasil,false,63402,1990-04-29
+e83,GlobalDynamics S.A.,Agroindustria,España,true,61312,2012-02-20
+e84,NexusNet Corp,Salud,Honduras,true,21207,2007-11-05
+e85,GlobalBridge LLC,Salud,México,false,29971,2021-10-15
+e86,FutureGroup LLC,Educación,Brasil,true,52054,2010-06-12
+e87,SmartDynamics29 S.R.L.,Turismo,Paraguay,false,14940,2019-09-02
+e88,TechLogic LLC,Seguros,Honduras,false,138,2004-10-30
+e89,AlphaLogic Ltda,Salud,Panamá,true,7412,1996-05-29
+e90,PrimeDynamics S.A.,Tecnología,Chile,true,17171,2019-10-25
+e91,RapidData LLC,Logística,República Dominicana,true,27934,2018-05-30
+e92,AlphaLogic S.A.,Manufactura,Cuba,false,65939,2002-12-07
+e93,BrightNet S.A.,Energía,México,false,1125,2012-02-14
+e94,PeakBase Inc,Turismo,Panamá,false,9028,2009-01-24
+e95,NexusForge Inc,Seguros,Argentina,true,9908,1995-12-05
+e96,BoldGroup Inc,Manufactura,Colombia,true,41110,1989-06-29
+e97,EdgeForge Corp,ONG,México,true,71508,1998-12-06
+e98,CoreGroup S.A.,Educación,Ecuador,true,47413,2020-09-17
+e99,EdgeCorp S.A.,Telecomunicaciones,Colombia,false,68556,1990-06-15
+e100,ClearForge Inc,Tecnología,Ecuador,true,62778,1996-01-06
+e101,RapidStream S.A.,Turismo,Nicaragua,false,63723,2004-03-21
+e102,FlexCorp S.A.,Finanzas,Guatemala,false,16970,1988-08-16
+e103,PrimeWorks S.A.,Logística,Guatemala,false,14970,2004-06-15
+e104,EdgeBase Ltda,Gobierno,Guatemala,false,13667,1993-02-02
+e105,PeakOps S.A.,Seguros,Panamá,true,14444,2020-01-15
+e106,DeepLabs Ltda,Transporte,Bolivia,false,34028,2001-04-20
+e107,ClearStream Inc,Retail,Cuba,false,45114,2000-03-07
+e108,RapidWorks Ltda,Manufactura,Honduras,false,65351,1988-07-06
+e109,EdgeOps95 S.R.L.,Educación,Nicaragua,false,18539,2022-12-21
+e110,ClearForge Ltda,Gobierno,Uruguay,true,17635,2018-04-17
+e111,RapidNet Inc,Energía,Guatemala,false,47648,2007-03-07
+e112,PeakOps27 Ltda,Seguros,El Salvador,false,6109,1992-06-10
+e113,NexusHub S.R.L.,Consultoría,Uruguay,true,39584,1998-05-01
+e114,RapidNet LLC,Logística,Paraguay,true,28637,1985-01-14
+e115,AlphaWorks S.A.,Turismo,Paraguay,true,39094,1992-10-23
+e116,GlobalLogic LLC,Consultoría,Nicaragua,true,14781,2011-12-17
+e117,RapidCloud S.R.L.,Agroindustria,Perú,false,34341,2006-07-01
+e118,TechBase Inc,Medios,Uruguay,false,77756,2007-11-26
+e119,FlexSolutions LLC,ONG,República Dominicana,true,401,1986-04-09
+e120,PrimeCloud LLC,Logística,Cuba,true,52643,2017-09-12
+e121,EdgeLabs Corp,Manufactura,España,true,21986,2006-08-25
+e122,DigitalNet Corp,Energía,Venezuela,true,5735,1996-11-08
+e123,DigitalNet S.R.L.,Retail,Brasil,true,10752,2009-05-15
+e124,BrightCorp LLC,Seguros,Chile,false,62900,1990-07-26
+e125,SwiftHub S.A.,Salud,República Dominicana,true,58513,2016-03-30
+e126,DeepNet S.R.L.,Finanzas,El Salvador,false,58756,2008-08-03
+e127,FutureData S.R.L.,Transporte,Brasil,false,37347,2011-02-03
+e128,FutureOps78 S.A.,Medios,Chile,true,13963,2006-12-30
+e129,GlobalWorks Corp,Agroindustria,Costa Rica,false,46664,2008-03-07
+e130,GlobalCloud Ltda,Educación,Guatemala,false,10098,2007-02-04
+e131,PeakDynamics Inc,Energía,Argentina,false,26239,2022-03-11
+e132,GlobalCorp Ltda,Turismo,Panamá,false,58813,2021-09-10
+e133,CoreBridge S.A.,Agroindustria,Cuba,false,79806,2003-06-01
+e134,PeakMind Ltda,Seguros,Colombia,true,75239,2022-08-24
+e135,PeakData S.R.L.,Finanzas,Uruguay,true,6217,1990-02-08
+e136,PeakSolutions Inc,Salud,Paraguay,false,45630,1993-06-16
+e137,CoreWorks Inc,Energía,Perú,false,15808,2020-12-28
+e138,EdgeLabs Inc,Seguros,Costa Rica,false,75821,1986-08-24
+e139,DigitalSoft S.R.L.,Finanzas,Ecuador,false,21419,2011-12-23
+e140,OpenSoft Corp,Seguros,Costa Rica,true,44803,2016-03-03
+e141,ClearForge S.R.L.,Educación,España,false,36507,2017-11-10
+e142,PeakStream S.R.L.,Retail,España,false,44839,1989-10-01
+e143,BrightBase S.A.,Manufactura,Costa Rica,true,33310,2022-04-29
+e144,FlexBridge LLC,Educación,Chile,true,53201,2021-05-21
+e145,DigitalWorks S.R.L.,ONG,Ecuador,false,46934,1996-08-01
+e146,GlobalHub S.R.L.,Transporte,Costa Rica,true,12306,1999-01-31
+e147,RapidHub S.A.,Energía,Guatemala,false,78366,2002-12-10
+e148,SwiftDynamics Ltda,Finanzas,Brasil,false,40098,2001-04-03
+e149,DeepCloud Inc,Retail,Venezuela,true,73725,2018-08-11
+e150,FutureStream LLC,Educación,Honduras,false,24675,1999-09-29
+e151,SmartBridge Inc,Seguros,Colombia,true,27036,1994-09-06
+e152,FutureMind LLC,Agroindustria,Honduras,true,62691,2016-01-23
+e153,NexusWorks Inc,Energía,Bolivia,true,23636,1998-09-17
+e154,NexusCorp S.R.L.,Manufactura,Venezuela,true,68850,2020-07-10
+e155,EdgeSystems Inc,Energía,Chile,true,56879,1999-01-10
+e156,AlphaSolutions S.A.,Educación,Bolivia,false,35196,1992-07-18
+e157,AlphaCloud Corp,Retail,Guatemala,true,36646,1995-12-23
+e158,OpenSolutions S.R.L.,Consultoría,Honduras,false,46021,2016-06-21
+e159,SmartWorks S.R.L.,Seguros,Paraguay,true,44097,2003-09-08
+e160,PrimeSolutions Ltda,Consultoría,Argentina,false,64889,2000-10-08
+e161,PeakStream Ltda,Salud,Perú,false,5112,1999-05-09
+e162,AlphaGroup Corp,Medios,Colombia,true,66669,2021-12-29
+e163,CoreNet S.A.,Salud,Guatemala,true,41731,2002-03-13
+e164,BlueStream Corp,Manufactura,Brasil,true,4628,2013-06-13
+e165,CoreForge Inc,ONG,Uruguay,false,76436,2014-10-14
+e166,ClearStream LLC,Manufactura,Brasil,false,30645,1995-05-25
+e167,BoldNet S.A.,Transporte,Colombia,true,71020,2020-02-06
+e168,PeakStream4 Ltda,Energía,Bolivia,true,36768,2014-04-29
+e169,NexusSoft S.A.,ONG,Paraguay,true,67169,2018-05-28
+e170,PeakBase26 LLC,Consultoría,Nicaragua,true,31222,1996-07-18
+e171,PeakMind Corp,Educación,Nicaragua,false,57180,2012-06-19
+e172,PrimeSystems Ltda,Agroindustria,Panamá,false,23043,1997-10-02
+e173,EdgeCloud LLC,ONG,Cuba,true,72687,1999-10-17
+e174,BlueSolutions Inc,Transporte,Perú,false,2855,2010-11-29
+e175,OpenCorp Ltda,Seguros,Cuba,false,79803,1997-03-15
+e176,FlexSolutions74 Inc,Agroindustria,Bolivia,false,27473,1999-06-24
+e177,FutureWorks Inc,ONG,Costa Rica,true,33907,2005-07-17
+e178,GlobalCloud27 S.A.,Finanzas,Brasil,false,35919,1991-02-13
+e179,BoldData Inc,Telecomunicaciones,Venezuela,false,52696,2014-12-02
+e180,RapidData Inc,Agroindustria,Honduras,false,59907,1985-09-26
+e181,ClearWorks Inc,Tecnología,Paraguay,true,11151,2022-12-18
+e182,PrimeStream Inc,Salud,Colombia,true,28176,2020-10-25
+e183,SwiftBase S.R.L.,Turismo,Argentina,false,51414,2006-07-21
+e184,OpenBridge Inc,Medios,Guatemala,false,10046,2009-05-08
+e185,SwiftBridge S.A.,Educación,Uruguay,false,38352,1996-09-12
+e186,DeepCorp LLC,Consultoría,Perú,false,57018,2010-10-25
+e187,SwiftDynamics S.A.,Transporte,Costa Rica,true,43935,2020-01-22
+e188,ClearBridge S.R.L.,Energía,El Salvador,false,40755,1987-01-17
+e189,NexusBase LLC,Agroindustria,Colombia,false,70403,2011-05-15
+e190,CoreDynamics Inc,Educación,Bolivia,true,17056,1999-10-28
+e191,DigitalForge Ltda,Medios,El Salvador,false,22610,2018-11-23
+e192,RapidSoft11 S.R.L.,Agroindustria,Ecuador,false,75110,1995-12-20
+e193,ClearCloud S.A.,ONG,Perú,false,67138,2000-09-26
+e194,EdgeSolutions S.R.L.,Salud,Guatemala,true,18530,2004-09-15
+e195,BoldByte Inc,Medios,Colombia,true,211,2019-01-19
+e196,AlphaData Corp,Retail,El Salvador,false,45921,2008-07-07
+e197,RapidMind S.A.,Telecomunicaciones,Uruguay,false,54398,1991-08-01
+e198,DigitalHub S.R.L.,Agroindustria,Perú,false,39861,2015-07-04
+e199,AlphaHub S.R.L.,Transporte,Uruguay,false,32070,1995-06-09
+e200,GlobalCloud S.A.,Retail,Perú,true,48609,2004-09-22
+e201,ClearLabs Inc,Finanzas,Honduras,true,16267,2005-01-11
+e202,AlphaBase Corp,Turismo,Honduras,false,22693,2015-04-16
+e203,ClearGroup33 Inc,Turismo,República Dominicana,false,5402,2007-11-08
+e204,FutureCloud Ltda,Logística,El Salvador,false,64994,2019-09-11
+e205,OpenStream Corp,Consultoría,Ecuador,false,65865,2016-12-23
+e206,BlueGroup Ltda,Gobierno,Perú,false,60263,2020-04-24
+e207,PrimeSolutions LLC,Logística,Uruguay,false,55046,2010-01-05
+e208,FlexSoft S.A.,Transporte,España,true,62926,2003-11-24
+e209,BrightLogic S.A.,Consultoría,Cuba,false,45981,1993-12-17
+e210,AlphaLabs S.A.,Medios,El Salvador,true,27267,1987-09-01
+e211,FutureByte S.A.,Finanzas,México,false,4400,2020-09-20
+e212,ClearLogic Inc,Gobierno,Nicaragua,true,31751,2018-05-31
+e213,AlphaBase33 Ltda,Medios,Paraguay,false,32253,2000-05-04
+e214,CoreHub S.R.L.,Retail,Paraguay,false,4190,2013-04-27
+e215,TechSystems Corp,Turismo,Guatemala,true,9203,1987-09-09
+e216,EdgeSoft Ltda,Gobierno,Paraguay,true,10320,2011-12-01
+e217,FutureData Ltda,ONG,Costa Rica,true,11382,2009-07-26
+e218,GlobalDynamics Ltda,Telecomunicaciones,Honduras,false,52673,2004-02-16
+e219,SmartSoft S.R.L.,Consultoría,El Salvador,false,55722,1989-03-04
+e220,SwiftBridge Ltda,Logística,Guatemala,false,60507,2017-11-19
+e221,DeepBridge Inc,ONG,República Dominicana,true,2083,2018-03-19
+e222,OpenGroup Corp,ONG,Costa Rica,false,2208,2008-08-18
+e223,FutureLabs Corp,Manufactura,Ecuador,true,483,2017-09-30
+e224,CoreByte S.R.L.,Manufactura,El Salvador,false,37466,1985-10-12
+e225,BlueBase Inc,Energía,Cuba,false,22912,1991-12-24
+e226,SmartBase S.A.,Gobierno,Colombia,true,11575,2008-11-11
+e227,RapidNet S.A.,Consultoría,El Salvador,false,59132,1995-12-06
+e228,PeakCloud Ltda,Salud,Venezuela,false,65590,2000-03-26
+e229,CoreBase Inc,Consultoría,Bolivia,true,359,1993-06-07
+e230,BlueStream38 S.A.,Tecnología,Chile,true,66142,2006-07-28
+e231,EdgeLogic S.A.,Agroindustria,Paraguay,false,65139,2006-06-29
+e232,AlphaWorks LLC,Salud,Perú,false,10017,2007-09-04
+e233,PeakSolutions47 Ltda,Gobierno,Perú,false,54851,2019-08-26
+e234,BlueCloud S.A.,Gobierno,Perú,false,22002,2016-02-14
+e235,GlobalMind Ltda,Medios,Costa Rica,true,75682,2008-06-09
+e236,AlphaLabs LLC,ONG,Costa Rica,false,68013,2022-08-29
+e237,GlobalNet Inc,Gobierno,Cuba,true,28207,2009-02-19
+e238,PeakWorks Ltda,Energía,Bolivia,true,71802,2017-02-20
+e239,DigitalSystems LLC,Salud,Venezuela,false,24792,1996-08-16
+e240,NexusStream LLC,Consultoría,Chile,true,79736,2001-08-06
+e241,DeepOps S.R.L.,Energía,México,true,22736,1987-11-04
+e242,SwiftDynamics LLC,Logística,Perú,false,11895,1988-11-28
+e243,AlphaNet S.A.,Telecomunicaciones,Ecuador,true,43570,2013-10-05
+e244,OpenLogic LLC,Finanzas,Colombia,false,29298,1986-10-01
+e245,PeakSystems Corp,Consultoría,Guatemala,false,57806,2008-11-25
+e246,SmartWorks S.A.,Agroindustria,Panamá,false,41017,1999-05-07
+e247,BrightBridge S.R.L.,Agroindustria,Ecuador,false,42678,1998-08-14
+e248,GlobalCloud S.R.L.,Manufactura,Cuba,true,18538,2003-03-29
+e249,FutureStream Corp,Medios,España,true,54663,1998-10-06
+e250,SmartStream S.R.L.,Educación,Guatemala,false,13725,2016-03-02
+e251,RapidNet S.R.L.,Salud,Guatemala,true,69011,2013-07-20
+e252,NexusCorp34 LLC,Educación,Uruguay,true,54719,2021-12-22
+e253,SwiftGroup LLC,Salud,El Salvador,false,52715,1992-08-25
+e254,RapidStream Ltda,ONG,España,true,69357,1993-09-07
+e255,PrimeMind Ltda,Salud,Guatemala,true,45264,2010-07-06
+e256,EdgeGroup S.R.L.,Gobierno,El Salvador,true,17399,2009-09-23
+e257,BrightSystems S.R.L.,Telecomunicaciones,Chile,true,4008,1987-02-03
+e258,BrightBase Ltda,Medios,Cuba,false,16894,1996-05-25
+e259,PeakCloud Inc,Educación,España,false,11593,1998-03-31
+e260,BlueCorp S.R.L.,Finanzas,Costa Rica,true,19332,2013-05-04
+e261,SwiftNet S.A.,ONG,México,false,72416,1986-04-15
+e262,CoreCorp Corp,Tecnología,Paraguay,false,39388,2006-05-27
+e263,PrimeOps Inc,Medios,México,true,33718,1988-09-28
+e264,SwiftByte Ltda,Medios,Paraguay,false,34034,1994-03-01
+e265,DigitalWorks Inc,Medios,Panamá,false,17644,1994-11-23
+e266,SwiftCloud Inc,Seguros,Nicaragua,false,49937,2000-08-04
+e267,ClearStream Ltda,Energía,Colombia,true,51043,2014-07-25
+e268,DigitalBridge S.R.L.,Retail,España,true,11568,1989-05-20
+e269,PeakCloud3 Corp,Logística,Brasil,false,58627,1988-07-28
+e270,DeepStream S.A.,Telecomunicaciones,Nicaragua,true,27183,1999-10-09
+e271,GlobalBase Ltda,Medios,Ecuador,true,74660,1998-01-01
+e272,AlphaLabs Ltda,Educación,Venezuela,false,73850,2017-10-17
+e273,DigitalLogic LLC,Consultoría,Honduras,true,73514,1995-09-27
+e274,DeepLogic S.A.,Agroindustria,El Salvador,true,7388,2021-10-15
+e275,DeepDynamics S.R.L.,Energía,España,false,64684,1985-05-09
+e276,BoldBase Ltda,Seguros,Uruguay,false,43490,2002-01-17
+e277,NexusByte LLC,Gobierno,República Dominicana,true,20830,2008-07-29
+e278,CoreCloud99 S.A.,Seguros,Perú,true,32184,2001-10-03
+e279,PeakSystems Inc,Seguros,Nicaragua,false,55990,2009-01-03
+e280,AlphaBridge Inc,Agroindustria,El Salvador,true,52337,1997-06-30
+e281,BlueCloud LLC,Logística,Venezuela,false,75315,1999-08-08
+e282,DeepMind Corp,Retail,Colombia,true,46856,2013-07-16
+e283,PeakLabs Inc,Medios,Panamá,false,78613,2013-03-12
+e284,CoreData S.R.L.,Logística,Venezuela,false,36242,1988-11-26
+e285,SmartSoft Ltda,ONG,Chile,false,58174,1999-07-02
+e286,GlobalWorks Ltda,Logística,Paraguay,false,43872,1995-01-19
+e287,PrimeStream47 Corp,Salud,Panamá,false,40731,1990-01-03
+e288,FutureNet Inc,Seguros,Cuba,false,31150,2017-06-01
+e289,TechSystems Ltda,Telecomunicaciones,Panamá,true,8008,2022-06-17
+e290,GlobalNet LLC,Finanzas,Colombia,false,75455,2006-04-29
+e291,NexusCorp Corp,Retail,España,false,70978,2020-07-10
+e292,PeakSoft S.R.L.,Manufactura,El Salvador,false,53777,2009-10-27
+e293,DigitalByte S.R.L.,Seguros,Venezuela,false,6473,1988-09-18
+e294,SwiftSystems Corp,Tecnología,Perú,true,39333,2009-10-31
+e295,TechLabs Corp,Energía,Honduras,true,49126,2020-08-23
+e296,SwiftNet Inc,Logística,Argentina,false,42778,1996-09-19
+e297,PrimeBridge S.A.,Gobierno,Ecuador,true,51514,1986-11-02
+e298,FutureBridge Inc,Transporte,Uruguay,true,64991,1991-02-07
+e299,DigitalDynamics28 Inc,Consultoría,Cuba,true,14045,2011-11-19
+e300,NexusData Corp,Agroindustria,Honduras,true,65717,2001-05-07
+e301,DigitalCorp S.A.,Gobierno,Costa Rica,true,73027,1996-01-12
+e302,TechMind Inc,Medios,Costa Rica,true,11720,1992-02-14
+e303,RapidCorp Inc,Transporte,Perú,false,52132,2006-06-06
+e304,SwiftBase Corp,ONG,Guatemala,false,73564,2012-05-05
+e305,TechMind Corp,Salud,Brasil,true,79590,2007-08-25
+e306,SmartOps Inc,Gobierno,Panamá,true,20087,2010-09-08
+e307,PrimeSoft S.A.,Consultoría,Cuba,true,44450,1994-03-30
+e308,GlobalBridge Corp,Manufactura,Nicaragua,true,67820,2020-01-07
+e309,BlueByte Inc,Transporte,Honduras,false,56944,2000-09-21
+e310,RapidDynamics Ltda,Finanzas,El Salvador,true,47411,1999-08-19
+e311,AlphaStream Corp,Telecomunicaciones,Bolivia,true,56621,2009-02-02
+e312,FlexMind S.A.,Medios,Paraguay,true,18473,2017-07-25
+e313,TechByte Corp,Finanzas,El Salvador,false,31597,1998-05-22
+e314,GlobalLogic48 Ltda,Turismo,Honduras,true,6688,2014-10-14
+e315,DigitalWorks S.A.,Medios,Venezuela,false,59628,1995-04-06
+e316,AlphaStream32 S.R.L.,Salud,Venezuela,false,17507,1992-10-04
+e317,OpenLogic Inc,Seguros,Costa Rica,false,33375,1989-08-29
+e318,EdgeDynamics Corp,Logística,Bolivia,true,51587,2008-12-14
+e319,BlueLogic Inc,Telecomunicaciones,Cuba,false,19886,1995-09-01
+e320,NexusCloud Corp,Gobierno,Panamá,true,76303,2020-03-31
+e321,OpenMind S.R.L.,Consultoría,El Salvador,false,65753,1989-05-21
+e322,ClearNet S.A.,Retail,Nicaragua,false,15418,2019-11-04
+e323,PeakBridge LLC,Energía,Perú,false,58211,1985-01-31
+e324,AlphaSolutions Inc,Educación,Venezuela,false,77722,2004-12-11
+e325,GlobalBase S.R.L.,Logística,Brasil,false,32195,1998-01-18
+e326,GlobalCloud Corp,Medios,Brasil,false,5480,2008-03-31
+e327,PeakMind49 S.R.L.,ONG,México,true,60497,1986-02-21
+e328,PeakStream Inc,Educación,Guatemala,true,60318,2000-08-10
+e329,FutureSolutions S.R.L.,Finanzas,Argentina,false,4632,2002-03-11
+e330,BrightByte S.R.L.,Transporte,Brasil,true,64088,2009-05-11
+e331,ClearStream69 Corp,Medios,Argentina,false,20469,1989-12-05
+e332,OpenByte LLC,Agroindustria,Honduras,false,32776,2000-10-31
+e333,PeakBridge Inc,Energía,Panamá,false,69109,2011-08-30
+e334,ClearSystems Inc,Finanzas,Honduras,true,17421,2008-12-14
+e335,BoldHub Corp,Salud,Perú,true,45283,2021-10-18
+e336,GlobalHub Ltda,Tecnología,Colombia,false,24856,1987-02-12
+e337,FutureOps Corp,Manufactura,El Salvador,false,29725,2004-05-22
+e338,RapidForge Corp,Logística,Brasil,false,57895,2019-06-25
+e339,SmartBase Ltda,Tecnología,Perú,true,6766,2005-06-20
+e340,EdgeLogic S.R.L.,Agroindustria,Panamá,true,51106,2021-12-24
+e341,TechData LLC,Medios,Chile,false,31111,2017-09-21
+e342,FlexByte Corp,Salud,España,false,56261,2011-03-02
+e343,GlobalLabs LLC,Retail,Perú,true,9913,1996-11-01
+e344,CoreDynamics LLC,ONG,Colombia,true,76763,2006-12-12
+e345,BoldByte LLC,Medios,Cuba,false,51693,2019-01-05
+e346,BlueOps Corp,Transporte,Uruguay,false,28160,1993-02-11
+e347,OpenDynamics Corp,Consultoría,Colombia,true,68268,1989-05-18
+e348,BoldDynamics S.A.,Telecomunicaciones,Uruguay,false,24596,2007-12-07
+e349,TechDynamics LLC,Finanzas,Perú,true,77750,1994-09-16
+e350,BrightBridge Ltda,Consultoría,Argentina,false,65107,1988-08-08
+e351,PrimeNet S.R.L.,Retail,Chile,true,9774,1996-09-16
+e352,SwiftForge LLC,Energía,Costa Rica,false,7830,1989-05-16
+e353,GlobalCorp23 Ltda,Telecomunicaciones,Uruguay,true,25647,1985-01-27
+e354,SwiftMind Inc,Consultoría,Honduras,false,6066,2017-11-07
+e355,DeepSolutions Inc,Logística,Paraguay,true,71242,1995-08-23
+e356,BrightNet LLC,Gobierno,Guatemala,false,55200,2014-05-07
+e357,FlexLabs S.R.L.,Agroindustria,Chile,true,65413,1991-08-11
+e358,DigitalSoft Ltda,Seguros,Nicaragua,false,73530,1987-03-20
+e359,AlphaWorks Ltda,ONG,Brasil,true,5871,1995-02-23
+e360,CoreNet Corp,Medios,Uruguay,false,56292,2005-12-17
+e361,AlphaWorks80 S.A.,ONG,México,false,30247,2012-04-30
+e362,TechNet Corp,Finanzas,Brasil,false,2037,1995-04-18
+e363,AlphaGroup86 S.A.,Turismo,México,true,72402,1988-02-07
+e364,OpenCloud Ltda,Educación,Perú,false,71421,1991-05-19
+e365,DeepNet Inc,Tecnología,Honduras,false,22967,1990-04-16
+e366,BlueForge S.A.,Energía,Uruguay,true,44696,1992-09-16
+e367,RapidSolutions LLC,Manufactura,Argentina,false,74902,2017-12-20
+e368,TechCloud S.R.L.,Seguros,Honduras,false,36231,2008-01-28
+e369,TechGroup Ltda,Energía,Perú,false,71475,1995-05-10
+e370,SwiftSoft LLC,Salud,Guatemala,false,47469,2005-02-15
+e371,EdgeDynamics S.A.,Logística,Bolivia,false,33265,2001-12-06
+e372,DeepHub S.R.L.,Gobierno,Argentina,true,21364,2017-12-11
+e373,SmartSoft S.A.,Salud,España,true,24834,1988-11-22
+e374,DeepDynamics Corp,Seguros,Brasil,false,74231,2010-12-09
+e375,TechForge Corp,Turismo,Argentina,false,64621,1988-08-27
+e376,FlexSolutions6 Corp,Agroindustria,Nicaragua,false,7478,2010-09-17
+e377,AlphaLabs34 S.R.L.,ONG,Guatemala,false,12228,2002-08-05
+e378,PrimeCloud99 S.R.L.,Medios,Perú,true,58758,2002-04-12
+e379,BoldBase S.A.,Turismo,Uruguay,false,60930,2014-12-06
+e380,ClearSystems S.A.,ONG,Venezuela,true,40663,1999-07-25
+e381,DeepOps83 S.R.L.,Energía,Colombia,false,30986,1987-01-01
+e382,EdgeForge LLC,Transporte,Brasil,false,59148,1999-12-15
+e383,FlexBase Corp,Educación,Guatemala,false,71161,1997-08-08
+e384,BoldSystems Ltda,Consultoría,Honduras,true,15354,2009-04-15
+e385,SmartLogic Inc,Tecnología,Costa Rica,false,21269,2006-09-12
+e386,DigitalOps Ltda,Gobierno,Brasil,false,62573,2003-07-21
+e387,GlobalWorks S.A.,Finanzas,El Salvador,false,51417,1998-10-04
+e388,BrightLogic Corp,Gobierno,Paraguay,false,60478,1991-09-22
+e389,SwiftByte Inc,Retail,Chile,false,75588,1994-06-05
+e390,AlphaData36 S.R.L.,Tecnología,Perú,true,79813,2007-10-07
+e391,PrimeNet Ltda,Gobierno,Paraguay,true,56878,2001-12-31
+e392,DeepStream LLC,Agroindustria,Colombia,true,68089,1990-12-07
+e393,ClearCloud Inc,Finanzas,Cuba,false,57774,2005-06-19
+e394,BrightStream Corp,Turismo,México,true,74655,2010-05-06
+e395,ClearGroup30 Inc,Turismo,Brasil,true,58211,1988-02-17
+e396,SmartSystems Inc,Energía,Panamá,true,17051,2009-11-06
+e397,FutureBridge LLC,Manufactura,México,false,70741,2014-04-20
+e398,CoreSoft LLC,Manufactura,Ecuador,true,31710,1987-05-01
+e399,NexusHub Ltda,Energía,Venezuela,false,49697,1986-01-05
+e400,RapidSolutions Inc,Transporte,Ecuador,true,52285,2012-06-14
+e401,OpenGroup LLC,Medios,Honduras,false,42361,2019-12-04
+e402,NexusStream Corp,Salud,España,false,31787,2006-08-22
+e403,DigitalSystems Inc,Transporte,Venezuela,false,37662,2008-11-07
+e404,FlexDynamics LLC,Educación,Argentina,true,33554,1992-06-24
+e405,OpenLogic20 Ltda,Tecnología,Costa Rica,true,58214,2003-05-27
+e406,AlphaGroup44 S.A.,Logística,República Dominicana,false,72184,2008-10-11
+e407,BrightCloud Inc,Tecnología,Chile,true,29984,2017-05-23
+e408,DeepGroup LLC,Educación,Ecuador,true,62994,1986-07-15
+e409,SmartStream43 Ltda,ONG,Paraguay,true,77587,2019-10-18
+e410,DeepGroup Ltda,Logística,Brasil,false,20913,2008-04-19
+e411,FlexHub S.R.L.,Salud,Venezuela,true,40604,2010-06-15
+e412,OpenBridge LLC,Educación,El Salvador,false,40604,1998-06-24
+e413,GlobalBridge S.A.,Energía,Perú,true,71038,2009-12-22
+e414,SwiftSolutions Inc,Tecnología,Guatemala,false,10309,2016-06-21
+e415,DigitalCorp Ltda,Logística,Bolivia,false,10402,1991-09-25
+e416,TechGroup S.R.L.,Manufactura,Guatemala,true,64117,2001-03-10
+e417,AlphaLogic10 Inc,Transporte,Nicaragua,false,18030,2014-07-17
+e418,SmartSystems Corp,ONG,Paraguay,true,61150,1999-05-03
+e419,TechWorks Corp,Manufactura,Uruguay,false,33153,1997-05-16
+e420,CoreSystems LLC,ONG,México,false,70075,2019-05-29
+e421,BlueSoft S.R.L.,Telecomunicaciones,Perú,true,75096,2001-09-16
+e422,SwiftMind LLC,Energía,República Dominicana,true,52163,2008-12-29
+e423,TechBridge S.A.,Salud,Venezuela,false,58393,2011-08-31
+e424,NexusForge LLC,ONG,El Salvador,true,35123,2018-04-07
+e425,BoldDynamics Ltda,Educación,Cuba,false,923,1989-04-17
+e426,OpenSystems S.R.L.,Educación,Brasil,false,65067,2012-05-01
+e427,FlexGroup S.A.,Retail,Panamá,true,74912,1990-11-12
+e428,DigitalWorks Ltda,Retail,República Dominicana,false,16568,1995-09-09
+e429,EdgeGroup Ltda,Turismo,Guatemala,false,75422,2014-01-16
+e430,PeakMind45 Ltda,Manufactura,Brasil,true,45055,2009-01-09
+e431,OpenDynamics S.A.,Salud,Paraguay,true,79224,2013-12-22
+e432,BrightLabs Corp,Manufactura,Guatemala,false,43820,2022-04-03
+e433,BrightSoft S.R.L.,Educación,Bolivia,true,39204,2010-03-07
+e434,BrightForge Ltda,Agroindustria,Chile,false,17086,2000-07-07
+e435,FutureLabs71 LLC,Salud,Chile,false,75390,2020-07-07
+e436,FlexOps LLC,Agroindustria,Honduras,false,22534,2018-09-17
+e437,PrimeSoft LLC,Consultoría,Perú,false,39895,2012-12-06
+e438,BrightData Inc,Manufactura,Cuba,false,47445,2006-05-18
+e439,GlobalDynamics Inc,Consultoría,Ecuador,true,20547,2012-07-07
+e440,DeepSystems LLC,Transporte,República Dominicana,true,38915,1990-08-16
+e441,AlphaMind Ltda,Agroindustria,México,true,6542,2010-06-18
+e442,AlphaSolutions Ltda,Salud,Paraguay,false,63308,1995-03-26
+e443,FlexBridge38 LLC,ONG,Uruguay,true,16510,2001-06-02
+e444,PrimeStream LLC,Finanzas,Ecuador,false,78600,1995-05-12
+e445,DigitalStream S.A.,Transporte,México,true,43537,1991-08-27
+e446,BrightForge S.A.,Educación,Honduras,true,23901,2002-10-07
+e447,AlphaLabs Corp,Logística,Costa Rica,false,74927,2020-05-06
+e448,TechSolutions S.R.L.,Salud,Nicaragua,false,16508,2012-05-19
+e449,EdgeHub Corp,Seguros,Venezuela,false,40140,1992-05-04
+e450,CoreByte Ltda,Energía,Costa Rica,false,54462,2016-02-10
+e451,FlexMind47 LLC,Tecnología,Chile,true,56538,2019-07-03
+e452,CoreSoft Inc,Energía,Uruguay,false,1399,1986-12-01
+e453,PeakGroup Ltda,Tecnología,Brasil,true,7297,2004-05-24
+e454,AlphaOps Inc,Salud,Bolivia,false,19100,2005-04-05
+e455,SwiftMind96 S.R.L.,Medios,Costa Rica,false,6890,2017-01-17
+e456,AlphaCorp S.R.L.,Energía,Argentina,false,64590,2011-11-09
+e457,NexusSystems S.R.L.,Agroindustria,Honduras,false,35090,2010-08-11
+e458,EdgeStream LLC,Consultoría,Ecuador,false,77012,1985-11-11
+e459,PrimeDynamics LLC,Manufactura,Panamá,true,67300,2006-01-11
+e460,BoldForge Corp,Turismo,Perú,true,66980,1989-06-04
+e461,EdgeForge S.A.,Logística,Ecuador,false,44625,1996-02-25
+e462,PeakSystems LLC,Energía,Paraguay,false,13309,2022-11-29
+e463,CoreGroup Corp,Logística,Venezuela,true,74728,2009-03-02
+e464,OpenHub S.R.L.,Turismo,Chile,true,31693,1995-04-29
+e465,OpenSystems Corp,Salud,Uruguay,true,16461,1996-02-25
+e466,NexusDynamics S.A.,Tecnología,El Salvador,true,47934,2000-12-28
+e467,BlueCloud Inc,Finanzas,Brasil,false,6868,1997-04-07
+e468,NexusGroup S.R.L.,Consultoría,Costa Rica,false,40058,1988-03-12
+e469,SmartByte Ltda,Manufactura,Panamá,false,11492,1990-11-27
+e470,BlueForge Ltda,Finanzas,El Salvador,true,76868,1989-02-02
+e471,EdgeLogic46 S.R.L.,Energía,Bolivia,false,8972,2012-08-27
+e472,FlexWorks Corp,Logística,Costa Rica,false,65044,1990-06-10
+e473,RapidBridge LLC,Manufactura,Nicaragua,true,36404,2003-05-17
+e474,EdgeSolutions Inc,Educación,Paraguay,true,9766,2015-02-12
+e475,BoldLogic S.R.L.,Agroindustria,Ecuador,false,17235,1985-06-01
+e476,TechOps Inc,Salud,Costa Rica,true,37911,1991-11-26
+e477,DigitalDynamics Ltda,ONG,Nicaragua,false,55063,2011-09-21
+e478,BrightOps S.A.,Consultoría,Perú,true,55382,1986-01-28
+e479,SwiftSystems S.R.L.,Finanzas,Argentina,true,10318,1997-10-06
+e480,ClearWorks S.A.,Telecomunicaciones,Cuba,true,63657,2022-04-13
+e481,SwiftData Ltda,Educación,República Dominicana,true,5025,1997-08-10
+e482,RapidWorks Inc,Energía,República Dominicana,true,53439,2007-10-20
+e483,FlexCloud S.R.L.,Gobierno,Colombia,false,55121,2011-09-24
+e484,DigitalLogic S.R.L.,Finanzas,Brasil,false,43797,2002-12-15
+e485,BoldCloud LLC,ONG,El Salvador,true,68692,1986-07-16
+e486,TechMind LLC,Logística,Chile,true,72620,1990-01-14
+e487,AlphaOps LLC,Telecomunicaciones,Honduras,true,46108,2003-11-03
+e488,AlphaSolutions68 LLC,Tecnología,República Dominicana,true,6526,2019-06-25
+e489,RapidStream Inc,Seguros,Cuba,false,13541,2013-10-12
+e490,PrimeLogic Corp,Telecomunicaciones,Paraguay,false,10421,1996-09-03
+e491,RapidMind Corp,Finanzas,Paraguay,false,69065,2008-02-09
+e492,ClearOps Corp,Salud,República Dominicana,false,64421,1989-07-13
+e493,SmartBridge Corp,Gobierno,Paraguay,true,46028,2015-01-02
+e494,FutureLogic28 Corp,Energía,Colombia,true,57536,1994-05-26
+e495,DeepGroup S.A.,Finanzas,España,false,69380,2022-06-14
+e496,OpenBridge Corp,Telecomunicaciones,Ecuador,false,62507,2006-08-17
+e497,EdgeSolutions27 S.A.,ONG,El Salvador,false,14200,2011-07-21
+e498,CoreBridge49 Corp,Logística,España,true,13575,1991-06-11
+e499,PrimeSystems LLC,Gobierno,Bolivia,false,42116,1986-01-25
+e500,DigitalDynamics Corp,Finanzas,Nicaragua,true,73880,2011-04-18
+e501,BoldHub Ltda,Logística,Uruguay,false,31061,2008-05-06
+e502,SwiftMind41 Inc,Educación,Uruguay,true,1738,1994-01-26
+e503,AlphaForge Ltda,Energía,México,true,3930,2011-01-12
+e504,SmartSoft LLC,Medios,Chile,false,29635,1985-10-18
+e505,FlexBase S.A.,Turismo,Brasil,false,41178,1997-03-06
+e506,ClearNet LLC,Seguros,Cuba,false,25523,2001-02-11
+e507,GlobalData Ltda,ONG,Chile,true,44158,1991-12-18
+e508,BrightDynamics S.R.L.,ONG,México,true,21759,1990-09-19
+e509,EdgeSystems LLC,Energía,Bolivia,true,48805,2002-02-23
+e510,BrightOps25 Corp,Salud,Panamá,true,34402,1989-08-03
+e511,SwiftCorp Ltda,Tecnología,Costa Rica,true,54118,2003-01-22
+e512,ClearSystems S.R.L.,Educación,Chile,true,75915,1990-09-14
+e513,FlexData Ltda,Consultoría,Venezuela,false,4419,2011-03-09
+e514,BoldNet LLC,Agroindustria,Colombia,false,18430,2006-04-01
+e515,RapidStream Corp,Consultoría,Bolivia,false,20364,1985-08-31
+e516,NexusCorp90 Ltda,Retail,Venezuela,false,25096,2017-06-27
+e517,SmartForge Inc,Energía,Honduras,true,39358,2001-06-18
+e518,DigitalForge S.A.,Educación,República Dominicana,true,19998,2002-01-22
+e519,RapidByte S.A.,Transporte,Argentina,true,75212,2003-05-04
+e520,TechNet S.A.,Tecnología,Venezuela,false,12136,2007-06-29
+e521,DeepWorks S.A.,Retail,Costa Rica,false,78554,1991-06-02
+e522,AlphaMind Inc,Telecomunicaciones,Bolivia,true,5943,1994-11-21
+e523,PrimeLabs Corp,Salud,Perú,true,67599,1989-08-26
+e524,GlobalCloud15 Corp,Tecnología,Costa Rica,true,30347,1992-01-10
+e525,BlueWorks Inc,Tecnología,Bolivia,false,59049,1986-09-24
+e526,SwiftLogic Inc,Tecnología,Brasil,false,6270,2021-03-09
+e527,RapidOps S.A.,Consultoría,Nicaragua,false,69028,1994-07-17
+e528,SmartSolutions LLC,Educación,Venezuela,false,51092,1997-03-11
+e529,BlueMind LLC,Retail,Honduras,false,61927,2011-11-25
+e530,PrimeSystems Inc,Transporte,Guatemala,true,28163,2005-03-05
+e531,PrimeBase Ltda,Seguros,Honduras,true,79212,1995-04-21
+e532,EdgeStream S.A.,Energía,Uruguay,false,11670,1993-05-03
+e533,RapidSoft S.A.,Tecnología,Uruguay,true,29389,1992-07-12
+e534,ClearOps31 S.A.,Finanzas,Panamá,false,51990,1995-10-31
+e535,SmartSystems S.A.,Tecnología,República Dominicana,false,43563,1998-04-01
+e536,ClearWorks LLC,Medios,Ecuador,false,4918,2002-06-06
+e537,AlphaSolutions37 Inc,Consultoría,Nicaragua,false,60811,2011-11-22
+e538,AlphaCloud Inc,Seguros,Brasil,false,66694,1996-04-27
+e539,SwiftLabs Inc,Tecnología,Ecuador,false,13972,1986-02-20
+e540,DigitalOps Inc,Tecnología,Colombia,false,63748,2019-04-30
+e541,EdgeMind Corp,Consultoría,Cuba,true,26485,2021-08-07
+e542,DigitalOps15 S.A.,Salud,Honduras,true,75210,2016-07-22
+e543,ClearSystems37 Ltda,Tecnología,Chile,true,35143,1997-11-09
+e544,AlphaLabs44 Ltda,Agroindustria,Honduras,false,29822,1995-06-05
+e545,EdgeData Corp,Agroindustria,Costa Rica,false,21212,1995-04-07
+e546,DeepWorks Inc,Tecnología,Perú,true,47221,1995-12-09
+e547,TechSystems81 S.R.L.,Manufactura,Uruguay,false,45620,1994-08-15
+e548,RapidWorks S.R.L.,Logística,Honduras,true,13610,2005-05-21
+e549,PeakByte Corp,Agroindustria,España,false,66406,2007-03-22

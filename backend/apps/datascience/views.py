@@ -33,7 +33,7 @@ MATCH (u:Usuario)
 OPTIONAL MATCH (u)-[:PUBLICO]->(p:Publicacion)
 WITH u, sum(coalesce(p.likes_count, 0)) AS total_likes,
         count(DISTINCT p) AS n_publicaciones
-OPTIONAL MATCH (pub:Publicacion)-[:MENCIONA]->(u)
+OPTIONAL MATCH (pub:Publicacion)-[:MENCIONA_A]->(u)
 WITH u, total_likes, n_publicaciones, count(DISTINCT pub) AS menciones
 WITH u, total_likes, n_publicaciones, menciones,
      (coalesce(u.conexiones_count, 0) * 2.0

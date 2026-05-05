@@ -4,7 +4,7 @@ import { usuariosApi } from '../api/usuarios'
 import { empresasApi } from '../api/empresas'
 import { empleosApi } from '../api/empleos'
 import { relacionesApi } from '../api/relaciones'
-import { consultasApi } from '../api/consultas'
+import { csvApi } from '../api/csv'
 import { CheckIcon } from '../lib/icons'
 import type { ApiResult } from '../types/api'
 
@@ -78,6 +78,74 @@ export default function OperacionesPage() {
       setOp('admin2', res, null)
       showToast('Usuario:Admin (2 labels) creado', 'ok')
     } catch (e) { setOp('admin2', null, String(e)) }
+  }
+
+  // ── 2b. Crear :Usuario:Reclutador ─────────────────────────────────────────
+  const [newReclutador, setNewReclutador] = useState({ nombre: '', email: '', empresa_asignada: '' })
+  async function crearReclutador2Labels() {
+    try {
+      const res = await usuariosApi.createReclutador({
+        ...newReclutador,
+        titular: 'Recruiter',
+        habilidades: [],
+      })
+      setOp('reclu2', res, null)
+      showToast('Usuario:Reclutador (2 labels) creado', 'ok')
+    } catch (e) { setOp('reclu2', null, String(e)) }
+  }
+
+  // ── ESTAR_EN: Usuario → Empresa (con cargo + fecha_inicio + actual) ───────
+  const [estarEnForm, setEstarEnForm] = useState({ usuario_id: '', empresa_id: '', cargo: 'Software Engineer' })
+  async function crearEstarEn() {
+    try {
+      const res = await relacionesApi.estarEn(
+        estarEnForm.usuario_id,
+        estarEnForm.empresa_id,
+        estarEnForm.cargo,
+        new Date().toISOString().slice(0, 10),
+        true,
+      )
+      setOp('estar', res, null)
+      showToast('Relación ESTAR_EN creada', 'ok')
+    } catch (e) { setOp('estar', null, String(e)) }
+  }
+
+  // ── Carga CSV: nodos ──────────────────────────────────────────────────────
+  const [csvNodeFile, setCsvNodeFile] = useState<File | null>(null)
+  const [csvNodeLabel, setCsvNodeLabel] = useState('Usuario')
+  async function uploadCsvNodes() {
+    if (!csvNodeFile) { showToast('Selecciona un archivo CSV', 'err'); return }
+    try {
+      const r = await csvApi.loadNodes(csvNodeFile, csvNodeLabel)
+      setOp('csvN', {
+        columns: ['creados', 'label'],
+        rows: [[r.creados, r.label]],
+        stats: { nodesCreated: r.creados },
+        meta: { cypher: r.cypher },
+      }, null)
+      showToast(`${r.creados} nodos :${r.label} creados desde CSV`, 'ok')
+    } catch (e) { setOp('csvN', null, String(e)) }
+  }
+
+  // ── Carga CSV: relaciones ─────────────────────────────────────────────────
+  const [csvRelFile, setCsvRelFile] = useState<File | null>(null)
+  const [csvRelCfg, setCsvRelCfg] = useState({
+    from_label: 'Usuario', from_id_field: 'usuario_id', from_id_column: 'usuario_id',
+    to_label: 'Empresa', to_id_field: 'empresa_id', to_id_column: 'empresa_id',
+    type: 'SIGUE_A',
+  })
+  async function uploadCsvRels() {
+    if (!csvRelFile) { showToast('Selecciona un archivo CSV', 'err'); return }
+    try {
+      const r = await csvApi.loadRels(csvRelFile, csvRelCfg)
+      setOp('csvR', {
+        columns: ['creadas', 'tipo'],
+        rows: [[r.creadas, r.tipo]],
+        stats: { relsCreated: r.creadas },
+        meta: { cypher: r.cypher },
+      }, null)
+      showToast(`${r.creadas} relaciones :${r.tipo} creadas desde CSV`, 'ok')
+    } catch (e) { setOp('csvR', null, String(e)) }
   }
 
   // ── 3. Crear nodo con ≥5 propiedades ──────────────────────────────────────
@@ -297,6 +365,19 @@ export default function OperacionesPage() {
           <ResultBox result={result['admin2']?.res ?? null} error={result['admin2']?.err ?? null} />
         </OpCard>
 
+        <OpCard title="②b Crear nodo (2 labels) — :Usuario:Reclutador">
+          <div className="form-grid">
+            <input className="input" placeholder="Nombre" value={newReclutador.nombre}
+              onChange={e => setNewReclutador(f => ({ ...f, nombre: e.target.value }))} />
+            <input className="input" placeholder="Email" value={newReclutador.email}
+              onChange={e => setNewReclutador(f => ({ ...f, email: e.target.value }))} />
+            <input className="input" placeholder="Empresa asignada (opcional)" value={newReclutador.empresa_asignada}
+              onChange={e => setNewReclutador(f => ({ ...f, empresa_asignada: e.target.value }))} />
+          </div>
+          <button className="btn-primary" onClick={crearReclutador2Labels}>CREATE (:Usuario:Reclutador)</button>
+          <ResultBox result={result['reclu2']?.res ?? null} error={result['reclu2']?.err ?? null} />
+        </OpCard>
+
         <OpCard title="③ Crear nodo ≥5 propiedades — :Empleo">
           <div className="form-grid">
             <input className="input" placeholder="Título del puesto" value={newEmpleo.titulo}
@@ -355,6 +436,64 @@ export default function OperacionesPage() {
           </div>
           <button className="btn-primary" onClick={crearRelacion}>CREATE [:COMENTO {'{contenido, fecha, editado}'}]</button>
           <ResultBox result={result['rel']?.res ?? null} error={result['rel']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="⑥b Crear relación ESTAR_EN — Usuario → Empresa (3 props)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 8 }}>
+            Crea (:Usuario)-[:ESTAR_EN {'{cargo, fecha_inicio, actual}'}]→(:Empresa)
+          </p>
+          <div className="form-grid">
+            <input className="input" placeholder="usuario_id" value={estarEnForm.usuario_id}
+              onChange={e => setEstarEnForm(f => ({ ...f, usuario_id: e.target.value }))} />
+            <input className="input" placeholder="empresa_id" value={estarEnForm.empresa_id}
+              onChange={e => setEstarEnForm(f => ({ ...f, empresa_id: e.target.value }))} />
+            <input className="input" placeholder="cargo (ej: Software Engineer)" value={estarEnForm.cargo}
+              onChange={e => setEstarEnForm(f => ({ ...f, cargo: e.target.value }))} />
+          </div>
+          <button className="btn-primary" onClick={crearEstarEn}>CREATE [:ESTAR_EN]</button>
+          <ResultBox result={result['estar']?.res ?? null} error={result['estar']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="📄 Carga CSV — Crear nodos">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 8 }}>
+            Sube un CSV (con header) y se crearán nodos del label seleccionado. Listas separadas por <code>;</code>.
+          </p>
+          <div className="form-grid">
+            <select className="input" value={csvNodeLabel} onChange={e => setCsvNodeLabel(e.target.value)}>
+              {['Usuario', 'Empresa', 'Publicacion', 'Empleo', 'Educacion'].map(l =>
+                <option key={l} value={l}>{l}</option>)}
+            </select>
+            <input className="input" type="file" accept=".csv,text/csv"
+              onChange={e => setCsvNodeFile(e.target.files?.[0] ?? null)} />
+          </div>
+          <button className="btn-primary" onClick={uploadCsvNodes}>POST /api/load-csv/nodes/</button>
+          <ResultBox result={result['csvN']?.res ?? null} error={result['csvN']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="📄 Carga CSV — Crear relaciones">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 8 }}>
+            CSV con columnas para los IDs de origen/destino (los nodos deben existir). El resto de columnas se guardan como propiedades de la relación.
+          </p>
+          <div className="form-grid">
+            <input className="input" placeholder="from_label (Usuario)" value={csvRelCfg.from_label}
+              onChange={e => setCsvRelCfg(f => ({ ...f, from_label: e.target.value }))} />
+            <input className="input" placeholder="from_id_field (usuario_id)" value={csvRelCfg.from_id_field}
+              onChange={e => setCsvRelCfg(f => ({ ...f, from_id_field: e.target.value }))} />
+            <input className="input" placeholder="from_id_column (usuario_id)" value={csvRelCfg.from_id_column}
+              onChange={e => setCsvRelCfg(f => ({ ...f, from_id_column: e.target.value }))} />
+            <input className="input" placeholder="to_label (Empresa)" value={csvRelCfg.to_label}
+              onChange={e => setCsvRelCfg(f => ({ ...f, to_label: e.target.value }))} />
+            <input className="input" placeholder="to_id_field (empresa_id)" value={csvRelCfg.to_id_field}
+              onChange={e => setCsvRelCfg(f => ({ ...f, to_id_field: e.target.value }))} />
+            <input className="input" placeholder="to_id_column (empresa_id)" value={csvRelCfg.to_id_column}
+              onChange={e => setCsvRelCfg(f => ({ ...f, to_id_column: e.target.value }))} />
+            <input className="input" placeholder="type (SIGUE_A)" value={csvRelCfg.type}
+              onChange={e => setCsvRelCfg(f => ({ ...f, type: e.target.value }))} />
+            <input className="input" type="file" accept=".csv,text/csv"
+              onChange={e => setCsvRelFile(e.target.files?.[0] ?? null)} />
+          </div>
+          <button className="btn-primary" onClick={uploadCsvRels}>POST /api/load-csv/rels/</button>
+          <ResultBox result={result['csvR']?.res ?? null} error={result['csvR']?.err ?? null} />
         </OpCard>
 
         <OpCard title="⑦ Eliminar nodo — simple">

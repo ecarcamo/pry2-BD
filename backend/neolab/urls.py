@@ -8,7 +8,6 @@ api_patterns = [
     path('publicaciones/', include('apps.publicaciones.urls')),
     path('empleos/', include('apps.empleos.urls')),
     path('educacion/', include('apps.educacion.urls')),
-    path('experiencia/', include('apps.experiencia_laboral.urls')),
     path('relaciones/', include('apps.relaciones.urls')),
     path('consultas/', include('apps.consultas.urls')),
     path('datascience/', include('apps.datascience.urls')),

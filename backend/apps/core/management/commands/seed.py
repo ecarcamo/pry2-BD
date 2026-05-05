@@ -302,34 +302,47 @@ SET r.fecha_seguimiento = date(row.fecha_seguimiento),
                 rows, stdout=self.stdout,
             )
 
-            self.stdout.write('Cargando ESTUVO_EN...')
+            self.stdout.write('Cargando ESTAR_EN...')
             rows = _read_csv('rel_estar_en.csv')
             _unwind_write(
                 """
 UNWIND $rows AS row
 MATCH (u:Usuario {usuario_id: row.usuario_id})
 MATCH (e:Empresa {empresa_id: row.empresa_id})
-MERGE (u)-[r:ESTUVO_EN]->(e)
-SET r.cargo       = row.cargo,
+MERGE (u)-[r:ESTAR_EN]->(e)
+SET r.cargo        = row.cargo,
     r.fecha_inicio = date(row.fecha_inicio),
     r.actual       = row.actual = 'true'
 """,
                 rows, stdout=self.stdout,
             )
 
-            self.stdout.write('Cargando MENCIONA...')
+            self.stdout.write('Cargando MENCIONA_A...')
             rows = _read_csv('rel_menciona.csv')
             _unwind_write(
                 """
 UNWIND $rows AS row
 MATCH (p:Publicacion {publicacion_id: row.publicacion_id})
 MATCH (u:Usuario     {usuario_id:     row.usuario_id})
-MERGE (p)-[r:MENCIONA]->(u)
+MERGE (p)-[r:MENCIONA_A]->(u)
 SET r.fecha      = date(row.fecha),
     r.tipo       = row.tipo,
     r.confirmada = row.confirmada = 'true'
 """,
                 rows, stdout=self.stdout,
+            )
+
+            self.stdout.write('Asignando label Reclutador a usuarios HR...')
+            run_write(
+                """
+MATCH (u:Usuario)
+WHERE toLower(u.titular) CONTAINS 'recruit'
+   OR toLower(u.titular) CONTAINS 'talent'
+   OR toLower(u.titular) CONTAINS 'hr'
+   OR toLower(u.titular) CONTAINS 'people'
+   OR toLower(u.titular) CONTAINS 'manager'
+SET u:Reclutador
+"""
             )
 
             self.stdout.write(self.style.SUCCESS('Seed completado exitosamente.'))

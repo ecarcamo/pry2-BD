@@ -183,47 +183,24 @@ def seguimientos(request):
 
 
 @api_view(['POST'])
-def trabajo_en(request):
-    """TRABAJO_EN: Usuario → ExperienciaLaboral."""
+def estar_en(request):
+    """ESTAR_EN: Usuario → Empresa (experiencia laboral del usuario)."""
     body = request.data or {}
     u = _pick(body, 'usuario_id', 'userId')
-    x = _pick(body, 'experiencia_id', 'expId')
-    if not u or not x:
-        return Response({'detail': 'usuario_id y experiencia_id son requeridos'}, status=status.HTTP_400_BAD_REQUEST)
-    props = {
-        'fecha_inicio': body.get('fecha_inicio') or _today(),
-        'fecha_fin':    body.get('fecha_fin', ''),
-        'verificado':   bool(body.get('verificado', False)),
-    }
-    cypher = (
-        "MATCH (u:Usuario {usuario_id: $u}), "
-        "(exp:ExperienciaLaboral {experiencia_id: $x}) "
-        "CREATE (u)-[r:TRABAJO_EN $props]->(exp) "
-        "RETURN u, type(r), exp"
-    )
-    return _create_rel(cypher, {'u': u, 'x': x, 'props': props})
-
-
-@api_view(['POST'])
-def experiencia_en(request):
-    """EXPERIENCIA_EN: ExperienciaLaboral → Empresa."""
-    body = request.data or {}
-    x = _pick(body, 'experiencia_id', 'expId')
     e = _pick(body, 'empresa_id', 'empresaId')
-    if not x or not e:
-        return Response({'detail': 'experiencia_id y empresa_id son requeridos'}, status=status.HTTP_400_BAD_REQUEST)
+    if not u or not e:
+        return Response({'detail': 'usuario_id y empresa_id son requeridos'}, status=status.HTTP_400_BAD_REQUEST)
     props = {
-        'departamento':  body.get('departamento', ''),
-        'tipo_contrato': body.get('tipo_contrato', 'tiempo_completo'),
-        'modalidad':     body.get('modalidad', 'presencial'),
+        'cargo':        body.get('cargo', 'Software Engineer'),
+        'fecha_inicio': body.get('fecha_inicio') or _today(),
+        'actual':       bool(body.get('actual', True)),
     }
     cypher = (
-        "MATCH (exp:ExperienciaLaboral {experiencia_id: $x}), "
-        "(e:Empresa {empresa_id: $e}) "
-        "CREATE (exp)-[r:EXPERIENCIA_EN $props]->(e) "
-        "RETURN exp, type(r), e"
+        "MATCH (u:Usuario {usuario_id: $u}), (e:Empresa {empresa_id: $e}) "
+        "CREATE (u)-[r:ESTAR_EN $props]->(e) "
+        "RETURN u, type(r), e"
     )
-    return _create_rel(cypher, {'x': x, 'e': e, 'props': props})
+    return _create_rel(cypher, {'u': u, 'e': e, 'props': props})
 
 
 @api_view(['POST'])
@@ -260,7 +237,7 @@ def menciones(request):
     }
     cypher = (
         "MATCH (p:Publicacion {publicacion_id: $p}), (u:Usuario {usuario_id: $u}) "
-        "CREATE (p)-[r:MENCIONA $props]->(u) "
+        "CREATE (p)-[r:MENCIONA_A $props]->(u) "
         "RETURN p, type(r), u"
     )
     return _create_rel(cypher, {'p': p, 'u': u, 'props': props})

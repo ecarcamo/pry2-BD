@@ -102,6 +102,28 @@ def crear_admin(request):
     return Response(_envelope(result, cypher), status=status.HTTP_201_CREATED)
 
 
+@api_view(['POST'])
+def crear_reclutador(request):
+    """Crea un nodo :Usuario:Reclutador (rúbrica 2 — 2+ labels)."""
+    body = request.data or {}
+    require_fields(body, ['nombre', 'email'])
+    props = {
+        'usuario_id': _pick_id(body, default=str(uuid.uuid4())),
+        'nombre': body['nombre'],
+        'email': body['email'],
+        'titular': body.get('titular', 'Recruiter'),
+        'habilidades': body.get('habilidades', []),
+        'abierto_a_trabajo': bool(body.get('abierto_a_trabajo', False)),
+        'fecha_registro': body.get('fecha_registro') or _today(),
+        'conexiones_count': int(body.get('conexiones_count', 0) or 0),
+        'empresa_asignada': body.get('empresa_asignada', ''),
+        'verificado': bool(body.get('verificado', False)),
+    }
+    cypher = "CREATE (u:Usuario:Reclutador $props) RETURN u"
+    result = run_write(cypher, {'props': props})
+    return Response(_envelope(result, cypher), status=status.HTTP_201_CREATED)
+
+
 def _listar(request):
     qp = request.query_params
     filters, params = [], {}

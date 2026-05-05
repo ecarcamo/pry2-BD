@@ -77,19 +77,6 @@ export interface Educacion {
   }
 }
 
-export interface ExperienciaLaboral {
-  elementId: string
-  labels: string[]
-  props: {
-    expId?: string
-    exp_id?: string
-    cargo: string
-    salario?: number
-    descripcion?: string
-    activo?: boolean
-  }
-}
-
 export interface ApiResult {
   columns: string[]
   rows: unknown[][]

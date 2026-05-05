@@ -1,401 +1,451 @@
 educacion_id,institucion,carrera,grado,pais,acreditada
-ed0,ITESM,Redes y Telecomunicaciones,Especialización,República Dominicana,true
-ed1,Universidad del Valle de Guatemala,Matemáticas Aplicadas,Ingeniería,Costa Rica,false
-ed2,MIT,Ciberseguridad,Maestría,Perú,false
-ed3,Stanford University,Administración de Empresas,Doctorado,Panamá,false
-ed4,Universidad Rafael Landívar,Ingeniería en Sistemas,Ingeniería,Guatemala,true
-ed5,Universidad Nacional de Colombia,Ciencias de la Computación,Licenciatura,Bolivia,true
-ed6,PUCP,Ingeniería en Sistemas,Técnico,Bolivia,true
-ed7,Universidad Galileo,Inteligencia Artificial,Técnico,Guatemala,true
-ed8,Universidad de Buenos Aires,Física,Especialización,Argentina,true
-ed9,Universidad de Chile,Matemáticas Aplicadas,Doctorado,Uruguay,false
-ed10,Universidad Francisco Marroquín,Ciencias de Datos,Especialización,Bolivia,true
-ed11,Pontificia Universidad Católica de Chile,Ciberseguridad,Especialización,Panamá,true
-ed12,Universidad de San Carlos de Guatemala,Ingeniería en Sistemas,Doctorado,Costa Rica,false
-ed13,Universidad de San Carlos de Guatemala,Matemáticas Aplicadas,Ingeniería,Brasil,true
-ed14,Universidad Rafael Landívar,Matemáticas Aplicadas,Técnico,Guatemala,false
-ed15,Universidad Nacional Autónoma de México,Ingeniería Industrial,Especialización,México,false
-ed16,Universidad Nacional de Colombia,Ingeniería Industrial,Doctorado,Cuba,true
-ed17,Universidad de Chile,Inteligencia Artificial,Especialización,Panamá,true
-ed18,Universidad de los Andes,Física,Especialización,Uruguay,true
-ed19,Universidad Autónoma de Madrid,Ciencias de Datos,Técnico,Bolivia,false
-ed20,Universidad Rafael Landívar,Ingeniería Electrónica,Maestría,Bolivia,false
-ed21,Universidad de Chile,Física,Ingeniería,Argentina,false
-ed22,Universidad de San Carlos de Guatemala,Administración de Empresas,Especialización,Ecuador,true
-ed23,PUCP,Ciencias de la Computación,Doctorado,Chile,false
-ed24,Pontificia Universidad Católica de Chile,Matemáticas Aplicadas,Especialización,Cuba,false
-ed25,Instituto Tecnológico de Costa Rica,Estadística,Maestría,Cuba,true
-ed26,Universidad de San Carlos de Guatemala,Estadística,Licenciatura,Venezuela,false
-ed27,UNAM,Ingeniería Industrial,Especialización,República Dominicana,true
-ed28,Pontificia Universidad Católica de Chile,Estadística,Especialización,República Dominicana,false
-ed29,Stanford University,Matemáticas Aplicadas,Maestría,Costa Rica,true
-ed30,Universidad Nacional de Colombia,Ingeniería en Sistemas,Especialización,Brasil,false
-ed31,Universidad Galileo,Estadística,Técnico,México,false
-ed32,UNAM,Ciencias de la Computación,Técnico,Guatemala,true
-ed33,Instituto Tecnológico de Costa Rica,Inteligencia Artificial,Ingeniería,República Dominicana,true
-ed34,Universidad de los Andes,Diseño de Interacción,Licenciatura,Ecuador,false
-ed35,Instituto Tecnológico de Costa Rica,Ingeniería Industrial,Licenciatura,Chile,true
-ed36,PUCP,Ingeniería en Sistemas,Licenciatura,Uruguay,false
-ed37,Universidad de Chile,Ingeniería de Software,Técnico,Uruguay,true
-ed38,PUCP,Ciberseguridad,Maestría,Argentina,true
-ed39,PUCP,Ciencias de Datos,Técnico,Argentina,true
-ed40,Universitat Politècnica de Catalunya,Inteligencia Artificial,Ingeniería,Nicaragua,false
-ed41,Instituto Tecnológico de Costa Rica,Ingeniería en Informática,Maestría,Brasil,false
-ed42,Stanford University,Física,Especialización,Brasil,false
-ed43,Stanford University,Ingeniería de Software,Doctorado,México,true
-ed44,Universidad Nacional Autónoma de México,Matemáticas Aplicadas,Ingeniería,Cuba,false
-ed45,Universidad Galileo,Ciberseguridad,Maestría,Ecuador,true
-ed46,Universidad de Chile,Física,Técnico,Argentina,false
-ed47,Universidad de San Carlos de Guatemala,Diseño de Interacción,Doctorado,Chile,false
-ed48,Universidad Francisco Marroquín,Ingeniería de Software,Doctorado,Honduras,true
-ed49,Universidad de Buenos Aires,Redes y Telecomunicaciones,Licenciatura,Venezuela,false
-ed50,Universidad Galileo,Redes y Telecomunicaciones,Maestría,Paraguay,false
-ed51,Universidad Nacional de Colombia,Redes y Telecomunicaciones,Especialización,Nicaragua,true
-ed52,Universidad Simon Bolivar,Diseño de Interacción,Técnico,Cuba,false
-ed53,PUCP,Ingeniería de Software,Licenciatura,Brasil,true
-ed54,Universidad de los Andes,Diseño de Interacción,Especialización,Honduras,true
-ed55,Pontificia Universidad Católica de Chile,Ingeniería Industrial,Ingeniería,El Salvador,false
-ed56,Universidad Rafael Landívar,Ingeniería en Sistemas,Ingeniería,Perú,true
-ed57,Universitat Politècnica de Catalunya,Ciencias de Datos,Ingeniería,Uruguay,false
-ed58,ITESM,Ingeniería de Software,Maestría,El Salvador,false
-ed59,Universidad del Valle de Guatemala,Estadística,Técnico,Bolivia,true
-ed60,Universidad Nacional de Colombia,Inteligencia Artificial,Doctorado,Venezuela,true
-ed61,ITESM,Inteligencia Artificial,Especialización,Argentina,true
-ed62,PUCP,Ciencias de Datos,Doctorado,España,false
-ed63,PUCP,Redes y Telecomunicaciones,Técnico,Colombia,true
-ed64,Universidad Rafael Landívar,Ingeniería Electrónica,Técnico,España,true
-ed65,UNAM,Administración de Empresas,Doctorado,Argentina,false
-ed66,PUCP,Ciencias de la Computación,Licenciatura,Brasil,false
-ed67,Pontificia Universidad Católica de Chile,Diseño de Interacción,Maestría,Panamá,true
-ed68,Stanford University,Redes y Telecomunicaciones,Licenciatura,Panamá,false
-ed69,Universidad Autónoma de Madrid,Administración de Empresas,Especialización,México,false
-ed70,MIT,Diseño de Interacción,Maestría,Guatemala,false
-ed71,ITESM,Ciberseguridad,Licenciatura,España,false
-ed72,UNAM,Ciencias de Datos,Doctorado,México,true
-ed73,Universidad Simon Bolivar,Ciencias de Datos,Técnico,Nicaragua,true
-ed74,Universidad de los Andes,Ingeniería en Informática,Técnico,El Salvador,true
-ed75,Universitat Politècnica de Catalunya,Ciencias de Datos,Maestría,España,false
-ed76,Universidad Rafael Landívar,Ciberseguridad,Técnico,Paraguay,false
-ed77,Universidad Nacional de Colombia,Inteligencia Artificial,Ingeniería,Costa Rica,true
-ed78,Universidad Nacional Autónoma de México,Matemáticas Aplicadas,Doctorado,Uruguay,false
-ed79,Universitat Politècnica de Catalunya,Física,Doctorado,Brasil,true
-ed80,Universidad Nacional Autónoma de México,Ingeniería de Software,Doctorado,Cuba,true
-ed81,Universidad Francisco Marroquín,Ciencias de Datos,Técnico,El Salvador,false
-ed82,Stanford University,Ingeniería en Informática,Especialización,Uruguay,false
-ed83,MIT,Ingeniería de Software,Especialización,Cuba,true
-ed84,Universidad de Chile,Ciencias de Datos,Técnico,Paraguay,false
-ed85,MIT,Ciencias de Datos,Maestría,México,true
-ed86,Universidad Francisco Marroquín,Inteligencia Artificial,Licenciatura,Perú,true
-ed87,Stanford University,Ciberseguridad,Ingeniería,Guatemala,false
-ed88,Universidad de los Andes,Ingeniería de Software,Licenciatura,Perú,true
-ed89,UNAM,Ciencias de Datos,Licenciatura,Costa Rica,true
-ed90,MIT,Ingeniería en Sistemas,Licenciatura,Uruguay,false
-ed91,Pontificia Universidad Católica de Chile,Administración de Empresas,Licenciatura,Chile,true
-ed92,Universidad de Buenos Aires,Ingeniería en Informática,Ingeniería,México,true
-ed93,Universidad Simon Bolivar,Ciencias de Datos,Ingeniería,Nicaragua,false
-ed94,UNAM,Ciencias de la Computación,Licenciatura,Panamá,false
-ed95,Universidad de los Andes,Ingeniería Industrial,Técnico,República Dominicana,true
-ed96,PUCP,Ciberseguridad,Maestría,Venezuela,true
-ed97,Universidad de Chile,Ingeniería Industrial,Licenciatura,Guatemala,false
-ed98,Universidad de Buenos Aires,Ingeniería en Sistemas,Ingeniería,Paraguay,true
-ed99,Universidad de los Andes,Estadística,Técnico,Panamá,true
-ed100,Universidad Nacional de Colombia,Inteligencia Artificial,Licenciatura,España,false
-ed101,ITESM,Física,Maestría,Bolivia,false
-ed102,Universidad Autónoma de Madrid,Matemáticas Aplicadas,Ingeniería,España,true
-ed103,Universidad de Chile,Ciencias de la Computación,Especialización,República Dominicana,true
-ed104,Universidad de Buenos Aires,Matemáticas Aplicadas,Licenciatura,Ecuador,false
-ed105,Universidad de San Carlos de Guatemala,Inteligencia Artificial,Maestría,Colombia,true
-ed106,MIT,Ingeniería de Software,Licenciatura,Colombia,false
-ed107,Stanford University,Ingeniería Electrónica,Ingeniería,Brasil,false
-ed108,Universidad del Valle de Guatemala,Inteligencia Artificial,Maestría,Cuba,true
-ed109,Universidad de San Carlos de Guatemala,Ingeniería Industrial,Ingeniería,El Salvador,false
-ed110,ITESM,Ingeniería Electrónica,Técnico,Nicaragua,false
-ed111,Universidad de Buenos Aires,Diseño de Interacción,Doctorado,México,true
-ed112,Universidad de Buenos Aires,Administración de Empresas,Licenciatura,Uruguay,true
-ed113,Universidad Galileo,Ingeniería de Software,Licenciatura,Honduras,true
-ed114,Stanford University,Ciencias de Datos,Licenciatura,Nicaragua,false
-ed115,Universidad Francisco Marroquín,Diseño de Interacción,Doctorado,Perú,true
-ed116,UNAM,Ingeniería Industrial,Licenciatura,Cuba,true
-ed117,Universidad del Valle de Guatemala,Diseño de Interacción,Licenciatura,Costa Rica,false
-ed118,ITESM,Inteligencia Artificial,Licenciatura,El Salvador,true
-ed119,ITESM,Matemáticas Aplicadas,Doctorado,El Salvador,false
-ed120,MIT,Ingeniería Electrónica,Doctorado,Honduras,true
-ed121,Universidad Francisco Marroquín,Ciencias de Datos,Maestría,Honduras,true
-ed122,Universidad Autónoma de Madrid,Ciencias de la Computación,Doctorado,Chile,true
-ed123,Universidad Simon Bolivar,Física,Maestría,Chile,true
-ed124,Universidad Nacional Autónoma de México,Ciberseguridad,Especialización,Chile,false
-ed125,Pontificia Universidad Católica de Chile,Ingeniería en Sistemas,Licenciatura,Bolivia,true
-ed126,Universidad Autónoma de Madrid,Matemáticas Aplicadas,Doctorado,El Salvador,false
-ed127,Universidad Nacional de Colombia,Ciencias de Datos,Especialización,Colombia,false
-ed128,Universidad Nacional de Colombia,Redes y Telecomunicaciones,Ingeniería,Venezuela,false
-ed129,Universidad Autónoma de Madrid,Ingeniería en Sistemas,Licenciatura,El Salvador,true
-ed130,Pontificia Universidad Católica de Chile,Física,Técnico,Perú,false
-ed131,Universidad de Buenos Aires,Ingeniería Industrial,Ingeniería,Ecuador,false
-ed132,PUCP,Redes y Telecomunicaciones,Especialización,Panamá,true
-ed133,Pontificia Universidad Católica de Chile,Ingeniería Electrónica,Doctorado,República Dominicana,true
-ed134,Universidad Autónoma de Madrid,Ciberseguridad,Doctorado,México,true
-ed135,Stanford University,Estadística,Técnico,México,true
-ed136,UNAM,Ciencias de la Computación,Técnico,España,true
-ed137,Universidad Francisco Marroquín,Física,Maestría,Panamá,true
-ed138,Universidad Nacional de Colombia,Ciencias de Datos,Maestría,Ecuador,true
-ed139,PUCP,Matemáticas Aplicadas,Técnico,Brasil,false
-ed140,Pontificia Universidad Católica de Chile,Ingeniería en Sistemas,Licenciatura,México,true
-ed141,Universidad Nacional de Colombia,Inteligencia Artificial,Licenciatura,Colombia,true
-ed142,UNAM,Redes y Telecomunicaciones,Maestría,Guatemala,false
-ed143,ITESM,Ingeniería en Informática,Técnico,México,true
-ed144,Universidad Francisco Marroquín,Inteligencia Artificial,Especialización,Venezuela,true
-ed145,Instituto Tecnológico de Costa Rica,Inteligencia Artificial,Maestría,Ecuador,true
-ed146,Instituto Tecnológico de Costa Rica,Ciencias de la Computación,Doctorado,México,true
-ed147,UNAM,Ciencias de la Computación,Licenciatura,Colombia,false
-ed148,Universidad Francisco Marroquín,Estadística,Técnico,Argentina,false
-ed149,Universidad de Chile,Ciberseguridad,Especialización,Venezuela,true
-ed150,Universidad de Chile,Física,Licenciatura,Cuba,false
-ed151,Universidad del Valle de Guatemala,Administración de Empresas,Licenciatura,Cuba,true
-ed152,Universidad del Valle de Guatemala,Ingeniería Electrónica,Doctorado,Paraguay,false
-ed153,Universidad de los Andes,Matemáticas Aplicadas,Doctorado,Chile,false
-ed154,Universidad de los Andes,Redes y Telecomunicaciones,Ingeniería,Panamá,true
-ed155,Stanford University,Física,Técnico,Ecuador,false
-ed156,ITESM,Ingeniería de Software,Licenciatura,Ecuador,true
-ed157,Universidad Rafael Landívar,Estadística,Maestría,Nicaragua,false
-ed158,Stanford University,Ciencias de la Computación,Licenciatura,Uruguay,false
-ed159,Universidad de Chile,Estadística,Técnico,Guatemala,true
-ed160,Universidad Nacional de Colombia,Ingeniería Industrial,Maestría,Perú,false
-ed161,Universitat Politècnica de Catalunya,Ciberseguridad,Técnico,Bolivia,true
-ed162,Universidad Nacional de Colombia,Ingeniería Industrial,Licenciatura,Panamá,false
-ed163,Universidad Francisco Marroquín,Ciberseguridad,Doctorado,Perú,true
-ed164,Universidad Rafael Landívar,Estadística,Técnico,Cuba,false
-ed165,PUCP,Ingeniería en Informática,Técnico,Argentina,false
-ed166,MIT,Ciberseguridad,Ingeniería,Cuba,true
-ed167,Instituto Tecnológico de Costa Rica,Ingeniería Electrónica,Especialización,República Dominicana,true
-ed168,Universidad Galileo,Ciberseguridad,Licenciatura,Costa Rica,true
-ed169,Universidad Francisco Marroquín,Ciencias de la Computación,Doctorado,Chile,false
-ed170,Universidad Galileo,Ingeniería en Informática,Doctorado,Nicaragua,false
-ed171,PUCP,Diseño de Interacción,Doctorado,Paraguay,false
-ed172,UNAM,Ciencias de la Computación,Especialización,Perú,false
-ed173,Universidad Francisco Marroquín,Diseño de Interacción,Especialización,El Salvador,false
-ed174,Universidad Francisco Marroquín,Ingeniería Industrial,Licenciatura,Paraguay,false
-ed175,Universidad Simon Bolivar,Redes y Telecomunicaciones,Doctorado,Costa Rica,true
-ed176,Universidad Autónoma de Madrid,Redes y Telecomunicaciones,Técnico,Guatemala,true
-ed177,Pontificia Universidad Católica de Chile,Ingeniería en Sistemas,Licenciatura,Colombia,false
-ed178,Instituto Tecnológico de Costa Rica,Diseño de Interacción,Licenciatura,Honduras,true
-ed179,Instituto Tecnológico de Costa Rica,Ciencias de la Computación,Maestría,México,true
-ed180,Universidad Galileo,Matemáticas Aplicadas,Maestría,Honduras,true
-ed181,Universidad Autónoma de Madrid,Ciencias de Datos,Licenciatura,Nicaragua,true
-ed182,Universitat Politècnica de Catalunya,Ingeniería en Informática,Licenciatura,Ecuador,false
-ed183,Stanford University,Ingeniería Industrial,Técnico,Panamá,false
-ed184,Pontificia Universidad Católica de Chile,Ingeniería en Sistemas,Licenciatura,Colombia,true
-ed185,Universidad de Chile,Ingeniería de Software,Maestría,Uruguay,true
-ed186,Universitat Politècnica de Catalunya,Administración de Empresas,Maestría,Bolivia,true
-ed187,Universidad Galileo,Inteligencia Artificial,Doctorado,Perú,false
-ed188,ITESM,Ingeniería de Software,Especialización,Colombia,true
-ed189,Pontificia Universidad Católica de Chile,Diseño de Interacción,Técnico,Costa Rica,false
-ed190,Instituto Tecnológico de Costa Rica,Inteligencia Artificial,Maestría,Venezuela,true
-ed191,Universidad Rafael Landívar,Ciencias de Datos,Licenciatura,Paraguay,false
-ed192,Universidad Rafael Landívar,Estadística,Licenciatura,Colombia,false
-ed193,MIT,Ingeniería de Software,Técnico,México,true
-ed194,MIT,Física,Ingeniería,Panamá,true
-ed195,Universidad de Chile,Ingeniería Industrial,Maestría,Ecuador,false
-ed196,Universidad de Buenos Aires,Inteligencia Artificial,Doctorado,España,true
-ed197,Stanford University,Ingeniería de Software,Técnico,Venezuela,false
-ed198,UNAM,Física,Maestría,Argentina,false
-ed199,Pontificia Universidad Católica de Chile,Ingeniería Industrial,Doctorado,Guatemala,false
-ed200,Universidad de San Carlos de Guatemala,Física,Doctorado,Bolivia,true
-ed201,Universidad Galileo,Estadística,Maestría,El Salvador,true
-ed202,Universidad de los Andes,Matemáticas Aplicadas,Especialización,Bolivia,false
-ed203,Universidad de los Andes,Matemáticas Aplicadas,Licenciatura,Guatemala,false
-ed204,Universidad Autónoma de Madrid,Ingeniería Industrial,Especialización,México,false
-ed205,Universidad Autónoma de Madrid,Inteligencia Artificial,Ingeniería,Costa Rica,false
-ed206,Instituto Tecnológico de Costa Rica,Ingeniería en Sistemas,Licenciatura,República Dominicana,true
-ed207,Universidad del Valle de Guatemala,Ingeniería de Software,Licenciatura,Costa Rica,false
-ed208,Universidad Nacional de Colombia,Ciberseguridad,Doctorado,El Salvador,true
-ed209,Universidad de los Andes,Ingeniería de Software,Especialización,Ecuador,false
-ed210,Universidad Simon Bolivar,Ciberseguridad,Maestría,Paraguay,false
-ed211,Universidad de San Carlos de Guatemala,Ciencias de la Computación,Especialización,Paraguay,false
-ed212,Universidad Rafael Landívar,Ingeniería Electrónica,Doctorado,Ecuador,true
-ed213,Stanford University,Física,Doctorado,México,false
-ed214,Universidad del Valle de Guatemala,Física,Ingeniería,Perú,false
-ed215,Universidad del Valle de Guatemala,Ciencias de la Computación,Especialización,Argentina,false
-ed216,Universidad Simon Bolivar,Inteligencia Artificial,Ingeniería,Brasil,false
-ed217,Pontificia Universidad Católica de Chile,Matemáticas Aplicadas,Licenciatura,Cuba,false
-ed218,ITESM,Ingeniería Industrial,Licenciatura,Costa Rica,false
-ed219,Universidad de San Carlos de Guatemala,Ingeniería Industrial,Doctorado,El Salvador,true
-ed220,MIT,Ciencias de la Computación,Ingeniería,Venezuela,false
-ed221,Universidad Rafael Landívar,Inteligencia Artificial,Técnico,Nicaragua,true
-ed222,Instituto Tecnológico de Costa Rica,Ciencias de Datos,Especialización,Cuba,true
-ed223,Universidad Nacional de Colombia,Ciencias de la Computación,Técnico,Argentina,true
-ed224,Universidad Simon Bolivar,Redes y Telecomunicaciones,Doctorado,México,false
-ed225,ITESM,Estadística,Técnico,Nicaragua,true
-ed226,MIT,Administración de Empresas,Especialización,México,false
-ed227,MIT,Física,Maestría,Colombia,true
-ed228,Universidad Rafael Landívar,Matemáticas Aplicadas,Licenciatura,Honduras,false
-ed229,Universidad Simon Bolivar,Ingeniería en Informática,Ingeniería,España,true
-ed230,UNAM,Ciencias de Datos,Licenciatura,Chile,false
-ed231,Instituto Tecnológico de Costa Rica,Ciberseguridad,Técnico,España,false
-ed232,Universidad del Valle de Guatemala,Ingeniería Electrónica,Especialización,Perú,false
-ed233,Universidad de Buenos Aires,Ciencias de la Computación,Técnico,Chile,false
-ed234,Universidad Galileo,Ingeniería de Software,Licenciatura,Perú,false
-ed235,ITESM,Ciberseguridad,Especialización,El Salvador,true
-ed236,Universidad Rafael Landívar,Ciencias de Datos,Doctorado,El Salvador,true
-ed237,Stanford University,Ingeniería Electrónica,Doctorado,Chile,true
-ed238,Universidad Nacional de Colombia,Estadística,Maestría,Guatemala,false
-ed239,ITESM,Ingeniería en Sistemas,Técnico,Cuba,true
-ed240,Stanford University,Ingeniería de Software,Licenciatura,Panamá,false
-ed241,Universidad Francisco Marroquín,Ingeniería Industrial,Especialización,Cuba,false
-ed242,Universidad Rafael Landívar,Redes y Telecomunicaciones,Licenciatura,Costa Rica,true
-ed243,Universidad de Chile,Ciencias de Datos,Especialización,Guatemala,false
-ed244,PUCP,Estadística,Especialización,República Dominicana,false
-ed245,Stanford University,Ingeniería Industrial,Especialización,Cuba,true
-ed246,Instituto Tecnológico de Costa Rica,Ingeniería de Software,Especialización,Chile,false
-ed247,UNAM,Ciberseguridad,Ingeniería,Panamá,false
-ed248,Universidad Rafael Landívar,Ciencias de Datos,Ingeniería,Argentina,false
-ed249,Universidad Francisco Marroquín,Ingeniería en Informática,Ingeniería,España,true
-ed250,Universidad de los Andes,Redes y Telecomunicaciones,Licenciatura,Argentina,true
-ed251,Universidad de los Andes,Matemáticas Aplicadas,Maestría,México,true
-ed252,Universidad del Valle de Guatemala,Ciberseguridad,Doctorado,Perú,false
-ed253,Universidad de San Carlos de Guatemala,Ingeniería en Informática,Doctorado,Uruguay,false
-ed254,MIT,Ingeniería Electrónica,Doctorado,Argentina,true
-ed255,UNAM,Ingeniería en Informática,Especialización,España,true
-ed256,Universidad de los Andes,Ingeniería Electrónica,Maestría,México,false
-ed257,Universidad de los Andes,Administración de Empresas,Doctorado,El Salvador,true
-ed258,Universidad Nacional Autónoma de México,Ingeniería de Software,Maestría,Brasil,true
-ed259,Universidad de los Andes,Ciberseguridad,Licenciatura,Nicaragua,false
-ed260,Universidad Autónoma de Madrid,Diseño de Interacción,Técnico,Nicaragua,true
-ed261,Stanford University,Ingeniería Industrial,Maestría,Argentina,true
-ed262,Universidad Galileo,Inteligencia Artificial,Especialización,República Dominicana,true
-ed263,Universidad Rafael Landívar,Inteligencia Artificial,Especialización,México,true
-ed264,Universidad Simon Bolivar,Física,Ingeniería,Perú,false
-ed265,Universidad Francisco Marroquín,Redes y Telecomunicaciones,Licenciatura,Cuba,true
-ed266,Universidad Francisco Marroquín,Diseño de Interacción,Técnico,República Dominicana,false
-ed267,Pontificia Universidad Católica de Chile,Estadística,Ingeniería,República Dominicana,true
-ed268,Universidad Autónoma de Madrid,Ingeniería en Sistemas,Maestría,Honduras,false
-ed269,Universitat Politècnica de Catalunya,Diseño de Interacción,Especialización,Ecuador,true
-ed270,Universidad Galileo,Ciencias de Datos,Maestría,Honduras,true
-ed271,Pontificia Universidad Católica de Chile,Ingeniería Industrial,Doctorado,Uruguay,true
-ed272,Universidad Nacional de Colombia,Ingeniería Electrónica,Doctorado,Costa Rica,false
-ed273,Universidad del Valle de Guatemala,Ciberseguridad,Técnico,Guatemala,true
-ed274,Universidad de Chile,Diseño de Interacción,Maestría,Panamá,false
-ed275,MIT,Administración de Empresas,Maestría,Perú,false
-ed276,Universidad Autónoma de Madrid,Estadística,Licenciatura,Argentina,true
-ed277,Universidad Autónoma de Madrid,Física,Maestría,Brasil,true
-ed278,MIT,Redes y Telecomunicaciones,Licenciatura,España,false
-ed279,Stanford University,Ciberseguridad,Ingeniería,República Dominicana,true
-ed280,Universidad de Chile,Administración de Empresas,Técnico,Panamá,true
-ed281,Universitat Politècnica de Catalunya,Ciencias de la Computación,Doctorado,Paraguay,false
-ed282,Universidad Galileo,Redes y Telecomunicaciones,Maestría,Perú,true
-ed283,Universitat Politècnica de Catalunya,Física,Licenciatura,Uruguay,false
-ed284,Universidad de Buenos Aires,Matemáticas Aplicadas,Técnico,México,false
-ed285,UNAM,Física,Maestría,Colombia,true
-ed286,Universidad Nacional Autónoma de México,Física,Licenciatura,Paraguay,true
-ed287,Universidad Galileo,Ingeniería Industrial,Doctorado,Costa Rica,true
-ed288,Universidad del Valle de Guatemala,Ingeniería Industrial,Maestría,El Salvador,true
-ed289,Universidad Galileo,Ingeniería Electrónica,Maestría,Venezuela,true
-ed290,Universidad de los Andes,Ciberseguridad,Técnico,Cuba,true
-ed291,Universitat Politècnica de Catalunya,Ingeniería en Sistemas,Maestría,El Salvador,true
-ed292,Universidad del Valle de Guatemala,Inteligencia Artificial,Licenciatura,República Dominicana,true
-ed293,Universidad de San Carlos de Guatemala,Diseño de Interacción,Licenciatura,Bolivia,false
-ed294,MIT,Ingeniería en Informática,Licenciatura,El Salvador,true
-ed295,Universidad Galileo,Inteligencia Artificial,Maestría,Venezuela,false
-ed296,Universidad Nacional de Colombia,Ingeniería en Informática,Doctorado,Paraguay,false
-ed297,Stanford University,Ciencias de Datos,Maestría,Panamá,false
-ed298,Universidad de San Carlos de Guatemala,Física,Técnico,Costa Rica,true
-ed299,Universidad Nacional Autónoma de México,Matemáticas Aplicadas,Ingeniería,Guatemala,false
-ed300,Universidad de los Andes,Inteligencia Artificial,Técnico,Cuba,true
-ed301,Universidad Rafael Landívar,Ingeniería en Sistemas,Técnico,Chile,true
-ed302,Universidad Simon Bolivar,Redes y Telecomunicaciones,Técnico,República Dominicana,true
-ed303,Universidad de los Andes,Redes y Telecomunicaciones,Especialización,Costa Rica,true
-ed304,Universidad Autónoma de Madrid,Ciencias de la Computación,Ingeniería,Cuba,false
-ed305,Universidad Autónoma de Madrid,Ingeniería Electrónica,Especialización,Venezuela,false
-ed306,Universidad de Chile,Inteligencia Artificial,Doctorado,Honduras,true
-ed307,Universitat Politècnica de Catalunya,Ingeniería de Software,Doctorado,Chile,true
-ed308,Universidad de Chile,Ingeniería de Software,Licenciatura,Panamá,true
-ed309,PUCP,Diseño de Interacción,Especialización,Costa Rica,false
-ed310,Stanford University,Física,Doctorado,Guatemala,true
-ed311,Universidad de San Carlos de Guatemala,Ciencias de la Computación,Especialización,Uruguay,false
-ed312,Universidad de Chile,Ingeniería Industrial,Especialización,Cuba,true
-ed313,Universidad de San Carlos de Guatemala,Diseño de Interacción,Licenciatura,Colombia,true
-ed314,Pontificia Universidad Católica de Chile,Ingeniería Electrónica,Especialización,Colombia,false
-ed315,Universidad de San Carlos de Guatemala,Redes y Telecomunicaciones,Especialización,República Dominicana,true
-ed316,Instituto Tecnológico de Costa Rica,Matemáticas Aplicadas,Técnico,Guatemala,true
-ed317,Pontificia Universidad Católica de Chile,Física,Doctorado,Paraguay,false
-ed318,Universidad Nacional de Colombia,Administración de Empresas,Doctorado,Guatemala,true
-ed319,Universidad del Valle de Guatemala,Ingeniería en Sistemas,Doctorado,México,true
-ed320,Universidad Nacional de Colombia,Estadística,Técnico,Venezuela,false
-ed321,Pontificia Universidad Católica de Chile,Ingeniería Industrial,Técnico,Uruguay,true
-ed322,Universidad Nacional de Colombia,Estadística,Ingeniería,Honduras,false
-ed323,ITESM,Redes y Telecomunicaciones,Técnico,Guatemala,false
-ed324,Universidad Autónoma de Madrid,Ingeniería Industrial,Ingeniería,España,false
-ed325,Instituto Tecnológico de Costa Rica,Inteligencia Artificial,Maestría,Costa Rica,false
-ed326,Universidad de Buenos Aires,Ingeniería en Sistemas,Licenciatura,Perú,true
-ed327,Stanford University,Ingeniería Industrial,Doctorado,Colombia,true
-ed328,MIT,Ciencias de la Computación,Maestría,Argentina,false
-ed329,PUCP,Ingeniería en Informática,Especialización,Panamá,true
-ed330,Universidad Autónoma de Madrid,Matemáticas Aplicadas,Licenciatura,Panamá,false
-ed331,Universidad Simon Bolivar,Ingeniería en Sistemas,Doctorado,Ecuador,true
-ed332,Universidad de Chile,Ingeniería en Sistemas,Técnico,Colombia,false
-ed333,Pontificia Universidad Católica de Chile,Ciencias de la Computación,Especialización,Paraguay,false
-ed334,Stanford University,Física,Técnico,Uruguay,true
-ed335,Universidad Galileo,Matemáticas Aplicadas,Licenciatura,Ecuador,true
-ed336,Universidad de los Andes,Ciencias de la Computación,Ingeniería,Honduras,false
-ed337,Stanford University,Ingeniería en Sistemas,Maestría,Panamá,false
-ed338,Instituto Tecnológico de Costa Rica,Ciencias de la Computación,Técnico,Nicaragua,false
-ed339,Universidad Nacional de Colombia,Ingeniería de Software,Técnico,Brasil,false
-ed340,Universidad Nacional de Colombia,Redes y Telecomunicaciones,Especialización,Nicaragua,true
-ed341,Pontificia Universidad Católica de Chile,Matemáticas Aplicadas,Doctorado,Colombia,true
-ed342,ITESM,Administración de Empresas,Licenciatura,Colombia,true
-ed343,Universitat Politècnica de Catalunya,Matemáticas Aplicadas,Maestría,Venezuela,false
-ed344,Stanford University,Diseño de Interacción,Especialización,Cuba,true
-ed345,Universidad Nacional Autónoma de México,Ciberseguridad,Especialización,Costa Rica,true
-ed346,Pontificia Universidad Católica de Chile,Diseño de Interacción,Doctorado,Nicaragua,false
-ed347,Universidad del Valle de Guatemala,Diseño de Interacción,Licenciatura,Brasil,false
-ed348,Instituto Tecnológico de Costa Rica,Redes y Telecomunicaciones,Ingeniería,Venezuela,false
-ed349,Universidad de los Andes,Diseño de Interacción,Ingeniería,España,false
-ed350,Universidad Autónoma de Madrid,Estadística,Ingeniería,El Salvador,true
-ed351,Stanford University,Física,Maestría,El Salvador,false
-ed352,Stanford University,Inteligencia Artificial,Doctorado,Brasil,false
-ed353,UNAM,Ciberseguridad,Ingeniería,México,false
-ed354,Universidad de los Andes,Ingeniería de Software,Maestría,Panamá,true
-ed355,Universidad Nacional Autónoma de México,Ciencias de la Computación,Ingeniería,Honduras,true
-ed356,Universidad de Buenos Aires,Ingeniería en Informática,Ingeniería,Brasil,false
-ed357,Universidad Nacional de Colombia,Ciberseguridad,Técnico,Honduras,false
-ed358,Universidad de Buenos Aires,Estadística,Técnico,México,true
-ed359,Universidad Nacional Autónoma de México,Ciencias de la Computación,Ingeniería,Perú,false
-ed360,ITESM,Inteligencia Artificial,Doctorado,España,false
-ed361,Universidad Nacional Autónoma de México,Matemáticas Aplicadas,Especialización,Cuba,true
-ed362,Universidad Galileo,Ciberseguridad,Técnico,Brasil,false
-ed363,Universidad del Valle de Guatemala,Administración de Empresas,Doctorado,Paraguay,false
-ed364,Universidad de Chile,Ingeniería Industrial,Licenciatura,Guatemala,false
-ed365,Universidad de Buenos Aires,Estadística,Maestría,Brasil,false
-ed366,Stanford University,Ingeniería en Sistemas,Especialización,Bolivia,false
-ed367,Universitat Politècnica de Catalunya,Ciberseguridad,Técnico,Argentina,false
-ed368,Universidad de San Carlos de Guatemala,Redes y Telecomunicaciones,Técnico,Honduras,true
-ed369,Universidad Rafael Landívar,Redes y Telecomunicaciones,Especialización,Guatemala,true
-ed370,PUCP,Redes y Telecomunicaciones,Doctorado,Venezuela,false
-ed371,Universidad de San Carlos de Guatemala,Matemáticas Aplicadas,Ingeniería,Cuba,false
-ed372,Universitat Politècnica de Catalunya,Física,Doctorado,España,false
-ed373,Instituto Tecnológico de Costa Rica,Matemáticas Aplicadas,Maestría,El Salvador,false
-ed374,Pontificia Universidad Católica de Chile,Diseño de Interacción,Especialización,República Dominicana,false
-ed375,PUCP,Redes y Telecomunicaciones,Especialización,Costa Rica,false
-ed376,Instituto Tecnológico de Costa Rica,Ingeniería Electrónica,Especialización,Paraguay,true
-ed377,Universidad de los Andes,Ingeniería Electrónica,Doctorado,Venezuela,true
-ed378,Universidad del Valle de Guatemala,Estadística,Doctorado,Guatemala,false
-ed379,UNAM,Física,Licenciatura,Honduras,true
-ed380,Stanford University,Diseño de Interacción,Especialización,El Salvador,true
-ed381,MIT,Matemáticas Aplicadas,Especialización,España,false
-ed382,Instituto Tecnológico de Costa Rica,Ingeniería Industrial,Doctorado,Nicaragua,false
-ed383,Universidad de San Carlos de Guatemala,Estadística,Ingeniería,Brasil,false
-ed384,ITESM,Estadística,Especialización,Paraguay,false
-ed385,Universidad del Valle de Guatemala,Ciencias de Datos,Técnico,Paraguay,true
-ed386,ITESM,Física,Técnico,Paraguay,false
-ed387,Pontificia Universidad Católica de Chile,Administración de Empresas,Maestría,Cuba,false
-ed388,UNAM,Estadística,Doctorado,México,true
-ed389,Stanford University,Ingeniería Industrial,Técnico,Argentina,false
-ed390,PUCP,Ciencias de Datos,Técnico,El Salvador,false
-ed391,MIT,Ingeniería de Software,Maestría,Venezuela,false
-ed392,Universidad Galileo,Inteligencia Artificial,Doctorado,Brasil,true
-ed393,Universidad Nacional Autónoma de México,Ciencias de la Computación,Técnico,Perú,false
-ed394,Universidad Nacional Autónoma de México,Redes y Telecomunicaciones,Licenciatura,El Salvador,true
-ed395,Universidad de Chile,Ingeniería Industrial,Maestría,Panamá,true
-ed396,Universidad Galileo,Inteligencia Artificial,Ingeniería,Colombia,false
-ed397,Universidad de Buenos Aires,Ingeniería Industrial,Técnico,Nicaragua,true
-ed398,Stanford University,Ingeniería Industrial,Ingeniería,España,true
-ed399,Universidad de San Carlos de Guatemala,Ciberseguridad,Especialización,México,true
+ed0,Universidad Autónoma de Madrid,Ingeniería de Software,Especialización,Ecuador,false
+ed1,Instituto Tecnológico de Costa Rica,Diseño de Interacción,Especialización,Ecuador,true
+ed2,Stanford University,Estadística,Doctorado,Paraguay,true
+ed3,MIT,Ingeniería de Software,Doctorado,Ecuador,false
+ed4,Stanford University,Ciberseguridad,Técnico,El Salvador,false
+ed5,Universidad Nacional Autónoma de México,Ingeniería en Informática,Especialización,Cuba,false
+ed6,Universidad de Chile,Administración de Empresas,Maestría,Paraguay,true
+ed7,Universidad Autónoma de Madrid,Matemáticas Aplicadas,Ingeniería,Perú,false
+ed8,Universidad Nacional de Colombia,Ingeniería de Software,Ingeniería,Brasil,true
+ed9,UNAM,Física,Ingeniería,Uruguay,true
+ed10,Universidad Nacional de Colombia,Ingeniería en Informática,Doctorado,Venezuela,false
+ed11,Universidad del Valle de Guatemala,Ingeniería en Informática,Doctorado,Uruguay,false
+ed12,Universidad de San Carlos de Guatemala,Ingeniería en Informática,Licenciatura,El Salvador,true
+ed13,Universidad Simon Bolivar,Redes y Telecomunicaciones,Ingeniería,República Dominicana,true
+ed14,Instituto Tecnológico de Costa Rica,Física,Licenciatura,Guatemala,true
+ed15,Universitat Politècnica de Catalunya,Estadística,Técnico,Perú,true
+ed16,Universidad Nacional Autónoma de México,Ingeniería de Software,Licenciatura,Ecuador,true
+ed17,Universidad Nacional de Colombia,Ciencias de Datos,Técnico,Venezuela,true
+ed18,ITESM,Inteligencia Artificial,Ingeniería,República Dominicana,true
+ed19,MIT,Estadística,Técnico,Costa Rica,false
+ed20,Universidad Galileo,Ingeniería en Sistemas,Ingeniería,Paraguay,true
+ed21,Universidad Simon Bolivar,Ingeniería Electrónica,Ingeniería,Honduras,true
+ed22,Stanford University,Ingeniería Electrónica,Especialización,Nicaragua,true
+ed23,Universidad Simon Bolivar,Física,Maestría,Colombia,true
+ed24,Universidad Rafael Landívar,Ingeniería Industrial,Doctorado,México,true
+ed25,Stanford University,Física,Doctorado,Brasil,false
+ed26,ITESM,Redes y Telecomunicaciones,Licenciatura,Colombia,false
+ed27,PUCP,Ciberseguridad,Doctorado,Panamá,false
+ed28,Stanford University,Ingeniería de Software,Ingeniería,Uruguay,true
+ed29,Universidad Rafael Landívar,Administración de Empresas,Licenciatura,Guatemala,false
+ed30,Universidad del Valle de Guatemala,Física,Doctorado,Uruguay,true
+ed31,Universidad de Chile,Redes y Telecomunicaciones,Técnico,Perú,false
+ed32,Universidad Galileo,Ingeniería en Sistemas,Ingeniería,Uruguay,true
+ed33,Universidad del Valle de Guatemala,Estadística,Técnico,Uruguay,true
+ed34,Universidad de Buenos Aires,Diseño de Interacción,Especialización,Colombia,false
+ed35,UNAM,Ciencias de la Computación,Técnico,Uruguay,false
+ed36,Universidad del Valle de Guatemala,Física,Especialización,Chile,false
+ed37,Universidad Nacional de Colombia,Estadística,Doctorado,Uruguay,false
+ed38,Universidad Nacional Autónoma de México,Ciencias de la Computación,Ingeniería,Colombia,false
+ed39,UNAM,Ciencias de Datos,Especialización,Uruguay,false
+ed40,Universidad de Chile,Ciberseguridad,Doctorado,Panamá,false
+ed41,Instituto Tecnológico de Costa Rica,Física,Licenciatura,Uruguay,true
+ed42,Pontificia Universidad Católica de Chile,Física,Maestría,Paraguay,true
+ed43,PUCP,Ciencias de Datos,Maestría,Nicaragua,true
+ed44,Universidad Nacional de Colombia,Ingeniería Industrial,Especialización,Brasil,false
+ed45,Universidad Nacional Autónoma de México,Inteligencia Artificial,Técnico,México,true
+ed46,MIT,Ciberseguridad,Doctorado,Nicaragua,true
+ed47,Universidad Nacional de Colombia,Ciencias de la Computación,Doctorado,Guatemala,true
+ed48,Universidad de Buenos Aires,Ciencias de Datos,Doctorado,Nicaragua,false
+ed49,Pontificia Universidad Católica de Chile,Redes y Telecomunicaciones,Licenciatura,España,false
+ed50,Universidad Galileo,Diseño de Interacción,Ingeniería,Ecuador,false
+ed51,Universidad Simon Bolivar,Ingeniería en Sistemas,Maestría,Chile,true
+ed52,Universidad del Valle de Guatemala,Ingeniería Industrial,Especialización,Bolivia,false
+ed53,UNAM,Ciencias de la Computación,Especialización,Chile,true
+ed54,UNAM,Ingeniería de Software,Especialización,Costa Rica,false
+ed55,Universitat Politècnica de Catalunya,Ingeniería Industrial,Ingeniería,Cuba,true
+ed56,Universidad de San Carlos de Guatemala,Ciberseguridad,Maestría,Costa Rica,false
+ed57,Instituto Tecnológico de Costa Rica,Física,Ingeniería,El Salvador,true
+ed58,Universidad de los Andes,Ingeniería en Sistemas,Técnico,Perú,false
+ed59,PUCP,Ciberseguridad,Ingeniería,Perú,false
+ed60,Universidad Francisco Marroquín,Matemáticas Aplicadas,Especialización,Panamá,true
+ed61,Universidad de San Carlos de Guatemala,Ingeniería de Software,Licenciatura,Ecuador,false
+ed62,Stanford University,Ciberseguridad,Técnico,Uruguay,false
+ed63,Universidad Simon Bolivar,Redes y Telecomunicaciones,Ingeniería,Perú,true
+ed64,Universidad Rafael Landívar,Ingeniería de Software,Ingeniería,Uruguay,false
+ed65,UNAM,Ciberseguridad,Licenciatura,Brasil,false
+ed66,Stanford University,Redes y Telecomunicaciones,Doctorado,Honduras,true
+ed67,Universidad Rafael Landívar,Ingeniería en Sistemas,Ingeniería,Bolivia,false
+ed68,Pontificia Universidad Católica de Chile,Matemáticas Aplicadas,Licenciatura,Chile,false
+ed69,Universidad Nacional de Colombia,Ciencias de Datos,Ingeniería,Nicaragua,true
+ed70,Instituto Tecnológico de Costa Rica,Ingeniería Electrónica,Ingeniería,Honduras,false
+ed71,Universidad Nacional Autónoma de México,Ingeniería de Software,Licenciatura,Ecuador,false
+ed72,Instituto Tecnológico de Costa Rica,Ciberseguridad,Doctorado,República Dominicana,false
+ed73,MIT,Ingeniería Industrial,Ingeniería,Uruguay,true
+ed74,MIT,Física,Técnico,Nicaragua,false
+ed75,Universidad de los Andes,Ingeniería Industrial,Licenciatura,Bolivia,true
+ed76,Universidad Autónoma de Madrid,Estadística,Maestría,Costa Rica,true
+ed77,Universidad Simon Bolivar,Ingeniería de Software,Ingeniería,México,false
+ed78,Universidad Nacional de Colombia,Ingeniería de Software,Técnico,Venezuela,true
+ed79,Universitat Politècnica de Catalunya,Ingeniería en Sistemas,Técnico,España,false
+ed80,Universidad Nacional de Colombia,Ingeniería de Software,Doctorado,España,false
+ed81,Universidad Autónoma de Madrid,Inteligencia Artificial,Licenciatura,México,false
+ed82,Pontificia Universidad Católica de Chile,Ciberseguridad,Especialización,Chile,false
+ed83,Pontificia Universidad Católica de Chile,Diseño de Interacción,Licenciatura,Honduras,false
+ed84,Universidad Francisco Marroquín,Ingeniería Electrónica,Ingeniería,Ecuador,true
+ed85,Pontificia Universidad Católica de Chile,Inteligencia Artificial,Licenciatura,Ecuador,false
+ed86,Universidad Autónoma de Madrid,Ingeniería en Informática,Ingeniería,Guatemala,true
+ed87,Universidad de Chile,Inteligencia Artificial,Ingeniería,Cuba,true
+ed88,Universidad del Valle de Guatemala,Administración de Empresas,Especialización,Panamá,false
+ed89,Stanford University,Ciberseguridad,Licenciatura,El Salvador,false
+ed90,Universidad del Valle de Guatemala,Ciencias de la Computación,Maestría,Brasil,true
+ed91,Universidad Simon Bolivar,Matemáticas Aplicadas,Maestría,Costa Rica,false
+ed92,Universitat Politècnica de Catalunya,Ingeniería Electrónica,Ingeniería,El Salvador,false
+ed93,Instituto Tecnológico de Costa Rica,Ingeniería Electrónica,Maestría,Colombia,false
+ed94,Stanford University,Ciencias de la Computación,Ingeniería,Uruguay,true
+ed95,Universidad de Buenos Aires,Inteligencia Artificial,Especialización,Honduras,false
+ed96,Universidad Francisco Marroquín,Inteligencia Artificial,Maestría,Ecuador,false
+ed97,UNAM,Física,Ingeniería,Argentina,true
+ed98,Universidad del Valle de Guatemala,Ciencias de Datos,Maestría,Paraguay,true
+ed99,Universidad Nacional de Colombia,Matemáticas Aplicadas,Ingeniería,Nicaragua,false
+ed100,Universidad Nacional de Colombia,Ingeniería en Sistemas,Ingeniería,Venezuela,false
+ed101,Instituto Tecnológico de Costa Rica,Redes y Telecomunicaciones,Doctorado,Brasil,false
+ed102,Universitat Politècnica de Catalunya,Ingeniería en Sistemas,Doctorado,Ecuador,false
+ed103,Universidad Nacional de Colombia,Ingeniería de Software,Maestría,Venezuela,false
+ed104,Universidad Nacional de Colombia,Ciencias de la Computación,Maestría,Argentina,false
+ed105,Instituto Tecnológico de Costa Rica,Ingeniería en Informática,Licenciatura,República Dominicana,true
+ed106,Universidad Francisco Marroquín,Estadística,Maestría,Nicaragua,true
+ed107,Pontificia Universidad Católica de Chile,Diseño de Interacción,Ingeniería,Chile,true
+ed108,Universidad del Valle de Guatemala,Física,Especialización,Brasil,true
+ed109,Universidad del Valle de Guatemala,Redes y Telecomunicaciones,Maestría,Uruguay,false
+ed110,Universidad del Valle de Guatemala,Ingeniería de Software,Especialización,Panamá,false
+ed111,MIT,Inteligencia Artificial,Ingeniería,Paraguay,true
+ed112,Universidad de San Carlos de Guatemala,Diseño de Interacción,Licenciatura,Cuba,true
+ed113,UNAM,Ciencias de Datos,Licenciatura,Costa Rica,true
+ed114,Universidad Nacional de Colombia,Ingeniería en Sistemas,Doctorado,Argentina,false
+ed115,Universitat Politècnica de Catalunya,Redes y Telecomunicaciones,Ingeniería,Venezuela,true
+ed116,Universitat Politècnica de Catalunya,Inteligencia Artificial,Ingeniería,Paraguay,true
+ed117,ITESM,Ciberseguridad,Técnico,Brasil,true
+ed118,Universidad de los Andes,Ciencias de Datos,Maestría,Costa Rica,false
+ed119,Universidad Simon Bolivar,Ingeniería de Software,Maestría,Guatemala,true
+ed120,Universidad Autónoma de Madrid,Ingeniería de Software,Doctorado,Costa Rica,false
+ed121,Instituto Tecnológico de Costa Rica,Inteligencia Artificial,Licenciatura,Paraguay,true
+ed122,Universidad Nacional Autónoma de México,Ingeniería Electrónica,Especialización,Panamá,true
+ed123,Universidad de Buenos Aires,Ingeniería de Software,Licenciatura,Guatemala,true
+ed124,Universidad Francisco Marroquín,Administración de Empresas,Doctorado,Colombia,false
+ed125,Universidad de los Andes,Matemáticas Aplicadas,Maestría,Paraguay,false
+ed126,Universidad Rafael Landívar,Ciencias de Datos,Doctorado,Paraguay,false
+ed127,PUCP,Ingeniería de Software,Técnico,Colombia,true
+ed128,Universidad de San Carlos de Guatemala,Ciencias de Datos,Ingeniería,Venezuela,false
+ed129,Universitat Politècnica de Catalunya,Matemáticas Aplicadas,Maestría,Paraguay,false
+ed130,Universidad Nacional de Colombia,Matemáticas Aplicadas,Licenciatura,Colombia,true
+ed131,MIT,Diseño de Interacción,Ingeniería,Argentina,false
+ed132,UNAM,Ingeniería Electrónica,Doctorado,Perú,false
+ed133,Pontificia Universidad Católica de Chile,Ingeniería Electrónica,Maestría,Costa Rica,false
+ed134,Universidad Rafael Landívar,Ingeniería Electrónica,Ingeniería,Paraguay,true
+ed135,Stanford University,Estadística,Ingeniería,Colombia,true
+ed136,MIT,Ingeniería de Software,Especialización,Honduras,false
+ed137,Universidad Francisco Marroquín,Ciencias de Datos,Especialización,Venezuela,true
+ed138,Universitat Politècnica de Catalunya,Matemáticas Aplicadas,Doctorado,Cuba,true
+ed139,MIT,Ingeniería Electrónica,Especialización,Costa Rica,true
+ed140,PUCP,Estadística,Ingeniería,España,false
+ed141,Universidad de San Carlos de Guatemala,Física,Doctorado,Costa Rica,false
+ed142,Universidad de Buenos Aires,Estadística,Doctorado,Colombia,true
+ed143,Universidad de San Carlos de Guatemala,Inteligencia Artificial,Ingeniería,Guatemala,false
+ed144,Universidad Galileo,Ciencias de la Computación,Ingeniería,Panamá,false
+ed145,UNAM,Matemáticas Aplicadas,Técnico,España,false
+ed146,Universidad de los Andes,Física,Licenciatura,Ecuador,true
+ed147,Universidad de Chile,Administración de Empresas,Doctorado,Uruguay,false
+ed148,Universidad de los Andes,Física,Ingeniería,Venezuela,false
+ed149,Universidad Rafael Landívar,Administración de Empresas,Licenciatura,Costa Rica,false
+ed150,Universidad del Valle de Guatemala,Ingeniería en Sistemas,Ingeniería,Chile,true
+ed151,Universidad Galileo,Ingeniería Industrial,Doctorado,México,false
+ed152,Universidad Autónoma de Madrid,Ciberseguridad,Maestría,Guatemala,false
+ed153,UNAM,Ingeniería Industrial,Licenciatura,México,true
+ed154,Pontificia Universidad Católica de Chile,Matemáticas Aplicadas,Especialización,Perú,true
+ed155,Universidad Simon Bolivar,Ingeniería en Informática,Técnico,España,true
+ed156,Universidad de Chile,Matemáticas Aplicadas,Doctorado,Panamá,false
+ed157,Instituto Tecnológico de Costa Rica,Ingeniería Electrónica,Maestría,Nicaragua,false
+ed158,Universidad Simon Bolivar,Ciberseguridad,Doctorado,Uruguay,false
+ed159,Universitat Politècnica de Catalunya,Administración de Empresas,Especialización,Ecuador,true
+ed160,Universidad Simon Bolivar,Ciencias de Datos,Ingeniería,Brasil,false
+ed161,UNAM,Ciencias de la Computación,Licenciatura,Brasil,false
+ed162,Universidad Francisco Marroquín,Administración de Empresas,Ingeniería,Nicaragua,false
+ed163,Universitat Politècnica de Catalunya,Administración de Empresas,Técnico,Nicaragua,true
+ed164,MIT,Ingeniería Electrónica,Licenciatura,Brasil,false
+ed165,Stanford University,Ingeniería en Informática,Especialización,Nicaragua,true
+ed166,Universidad Simon Bolivar,Ciberseguridad,Ingeniería,Perú,true
+ed167,Universidad Francisco Marroquín,Administración de Empresas,Ingeniería,República Dominicana,false
+ed168,PUCP,Matemáticas Aplicadas,Especialización,Brasil,false
+ed169,Instituto Tecnológico de Costa Rica,Física,Especialización,Guatemala,false
+ed170,Universidad Nacional de Colombia,Redes y Telecomunicaciones,Técnico,Chile,false
+ed171,Instituto Tecnológico de Costa Rica,Matemáticas Aplicadas,Técnico,Guatemala,true
+ed172,ITESM,Ciberseguridad,Licenciatura,República Dominicana,false
+ed173,PUCP,Administración de Empresas,Técnico,Costa Rica,true
+ed174,Universidad Nacional Autónoma de México,Administración de Empresas,Licenciatura,España,true
+ed175,Stanford University,Redes y Telecomunicaciones,Especialización,España,true
+ed176,Pontificia Universidad Católica de Chile,Inteligencia Artificial,Ingeniería,México,false
+ed177,Universidad Nacional de Colombia,Ciencias de Datos,Ingeniería,Guatemala,false
+ed178,Pontificia Universidad Católica de Chile,Diseño de Interacción,Ingeniería,Venezuela,false
+ed179,Stanford University,Ciencias de Datos,Ingeniería,Chile,true
+ed180,Universidad Rafael Landívar,Ingeniería de Software,Especialización,Venezuela,false
+ed181,Universidad del Valle de Guatemala,Matemáticas Aplicadas,Técnico,Ecuador,true
+ed182,Universidad Nacional Autónoma de México,Ciberseguridad,Licenciatura,República Dominicana,true
+ed183,Universidad Galileo,Ciencias de la Computación,Maestría,México,true
+ed184,Instituto Tecnológico de Costa Rica,Ciberseguridad,Maestría,Cuba,true
+ed185,Instituto Tecnológico de Costa Rica,Ingeniería Industrial,Especialización,Venezuela,true
+ed186,Universidad de Buenos Aires,Ciencias de la Computación,Especialización,Uruguay,false
+ed187,Universidad de Buenos Aires,Ingeniería de Software,Técnico,Colombia,true
+ed188,Stanford University,Estadística,Ingeniería,Ecuador,false
+ed189,ITESM,Ciberseguridad,Doctorado,Paraguay,false
+ed190,Universidad Rafael Landívar,Estadística,Especialización,Guatemala,true
+ed191,Universidad Galileo,Matemáticas Aplicadas,Maestría,Guatemala,true
+ed192,Universidad Francisco Marroquín,Estadística,Técnico,Colombia,true
+ed193,ITESM,Ciencias de la Computación,Doctorado,Chile,true
+ed194,Universidad de San Carlos de Guatemala,Ingeniería Electrónica,Técnico,Bolivia,true
+ed195,Instituto Tecnológico de Costa Rica,Diseño de Interacción,Técnico,Venezuela,true
+ed196,Universidad de San Carlos de Guatemala,Administración de Empresas,Técnico,Guatemala,false
+ed197,Universidad Rafael Landívar,Administración de Empresas,Especialización,Ecuador,true
+ed198,Instituto Tecnológico de Costa Rica,Ciberseguridad,Maestría,Perú,true
+ed199,Universidad Nacional de Colombia,Inteligencia Artificial,Especialización,Venezuela,false
+ed200,Stanford University,Ciencias de la Computación,Licenciatura,Uruguay,true
+ed201,Instituto Tecnológico de Costa Rica,Ingeniería en Sistemas,Técnico,Honduras,true
+ed202,Stanford University,Diseño de Interacción,Técnico,Nicaragua,true
+ed203,Universidad Francisco Marroquín,Ingeniería de Software,Licenciatura,República Dominicana,true
+ed204,Universidad de San Carlos de Guatemala,Ingeniería en Sistemas,Técnico,Chile,true
+ed205,MIT,Matemáticas Aplicadas,Doctorado,El Salvador,true
+ed206,Universidad Galileo,Matemáticas Aplicadas,Licenciatura,Honduras,true
+ed207,PUCP,Física,Técnico,Venezuela,false
+ed208,Universidad de Buenos Aires,Estadística,Doctorado,República Dominicana,false
+ed209,Universitat Politècnica de Catalunya,Física,Doctorado,Honduras,true
+ed210,Universidad de los Andes,Física,Especialización,Ecuador,false
+ed211,Universitat Politècnica de Catalunya,Ingeniería Electrónica,Especialización,Costa Rica,false
+ed212,Stanford University,Diseño de Interacción,Ingeniería,Colombia,true
+ed213,Universidad Nacional Autónoma de México,Física,Ingeniería,Cuba,true
+ed214,Stanford University,Administración de Empresas,Doctorado,República Dominicana,false
+ed215,Universidad de Chile,Ingeniería en Informática,Maestría,México,true
+ed216,Universidad Nacional de Colombia,Redes y Telecomunicaciones,Maestría,Perú,false
+ed217,UNAM,Ingeniería en Sistemas,Doctorado,Cuba,true
+ed218,Universidad del Valle de Guatemala,Física,Técnico,México,true
+ed219,Universidad del Valle de Guatemala,Ingeniería en Informática,Técnico,Honduras,false
+ed220,Universidad de Chile,Ingeniería de Software,Técnico,Panamá,true
+ed221,Universidad Simon Bolivar,Inteligencia Artificial,Doctorado,Colombia,false
+ed222,UNAM,Administración de Empresas,Maestría,Costa Rica,true
+ed223,Universidad Galileo,Ciberseguridad,Maestría,Perú,true
+ed224,UNAM,Ingeniería Electrónica,Doctorado,Nicaragua,true
+ed225,Universidad Francisco Marroquín,Ciberseguridad,Maestría,Uruguay,true
+ed226,Universidad de los Andes,Ingeniería Electrónica,Licenciatura,República Dominicana,true
+ed227,Pontificia Universidad Católica de Chile,Administración de Empresas,Especialización,Guatemala,false
+ed228,Universidad Francisco Marroquín,Ciencias de la Computación,Maestría,Panamá,true
+ed229,Universidad Nacional de Colombia,Ingeniería de Software,Especialización,Ecuador,true
+ed230,Instituto Tecnológico de Costa Rica,Redes y Telecomunicaciones,Especialización,Honduras,false
+ed231,Universidad Rafael Landívar,Ciencias de la Computación,Licenciatura,España,false
+ed232,Universidad Galileo,Estadística,Técnico,Nicaragua,true
+ed233,Universidad del Valle de Guatemala,Ingeniería Industrial,Ingeniería,Argentina,false
+ed234,Universidad de Buenos Aires,Diseño de Interacción,Técnico,Ecuador,false
+ed235,Universidad Rafael Landívar,Ciencias de la Computación,Doctorado,España,false
+ed236,Stanford University,Ciencias de Datos,Especialización,Honduras,true
+ed237,Universidad Francisco Marroquín,Ingeniería en Sistemas,Técnico,Guatemala,false
+ed238,Universidad Autónoma de Madrid,Inteligencia Artificial,Ingeniería,Paraguay,false
+ed239,Universidad de Buenos Aires,Estadística,Doctorado,Argentina,false
+ed240,Stanford University,Diseño de Interacción,Maestría,Panamá,false
+ed241,Universidad de Buenos Aires,Administración de Empresas,Ingeniería,Costa Rica,true
+ed242,Universitat Politècnica de Catalunya,Ingeniería de Software,Maestría,Costa Rica,true
+ed243,Universidad de Chile,Ciberseguridad,Técnico,Uruguay,false
+ed244,Stanford University,Física,Maestría,Brasil,false
+ed245,Universidad Francisco Marroquín,Inteligencia Artificial,Especialización,Uruguay,true
+ed246,Universidad de los Andes,Estadística,Maestría,Ecuador,false
+ed247,Universidad del Valle de Guatemala,Ciencias de la Computación,Doctorado,Guatemala,false
+ed248,Universidad de San Carlos de Guatemala,Matemáticas Aplicadas,Técnico,Colombia,false
+ed249,Universidad Galileo,Ingeniería Industrial,Ingeniería,Uruguay,true
+ed250,Universidad Rafael Landívar,Ciencias de Datos,Licenciatura,Bolivia,false
+ed251,Stanford University,Ingeniería en Informática,Doctorado,Brasil,false
+ed252,Universidad Francisco Marroquín,Estadística,Licenciatura,Panamá,false
+ed253,Universidad de los Andes,Ciencias de Datos,Ingeniería,Bolivia,true
+ed254,Instituto Tecnológico de Costa Rica,Ingeniería en Informática,Especialización,Brasil,true
+ed255,Universidad de Buenos Aires,Ingeniería en Informática,Ingeniería,Nicaragua,true
+ed256,Universidad de Chile,Estadística,Especialización,Paraguay,false
+ed257,Universidad de San Carlos de Guatemala,Matemáticas Aplicadas,Maestría,Guatemala,true
+ed258,PUCP,Ciencias de la Computación,Especialización,Nicaragua,true
+ed259,Pontificia Universidad Católica de Chile,Diseño de Interacción,Maestría,Venezuela,true
+ed260,Universidad de Buenos Aires,Ciencias de Datos,Doctorado,Paraguay,true
+ed261,MIT,Ciberseguridad,Técnico,Cuba,true
+ed262,Universidad Nacional de Colombia,Ciberseguridad,Maestría,Bolivia,false
+ed263,Universidad Galileo,Estadística,Técnico,Honduras,false
+ed264,Universidad Rafael Landívar,Ciencias de la Computación,Ingeniería,El Salvador,false
+ed265,Universidad de los Andes,Ingeniería en Sistemas,Ingeniería,Paraguay,false
+ed266,Stanford University,Ingeniería de Software,Maestría,Cuba,true
+ed267,Universidad Rafael Landívar,Inteligencia Artificial,Ingeniería,Ecuador,false
+ed268,MIT,Ciberseguridad,Licenciatura,Cuba,true
+ed269,Universidad Nacional Autónoma de México,Ingeniería Electrónica,Doctorado,Argentina,false
+ed270,ITESM,Administración de Empresas,Especialización,Brasil,true
+ed271,Universidad Autónoma de Madrid,Ingeniería de Software,Doctorado,Venezuela,true
+ed272,Instituto Tecnológico de Costa Rica,Ingeniería en Informática,Técnico,El Salvador,true
+ed273,Universidad de los Andes,Ciencias de la Computación,Maestría,Costa Rica,true
+ed274,Universidad Rafael Landívar,Matemáticas Aplicadas,Ingeniería,Honduras,false
+ed275,Instituto Tecnológico de Costa Rica,Ciencias de Datos,Doctorado,Guatemala,false
+ed276,Universidad Galileo,Ingeniería Industrial,Técnico,Venezuela,false
+ed277,Universitat Politècnica de Catalunya,Inteligencia Artificial,Doctorado,Chile,true
+ed278,Universidad Nacional de Colombia,Inteligencia Artificial,Ingeniería,Uruguay,false
+ed279,Universidad Galileo,Inteligencia Artificial,Ingeniería,Chile,true
+ed280,Stanford University,Redes y Telecomunicaciones,Licenciatura,Honduras,true
+ed281,Universidad de los Andes,Redes y Telecomunicaciones,Especialización,España,false
+ed282,Universidad de Chile,Ingeniería de Software,Especialización,Honduras,true
+ed283,Universidad de Chile,Ingeniería en Sistemas,Especialización,Guatemala,false
+ed284,Universitat Politècnica de Catalunya,Ingeniería de Software,Especialización,Costa Rica,true
+ed285,Stanford University,Inteligencia Artificial,Técnico,Bolivia,false
+ed286,MIT,Ingeniería de Software,Licenciatura,Ecuador,true
+ed287,Universidad Galileo,Ingeniería en Informática,Técnico,Paraguay,true
+ed288,Stanford University,Administración de Empresas,Maestría,Perú,false
+ed289,Universidad Simon Bolivar,Ingeniería de Software,Ingeniería,Chile,true
+ed290,Pontificia Universidad Católica de Chile,Redes y Telecomunicaciones,Maestría,Bolivia,true
+ed291,Instituto Tecnológico de Costa Rica,Ingeniería Electrónica,Licenciatura,Perú,false
+ed292,Universidad de los Andes,Ingeniería de Software,Licenciatura,El Salvador,false
+ed293,PUCP,Ingeniería de Software,Técnico,Argentina,false
+ed294,Universidad Galileo,Ciencias de la Computación,Especialización,Brasil,true
+ed295,Universidad de San Carlos de Guatemala,Matemáticas Aplicadas,Licenciatura,Bolivia,false
+ed296,Universidad de los Andes,Ingeniería Industrial,Especialización,Colombia,true
+ed297,Universidad Nacional Autónoma de México,Administración de Empresas,Especialización,Ecuador,false
+ed298,MIT,Ingeniería de Software,Doctorado,República Dominicana,true
+ed299,Universidad Galileo,Ingeniería en Informática,Técnico,El Salvador,true
+ed300,Universidad Rafael Landívar,Diseño de Interacción,Técnico,El Salvador,true
+ed301,Universidad de Chile,Inteligencia Artificial,Especialización,Nicaragua,false
+ed302,UNAM,Ingeniería Electrónica,Ingeniería,Guatemala,true
+ed303,Universitat Politècnica de Catalunya,Ingeniería de Software,Doctorado,El Salvador,false
+ed304,Universidad del Valle de Guatemala,Diseño de Interacción,Ingeniería,Guatemala,true
+ed305,Universidad del Valle de Guatemala,Física,Ingeniería,Cuba,true
+ed306,ITESM,Ingeniería Industrial,Especialización,México,false
+ed307,Pontificia Universidad Católica de Chile,Ingeniería Electrónica,Licenciatura,Cuba,false
+ed308,Universidad de Chile,Administración de Empresas,Especialización,Bolivia,true
+ed309,Universidad Rafael Landívar,Estadística,Ingeniería,Ecuador,false
+ed310,Universidad de Buenos Aires,Ingeniería de Software,Doctorado,España,false
+ed311,Universidad de Chile,Administración de Empresas,Técnico,España,true
+ed312,ITESM,Ciencias de Datos,Ingeniería,Uruguay,false
+ed313,Universidad de Buenos Aires,Ingeniería en Informática,Técnico,México,true
+ed314,Universidad Autónoma de Madrid,Ingeniería en Sistemas,Doctorado,Brasil,true
+ed315,Universidad Galileo,Ingeniería Electrónica,Ingeniería,República Dominicana,true
+ed316,Universidad del Valle de Guatemala,Estadística,Maestría,Guatemala,true
+ed317,Universidad de Chile,Diseño de Interacción,Maestría,Honduras,true
+ed318,Universidad Autónoma de Madrid,Inteligencia Artificial,Ingeniería,El Salvador,true
+ed319,Universidad Rafael Landívar,Ingeniería en Sistemas,Maestría,Guatemala,false
+ed320,Universidad Francisco Marroquín,Ingeniería en Sistemas,Ingeniería,Colombia,false
+ed321,Universidad Nacional Autónoma de México,Estadística,Maestría,Chile,true
+ed322,Universidad Nacional Autónoma de México,Ciberseguridad,Técnico,Uruguay,true
+ed323,Universidad Galileo,Redes y Telecomunicaciones,Doctorado,Colombia,false
+ed324,Universidad Francisco Marroquín,Ingeniería Industrial,Ingeniería,México,false
+ed325,Universidad del Valle de Guatemala,Ingeniería Electrónica,Especialización,España,false
+ed326,Universidad Rafael Landívar,Ingeniería Industrial,Especialización,Chile,false
+ed327,Universidad Rafael Landívar,Matemáticas Aplicadas,Ingeniería,Paraguay,true
+ed328,Universidad de Chile,Administración de Empresas,Maestría,Bolivia,true
+ed329,Instituto Tecnológico de Costa Rica,Ciencias de Datos,Ingeniería,Brasil,false
+ed330,Pontificia Universidad Católica de Chile,Ingeniería Industrial,Doctorado,Panamá,true
+ed331,Universidad de San Carlos de Guatemala,Ingeniería Industrial,Maestría,Ecuador,true
+ed332,PUCP,Redes y Telecomunicaciones,Ingeniería,Nicaragua,false
+ed333,Universitat Politècnica de Catalunya,Ingeniería Electrónica,Maestría,Nicaragua,true
+ed334,Pontificia Universidad Católica de Chile,Inteligencia Artificial,Especialización,Perú,true
+ed335,Universidad de Buenos Aires,Ciencias de la Computación,Especialización,Cuba,true
+ed336,PUCP,Redes y Telecomunicaciones,Ingeniería,El Salvador,false
+ed337,UNAM,Ingeniería en Sistemas,Especialización,España,false
+ed338,Universidad Francisco Marroquín,Ingeniería de Software,Especialización,Brasil,true
+ed339,Universidad Simon Bolivar,Ingeniería de Software,Licenciatura,Paraguay,false
+ed340,Universidad Nacional Autónoma de México,Redes y Telecomunicaciones,Especialización,Chile,true
+ed341,ITESM,Ciberseguridad,Ingeniería,Nicaragua,true
+ed342,Pontificia Universidad Católica de Chile,Redes y Telecomunicaciones,Doctorado,República Dominicana,true
+ed343,Universidad Francisco Marroquín,Administración de Empresas,Ingeniería,Argentina,false
+ed344,ITESM,Administración de Empresas,Doctorado,Costa Rica,false
+ed345,Universidad Autónoma de Madrid,Estadística,Técnico,Venezuela,false
+ed346,Universidad de San Carlos de Guatemala,Ingeniería Electrónica,Licenciatura,Brasil,true
+ed347,Universidad de Buenos Aires,Ingeniería en Informática,Ingeniería,Nicaragua,false
+ed348,PUCP,Estadística,Ingeniería,Guatemala,false
+ed349,ITESM,Ingeniería en Sistemas,Licenciatura,República Dominicana,true
+ed350,PUCP,Ciberseguridad,Licenciatura,Colombia,false
+ed351,Universidad Nacional de Colombia,Ingeniería Electrónica,Maestría,Costa Rica,false
+ed352,Universidad de Chile,Matemáticas Aplicadas,Maestría,Cuba,true
+ed353,Universidad de Chile,Redes y Telecomunicaciones,Especialización,Panamá,false
+ed354,MIT,Ingeniería en Sistemas,Especialización,República Dominicana,false
+ed355,Universidad de Buenos Aires,Ingeniería Electrónica,Ingeniería,Guatemala,true
+ed356,Universidad Galileo,Redes y Telecomunicaciones,Especialización,República Dominicana,true
+ed357,Universidad Rafael Landívar,Física,Maestría,Uruguay,true
+ed358,Pontificia Universidad Católica de Chile,Estadística,Maestría,Bolivia,false
+ed359,Stanford University,Matemáticas Aplicadas,Licenciatura,Guatemala,true
+ed360,PUCP,Ciencias de la Computación,Ingeniería,México,false
+ed361,Universitat Politècnica de Catalunya,Diseño de Interacción,Maestría,Bolivia,false
+ed362,Universidad de Buenos Aires,Ingeniería en Sistemas,Ingeniería,Panamá,false
+ed363,Stanford University,Diseño de Interacción,Maestría,Bolivia,false
+ed364,Stanford University,Ingeniería de Software,Técnico,Uruguay,true
+ed365,Universidad de San Carlos de Guatemala,Matemáticas Aplicadas,Ingeniería,Perú,false
+ed366,Universitat Politècnica de Catalunya,Ingeniería en Informática,Especialización,República Dominicana,true
+ed367,Universidad Simon Bolivar,Ciencias de la Computación,Especialización,México,true
+ed368,Universidad de Buenos Aires,Ciencias de Datos,Doctorado,Honduras,false
+ed369,Universidad Francisco Marroquín,Administración de Empresas,Licenciatura,Venezuela,true
+ed370,Universidad de San Carlos de Guatemala,Matemáticas Aplicadas,Maestría,Chile,true
+ed371,Universidad del Valle de Guatemala,Redes y Telecomunicaciones,Ingeniería,El Salvador,false
+ed372,Universitat Politècnica de Catalunya,Ciencias de Datos,Maestría,Paraguay,true
+ed373,MIT,Ingeniería Electrónica,Técnico,Uruguay,false
+ed374,Universitat Politècnica de Catalunya,Redes y Telecomunicaciones,Especialización,Panamá,false
+ed375,Universidad Rafael Landívar,Redes y Telecomunicaciones,Ingeniería,Paraguay,false
+ed376,Instituto Tecnológico de Costa Rica,Diseño de Interacción,Ingeniería,Panamá,true
+ed377,Universidad de Buenos Aires,Física,Técnico,Venezuela,false
+ed378,MIT,Ingeniería en Informática,Especialización,Uruguay,false
+ed379,MIT,Ciberseguridad,Licenciatura,Ecuador,true
+ed380,Universidad de San Carlos de Guatemala,Ingeniería en Sistemas,Maestría,Costa Rica,false
+ed381,Pontificia Universidad Católica de Chile,Inteligencia Artificial,Especialización,Venezuela,false
+ed382,Universidad de los Andes,Ciencias de Datos,Doctorado,Honduras,false
+ed383,Universidad Rafael Landívar,Ingeniería Industrial,Doctorado,Nicaragua,false
+ed384,Universidad Nacional de Colombia,Ciberseguridad,Licenciatura,Bolivia,true
+ed385,Universidad Nacional de Colombia,Redes y Telecomunicaciones,Licenciatura,Costa Rica,false
+ed386,UNAM,Física,Maestría,El Salvador,true
+ed387,Universidad de Buenos Aires,Ingeniería Industrial,Doctorado,Argentina,true
+ed388,MIT,Ciencias de la Computación,Ingeniería,Uruguay,true
+ed389,UNAM,Administración de Empresas,Especialización,Honduras,false
+ed390,Universidad Simon Bolivar,Redes y Telecomunicaciones,Doctorado,Brasil,false
+ed391,ITESM,Ingeniería en Informática,Ingeniería,Nicaragua,true
+ed392,UNAM,Ciencias de Datos,Especialización,España,false
+ed393,Universidad Francisco Marroquín,Ingeniería Industrial,Especialización,Cuba,false
+ed394,Universitat Politècnica de Catalunya,Estadística,Licenciatura,Colombia,true
+ed395,Universidad Galileo,Estadística,Especialización,Uruguay,false
+ed396,Universitat Politècnica de Catalunya,Ingeniería de Software,Maestría,Uruguay,true
+ed397,Pontificia Universidad Católica de Chile,Administración de Empresas,Ingeniería,Guatemala,false
+ed398,Universidad Simon Bolivar,Ingeniería en Informática,Técnico,Argentina,false
+ed399,Universidad de los Andes,Matemáticas Aplicadas,Técnico,Brasil,false
+ed400,Stanford University,Ingeniería de Software,Ingeniería,Perú,false
+ed401,Stanford University,Inteligencia Artificial,Especialización,Nicaragua,true
+ed402,MIT,Inteligencia Artificial,Licenciatura,Uruguay,true
+ed403,MIT,Matemáticas Aplicadas,Técnico,Honduras,false
+ed404,Universidad Nacional de Colombia,Estadística,Doctorado,Nicaragua,true
+ed405,Universidad Autónoma de Madrid,Ingeniería de Software,Maestría,Colombia,false
+ed406,Universidad de Chile,Ingeniería en Informática,Especialización,Colombia,false
+ed407,Universidad Nacional Autónoma de México,Estadística,Licenciatura,Guatemala,false
+ed408,UNAM,Matemáticas Aplicadas,Licenciatura,España,false
+ed409,Universidad del Valle de Guatemala,Redes y Telecomunicaciones,Doctorado,El Salvador,false
+ed410,Universidad de San Carlos de Guatemala,Ingeniería en Informática,Especialización,República Dominicana,false
+ed411,Universidad de Chile,Ingeniería Industrial,Doctorado,República Dominicana,false
+ed412,Universidad de Buenos Aires,Ingeniería Industrial,Doctorado,Panamá,true
+ed413,ITESM,Inteligencia Artificial,Ingeniería,Colombia,true
+ed414,Universidad de San Carlos de Guatemala,Ciberseguridad,Ingeniería,Ecuador,false
+ed415,UNAM,Ciencias de la Computación,Ingeniería,Ecuador,false
+ed416,Universidad Nacional Autónoma de México,Diseño de Interacción,Doctorado,Argentina,true
+ed417,Universidad de los Andes,Física,Especialización,Venezuela,false
+ed418,Universidad Nacional Autónoma de México,Estadística,Maestría,Perú,true
+ed419,PUCP,Estadística,Ingeniería,México,true
+ed420,Universidad Nacional de Colombia,Redes y Telecomunicaciones,Doctorado,El Salvador,true
+ed421,Universidad Galileo,Física,Técnico,Chile,false
+ed422,Pontificia Universidad Católica de Chile,Física,Maestría,Costa Rica,true
+ed423,Universidad Nacional de Colombia,Ingeniería Industrial,Maestría,Nicaragua,false
+ed424,UNAM,Ingeniería en Informática,Técnico,México,true
+ed425,UNAM,Ciencias de la Computación,Técnico,Venezuela,true
+ed426,Universidad Rafael Landívar,Administración de Empresas,Especialización,Colombia,true
+ed427,Instituto Tecnológico de Costa Rica,Ingeniería en Sistemas,Especialización,El Salvador,false
+ed428,Universidad de los Andes,Ingeniería Electrónica,Doctorado,Venezuela,true
+ed429,UNAM,Ingeniería de Software,Especialización,Paraguay,true
+ed430,ITESM,Matemáticas Aplicadas,Especialización,Uruguay,true
+ed431,Universidad de los Andes,Estadística,Doctorado,Uruguay,false
+ed432,Universidad Francisco Marroquín,Estadística,Técnico,Chile,false
+ed433,Universidad de San Carlos de Guatemala,Física,Maestría,Costa Rica,true
+ed434,Universidad Galileo,Redes y Telecomunicaciones,Especialización,Colombia,false
+ed435,Universidad de los Andes,Redes y Telecomunicaciones,Licenciatura,El Salvador,true
+ed436,UNAM,Matemáticas Aplicadas,Técnico,Nicaragua,false
+ed437,Universidad de San Carlos de Guatemala,Ingeniería de Software,Especialización,Bolivia,false
+ed438,ITESM,Inteligencia Artificial,Licenciatura,España,true
+ed439,Universidad de Chile,Ingeniería de Software,Especialización,El Salvador,true
+ed440,ITESM,Ingeniería de Software,Licenciatura,Costa Rica,false
+ed441,Universidad de los Andes,Ingeniería en Sistemas,Técnico,Colombia,true
+ed442,Universidad de los Andes,Ingeniería Industrial,Licenciatura,Guatemala,false
+ed443,PUCP,Matemáticas Aplicadas,Ingeniería,Cuba,true
+ed444,Stanford University,Redes y Telecomunicaciones,Especialización,Chile,true
+ed445,Pontificia Universidad Católica de Chile,Ingeniería en Sistemas,Ingeniería,El Salvador,true
+ed446,PUCP,Inteligencia Artificial,Ingeniería,Ecuador,true
+ed447,Universidad de Chile,Redes y Telecomunicaciones,Doctorado,Uruguay,true
+ed448,MIT,Redes y Telecomunicaciones,Ingeniería,República Dominicana,true
+ed449,MIT,Física,Maestría,República Dominicana,false

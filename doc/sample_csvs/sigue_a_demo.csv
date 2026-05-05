@@ -1,0 +1,4 @@
+usuario_id,empresa_id,fecha_seguimiento,notificaciones,motivo
+demo_u1,e0,2025-04-01,true,interés en la industria
+demo_u2,e1,2025-04-05,false,networking
+demo_u3,e2,2025-04-08,true,posible empleador

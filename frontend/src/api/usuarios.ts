@@ -9,6 +9,7 @@ export const usuariosApi = {
   get: (id: string) => api.get<ApiResult>(`/usuarios/${id}/`),
   create: (body: Record<string, unknown>) => api.post<ApiResult>('/usuarios/', body),
   createAdmin: (body: Record<string, unknown>) => api.post<ApiResult>('/usuarios/admin/', body),
+  createReclutador: (body: Record<string, unknown>) => api.post<ApiResult>('/usuarios/reclutador/', body),
   update: (id: string, set: Record<string, unknown>, remove?: string[]) =>
     api.patch<ApiResult>(`/usuarios/${id}/`, { set, remove: remove ?? [] }),
   bulkUpdate: (filter: Record<string, unknown>, set: Record<string, unknown>, remove?: string[]) =>

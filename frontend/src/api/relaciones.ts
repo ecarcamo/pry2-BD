@@ -20,11 +20,8 @@ export const relacionesApi = {
   seguir: (userId: string, empresaId: string, motivo = 'interés general') =>
     api.post<ApiResult>('/relaciones/seguimientos/', { userId, empresaId, motivo }),
 
-  trabajoEn: (userId: string, expId: string, fecha_inicio: string) =>
-    api.post<ApiResult>('/relaciones/trabajo-en/', { userId, expId, fecha_inicio }),
-
-  experienciaEn: (expId: string, empresaId: string, departamento: string, tipo_contrato: string, modalidad: string) =>
-    api.post<ApiResult>('/relaciones/experiencia-en/', { expId, empresaId, departamento, tipo_contrato, modalidad }),
+  estarEn: (userId: string, empresaId: string, cargo: string, fecha_inicio?: string, actual = true) =>
+    api.post<ApiResult>('/relaciones/estar-en/', { userId, empresaId, cargo, fecha_inicio, actual }),
 
   estudiar: (userId: string, educacionId: string, fecha_inicio: string) =>
     api.post<ApiResult>('/relaciones/estudios/', { userId, educacionId, fecha_inicio }),

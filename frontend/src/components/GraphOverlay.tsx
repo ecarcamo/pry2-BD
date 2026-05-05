@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import ForceGraph2D from 'react-force-graph-2d'
 import { useStore } from '../store/StoreContext'
 import { grafoApi } from '../api/grafo'
@@ -7,38 +7,38 @@ import { XIcon, RefreshIcon } from '../lib/icons'
 
 // Paleta más rica y distinguible
 const LABEL_META: Record<string, { color: string; border: string; textColor: string }> = {
-  Usuario:            { color: '#3b82f6', border: '#93c5fd', textColor: '#dbeafe' },
-  Admin:              { color: '#ef4444', border: '#fca5a5', textColor: '#fee2e2' },
-  Empresa:            { color: '#f59e0b', border: '#fcd34d', textColor: '#fef3c7' },
-  Publicacion:        { color: '#10b981', border: '#6ee7b7', textColor: '#d1fae5' },
-  Empleo:             { color: '#8b5cf6', border: '#c4b5fd', textColor: '#ede9fe' },
-  Educacion:          { color: '#06b6d4', border: '#67e8f9', textColor: '#cffafe' },
-  ExperienciaLaboral: { color: '#f97316', border: '#fdba74', textColor: '#ffedd5' },
+  Usuario:     { color: '#3b82f6', border: '#93c5fd', textColor: '#dbeafe' },
+  Admin:       { color: '#ef4444', border: '#fca5a5', textColor: '#fee2e2' },
+  Reclutador:  { color: '#a78bfa', border: '#c4b5fd', textColor: '#ede9fe' },
+  Empresa:     { color: '#f59e0b', border: '#fcd34d', textColor: '#fef3c7' },
+  Publicacion: { color: '#10b981', border: '#6ee7b7', textColor: '#d1fae5' },
+  Empleo:      { color: '#8b5cf6', border: '#c4b5fd', textColor: '#ede9fe' },
+  Educacion:   { color: '#06b6d4', border: '#67e8f9', textColor: '#cffafe' },
 }
 
 const REL_COLORS: Record<string, string> = {
-  CONECTADO_CON:  '#3b82f6',
-  PUBLICO:        '#10b981',
-  DIO_LIKE:       '#ef4444',
-  COMENTO:        '#f59e0b',
-  COMPARTIO:      '#8b5cf6',
-  SIGUE_A:        '#f97316',
-  POSTULO_A:      '#06b6d4',
-  OFERTA:         '#f59e0b',
-  ESTUDIO_EN:     '#06b6d4',
-  TRABAJO_EN:     '#f97316',
-  EXPERIENCIA_EN: '#f97316',
-  MENCIONA:       '#10b981',
+  CONECTADO_CON: '#3b82f6',
+  PUBLICO:       '#10b981',
+  DIO_LIKE:      '#ef4444',
+  COMENTO:       '#f59e0b',
+  COMPARTIO:     '#8b5cf6',
+  SIGUE_A:       '#f97316',
+  POSTULO_A:     '#06b6d4',
+  OFERTA:        '#f59e0b',
+  ESTUDIO_EN:    '#06b6d4',
+  ESTAR_EN:      '#f97316',
+  MENCIONA_A:    '#10b981',
 }
 
 const DEFAULT_META = { color: '#6b7280', border: '#9ca3af', textColor: '#f3f4f6' }
 const CANVAS_BG = '#1a1d27'
 
-const LABELS = ['', 'Usuario', 'Empresa', 'Publicacion', 'Empleo', 'Educacion', 'ExperienciaLaboral']
+const LABELS = ['', 'Usuario', 'Empresa', 'Publicacion', 'Empleo', 'Educacion', 'Admin', 'Reclutador']
 
 function nodeMeta(labels: string[]) {
-  // Admin tiene prioridad visual
+  // Admin/Reclutador tienen prioridad visual
   if (labels.includes('Admin')) return LABEL_META['Admin']
+  if (labels.includes('Reclutador')) return LABEL_META['Reclutador']
   for (const l of labels) {
     if (LABEL_META[l]) return LABEL_META[l]
   }
@@ -67,6 +67,22 @@ export default function GraphOverlay() {
   const [limit, setLimit] = useState(120)
   const [selected, setSelected] = useState<GrafoNode | null>(null)
   const [showLabels, setShowLabels] = useState(true)
+  const canvasContainerRef = useRef<HTMLDivElement>(null)
+  const [canvasSize, setCanvasSize] = useState({ width: 800, height: 600 })
+
+  // Mide el contenedor del canvas para pasar width/height explícitos al ForceGraph2D.
+  // Sin esto, el canvas toma el ancho del window y empuja al sidebar fuera de pantalla.
+  useEffect(() => {
+    if (!graphOpen) return
+    function updateSize() {
+      const el = canvasContainerRef.current
+      if (el) setCanvasSize({ width: el.clientWidth, height: el.clientHeight })
+    }
+    updateSize()
+    const ro = new ResizeObserver(updateSize)
+    if (canvasContainerRef.current) ro.observe(canvasContainerRef.current)
+    return () => ro.disconnect()
+  }, [graphOpen, selected])
 
   const load = useCallback(async () => {
     setLoading(true)
@@ -86,9 +102,9 @@ export default function GraphOverlay() {
     if (graphOpen) load()
   }, [graphOpen, load])
 
-  if (!graphOpen) return null
-
-  const graphData = {
+  // Memoizar para que react-force-graph no reinicie la simulación en cada render
+  // (re-render por setSelected → click "recargaba" la vista).
+  const graphData = useMemo(() => ({
     nodes: nodes.map(n => ({
       id: n.id,
       labels: n.labels,
@@ -102,10 +118,12 @@ export default function GraphOverlay() {
       type: r.type,
       color: relColor(r.type),
     })),
-  }
+  }), [nodes, rels])
 
   type FGNode = (typeof graphData.nodes)[0] & { x?: number; y?: number }
   type FGLink = (typeof graphData.links)[0]
+
+  if (!graphOpen) return null
 
   function paintNode(node: FGNode, ctx: CanvasRenderingContext2D, globalScale: number) {
     const { x = 0, y = 0, meta, name } = node
@@ -200,11 +218,13 @@ export default function GraphOverlay() {
 
       {/* Canvas + sidebar */}
       <div style={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
-        <div style={{ flex: 1, position: 'relative' }}>
+        <div ref={canvasContainerRef} style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
           {loading ? (
             <div className="loading" style={{ paddingTop: 100 }}>Cargando grafo desde Neo4j…</div>
           ) : (
             <ForceGraph2D
+              width={canvasSize.width}
+              height={canvasSize.height}
               graphData={graphData}
               nodeCanvasObject={(node, ctx, scale) => paintNode(node as FGNode, ctx, scale)}
               nodeCanvasObjectMode={() => 'replace'}
@@ -218,8 +238,27 @@ export default function GraphOverlay() {
               linkDirectionalParticleWidth={2}
               linkCurvature={0.15}
               onNodeClick={(node: object) => {
-                const n = nodes.find(x => x.id === (node as FGNode).id)
-                setSelected(n ?? null)
+                const fg = node as FGNode
+                setSelected({
+                  id: fg.id,
+                  labels: fg.labels ?? [],
+                  props: fg.props ?? {},
+                })
+              }}
+              onNodeHover={(node: object | null) => {
+                document.body.style.cursor = node ? 'pointer' : 'default'
+              }}
+              nodeLabel={(node: object) => {
+                const fg = node as FGNode
+                const labels = (fg.labels ?? []).join(':')
+                return `${labels}: ${fg.name || fg.id}`
+              }}
+              nodePointerAreaPaint={(node: object, color: string, ctx: CanvasRenderingContext2D) => {
+                const { x = 0, y = 0 } = node as FGNode
+                ctx.fillStyle = color
+                ctx.beginPath()
+                ctx.arc(x, y, 14, 0, 2 * Math.PI)
+                ctx.fill()
               }}
               backgroundColor={CANVAS_BG}
               cooldownTicks={120}

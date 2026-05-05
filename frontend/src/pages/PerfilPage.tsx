@@ -2,11 +2,11 @@ import { useState } from 'react'
 import { useStore } from '../store/StoreContext'
 import { usuariosApi } from '../api/usuarios'
 import { educacionApi } from '../api/educacion'
-import { experienciaApi } from '../api/experiencia'
+import { empresasApi } from '../api/empresas'
 import { relacionesApi } from '../api/relaciones'
 import { extractNodes, initials, nodeId } from '../lib/format'
-import type { Educacion, ExperienciaLaboral } from '../types/api'
-import { UserIcon, PlusIcon, EditIcon } from '../lib/icons'
+import type { Educacion, Empresa } from '../types/api'
+import { PlusIcon, EditIcon } from '../lib/icons'
 
 export default function PerfilPage() {
   const { me, role, showToast } = useStore()
@@ -18,10 +18,10 @@ export default function PerfilPage() {
   const [eduForm, setEduForm] = useState({ institucion: '', carrera: '', grado: 'Licenciatura', pais: 'Guatemala' })
   const [newEduId, setNewEduId] = useState('')
 
-  // experiencia
+  // experiencia (Usuario → Empresa via ESTAR_EN)
   const [showExpForm, setShowExpForm] = useState(false)
-  const [expForm, setExpForm] = useState({ cargo: '', salario: '', descripcion: '' })
-  const [newExpId, setNewExpId] = useState('')
+  const [expForm, setExpForm] = useState({ nombreEmpresa: '', cargo: '', industria: 'Tecnología', pais: 'Guatemala' })
+  const [newExpEmpresaId, setNewExpEmpresaId] = useState('')
 
   // ascender a Admin (crear nodo :Usuario:Admin)
   const [showAdminForm, setShowAdminForm] = useState(false)
@@ -73,22 +73,23 @@ export default function PerfilPage() {
 
   async function handleCrearExperiencia() {
     try {
-      const res = await experienciaApi.create({
-        cargo: expForm.cargo,
-        salario: parseFloat(expForm.salario) || 0,
-        descripcion: expForm.descripcion,
-        activo: true,
+      const res = await empresasApi.create({
+        nombre: expForm.nombreEmpresa,
+        industria: expForm.industria,
+        pais: expForm.pais,
+        verificada: false,
+        empleados_count: 1,
       })
-      const nodes = extractNodes(res) as ExperienciaLaboral[]
-      const exp = nodes[0]
-      if (exp && myId) {
-        const expId = nodeId(exp.props)
-        setNewExpId(expId)
-        await relacionesApi.trabajoEn(myId, expId, new Date().toISOString().slice(0, 10))
+      const nodes = extractNodes(res) as Empresa[]
+      const emp = nodes[0]
+      if (emp && myId) {
+        const empId = nodeId(emp.props)
+        setNewExpEmpresaId(empId)
+        await relacionesApi.estarEn(myId, empId, expForm.cargo, new Date().toISOString().slice(0, 10), true)
       }
-      showToast('Experiencia agregada y vinculada', 'ok')
+      showToast('Experiencia agregada (ESTAR_EN → Empresa)', 'ok')
       setShowExpForm(false)
-      setExpForm({ cargo: '', salario: '', descripcion: '' })
+      setExpForm({ nombreEmpresa: '', cargo: '', industria: 'Tecnología', pais: 'Guatemala' })
     } catch (e) {
       showToast(`Error: ${e instanceof Error ? e.message : e}`, 'err')
     }
@@ -246,21 +247,23 @@ export default function PerfilPage() {
         </div>
         {showExpForm && (
           <div className="form-card sub-form">
-            <input className="input" placeholder="Cargo" value={expForm.cargo}
+            <input className="input" placeholder="Nombre de la empresa" value={expForm.nombreEmpresa}
+              onChange={e => setExpForm(f => ({ ...f, nombreEmpresa: e.target.value }))} />
+            <input className="input" placeholder="Cargo (ej: Software Engineer)" value={expForm.cargo}
               onChange={e => setExpForm(f => ({ ...f, cargo: e.target.value }))} />
-            <input className="input" placeholder="Salario (USD)" type="number" value={expForm.salario}
-              onChange={e => setExpForm(f => ({ ...f, salario: e.target.value }))} />
-            <input className="input" placeholder="Descripción del rol" value={expForm.descripcion}
-              onChange={e => setExpForm(f => ({ ...f, descripcion: e.target.value }))} />
+            <input className="input" placeholder="Industria" value={expForm.industria}
+              onChange={e => setExpForm(f => ({ ...f, industria: e.target.value }))} />
+            <input className="input" placeholder="País" value={expForm.pais}
+              onChange={e => setExpForm(f => ({ ...f, pais: e.target.value }))} />
             <div style={{ display: 'flex', gap: 8 }}>
               <button className="btn-primary" onClick={handleCrearExperiencia}>Guardar</button>
               <button className="btn-ghost" onClick={() => setShowExpForm(false)}>Cancelar</button>
             </div>
           </div>
         )}
-        {newExpId && (
+        {newExpEmpresaId && (
           <div className="text-mute" style={{ marginTop: 8, fontSize: 12 }}>
-            ✓ Experiencia vinculada · ID: {newExpId}
+            ✓ Experiencia vinculada · Empresa ID: {newExpEmpresaId}
           </div>
         )}
       </div>

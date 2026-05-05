@@ -46,7 +46,7 @@ class Usuario(StructuredNode):
     estudio_en = RelationshipTo('apps.educacion.models.Educacion', 'ESTUDIO_EN')
 
     # Relaciones entrantes (declaradas para navegación)
-    mencionado_en = RelationshipFrom('apps.publicaciones.models.Publicacion', 'MENCIONA')
+    mencionado_en = RelationshipFrom('apps.publicaciones.models.Publicacion', 'MENCIONA_A')
 
 
 class Admin(Usuario):

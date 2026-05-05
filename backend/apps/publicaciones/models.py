@@ -20,4 +20,4 @@ class Publicacion(StructuredNode):
     tags = ArrayProperty(StringProperty(), default=list)
     es_oferta = BooleanProperty(default=False)
 
-    menciona = RelationshipTo('apps.usuarios.models.Usuario', 'MENCIONA')
+    menciona = RelationshipTo('apps.usuarios.models.Usuario', 'MENCIONA_A')

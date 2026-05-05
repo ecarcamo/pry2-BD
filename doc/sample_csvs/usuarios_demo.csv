@@ -1,0 +1,4 @@
+usuario_id,nombre,email,titular,habilidades,abierto_a_trabajo,fecha_registro,conexiones_count
+demo_u1,Demo Uno,demo1@example.com,Backend Engineer,Python;Go;PostgreSQL,true,2025-01-15,10
+demo_u2,Demo Dos,demo2@example.com,Frontend Engineer,React;TypeScript;CSS,false,2025-02-20,25
+demo_u3,Demo Tres,demo3@example.com,DevOps Engineer,Docker;Kubernetes;AWS,true,2025-03-10,40
