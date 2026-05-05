@@ -69,6 +69,29 @@ export const relacionesApi = {
   bulkDeleteNodos: (body: { label: string; filter?: Record<string, unknown> }) =>
     api.post<ApiResult>('/relaciones/bulk-delete-nodos/', body),
 
+  patchNodo: (body: {
+    label: string
+    id_field: string
+    id_value: string
+    set?: Record<string, unknown>
+    remove?: string[]
+  }) => api.patch<ApiResult>('/relaciones/patch-nodo/', body),
+
+  bulkPatchNodos: (body: {
+    label: string
+    filter?: Record<string, unknown>
+    set?: Record<string, unknown>
+    remove?: string[]
+  }) => api.post<ApiResult>('/relaciones/bulk-patch-nodos/', body),
+
+  queryNodos: (body: {
+    label: string
+    filter?: Record<string, unknown>
+    limit?: number
+    order_by?: string
+    dir?: 'ASC' | 'DESC'
+  }) => api.post<ApiResult>('/relaciones/query-nodos/', body),
+
   misRelaciones: (userId: string, type: string, idField: string): Promise<{ ids: string[] }> =>
     api.get(`/relaciones/mias/?userId=${encodeURIComponent(userId)}&type=${encodeURIComponent(type)}&idField=${encodeURIComponent(idField)}`),
 }

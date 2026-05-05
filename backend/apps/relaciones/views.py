@@ -15,6 +15,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 from apps.core.lib.cypher_build import (
+    ID_RE,
     build_filter_clause,
     build_remove_clause,
     build_set_clause,
@@ -444,4 +445,90 @@ def delete_nodos_bulk(request):
         "WITH n, id(n) AS nid DETACH DELETE n RETURN count(nid) AS deleted"
     )
     result = run_write(cypher, {'filter': filter_dict})
+    return Response(envelope(result, cypher))
+
+
+@api_view(['PATCH'])
+def patch_nodo(request):
+    """PATCH /api/relaciones/patch-nodo/ — agrega/actualiza/elimina props de 1 nodo
+    (label genérico).
+
+    Body: {label, id_field, id_value, set:{}, remove:[]}
+    """
+    body = request.data or {}
+    require_fields(body, ['label', 'id_field', 'id_value'])
+    set_dict = body.get('set') or {}
+    remove_list = body.get('remove') or []
+
+    label = safe_label(body['label'])
+    id_field = safe_prop(body['id_field'])
+
+    set_cl = build_set_clause(set_dict, alias='n')
+    rem_cl = build_remove_clause(remove_list, alias='n')
+    if not set_cl and not rem_cl:
+        return Response({'detail': 'Nada que actualizar'}, status=status.HTTP_400_BAD_REQUEST)
+
+    cypher = (
+        f"MATCH (n:{label} {{{id_field}: $id_value}}) "
+        f"{set_cl} {rem_cl} RETURN n"
+    )
+    result = run_write(cypher, {'id_value': body['id_value'], 'set': set_dict})
+    return Response(envelope(result, cypher))
+
+
+@api_view(['POST'])
+def query_nodos(request):
+    """POST /api/relaciones/query-nodos/ — consulta nodos de un label con
+    filtro opcional y devuelve sus propiedades.
+
+    Body: {label, filter:{prop:value,...}, limit?, order_by?, dir?}
+    """
+    body = request.data or {}
+    require_fields(body, ['label'])
+    filter_dict = body.get('filter') or {}
+    try:
+        limit = max(1, min(200, int(body.get('limit', 25))))
+    except (TypeError, ValueError):
+        limit = 25
+
+    label = safe_label(body['label'])
+    where_cl = build_filter_clause(filter_dict, alias='n', param_name='filter') if filter_dict else ''
+
+    order_clause = ''
+    order_by = body.get('order_by')
+    if order_by and ID_RE.match(order_by):
+        direction = 'ASC' if str(body.get('dir', 'DESC')).upper() == 'ASC' else 'DESC'
+        order_clause = f"ORDER BY n.{order_by} {direction}"
+
+    cypher = f"MATCH (n:{label}) {where_cl} RETURN n {order_clause} LIMIT {limit}"
+    result = run_read(cypher, {'filter': filter_dict})
+    return Response(envelope(result, cypher))
+
+
+@api_view(['POST'])
+def patch_nodos_bulk(request):
+    """POST /api/relaciones/bulk-patch-nodos/ — agrega/actualiza/elimina props
+    de múltiples nodos (label genérico) con filtro opcional.
+
+    Body: {label, filter:{prop:value,...}, set:{}, remove:[]}
+    """
+    body = request.data or {}
+    require_fields(body, ['label'])
+    filter_dict = body.get('filter') or {}
+    set_dict = body.get('set') or {}
+    remove_list = body.get('remove') or []
+
+    label = safe_label(body['label'])
+
+    set_cl = build_set_clause(set_dict, alias='n')
+    rem_cl = build_remove_clause(remove_list, alias='n')
+    if not set_cl and not rem_cl:
+        return Response({'detail': 'Nada que actualizar'}, status=status.HTTP_400_BAD_REQUEST)
+
+    where_cl = build_filter_clause(filter_dict, alias='n', param_name='filter') if filter_dict else ''
+
+    cypher = (
+        f"MATCH (n:{label}) {where_cl} {set_cl} {rem_cl} RETURN n"
+    )
+    result = run_write(cypher, {'set': set_dict, 'filter': filter_dict})
     return Response(envelope(result, cypher))

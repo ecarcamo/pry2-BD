@@ -18,5 +18,8 @@ urlpatterns = [
     path('delete/', views.delete_relacion, name='rel-delete'),
     path('bulk-delete/', views.delete_relacion_bulk, name='rel-bulk-delete'),
     path('bulk-delete-nodos/', views.delete_nodos_bulk, name='rel-bulk-delete-nodos'),
+    path('patch-nodo/', views.patch_nodo, name='rel-patch-nodo'),
+    path('bulk-patch-nodos/', views.patch_nodos_bulk, name='rel-bulk-patch-nodos'),
+    path('query-nodos/', views.query_nodos, name='rel-query-nodos'),
     path('mias/', views.mis_relaciones, name='rel-mias'),
 ]

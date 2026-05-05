@@ -1190,10 +1190,85 @@ input, textarea, select { font-family: inherit; font-size: inherit; color: inher
 
 /* operaciones */
 .ops-page {}
-.ops-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.op-card {}
-.op-title { font-size: 13.5px; font-weight: 600; margin: 0 0 12px; color: var(--text); }
-.op-result { margin-top: 10px; }
+.ops-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px;
+  align-items: start; /* evita que cards de la misma fila se estiren al expandirse */
+}
+.op-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 200px;       /* altura base estable */
+  padding: 16px;
+  border-radius: 10px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.op-card:hover { border-color: var(--accent); box-shadow: 0 1px 4px rgba(0,0,0,0.18); }
+.op-title {
+  font-size: 13.5px; font-weight: 600; margin: 0;
+  color: var(--text);
+  display: flex; align-items: center; gap: 6px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.op-card .form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+.op-card .input { font-size: 13px; }
+.op-card .btn-primary,
+.op-card .btn-danger {
+  align-self: flex-start;
+  font-size: 12.5px;
+  padding: 6px 12px;
+}
+.op-result {
+  margin-top: 4px;
+  padding: 10px;
+  background: var(--bg);
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  /* contenedor con scroll vertical para que la card no crezca infinito */
+  max-height: 280px;
+  overflow-y: auto;
+}
+.op-result .cypher-preview { margin-top: 0; }
+.op-result .result-table-wrap { max-height: 160px; overflow-y: auto; }
+
+.pairs-editor { display: flex; flex-direction: column; gap: 6px; }
+.pair-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 28px;
+  gap: 6px;
+  align-items: center;
+}
+.pair-row-single { grid-template-columns: 1fr 28px; }
+.pair-del {
+  width: 28px; height: 28px;
+  padding: 0;
+  border-radius: 6px;
+  border: 1px solid var(--border-soft);
+  background: transparent;
+  color: var(--text-mute);
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+}
+.pair-del:hover { color: var(--err); border-color: var(--err); }
+.pair-add {
+  align-self: flex-start;
+  font-size: 12px;
+  padding: 4px 10px;
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-mute);
+  cursor: pointer;
+}
+.pair-add:hover { color: var(--accent-hi); border-color: var(--accent); }
 
 /* graph overlay */
 .graph-overlay {

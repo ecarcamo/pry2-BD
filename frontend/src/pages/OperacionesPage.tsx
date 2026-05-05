@@ -1,12 +1,14 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useStore } from '../store/StoreContext'
 import { usuariosApi } from '../api/usuarios'
 import { empresasApi } from '../api/empresas'
 import { empleosApi } from '../api/empleos'
 import { relacionesApi } from '../api/relaciones'
 import { csvApi } from '../api/csv'
+import { consultasApi } from '../api/consultas'
+import { extractNodes, nodeId } from '../lib/format'
 import { CheckIcon } from '../lib/icons'
-import type { ApiResult } from '../types/api'
+import type { ApiResult, Empresa } from '../types/api'
 
 function ResultBox({ result, error }: { result: ApiResult | null; error: string | null }) {
   if (error) return <div className="result-error">{error}</div>
@@ -48,6 +50,151 @@ function OpCard({ title, children }: { title: string; children: React.ReactNode 
     <div className="card op-card">
       <h3 className="op-title">{title}</h3>
       {children}
+    </div>
+  )
+}
+
+const NODE_LABELS = ['Usuario', 'Empresa', 'Empleo', 'Publicacion', 'Educacion'] as const
+type NodeLabel = (typeof NODE_LABELS)[number]
+
+const ID_FIELD: Record<NodeLabel, string> = {
+  Usuario: 'usuario_id',
+  Empresa: 'empresa_id',
+  Empleo: 'empleo_id',
+  Publicacion: 'publicacion_id',
+  Educacion: 'educacion_id',
+}
+
+const REL_TYPES = [
+  'CONECTADO_CON', 'DIO_LIKE', 'COMENTO', 'COMPARTIO',
+  'POSTULO_A', 'SIGUE_A', 'ESTAR_EN', 'ESTUDIO_EN',
+  'MENCIONA_A', 'OFERTA',
+] as const
+
+type RelEndpointsValue = {
+  fromLabel: NodeLabel; fromId: string
+  toLabel: NodeLabel; toId: string
+  type: string
+}
+
+type RelBulkValue = {
+  fromLabel: NodeLabel; toLabel: NodeLabel; type: string
+  filterField: string; filterValue: string
+}
+
+type Pair = { key: string; value: string }
+
+function parseValue(raw: string): unknown {
+  const v = raw.trim()
+  if (v === 'true') return true
+  if (v === 'false') return false
+  if (v === 'null') return null
+  if (v !== '' && !isNaN(Number(v))) return Number(v)
+  return raw
+}
+
+function pairsToSet(pairs: Pair[]): Record<string, unknown> {
+  const out: Record<string, unknown> = {}
+  for (const { key, value } of pairs) {
+    const k = key.trim()
+    if (k) out[k] = parseValue(value)
+  }
+  return out
+}
+
+function PairsEditor({
+  pairs, onChange, addLabel = '+ propiedad',
+}: { pairs: Pair[]; onChange: (next: Pair[]) => void; addLabel?: string }) {
+  const update = (i: number, patch: Partial<Pair>) =>
+    onChange(pairs.map((p, j) => (j === i ? { ...p, ...patch } : p)))
+  const remove = (i: number) => onChange(pairs.filter((_, j) => j !== i))
+  const add = () => onChange([...pairs, { key: '', value: '' }])
+  return (
+    <div className="pairs-editor">
+      {pairs.map((p, i) => (
+        <div key={i} className="pair-row">
+          <input className="input" placeholder="campo (ej. titular)"
+            value={p.key} onChange={e => update(i, { key: e.target.value })} />
+          <input className="input" placeholder="valor (true/false/123/texto)"
+            value={p.value} onChange={e => update(i, { value: e.target.value })} />
+          <button type="button" className="btn-ghost pair-del" onClick={() => remove(i)}>×</button>
+        </div>
+      ))}
+      <button type="button" className="btn-ghost pair-add" onClick={add}>{addLabel}</button>
+    </div>
+  )
+}
+
+function NamesEditor({
+  names, onChange, addLabel = '+ propiedad a quitar',
+}: { names: string[]; onChange: (next: string[]) => void; addLabel?: string }) {
+  const update = (i: number, val: string) => onChange(names.map((n, j) => (j === i ? val : n)))
+  const remove = (i: number) => onChange(names.filter((_, j) => j !== i))
+  const add = () => onChange([...names, ''])
+  return (
+    <div className="pairs-editor">
+      {names.map((n, i) => (
+        <div key={i} className="pair-row pair-row-single">
+          <input className="input" placeholder="propiedad (ej. linkedin_url)"
+            value={n} onChange={e => update(i, e.target.value)} />
+          <button type="button" className="btn-ghost pair-del" onClick={() => remove(i)}>×</button>
+        </div>
+      ))}
+      <button type="button" className="btn-ghost pair-add" onClick={add}>{addLabel}</button>
+    </div>
+  )
+}
+
+function RelEndpoints({
+  value, onChange,
+}: { value: RelEndpointsValue; onChange: (next: RelEndpointsValue) => void }) {
+  const update = <K extends keyof RelEndpointsValue>(k: K, v: RelEndpointsValue[K]) =>
+    onChange({ ...value, [k]: v })
+  return (
+    <div className="form-grid">
+      <select className="input" value={value.fromLabel}
+        onChange={e => update('fromLabel', e.target.value as NodeLabel)}>
+        {NODE_LABELS.map(l => <option key={l} value={l}>{l} (from)</option>)}
+      </select>
+      <input className="input" placeholder={`from ${ID_FIELD[value.fromLabel]}`}
+        value={value.fromId} onChange={e => update('fromId', e.target.value)} />
+      <select className="input" value={value.toLabel}
+        onChange={e => update('toLabel', e.target.value as NodeLabel)}>
+        {NODE_LABELS.map(l => <option key={l} value={l}>{l} (to)</option>)}
+      </select>
+      <input className="input" placeholder={`to ${ID_FIELD[value.toLabel]}`}
+        value={value.toId} onChange={e => update('toId', e.target.value)} />
+      <select className="input" value={value.type}
+        onChange={e => update('type', e.target.value)}>
+        {REL_TYPES.map(t => <option key={t} value={t}>:{t}</option>)}
+      </select>
+    </div>
+  )
+}
+
+function RelBulkEndpoints({
+  value, onChange,
+}: { value: RelBulkValue; onChange: (next: RelBulkValue) => void }) {
+  const update = <K extends keyof RelBulkValue>(k: K, v: RelBulkValue[K]) =>
+    onChange({ ...value, [k]: v })
+  return (
+    <div className="form-grid">
+      <select className="input" value={value.fromLabel}
+        onChange={e => update('fromLabel', e.target.value as NodeLabel)}>
+        {NODE_LABELS.map(l => <option key={l} value={l}>{l} (from)</option>)}
+      </select>
+      <select className="input" value={value.toLabel}
+        onChange={e => update('toLabel', e.target.value as NodeLabel)}>
+        {NODE_LABELS.map(l => <option key={l} value={l}>{l} (to)</option>)}
+      </select>
+      <select className="input" value={value.type}
+        onChange={e => update('type', e.target.value)}>
+        {REL_TYPES.map(t => <option key={t} value={t}>:{t}</option>)}
+      </select>
+      <input className="input" placeholder="campo filtro (opcional)"
+        value={value.filterField} onChange={e => update('filterField', e.target.value)} />
+      <input className="input" placeholder="valor filtro (opcional)"
+        value={value.filterValue} onChange={e => update('filterValue', e.target.value)} />
     </div>
   )
 }
@@ -94,22 +241,6 @@ export default function OperacionesPage() {
     } catch (e) { setOp('reclu2', null, String(e)) }
   }
 
-  // ── ESTAR_EN: Usuario → Empresa (con cargo + fecha_inicio + actual) ───────
-  const [estarEnForm, setEstarEnForm] = useState({ usuario_id: '', empresa_id: '', cargo: 'Software Engineer' })
-  async function crearEstarEn() {
-    try {
-      const res = await relacionesApi.estarEn(
-        estarEnForm.usuario_id,
-        estarEnForm.empresa_id,
-        estarEnForm.cargo,
-        new Date().toISOString().slice(0, 10),
-        true,
-      )
-      setOp('estar', res, null)
-      showToast('Relación ESTAR_EN creada', 'ok')
-    } catch (e) { setOp('estar', null, String(e)) }
-  }
-
   // ── Carga CSV: nodos ──────────────────────────────────────────────────────
   const [csvNodeFile, setCsvNodeFile] = useState<File | null>(null)
   const [csvNodeLabel, setCsvNodeLabel] = useState('Usuario')
@@ -149,11 +280,36 @@ export default function OperacionesPage() {
   }
 
   // ── 3. Crear nodo con ≥5 propiedades ──────────────────────────────────────
+  // Cargamos un listado de empresas para que el usuario seleccione la que
+  // ofertará el empleo (CREATE :Empleo + CREATE [:OFERTA] desde la Empresa).
+  const [empresasOpts, setEmpresasOpts] = useState<{ id: string; label: string }[]>([])
   const [newEmpleo, setNewEmpleo] = useState({
     titulo: '', salario_min: '1000', salario_max: '2000',
-    modalidad: 'remoto', activo: 'true',
+    modalidad: 'remoto', activo: 'true', empresa_id: '',
   })
+
+  useEffect(() => {
+    let cancelled = false
+    empresasApi.list({ limit: '100' })
+      .then(res => {
+        if (cancelled) return
+        const nodes = extractNodes(res) as Empresa[]
+        const opts = nodes
+          .map(n => ({ id: nodeId(n.props), label: n.props.nombre || nodeId(n.props) }))
+          .filter(o => o.id)
+        setEmpresasOpts(opts)
+        // Pre-selecciona la primera empresa si no hay nada elegido
+        setNewEmpleo(f => f.empresa_id ? f : { ...f, empresa_id: opts[0]?.id ?? '' })
+      })
+      .catch(() => { /* sin empresas → el usuario verá el mensaje del select */ })
+    return () => { cancelled = true }
+  }, [])
+
   async function crearEmpleo5Props() {
+    if (!newEmpleo.empresa_id) {
+      setOp('emp5', null, 'Selecciona una empresa que ofertará el empleo')
+      return
+    }
     try {
       const res = await empleosApi.create({
         titulo: newEmpleo.titulo,
@@ -162,170 +318,367 @@ export default function OperacionesPage() {
         modalidad: newEmpleo.modalidad,
         activo: newEmpleo.activo === 'true',
         fecha_publicacion: new Date().toISOString().slice(0, 10),
+        empresa_id: newEmpleo.empresa_id,
       })
       setOp('emp5', res, null)
-      showToast('Empleo (6 props) creado', 'ok')
+      showToast('Empleo (6 props) + relación :OFERTA creados', 'ok')
     } catch (e) { setOp('emp5', null, String(e)) }
   }
 
-  // ── 4. CRUD props simple ───────────────────────────────────────────────────
-  const [patchId, setPatchId] = useState('')
-  const [patchField, setPatchField] = useState('titular')
-  const [patchValue, setPatchValue] = useState('')
-  async function patchSimple() {
+  // ── 4.1 — Consultar 1 nodo ─────────────────────────────────────────────────
+  const [q41, setQ41] = useState<{ label: NodeLabel; id: string }>({
+    label: 'Usuario', id: '',
+  })
+  async function consultarUnNodo() {
     try {
-      const res = await usuariosApi.update(patchId, { [patchField]: patchValue })
-      setOp('patch1', res, null)
-      showToast('Propiedad actualizada', 'ok')
-    } catch (e) { setOp('patch1', null, String(e)) }
+      if (!q41.id.trim()) { setOp('4.1', null, 'Indica el id del nodo'); return }
+      const res = await relacionesApi.queryNodos({
+        label: q41.label,
+        filter: { [ID_FIELD[q41.label]]: q41.id.trim() },
+        limit: 1,
+      })
+      setOp('4.1', res, null)
+      showToast(`Consultado nodo :${q41.label}`, 'ok')
+    } catch (e) { setOp('4.1', null, String(e)) }
   }
 
-  // ── 5. CRUD props múltiple (bulk) ──────────────────────────────────────────
-  const [bulkIndustria, setBulkIndustria] = useState('Tecnología')
-  const [bulkNewVal, setBulkNewVal] = useState('Tech & AI')
-  async function patchBulk() {
+  // ── 4.2 — Consultar muchos nodos con filtro ───────────────────────────────
+  const [q42, setQ42] = useState<{ label: NodeLabel; filterField: string; filterValue: string; limit: string }>({
+    label: 'Empleo', filterField: 'activo', filterValue: 'true', limit: '20',
+  })
+  async function consultarMuchosNodos() {
     try {
-      const res = await empresasApi.bulkUpdate({ industria: bulkIndustria }, { industria: bulkNewVal })
-      setOp('bulk', res, null)
-      showToast('Bulk update completado', 'ok')
-    } catch (e) { setOp('bulk', null, String(e)) }
+      const filter = q42.filterField.trim()
+        ? { [q42.filterField.trim()]: parseValue(q42.filterValue) }
+        : {}
+      const limit = Number.isNaN(parseInt(q42.limit)) ? 20 : parseInt(q42.limit)
+      const res = await relacionesApi.queryNodos({
+        label: q42.label,
+        filter,
+        limit,
+      })
+      setOp('4.2', res, null)
+      showToast(`Consultados nodos :${q42.label}`, 'ok')
+    } catch (e) { setOp('4.2', null, String(e)) }
   }
 
-  // ── 6. Crear relación ≥3 props (COMENTO) ──────────────────────────────────
-  const [relUserId, setRelUserId] = useState('')
-  const [relPostId, setRelPostId] = useState('')
-  const [relContenido, setRelContenido] = useState('Excelente publicación, muy relevante.')
-  async function crearRelacion() {
+  // ── 4.3 — Consulta agregada ────────────────────────────────────────────────
+  const [q43, setQ43] = useState<{
+    label: NodeLabel; agg: 'count' | 'avg' | 'sum' | 'min' | 'max';
+    field: string; groupBy: string; filterField: string; filterValue: string;
+  }>({
+    label: 'Usuario', agg: 'avg', field: 'conexiones_count',
+    groupBy: '', filterField: '', filterValue: '',
+  })
+  async function consultarAgregada() {
     try {
-      const res = await relacionesApi.comentar(relUserId, relPostId, relContenido)
-      setOp('rel', res, null)
-      showToast('Relación COMENTO creada (contenido + fecha + editado)', 'ok')
-    } catch (e) { setOp('rel', null, String(e)) }
+      const where = q43.filterField.trim()
+        ? [{ prop: q43.filterField.trim(), value: parseValue(q43.filterValue) }]
+        : []
+      const res = await consultasApi.agregacion({
+        label: q43.label,
+        agg: q43.agg,
+        field: q43.agg === 'count' ? undefined : q43.field.trim() || undefined,
+        groupBy: q43.groupBy.trim() || undefined,
+        where,
+      })
+      setOp('4.3', res, null)
+      showToast(`Agregación ${q43.agg} sobre :${q43.label}`, 'ok')
+    } catch (e) { setOp('4.3', null, String(e)) }
   }
 
-  // ── 7. Eliminar nodo simple ────────────────────────────────────────────────
-  const [delId, setDelId] = useState('')
-  async function eliminarSimple() {
+  // ── 5.1 / 5.3 — Agregar / actualizar 1+ props a 1 nodo (SET) ──────────────
+  const [setOneLabel, setSetOneLabel] = useState<NodeLabel>('Usuario')
+  const [setOneId, setSetOneId] = useState('')
+  const [setOnePairs, setSetOnePairs] = useState<Pair[]>([{ key: 'titular', value: 'Senior Engineer' }])
+  async function aplicarSetOne(opKey: '5.1' | '5.3') {
     try {
-      await usuariosApi.delete(delId)
-      setOp('del1', { columns: [], rows: [], stats: { nodesDeleted: 1 }, meta: { cypher: `MATCH (u:Usuario {userId: '${delId}'}) DETACH DELETE u` } }, null)
-      showToast('Nodo eliminado', 'ok')
-    } catch (e) { setOp('del1', null, String(e)) }
+      const set = pairsToSet(setOnePairs)
+      if (Object.keys(set).length === 0) {
+        setOp(opKey, null, 'Agrega al menos una propiedad'); return
+      }
+      const res = await relacionesApi.patchNodo({
+        label: setOneLabel,
+        id_field: ID_FIELD[setOneLabel],
+        id_value: setOneId,
+        set,
+      })
+      setOp(opKey, res, null)
+      showToast(`SET ${Object.keys(set).join(', ')} aplicado`, 'ok')
+    } catch (e) { setOp(opKey, null, String(e)) }
   }
 
-  // ── 8. Eliminar múltiples nodos (bulk) ────────────────────────────────────
-  const [bulkDelLabel, setBulkDelLabel] = useState('Empleo')
-  const [bulkDelFilterField, setBulkDelFilterField] = useState('activo')
-  const [bulkDelFilterValue, setBulkDelFilterValue] = useState('false')
+  // ── 5.2 / 5.4 — Agregar / actualizar 1+ props a múltiples nodos (bulk SET) ─
+  const [setBulkLabel, setSetBulkLabel] = useState<NodeLabel>('Empresa')
+  const [setBulkFilterField, setSetBulkFilterField] = useState('industria')
+  const [setBulkFilterValue, setSetBulkFilterValue] = useState('Tecnología')
+  const [setBulkPairs, setSetBulkPairs] = useState<Pair[]>([{ key: 'industria', value: 'Tech & IA' }])
+  async function aplicarSetBulk(opKey: '5.2' | '5.4') {
+    try {
+      const set = pairsToSet(setBulkPairs)
+      if (Object.keys(set).length === 0) {
+        setOp(opKey, null, 'Agrega al menos una propiedad'); return
+      }
+      const filter = setBulkFilterField.trim()
+        ? { [setBulkFilterField.trim()]: parseValue(setBulkFilterValue) }
+        : {}
+      const res = await relacionesApi.bulkPatchNodos({
+        label: setBulkLabel,
+        filter,
+        set,
+      })
+      setOp(opKey, res, null)
+      showToast(`Bulk SET aplicado a :${setBulkLabel}`, 'ok')
+    } catch (e) { setOp(opKey, null, String(e)) }
+  }
+
+  // ── 5.5 — Eliminar 1+ props de 1 nodo (REMOVE) ────────────────────────────
+  const [remOneLabel, setRemOneLabel] = useState<NodeLabel>('Usuario')
+  const [remOneId, setRemOneId] = useState('')
+  const [remOneNames, setRemOneNames] = useState<string[]>(['linkedin_url'])
+  async function aplicarRemoveOne() {
+    try {
+      const remove = remOneNames.map(n => n.trim()).filter(Boolean)
+      if (remove.length === 0) {
+        setOp('5.5', null, 'Indica al menos una propiedad a eliminar'); return
+      }
+      const res = await relacionesApi.patchNodo({
+        label: remOneLabel,
+        id_field: ID_FIELD[remOneLabel],
+        id_value: remOneId,
+        remove,
+      })
+      setOp('5.5', res, null)
+      showToast(`REMOVE ${remove.join(', ')} aplicado`, 'ok')
+    } catch (e) { setOp('5.5', null, String(e)) }
+  }
+
+  // ── 5.6 — Eliminar 1+ props de múltiples nodos (bulk REMOVE) ──────────────
+  const [remBulkLabel, setRemBulkLabel] = useState<NodeLabel>('Usuario')
+  const [remBulkFilterField, setRemBulkFilterField] = useState('')
+  const [remBulkFilterValue, setRemBulkFilterValue] = useState('')
+  const [remBulkNames, setRemBulkNames] = useState<string[]>(['linkedin_url'])
+  async function aplicarRemoveBulk() {
+    try {
+      const remove = remBulkNames.map(n => n.trim()).filter(Boolean)
+      if (remove.length === 0) {
+        setOp('5.6', null, 'Indica al menos una propiedad a eliminar'); return
+      }
+      const filter = remBulkFilterField.trim()
+        ? { [remBulkFilterField.trim()]: parseValue(remBulkFilterValue) }
+        : {}
+      const res = await relacionesApi.bulkPatchNodos({
+        label: remBulkLabel,
+        filter,
+        remove,
+      })
+      setOp('5.6', res, null)
+      showToast(`Bulk REMOVE aplicado a :${remBulkLabel}`, 'ok')
+    } catch (e) { setOp('5.6', null, String(e)) }
+  }
+
+  // ── 6.1 — CREATE relación genérica (≥3 props) ─────────────────────────────
+  const [rel61, setRel61] = useState<RelEndpointsValue>({
+    fromLabel: 'Usuario', fromId: '',
+    toLabel: 'Publicacion', toId: '',
+    type: 'COMENTO',
+  })
+  const [rel61Pairs, setRel61Pairs] = useState<Pair[]>([
+    { key: 'contenido', value: 'Comentario de prueba' },
+    { key: 'fecha', value: new Date().toISOString().slice(0, 10) },
+    { key: 'editado', value: 'false' },
+  ])
+  async function crearRelacionGenerica() {
+    try {
+      const props = pairsToSet(rel61Pairs)
+      if (Object.keys(props).length < 3) {
+        setOp('6.1', null, 'La rúbrica exige al menos 3 propiedades'); return
+      }
+      const res = await relacionesApi.generica({
+        from: { label: rel61.fromLabel, idField: ID_FIELD[rel61.fromLabel], idValue: rel61.fromId },
+        to:   { label: rel61.toLabel,   idField: ID_FIELD[rel61.toLabel],   idValue: rel61.toId },
+        type: rel61.type,
+        properties: props,
+      })
+      setOp('6.1', res, null)
+      showToast(`Relación :${rel61.type} creada con ${Object.keys(props).length} props`, 'ok')
+    } catch (e) { setOp('6.1', null, String(e)) }
+  }
+
+  // ── 7.1 / 7.3 — Agregar / actualizar 1+ props a 1 relación (PATCH) ────────
+  const [rel71, setRel71] = useState<RelEndpointsValue>({
+    fromLabel: 'Usuario', fromId: '',
+    toLabel: 'Publicacion', toId: '',
+    type: 'DIO_LIKE',
+  })
+  const [rel71Pairs, setRel71Pairs] = useState<Pair[]>([{ key: 'notificado', value: 'true' }])
+  async function aplicarRelSetOne(opKey: '7.1' | '7.3') {
+    try {
+      const set = pairsToSet(rel71Pairs)
+      if (Object.keys(set).length === 0) {
+        setOp(opKey, null, 'Agrega al menos una propiedad'); return
+      }
+      const res = await relacionesApi.patchRelacion({
+        from: { label: rel71.fromLabel, idField: ID_FIELD[rel71.fromLabel], idValue: rel71.fromId },
+        to:   { label: rel71.toLabel,   idField: ID_FIELD[rel71.toLabel],   idValue: rel71.toId },
+        type: rel71.type,
+        set,
+      })
+      setOp(opKey, res, null)
+      showToast(`SET sobre [:${rel71.type}] aplicado`, 'ok')
+    } catch (e) { setOp(opKey, null, String(e)) }
+  }
+
+  // ── 7.2 / 7.4 — bulk SET en relaciones ────────────────────────────────────
+  const [rel72, setRel72] = useState<RelBulkValue>({
+    fromLabel: 'Usuario', toLabel: 'Publicacion',
+    type: 'DIO_LIKE', filterField: '', filterValue: '',
+  })
+  const [rel72Pairs, setRel72Pairs] = useState<Pair[]>([{ key: 'notificado', value: 'true' }])
+  async function aplicarRelSetBulk(opKey: '7.2' | '7.4') {
+    try {
+      const set = pairsToSet(rel72Pairs)
+      if (Object.keys(set).length === 0) {
+        setOp(opKey, null, 'Agrega al menos una propiedad'); return
+      }
+      const filter = rel72.filterField.trim()
+        ? { [rel72.filterField.trim()]: parseValue(rel72.filterValue) }
+        : {}
+      const res = await relacionesApi.bulkPatchRelacion({
+        from_label: rel72.fromLabel,
+        to_label:   rel72.toLabel,
+        type:       rel72.type,
+        filter,
+        set,
+      })
+      setOp(opKey, res, null)
+      showToast(`Bulk SET sobre [:${rel72.type}] aplicado`, 'ok')
+    } catch (e) { setOp(opKey, null, String(e)) }
+  }
+
+  // ── 7.5 — Eliminar 1+ props de 1 relación (REMOVE) ────────────────────────
+  const [rel75, setRel75] = useState<RelEndpointsValue>({
+    fromLabel: 'Usuario', fromId: '',
+    toLabel: 'Publicacion', toId: '',
+    type: 'DIO_LIKE',
+  })
+  const [rel75Names, setRel75Names] = useState<string[]>(['notificado'])
+  async function aplicarRelRemoveOne() {
+    try {
+      const remove = rel75Names.map(n => n.trim()).filter(Boolean)
+      if (remove.length === 0) {
+        setOp('7.5', null, 'Indica al menos una propiedad a eliminar'); return
+      }
+      const res = await relacionesApi.patchRelacion({
+        from: { label: rel75.fromLabel, idField: ID_FIELD[rel75.fromLabel], idValue: rel75.fromId },
+        to:   { label: rel75.toLabel,   idField: ID_FIELD[rel75.toLabel],   idValue: rel75.toId },
+        type: rel75.type,
+        remove,
+      })
+      setOp('7.5', res, null)
+      showToast(`REMOVE sobre [:${rel75.type}] aplicado`, 'ok')
+    } catch (e) { setOp('7.5', null, String(e)) }
+  }
+
+  // ── 7.6 — bulk REMOVE en relaciones ───────────────────────────────────────
+  const [rel76, setRel76] = useState<RelBulkValue>({
+    fromLabel: 'Usuario', toLabel: 'Empresa',
+    type: 'SIGUE_A', filterField: '', filterValue: '',
+  })
+  const [rel76Names, setRel76Names] = useState<string[]>(['motivo'])
+  async function aplicarRelRemoveBulk() {
+    try {
+      const remove = rel76Names.map(n => n.trim()).filter(Boolean)
+      if (remove.length === 0) {
+        setOp('7.6', null, 'Indica al menos una propiedad a eliminar'); return
+      }
+      const filter = rel76.filterField.trim()
+        ? { [rel76.filterField.trim()]: parseValue(rel76.filterValue) }
+        : {}
+      const res = await relacionesApi.bulkPatchRelacion({
+        from_label: rel76.fromLabel,
+        to_label:   rel76.toLabel,
+        type:       rel76.type,
+        filter,
+        remove,
+      })
+      setOp('7.6', res, null)
+      showToast(`Bulk REMOVE sobre [:${rel76.type}] aplicado`, 'ok')
+    } catch (e) { setOp('7.6', null, String(e)) }
+  }
+
+  // ── 8.1 — Eliminar 1 nodo (genérico) ──────────────────────────────────────
+  const [del81, setDel81] = useState<{ label: NodeLabel; id: string }>({
+    label: 'Usuario', id: '',
+  })
+  async function eliminarNodoUno() {
+    try {
+      if (!del81.id.trim()) { setOp('8.1', null, 'Indica el id del nodo'); return }
+      const res = await relacionesApi.bulkDeleteNodos({
+        label: del81.label,
+        filter: { [ID_FIELD[del81.label]]: del81.id.trim() },
+      })
+      setOp('8.1', res, null)
+      showToast(`Nodo :${del81.label} eliminado`, 'ok')
+    } catch (e) { setOp('8.1', null, String(e)) }
+  }
+
+  // ── 8.2 — Eliminar múltiples nodos (genérico) ─────────────────────────────
+  const [del82, setDel82] = useState<{ label: NodeLabel; filterField: string; filterValue: string }>({
+    label: 'Empleo', filterField: 'activo', filterValue: 'false',
+  })
   async function eliminarNodosBulk() {
     try {
-      const filter = bulkDelFilterField
-        ? { [bulkDelFilterField]: bulkDelFilterValue === 'true' ? true : bulkDelFilterValue === 'false' ? false : bulkDelFilterValue }
+      const filter = del82.filterField.trim()
+        ? { [del82.filterField.trim()]: parseValue(del82.filterValue) }
         : {}
-      const res = await relacionesApi.bulkDeleteNodos({ label: bulkDelLabel, filter })
-      setOp('del2', res, null)
-      showToast('Nodos eliminados en bulk', 'ok')
-    } catch (e) { setOp('del2', null, String(e)) }
+      const res = await relacionesApi.bulkDeleteNodos({ label: del82.label, filter })
+      setOp('8.2', res, null)
+      showToast(`Nodos :${del82.label} eliminados (bulk)`, 'ok')
+    } catch (e) { setOp('8.2', null, String(e)) }
   }
 
-  // ── 9. Actualizar propiedad de 1 relación ─────────────────────────────────
-  const [relPatchFromId, setRelPatchFromId] = useState('')
-  const [relPatchToId, setRelPatchToId] = useState('')
-  const [relPatchField, setRelPatchField] = useState('notificado')
-  const [relPatchValue, setRelPatchValue] = useState('true')
-  async function patchRelacion() {
-    try {
-      const res = await relacionesApi.patchRelacion({
-        from: { label: 'Usuario', idField: 'userId', idValue: relPatchFromId },
-        to: { label: 'Publicacion', idField: 'postId', idValue: relPatchToId },
-        type: 'DIO_LIKE',
-        set: { [relPatchField]: relPatchValue === 'true' ? true : relPatchValue === 'false' ? false : relPatchValue },
-      })
-      setOp('rpatch1', res, null)
-      showToast('Propiedad de relación actualizada', 'ok')
-    } catch (e) { setOp('rpatch1', null, String(e)) }
-  }
-
-  // ── 10. Eliminar propiedad de 1 relación ──────────────────────────────────
-  const [relRemoveFromId, setRelRemoveFromId] = useState('')
-  const [relRemoveToId, setRelRemoveToId] = useState('')
-  const [relRemoveProp, setRelRemoveProp] = useState('notificado')
-  async function removeRelProp() {
-    try {
-      const res = await relacionesApi.patchRelacion({
-        from: { label: 'Usuario', idField: 'userId', idValue: relRemoveFromId },
-        to: { label: 'Publicacion', idField: 'postId', idValue: relRemoveToId },
-        type: 'DIO_LIKE',
-        remove: [relRemoveProp],
-      })
-      setOp('rrem1', res, null)
-      showToast('Propiedad de relación eliminada', 'ok')
-    } catch (e) { setOp('rrem1', null, String(e)) }
-  }
-
-  // ── 11. Actualizar props de múltiples relaciones (bulk) ───────────────────
-  const [relBulkPatchField, setRelBulkPatchField] = useState('notificado')
-  const [relBulkPatchValue, setRelBulkPatchValue] = useState('true')
-  async function bulkPatchRelaciones() {
-    try {
-      const res = await relacionesApi.bulkPatchRelacion({
-        from_label: 'Usuario',
-        to_label: 'Publicacion',
-        type: 'DIO_LIKE',
-        set: { [relBulkPatchField]: relBulkPatchValue === 'true' ? true : relBulkPatchValue === 'false' ? false : relBulkPatchValue },
-      })
-      setOp('rbulk', res, null)
-      showToast('Bulk patch de relaciones completado', 'ok')
-    } catch (e) { setOp('rbulk', null, String(e)) }
-  }
-
-  // ── 12. Eliminar 1 relación ────────────────────────────────────────────────
-  const [relDelFromId, setRelDelFromId] = useState('')
-  const [relDelToId, setRelDelToId] = useState('')
-  async function eliminarRelacion() {
+  // ── 9.1 — Eliminar 1 relación (genérico) ──────────────────────────────────
+  const [del91, setDel91] = useState<RelEndpointsValue>({
+    fromLabel: 'Usuario', fromId: '',
+    toLabel: 'Publicacion', toId: '',
+    type: 'DIO_LIKE',
+  })
+  async function eliminarRelacionUna() {
     try {
       const res = await relacionesApi.deleteRelacion({
-        from_label: 'Usuario', from_id_field: 'userId', from_id_value: relDelFromId,
-        to_label: 'Publicacion', to_id_field: 'postId', to_id_value: relDelToId,
-        type: 'DIO_LIKE',
+        from_label: del91.fromLabel,
+        from_id_field: ID_FIELD[del91.fromLabel],
+        from_id_value: del91.fromId,
+        to_label: del91.toLabel,
+        to_id_field: ID_FIELD[del91.toLabel],
+        to_id_value: del91.toId,
+        type: del91.type,
       })
-      setOp('rdel1', res, null)
-      showToast('Relación DIO_LIKE eliminada', 'ok')
-    } catch (e) { setOp('rdel1', null, String(e)) }
+      setOp('9.1', res, null)
+      showToast(`Relación [:${del91.type}] eliminada`, 'ok')
+    } catch (e) { setOp('9.1', null, String(e)) }
   }
 
-  // ── 13. Eliminar múltiples relaciones (bulk) ───────────────────────────────
-  const [relBulkDelType, setRelBulkDelType] = useState('COMENTO')
-  const [relBulkDelFilterField, setRelBulkDelFilterField] = useState('editado')
-  const [relBulkDelFilterValue, setRelBulkDelFilterValue] = useState('false')
+  // ── 9.2 — Eliminar múltiples relaciones (genérico) ────────────────────────
+  const [del92, setDel92] = useState<RelBulkValue>({
+    fromLabel: 'Usuario', toLabel: 'Publicacion',
+    type: 'COMENTO', filterField: 'editado', filterValue: 'false',
+  })
   async function eliminarRelacionesBulk() {
     try {
-      const filter = relBulkDelFilterField
-        ? { [relBulkDelFilterField]: relBulkDelFilterValue === 'true' ? true : relBulkDelFilterValue === 'false' ? false : relBulkDelFilterValue }
+      const filter = del92.filterField.trim()
+        ? { [del92.filterField.trim()]: parseValue(del92.filterValue) }
         : {}
       const res = await relacionesApi.bulkDeleteRelacion({
-        from_label: 'Usuario',
-        to_label: 'Publicacion',
-        type: relBulkDelType,
+        from_label: del92.fromLabel,
+        to_label:   del92.toLabel,
+        type:       del92.type,
         filter,
       })
-      setOp('rdel2', res, null)
-      showToast('Relaciones eliminadas en bulk', 'ok')
-    } catch (e) { setOp('rdel2', null, String(e)) }
-  }
-
-  // ── 14. Eliminar props de relación bulk (REMOVE) ──────────────────────────
-  async function bulkRemoveRelProp() {
-    try {
-      const res = await relacionesApi.bulkPatchRelacion({
-        from_label: 'Usuario',
-        to_label: 'Empresa',
-        type: 'SIGUE_A',
-        remove: ['motivo'],
-      })
-      setOp('rremb', res, null)
-      showToast('Prop "motivo" eliminada de todas las relaciones SIGUE_A', 'ok')
-    } catch (e) { setOp('rremb', null, String(e)) }
+      setOp('9.2', res, null)
+      showToast(`Relaciones [:${del92.type}] eliminadas (bulk)`, 'ok')
+    } catch (e) { setOp('9.2', null, String(e)) }
   }
 
   return (
@@ -339,7 +692,7 @@ export default function OperacionesPage() {
       </p>
 
       <div className="ops-grid">
-        <OpCard title="① Crear nodo (1 label) — :Empresa">
+        <OpCard title="1.1 — Crear nodo con 1 label (:Empresa)">
           <div className="form-grid">
             <input className="input" placeholder="Nombre empresa" value={newEmpresa.nombre}
               onChange={e => setNewEmpresa(f => ({ ...f, nombre: e.target.value }))} />
@@ -350,7 +703,7 @@ export default function OperacionesPage() {
           <ResultBox result={result['emp1']?.res ?? null} error={result['emp1']?.err ?? null} />
         </OpCard>
 
-        <OpCard title="② Crear nodo (2 labels) — :Usuario:Admin">
+        <OpCard title="2.1 — Crear nodo con 2+ labels (:Usuario:Admin)">
           <div className="form-grid">
             <input className="input" placeholder="Nombre" value={newAdmin.nombre}
               onChange={e => setNewAdmin(f => ({ ...f, nombre: e.target.value }))} />
@@ -365,7 +718,7 @@ export default function OperacionesPage() {
           <ResultBox result={result['admin2']?.res ?? null} error={result['admin2']?.err ?? null} />
         </OpCard>
 
-        <OpCard title="②b Crear nodo (2 labels) — :Usuario:Reclutador">
+        <OpCard title="2.2 — Crear nodo con 2+ labels (:Usuario:Reclutador)">
           <div className="form-grid">
             <input className="input" placeholder="Nombre" value={newReclutador.nombre}
               onChange={e => setNewReclutador(f => ({ ...f, nombre: e.target.value }))} />
@@ -378,10 +731,17 @@ export default function OperacionesPage() {
           <ResultBox result={result['reclu2']?.res ?? null} error={result['reclu2']?.err ?? null} />
         </OpCard>
 
-        <OpCard title="③ Crear nodo ≥5 propiedades — :Empleo">
+        <OpCard title="3.1 — Crear nodo con ≥5 propiedades (:Empleo)">
           <div className="form-grid">
             <input className="input" placeholder="Título del puesto" value={newEmpleo.titulo}
               onChange={e => setNewEmpleo(f => ({ ...f, titulo: e.target.value }))} />
+            <select className="input" value={newEmpleo.empresa_id}
+              onChange={e => setNewEmpleo(f => ({ ...f, empresa_id: e.target.value }))}>
+              {empresasOpts.length === 0 && <option value="">Cargando empresas…</option>}
+              {empresasOpts.map(o => (
+                <option key={o.id} value={o.id}>{o.label} ({o.id})</option>
+              ))}
+            </select>
             <input className="input" placeholder="Salario mín" type="number" value={newEmpleo.salario_min}
               onChange={e => setNewEmpleo(f => ({ ...f, salario_min: e.target.value }))} />
             <input className="input" placeholder="Salario máx" type="number" value={newEmpleo.salario_max}
@@ -391,67 +751,351 @@ export default function OperacionesPage() {
               {['remoto', 'presencial', 'híbrido'].map(m => <option key={m} value={m}>{m}</option>)}
             </select>
           </div>
-          <p className="text-mute" style={{ fontSize: 12 }}>6 propiedades: titulo, salario_min, salario_max, modalidad, activo, fecha_publicacion</p>
-          <button className="btn-primary" onClick={crearEmpleo5Props}>CREATE (:Empleo {'{'}6 props{'}'})</button>
+          <p className="text-mute" style={{ fontSize: 12 }}>
+            Crea (:Empleo {'{'}6 props{'}'}) y la relación (:Empresa)-[:OFERTA]→(:Empleo)
+          </p>
+          <button className="btn-primary" onClick={crearEmpleo5Props}>CREATE (:Empleo) + [:OFERTA]</button>
           <ResultBox result={result['emp5']?.res ?? null} error={result['emp5']?.err ?? null} />
         </OpCard>
 
-        <OpCard title="④ CRUD propiedades — actualizar 1 campo (PATCH)">
-          <div className="form-grid">
-            <input className="input" placeholder="userId del usuario" value={patchId}
-              onChange={e => setPatchId(e.target.value)} />
-            <input className="input" placeholder="Campo (titular, email…)" value={patchField}
-              onChange={e => setPatchField(e.target.value)} />
-            <input className="input" placeholder="Nuevo valor" value={patchValue}
-              onChange={e => setPatchValue(e.target.value)} />
-          </div>
-          <button className="btn-primary" onClick={patchSimple}>SET u.{patchField || 'campo'} = valor</button>
-          <ResultBox result={result['patch1']?.res ?? null} error={result['patch1']?.err ?? null} />
-        </OpCard>
-
-        <OpCard title="⑤ CRUD propiedades — bulk update (POST /bulk-update/)">
-          <p className="text-mute" style={{ fontSize: 12, marginBottom: 8 }}>
-            Actualiza todas las Empresas con industria=X → industria=Y
+        <OpCard title="4.1 — Consultar 1 nodo (filtro por id)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            Devuelve el nodo y todas sus propiedades. Funciona con cualquier label.
           </p>
           <div className="form-grid">
-            <input className="input" placeholder="Industria actual" value={bulkIndustria}
-              onChange={e => setBulkIndustria(e.target.value)} />
-            <input className="input" placeholder="Nuevo valor" value={bulkNewVal}
-              onChange={e => setBulkNewVal(e.target.value)} />
+            <select className="input" value={q41.label}
+              onChange={e => setQ41(f => ({ ...f, label: e.target.value as NodeLabel }))}>
+              {NODE_LABELS.map(l => <option key={l} value={l}>{l}</option>)}
+            </select>
+            <input className="input" placeholder={ID_FIELD[q41.label]}
+              value={q41.id} onChange={e => setQ41(f => ({ ...f, id: e.target.value }))} />
           </div>
-          <button className="btn-primary" onClick={patchBulk}>
-            MATCH (e:Empresa WHERE industria=$X) SET industria=$Y
+          <button className="btn-primary" onClick={consultarUnNodo}>
+            MATCH (n:{q41.label} {`{${ID_FIELD[q41.label]}}`}) RETURN n
           </button>
-          <ResultBox result={result['bulk']?.res ?? null} error={result['bulk']?.err ?? null} />
+          <ResultBox result={result['4.1']?.res ?? null} error={result['4.1']?.err ?? null} />
         </OpCard>
 
-        <OpCard title="⑥ Crear relación ≥3 props — COMENTO (contenido + fecha + editado)">
-          <div className="form-grid">
-            <input className="input" placeholder="userId del usuario" value={relUserId}
-              onChange={e => setRelUserId(e.target.value)} />
-            <input className="input" placeholder="postId de la publicación" value={relPostId}
-              onChange={e => setRelPostId(e.target.value)} />
-            <input className="input" placeholder="Contenido del comentario" value={relContenido}
-              onChange={e => setRelContenido(e.target.value)} />
-          </div>
-          <button className="btn-primary" onClick={crearRelacion}>CREATE [:COMENTO {'{contenido, fecha, editado}'}]</button>
-          <ResultBox result={result['rel']?.res ?? null} error={result['rel']?.err ?? null} />
-        </OpCard>
-
-        <OpCard title="⑥b Crear relación ESTAR_EN — Usuario → Empresa (3 props)">
-          <p className="text-mute" style={{ fontSize: 12, marginBottom: 8 }}>
-            Crea (:Usuario)-[:ESTAR_EN {'{cargo, fecha_inicio, actual}'}]→(:Empresa)
+        <OpCard title="4.2 — Consultar muchos nodos (con filtro)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            Devuelve los nodos del label que cumplan el filtro (sin filtro = todos, hasta el límite).
           </p>
           <div className="form-grid">
-            <input className="input" placeholder="usuario_id" value={estarEnForm.usuario_id}
-              onChange={e => setEstarEnForm(f => ({ ...f, usuario_id: e.target.value }))} />
-            <input className="input" placeholder="empresa_id" value={estarEnForm.empresa_id}
-              onChange={e => setEstarEnForm(f => ({ ...f, empresa_id: e.target.value }))} />
-            <input className="input" placeholder="cargo (ej: Software Engineer)" value={estarEnForm.cargo}
-              onChange={e => setEstarEnForm(f => ({ ...f, cargo: e.target.value }))} />
+            <select className="input" value={q42.label}
+              onChange={e => setQ42(f => ({ ...f, label: e.target.value as NodeLabel }))}>
+              {NODE_LABELS.map(l => <option key={l} value={l}>{l}</option>)}
+            </select>
+            <input className="input" placeholder="Campo filtro (opcional)"
+              value={q42.filterField}
+              onChange={e => setQ42(f => ({ ...f, filterField: e.target.value }))} />
+            <input className="input" placeholder="Valor (opcional)"
+              value={q42.filterValue}
+              onChange={e => setQ42(f => ({ ...f, filterValue: e.target.value }))} />
+            <input className="input" type="number" placeholder="LIMIT"
+              value={q42.limit}
+              onChange={e => setQ42(f => ({ ...f, limit: e.target.value }))} />
           </div>
-          <button className="btn-primary" onClick={crearEstarEn}>CREATE [:ESTAR_EN]</button>
-          <ResultBox result={result['estar']?.res ?? null} error={result['estar']?.err ?? null} />
+          <button className="btn-primary" onClick={consultarMuchosNodos}>
+            MATCH (n:{q42.label}) {q42.filterField ? `WHERE n.${q42.filterField}` : ''} RETURN n LIMIT {q42.limit}
+          </button>
+          <ResultBox result={result['4.2']?.res ?? null} error={result['4.2']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="4.3 — Consulta agregada (count / avg / sum / min / max)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            Calcula un agregado opcionalmente agrupado por una propiedad.
+          </p>
+          <div className="form-grid">
+            <select className="input" value={q43.label}
+              onChange={e => setQ43(f => ({ ...f, label: e.target.value as NodeLabel }))}>
+              {NODE_LABELS.map(l => <option key={l} value={l}>{l}</option>)}
+            </select>
+            <select className="input" value={q43.agg}
+              onChange={e => setQ43(f => ({ ...f, agg: e.target.value as typeof q43.agg }))}>
+              {['count', 'avg', 'sum', 'min', 'max'].map(a => <option key={a} value={a}>{a}</option>)}
+            </select>
+            <input className="input" placeholder="campo (no se usa con count)"
+              disabled={q43.agg === 'count'}
+              value={q43.field} onChange={e => setQ43(f => ({ ...f, field: e.target.value }))} />
+            <input className="input" placeholder="groupBy (opcional)"
+              value={q43.groupBy} onChange={e => setQ43(f => ({ ...f, groupBy: e.target.value }))} />
+            <input className="input" placeholder="campo filtro (opcional)"
+              value={q43.filterField}
+              onChange={e => setQ43(f => ({ ...f, filterField: e.target.value }))} />
+            <input className="input" placeholder="valor filtro (opcional)"
+              value={q43.filterValue}
+              onChange={e => setQ43(f => ({ ...f, filterValue: e.target.value }))} />
+          </div>
+          <button className="btn-primary" onClick={consultarAgregada}>
+            MATCH (n:{q43.label}) {q43.filterField ? `WHERE n.${q43.filterField}` : ''} RETURN {q43.agg === 'count' ? 'count(*)' : `${q43.agg}(n.${q43.field || '?'})`}
+          </button>
+          <ResultBox result={result['4.3']?.res ?? null} error={result['4.3']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="5.1 — Agregar 1+ propiedades a 1 nodo (SET)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            Si la propiedad no existe, Cypher la crea; si existe, la sobreescribe.
+          </p>
+          <div className="form-grid">
+            <select className="input" value={setOneLabel}
+              onChange={e => setSetOneLabel(e.target.value as NodeLabel)}>
+              {NODE_LABELS.map(l => <option key={l} value={l}>{l}</option>)}
+            </select>
+            <input className="input" placeholder={ID_FIELD[setOneLabel]}
+              value={setOneId} onChange={e => setSetOneId(e.target.value)} />
+          </div>
+          <PairsEditor pairs={setOnePairs} onChange={setSetOnePairs} />
+          <button className="btn-primary" onClick={() => aplicarSetOne('5.1')}>
+            SET (:{setOneLabel} {`{${ID_FIELD[setOneLabel]}}`}) — agregar props
+          </button>
+          <ResultBox result={result['5.1']?.res ?? null} error={result['5.1']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="5.2 — Agregar 1+ propiedades a múltiples nodos (bulk SET)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            Aplica SET a todos los nodos del label que cumplan el filtro (déjalo vacío para todos).
+          </p>
+          <div className="form-grid">
+            <select className="input" value={setBulkLabel}
+              onChange={e => setSetBulkLabel(e.target.value as NodeLabel)}>
+              {NODE_LABELS.map(l => <option key={l} value={l}>{l}</option>)}
+            </select>
+            <input className="input" placeholder="Campo filtro (opcional)"
+              value={setBulkFilterField} onChange={e => setSetBulkFilterField(e.target.value)} />
+            <input className="input" placeholder="Valor filtro (opcional)"
+              value={setBulkFilterValue} onChange={e => setSetBulkFilterValue(e.target.value)} />
+          </div>
+          <PairsEditor pairs={setBulkPairs} onChange={setSetBulkPairs} />
+          <button className="btn-primary" onClick={() => aplicarSetBulk('5.2')}>
+            MATCH (n:{setBulkLabel}) {setBulkFilterField ? `WHERE n.${setBulkFilterField}` : ''} SET …
+          </button>
+          <ResultBox result={result['5.2']?.res ?? null} error={result['5.2']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="5.3 — Actualizar 1+ propiedades de 1 nodo (SET)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            Sobreescribe propiedades existentes en un nodo identificado por su id.
+          </p>
+          <div className="form-grid">
+            <select className="input" value={setOneLabel}
+              onChange={e => setSetOneLabel(e.target.value as NodeLabel)}>
+              {NODE_LABELS.map(l => <option key={l} value={l}>{l}</option>)}
+            </select>
+            <input className="input" placeholder={ID_FIELD[setOneLabel]}
+              value={setOneId} onChange={e => setSetOneId(e.target.value)} />
+          </div>
+          <PairsEditor pairs={setOnePairs} onChange={setSetOnePairs} />
+          <button className="btn-primary" onClick={() => aplicarSetOne('5.3')}>
+            SET (:{setOneLabel}) — actualizar props
+          </button>
+          <ResultBox result={result['5.3']?.res ?? null} error={result['5.3']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="5.4 — Actualizar 1+ propiedades de múltiples nodos (bulk SET)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            SET masivo sobre los nodos del label seleccionado que cumplan el filtro.
+          </p>
+          <div className="form-grid">
+            <select className="input" value={setBulkLabel}
+              onChange={e => setSetBulkLabel(e.target.value as NodeLabel)}>
+              {NODE_LABELS.map(l => <option key={l} value={l}>{l}</option>)}
+            </select>
+            <input className="input" placeholder="Campo filtro (opcional)"
+              value={setBulkFilterField} onChange={e => setSetBulkFilterField(e.target.value)} />
+            <input className="input" placeholder="Valor filtro (opcional)"
+              value={setBulkFilterValue} onChange={e => setSetBulkFilterValue(e.target.value)} />
+          </div>
+          <PairsEditor pairs={setBulkPairs} onChange={setSetBulkPairs} />
+          <button className="btn-primary" onClick={() => aplicarSetBulk('5.4')}>
+            MATCH (n:{setBulkLabel}) {setBulkFilterField ? `WHERE n.${setBulkFilterField}` : ''} SET … (bulk)
+          </button>
+          <ResultBox result={result['5.4']?.res ?? null} error={result['5.4']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="5.5 — Eliminar 1+ propiedades de 1 nodo (REMOVE)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            REMOVE en un nodo específico (no borra el nodo, solo sus propiedades).
+          </p>
+          <div className="form-grid">
+            <select className="input" value={remOneLabel}
+              onChange={e => setRemOneLabel(e.target.value as NodeLabel)}>
+              {NODE_LABELS.map(l => <option key={l} value={l}>{l}</option>)}
+            </select>
+            <input className="input" placeholder={ID_FIELD[remOneLabel]}
+              value={remOneId} onChange={e => setRemOneId(e.target.value)} />
+          </div>
+          <NamesEditor names={remOneNames} onChange={setRemOneNames} />
+          <button className="btn-danger" onClick={aplicarRemoveOne}>
+            REMOVE (:{remOneLabel}) props
+          </button>
+          <ResultBox result={result['5.5']?.res ?? null} error={result['5.5']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="5.6 — Eliminar 1+ propiedades de múltiples nodos (bulk REMOVE)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            REMOVE masivo. Sin filtro elimina la propiedad en todos los nodos del label.
+          </p>
+          <div className="form-grid">
+            <select className="input" value={remBulkLabel}
+              onChange={e => setRemBulkLabel(e.target.value as NodeLabel)}>
+              {NODE_LABELS.map(l => <option key={l} value={l}>{l}</option>)}
+            </select>
+            <input className="input" placeholder="Campo filtro (opcional)"
+              value={remBulkFilterField} onChange={e => setRemBulkFilterField(e.target.value)} />
+            <input className="input" placeholder="Valor filtro (opcional)"
+              value={remBulkFilterValue} onChange={e => setRemBulkFilterValue(e.target.value)} />
+          </div>
+          <NamesEditor names={remBulkNames} onChange={setRemBulkNames} />
+          <button className="btn-danger" onClick={aplicarRemoveBulk}>
+            MATCH (n:{remBulkLabel}) REMOVE … (bulk)
+          </button>
+          <ResultBox result={result['5.6']?.res ?? null} error={result['5.6']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="6.1 — Crear relación entre 2 nodos existentes (≥3 propiedades)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            CREATE genérico: tipo libre + 3 o más propiedades. Los nodos deben existir.
+          </p>
+          <RelEndpoints value={rel61} onChange={setRel61} />
+          <PairsEditor pairs={rel61Pairs} onChange={setRel61Pairs} />
+          <button className="btn-primary" onClick={crearRelacionGenerica}>
+            CREATE (a:{rel61.fromLabel})-[:{rel61.type}]→(b:{rel61.toLabel})
+          </button>
+          <ResultBox result={result['6.1']?.res ?? null} error={result['6.1']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="7.1 — Agregar 1+ propiedades a 1 relación (SET)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            Si la propiedad no existe en la relación, Cypher la crea.
+          </p>
+          <RelEndpoints value={rel71} onChange={setRel71} />
+          <PairsEditor pairs={rel71Pairs} onChange={setRel71Pairs} />
+          <button className="btn-primary" onClick={() => aplicarRelSetOne('7.1')}>
+            SET [:{rel71.type}] — agregar props
+          </button>
+          <ResultBox result={result['7.1']?.res ?? null} error={result['7.1']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="7.2 — Agregar 1+ propiedades a múltiples relaciones (bulk SET)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            Aplica SET a todas las relaciones del tipo seleccionado que cumplan el filtro.
+          </p>
+          <RelBulkEndpoints value={rel72} onChange={setRel72} />
+          <PairsEditor pairs={rel72Pairs} onChange={setRel72Pairs} />
+          <button className="btn-primary" onClick={() => aplicarRelSetBulk('7.2')}>
+            MATCH ()-[r:{rel72.type}]→() SET … (bulk)
+          </button>
+          <ResultBox result={result['7.2']?.res ?? null} error={result['7.2']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="7.3 — Actualizar 1+ propiedades de 1 relación (SET)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            Sobreescribe propiedades existentes en una relación específica.
+          </p>
+          <RelEndpoints value={rel71} onChange={setRel71} />
+          <PairsEditor pairs={rel71Pairs} onChange={setRel71Pairs} />
+          <button className="btn-primary" onClick={() => aplicarRelSetOne('7.3')}>
+            SET [:{rel71.type}] — actualizar props
+          </button>
+          <ResultBox result={result['7.3']?.res ?? null} error={result['7.3']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="7.4 — Actualizar 1+ propiedades de múltiples relaciones (bulk SET)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            SET masivo sobre todas las relaciones de un tipo con filtro opcional.
+          </p>
+          <RelBulkEndpoints value={rel72} onChange={setRel72} />
+          <PairsEditor pairs={rel72Pairs} onChange={setRel72Pairs} />
+          <button className="btn-primary" onClick={() => aplicarRelSetBulk('7.4')}>
+            MATCH ()-[r:{rel72.type}]→() SET … (bulk)
+          </button>
+          <ResultBox result={result['7.4']?.res ?? null} error={result['7.4']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="7.5 — Eliminar 1+ propiedades de 1 relación (REMOVE)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            Quita propiedades de una relación específica sin eliminar la relación.
+          </p>
+          <RelEndpoints value={rel75} onChange={setRel75} />
+          <NamesEditor names={rel75Names} onChange={setRel75Names} />
+          <button className="btn-danger" onClick={aplicarRelRemoveOne}>
+            REMOVE r.props sobre [:{rel75.type}]
+          </button>
+          <ResultBox result={result['7.5']?.res ?? null} error={result['7.5']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="7.6 — Eliminar 1+ propiedades de múltiples relaciones (bulk REMOVE)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            Quita propiedades en todas las relaciones del tipo seleccionado.
+          </p>
+          <RelBulkEndpoints value={rel76} onChange={setRel76} />
+          <NamesEditor names={rel76Names} onChange={setRel76Names} />
+          <button className="btn-danger" onClick={aplicarRelRemoveBulk}>
+            MATCH ()-[r:{rel76.type}]→() REMOVE … (bulk)
+          </button>
+          <ResultBox result={result['7.6']?.res ?? null} error={result['7.6']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="8.1 — Eliminar 1 nodo (DETACH DELETE)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            Borra un nodo identificado por su id (también remueve sus relaciones).
+          </p>
+          <div className="form-grid">
+            <select className="input" value={del81.label}
+              onChange={e => setDel81(f => ({ ...f, label: e.target.value as NodeLabel }))}>
+              {NODE_LABELS.map(l => <option key={l} value={l}>{l}</option>)}
+            </select>
+            <input className="input" placeholder={ID_FIELD[del81.label]}
+              value={del81.id} onChange={e => setDel81(f => ({ ...f, id: e.target.value }))} />
+          </div>
+          <button className="btn-danger" onClick={eliminarNodoUno}>
+            MATCH (n:{del81.label} {`{${ID_FIELD[del81.label]}}`}) DETACH DELETE n
+          </button>
+          <ResultBox result={result['8.1']?.res ?? null} error={result['8.1']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="8.2 — Eliminar múltiples nodos (bulk DETACH DELETE)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            Elimina todos los nodos del label que cumplan el filtro (sin filtro = todos).
+          </p>
+          <div className="form-grid">
+            <select className="input" value={del82.label}
+              onChange={e => setDel82(f => ({ ...f, label: e.target.value as NodeLabel }))}>
+              {NODE_LABELS.map(l => <option key={l} value={l}>{l}</option>)}
+            </select>
+            <input className="input" placeholder="Campo filtro (opcional)"
+              value={del82.filterField}
+              onChange={e => setDel82(f => ({ ...f, filterField: e.target.value }))} />
+            <input className="input" placeholder="Valor (opcional)"
+              value={del82.filterValue}
+              onChange={e => setDel82(f => ({ ...f, filterValue: e.target.value }))} />
+          </div>
+          <button className="btn-danger" onClick={eliminarNodosBulk}>
+            MATCH (n:{del82.label}) {del82.filterField ? `WHERE n.${del82.filterField}` : ''} DETACH DELETE n
+          </button>
+          <ResultBox result={result['8.2']?.res ?? null} error={result['8.2']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="9.1 — Eliminar 1 relación (DELETE)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            Elimina una sola relación identificada por sus dos extremos y el tipo.
+          </p>
+          <RelEndpoints value={del91} onChange={setDel91} />
+          <button className="btn-danger" onClick={eliminarRelacionUna}>
+            DELETE [:{del91.type}] entre 2 nodos
+          </button>
+          <ResultBox result={result['9.1']?.res ?? null} error={result['9.1']?.err ?? null} />
+        </OpCard>
+
+        <OpCard title="9.2 — Eliminar múltiples relaciones (bulk DELETE)">
+          <p className="text-mute" style={{ fontSize: 12, marginBottom: 4 }}>
+            Elimina todas las relaciones del tipo seleccionado que cumplan el filtro.
+          </p>
+          <RelBulkEndpoints value={del92} onChange={setDel92} />
+          <button className="btn-danger" onClick={eliminarRelacionesBulk}>
+            MATCH ()-[r:{del92.type}]→() {del92.filterField ? `WHERE r.${del92.filterField}` : ''} DELETE r
+          </button>
+          <ResultBox result={result['9.2']?.res ?? null} error={result['9.2']?.err ?? null} />
         </OpCard>
 
         <OpCard title="📄 Carga CSV — Crear nodos">
@@ -494,130 +1138,6 @@ export default function OperacionesPage() {
           </div>
           <button className="btn-primary" onClick={uploadCsvRels}>POST /api/load-csv/rels/</button>
           <ResultBox result={result['csvR']?.res ?? null} error={result['csvR']?.err ?? null} />
-        </OpCard>
-
-        <OpCard title="⑦ Eliminar nodo — simple">
-          <div className="form-grid">
-            <input className="input" placeholder="userId a eliminar" value={delId}
-              onChange={e => setDelId(e.target.value)} />
-          </div>
-          <button className="btn-danger" onClick={eliminarSimple}>DETACH DELETE Usuario</button>
-          <ResultBox result={result['del1']?.res ?? null} error={result['del1']?.err ?? null} />
-        </OpCard>
-
-        <OpCard title="⑧ Eliminar múltiples nodos — bulk DETACH DELETE">
-          <p className="text-mute" style={{ fontSize: 12, marginBottom: 8 }}>
-            Elimina todos los nodos de un label que cumplan un filtro
-          </p>
-          <div className="form-grid">
-            <select className="input" value={bulkDelLabel} onChange={e => setBulkDelLabel(e.target.value)}>
-              {['Empleo', 'Empresa', 'Usuario', 'Publicacion'].map(l => <option key={l} value={l}>{l}</option>)}
-            </select>
-            <input className="input" placeholder="Campo filtro (ej: activo)" value={bulkDelFilterField}
-              onChange={e => setBulkDelFilterField(e.target.value)} />
-            <input className="input" placeholder="Valor (ej: false)" value={bulkDelFilterValue}
-              onChange={e => setBulkDelFilterValue(e.target.value)} />
-          </div>
-          <button className="btn-danger" onClick={eliminarNodosBulk}>
-            MATCH (n:{bulkDelLabel} WHERE n.{bulkDelFilterField || '...'}) DETACH DELETE n
-          </button>
-          <ResultBox result={result['del2']?.res ?? null} error={result['del2']?.err ?? null} />
-        </OpCard>
-
-        <OpCard title="⑨ Actualizar propiedad de 1 relación — DIO_LIKE">
-          <p className="text-mute" style={{ fontSize: 12, marginBottom: 8 }}>
-            SET sobre relación DIO_LIKE entre Usuario y Publicacion
-          </p>
-          <div className="form-grid">
-            <input className="input" placeholder="userId" value={relPatchFromId}
-              onChange={e => setRelPatchFromId(e.target.value)} />
-            <input className="input" placeholder="postId" value={relPatchToId}
-              onChange={e => setRelPatchToId(e.target.value)} />
-            <input className="input" placeholder="Campo (ej: notificado)" value={relPatchField}
-              onChange={e => setRelPatchField(e.target.value)} />
-            <input className="input" placeholder="Valor (ej: true)" value={relPatchValue}
-              onChange={e => setRelPatchValue(e.target.value)} />
-          </div>
-          <button className="btn-primary" onClick={patchRelacion}>SET r.{relPatchField || 'campo'} = valor</button>
-          <ResultBox result={result['rpatch1']?.res ?? null} error={result['rpatch1']?.err ?? null} />
-        </OpCard>
-
-        <OpCard title="⑩ Eliminar propiedad de 1 relación — DIO_LIKE">
-          <p className="text-mute" style={{ fontSize: 12, marginBottom: 8 }}>
-            REMOVE sobre relación DIO_LIKE entre Usuario y Publicacion
-          </p>
-          <div className="form-grid">
-            <input className="input" placeholder="userId" value={relRemoveFromId}
-              onChange={e => setRelRemoveFromId(e.target.value)} />
-            <input className="input" placeholder="postId" value={relRemoveToId}
-              onChange={e => setRelRemoveToId(e.target.value)} />
-            <input className="input" placeholder="Propiedad a eliminar (ej: notificado)" value={relRemoveProp}
-              onChange={e => setRelRemoveProp(e.target.value)} />
-          </div>
-          <button className="btn-danger" onClick={removeRelProp}>REMOVE r.{relRemoveProp || 'prop'}</button>
-          <ResultBox result={result['rrem1']?.res ?? null} error={result['rrem1']?.err ?? null} />
-        </OpCard>
-
-        <OpCard title="⑪ Actualizar props de múltiples relaciones — DIO_LIKE bulk">
-          <p className="text-mute" style={{ fontSize: 12, marginBottom: 8 }}>
-            SET en todas las relaciones DIO_LIKE (Usuario → Publicacion)
-          </p>
-          <div className="form-grid">
-            <input className="input" placeholder="Campo (ej: notificado)" value={relBulkPatchField}
-              onChange={e => setRelBulkPatchField(e.target.value)} />
-            <input className="input" placeholder="Valor (ej: true)" value={relBulkPatchValue}
-              onChange={e => setRelBulkPatchValue(e.target.value)} />
-          </div>
-          <button className="btn-primary" onClick={bulkPatchRelaciones}>
-            MATCH ()-[r:DIO_LIKE]-&gt;() SET r.{relBulkPatchField || 'campo'}
-          </button>
-          <ResultBox result={result['rbulk']?.res ?? null} error={result['rbulk']?.err ?? null} />
-        </OpCard>
-
-        <OpCard title="⑫ Eliminar 1 relación — DIO_LIKE">
-          <p className="text-mute" style={{ fontSize: 12, marginBottom: 8 }}>
-            DELETE relación DIO_LIKE entre un Usuario y una Publicacion específica
-          </p>
-          <div className="form-grid">
-            <input className="input" placeholder="userId" value={relDelFromId}
-              onChange={e => setRelDelFromId(e.target.value)} />
-            <input className="input" placeholder="postId" value={relDelToId}
-              onChange={e => setRelDelToId(e.target.value)} />
-          </div>
-          <button className="btn-danger" onClick={eliminarRelacion}>DELETE [:DIO_LIKE]</button>
-          <ResultBox result={result['rdel1']?.res ?? null} error={result['rdel1']?.err ?? null} />
-        </OpCard>
-
-        <OpCard title="⑬ Eliminar múltiples relaciones — bulk DELETE">
-          <p className="text-mute" style={{ fontSize: 12, marginBottom: 8 }}>
-            DELETE todas las relaciones de un tipo con filtro opcional en sus props
-          </p>
-          <div className="form-grid">
-            <select className="input" value={relBulkDelType} onChange={e => setRelBulkDelType(e.target.value)}>
-              {['COMENTO', 'DIO_LIKE', 'COMPARTIO', 'SIGUE_A'].map(t => <option key={t} value={t}>{t}</option>)}
-            </select>
-            <input className="input" placeholder="Campo filtro (ej: editado)" value={relBulkDelFilterField}
-              onChange={e => setRelBulkDelFilterField(e.target.value)} />
-            <input className="input" placeholder="Valor (ej: false)" value={relBulkDelFilterValue}
-              onChange={e => setRelBulkDelFilterValue(e.target.value)} />
-          </div>
-          <p className="text-mute" style={{ fontSize: 11 }}>
-            Nota: COMENTO y DIO_LIKE/COMPARTIO van de Usuario→Publicacion; SIGUE_A va de Usuario→Empresa
-          </p>
-          <button className="btn-danger" onClick={eliminarRelacionesBulk}>
-            MATCH ()-[r:{relBulkDelType}]-&gt;() {relBulkDelFilterField ? `WHERE r.${relBulkDelFilterField}` : ''} DELETE r
-          </button>
-          <ResultBox result={result['rdel2']?.res ?? null} error={result['rdel2']?.err ?? null} />
-        </OpCard>
-
-        <OpCard title="⑭ Eliminar props de múltiples relaciones — SIGUE_A bulk REMOVE">
-          <p className="text-mute" style={{ fontSize: 12, marginBottom: 8 }}>
-            REMOVE prop "motivo" de todas las relaciones SIGUE_A (Usuario → Empresa)
-          </p>
-          <button className="btn-danger" onClick={bulkRemoveRelProp}>
-            MATCH ()-[r:SIGUE_A]-&gt;() REMOVE r.motivo
-          </button>
-          <ResultBox result={result['rremb']?.res ?? null} error={result['rremb']?.err ?? null} />
         </OpCard>
       </div>
     </div>
