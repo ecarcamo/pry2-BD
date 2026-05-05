@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import { useStore } from '../store/StoreContext'
 import { usuariosApi } from '../api/usuarios'
 import { empresasApi } from '../api/empresas'
@@ -9,6 +9,74 @@ import { consultasApi } from '../api/consultas'
 import { extractNodes, nodeId } from '../lib/format'
 import { CheckIcon } from '../lib/icons'
 import type { ApiResult, Empresa } from '../types/api'
+
+type NodeShape = { elementId: string; labels: string[]; props: Record<string, unknown> }
+type RelShape = { elementId: string; type: string; properties: Record<string, unknown> }
+
+function isNode(v: unknown): v is NodeShape {
+  return !!v && typeof v === 'object'
+    && 'elementId' in v && 'labels' in v && 'props' in v
+}
+
+function isRel(v: unknown): v is RelShape {
+  return !!v && typeof v === 'object'
+    && 'elementId' in v && 'type' in v && 'properties' in v
+}
+
+function renderScalar(v: unknown): ReactNode {
+  if (v === null || v === undefined) return <span className="cell-null">null</span>
+  if (typeof v === 'boolean') return <span className={v ? 'cell-true' : 'cell-false'}>{String(v)}</span>
+  if (typeof v === 'number') return <span className="cell-num">{v}</span>
+  if (Array.isArray(v)) {
+    if (v.length === 0) return <span className="cell-arr-empty">[ ]</span>
+    return <span className="cell-arr">{v.map(x => String(x)).join(', ')}</span>
+  }
+  if (typeof v === 'object') return <code className="cell-json">{JSON.stringify(v)}</code>
+  return <span>{String(v)}</span>
+}
+
+function PropsList({ props }: { props: Record<string, unknown> }) {
+  const entries = Object.entries(props)
+  if (entries.length === 0) return <span className="text-mute">(sin propiedades)</span>
+  return (
+    <dl className="props-list">
+      {entries.map(([k, v]) => (
+        <div key={k} className="prop-row-kv">
+          <dt>{k}</dt>
+          <dd>{renderScalar(v)}</dd>
+        </div>
+      ))}
+    </dl>
+  )
+}
+
+function NodeCell({ node }: { node: NodeShape }) {
+  return (
+    <div className="node-cell">
+      <div className="node-labels">
+        {node.labels.map(l => <span key={l} className="label-badge">:{l}</span>)}
+      </div>
+      <PropsList props={node.props} />
+    </div>
+  )
+}
+
+function RelCell({ rel }: { rel: RelShape }) {
+  return (
+    <div className="node-cell">
+      <div className="node-labels">
+        <span className="rel-badge">[:{rel.type}]</span>
+      </div>
+      <PropsList props={rel.properties} />
+    </div>
+  )
+}
+
+function ResultCell({ cell }: { cell: unknown }) {
+  if (isNode(cell)) return <NodeCell node={cell} />
+  if (isRel(cell)) return <RelCell rel={cell} />
+  return <>{renderScalar(cell)}</>
+}
 
 function ResultBox({ result, error }: { result: ApiResult | null; error: string | null }) {
   if (error) return <div className="result-error">{error}</div>
@@ -33,12 +101,17 @@ function ResultBox({ result, error }: { result: ApiResult | null; error: string 
               {result.rows.slice(0, 5).map((row, i) => (
                 <tr key={i}>
                   {row.map((cell, ci) => (
-                    <td key={ci}>{typeof cell === 'object' ? JSON.stringify(cell) : String(cell ?? '')}</td>
+                    <td key={ci}><ResultCell cell={cell} /></td>
                   ))}
                 </tr>
               ))}
             </tbody>
           </table>
+          {result.rows.length > 5 && (
+            <p className="text-mute" style={{ fontSize: 11, marginTop: 4 }}>
+              … y {result.rows.length - 5} fila(s) más (mostrando 5 de {result.rows.length})
+            </p>
+          )}
         </div>
       )}
     </div>
