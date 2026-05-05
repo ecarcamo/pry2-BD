@@ -4,7 +4,7 @@ import { extractNodes } from '../lib/format'
 import type { Usuario } from '../types/api'
 
 type Role = 'Usuario' | 'Reclutador' | 'Admin'
-type Tab = 'feed' | 'red' | 'empleos' | 'empresas' | 'perfil' | 'ops' | 'consultas'
+type Tab = 'feed' | 'red' | 'empleos' | 'empresas' | 'perfil' | 'ops' | 'consultas' | 'datascience'
 
 export interface Toast {
   id: string

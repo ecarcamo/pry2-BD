@@ -12,6 +12,7 @@ import EmpresasPage from './pages/EmpresasPage'
 import PerfilPage from './pages/PerfilPage'
 import OperacionesPage from './pages/OperacionesPage'
 import ConsultasPage from './pages/ConsultasPage'
+import DataSciencePage from './pages/DataSciencePage'
 
 function Shell() {
   const { tab } = useStore()
@@ -24,6 +25,7 @@ function Shell() {
     perfil: <PerfilPage />,
     ops: <OperacionesPage />,
     consultas: <ConsultasPage />,
+    datascience: <DataSciencePage />,
   }
 
   return (

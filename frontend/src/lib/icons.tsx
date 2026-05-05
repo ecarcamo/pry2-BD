@@ -31,3 +31,6 @@ export const RefreshIcon = icon('M23 4v6h-6 M1 20v-6h6 M3.51 9a9 9 0 0 1 14.85-3
 export const BarChartIcon = icon('M12 20V10 M18 20V4 M6 20v-4')
 export const ZapIcon = icon('M13 2L3 14h9l-1 8 10-12h-9l1-8z')
 export const GlobeIcon = icon('M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z M2 12h20 M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z')
+export const ActivityIcon = icon('M22 12h-4l-3 9L9 3l-3 9H2')
+export const AwardIcon = icon('M12 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14z M8.21 13.89L7 23l5-3 5 3-1.21-9.12')
+export const RouteIcon = icon('M3 11l19-9-9 19-2-8-8-2z')

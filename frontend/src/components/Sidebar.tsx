@@ -1,5 +1,5 @@
 import { useStore } from '../store/StoreContext'
-import { HomeIcon, NetworkIcon, BriefcaseIcon, BuildingIcon, UserIcon, CheckIcon, CodeIcon, GraphIcon, BarChartIcon } from '../lib/icons'
+import { HomeIcon, NetworkIcon, BriefcaseIcon, BuildingIcon, UserIcon, CheckIcon, CodeIcon, GraphIcon, BarChartIcon, ActivityIcon } from '../lib/icons'
 import type { ReactNode } from 'react'
 
 interface NavItem { id: string; icon: ReactNode; label: string }
@@ -41,6 +41,12 @@ export default function Sidebar() {
         <span className="nav-bar" />
         <span className="ic"><BarChartIcon size={18} /></span>
         <span>Consultas Cypher</span>
+      </button>
+
+      <button className={`nav-item ${tab === 'datascience' ? 'active' : ''}`} onClick={() => setTab('datascience')}>
+        <span className="nav-bar" />
+        <span className="ic"><ActivityIcon size={18} /></span>
+        <span>Data Science</span>
       </button>
 
       <button className="nav-item" onClick={() => setDrawer(true)}>
