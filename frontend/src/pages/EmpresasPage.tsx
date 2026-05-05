@@ -42,6 +42,13 @@ export default function EmpresasPage() {
 
   useEffect(() => { load() }, [])
 
+  useEffect(() => {
+    if (myId)
+      relacionesApi.misRelaciones(myId, 'SIGUE_A', 'empresa_id')
+        .then(r => setFollowed(new Set(r.ids)))
+        .catch(() => {})
+  }, [myId])
+
   async function handleSeguir(e: Empresa) {
     if (!myId) return
     const eid = nodeId(e.props)

@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useStore } from '../store/StoreContext'
 import { empleosApi } from '../api/empleos'
+import { empresasApi } from '../api/empresas'
 import { relacionesApi } from '../api/relaciones'
 import { extractNodes, nodeId, fmtDate } from '../lib/format'
-import type { Empleo } from '../types/api'
+import type { Empleo, Empresa } from '../types/api'
 import { BriefcaseIcon, PlusIcon } from '../lib/icons'
 
 const MODALIDADES = ['remoto', 'presencial', 'híbrido']
@@ -16,8 +17,9 @@ export default function EmpleosPage() {
   const [applied, setApplied] = useState<Set<string>>(new Set())
   const [form, setForm] = useState({
     titulo: '', salario_min: '', salario_max: '', modalidad: 'remoto',
-    descripcion: '', ubicacion: '',
+    descripcion: '', ubicacion: '', empresaId: '',
   })
+  const [empresas, setEmpresas] = useState<Empresa[]>([])
 
   // filtro
   const [filtroModal, setFiltroModal] = useState('')
@@ -49,6 +51,18 @@ export default function EmpleosPage() {
 
   useEffect(() => { load() }, [filtroModal, filtroMin])
 
+  useEffect(() => {
+    if (myId)
+      relacionesApi.misRelaciones(myId, 'POSTULO_A', 'empleo_id')
+        .then(r => setApplied(new Set(r.ids)))
+        .catch(() => {})
+  }, [myId])
+
+  useEffect(() => {
+    if (isReclutador)
+      empresasApi.list({ limit: '200' }).then(res => setEmpresas(extractNodes(res) as Empresa[])).catch(() => {})
+  }, [isReclutador])
+
   async function handlePostular(e: Empleo) {
     if (!myId) return
     const eid = nodeId(e.props)
@@ -63,8 +77,10 @@ export default function EmpleosPage() {
 
   async function handleCrear() {
     if (!form.titulo) { showToast('El título es obligatorio', 'err'); return }
+    if (!form.empresaId) { showToast('Debes seleccionar una empresa', 'err'); return }
     try {
       await empleosApi.create({
+        empresaId: form.empresaId,
         titulo: form.titulo,
         salario_min: parseFloat(form.salario_min) || 0,
         salario_max: parseFloat(form.salario_max) || 0,
@@ -74,7 +90,7 @@ export default function EmpleosPage() {
       })
       showToast('Vacante publicada', 'ok')
       setShowForm(false)
-      setForm({ titulo: '', salario_min: '', salario_max: '', modalidad: 'remoto', descripcion: '', ubicacion: '' })
+      setForm({ titulo: '', salario_min: '', salario_max: '', modalidad: 'remoto', descripcion: '', ubicacion: '', empresaId: '' })
       load()
     } catch (err) {
       showToast(`Error: ${err instanceof Error ? err.message : err}`, 'err')
@@ -151,6 +167,14 @@ export default function EmpleosPage() {
             <select className="input" value={form.modalidad}
               onChange={e => setForm(f => ({ ...f, modalidad: e.target.value }))}>
               {MODALIDADES.map(m => <option key={m} value={m}>{m}</option>)}
+            </select>
+            <select className="input" style={{ gridColumn: '1 / -1' }} value={form.empresaId}
+              onChange={e => setForm(f => ({ ...f, empresaId: e.target.value }))}>
+              <option value="">Seleccionar empresa *</option>
+              {empresas.map(emp => {
+                const id = nodeId(emp.props)
+                return <option key={id} value={id}>{emp.props.nombre}</option>
+              })}
             </select>
             <input className="input" placeholder="Salario mínimo (USD)" type="number" value={form.salario_min}
               onChange={e => setForm(f => ({ ...f, salario_min: e.target.value }))} />

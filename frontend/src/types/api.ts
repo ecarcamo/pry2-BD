@@ -43,6 +43,8 @@ export interface Publicacion {
     likes_count?: number
     tags?: string[]
     es_oferta?: boolean
+    autor_nombre?: string
+    autor_id?: string
   }
 }
 

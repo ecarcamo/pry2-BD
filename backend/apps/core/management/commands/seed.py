@@ -13,7 +13,7 @@ from pathlib import Path
 from django.conf import settings
 from django.core.management.base import BaseCommand
 
-from apps.core.lib.db import close_driver, run_write
+from apps.core.lib.db import close_driver, run_auto, run_write
 
 CSV_DIR = Path(settings.BASE_DIR).parent / 'dataGenerator' / 'neo4j_csv'
 GENERATOR = Path(settings.BASE_DIR).parent / 'dataGenerator' / 'generate_neo4j_csv.py'
@@ -29,11 +29,12 @@ def _read_csv(name):
         return list(csv.DictReader(f))
 
 
-def _unwind_write(cypher_tpl, rows, batch=BATCH, stdout=None):
+def _unwind_write(cypher_tpl, rows, batch=BATCH, stdout=None, auto=False):
+    runner = run_auto if auto else run_write
     total = 0
     for i in range(0, len(rows), batch):
         chunk = rows[i:i + batch]
-        run_write(cypher_tpl, {'rows': chunk})
+        runner(cypher_tpl, {'rows': chunk})
         total += len(chunk)
     if stdout:
         stdout.write(f'  {total} filas procesadas')
@@ -66,29 +67,34 @@ class Command(BaseCommand):
             _unwind_write(
                 """
 UNWIND $rows AS row
-CALL {
-  WITH row
-  CREATE (u:Usuario {
-    usuario_id:        row.usuario_id,
-    nombre:            row.nombre,
-    email:             row.email,
-    titular:           row.titular,
-    habilidades:       split(row.habilidades, ';'),
-    abierto_a_trabajo: row.abierto_a_trabajo = 'true',
-    fecha_registro:    date(row.fecha_registro),
-    conexiones_count:  toInteger(row.conexiones_count)
-  })
-  WITH u, row WHERE row.is_admin = 'true'
-  SET u:Admin,
-      u.nivel_acceso     = row.nivel_acceso,
-      u.puede_moderar    = row.puede_moderar = 'true',
-      u.fecha_asignacion = date(row.fecha_asignacion),
-      u.asignado_por     = row.asignado_por,
-      u.activo           = row.admin_activo = 'true'
-} IN TRANSACTIONS OF 500 ROWS
+CREATE (u:Usuario {
+  usuario_id:        row.usuario_id,
+  nombre:            row.nombre,
+  email:             row.email,
+  titular:           row.titular,
+  habilidades:       split(row.habilidades, ';'),
+  abierto_a_trabajo: row.abierto_a_trabajo = 'true',
+  fecha_registro:    date(row.fecha_registro),
+  conexiones_count:  toInteger(row.conexiones_count)
+})
 """,
                 rows, stdout=self.stdout,
             )
+            admin_rows = [r for r in rows if r.get('is_admin') == 'true']
+            if admin_rows:
+                _unwind_write(
+                    """
+UNWIND $rows AS row
+MATCH (u:Usuario {usuario_id: row.usuario_id})
+SET u:Admin,
+    u.nivel_acceso     = row.nivel_acceso,
+    u.puede_moderar    = row.puede_moderar = 'true',
+    u.fecha_asignacion = date(row.fecha_asignacion),
+    u.asignado_por     = row.asignado_por,
+    u.activo           = row.admin_activo = 'true'
+""",
+                    admin_rows, stdout=self.stdout,
+                )
 
             self.stdout.write('Cargando Empresas...')
             rows = _read_csv('empresas.csv')
@@ -155,22 +161,6 @@ CREATE (:Educacion {
   grado:        row.grado,
   pais:         row.pais,
   acreditada:   row.acreditada = 'true'
-})
-""",
-                rows, stdout=self.stdout,
-            )
-
-            self.stdout.write('Cargando ExperienciasLaborales...')
-            rows = _read_csv('experiencias.csv')
-            _unwind_write(
-                """
-UNWIND $rows AS row
-CREATE (:ExperienciaLaboral {
-  exp_id:      row.exp_id,
-  cargo:       row.cargo,
-  salario:     toFloat(row.salario),
-  descripcion: row.descripcion,
-  activo:      row.activo = 'true'
 })
 """,
                 rows, stdout=self.stdout,
@@ -312,32 +302,17 @@ SET r.fecha_seguimiento = date(row.fecha_seguimiento),
                 rows, stdout=self.stdout,
             )
 
-            self.stdout.write('Cargando EXPERIENCIA_EN...')
-            rows = _read_csv('rel_experiencia_en.csv')
+            self.stdout.write('Cargando ESTUVO_EN...')
+            rows = _read_csv('rel_estar_en.csv')
             _unwind_write(
                 """
 UNWIND $rows AS row
-MATCH (exp:ExperienciaLaboral {exp_id:     row.exp_id})
-MATCH (e:Empresa              {empresa_id: row.empresa_id})
-MERGE (exp)-[r:EXPERIENCIA_EN]->(e)
-SET r.departamento  = row.departamento,
-    r.tipo_contrato = row.tipo_contrato,
-    r.modalidad     = row.modalidad
-""",
-                rows, stdout=self.stdout,
-            )
-
-            self.stdout.write('Cargando TRABAJO_EN...')
-            rows = _read_csv('rel_trabajo_en.csv')
-            _unwind_write(
-                """
-UNWIND $rows AS row
-MATCH (u:Usuario              {usuario_id: row.usuario_id})
-MATCH (exp:ExperienciaLaboral {exp_id:     row.exp_id})
-MERGE (u)-[r:TRABAJO_EN]->(exp)
-SET r.fecha_inicio = date(row.fecha_inicio),
-    r.fecha_fin    = CASE WHEN row.fecha_fin <> '' THEN date(row.fecha_fin) ELSE null END,
-    r.verificado   = row.verificado = 'true'
+MATCH (u:Usuario {usuario_id: row.usuario_id})
+MATCH (e:Empresa {empresa_id: row.empresa_id})
+MERGE (u)-[r:ESTUVO_EN]->(e)
+SET r.cargo       = row.cargo,
+    r.fecha_inicio = date(row.fecha_inicio),
+    r.actual       = row.actual = 'true'
 """,
                 rows, stdout=self.stdout,
             )

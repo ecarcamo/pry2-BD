@@ -1,11 +1,9 @@
-import { useState } from 'react'
 import { useStore } from '../store/StoreContext'
 import { adminApi } from '../api/admin'
 import { CodeIcon, RefreshIcon } from '../lib/icons'
 
 export default function Footer() {
-  const { setDrawer, showToast } = useStore()
-  const [seeding, setSeeding] = useState(false)
+  const { setDrawer, showToast, seeding, setSeeding } = useStore()
 
   async function handleSeed() {
     if (!confirm('¿Borrar todos los datos y recargar desde los CSVs? Esto puede tardar 2-3 minutos.')) return

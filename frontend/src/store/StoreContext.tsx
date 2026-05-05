@@ -33,6 +33,8 @@ interface StoreCtx {
   setDrawer: (v: boolean) => void
   graphOpen: boolean
   setGraphOpen: (v: boolean) => void
+  seeding: boolean
+  setSeeding: (v: boolean) => void
   toasts: Toast[]
   showToast: (msg: string, kind?: Toast['kind']) => void
   log: LogEntry[]
@@ -54,6 +56,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   const [meLoading, setMeLoading] = useState(true)
   const [drawer, setDrawer] = useState(false)
   const [graphOpen, setGraphOpen] = useState(false)
+  const [seeding, setSeeding] = useState(false)
   const [toasts, setToasts] = useState<Toast[]>([])
   const [log, setLog] = useState<LogEntry[]>([])
   const toastTimers = useRef<Map<string, ReturnType<typeof setTimeout>>>(new Map())
@@ -92,8 +95,9 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   const value = useMemo<StoreCtx>(() => ({
     role, setRole, tab, setTab, me, meLoading,
     drawer, setDrawer, graphOpen, setGraphOpen,
+    seeding, setSeeding,
     toasts, showToast, log, addLog,
-  }), [role, tab, me, meLoading, drawer, graphOpen, toasts, log, showToast, addLog])
+  }), [role, tab, me, meLoading, drawer, graphOpen, seeding, toasts, log, showToast, addLog])
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>
 }

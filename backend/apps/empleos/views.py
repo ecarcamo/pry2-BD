@@ -1,4 +1,4 @@
-"""Endpoints REST para `:Empleo`. POST crea Empleo + :OFERTA desde la empresa."""
+"""Endpoints REST para `:Empleo`. ID canónico: `empleo_id`. POST crea Empleo + :OFERTA."""
 import uuid
 from datetime import date
 
@@ -20,6 +20,14 @@ def _today():
     return date.today().isoformat()
 
 
+def _pick_empleo_id(body, *, default=None):
+    return body.get('empleo_id') or body.get('empleoId') or default
+
+
+def _pick_empresa_id(body, *, default=None):
+    return body.get('empresa_id') or body.get('empresaId') or default
+
+
 @api_view(['GET', 'POST'])
 def collection(request):
     if request.method == 'POST':
@@ -32,16 +40,22 @@ def detail(request, empleo_id):
     if request.method == 'PATCH':
         return _actualizar(request, empleo_id)
     if request.method == 'DELETE':
-        run_write("MATCH (j:Empleo {empleoId: $id}) DETACH DELETE j", {'id': empleo_id})
+        run_write("MATCH (j:Empleo {empleo_id: $id}) DETACH DELETE j", {'id': empleo_id})
         return Response(status=status.HTTP_204_NO_CONTENT)
     return _obtener(empleo_id)
 
 
 def _crear(request):
     body = request.data or {}
-    require_fields(body, ['empresaId', 'titulo'])
+    empresa_id = _pick_empresa_id(body)
+    if not empresa_id:
+        return Response(
+            {'detail': 'empresa_id (o empresaId) es requerido'},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
+    require_fields(body, ['titulo'])
     props = {
-        'empleoId': body.get('empleoId') or str(uuid.uuid4()),
+        'empleo_id': _pick_empleo_id(body, default=str(uuid.uuid4())),
         'titulo': body['titulo'],
         'salario_min': float(body.get('salario_min', 0) or 0),
         'salario_max': float(body.get('salario_max', 0) or 0),
@@ -56,16 +70,18 @@ def _crear(request):
         'remunerado': bool(rel_props_in.get('remunerado', True)),
     }
     cypher = (
-        "MATCH (emp:Empresa {empresaId: $empresaId}) "
+        "MATCH (emp:Empresa {empresa_id: $empresa_id}) "
         "CREATE (j:Empleo $props) "
         "CREATE (emp)-[r:OFERTA $relProps]->(j) "
         "RETURN emp, j, r"
     )
     result = run_write(cypher, {
-        'empresaId': body['empresaId'],
+        'empresa_id': empresa_id,
         'props': props,
         'relProps': rel_props,
     })
+    if not result.get('rows'):
+        return Response({'detail': f"Empresa '{empresa_id}' no encontrada"}, status=status.HTTP_404_NOT_FOUND)
     return Response(envelope(result, cypher), status=status.HTTP_201_CREATED)
 
 
@@ -98,15 +114,15 @@ def _listar(request):
 
 
 def _obtener(empleo_id):
-    cypher = "MATCH (j:Empleo {empleoId: $empleoId}) RETURN j"
-    result = run_read(cypher, {'empleoId': empleo_id})
+    cypher = "MATCH (j:Empleo {empleo_id: $empleo_id}) RETURN j"
+    result = run_read(cypher, {'empleo_id': empleo_id})
     return Response(envelope(result, cypher))
 
 
 def _actualizar(request, empleo_id):
     body = request.data or {}
     result, cypher = patch_props(
-        'Empleo', 'j', 'empleoId', empleo_id,
+        'Empleo', 'j', 'empleo_id', empleo_id,
         body.get('set') or {}, body.get('remove') or [],
     )
     if result is None:

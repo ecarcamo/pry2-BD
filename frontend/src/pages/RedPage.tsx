@@ -34,6 +34,13 @@ export default function RedPage() {
 
   useEffect(() => { load() }, [])
 
+  useEffect(() => {
+    if (myId)
+      relacionesApi.misRelaciones(myId, 'CONECTADO_CON', 'usuario_id')
+        .then(r => setConnected(new Set(r.ids)))
+        .catch(() => {})
+  }, [myId])
+
   async function handleConectar(u: Usuario) {
     const uid = nodeId(u.props)
     if (!myId || !uid || uid === myId || connected.has(uid) || pending.has(uid)) return

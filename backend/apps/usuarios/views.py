@@ -8,6 +8,9 @@ Convención DRF — un endpoint por recurso, métodos HTTP para distinguir verbo
   DELETE /usuarios/<id>/       -> borra
   POST   /usuarios/admin/      -> crea con :Usuario:Admin (rúbrica 2)
   POST   /usuarios/bulk-update -> patch masivo (rúbrica 5, varios nodos)
+
+Convención de IDs: la propiedad canónica es `usuario_id` (igual al seed/CSV).
+Los endpoints también aceptan `userId` en el body por compatibilidad con clientes legacy.
 """
 import uuid
 from datetime import date
@@ -36,6 +39,11 @@ def _envelope(result, cypher):
     return {**result, 'meta': {'cypher': cypher.strip()}}
 
 
+def _pick_id(body, *, default=None):
+    """Acepta `usuario_id` o `userId` en el payload (compat frontend)."""
+    return body.get('usuario_id') or body.get('userId') or default
+
+
 @api_view(['GET', 'POST'])
 def collection(request):
     if request.method == 'POST':
@@ -56,7 +64,7 @@ def _crear(request):
     body = request.data or {}
     require_fields(body, ['nombre', 'email'])
     props = {
-        'userId': body.get('userId') or str(uuid.uuid4()),
+        'usuario_id': _pick_id(body, default=str(uuid.uuid4())),
         'nombre': body['nombre'],
         'email': body['email'],
         'titular': body.get('titular', ''),
@@ -75,7 +83,7 @@ def crear_admin(request):
     body = request.data or {}
     require_fields(body, ['nombre', 'email'])
     props = {
-        'userId': body.get('userId') or str(uuid.uuid4()),
+        'usuario_id': _pick_id(body, default=str(uuid.uuid4())),
         'nombre': body['nombre'],
         'email': body['email'],
         'titular': body.get('titular', ''),
@@ -121,8 +129,8 @@ def _listar(request):
 
 
 def _obtener(user_id):
-    cypher = "MATCH (u:Usuario {userId: $userId}) RETURN u"
-    result = run_read(cypher, {'userId': user_id})
+    cypher = "MATCH (u:Usuario {usuario_id: $usuario_id}) RETURN u"
+    result = run_read(cypher, {'usuario_id': user_id})
     return Response(_envelope(result, cypher))
 
 
@@ -134,8 +142,8 @@ def _actualizar(request, user_id):
     rem_cl = build_remove_clause(remove_list, alias='u')
     if not set_cl and not rem_cl:
         return Response({'detail': 'Nada que actualizar'}, status=status.HTTP_400_BAD_REQUEST)
-    cypher = f"MATCH (u:Usuario {{userId: $userId}}) {set_cl} {rem_cl} RETURN u"
-    result = run_write(cypher, {'userId': user_id, 'set': set_dict})
+    cypher = f"MATCH (u:Usuario {{usuario_id: $usuario_id}}) {set_cl} {rem_cl} RETURN u"
+    result = run_write(cypher, {'usuario_id': user_id, 'set': set_dict})
     return Response(_envelope(result, cypher))
 
 
@@ -156,6 +164,6 @@ def actualizar_bulk(request):
 
 
 def _eliminar(user_id):
-    cypher = "MATCH (u:Usuario {userId: $userId}) DETACH DELETE u"
-    run_write(cypher, {'userId': user_id})
+    cypher = "MATCH (u:Usuario {usuario_id: $usuario_id}) DETACH DELETE u"
+    run_write(cypher, {'usuario_id': user_id})
     return Response(status=status.HTTP_204_NO_CONTENT)

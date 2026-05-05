@@ -1,7 +1,7 @@
 {
   "info": {
     "name": "NeoLab · API Neo4j (Django + DRF)",
-    "description": "Colección completa de endpoints del backend NeoLab (Django + DRF + neomodel + Neo4j Aura). Todas las rutas viven bajo /api/ y usan slash final.",
+    "description": "Colección completa de endpoints del backend NeoLab (Django + DRF + neo4j-python-driver + Neo4j Aura). Todas las rutas viven bajo /api/ y usan slash final. Convención de IDs: snake_case (`usuario_id`, `empresa_id`, `publicacion_id`, `empleo_id`, `educacion_id`, `experiencia_id`). Los endpoints también aceptan los nombres camelCase legacy.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
@@ -10,22 +10,31 @@
   "item": [
 
     {
-      "name": "Salud",
+      "name": "Salud y Admin",
       "item": [
         {
           "name": "GET /ping/",
+          "request": { "method": "GET", "url": "{{base}}/ping/" }
+        },
+        {
+          "name": "POST /admin/seed/ — recargar seed",
           "request": {
-            "method": "GET",
-            "url": "{{base}}/ping/"
+            "method": "POST",
+            "url": "{{base}}/admin/seed/",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{}" }
           }
         },
         {
-          "name": "POST /reset/ — restaurar seed",
+          "name": "GET /grafo/sample/ — sample para visualizar",
           "request": {
-            "method": "POST",
-            "url": "{{base}}/reset/",
-            "header": [{ "key": "Content-Type", "value": "application/json" }],
-            "body": { "mode": "raw", "raw": "{}" }
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/grafo/sample/?limit=150",
+              "host": ["{{base}}"],
+              "path": ["grafo", "sample", ""],
+              "query": [{ "key": "limit", "value": "150" }]
+            }
           }
         }
       ]
@@ -35,7 +44,7 @@
       "name": "Usuarios",
       "item": [
         {
-          "name": "POST /usuarios/ — 1 label",
+          "name": "POST /usuarios/ — crear (1 label, ≥5 props)",
           "request": {
             "method": "POST",
             "url": "{{base}}/usuarios/",
@@ -47,7 +56,7 @@
           }
         },
         {
-          "name": "POST /usuarios/admin/ — 2 labels",
+          "name": "POST /usuarios/admin/ — crear con 2 labels (Usuario:Admin)",
           "request": {
             "method": "POST",
             "url": "{{base}}/usuarios/admin/",
@@ -60,13 +69,10 @@
         },
         {
           "name": "GET /usuarios/ — todos",
-          "request": {
-            "method": "GET",
-            "url": "{{base}}/usuarios/"
-          }
+          "request": { "method": "GET", "url": "{{base}}/usuarios/" }
         },
         {
-          "name": "GET /usuarios/ — filtros",
+          "name": "GET /usuarios/ — con filtros (consulta agregada)",
           "request": {
             "method": "GET",
             "url": {
@@ -83,17 +89,14 @@
           }
         },
         {
-          "name": "GET /usuarios/:userId/",
-          "request": {
-            "method": "GET",
-            "url": "{{base}}/usuarios/n1/"
-          }
+          "name": "GET /usuarios/:usuario_id/ — detalle",
+          "request": { "method": "GET", "url": "{{base}}/usuarios/u0/" }
         },
         {
-          "name": "PATCH /usuarios/:userId/ — 1 nodo",
+          "name": "PATCH /usuarios/:usuario_id/ — agregar/actualizar/quitar props (1 nodo)",
           "request": {
             "method": "PATCH",
-            "url": "{{base}}/usuarios/n1/",
+            "url": "{{base}}/usuarios/u0/",
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
@@ -102,7 +105,19 @@
           }
         },
         {
-          "name": "POST /usuarios/bulk-update/ — múltiples nodos",
+          "name": "PATCH /usuarios/:usuario_id/ — eliminar props (1 nodo)",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base}}/usuarios/u0/",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"set\": {},\n  \"remove\": [\"telefono\", \"pais\"]\n}"
+            }
+          }
+        },
+        {
+          "name": "POST /usuarios/bulk-update/ — patch masivo (varios nodos)",
           "request": {
             "method": "POST",
             "url": "{{base}}/usuarios/bulk-update/",
@@ -114,11 +129,20 @@
           }
         },
         {
-          "name": "DELETE /usuarios/:userId/",
+          "name": "POST /usuarios/bulk-update/ — eliminar prop a varios",
           "request": {
-            "method": "DELETE",
-            "url": "{{base}}/usuarios/n1/"
+            "method": "POST",
+            "url": "{{base}}/usuarios/bulk-update/",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filter\": { \"abierto_a_trabajo\": true },\n  \"set\": {},\n  \"remove\": [\"disponible_inmediatamente\"]\n}"
+            }
           }
+        },
+        {
+          "name": "DELETE /usuarios/:usuario_id/ — eliminar 1 nodo",
+          "request": { "method": "DELETE", "url": "{{base}}/usuarios/u-test-id/" }
         }
       ]
     },
@@ -127,7 +151,7 @@
       "name": "Empresas",
       "item": [
         {
-          "name": "POST /empresas/ — ≥5 props",
+          "name": "POST /empresas/ — crear (≥5 props)",
           "request": {
             "method": "POST",
             "url": "{{base}}/empresas/",
@@ -140,39 +164,32 @@
         },
         {
           "name": "GET /empresas/ — todas",
-          "request": {
-            "method": "GET",
-            "url": "{{base}}/empresas/"
-          }
+          "request": { "method": "GET", "url": "{{base}}/empresas/" }
         },
         {
           "name": "GET /empresas/ — filtros",
           "request": {
             "method": "GET",
             "url": {
-              "raw": "{{base}}/empresas/?verificada=true&pais=Guatemala&limit=10",
+              "raw": "{{base}}/empresas/?verificada=true&limit=10",
               "host": ["{{base}}"],
               "path": ["empresas", ""],
               "query": [
                 { "key": "verificada", "value": "true" },
-                { "key": "pais", "value": "Guatemala" },
                 { "key": "limit", "value": "10" }
               ]
             }
           }
         },
         {
-          "name": "GET /empresas/:empresaId/",
-          "request": {
-            "method": "GET",
-            "url": "{{base}}/empresas/n7/"
-          }
+          "name": "GET /empresas/:empresa_id/",
+          "request": { "method": "GET", "url": "{{base}}/empresas/e0/" }
         },
         {
-          "name": "PATCH /empresas/:empresaId/ — 1 nodo",
+          "name": "PATCH /empresas/:empresa_id/ — 1 nodo",
           "request": {
             "method": "PATCH",
-            "url": "{{base}}/empresas/n7/",
+            "url": "{{base}}/empresas/e0/",
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
@@ -181,7 +198,7 @@
           }
         },
         {
-          "name": "POST /empresas/bulk-update/ — múltiples nodos",
+          "name": "POST /empresas/bulk-update/ — varios nodos",
           "request": {
             "method": "POST",
             "url": "{{base}}/empresas/bulk-update/",
@@ -193,11 +210,8 @@
           }
         },
         {
-          "name": "DELETE /empresas/:empresaId/",
-          "request": {
-            "method": "DELETE",
-            "url": "{{base}}/empresas/n7/"
-          }
+          "name": "DELETE /empresas/:empresa_id/",
+          "request": { "method": "DELETE", "url": "{{base}}/empresas/e-test-id/" }
         }
       ]
     },
@@ -206,53 +220,47 @@
       "name": "Publicaciones",
       "item": [
         {
-          "name": "POST /publicaciones/",
+          "name": "POST /publicaciones/ — crea Publicacion + :PUBLICO desde autor",
           "request": {
             "method": "POST",
             "url": "{{base}}/publicaciones/",
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"userId\": \"n1\",\n  \"contenido\": \"Acabamos de migrar nuestro grafo a Neo4j. 4x en queries de recomendación.\",\n  \"tags\": [\"neo4j\", \"grafos\", \"backend\"],\n  \"es_oferta\": false,\n  \"relProps\": {\n    \"anonimo\": false,\n    \"desde_empresa\": false\n  }\n}"
+              "raw": "{\n  \"usuario_id\": \"u0\",\n  \"contenido\": \"Acabamos de migrar nuestro grafo a Neo4j. 4x en queries de recomendación.\",\n  \"tags\": [\"neo4j\", \"grafos\", \"backend\"],\n  \"es_oferta\": false,\n  \"relProps\": {\n    \"anonimo\": false,\n    \"desde_empresa\": false\n  }\n}"
             }
           }
         },
         {
           "name": "GET /publicaciones/ — todas",
-          "request": {
-            "method": "GET",
-            "url": "{{base}}/publicaciones/"
-          }
+          "request": { "method": "GET", "url": "{{base}}/publicaciones/" }
         },
         {
           "name": "GET /publicaciones/ — filtros",
           "request": {
             "method": "GET",
             "url": {
-              "raw": "{{base}}/publicaciones/?tag=neo4j&minLikes=10&desde=2026-01-01&limit=10",
+              "raw": "{{base}}/publicaciones/?tag=tech&minLikes=10&desde=2020-01-01&limit=10",
               "host": ["{{base}}"],
               "path": ["publicaciones", ""],
               "query": [
-                { "key": "tag", "value": "neo4j" },
+                { "key": "tag", "value": "tech" },
                 { "key": "minLikes", "value": "10" },
-                { "key": "desde", "value": "2026-01-01" },
+                { "key": "desde", "value": "2020-01-01" },
                 { "key": "limit", "value": "10" }
               ]
             }
           }
         },
         {
-          "name": "GET /publicaciones/:postId/",
-          "request": {
-            "method": "GET",
-            "url": "{{base}}/publicaciones/n10/"
-          }
+          "name": "GET /publicaciones/:publicacion_id/",
+          "request": { "method": "GET", "url": "{{base}}/publicaciones/p0/" }
         },
         {
-          "name": "PATCH /publicaciones/:postId/ — 1 nodo",
+          "name": "PATCH /publicaciones/:publicacion_id/ — 1 nodo",
           "request": {
             "method": "PATCH",
-            "url": "{{base}}/publicaciones/n10/",
+            "url": "{{base}}/publicaciones/p0/",
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
@@ -261,7 +269,7 @@
           }
         },
         {
-          "name": "POST /publicaciones/bulk-update/ — múltiples nodos",
+          "name": "POST /publicaciones/bulk-update/ — varios nodos",
           "request": {
             "method": "POST",
             "url": "{{base}}/publicaciones/bulk-update/",
@@ -273,11 +281,8 @@
           }
         },
         {
-          "name": "DELETE /publicaciones/:postId/",
-          "request": {
-            "method": "DELETE",
-            "url": "{{base}}/publicaciones/n10/"
-          }
+          "name": "DELETE /publicaciones/:publicacion_id/",
+          "request": { "method": "DELETE", "url": "{{base}}/publicaciones/p-test-id/" }
         }
       ]
     },
@@ -286,23 +291,20 @@
       "name": "Empleos",
       "item": [
         {
-          "name": "POST /empleos/",
+          "name": "POST /empleos/ — crea Empleo + :OFERTA desde Empresa",
           "request": {
             "method": "POST",
             "url": "{{base}}/empleos/",
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"empresaId\": \"n7\",\n  \"titulo\": \"Backend Developer Sr.\",\n  \"salario_min\": 1800,\n  \"salario_max\": 2600,\n  \"modalidad\": \"híbrido\",\n  \"activo\": true,\n  \"relProps\": {\n    \"urgente\": true,\n    \"remunerado\": true\n  }\n}"
+              "raw": "{\n  \"empresa_id\": \"e0\",\n  \"titulo\": \"Backend Developer Sr.\",\n  \"salario_min\": 1800,\n  \"salario_max\": 2600,\n  \"modalidad\": \"híbrido\",\n  \"activo\": true,\n  \"relProps\": {\n    \"urgente\": true,\n    \"remunerado\": true\n  }\n}"
             }
           }
         },
         {
           "name": "GET /empleos/ — todos",
-          "request": {
-            "method": "GET",
-            "url": "{{base}}/empleos/"
-          }
+          "request": { "method": "GET", "url": "{{base}}/empleos/" }
         },
         {
           "name": "GET /empleos/ — filtros",
@@ -322,17 +324,14 @@
           }
         },
         {
-          "name": "GET /empleos/:empleoId/",
-          "request": {
-            "method": "GET",
-            "url": "{{base}}/empleos/n13/"
-          }
+          "name": "GET /empleos/:empleo_id/",
+          "request": { "method": "GET", "url": "{{base}}/empleos/j0/" }
         },
         {
-          "name": "PATCH /empleos/:empleoId/ — 1 nodo",
+          "name": "PATCH /empleos/:empleo_id/ — 1 nodo",
           "request": {
             "method": "PATCH",
-            "url": "{{base}}/empleos/n13/",
+            "url": "{{base}}/empleos/j0/",
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
@@ -341,7 +340,7 @@
           }
         },
         {
-          "name": "POST /empleos/bulk-update/ — múltiples nodos",
+          "name": "POST /empleos/bulk-update/ — varios nodos",
           "request": {
             "method": "POST",
             "url": "{{base}}/empleos/bulk-update/",
@@ -353,11 +352,8 @@
           }
         },
         {
-          "name": "DELETE /empleos/:empleoId/",
-          "request": {
-            "method": "DELETE",
-            "url": "{{base}}/empleos/n13/"
-          }
+          "name": "DELETE /empleos/:empleo_id/",
+          "request": { "method": "DELETE", "url": "{{base}}/empleos/j-test-id/" }
         }
       ]
     },
@@ -379,10 +375,7 @@
         },
         {
           "name": "GET /educacion/ — todas",
-          "request": {
-            "method": "GET",
-            "url": "{{base}}/educacion/"
-          }
+          "request": { "method": "GET", "url": "{{base}}/educacion/" }
         },
         {
           "name": "GET /educacion/ — filtros",
@@ -401,17 +394,14 @@
           }
         },
         {
-          "name": "GET /educacion/:educacionId/",
-          "request": {
-            "method": "GET",
-            "url": "{{base}}/educacion/n16/"
-          }
+          "name": "GET /educacion/:educacion_id/",
+          "request": { "method": "GET", "url": "{{base}}/educacion/ed0/" }
         },
         {
-          "name": "PATCH /educacion/:educacionId/ — 1 nodo",
+          "name": "PATCH /educacion/:educacion_id/ — 1 nodo",
           "request": {
             "method": "PATCH",
-            "url": "{{base}}/educacion/n16/",
+            "url": "{{base}}/educacion/ed0/",
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
@@ -420,7 +410,7 @@
           }
         },
         {
-          "name": "POST /educacion/bulk-update/ — múltiples nodos",
+          "name": "POST /educacion/bulk-update/ — varios nodos",
           "request": {
             "method": "POST",
             "url": "{{base}}/educacion/bulk-update/",
@@ -432,11 +422,8 @@
           }
         },
         {
-          "name": "DELETE /educacion/:educacionId/",
-          "request": {
-            "method": "DELETE",
-            "url": "{{base}}/educacion/n16/"
-          }
+          "name": "DELETE /educacion/:educacion_id/",
+          "request": { "method": "DELETE", "url": "{{base}}/educacion/ed-test-id/" }
         }
       ]
     },
@@ -458,20 +445,14 @@
         },
         {
           "name": "GET /experiencia/ — todas",
-          "request": {
-            "method": "GET",
-            "url": "{{base}}/experiencia/"
-          }
+          "request": { "method": "GET", "url": "{{base}}/experiencia/" }
         },
         {
-          "name": "GET /experiencia/:expId/",
-          "request": {
-            "method": "GET",
-            "url": "{{base}}/experiencia/exp-id-aqui/"
-          }
+          "name": "GET /experiencia/:experiencia_id/",
+          "request": { "method": "GET", "url": "{{base}}/experiencia/exp-id-aqui/" }
         },
         {
-          "name": "PATCH /experiencia/:expId/",
+          "name": "PATCH /experiencia/:experiencia_id/",
           "request": {
             "method": "PATCH",
             "url": "{{base}}/experiencia/exp-id-aqui/",
@@ -480,13 +461,6 @@
               "mode": "raw",
               "raw": "{\n  \"set\": { \"salario\": 3000.0 },\n  \"remove\": []\n}"
             }
-          }
-        },
-        {
-          "name": "DELETE /experiencia/:expId/",
-          "request": {
-            "method": "DELETE",
-            "url": "{{base}}/experiencia/exp-id-aqui/"
           }
         },
         {
@@ -500,34 +474,38 @@
               "raw": "{\n  \"filter\": { \"activo\": true },\n  \"set\": { \"verificado\": true },\n  \"remove\": []\n}"
             }
           }
+        },
+        {
+          "name": "DELETE /experiencia/:experiencia_id/",
+          "request": { "method": "DELETE", "url": "{{base}}/experiencia/exp-id-aqui/" }
         }
       ]
     },
 
     {
-      "name": "Relaciones",
+      "name": "Relaciones · Crear",
       "item": [
         {
-          "name": "POST /relaciones/conexiones/ — CONECTADO_CON",
+          "name": "POST /relaciones/conexiones/ — CONECTADO_CON (Usuario→Usuario)",
           "request": {
             "method": "POST",
             "url": "{{base}}/relaciones/conexiones/",
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"userIdA\": \"n1\",\n  \"userIdB\": \"n4\",\n  \"fecha_conexion\": \"2026-04-27\",\n  \"nivel\": \"1er\",\n  \"aceptada\": true\n}"
+              "raw": "{\n  \"usuario_id_a\": \"u0\",\n  \"usuario_id_b\": \"u4\",\n  \"fecha_conexion\": \"2026-04-27\",\n  \"nivel\": \"1er\",\n  \"aceptada\": true\n}"
             }
           }
         },
         {
-          "name": "POST /relaciones/likes/ — DIO_LIKE",
+          "name": "POST /relaciones/likes/ — DIO_LIKE (Usuario→Publicacion)",
           "request": {
             "method": "POST",
             "url": "{{base}}/relaciones/likes/",
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"userId\": \"n2\",\n  \"postId\": \"n10\",\n  \"tipo_reaccion\": \"celebro\",\n  \"notificado\": true\n}"
+              "raw": "{\n  \"usuario_id\": \"u2\",\n  \"publicacion_id\": \"p0\",\n  \"tipo_reaccion\": \"celebro\",\n  \"notificado\": true\n}"
             }
           }
         },
@@ -539,7 +517,7 @@
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"userId\": \"n3\",\n  \"postId\": \"n10\",\n  \"contenido\": \"¡Qué buen caso de uso! ¿Probaron APOC?\",\n  \"editado\": false\n}"
+              "raw": "{\n  \"usuario_id\": \"u3\",\n  \"publicacion_id\": \"p0\",\n  \"contenido\": \"¡Qué buen caso de uso!\",\n  \"editado\": false\n}"
             }
           }
         },
@@ -551,7 +529,7 @@
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"userId\": \"n2\",\n  \"postId\": \"n10\",\n  \"con_comentario\": true,\n  \"visibilidad\": \"pública\"\n}"
+              "raw": "{\n  \"usuario_id\": \"u2\",\n  \"publicacion_id\": \"p0\",\n  \"con_comentario\": true,\n  \"visibilidad\": \"pública\"\n}"
             }
           }
         },
@@ -563,7 +541,7 @@
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"userId\": \"n1\",\n  \"empleoId\": \"n13\",\n  \"estado\": \"pendiente\",\n  \"carta_presentacion\": true\n}"
+              "raw": "{\n  \"usuario_id\": \"u0\",\n  \"empleo_id\": \"j0\",\n  \"estado\": \"pendiente\",\n  \"carta_presentacion\": true\n}"
             }
           }
         },
@@ -575,31 +553,31 @@
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"userId\": \"n1\",\n  \"empresaId\": \"n8\",\n  \"notificaciones\": true,\n  \"motivo\": \"posible empleador\"\n}"
+              "raw": "{\n  \"usuario_id\": \"u0\",\n  \"empresa_id\": \"e0\",\n  \"notificaciones\": true,\n  \"motivo\": \"posible empleador\"\n}"
             }
           }
         },
         {
-          "name": "POST /relaciones/trabajo-en/ — TRABAJO_EN",
+          "name": "POST /relaciones/trabajo-en/ — TRABAJO_EN (Usuario→ExperienciaLaboral)",
           "request": {
             "method": "POST",
             "url": "{{base}}/relaciones/trabajo-en/",
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"userId\": \"n1\",\n  \"expId\": \"exp-id-aqui\",\n  \"fecha_inicio\": \"2024-01-15\",\n  \"fecha_fin\": \"\",\n  \"verificado\": true\n}"
+              "raw": "{\n  \"usuario_id\": \"u0\",\n  \"experiencia_id\": \"exp-id-aqui\",\n  \"fecha_inicio\": \"2024-01-15\",\n  \"fecha_fin\": \"\",\n  \"verificado\": true\n}"
             }
           }
         },
         {
-          "name": "POST /relaciones/experiencia-en/ — EXPERIENCIA_EN",
+          "name": "POST /relaciones/experiencia-en/ — EXPERIENCIA_EN (ExperienciaLaboral→Empresa)",
           "request": {
             "method": "POST",
             "url": "{{base}}/relaciones/experiencia-en/",
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"empresaId\": \"n7\",\n  \"expId\": \"exp-id-aqui\",\n  \"departamento\": \"Ingeniería\",\n  \"tipo_contrato\": \"tiempo_completo\",\n  \"modalidad\": \"híbrido\"\n}"
+              "raw": "{\n  \"empresa_id\": \"e0\",\n  \"experiencia_id\": \"exp-id-aqui\",\n  \"departamento\": \"Ingeniería\",\n  \"tipo_contrato\": \"tiempo_completo\",\n  \"modalidad\": \"híbrido\"\n}"
             }
           }
         },
@@ -611,7 +589,7 @@
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"userId\": \"n1\",\n  \"educacionId\": \"n16\",\n  \"fecha_inicio\": \"2020-01-15\",\n  \"fecha_graduacion\": \"2024-12-10\",\n  \"graduado\": true\n}"
+              "raw": "{\n  \"usuario_id\": \"u0\",\n  \"educacion_id\": \"ed0\",\n  \"fecha_inicio\": \"2020-01-15\",\n  \"fecha_graduacion\": \"2024-12-10\",\n  \"graduado\": true\n}"
             }
           }
         },
@@ -623,19 +601,19 @@
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"postId\": \"n10\",\n  \"userId\": \"n2\",\n  \"tipo\": \"colaborador\",\n  \"confirmada\": true\n}"
+              "raw": "{\n  \"publicacion_id\": \"p0\",\n  \"usuario_id\": \"u2\",\n  \"tipo\": \"colaborador\",\n  \"confirmada\": true\n}"
             }
           }
         },
         {
-          "name": "POST /relaciones/generica/ — relación genérica",
+          "name": "POST /relaciones/generica/ — relación genérica con ≥3 props",
           "request": {
             "method": "POST",
             "url": "{{base}}/relaciones/generica/",
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"from\":  { \"label\": \"Usuario\", \"idField\": \"userId\",   \"idValue\": \"n1\" },\n  \"to\":    { \"label\": \"Empleo\",  \"idField\": \"empleoId\", \"idValue\": \"n14\" },\n  \"type\":  \"POSTULO_A\",\n  \"properties\": {\n    \"fecha_postulacion\": \"2026-04-27\",\n    \"estado\": \"pendiente\",\n    \"carta_presentacion\": false\n  }\n}"
+              "raw": "{\n  \"from\":  { \"label\": \"Usuario\", \"idField\": \"usuario_id\", \"idValue\": \"u0\" },\n  \"to\":    { \"label\": \"Empleo\",  \"idField\": \"empleo_id\",  \"idValue\": \"j1\" },\n  \"type\":  \"POSTULO_A\",\n  \"properties\": {\n    \"fecha_postulacion\": \"2026-04-27\",\n    \"estado\": \"pendiente\",\n    \"carta_presentacion\": false\n  }\n}"
             }
           }
         }
@@ -643,7 +621,133 @@
     },
 
     {
-      "name": "Consultas",
+      "name": "Relaciones · Gestión props",
+      "item": [
+        {
+          "name": "PATCH /relaciones/patch/ — agregar/actualizar props (1 relación)",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base}}/relaciones/patch/",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"from\":  { \"label\": \"Usuario\",     \"idField\": \"usuario_id\",   \"idValue\": \"u0\" },\n  \"to\":    { \"label\": \"Publicacion\", \"idField\": \"publicacion_id\", \"idValue\": \"p0\" },\n  \"type\":  \"DIO_LIKE\",\n  \"set\":   { \"intensidad\": \"fuerte\" },\n  \"remove\": []\n}"
+            }
+          }
+        },
+        {
+          "name": "PATCH /relaciones/patch/ — eliminar props (1 relación)",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base}}/relaciones/patch/",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"from\":  { \"label\": \"Usuario\",     \"idField\": \"usuario_id\",   \"idValue\": \"u0\" },\n  \"to\":    { \"label\": \"Publicacion\", \"idField\": \"publicacion_id\", \"idValue\": \"p0\" },\n  \"type\":  \"DIO_LIKE\",\n  \"set\":   {},\n  \"remove\": [\"intensidad\"]\n}"
+            }
+          }
+        },
+        {
+          "name": "POST /relaciones/bulk-patch/ — agregar prop a múltiples relaciones",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/relaciones/bulk-patch/",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"from_label\": \"Usuario\",\n  \"to_label\":   \"Publicacion\",\n  \"type\":       \"DIO_LIKE\",\n  \"filter\":     { \"tipo_reaccion\": \"me_gusta\" },\n  \"set\":        { \"revisado\": true },\n  \"remove\":     []\n}"
+            }
+          }
+        },
+        {
+          "name": "POST /relaciones/bulk-patch/ — eliminar prop de múltiples relaciones",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/relaciones/bulk-patch/",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"from_label\": \"Usuario\",\n  \"to_label\":   \"Publicacion\",\n  \"type\":       \"DIO_LIKE\",\n  \"filter\":     { \"tipo_reaccion\": \"me_gusta\" },\n  \"set\":        {},\n  \"remove\":     [\"revisado\"]\n}"
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "Relaciones · Eliminación",
+      "item": [
+        {
+          "name": "DELETE /relaciones/delete/ — eliminar 1 relación",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "{{base}}/relaciones/delete/?from_label=Usuario&from_id_field=usuario_id&from_id_value=u0&to_label=Publicacion&to_id_field=publicacion_id&to_id_value=p0&type=DIO_LIKE",
+              "host": ["{{base}}"],
+              "path": ["relaciones", "delete", ""],
+              "query": [
+                { "key": "from_label", "value": "Usuario" },
+                { "key": "from_id_field", "value": "usuario_id" },
+                { "key": "from_id_value", "value": "u0" },
+                { "key": "to_label", "value": "Publicacion" },
+                { "key": "to_id_field", "value": "publicacion_id" },
+                { "key": "to_id_value", "value": "p0" },
+                { "key": "type", "value": "DIO_LIKE" }
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST /relaciones/bulk-delete/ — eliminar múltiples relaciones",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/relaciones/bulk-delete/",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"from_label\": \"Usuario\",\n  \"to_label\":   \"Publicacion\",\n  \"type\":       \"DIO_LIKE\",\n  \"filter\":     { \"tipo_reaccion\": \"me_gusta\" }\n}"
+            }
+          }
+        },
+        {
+          "name": "POST /relaciones/bulk-delete-nodos/ — eliminar múltiples nodos",
+          "request": {
+            "method": "POST",
+            "url": "{{base}}/relaciones/bulk-delete-nodos/",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"label\": \"Publicacion\",\n  \"filter\": { \"es_oferta\": false }\n}"
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "Relaciones · Helpers",
+      "item": [
+        {
+          "name": "GET /relaciones/mias/ — listar relaciones de un usuario",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/relaciones/mias/?usuario_id=u0&type=POSTULO_A&idField=empleo_id",
+              "host": ["{{base}}"],
+              "path": ["relaciones", "mias", ""],
+              "query": [
+                { "key": "usuario_id", "value": "u0" },
+                { "key": "type", "value": "POSTULO_A" },
+                { "key": "idField", "value": "empleo_id" }
+              ]
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "Consultas (rúbrica 4-6 consultas)",
       "item": [
         {
           "name": "GET Q1 · Top usuarios por conexiones",
@@ -659,45 +763,27 @@
         },
         {
           "name": "GET Q2 · Empresas seguidas",
-          "request": {
-            "method": "GET",
-            "url": "{{base}}/consultas/empresas-seguidas/"
-          }
+          "request": { "method": "GET", "url": "{{base}}/consultas/empresas-seguidas/" }
         },
         {
           "name": "GET Q3 · Empleos activos con rango salarial",
-          "request": {
-            "method": "GET",
-            "url": "{{base}}/consultas/empleos-activos/"
-          }
+          "request": { "method": "GET", "url": "{{base}}/consultas/empleos-activos/" }
         },
         {
           "name": "GET Q4 · Estadísticas de likes",
-          "request": {
-            "method": "GET",
-            "url": "{{base}}/consultas/publicaciones-stats/"
-          }
+          "request": { "method": "GET", "url": "{{base}}/consultas/publicaciones-stats/" }
         },
         {
           "name": "GET Q5 · Postulaciones por estado",
-          "request": {
-            "method": "GET",
-            "url": "{{base}}/consultas/postulaciones-por-estado/"
-          }
+          "request": { "method": "GET", "url": "{{base}}/consultas/postulaciones-por-estado/" }
         },
         {
           "name": "GET Q6 · Autoría de publicaciones",
-          "request": {
-            "method": "GET",
-            "url": "{{base}}/consultas/autoria-publicaciones/"
-          }
+          "request": { "method": "GET", "url": "{{base}}/consultas/autoria-publicaciones/" }
         },
         {
-          "name": "GET Conteo por label",
-          "request": {
-            "method": "GET",
-            "url": "{{base}}/consultas/conteo-por-label/"
-          }
+          "name": "GET Conteo por label (consulta agregada)",
+          "request": { "method": "GET", "url": "{{base}}/consultas/conteo-por-label/" }
         },
         {
           "name": "POST Agregación ad-hoc",
@@ -708,6 +794,46 @@
             "body": {
               "mode": "raw",
               "raw": "{\n  \"label\": \"Empleo\",\n  \"where\": [{ \"prop\": \"activo\", \"value\": true }],\n  \"groupBy\": \"modalidad\",\n  \"agg\": \"avg\",\n  \"field\": \"salario_max\"\n}"
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "Data Science",
+      "item": [
+        {
+          "name": "GET /datascience/influencers/ — PageRank personalizado",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/datascience/influencers/?limit=10",
+              "host": ["{{base}}"],
+              "path": ["datascience", "influencers", ""],
+              "query": [{ "key": "limit", "value": "10" }]
+            }
+          }
+        },
+        {
+          "name": "GET /datascience/recomendaciones/:usuario_id/ — Jaccard Similarity",
+          "request": {
+            "method": "GET",
+            "url": "{{base}}/datascience/recomendaciones/u0/"
+          }
+        },
+        {
+          "name": "GET /datascience/grados-separacion/ — BFS shortestPath",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base}}/datascience/grados-separacion/?from=u0&to=u10",
+              "host": ["{{base}}"],
+              "path": ["datascience", "grados-separacion", ""],
+              "query": [
+                { "key": "from", "value": "u0" },
+                { "key": "to", "value": "u10" }
+              ]
             }
           }
         }
@@ -737,12 +863,12 @@
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"query\": \"MATCH (u:Usuario {userId: $id}) SET u.activo = true RETURN u\",\n  \"params\": { \"id\": \"n1\" },\n  \"mode\": \"write\"\n}"
+              "raw": "{\n  \"query\": \"MATCH (u:Usuario {usuario_id: $id}) SET u.activo = true RETURN u\",\n  \"params\": { \"id\": \"u0\" },\n  \"mode\": \"write\"\n}"
             }
           }
         },
         {
-          "name": "POST /cypher/ — conteo total de nodos",
+          "name": "POST /cypher/ — conteo total de nodos por label",
           "request": {
             "method": "POST",
             "url": "{{base}}/cypher/",

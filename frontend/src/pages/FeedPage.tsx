@@ -31,10 +31,24 @@ export default function FeedPage() {
     try {
       const res = await publicacionesApi.list({ limit: '50' })
       const all = extractNodes(res) as PubNode[]
+      const elementIdNum = (id?: string) => {
+        if (!id) return 0
+        const tail = id.split(':').pop() ?? id
+        const n = Number(tail)
+        return Number.isFinite(n) ? n : 0
+      }
+      const todayIso = new Date().toISOString().slice(0, 10)
+      // Bucket 0 = fecha ≤ hoy (datos "reales"), bucket 1 = futuro (seed sintético).
+      // Dentro de cada bucket: fecha DESC, luego id(p) DESC para que lo recién creado vaya arriba.
+      const bucket = (f: string) => (f && f > todayIso ? 1 : 0)
       all.sort((a, b) => {
         const da = String(a.props.fecha_publicacion ?? '')
         const db = String(b.props.fecha_publicacion ?? '')
-        return db.localeCompare(da)
+        const ba = bucket(da), bb = bucket(db)
+        if (ba !== bb) return ba - bb
+        const cmp = db.localeCompare(da)
+        if (cmp !== 0) return cmp
+        return elementIdNum(b.elementId) - elementIdNum(a.elementId)
       })
       setPosts(all)
     } catch {
@@ -159,8 +173,9 @@ export default function FeedPage() {
           return (
             <div key={pid || post.elementId} className="card post-card">
               <div className="post-header">
-                <div className="avatar-sm">{initials(me?.props.nombre)}</div>
+                <div className="avatar-sm">{initials(post.props.autor_nombre ?? me?.props.nombre)}</div>
                 <div>
+                  <div style={{ fontWeight: 600, fontSize: 13 }}>{post.props.autor_nombre ?? ''}</div>
                   <div className="post-date">{timeAgo(post.props.fecha_publicacion)}</div>
                   {post.props.es_oferta && <span className="badge-oferta">Oferta</span>}
                 </div>

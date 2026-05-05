@@ -2,6 +2,11 @@
 
 Cada relación crea con `properties` ≥3 según el modelo de [proyecto_grafo.md].
 Ruta genérica `/api/relaciones/` permite cualquier (label, idField) tipado.
+
+Convención de IDs: snake_case (`usuario_id`, `empresa_id`, `publicacion_id`,
+`empleo_id`, `educacion_id`, `experiencia_id`). Los endpoints también aceptan
+los nombres camelCase (`userId`, `empresaId`, `postId`, `empleoId`,
+`educacionId`, `expId`) por compatibilidad con clientes legacy.
 """
 from datetime import date
 
@@ -17,7 +22,7 @@ from apps.core.lib.cypher_build import (
     safe_prop,
     safe_rel_type,
 )
-from apps.core.lib.db import run_write
+from apps.core.lib.db import run_read, run_write
 from apps.core.lib.validate import require_fields, require_min_props
 from apps.core.lib.views import envelope
 
@@ -26,8 +31,22 @@ def _today():
     return date.today().isoformat()
 
 
+def _pick(body, *keys):
+    """Devuelve el primer valor no-vacío de los keys dados."""
+    for k in keys:
+        v = body.get(k)
+        if v:
+            return v
+    return None
+
+
 def _create_rel(cypher, params):
     result = run_write(cypher, params)
+    if not result.get('rows'):
+        return Response(
+            {'detail': 'Uno de los nodos referenciados no existe', 'cypher': cypher},
+            status=status.HTTP_404_NOT_FOUND,
+        )
     return Response(envelope(result, cypher), status=status.HTTP_201_CREATED)
 
 
@@ -35,195 +54,216 @@ def _create_rel(cypher, params):
 def conexiones(request):
     """CONECTADO_CON entre dos Usuario."""
     body = request.data or {}
-    require_fields(body, ['userIdA', 'userIdB'])
+    a = _pick(body, 'usuario_id_a', 'userIdA')
+    b = _pick(body, 'usuario_id_b', 'userIdB')
+    if not a or not b:
+        return Response({'detail': 'usuario_id_a y usuario_id_b son requeridos'}, status=status.HTTP_400_BAD_REQUEST)
     props = {
         'fecha_conexion': body.get('fecha_conexion') or _today(),
         'nivel': body.get('nivel', '1er'),
         'aceptada': bool(body.get('aceptada', True)),
     }
     cypher = (
-        "MATCH (a:Usuario {userId: $userIdA}), (b:Usuario {userId: $userIdB}) "
+        "MATCH (a:Usuario {usuario_id: $a}), (b:Usuario {usuario_id: $b}) "
         "CREATE (a)-[r:CONECTADO_CON $props]->(b) "
         "RETURN a, type(r), b"
     )
-    return _create_rel(cypher, {
-        'userIdA': body['userIdA'], 'userIdB': body['userIdB'], 'props': props,
-    })
+    return _create_rel(cypher, {'a': a, 'b': b, 'props': props})
 
 
 @api_view(['POST'])
 def likes(request):
+    """DIO_LIKE: idempotente vía MERGE (un usuario solo puede reaccionar 1 vez por
+    publicación; vuelve a llamar = actualiza la propiedad de la relación). Mantiene
+    `p.likes_count` sincronizado con el número real de relaciones DIO_LIKE entrantes.
+    """
     body = request.data or {}
-    require_fields(body, ['userId', 'postId'])
-    props = {
-        'fecha': body.get('fecha') or _today(),
-        'tipo_reaccion': body.get('tipo_reaccion', 'me_gusta'),
-        'notificado': bool(body.get('notificado', False)),
-    }
+    u = _pick(body, 'usuario_id', 'userId')
+    p = _pick(body, 'publicacion_id', 'postId')
+    if not u or not p:
+        return Response({'detail': 'usuario_id y publicacion_id son requeridos'}, status=status.HTTP_400_BAD_REQUEST)
+    fecha = body.get('fecha') or _today()
+    tipo_reaccion = body.get('tipo_reaccion', 'me_gusta')
+    notificado = bool(body.get('notificado', False))
     cypher = (
-        "MATCH (u:Usuario {userId: $userId}), (p:Publicacion {postId: $postId}) "
-        "CREATE (u)-[r:DIO_LIKE $props]->(p) "
-        "RETURN u, type(r), p"
+        "MATCH (u:Usuario {usuario_id: $u}), (p:Publicacion {publicacion_id: $p}) "
+        "MERGE (u)-[r:DIO_LIKE]->(p) "
+        "SET r.fecha = $fecha, r.tipo_reaccion = $tipo_reaccion, r.notificado = $notificado "
+        "WITH p "
+        "MATCH (:Usuario)-[lr:DIO_LIKE]->(p) "
+        "WITH p, count(lr) AS total "
+        "SET p.likes_count = total "
+        "RETURN p, total AS likes_count"
     )
     return _create_rel(cypher, {
-        'userId': body['userId'], 'postId': body['postId'], 'props': props,
+        'u': u, 'p': p,
+        'fecha': fecha, 'tipo_reaccion': tipo_reaccion, 'notificado': notificado,
     })
 
 
 @api_view(['POST'])
 def comentarios(request):
     body = request.data or {}
-    require_fields(body, ['userId', 'postId', 'contenido'])
+    u = _pick(body, 'usuario_id', 'userId')
+    p = _pick(body, 'publicacion_id', 'postId')
+    require_fields(body, ['contenido'])
+    if not u or not p:
+        return Response({'detail': 'usuario_id y publicacion_id son requeridos'}, status=status.HTTP_400_BAD_REQUEST)
     props = {
         'contenido': body['contenido'],
         'fecha': body.get('fecha') or _today(),
         'editado': bool(body.get('editado', False)),
     }
     cypher = (
-        "MATCH (u:Usuario {userId: $userId}), (p:Publicacion {postId: $postId}) "
+        "MATCH (u:Usuario {usuario_id: $u}), (p:Publicacion {publicacion_id: $p}) "
         "CREATE (u)-[r:COMENTO $props]->(p) "
         "RETURN u, type(r), p"
     )
-    return _create_rel(cypher, {
-        'userId': body['userId'], 'postId': body['postId'], 'props': props,
-    })
+    return _create_rel(cypher, {'u': u, 'p': p, 'props': props})
 
 
 @api_view(['POST'])
 def compartidos(request):
     body = request.data or {}
-    require_fields(body, ['userId', 'postId'])
+    u = _pick(body, 'usuario_id', 'userId')
+    p = _pick(body, 'publicacion_id', 'postId')
+    if not u or not p:
+        return Response({'detail': 'usuario_id y publicacion_id son requeridos'}, status=status.HTTP_400_BAD_REQUEST)
     props = {
         'fecha': body.get('fecha') or _today(),
         'con_comentario': bool(body.get('con_comentario', False)),
         'visibilidad': body.get('visibilidad', 'pública'),
     }
     cypher = (
-        "MATCH (u:Usuario {userId: $userId}), (p:Publicacion {postId: $postId}) "
+        "MATCH (u:Usuario {usuario_id: $u}), (p:Publicacion {publicacion_id: $p}) "
         "CREATE (u)-[r:COMPARTIO $props]->(p) "
         "RETURN u, type(r), p"
     )
-    return _create_rel(cypher, {
-        'userId': body['userId'], 'postId': body['postId'], 'props': props,
-    })
+    return _create_rel(cypher, {'u': u, 'p': p, 'props': props})
 
 
 @api_view(['POST'])
 def postulaciones(request):
     body = request.data or {}
-    require_fields(body, ['userId', 'empleoId'])
+    u = _pick(body, 'usuario_id', 'userId')
+    j = _pick(body, 'empleo_id', 'empleoId')
+    if not u or not j:
+        return Response({'detail': 'usuario_id y empleo_id son requeridos'}, status=status.HTTP_400_BAD_REQUEST)
     props = {
         'fecha_postulacion': body.get('fecha_postulacion') or _today(),
         'estado': body.get('estado', 'pendiente'),
         'carta_presentacion': bool(body.get('carta_presentacion', False)),
     }
     cypher = (
-        "MATCH (u:Usuario {userId: $userId}), (j:Empleo {empleoId: $empleoId}) "
+        "MATCH (u:Usuario {usuario_id: $u}), (j:Empleo {empleo_id: $j}) "
         "CREATE (u)-[r:POSTULO_A $props]->(j) "
         "RETURN u, type(r), j"
     )
-    return _create_rel(cypher, {
-        'userId': body['userId'], 'empleoId': body['empleoId'], 'props': props,
-    })
+    return _create_rel(cypher, {'u': u, 'j': j, 'props': props})
 
 
 @api_view(['POST'])
 def seguimientos(request):
     body = request.data or {}
-    require_fields(body, ['userId', 'empresaId'])
+    u = _pick(body, 'usuario_id', 'userId')
+    e = _pick(body, 'empresa_id', 'empresaId')
+    if not u or not e:
+        return Response({'detail': 'usuario_id y empresa_id son requeridos'}, status=status.HTTP_400_BAD_REQUEST)
     props = {
         'fecha_seguimiento': body.get('fecha_seguimiento') or _today(),
         'notificaciones': bool(body.get('notificaciones', True)),
         'motivo': body.get('motivo', ''),
     }
     cypher = (
-        "MATCH (u:Usuario {userId: $userId}), (e:Empresa {empresaId: $empresaId}) "
+        "MATCH (u:Usuario {usuario_id: $u}), (e:Empresa {empresa_id: $e}) "
         "CREATE (u)-[r:SIGUE_A $props]->(e) "
         "RETURN u, type(r), e"
     )
-    return _create_rel(cypher, {
-        'userId': body['userId'], 'empresaId': body['empresaId'], 'props': props,
-    })
+    return _create_rel(cypher, {'u': u, 'e': e, 'props': props})
 
 
 @api_view(['POST'])
 def trabajo_en(request):
     """TRABAJO_EN: Usuario → ExperienciaLaboral."""
     body = request.data or {}
-    require_fields(body, ['userId', 'expId'])
+    u = _pick(body, 'usuario_id', 'userId')
+    x = _pick(body, 'experiencia_id', 'expId')
+    if not u or not x:
+        return Response({'detail': 'usuario_id y experiencia_id son requeridos'}, status=status.HTTP_400_BAD_REQUEST)
     props = {
         'fecha_inicio': body.get('fecha_inicio') or _today(),
         'fecha_fin':    body.get('fecha_fin', ''),
         'verificado':   bool(body.get('verificado', False)),
     }
     cypher = (
-        "MATCH (u:Usuario {userId: $userId}), "
-        "(exp:ExperienciaLaboral {expId: $expId}) "
+        "MATCH (u:Usuario {usuario_id: $u}), "
+        "(exp:ExperienciaLaboral {experiencia_id: $x}) "
         "CREATE (u)-[r:TRABAJO_EN $props]->(exp) "
         "RETURN u, type(r), exp"
     )
-    return _create_rel(cypher, {
-        'userId': body['userId'], 'expId': body['expId'], 'props': props,
-    })
+    return _create_rel(cypher, {'u': u, 'x': x, 'props': props})
 
 
 @api_view(['POST'])
 def experiencia_en(request):
     """EXPERIENCIA_EN: ExperienciaLaboral → Empresa."""
     body = request.data or {}
-    require_fields(body, ['expId', 'empresaId'])
+    x = _pick(body, 'experiencia_id', 'expId')
+    e = _pick(body, 'empresa_id', 'empresaId')
+    if not x or not e:
+        return Response({'detail': 'experiencia_id y empresa_id son requeridos'}, status=status.HTTP_400_BAD_REQUEST)
     props = {
         'departamento':  body.get('departamento', ''),
         'tipo_contrato': body.get('tipo_contrato', 'tiempo_completo'),
         'modalidad':     body.get('modalidad', 'presencial'),
     }
     cypher = (
-        "MATCH (exp:ExperienciaLaboral {expId: $expId}), "
-        "(e:Empresa {empresaId: $empresaId}) "
+        "MATCH (exp:ExperienciaLaboral {experiencia_id: $x}), "
+        "(e:Empresa {empresa_id: $e}) "
         "CREATE (exp)-[r:EXPERIENCIA_EN $props]->(e) "
         "RETURN exp, type(r), e"
     )
-    return _create_rel(cypher, {
-        'expId': body['expId'], 'empresaId': body['empresaId'], 'props': props,
-    })
+    return _create_rel(cypher, {'x': x, 'e': e, 'props': props})
 
 
 @api_view(['POST'])
 def estudios(request):
     body = request.data or {}
-    require_fields(body, ['userId', 'educacionId'])
+    u = _pick(body, 'usuario_id', 'userId')
+    ed = _pick(body, 'educacion_id', 'educacionId')
+    if not u or not ed:
+        return Response({'detail': 'usuario_id y educacion_id son requeridos'}, status=status.HTTP_400_BAD_REQUEST)
     props = {
         'fecha_inicio': body.get('fecha_inicio') or _today(),
         'fecha_graduacion': body.get('fecha_graduacion', ''),
         'graduado': bool(body.get('graduado', False)),
     }
     cypher = (
-        "MATCH (u:Usuario {userId: $userId}), (ed:Educacion {educacionId: $educacionId}) "
+        "MATCH (u:Usuario {usuario_id: $u}), (ed:Educacion {educacion_id: $ed}) "
         "CREATE (u)-[r:ESTUDIO_EN $props]->(ed) "
         "RETURN u, type(r), ed"
     )
-    return _create_rel(cypher, {
-        'userId': body['userId'], 'educacionId': body['educacionId'], 'props': props,
-    })
+    return _create_rel(cypher, {'u': u, 'ed': ed, 'props': props})
 
 
 @api_view(['POST'])
 def menciones(request):
     body = request.data or {}
-    require_fields(body, ['postId', 'userId'])
+    p = _pick(body, 'publicacion_id', 'postId')
+    u = _pick(body, 'usuario_id', 'userId')
+    if not p or not u:
+        return Response({'detail': 'publicacion_id y usuario_id son requeridos'}, status=status.HTTP_400_BAD_REQUEST)
     props = {
         'fecha': body.get('fecha') or _today(),
         'tipo': body.get('tipo', 'etiqueta'),
         'confirmada': bool(body.get('confirmada', False)),
     }
     cypher = (
-        "MATCH (p:Publicacion {postId: $postId}), (u:Usuario {userId: $userId}) "
+        "MATCH (p:Publicacion {publicacion_id: $p}), (u:Usuario {usuario_id: $u}) "
         "CREATE (p)-[r:MENCIONA $props]->(u) "
         "RETURN p, type(r), u"
     )
-    return _create_rel(cypher, {
-        'postId': body['postId'], 'userId': body['userId'], 'props': props,
-    })
+    return _create_rel(cypher, {'p': p, 'u': u, 'props': props})
 
 
 @api_view(['POST'])
@@ -375,6 +415,37 @@ def delete_relacion_bulk(request):
     )
     result = run_write(cypher, {'filter': filter_dict})
     return Response(envelope(result, cypher))
+
+
+@api_view(['GET'])
+def mis_relaciones(request):
+    """GET /api/relaciones/mias/?usuario_id=<id>&type=POSTULO_A&idField=empleo_id
+
+    Devuelve lista de IDs destino para que el frontend sepa qué relaciones ya existen.
+    Acepta `usuario_id` o `userId` en el query string.
+    """
+    qp = request.query_params
+    user_id = (qp.get('usuario_id') or qp.get('userId') or '').strip()
+    rel_type = qp.get('type', '').strip()
+    id_field = qp.get('idField', '').strip()
+
+    if not user_id or not rel_type or not id_field:
+        return Response({'ids': []})
+
+    safe_type = safe_rel_type(rel_type)
+    safe_field = safe_prop(id_field)
+
+    cypher = (
+        f"MATCH (u:Usuario {{usuario_id: $uid}})-[:{safe_type}]->(b) "
+        f"RETURN b.{safe_field} AS id"
+    )
+    try:
+        result = run_read(cypher, {'uid': user_id})
+        ids = [row[0] for row in result.get('rows', []) if row[0]]
+    except Exception:
+        ids = []
+
+    return Response({'ids': ids})
 
 
 @api_view(['POST'])

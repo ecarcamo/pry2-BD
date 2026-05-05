@@ -71,4 +71,7 @@ export const relacionesApi = {
 
   bulkDeleteNodos: (body: { label: string; filter?: Record<string, unknown> }) =>
     api.post<ApiResult>('/relaciones/bulk-delete-nodos/', body),
+
+  misRelaciones: (userId: string, type: string, idField: string): Promise<{ ids: string[] }> =>
+    api.get(`/relaciones/mias/?userId=${encodeURIComponent(userId)}&type=${encodeURIComponent(type)}&idField=${encodeURIComponent(idField)}`),
 }

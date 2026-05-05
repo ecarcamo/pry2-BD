@@ -14,6 +14,17 @@ import OperacionesPage from './pages/OperacionesPage'
 import ConsultasPage from './pages/ConsultasPage'
 import DataSciencePage from './pages/DataSciencePage'
 
+function SeedOverlay() {
+  const { seeding } = useStore()
+  if (!seeding) return null
+  return (
+    <div className="seed-overlay">
+      <div className="seed-spinner" />
+      <span className="seed-label">Reseteando base de datos…</span>
+    </div>
+  )
+}
+
 function Shell() {
   const { tab } = useStore()
 
@@ -39,6 +50,7 @@ function Shell() {
       <GraphOverlay />
       <Toasts />
       <Footer />
+      <SeedOverlay />
     </div>
   )
 }

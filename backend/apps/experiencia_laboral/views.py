@@ -1,4 +1,7 @@
-"""Endpoints REST para :ExperienciaLaboral."""
+"""Endpoints REST para :ExperienciaLaboral. ID canónico: `experiencia_id`.
+
+Acepta también `expId` por compat con clientes que aún lo usan.
+"""
 import uuid
 
 from rest_framework import status
@@ -13,6 +16,10 @@ from apps.core.lib.views import (
     patch_bulk,
     patch_props,
 )
+
+
+def _pick_id(body, *, default=None):
+    return body.get('experiencia_id') or body.get('expId') or default
 
 
 @api_view(['GET', 'POST'])
@@ -35,11 +42,11 @@ def _crear(request):
     body = request.data or {}
     require_fields(body, ['cargo'])
     props = {
-        'expId':       body.get('expId') or str(uuid.uuid4()),
-        'cargo':       body['cargo'],
-        'salario':     float(body.get('salario', 0.0)),
-        'descripcion': body.get('descripcion', ''),
-        'activo':      bool(body.get('activo', True)),
+        'experiencia_id': _pick_id(body, default=str(uuid.uuid4())),
+        'cargo':          body['cargo'],
+        'salario':        float(body.get('salario', 0.0)),
+        'descripcion':    body.get('descripcion', ''),
+        'activo':         bool(body.get('activo', True)),
     }
     cypher = "CREATE (exp:ExperienciaLaboral $props) RETURN exp"
     result = run_write(cypher, {'props': props})
@@ -66,15 +73,15 @@ def _listar(request):
 
 
 def _obtener(exp_id):
-    cypher = "MATCH (exp:ExperienciaLaboral {expId: $expId}) RETURN exp"
-    result = run_read(cypher, {'expId': exp_id})
+    cypher = "MATCH (exp:ExperienciaLaboral {experiencia_id: $experiencia_id}) RETURN exp"
+    result = run_read(cypher, {'experiencia_id': exp_id})
     return Response(envelope(result, cypher))
 
 
 def _actualizar(request, exp_id):
     body = request.data or {}
     result, cypher = patch_props(
-        'ExperienciaLaboral', 'exp', 'expId', exp_id,
+        'ExperienciaLaboral', 'exp', 'experiencia_id', exp_id,
         body.get('set') or {}, body.get('remove') or [],
     )
     if result is None:
@@ -83,8 +90,8 @@ def _actualizar(request, exp_id):
 
 
 def _eliminar(exp_id):
-    cypher = "MATCH (exp:ExperienciaLaboral {expId: $expId}) DETACH DELETE exp"
-    run_write(cypher, {'expId': exp_id})
+    cypher = "MATCH (exp:ExperienciaLaboral {experiencia_id: $experiencia_id}) DETACH DELETE exp"
+    run_write(cypher, {'experiencia_id': exp_id})
     return Response(status=status.HTTP_204_NO_CONTENT)
 
 

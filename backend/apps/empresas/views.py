@@ -1,4 +1,4 @@
-"""Endpoints REST para `:Empresa`."""
+"""Endpoints REST para `:Empresa`. ID canónico: `empresa_id`."""
 import uuid
 from datetime import date
 
@@ -20,6 +20,10 @@ def _today():
     return date.today().isoformat()
 
 
+def _pick_id(body, *, default=None):
+    return body.get('empresa_id') or body.get('empresaId') or default
+
+
 @api_view(['GET', 'POST'])
 def collection(request):
     if request.method == 'POST':
@@ -32,7 +36,7 @@ def detail(request, empresa_id):
     if request.method == 'PATCH':
         return _actualizar(request, empresa_id)
     if request.method == 'DELETE':
-        run_write("MATCH (e:Empresa {empresaId: $id}) DETACH DELETE e", {'id': empresa_id})
+        run_write("MATCH (e:Empresa {empresa_id: $id}) DETACH DELETE e", {'id': empresa_id})
         return Response(status=status.HTTP_204_NO_CONTENT)
     return _obtener(empresa_id)
 
@@ -41,7 +45,7 @@ def _crear(request):
     body = request.data or {}
     require_fields(body, ['nombre', 'industria', 'pais'])
     props = {
-        'empresaId': body.get('empresaId') or str(uuid.uuid4()),
+        'empresa_id': _pick_id(body, default=str(uuid.uuid4())),
         'nombre': body['nombre'],
         'industria': body['industria'],
         'pais': body['pais'],
@@ -74,15 +78,15 @@ def _listar(request):
 
 
 def _obtener(empresa_id):
-    cypher = "MATCH (e:Empresa {empresaId: $empresaId}) RETURN e"
-    result = run_read(cypher, {'empresaId': empresa_id})
+    cypher = "MATCH (e:Empresa {empresa_id: $empresa_id}) RETURN e"
+    result = run_read(cypher, {'empresa_id': empresa_id})
     return Response(envelope(result, cypher))
 
 
 def _actualizar(request, empresa_id):
     body = request.data or {}
     result, cypher = patch_props(
-        'Empresa', 'e', 'empresaId', empresa_id,
+        'Empresa', 'e', 'empresa_id', empresa_id,
         body.get('set') or {}, body.get('remove') or [],
     )
     if result is None:

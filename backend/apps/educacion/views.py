@@ -1,4 +1,4 @@
-"""Endpoints REST para `:Educacion`."""
+"""Endpoints REST para `:Educacion`. ID canónico: `educacion_id`."""
 import uuid
 
 from rest_framework import status
@@ -15,6 +15,10 @@ from apps.core.lib.views import (
 )
 
 
+def _pick_id(body, *, default=None):
+    return body.get('educacion_id') or body.get('educacionId') or default
+
+
 @api_view(['GET', 'POST'])
 def collection(request):
     if request.method == 'POST':
@@ -27,7 +31,7 @@ def detail(request, educacion_id):
     if request.method == 'PATCH':
         return _actualizar(request, educacion_id)
     if request.method == 'DELETE':
-        run_write("MATCH (ed:Educacion {educacionId: $id}) DETACH DELETE ed", {'id': educacion_id})
+        run_write("MATCH (ed:Educacion {educacion_id: $id}) DETACH DELETE ed", {'id': educacion_id})
         return Response(status=status.HTTP_204_NO_CONTENT)
     return _obtener(educacion_id)
 
@@ -36,7 +40,7 @@ def _crear(request):
     body = request.data or {}
     require_fields(body, ['institucion', 'carrera', 'grado', 'pais'])
     props = {
-        'educacionId': body.get('educacionId') or str(uuid.uuid4()),
+        'educacion_id': _pick_id(body, default=str(uuid.uuid4())),
         'institucion': body['institucion'],
         'carrera': body['carrera'],
         'grado': body['grado'],
@@ -68,15 +72,15 @@ def _listar(request):
 
 
 def _obtener(educacion_id):
-    cypher = "MATCH (ed:Educacion {educacionId: $educacionId}) RETURN ed"
-    result = run_read(cypher, {'educacionId': educacion_id})
+    cypher = "MATCH (ed:Educacion {educacion_id: $educacion_id}) RETURN ed"
+    result = run_read(cypher, {'educacion_id': educacion_id})
     return Response(envelope(result, cypher))
 
 
 def _actualizar(request, educacion_id):
     body = request.data or {}
     result, cypher = patch_props(
-        'Educacion', 'ed', 'educacionId', educacion_id,
+        'Educacion', 'ed', 'educacion_id', educacion_id,
         body.get('set') or {}, body.get('remove') or [],
     )
     if result is None:
