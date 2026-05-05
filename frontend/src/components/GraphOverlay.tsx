@@ -173,6 +173,7 @@ export default function GraphOverlay() {
             style={{ width: 100, fontSize: 13 }}
           >
             {[60, 120, 200, 300].map(v => <option key={v} value={v}>{v} nodos</option>)}
+            <option value={10000}>Todos</option>
           </select>
 
           <button

@@ -62,95 +62,58 @@ def grafo_sample(request):
     allowed_labels = {'Usuario', 'Empresa', 'Publicacion', 'Empleo', 'Educacion', 'ExperienciaLaboral'}
 
     try:
-        limit = max(10, min(400, int(qp.get('limit', 150))))
+        limit = max(10, min(10000, int(qp.get('limit', 150))))
     except (TypeError, ValueError):
         limit = 150
 
     label_filter = qp.get('label', '').strip()
-    seed_limit = max(10, limit // 3)   # semillas → sus vecinos llenan el resto
-
-    # ── query único: semillas + 1-hop expansion ────────────────────────────
-    if label_filter and label_filter in allowed_labels:
-        cypher = f"""
-MATCH (seed:{label_filter})
-WITH seed LIMIT $seed_limit
-OPTIONAL MATCH (seed)-[r]->(nb)
-WITH seed, r, nb LIMIT $rel_limit
-RETURN seed AS n, null AS rel, null AS nb2
-UNION
-MATCH (seed:{label_filter})
-WITH seed LIMIT $seed_limit
-MATCH (seed)-[r]->(nb)
-WITH seed, r, nb LIMIT $rel_limit
-RETURN nb AS n, r AS rel, seed AS nb2
-"""
-    else:
-        cypher = f"""
-MATCH (seed)
-WITH seed LIMIT $seed_limit
-OPTIONAL MATCH (seed)-[r]->(nb)
-WITH seed, r, nb LIMIT $rel_limit
-RETURN seed AS n, null AS rel, null AS nb2
-UNION
-MATCH (seed)
-WITH seed LIMIT $seed_limit
-MATCH (seed)-[r]->(nb)
-WITH seed, r, nb LIMIT $rel_limit
-RETURN nb AS n, r AS rel, seed AS nb2
-"""
-
-    # Usamos un query más simple y robusto: traer relaciones con sus nodos directamente
-    if label_filter and label_filter in allowed_labels:
-        rel_cypher = f"""
-MATCH (a:{label_filter})-[r]->(b)
-RETURN a, r, b
-LIMIT $limit
-"""
-    else:
-        rel_cypher = """
-MATCH (a)-[r]->(b)
-RETURN a, r, b
-LIMIT $limit
-"""
-
-    try:
-        result = run_read(rel_cypher, {'limit': limit * 2})
-    except Exception as exc:
-        return Response({'detail': str(exc)}, status=status.HTTP_400_BAD_REQUEST)
+    fetch_all = limit >= 10000
 
     nodes_map: dict = {}
     rels_list: list = []
 
-    cols = result.get('columns', [])
-    for row in result.get('rows', []):
-        row_dict = dict(zip(cols, row))
-        a = row_dict.get('a')
-        r = row_dict.get('r')
-        b = row_dict.get('b')
+    try:
+        # ── Traer nodos ───────────────────────────────────────────────────
+        if label_filter and label_filter in allowed_labels:
+            node_cypher = f"MATCH (n:{label_filter}) RETURN n" + ("" if fetch_all else " LIMIT $limit")
+        else:
+            node_cypher = "MATCH (n) RETURN n" + ("" if fetch_all else " LIMIT $limit")
 
-        if isinstance(a, dict) and a.get('elementId'):
-            nodes_map[a['elementId']] = {
-                'id': a['elementId'],
-                'labels': a.get('labels', []),
-                'props': a.get('props', {}),
-            }
-        if isinstance(b, dict) and b.get('elementId'):
-            nodes_map[b['elementId']] = {
-                'id': b['elementId'],
-                'labels': b.get('labels', []),
-                'props': b.get('props', {}),
-            }
-        if isinstance(r, dict) and r.get('elementId'):
-            rels_list.append({
-                'id': r['elementId'],
-                'type': r.get('type', ''),
-                'from': r.get('from', ''),
-                'to': r.get('to', ''),
-                'props': r.get('props', {}),
-            })
+        node_result = run_read(node_cypher, {} if fetch_all else {'limit': limit})
+        node_cols = node_result.get('columns', [])
+        for row in node_result.get('rows', []):
+            n = dict(zip(node_cols, row)).get('n')
+            if isinstance(n, dict) and n.get('elementId'):
+                nodes_map[n['elementId']] = {
+                    'id': n['elementId'],
+                    'labels': n.get('labels', []),
+                    'props': n.get('props', {}),
+                }
 
-    # Limitar nodos totales al límite pedido
-    nodes_list = list(nodes_map.values())[:limit]
+        # ── Traer relaciones ──────────────────────────────────────────────
+        if label_filter and label_filter in allowed_labels:
+            rel_cypher = f"MATCH (a:{label_filter})-[r]->(b) RETURN a, r, b" + ("" if fetch_all else " LIMIT $limit")
+        else:
+            rel_cypher = "MATCH (a)-[r]->(b) RETURN a, r, b" + ("" if fetch_all else " LIMIT $limit")
+
+        rel_result = run_read(rel_cypher, {} if fetch_all else {'limit': limit * 3})
+        rel_cols = rel_result.get('columns', [])
+        for row in rel_result.get('rows', []):
+            row_dict = dict(zip(rel_cols, row))
+            r = row_dict.get('r')
+            if isinstance(r, dict) and r.get('elementId'):
+                rels_list.append({
+                    'id': r['elementId'],
+                    'type': r.get('type', ''),
+                    'from': r.get('from', ''),
+                    'to': r.get('to', ''),
+                    'props': r.get('props', {}),
+                })
+
+    except Exception as exc:
+        return Response({'detail': str(exc)}, status=status.HTTP_400_BAD_REQUEST)
+
+    nodes_list = list(nodes_map.values())
     node_ids_set = {n['id'] for n in nodes_list}
     rels_filtered = [r for r in rels_list if r['from'] in node_ids_set and r['to'] in node_ids_set]
 
